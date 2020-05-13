@@ -1,0 +1,13 @@
+language: something
+install:
+- echo "Installed"
+script:
+  - sh .travis/publish.sh
+after_success:
+  - sh .travis/deploy.sh
+env:
+  global:
+  - DITAMAP=DITA/en/pbx/api-v2.ditamap
+  - DITAVAL=DITA/ditaval/s-series.ditaval
+  - ANT_OPTS=-Xmx1024M
+
