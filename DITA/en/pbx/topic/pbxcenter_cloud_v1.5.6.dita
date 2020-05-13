@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_ndv_gch_f2b">
+    <title>Version 1.5.6</title>
+    <abstract>Released Date: June 29, 2018</abstract>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/06/20"/>
+            <!--Carol-->
+            <revised modified="2018/06/20"/>
+            <!--Carol-->
+            <revised modified="2018/06/25"/>
+            <!--Carol-->
+            <revised modified="2018/06/26"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <section id="section_ev2_fdh_f2b">
+            <title>Optimization</title>
+            <p><image href="../Images/horizon.png" id="image_tkx_wzw_pdb"/></p>
+            <p><b>Extension</b></p>
+            <p>
+                <ul id="ul_bkj_qbg_f2b">
+                    <li>Fixed SIP Forking issue: When the registered phones exceeds the pre-set
+                            <uicontrol>Concurrent Registrations</uicontrol>, the earlier registered
+                        phone would lose the registration with the extension.</li>
+                    <li>Fixed the issue that the SIP <uicontrol>Subscription Timers</uicontrol>
+                        didn't take effect.</li>
+                    <li>Fixed the video quality issue with Yealink video phones.</li>
+                </ul>
+            </p>
+            <p><b>SIP Trunk</b></p>
+            <p>
+                <ul id="ul_rrq_vfg_f2b">
+                    <li>Optimized the Peer to Peer trunk: The PBX will assign a different port for a
+                        Peer to Peer trunk.</li>
+                    <li>Optimized the DID number settings..</li>
+                    <li>Supports up to 64 DID numbers.</li>
+                    <li>The <uicontrol>Password</uicontrol> setting of SIP Register trunk supports
+                        127 characters.</li>
+                    <li>Fixed the compatibility issue with gnTel ITSP: <p>
+                            <ul id="ul_fcm_1xg_f2b">
+                                <li>The call through the SIP trunk could not be terminated normally,
+                                    because the ACK packet that the PBX responded to the ITSP didn't
+                                    contain the domain of the ITSP. </li>
+                                <li>No sound during a call.</li>
+                            </ul>
+                        </p></li>
+                    <li>Fixed the compatibility issue with Alfdom ITSP: <p>
+                            <ul id="ul_ppj_cfh_f2b">
+                                <li>When a call was forwarded to an external number, the call could
+                                    not be terminated normally. </li>
+                            </ul>
+                        </p></li>
+                    <li>Fixed the compatibility issue with VoIPVoice ITSP: <p>
+                            <ul id="ul_v23_5rx_g2b">
+                                <li>The call through the SIP trunk could not be terminated
+                                    normally.</li>
+                            </ul>
+                        </p></li>
+                    <li>Fixed the Outbound Proxy issue: If a SIP trunk had enabled outbound proxy,
+                        the SIP trunk might not work.</li>
+                    <li>If T.38 was enabled on the SIP trunk, Call Parking and Call Hold would not
+                        work for inbound calls through this SIP trunk.</li>
+                    <li>Fixed the issue that SIP trunk could not be registered automatically if the
+                        trunk was disconnected.</li>
+                </ul>
+            </p>
+            <p><b>Email Template</b></p>
+            <p>
+                <ul id="ul_hgb_shg_f2b">
+                    <li>Optimized the email template of extensions.</li>
+                </ul>
+            </p>
+            <p><b>Voicemail to Email</b></p>
+            <p>
+                <ul id="ul_cvq_5hg_f2b">
+                    <li>Fixed the issue that the email subject might contain messy codes.</li>
+                </ul>
+            </p>
+        </section>
+    </conbody>
+</concept>

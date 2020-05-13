@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+  PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topicID">
+   <title>Trunk</title>
+   <body>
+      <p>Through this interface, developers could query trunk information
+like trunk status, trunk name, and etc. of all trunks.</p>
+   </body>
+</topic>

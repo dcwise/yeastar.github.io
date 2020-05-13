@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_xvh_hv2_hfb">
+    <title>1) Add a Persistent Disk to YMP Instance</title>
+    <shortdesc>Create a standard persistent disk and attach the disk to your YMP
+        distance.</shortdesc>
+    <taskbody>
+        <context>
+            <p>
+                <note type="important">Do NOT place any other files to the persistent disk, or your
+                    recording files will be lost.</note>
+            </p>
+        </context>
+        <steps>
+            <step>
+                <cmd><xref href="https://console.cloud.google.com/compute/instances" format="html"
+                        scope="external">Go to the VM instances page</xref>.</cmd>
+            </step>
+            <step>
+                <cmd>Click the name of the YMP instance where you want to add a disk.</cmd>
+            </step>
+            <step>
+                <cmd>At the top of the instance details page, click <b>EDIT</b>.</cmd>
+            </step>
+            <step>
+                <cmd>Under <b>Additional disks</b>, click <b>Add item</b>.</cmd>
+            </step>
+            <step>
+                <cmd>In the <b>Name</b> drop-down menu, click <b>Create disk</b>.</cmd>
+            </step>
+            <step>
+                <cmd>On the <uicontrol>Create a disk</uicontrol> page, complete the disk
+                    configurations, and click <uicontrol>Create</uicontrol>.</cmd>
+                <info><image href="../Images/ymp/google_create_a_disk.png" id="image_nyz_c1f_hfb"
+                    /></info>
+                <info>
+                    <ul id="ul_wzs_d1f_hfb">
+                        <li><uicontrol>Name</uicontrol>: Specify a name for the disk.</li>
+                        <li><uicontrol>Type</uicontrol>: Select <uicontrol>Standard persistent
+                                disk</uicontrol>.</li>
+                        <li><uicontrol>Source Type</uicontrol>: Select <uicontrol>Blank
+                                disk</uicontrol>.</li>
+                        <li><uicontrol>Size</uicontrol>: Set the disk size.<p>
+                                <note type="restriction">Minimum 50GB Storage Capacity.</note>
+                            </p><p>
+                                <note>1 GB (Storage Capacity) = 1000 minutes (Recording Time)</note>
+                            </p></li>
+                        <li><uicontrol>Encryption</uicontrol>: Select <uicontrol>Google-managed
+                                key</uicontrol>.</li>
+                    </ul>
+                </info>
+            </step>
+            <step>
+                <cmd>At the bottom of the instance details page, click <b>Save</b> to apply your
+                    changes to the instance and attach the new disk.</cmd>
+            </step>
+            <step>
+                <cmd>After you create and attach a disk to YMP instance, you must <xref
+                        href="google_format_mount_a_persistent_disk.dita#task_bbs_z1f_hfb">format
+                        and mount the disk</xref> to make the disk ready for use. </cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

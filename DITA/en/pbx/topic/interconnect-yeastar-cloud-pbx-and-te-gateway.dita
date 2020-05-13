@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="interconnect-yeastar-cloud-pbx-and-te-gateway">
+    <title>Interconnect <ph keyref="product_name"/> and TE Gateway</title>
+    <shortdesc>Connect <ph keyref="product_name"/> and Yeastar TE gateway to extend E1/T1
+        trunks.</shortdesc>
+    <body>
+        <table frame="all" id="table_gg4_jfp_m3b">
+            <title>Test Environment</title>
+            <tgroup cols="4">
+                <colspec colname="c1" colnum="1" colwidth="1.02*" colsep="1" rowsep="1"/>
+                <colspec colname="c2" colnum="2" colwidth="1.11*" colsep="1" rowsep="1"/>
+                <colspec colname="newCol3" colnum="3" colwidth="1*" colsep="1" rowsep="1"/>
+                <colspec colname="newCol4" colnum="4" colwidth="1.14*" colsep="1" rowsep="1"/>
+                <thead>
+                    <row>
+                        <entry>Equipment </entry>
+                        <entry>Firmware/Software Version</entry>
+                        <entry>Domain/IP Address</entry>
+                        <entry>DID Range/DOD Range</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry><ph keyref="product_name"/></entry>
+                        <entry>81.9.0.3</entry>
+                        <entry>ray.cn1.yeastarcloud.com</entry>
+                        <entry/>
+                    </row>
+                    <row>
+                        <entry>Yeastar TE100 Gateway</entry>
+                        <entry>16.18.0.7</entry>
+                        <entry>192.168.6.239</entry>
+                        <entry>5501000-5501004/   5501000-5501004</entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+        <p>After connecting the <ph keyref="product_name"/> and the Yeastar TE gateway, you can
+            achieve the followings:</p>
+        <ul id="ul_kxp_ty3_m3b">
+            <li>Make outbound calls through E1/T1 trunks of TE gateway</li>
+            <li>Receive inbound calls from E1/T1 trunks of TE gateway<p><image
+                        id="image_kzf_n5v_m3b" href="../Images/integration/cloud+te.png" width="650"
+                    /></p></li>
+        </ul>
+        <section id="section_nqy_mfp_m3b">
+            <title>1. Connect <ph keyref="product_name"/> and TE100</title>
+            <p>
+                <ol id="ol_l2h_rfp_m3b">
+                    <li>On the <ph keyref="product_name"/>, create an Account Trunk.<p>
+                            <ol id="ol_vzx_tfp_m3b">
+                                <li>Go to <menucascade>
+                                        <uicontrol>Settings</uicontrol>
+                                        <uicontrol>PBX</uicontrol>
+                                        <uicontrol>Trunks</uicontrol>
+                                    </menucascade>, click <uicontrol>Add</uicontrol>.</li>
+                                <li>Set the trunk as an Account Trunk.<p><image
+                                            id="image_cvd_t1j_m3b"
+                                            href="../Images/integration/account-trunk-cloud-and-te100.png"
+                                            width="650"/></p><ul id="ul_up5_wfp_m3b">
+                                        <li><uicontrol>Name</uicontrol>: Set a name to identify the
+                                            VoIP trunk.</li>
+                                        <li><uicontrol>Trunk Status</uicontrol>: Select
+                                                <uicontrol>Enabled</uicontrol>.</li>
+                                        <li><uicontrol>Trunk Type</uicontrol>: Select
+                                                <uicontrol>Account Trunk</uicontrol>.</li>
+                                        <li><uicontrol>Transport</uicontrol>: Select
+                                                <uicontrol>UDP</uicontrol>.</li>
+                                        <li><uicontrol>Username</uicontrol>: Use the default or
+                                            change the number.</li>
+                                        <li><uicontrol>Password</uicontrol>: Use the default or
+                                            change the password.</li>
+                                        <li><uicontrol>Authentication Name</uicontrol>: Set to the
+                                            same as <uicontrol>Username</uicontrol>.</li>
+                                    </ul></li>
+                                <li>Click <uicontrol>Save</uicontrol> and
+                                        <uicontrol>Apply</uicontrol>.</li>
+                            </ol>
+                        </p></li>
+                    <li>On the TE100, create a register-based VoIP trunk.<p>
+                            <ol id="ol_ycy_2wp_m3b">
+                                <li>Go to <menucascade>
+                                        <uicontrol>Gateway</uicontrol>
+                                        <uicontrol>VoIP Settings</uicontrol>
+                                        <uicontrol>VoIP Trunk</uicontrol>
+                                    </menucascade>, click <uicontrol>Add VoIP
+                                    Trunk</uicontrol>.</li>
+                                <li>Configure the VoIP trunk.<p><image
+                                            href="../Images/integration/register-trunk-cloud-and-te100.png"
+                                            id="image_zcy_2wp_m3b"/></p><ul id="ul_ady_2wp_m3b">
+                                        <li><uicontrol>Trunk Type</uicontrol>: Select
+                                                <uicontrol>Trunk</uicontrol>.</li>
+                                        <li><uicontrol>Provider Name</uicontrol>: Set the trunk
+                                            name. In this example, enter <i>CloudPBX</i>.</li>
+                                        <li><uicontrol>Hostname/IP</uicontrol>: Enter the domain of
+                                                <ph keyref="product_name"/>, and enter the SIP port.
+                                            In this example, enter
+                                                <i>ray.cn1.yeastarcloud.com:5060</i>.</li>
+                                        <li><uicontrol>Domain</uicontrol>: Enter the domain of <ph
+                                                keyref="product_name"/>. In this example, enter
+                                                <i>ray.cn1.yeastarcloud.com</i>.</li>
+                                        <li><uicontrol>User Name</uicontrol>: Enter the
+                                                <uicontrol>Username</uicontrol> of Account Trunk
+                                            that is created on <ph keyref="product_name"/>. In this
+                                            example, enter <i>6100</i>.</li>
+                                        <li><uicontrol>Authorization Name</uicontrol>: Enter the
+                                                <uicontrol>Authentication Name</uicontrol> of
+                                            Account Trunk that is created on <ph
+                                                keyref="product_name"/>. In this example, enter
+                                                <i>6100</i>.</li>
+                                        <li><uicontrol>Password</uicontrol>: Enter the
+                                                <uicontrol>Password</uicontrol> of Account Trunk
+                                            that is created on <ph keyref="product_name"/>.</li>
+                                    </ul></li>
+                                <li>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply
+                                        Changes</uicontrol>.</li>
+                            </ol>
+                        </p></li>
+                    <li>Check the connection status.<p>
+                            <ol id="ol_r4t_hgp_m3b">
+                                <li>On the TE100, go to <menucascade>
+                                        <uicontrol>Status</uicontrol>
+                                        <uicontrol>IP Trunk Status</uicontrol>
+                                    </menucascade> to check the VoIP trunk status.<p>If the
+                                        connection is successful, the status will show
+                                        "Registered".</p><p><image id="image_ssb_ksn_m3b"
+                                            href="../Images/integration/trunk-status-te100.png"
+                                            width="700"/></p></li>
+                                <li>On the <ph keyref="product_name"/>, go to <menucascade>
+                                        <uicontrol>PBX Monitor</uicontrol>
+                                        <uicontrol>Trunk Status</uicontrol>
+                                    </menucascade> to check the trunk status. <p>If the connection
+                                        is successful, the status will show <image
+                                            id="image_rfd_t2j_m3b"
+                                            href="../Images/integration/cloud-voip-trunk-connected.png"
+                                        />.</p><p><image id="image_xjc_z2j_m3b"
+                                            href="../Images/integration/trunk-status-cloudpbx.png"
+                                            width="700"/></p></li>
+                            </ol>
+                        </p></li>
+                    <li>On the TE100, go to <menucascade>
+                            <uicontrol>Status</uicontrol>
+                            <uicontrol>E1/T1 status</uicontrol>
+                        </menucascade> to check E1/T1 trunk status.<p>If the connection is
+                            successful, the status will show as below:</p><p><image
+                                id="image_plz_qqv_m3b"
+                                href="../Images/integration/E1-T1-trunk-status.png" width="650"
+                            /></p></li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_gg1_zhp_m3b">
+            <title>2. Make Outbound Calls through E1/T1 Trunks</title>
+            <p><image id="image_sj4_bjw_m3b"
+                    href="../Images/integration/make-outbound-calls-through-E1-trunk.png"
+                    width="650"/></p>
+            <p>
+                <ol id="ol_spg_13p_m3b">
+                    <li>On the <ph keyref="product_name"/>, create an outbound route to allow users
+                        to make outbound calls.<p>
+                            <ol>
+                                <li>Go to <menucascade>
+                                        <uicontrol>Settings</uicontrol>
+                                        <uicontrol>PBX</uicontrol>
+                                        <uicontrol>Call Control</uicontrol>
+                                        <uicontrol>Outbound Routes</uicontrol>
+                                    </menucascade>, click <uicontrol>Add</uicontrol>.</li>
+                                <li>Configure the outbound route.<p><image id="image_s14_jvn_m3b"
+                                            href="../Images/integration/add-outbound-calls-cloudpbx.png"
+                                            width="650"/></p><ul id="ul_ngy_d3p_m3b">
+                                        <li><uicontrol>Name</uicontrol>: Set the outbound route
+                                            name. In this example, enter <i>Routeout</i>.</li>
+                                        <li><uicontrol>Dial Patterns</uicontrol>: Set the dial
+                                            patterns according to your needs.<p>In this example, set
+                                                  <uicontrol>Patterns</uicontrol> to <i>9.</i>, and
+                                                set <uicontrol>Strip</uicontrol> to <i>1</i>; you
+                                                should dial prefix 9 before the targeted number. For
+                                                example, to call number 15705966001, you should dial
+                                                915705966001.</p></li>
+                                        <li><uicontrol>Member Trunks</uicontrol>: Select the trunk
+                                            that is connected to TE100 to
+                                                <uicontrol>Selected</uicontrol> box. In this
+                                            example, select <uicontrol>For-TE100
+                                                (SIP-Account)</uicontrol>.</li>
+                                        <li><uicontrol>Member Extensions</uicontrol>: Select
+                                            extensions to <uicontrol>Selected</uicontrol> box. The
+                                            selected extensions can make outbound calls through
+                                            TE100.</li>
+                                    </ul></li>
+                                <li>Click <uicontrol>Save</uicontrol> and
+                                        <uicontrol>Apply</uicontrol>.</li>
+                            </ol>
+                        </p></li>
+                    <li>On the <ph keyref="product_name"/>, set up DOD for extensions.<p>
+                            <ol id="ol_jpt_xkw_m3b">
+                                <li>Go to <menucascade>
+                                        <uicontrol>Settings</uicontrol>
+                                        <uicontrol>PBX</uicontrol>
+                                        <uicontrol>Trunks</uicontrol>
+                                    </menucascade>, select the VoIP trunk "For-TE100", and click
+                                        <uicontrol>DOD</uicontrol>.</li>
+                                <li>Click <uicontrol>Add</uicontrol> to configure the DOD
+                                    settings.</li>
+                            </ol>
+                        </p><p><image id="image_r3n_5rp_m3b"
+                                href="../Images/integration/DOD-cloud-pbx.png" width="650"
+                            /></p><p>For example, we set extension 1000 as DOD number 5501000.When
+                            you use extension 1000 to make outgoing call through TE100, callee will
+                            see the caller ID number 5501000.</p></li>
+                    <li>On TE100, set an outbound route to allow PBX users to make outbound calls
+                        through the E1/T1 trunks.<p>
+                            <ol id="ol_fhc_w5p_m3b">
+                                <li>Go to <menucascade>
+                                        <uicontrol>Gateway</uicontrol>
+                                        <uicontrol>Route Settings</uicontrol>
+                                        <uicontrol>Route List</uicontrol>
+                                    </menucascade>, click <uicontrol>Add New Route</uicontrol>.</li>
+                                <li>Configure the outbound route.<p><image
+                                            href="../Images/integration/outbound-route-te-gateway.png"
+                                            id="image_ghc_w5p_m3b"/></p><p>
+                                        <ul id="ul_hhc_w5p_m3b">
+                                            <li><uicontrol>Simple Mode</uicontrol>: Select
+                                                  <uicontrol>Yes</uicontrol>.</li>
+                                            <li><uicontrol>Route Name</uicontrol>: Set the route
+                                                name. In this example, enter
+                                                <i>fromCloudPBX</i>.</li>
+                                            <li><uicontrol>Call Comes in From</uicontrol>: Select
+                                                the trunk that is connected to <ph
+                                                  keyref="product_name"/>. In this example, select
+                                                  <uicontrol>Trunk--CloudPBX</uicontrol>.</li>
+                                            <li><uicontrol>Send Call Through</uicontrol>: Select
+                                                E1/T1 trunk. In this example, select
+                                                  <uicontrol>Trunk--E1Trunk1</uicontrol>.</li>
+                                        </ul>
+                                    </p></li>
+                                <li>Click <uicontrol>Save</uicontrol>and <uicontrol>Apply
+                                        Changes</uicontrol>.</li>
+                            </ol>
+                        </p></li>
+                    <li>Make a call to test.<p>For example, the PBX extension 1000 dials
+                            915959632001, the user 15959632001 will ring, and he will see the caller
+                            ID number 5501000.</p></li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_eqf_dkp_m3b">
+            <title>3. Receive Inbound Calls from E1/T1 Trunks</title>
+            <p><image id="image_w3b_wlw_m3b"
+                    href="../Images/integration/receive-inbound-calls-from-E1-trunk-01.png"
+                    width="650"/></p>
+            <p>
+                <ol id="ol_cg1_kkp_m3b">
+                    <li>On the TE100, create an inbound route to route incoming calls to <ph
+                            keyref="product_name"/>.<p>
+                            <ol id="ol_yzg_1sv_m3b">
+                                <li>Go to <menucascade>
+                                        <uicontrol>Gateway</uicontrol>
+                                        <uicontrol>Route Settings</uicontrol>
+                                        <uicontrol>Route List</uicontrol>
+                                    </menucascade>, click <uicontrol>Add New Route</uicontrol>.</li>
+                                <li>Configure the inbound route.<p><image
+                                            href="../Images/integration/inbound-route-te-gateway.png"
+                                            id="image_zzg_1sv_m3b"/></p><ul id="ul_sdn_rpw_m3b">
+                                        <li><uicontrol>Simple Mode</uicontrol>: Select
+                                                <uicontrol>No</uicontrol>.</li>
+                                        <li><uicontrol>Route Name</uicontrol>: Set the route name.
+                                            In this example, enter <i>toCloudPBX</i>.</li>
+                                        <li><uicontrol>Call Comes in From</uicontrol>: Select the
+                                            E1/T1 trunk. In this example, select
+                                                <uicontrol>Trunk--E1Trunk1</uicontrol>.</li>
+                                        <li><uicontrol>DID Number</uicontrol>: DID number will be
+                                            used to match the incoming calls. DID number should be
+                                            the same as DOD number on <ph keyref="product_name"/>.
+                                            In this example, enter <i>5501000-5501004</i>.</li>
+                                        <li><uicontrol>DID Associated Number</uicontrol>: DID
+                                            associated number should be the same as DOD name on <ph
+                                                keyref="product_name"/>. In this example, enter
+                                                <i>5501000-5501004</i>.</li>
+                                        <li><uicontrol>Send Call Through</uicontrol>: Select the
+                                            trunk that is connected to <ph keyref="product_name"/>.
+                                            In this example, select
+                                                <uicontrol>Trunk--CloudPBX</uicontrol>.</li>
+                                    </ul></li>
+                                <li>Click <uicontrol>Save</uicontrol>and <uicontrol>Apply
+                                        Changes</uicontrol>.</li>
+                            </ol>
+                        </p></li>
+                    <li>On the <ph keyref="product_name"/>, create an inbound route to accept
+                        incoming calls from TE100.<p>
+                            <ol id="ol_kpr_xzn_m3b">
+                                <li>Go to <menucascade>
+                                        <uicontrol>Settings</uicontrol>
+                                        <uicontrol>PBX</uicontrol>
+                                        <uicontrol>Call Control</uicontrol>
+                                        <uicontrol>Inbound Routes</uicontrol>
+                                    </menucascade>, click <uicontrol>Add</uicontrol>.</li>
+                                <li>Configure the inbound route.<p><image id="image_ryn_mwp_m3b"
+                                            href="../Images/integration/DID-cloud-pbx.png"
+                                            width="650"/></p><p>
+                                        <ul id="ul_y12_f44_m3b">
+                                            <li><uicontrol>Name</uicontrol>: Set the inbound route
+                                                name. In this example, enter <i>Routein</i>.</li>
+                                            <li><uicontrol>DID Pattern</uicontrol>: DID number will
+                                                be used to match the incoming calls from TE100. DID
+                                                number should be the same as DID number in TE100. In
+                                                this example, enter <i>5501000-5501004</i>.</li>
+                                            <li><uicontrol>Member Trunks</uicontrol>: Select the
+                                                trunk that is connected to TE100 to <b>Selected</b>
+                                                box. In this example, select <uicontrol>For-TE100
+                                                  (SIP-Account)</uicontrol>.</li>
+                                            <li><uicontrol>Destination</uicontrol>: Set a
+                                                destination for the inbound route.<p>In this
+                                                  example, set the
+                                                  <uicontrol>Destination</uicontrol> to
+                                                  <uicontrol>extension range</uicontrol>. <ph
+                                                  keyref="product_name"/> will route incoming calls
+                                                  of TE100 to corresponding extensions by DID
+                                                  pattern.</p></li>
+                                        </ul>
+                                    </p></li>
+                                <li>Click <uicontrol>Save</uicontrol> and
+                                        <uicontrol>Apply</uicontrol>.</li>
+                            </ol>
+                        </p></li>
+                    <li>Make a call to test.<p>For example, when you dial 5501000, the <ph
+                                keyref="product_name"/> will route incoming call to 1000.</p></li>
+                </ol>
+            </p>
+        </section>
+    </body>
+</topic>

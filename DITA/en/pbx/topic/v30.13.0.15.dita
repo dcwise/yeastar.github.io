@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="v30.13.0.a">
+    <title>Version 30.13.0.15</title>
+    <abstract>Date: February 27, 2020</abstract>
+    <body>
+        <p>
+            <note type="important">
+                <p>This release provides important security updates to protect your PBX from toll
+                    fraud. We strongly recommend that you upgrade your PBX.</p>
+            </note>
+        </p>
+        <section id="pbx-13.a-new-features">
+            <title>NEW FEATURES</title>
+            <p>
+                <dl>
+                    <dlentry>
+                        <dt>Contacts</dt>
+                        <dd>
+                            <p product="s-series">Yeastar S50, S100 and S300 support
+                                    <uicontrol>Contacts</uicontrol> feature.</p>
+                        </dd>
+                        <dd product="cloudpbx k2">Added <uicontrol>Contacts</uicontrol>
+                            feature.</dd>
+                        <dd>
+                            <p>
+                                <ul id="ul_hf2_xqq_pkb">
+                                    <li>The administrator can add external contacts such as the
+                                        company's customers, resellers, and partners to
+                                            <uicontrol>Company Contacts</uicontrol> for unified
+                                        management, and share the <uicontrol>Company
+                                            Contacts</uicontrol> with the employees to realize
+                                        efficient office work.</li>
+                                </ul>
+                            </p>
+                            <p>
+                                <ul id="ul_p51_zqq_pkb">
+                                    <li>The extension users can log in the PBX web interface by
+                                        their accounts to add and manage their external contacts in
+                                            <uicontrol>Personal Contacts</uicontrol>.</li>
+                                </ul>
+                            </p>
+                            <p>
+                                <note>Linkus with the following new versions supports synchronizing
+                                    company contacts and personal contacts from PBX server. Users
+                                    can check and manage external contacts on Linkus.<p>
+                                        <ul id="ul_aqx_crq_pkb">
+                                            <li>Linkus iOS version: 2.9.10 or later</li>
+                                            <li>Linkus Android version: 2.9.6 or later</li>
+                                        </ul>
+                                    </p></note>
+                            </p>
+                        </dd>
+                    </dlentry>
+                    <dlentry product="cloudpbx">
+                        <dt>Zoho Integration</dt>
+                        <dd>
+                            <p>Added <uicontrol>Zoho Integration</uicontrol> App.</p>
+                            <p><uicontrol>Zoho Integration</uicontrol> App is designed to facilitate
+                                quick integration between your PBX and multiple Zoho
+                                applications.</p>
+                        </dd>
+                    </dlentry>
+                </dl>
+                <dl>
+                    <dlentry product="s-series k2">
+                        <dt>SNMP</dt>
+                        <dd>
+                            <p>Added <uicontrol>SNMP</uicontrol> feature.</p>
+                            <p>The NMS (Network Management System) can monitor the PBX by SNMP
+                                protocol.</p>
+                        </dd>
+                    </dlentry>
+                </dl>
+            </p>
+        </section>
+        <section id="pbx-13.a-optimization">
+            <title>OPTIMIZATION</title>
+            <dl>
+                <dlentry>
+                    <dt>Extensions</dt>
+                    <dd>
+                        <ul id="ul_sgh_grq_pkb">
+                            <li product="s-series k2">
+                                <p>Optimized Mobility Extension: Added support for displaying
+                                    original incoming caller ID on the mobile phone when the call is
+                                    forwarded through a SIP trunk.</p>
+                                <p>
+                                    <note>To achieve this, you need to configure the Transfer
+                                        parameter <uicontrol>From</uicontrol> to <uicontrol>The
+                                            Originator Caller ID</uicontrol>.</note>
+                                </p>
+                            </li>
+                            <li product="k2 s-series">Optimized Mobility Extension: If Linkus is
+                                enabled for an extension, this extension has no Mobility Extension
+                                feature and the relevant settings are hidden automatically.</li>
+                            <li>Fixed the Call Monitor issue: Bulk editing the <uicontrol>Call
+                                    Monitor </uicontrol>setting of extensions could not take
+                                effect.</li>
+                        </ul>
+                    </dd>
+                </dlentry>
+            </dl>
+            <dl>
+                <dlentry>
+                    <dt>Trunks</dt>
+                    <dd>
+                        <ul id="ul_b3l_mrq_pkb">
+                            <li product="cloudpbx">Optimized VoIP Trunk: Added support for bulk
+                                adding DID numbers.</li>
+                            <li>Fixed the SIP Trunk issue: There would be no sound through the SIP
+                                trunk on which T.38 was enabled when the PBX received a re-INVITE
+                                packet that contained no image media.</li>
+                            <li product="s-series">Fixed the issue of GSM trunk: If G722 code was
+                                enabled on the PBX, making calls through a GSM trunk would
+                                fail.</li>
+                            <li>Fixed the SIP Trunk issue: Abnormal status of SIP trunk was
+                                displayed if the trunk name contained the characters
+                                    <codeph>span</codeph>.</li>
+                            <li>Fixed the SIP Trunk issue: No caller name was contained in the P
+                                Asserted Identify field of INVITE packet when calling out through a
+                                SIP trunk.</li>
+                        </ul>
+                    </dd>
+                </dlentry>
+            </dl>
+            <dl>
+                <dlentry>
+                    <dt>SIP relevant</dt>
+                    <dd>
+                        <ul id="ul_at5_ssq_pkb">
+                            <li>
+                                <p>Optimized the response intervals for non-INVITE packets to 500
+                                    ms, 1s, 2s, 4s, 4s, 4s, which complies to the RFC3261.</p>
+                                <p>In the earlier version, the response intervals were 1s, 1s, 2s,
+                                    4s.</p>
+                            </li>
+                        </ul>
+                    </dd>
+                </dlentry>
+            </dl>
+            <dl>
+                <dlentry>
+                    <dt>Call Control</dt>
+                    <dd>
+                        <ul id="ul_dbr_rrq_pkb">
+                            <li>Optimized Inbound Route: Added support for adding multiple DID
+                                patterns.</li>
+                            <li>Optimized the Outbound Route template: Changed the parameter
+                                    <codeph>prpend</codeph> to <codeph>prepend</codeph>.</li>
+                            <li>Fixed the Call Permission issue: After upgrading the system
+                                firmware, the Call Permission rules which were deleted previously
+                                would be restored.</li>
+                            <li>Fixed the Inbound Route issue: The system failed to match the
+                                correct inbound route if the DID pattern contained a special
+                                character <codeph>+</codeph>.</li>
+                        </ul>
+                    </dd>
+                </dlentry>
+            </dl>
+            <dl>
+                <dlentry>
+                    <dt>Call Features</dt>
+                    <dd>
+                        <ul id="ul_c5m_xrq_pkb">
+                            <li>Fixed the Conference issue: Inviting users to a conference would
+                                fail.</li>
+                            <li>Fixed the Call Transfer issue: The <uicontrol>Attended Transfer
+                                    Caller ID</uicontrol> setting (<menucascade>
+                                    <uicontrol>Settings</uicontrol>
+                                    <uicontrol>PBX</uicontrol>
+                                    <uicontrol>General</uicontrol>
+                                    <uicontrol>Preferences</uicontrol>
+                                </menucascade>) didn't take effect.</li>
+                            <li product="k2">Fixed the Paging Group issue: If a paging group has 200
+                                members, some members could not receive announcements when calling
+                                to the paging group.</li>
+                            <li>
+                                <p>Added support for compatibility with Yealink Call Recording
+                                    feature.</p>
+                                <p>You can set the <uicontrol>Type</uicontrol> of DSS key to
+                                        <uicontrol>Record</uicontrol>, and press the DSS key to
+                                    start or stop call recording during a call.</p>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>Fixed the Call Transfer issue: Dialling *3 during a call to transfer
+                                the call would fail.</li>
+                        </ul>
+                    </dd>
+                </dlentry>
+            </dl>
+            <dl product="s-series k2">
+                <dlentry>
+                    <dt>Network Drive</dt>
+                    <dd>
+                        <ul id="ul_qvy_tsq_pkb">
+                            <li>
+                                <p>Optimized Network Drive: Added support for mounting a
+                                    subdirectory of the shared folder.</p>
+                                <p><b>Example</b>: The shared folder <filepath>yeastar</filepath>
+                                    has a subdirectory <filepath>recording</filepath> . To mount the
+                                    recording folder to PBX, you need to set the <uicontrol>Share
+                                        Name </uicontrol>to
+                                    <filepath>yeastar/recording</filepath>.</p>
+                            </li>
+                        </ul>
+                    </dd>
+                </dlentry>
+            </dl>
+            <dl>
+                <dlentry product="s-series k2">
+                    <dt>Multisite Interconnect</dt>
+                    <dd>
+                        <ul id="ul_b1w_2tq_pkb">
+                            <li>Fixed the Multisite Interconnect issue: Incorrect caller ID was
+                                displayed on the branch office side when a user reached the IVR of
+                                headquarter, and called the extension of branch office.</li>
+                        </ul>
+                    </dd>
+                </dlentry>
+            </dl>
+            <dl>
+                <dlentry>
+                    <dt>Email</dt>
+                    <dd>
+                        <ul id="ul_anh_gtq_pkb">
+                            <li>Optimized System Email: Added support for compability with the US
+                                Mikopia SMTP server. </li>
+                        </ul>
+                    </dd>
+                </dlentry>
+            </dl>
+            <dl>
+                <dlentry>
+                    <dt>System Log</dt>
+                    <dd>
+                        <ul id="ul_p1w_ksq_pkb">
+                            <li>
+                                <p>Optimized System Log: Added support for recording the timestamp
+                                    of system logs.</p>
+                                <p>
+                                    <note>Go to <menucascade>
+                                            <uicontrol>Maintenance</uicontrol>
+                                            <uicontrol>System Log</uicontrol>
+                                            <uicontrol>System Log Settings</uicontrol>
+                                        </menucascade>, select the checkbox of <uicontrol>Time
+                                            Log</uicontrol>, the timestamp will be recorded.</note>
+                                </p>
+                            </li>
+                            <li>
+                                <p>Optimized System Log: Added support for recording the DTMF
+                                    logs.</p>
+                                <p>
+                                    <note>Go to <menucascade>
+                                            <uicontrol>Maintenance</uicontrol>
+                                            <uicontrol>System Log</uicontrol>
+                                            <uicontrol>System Log Settings</uicontrol>
+                                        </menucascade>, select the checkbox of
+                                            <uicontrol>DTMF</uicontrol>, the DTMF information will
+                                        be recorded.</note>
+                                </p>
+                            </li>
+                        </ul>
+                    </dd>
+                </dlentry>
+            </dl>
+            <dl>
+                <dlentry>
+                    <dt>Call Recording</dt>
+                    <dd>
+                        <ul id="ul_lfr_3tq_pkb">
+                            <li>Fixed the recording issue: When users called in a queue, the system
+                                would generate two recording logs.</li>
+                            <li>Fixed the Call Recording issue: When a queue agent answered a call
+                                and transferred the call, the system generated an incorrect
+                                recording log.</li>
+                        </ul>
+                    </dd>
+                </dlentry>
+            </dl>
+            <dl>
+                <dlentry>
+                    <dt>CDR</dt>
+                    <dd>
+                        <ul id="ul_vnm_htq_pkb">
+                            <li>Fixed the CDR issue: When a user called in a queue and disconnected
+                                the call, PBX didn't generate a CDR for the call.</li>
+                            <li>Fixed the CDR issue: The recording files that were selected on the
+                                web page were not all downloaded.</li>
+                        </ul>
+                    </dd>
+                </dlentry>
+            </dl>
+            <dl>
+                <dlentry>
+                    <dt>API</dt>
+                    <dd>
+                        <ul id="ul_znw_jtq_pkb">
+                            <li>Accelerated the API response.</li>
+                            <li>Fixed the issue of <codeph>extension/update</codeph> endpoint:
+                                Configure the parameter <codeph>selectroute</codeph> to a null value
+                                could not take effect.</li>
+                        </ul>
+                    </dd>
+                </dlentry>
+            </dl>
+            <dl>
+                <dlentry product="k2 s-series">
+                    <dt>Auto Provisioning</dt>
+                    <dd>
+                        <ul id="ul_l4w_ycj_tkb">
+                            <li>Fixed the issue of Yeastar TA Gateway: The option list of
+                                    <uicontrol>IAX Audio Codes</uicontrol> displayed
+                                incorrectly.</li>
+                            <li>Optimized Cisco SPA Phones: Added support for a maximum of 255
+                                characters in <uicontrol>Dictionary Server Script</uicontrol>
+                                    field.<note>In the earlier version, the maximum length allowed
+                                    is 63.</note></li>
+                        </ul>
+                    </dd>
+                </dlentry>
+            </dl>
+            <dl>
+                <dlentry>
+                    <dt>Linkus Server</dt>
+                    <dd>
+                        <p><b>This version updates the following, you need to simultaneously upgrade
+                                Linkus clients to the latest version (iOS version: 2.9.10; Android
+                                version: 2.9.6), or Linkus may not work.</b></p>
+                    </dd>
+                    <dd>
+                        <ul id="ul_zb1_ddj_tkb">
+                            <li>Added compatibility with PBX <uicontrol>Contacts</uicontrol>
+                                feature.</li>
+                            <li>Optimized Linkus iOS Push.</li>
+                        </ul>
+                    </dd>
+                </dlentry>
+                <dlentry product="cloudpbx">
+                    <dt>LDAP Server</dt>
+                    <dd>
+                        <ul id="ul_tr3_2dj_tkb">
+                            <li>Fixed the display issue of the LDAP Server icon.</li>
+                        </ul>
+                    </dd>
+                </dlentry>
+            </dl>
+            <dl product="k2 s-series">
+                <dlentry>
+                    <dt>Billing System</dt>
+                    <dd>
+                        <ul id="ul_qtk_mtq_pkb">
+                            <li>Fixed the billing issue: The <uicontrol>Hangup with Insufficient
+                                    Balance</uicontrol> was enabled, but the system didn't hang up
+                                the call when the extension or account had insufficient balance. </li>
+                            <li>Fixed the CDR issue: The data in CSV file that was downloaded from
+                                web page was incorrect.</li>
+                            <li>Fixed the CDR issue: After filtering call logs, the
+                                    <uicontrol>Extension</uicontrol> column was not displayed on the
+                                web page.</li>
+                        </ul>
+                    </dd>
+                </dlentry>
+            </dl>
+            <dl>
+                <dlentry product="s-series">
+                    <dt>Zoho Integration </dt>
+                    <dd>
+                        <ul id="ul_hxc_3dj_tkb">
+                            <li>The Zoho Integration App is free, no more license from Yeastar is
+                                needed.</li>
+                        </ul>
+                    </dd>
+                </dlentry>
+            </dl>
+            <dl product="s-series">
+                <dlentry>
+                    <dt>QueueMetrics Integration</dt>
+                    <dd>
+                        <ul id="ul_gcn_ntq_pkb">
+                            <li>Fixed the issue that QueueMetrics Integration App would be disabled
+                                automatically.</li>
+                        </ul>
+                    </dd>
+                </dlentry>
+            </dl>
+        </section>
+    </body>
+</topic>

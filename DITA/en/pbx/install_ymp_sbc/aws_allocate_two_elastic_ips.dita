@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_cwl_gzv_kcb">
+    <title>Allocate Elastic IP to SBC</title>
+    <shortdesc>Allocate one Elastic IP address to SBC WAN (eth0).</shortdesc>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/06/14"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <steps id="steps_eff_5zv_kcb">
+            <step>
+                <cmd>In the navigation pane, select <b>Elastic IPs</b>, click <b>Allocate new
+                        address</b>. </cmd>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Allocate</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Select and right click the targeted elastic IP, and edit the name. </cmd>
+                <info>For example, <userinput>SBC-WAN</userinput> to identify elastic IP for SBC
+                    WAN.</info>
+                <stepresult><image href="../Images/SBC/aws_elastic_ip.png" id="image_dtk_dbw_kcb"
+                    /></stepresult>
+            </step>
+        </steps>
+    </taskbody>
+</task>

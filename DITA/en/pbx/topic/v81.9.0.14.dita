@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="v81.9.0.14">
+    <title>Version 81.9.0.14</title>
+    <abstract>Released Date: August 15, 2019</abstract>
+    <body>
+        <section id="section_ss5_sjb_p3b"><title>NEW FEATURE</title><image
+                href="../Images/horizon.png" id="image_c11_5jb_p3b"/><p>
+                <dl>
+                    <dlentry>
+                        <dt>LDAP Server App</dt>
+                        <dd>Added support for LDAP Server App.<p>LDAP Server provides centralized
+                                phone book management, which makes phone book management easy,
+                                feature rich and even automated. Once LDAP is set up, you can search
+                                the LDAP directory and look up contacts on your IP phone.</p></dd>
+                    </dlentry>
+                </dl>
+            </p></section>
+        <section>
+            <title>OPTIMIZATION</title>
+            <p><image href="../Images/horizon.png" id="image_xcc_4wb_kfb"/></p>
+            <p>
+                <dl>
+                    <dlentry>
+                        <dt>System Stability</dt>
+                        <dd>
+                            <ul id="ul_ydv_gyj_n3b">
+                                <li>Fixed the system issue: Neither internal calls nor external
+                                    calls could be established when multiple Linkus Push channels
+                                    were not released. </li>
+                                <li>Fixed the system issue: The system would crash after receiving
+                                    an abnormal ACK packet (Non-existed extension number in the From
+                                    header and no tag in To header).</li>
+                                <li>Fixed the system issue: The PBX might crash for high CPU usage
+                                    when the Call Pickup feature was used.</li>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                </dl>
+                <dl>
+                    <dlentry>
+                        <dt>Extension</dt>
+                        <dd>
+                            <ul id="ul_nfv_35j_n3b">
+                                <li>Fixed the Presence issue: DND status could not be changed on
+                                    web.</li>
+                                <li>Fixed the issue of <uicontrol>Extension Monitor</uicontrol>: The
+                                    extension with 1-digit number could not be monitored.</li>
+                                <li>Fixed the issue of <uicontrol>Call Forwarding</uicontrol>: If
+                                    the Call Forwarding destination was set to a mobile number, the
+                                    mobile number Prefix could not be deleted.</li>
+                                <li>
+                                    <p>Fixed the issue of <uicontrol>Extension List</uicontrol>: The
+                                            <uicontrol>Extension List</uicontrol> page could not
+                                        display if the database has an error of the extension
+                                            <uicontrol>User Password</uicontrol>.</p>
+                                </li>
+                                <li>Fixed the issue of <uicontrol>Extension Registration
+                                        Status</uicontrol>: The registered IP address was not
+                                    updated when the extension was registered to another IP
+                                    address.</li>
+                                <li>
+                                    <p>Optimized <uicontrol>All Busy Mode for SIP
+                                            Forking</uicontrol>: PBX would send “486 Busy” message
+                                        to the caller when the callee is busy.</p>
+                                    <p>In the earlier version, PBX would sent “603 Decline” to the
+                                        caller.</p>
+                                </li>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                </dl>
+            </p>
+            <p>
+                <dl>
+                    <dlentry>
+                        <dt>Trunk</dt>
+                        <dd>
+                            <ul id="ul_tdn_2sj_n3b">
+                                <li>
+                                    <p>The default codecs for a VoIP trunk are changed to
+                                            <uicontrol>G729A</uicontrol>,
+                                            <uicontrol>u-law</uicontrol>, and
+                                            <uicontrol>a-law</uicontrol>.</p>
+                                    <p>
+                                        <note>Note: <uicontrol>iLBC</uicontrol> codec is disabled by
+                                            default.</note>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>Added support for processing P-Preferred-Identity (PPI)
+                                        header in the request message.</p>
+                                    <p>Added the <uicontrol>P-Preferred-Identity (PPI)</uicontrol>
+                                        option to <uicontrol>Outbound Parameters</uicontrol> and
+                                            <uicontrol>Transfer Parameters</uicontrol>(<menucascade>
+                                            <uicontrol>Settings</uicontrol>
+                                            <uicontrol>PBX</uicontrol>
+                                            <uicontrol>VoIP Trunk</uicontrol>
+                                            <uicontrol>Advanced</uicontrol>
+                                        </menucascade>).</p>
+                                </li>
+                                <li>Optimized the trunk template of VoIP Innovations: A
+                                        <uicontrol>Tech Prefix</uicontrol> is assigned to the trunk
+                                    to help the ITSP to identify this trunk.</li>
+                                <li>Refined the <uicontrol>Peer Trunk</uicontrol> type:<ul
+                                        id="ul_kpt_tvj_n3b">
+                                        <li><uicontrol>Peer Trunk (DID-based)</uicontrol>: Use the
+                                            IP address of PBX for authentication. SIP providers
+                                            route incoming and outgoing calls based on the DID
+                                            number.</li>
+                                        <li><uicontrol>Peer Trunk (Port-based)</uicontrol>: Use the
+                                            IP address and port of PBX for authentication. SIP
+                                            providers route incoming and outgoing calls based on the
+                                            PBX port.</li>
+                                        <li><uicontrol>Peer Trunk (Domain-based)</uicontrol>: Use
+                                            the domain of PBX for authentication. SIP providers
+                                            route incoming and outgoing calls based on the PBX
+                                            domain.</li>
+                                        <li><uicontrol>Peer Trunk (Private Network)</uicontrol>: PBX
+                                            is connected directly to SIP provider's dedicated
+                                            network.</li>
+                                    </ul></li>
+                                <li>Optimized the <uicontrol>Register Trunk</uicontrol> settings:
+                                    Special characters <i>; &amp; " ' \ &lt; > ` |</i> are allowed
+                                    in the <uicontrol>Password</uicontrol> field.</li>
+                                <li>Fixed the issue of <uicontrol>Peer Trunk</uicontrol>: Fail to
+                                    register a peer-trunk by using Chinese characters in
+                                        <uicontrol>Username</uicontrol> field.</li>
+                                <li>Fixed the issue of VoIP <uicontrol>Register Trunk</uicontrol>:
+                                    If you registered a VoIP trunk to a private IP address and
+                                    enabled <uicontrol>Outbound Proxy</uicontrol> on the trunk, this
+                                    trunk could not receive incoming calls.</li>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                </dl>
+            </p>
+            <dl>
+                <dlentry>
+                    <dt>SIP Settings</dt>
+                    <dd>
+                        <ul id="ul_cmn_bl1_43b">
+                            <li>Added support for getting DID and Caller ID from
+                                P-Preferred-Identity (PPI) header.<ul id="ul_dny_bl1_43b">
+                                    <li>Added <uicontrol>P-Preferred-Identity</uicontrol> option to
+                                            <uicontrol>Get DID From</uicontrol> and <uicontrol>Get
+                                            Caller ID From</uicontrol> (<menucascade>
+                                            <uicontrol>Settings</uicontrol>
+                                            <uicontrol>PBX</uicontrol>
+                                            <uicontrol>VoIP Trunk</uicontrol>
+                                            <uicontrol>Advanced</uicontrol>
+                                            <uicontrol>Inbound Parameters</uicontrol>
+                                        </menucascade>).</li>
+                                    <li>Added <uicontrol>P-Preferred-Identity</uicontrol> option to
+                                            <uicontrol>Get DID From</uicontrol> and <uicontrol>Get
+                                            Caller ID From</uicontrol> (<menucascade>
+                                            <uicontrol>Settings</uicontrol>
+                                            <uicontrol>PBX</uicontrol>
+                                            <uicontrol>General</uicontrol>
+                                            <uicontrol>SIP</uicontrol>
+                                            <uicontrol>Advanced</uicontrol>
+                                        </menucascade>).</li>
+                                </ul></li>
+                            <li>Added the <uicontrol>iLBC Mode</uicontrol>: You can go to <menucascade>
+                                    <uicontrol>Settings</uicontrol>
+                                    <uicontrol>PBX</uicontrol>
+                                    <uicontrol>General Settings</uicontrol>
+                                    <uicontrol>SIP</uicontrol>
+                                    <uicontrol>Codec</uicontrol>
+                                    <uicontrol>iLBC Settings</uicontrol>
+                                </menucascade>, select the iLBC mode: <uicontrol>20ms</uicontrol>
+                                (default) or <uicontrol>30ms</uicontrol>.</li>
+                        </ul>
+                    </dd>
+                </dlentry>
+            </dl>
+            <dl>
+                <dlentry>
+                    <dt>Callback</dt>
+                    <dd>
+                        <ul id="ul_xhf_swj_n3b">
+                            <li>
+                                <p>Optimized the <uicontrol>Callback</uicontrol> feature: If the
+                                    Peer-Trunk is used for Callback, the From header in INVITE
+                                    request would use its DOD number in priority.<ul
+                                        id="ul_srf_twj_n3b">
+                                        <li>If the peer trunk has no DOD number, PBX will use
+                                            "callback+original caller ID" in From header, which
+                                            would cause a callback failure.</li>
+                                        <li>If the Register-Trunk is used for Callback, make sure
+                                            the <uicontrol>From User</uicontrol> is configured, or
+                                            callback would fail.</li>
+                                    </ul></p>
+                            </li>
+                        </ul>
+                    </dd>
+                </dlentry>
+                <dlentry>
+                    <dt>Call Queue</dt>
+                    <dd>
+                        <ul id="ul_tdj_nxj_n3b">
+                            <li>Fixed the issue of <uicontrol>Call Queue</uicontrol>: The CPU usage
+                                was too high when transferring an external call to a queue by
+                                dialing *75.</li>
+                            <li>Fixed the issue of Queue custom configuration: The custom
+                                configuration in which defined the incoming calls transferred to the
+                                failover destination when the queue members were busy or ringing
+                                didn't take effect.</li>
+                            <li>Fixed the issue of <uicontrol>Call Queue</uicontrol>: The Queue
+                                would work abnormally after you transferred an external call to a
+                                queue by dialing *75.</li>
+                        </ul>
+                    </dd>
+                </dlentry>
+                <dlentry>
+                    <dt>CDR and Recording</dt>
+                    <dd>
+                        <ul id="ul_rlt_2yj_n3b">
+                            <li>Fixed the issue of <uicontrol>Call Recording</uicontrol>: If call
+                                was parked, the conversation resumed on another phone would not be
+                                recorded.</li>
+                            <li>Fixed the issue of <uicontrol>CDR and Recording</uicontrol>: The PBX
+                                did not generate a CDR and Recording file when an external call was
+                                transferred to call queue.</li>
+                        </ul>
+                    </dd>
+                </dlentry>
+                <dlentry>
+                    <dt>Me Page</dt>
+                    <dd>
+                        <ul id="ul_e1p_1zj_n3b">
+                            <li>Fixed the issue of <uicontrol>Me</uicontrol> page: The
+                                    <uicontrol>Voicemail Access PIN</uicontrol> could not be
+                                edited.</li>
+                            <li>Fixed the issue of <uicontrol>Me</uicontrol> page: The administrator
+                                could not access the <uicontrol>CDR records</uicontrol> on
+                                    <uicontrol>Me</uicontrol> page.</li>
+                        </ul>
+                    </dd>
+                </dlentry>
+                <dlentry>
+                    <dt>Ethernet Capture Tool</dt>
+                    <dd>
+                        <ul id="ul_itt_wvj_n3b">
+                            <li>Optimized the Ethernet Capture Tool: Added
+                                    <codeph>&lt;pcap>&lt;/pcap></codeph> in the
+                                    <filepath>filter.conf</filepath> file to quickly locate
+                                problems.</li>
+                            <li>Fixed the issue of <uicontrol>Ethernet Capture Tool</uicontrol>: The
+                                capture process could not be stopped when using the
+                                    <uicontrol>Ethernet Capture Tool</uicontrol> to capture Ethernet
+                                packet.</li>
+                        </ul>
+                    </dd>
+                </dlentry>
+            </dl>
+            <dl>
+                <dlentry>
+                    <dt>API</dt>
+                    <dd>
+                        <ul id="api-cloud-81.9.0.14">
+                            <li>Optimized the <uicontrol>Download Recording Files</uicontrol>
+                                interface: The recording file format is changed from
+                                    <filepath>.yswav</filepath> to <filepath>.wav</filepath>.</li>
+                            <li>Added support for <uicontrol>Cross-Origin Resource Sharing
+                                    (CORS)</uicontrol>, which allows JavaScript clients from a
+                                different origin to access PBX APIs.</li>
+                            <li>Fixed the issue of Call Transfer API: The API program would be
+                                restarted if Call Transfer API was used.</li>
+                            <li>Fixed the <uicontrol>Extension Status</uicontrol> report: PBX didn't
+                                send API report when the extension status was changed.</li>
+                            <li>Fixed the <uicontrol>Apply</uicontrol> issue: If the third-party
+                                server frequently sends API application requests, the PBX might fail
+                                to establish internal calls and external calls.</li>
+                            <li>Fixed the issue of DTMF report：The infos parameters were not sent to
+                                the 3rd-party server because that the URL was incorrect.</li>
+                            <li>Fixed the issue of DTMF report: No infos parameters in the DMTF
+                                report when you dialed an external number through IVR and the callee
+                                pressed keys following by the IVR prompt.</li>
+                        </ul>
+                    </dd>
+                </dlentry>
+                <dlentry>
+                    <dt>Linkus</dt>
+                    <dd>The Linkus version will be updated to 2.2.27 automatically after you upgrade
+                        the PBX.</dd>
+                </dlentry>
+            </dl>
+            <dl>
+                <dlentry>
+                    <dt>Auto Provisioning</dt>
+                    <dd>
+                        <ul>
+                            <li>Optimized <uicontrol>DSSKey/Line Key</uicontrol> setting: The
+                                    <uicontrol>Value</uicontrol> field is allowed to enter maximum
+                                255 characters.</li>
+                            <li>
+                                <p>Optimized <uicontrol>Account</uicontrol> settings for IP phones:
+                                    The extension <uicontrol>Caller ID Name</uicontrol> will be
+                                    automatically filled in the <uicontrol>Label</uicontrol>
+                                    field.</p>
+                                <p>
+                                    <note>In the earlier version, the extension number will be
+                                        automatically filled in the <uicontrol>Label
+                                        </uicontrol>field.</note>
+                                </p>
+                            </li>
+                            <li>Fixed the issue of Auto Provision Template: The special characters
+                                %cn in the custom template could not be identified correctly and
+                                would be deleted.</li>
+                            <li>Fixed the issue of <uicontrol>Auto Provisioning Device
+                                    List</uicontrol> page: The <uicontrol>Auto Provisioning Device
+                                    List</uicontrol> could not display if the assigned extension
+                                name contained a line break.</li>
+                            <li>
+                                <p>Fixed the DSSkey issue on Fanvil: The DSSkey setting could not
+                                    take effect when the <menucascade>
+                                        <uicontrol>DSSkey</uicontrol>
+                                        <uicontrol>Line</uicontrol>
+                                    </menucascade> is set to <uicontrol>Auto</uicontrol>.</p>
+                            </li>
+                            <li>
+                                <p>Fixed the issue of Auto Provision Template: The setting in
+                                        <uicontrol>Other</uicontrol> tab would be cleared if the
+                                    characters <codeph>`</codeph> was contained in the custom
+                                    template.</p>
+                            </li>
+                            <li>
+                                <p>Fixed the issue that the auto provisioning would be failed after
+                                    restoring configurations from a backup file.</p>
+                            </li>
+                        </ul>
+                    </dd>
+                </dlentry>
+            </dl>
+        </section>
+    </body>
+</topic>

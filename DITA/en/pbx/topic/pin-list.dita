@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_trd_fyd_bhb">
+    <title>PIN List</title>
+    <shortdesc>PIN List is used to manage lists of PINs (numerical passwords) that can be used to
+        access restricted features such as <xref href="outbound_route.dita">outbound route</xref>
+        and <xref href="disa.dita"/>.</shortdesc>
+    <conbody>
+        <section id="section_w2q_tj2_bhb">
+            <title>Add a PIN list</title>
+            <p>
+                <ol>
+                    <li>Go to <menucascade>
+                            <uicontrol>Settings</uicontrol>
+                            <uicontrol>PBX</uicontrol>
+                            <uicontrol>Call Features</uicontrol>
+                        </menucascade>, click <uicontrol>More</uicontrol> to display more call
+                        features.</li>
+                    <li>Click <uicontrol>PIN List</uicontrol>.</li>
+                    <li>On the <uicontrol>Add PIN List</uicontrol> page, configure the following
+                                settings:<p><image href="../Images/admin/add-pin-list.png"
+                                id="image_cqg_dl2_bhb"/></p><p>
+                            <ul id="ul_o2q_nl2_bhb">
+                                <li><uicontrol>Name</uicontrol>: Set a name for the PIN list.</li>
+                                <li><uicontrol>Record In CDR</uicontrol>: When a PIN code has been
+                                    used, whether to display the PIN code in the relevant CDR.</li>
+                                <li><uicontrol>PIN List</uicontrol>: Enter the PIN codes. Press
+                                        <uicontrol>Enter</uicontrol> key to add multiple PIN
+                                    codes.</li>
+                            </ul>
+                        </p></li>
+                    <li>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_qpp_fm2_bhb">
+            <title>Apply a PIN list</title>
+            <p>You can apply a PIN list to an outbound route or a DISA to restrict users dialling
+                outbound calls. When a PIN list is applied to an outbound route or a DISA, users
+                need to dial the correct PIN to place the outbound calls.</p>
+            <p><image href="../Images/admin/outbound-route-pin-list.png" width="650"
+                    id="image_ktz_442_bhb"/></p>
+        </section>
+    </conbody>
+</concept>

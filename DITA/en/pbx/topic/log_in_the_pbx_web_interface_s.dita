@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_amd_4gx_zcb">
+    <title>Log in the PBX Web Interface</title>
+    <taskbody>
+        <context>Get the PBX information and your extension information from your administrator, and
+            log in the PBX web interface.</context>
+        <steps id="steps_ogj_nhx_zcb">
+            <step>
+                <cmd>Start a web browser on your PC, enter the IP address of your PBX, press
+                        <b>Enter</b> on your keyboard.</cmd>
+                <info>The web page will inform you that the IP is unsafe.</info>
+            </step>
+            <step>
+                <cmd>Ignore the warning on the web page, proceed to the access the IP. </cmd>
+                <info><image href="../Images/user/login_unsafe.png" id="image_dy4_kdl_zcb"
+                        height="400"/></info>
+            </step>
+            <step>
+                <cmd>Enter the your user name and password, click
+                    <uicontrol>Login</uicontrol>.</cmd>
+                <info>
+                    <note>If you cannot log in successfully, contact your administrator to check the
+                        user name and password.</note>
+                </info>
+                <info><image href="../Images/user/s-series_user_login.png" id="image_slh_j2l_zcb"
+                        width="400"/></info>
+                <choices id="choices_zv1_n3x_zcb">
+                    <choice><uicontrol>Default User Name</uicontrol>: Your extension number, e.g.
+                        1000.</choice>
+                    <choice><uicontrol>Default Password</uicontrol>: <codeph>Pass</codeph> +
+                            <codeph>Extension number</codeph>, e.g. Pass1000.</choice>
+                </choices>
+            </step>
+        </steps>
+    </taskbody>
+</task>

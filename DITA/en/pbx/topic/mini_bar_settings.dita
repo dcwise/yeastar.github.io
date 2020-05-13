@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_dsx_wkt_c2b">
+    <title>Mini Bar Settings</title>
+    <shortdesc></shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/06/11"/>
+            <!--Carol-->
+            <revised modified="2018/06/11"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <p>Go to <menucascade>
+                <uicontrol>Hotel</uicontrol>
+                <uicontrol>Settings</uicontrol>
+                <uicontrol>Mini Bar</uicontrol>
+            </menucascade> to set the mini bar items and price. </p>
+        <p>The <b>Digit</b> represents the item ID. The hotel cleaner will use the item ID to record
+            the mini bar consumption.</p>
+        <p>
+            <ul id="ul_xvn_p4t_c2b">
+                <li><b>Global VAT</b>: If the VAT of mini bar items has not been set, the global VAT
+                    will apply to the items.</li>
+                <li><b>Digit Mode </b><ul id="ul_yvn_p4t_c2b">
+                        <li><b>1 Digit Mode</b>: You can set 10 mini bar items.</li>
+                        <li><b>2 Digit Mode</b>: If you have more than 10 items, choose this mode,
+                            and set more items. Each item will have a 2-digit ID.</li>
+                    </ul></li>
+            </ul>
+        </p>
+        <section id="section_x3z_q4t_c2b">
+            <title>How to Check Mini Bar Consumption</title>
+            <p>The hotel cleaner can check the mini bar consumption and record the consumption on
+                the room phone. Assume that mini bar is set as the following figure shows, and the
+                room guest consumed 2 apples, 3 bottle of beer, and 1 cup of instant noodle.</p>
+            <p>The hotel cleaner should dial #01001115 on the room phone. #01 is the default feature
+                code to add Mini bar item. </p>
+            <p><image href="../Images/admin/hotel_minibar.png" id="image_gv5_54t_c2b" width="650"
+                /></p>
+        </section>
+    </conbody>
+</concept>

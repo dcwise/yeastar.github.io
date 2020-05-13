@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_amd_4gx_zcb">
+    <title>Log in Extension User Portal</title>
+    <shortdesc>To log in the Extension User Portal, you need to get the login information from the
+        PBX administrator.</shortdesc>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/08/21"/>
+            <!--Carol-->
+            <revised modified="2018/09/06"/>
+            <!--Carol-->
+            <revised modified="2018/09/07"/>
+            <!--Carol-->
+            <revised modified="2018/09/11"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <context/>
+        <steps id="steps_ogj_nhx_zcb">
+            <step>
+                <cmd>Start a web browser, enter the IP address the PBX, press <b>Enter</b>.</cmd>
+                <info>The web page will inform that the IP is unsafe.</info>
+            </step>
+            <step>
+                <cmd>Ignore the warning on the web page, proceed to the access the IP. </cmd>
+                <info><image href="../Images/user/login_unsafe.png" id="image_dy4_kdl_zcb"
+                        height="350"/></info>
+            </step>
+            <step>
+                <cmd>Enter the user name and password, click <uicontrol>Login</uicontrol>.</cmd>
+                <info>
+                    <note>If login failed, contact the PBX administrator to check the login mode and
+                        password.</note>
+                </info>
+                <info><image href="../Images/user/s-series_user_login.png" id="image_slh_j2l_zcb"
+                        width="400"/></info>
+                <choices id="choices_zv1_n3x_zcb">
+                    <choice><uicontrol>Default User Name</uicontrol>: Your extension number, e.g. 1000.<p>
+                            <note>If the PBX administrator set the login mode to Email, the
+                                    <uicontrol>User Name</uicontrol> should be the email address
+                                that is bound to the extension.</note>
+                        </p></choice>
+                    <choice><uicontrol>Default Password</uicontrol>: <codeph>Pass{extension
+                            number}</codeph>, e.g. Pass1000.</choice>
+                </choices>
+            </step>
+        </steps>
+    </taskbody>
+</task>

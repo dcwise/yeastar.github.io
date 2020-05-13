@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="limitation-inactivated-ippbx">
+    <title>Limitation of inactivated Yeastar K2 IPPBX</title>
+    <shortdesc> The inactivated PBX has a limit on the number of extensions, concurrent calls, VoIP
+        trunks, ring groups, etc.</shortdesc>
+    <body>
+            <p>By default, an inactivated Yeastar K2 IPPPBX system has the following
+                limitations.</p>
+            <p>
+                <table frame="all" rowsep="1" colsep="1" id="table_nnc_ymm_c3b"/>
+            </p>
+        
+    </body>
+</topic>

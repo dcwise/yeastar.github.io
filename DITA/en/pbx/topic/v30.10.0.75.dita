@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_vyt_brr_whb">
+    <title>Version 30.10.0.75</title>
+    <abstract>Released Date: June 5, 2019</abstract>
+    <body>
+        <section id="section_fws_2p4_4hb">
+            <title>OPTIMIZATION</title>
+            <p><image href="../Images/horizon.png" id="image_xcc_4wb_kfb"/></p>
+            <p>
+                <dl>
+                    <dlentry>
+                        <dt>Auto Provisioning</dt>
+                        <dd>The version of pre-installed <uicontrol>Auto Provisioning</uicontrol>
+                            App is 1.7.4.</dd>
+                    </dlentry>
+                </dl>
+                <dl>
+                    <dlentry>
+                        <dt>QueueMetrics Integration</dt>
+                        <dd>The <uicontrol>Queue Metrics Integration</uicontrol> App is free, no
+                            more license from Yeastar is needed. </dd>
+                    </dlentry>
+                </dl>
+            </p>
+        </section>
+        <section id="section_rx2_hxr_whb">
+            <title>BUG FIXES</title>
+            <p>
+                <ul>
+                    <li>
+                        <p>Fixed the issue that the SIP trunk advanced settings would be lost after
+                            upgrading the PBX.</p>
+                    </li>
+                    <li>
+                        <p>Fixed the <uicontrol>Allow Mode for SIP Forking</uicontrol> issue: If
+                                <uicontrol>Allow Mode for SIP Forking</uicontrol> setting was
+                            enabled, a system hang would occur when a ring group member performed a
+                            blind transfer to another user.</p>
+                    </li>
+                    <li>Fixed the <uicontrol>Backup and Restore</uicontrol> issue: The SIP trunk
+                            <uicontrol>Outbound Parameters</uicontrol> settings would be lost after
+                        restoring configurations from a backup file.</li>
+                    <li>Fixed the <uicontrol>Linkus Cloud Service</uicontrol> issue: There was no
+                        audio on both parties for the outbound call that was made from Linkus
+                        client.</li>
+                </ul>
+            </p>
+        </section>
+    </body>
+</topic>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_rcg_rrr_ndb">
+    <title>Set SBC Server as Default Gateway</title>
+    <shortdesc>Set SBC LAN IP as the default gateway, so that the YMP can initiate outbound
+        connections to the Internet through the SBC gateway. </shortdesc>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/06/21"/>
+            <!--Carol-->
+            <revised modified="2018/08/24"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <steps id="steps_awx_wrr_ndb">
+            <step>
+                <cmd>Connect SSH to the SBC server, type the following command:</cmd>
+                <info>
+                    <codeblock outputclass="language-bourne">sudo echo 1 > /proc/sys/net/ipv4/ip_forward
+sudo iptables -t nat -A POSTROUTING -o SBCwaniface -j MASQUERADE</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Connect SSH to the YMP server, type the following command:</cmd>
+                <info>
+                    <codeblock outputclass="language-bourne">sudo route del default dev YMPwaniface
+sudo route add default gw SBClaniface dev YMPwaniface</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Type the following command to check if the configuration is correct.</cmd>
+                <info>
+                    <codeblock outputclass="language-bourne">sudo traceroute 8.8.8.8</codeblock>
+                </info>
+                <stepresult>If the configuration is successful, the route table should show SBC LAN
+                    IP address as the gateway IP.</stepresult>
+            </step>
+        </steps>
+    </taskbody>
+</task>

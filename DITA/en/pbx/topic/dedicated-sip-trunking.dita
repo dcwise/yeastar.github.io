@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_nwk_vrh_mgb">
+    <title>Dedicated SIP Trunking on <ph keyref="product_name"/>
+    </title>
+    <shortdesc>If you have bought a dedicated SIP trunk from the ITSP, you need to set the network
+        mode to <uicontrol>Dual</uicontrol>, add a static route, configure NAT setting and firewall
+        on <ph keyref="product_name"/> to ensure that the SIP trunk works properly.</shortdesc>
+    <body>
+        <p>The ITSP provides a dedicated network cable for the SIP trunk. The ITSP router is used
+            for the SIP trunk only, but cannot access the Internet. </p>
+        <p><image href="../Images/admin/private_trunk_static_route.png" id="image_r2z_x1c_zdb"/></p>
+        <section id="section_adx_2b3_mgb">
+            <title>Network settings</title>
+            <p>
+                <ol>
+                    <li>Connect your local router or switch to the PBX LAN interface; Connect the
+                        ITSP router to the PBX WAN interface.</li>
+                    <li>Go to <menucascade>
+                            <uicontrol>Settings</uicontrol>
+                            <uicontrol>System</uicontrol>
+                            <uicontrol>Network</uicontrol>
+                            <uicontrol>Basic Settings</uicontrol>
+                        </menucascade> to configure the PBX network.<p>
+                            <ol id="ol_sg3_323_mgb">
+                                <li>In the drop-down menu of <uicontrol>Mode</uicontrol>, select
+                                        <uicontrol>Dual</uicontrol>.</li>
+                                <li>In the drop-down menu of <uicontrol>Default
+                                        Interface</uicontrol>, select
+                                    <uicontrol>LAN</uicontrol>.</li>
+                                <li>In the <uicontrol>LAN</uicontrol> section, enter your local
+                                    network information.</li>
+                                <li>In the <uicontrol>WAN</uicontrol> section, enter the network
+                                    information that is provided by the ITSP.</li>
+                                <li>Click <uicontrol>Save</uicontrol> and reboot the PBX.</li>
+                            </ol>
+                        </p><p><image href="../Images/admin/dual_network-dedicated-sip-trunk.jpg"
+                                width="650" id="image_sn4_ff3_mgb"/></p></li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_yvl_v13_mgb">
+            <title>Static route settings</title>
+            <p>
+                <ol id="ol_tll_dg3_mgb">
+                    <li>Go to <menucascade>
+                            <uicontrol>Settings</uicontrol>
+                            <uicontrol>System</uicontrol>
+                            <uicontrol>Network</uicontrol>
+                            <uicontrol>Static Routes</uicontrol>
+                            <uicontrol>Static Routes</uicontrol>
+                        </menucascade>, click <uicontrol>Add</uicontrol>.</li>
+                    <li>Set a route rule for the SIP trunk, routing the SIP trunk traffic through
+                        the ITSP router.<p><image
+                                href="../Images/admin/add-static-route-dedicated-sip-trunk.jpg"
+                                id="image_qsk_mh3_mgb"/></p><p>
+                            <ul id="ul_jtw_mh3_mgb">
+                                <li><uicontrol>Destination</uicontrol>: Enter the IP address of SIP
+                                    trunk. <p>To ensure that both SIP registration packets and SIP
+                                        media packets can be routed to the desired destination, set
+                                        the IP range of the SIP trunk. In this scenario, set
+                                            <uicontrol>Destination</uicontrol> to <i>191.8.88.0</i>,
+                                        and set <uicontrol>Subnet Mask</uicontrol> to
+                                            <codeph>255.255.255.0</codeph>.</p></li>
+                                <li><uicontrol>Subnet Mask</uicontrol>: Enter the subnet mask. In
+                                    this scenario, enter <i>255.255.255.0</i>.</li>
+                                <li><uicontrol>Gateway</uicontrol>: Enter the gateway IP address of
+                                    the WAN interface. In this scenario, enter
+                                    <i>10.10.1.1</i>.</li>
+                                <li><uicontrol>Metric</uicontrol>: Leave it blank. </li>
+                                <li><uicontrol>Interface</uicontrol>: Select
+                                        <uicontrol>WAN</uicontrol>.</li>
+                            </ul>
+                        </p></li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_qbx_443_mgb">
+            <title>SIP trunk settings</title>
+            <p>Register the SIP trunk on <ph keyref="product_name"/>.</p>
+            <p>
+                <ol id="ol_b5v_p43_mgb">
+                    <li>Go to <menucascade>
+                            <uicontrol>Settings</uicontrol>
+                            <uicontrol>PBX</uicontrol>
+                            <uicontrol>Trunks</uicontrol>
+                        </menucascade>, click <uicontrol>Add</uicontrol>.</li>
+                    <li>Enter the SIP trunk information that is provided by the ITSP.<p><image
+                                href="../Images/admin/dedicated-sip-trunk-settings.jpg" width="650"
+                                id="image_lry_hp3_mgb"/></p></li>
+                    <li>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_eq4_y13_mgb">
+            <title>NAT settings</title>
+            <p>If you have configured NAT settings on the PBX, you need to add a <uicontrol>Local
+                    Network Identification</uicontrol> for the SIP trunk to ensure successful
+                communication through the SIP trunk.</p>
+            <p>
+                <ol>
+                    <li>Go to <menucascade>
+                            <uicontrol>Settings</uicontrol>
+                            <uicontrol>PBX</uicontrol>
+                            <uicontrol>General</uicontrol>
+                            <uicontrol>SIP</uicontrol>
+                            <uicontrol>NAT</uicontrol>
+                        </menucascade>.</li>
+                    <li>Click <image href="../Images/ui_icons/add.png" width="20"
+                            id="image_o5l_1l3_mgb"/> to add a <uicontrol>Local Network
+                            Identification</uicontrol>.</li>
+                    <li>Enter the IP range of the SIP trunk. <p>In this scenario, set
+                                <uicontrol>Local Network Identification</uicontrol> to
+                                <i>191.8.88.0/255.255.255.0</i>.</p><p><image
+                                href="../Images/admin/dedicated-sip-trunk-nat-settings.jpg"
+                                width="650" id="image_izj_ml3_mgb"/></p></li>
+                    <li>Click <uicontrol>Save</uicontrol> and reboot the PBX.</li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_vsv_z13_mgb">
+            <title>Firewall settings</title>
+            <p>To avoid that the PBX may accidentally block the IP address of the SIP trunk, add a
+                firewall rule to accept packets from the SIP trunk IP address.</p>
+            <p>
+                <ol id="ol_gj2_mm3_mgb">
+                    <li>Go to <menucascade>
+                            <uicontrol>Settings</uicontrol>
+                            <uicontrol>System</uicontrol>
+                            <uicontrol>Security</uicontrol>
+                            <uicontrol>Firewall Rules</uicontrol>
+                        </menucascade>, click <uicontrol>Add</uicontrol>.</li>
+                    <li>Configure a firewall rule to accept packets from the IP addresss of SIP
+                                trunk.<p><image
+                                href="../Images/admin/dedicated-sip-trunk-firewall.jpg" width="650"
+                                id="image_ht4_4n3_mgb"/></p><p>
+                            <ul id="ul_mns_rn3_mgb">
+                                <li><uicontrol>Name</uicontrol>: Set a name to help you identify
+                                    it.</li>
+                                <li><uicontrol>Action</uicontrol>: Select
+                                        <uicontrol>Accept</uicontrol>.</li>
+                                <li><uicontrol>Protocol</uicontrol>: Select
+                                        <uicontrol>BOTH</uicontrol>.</li>
+                                <li><uicontrol>Type</uicontrol>: Select
+                                    <uicontrol>IP</uicontrol>.</li>
+                                <li><uicontrol>Source IP Address/Subnet Mask</uicontrol>: Enter
+                                        <i>191.8.88.0/255.255.255.0</i>.</li>
+                                <li><uicontrol>Port</uicontrol>: Enter <i>1:65535</i>.</li>
+                            </ul>
+                        </p></li>
+                    <li>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</li>
+                </ol>
+            </p>
+        </section>
+    </body>
+</topic>

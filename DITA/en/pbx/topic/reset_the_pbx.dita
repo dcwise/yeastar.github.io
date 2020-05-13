@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_rct_ftl_ldb">
+    <title>Reset the PBX</title>
+    <shortdesc>If you want to erase all the configurations on your PBX, you can reset the PBX to the
+        factory defaults.</shortdesc>
+    <taskbody>
+        <steps>
+            <step product="cloudpbx">
+                <cmd>Go to <menucascade>
+                        <uicontrol>Maintenance</uicontrol>
+                        <uicontrol>Reset</uicontrol>
+                    </menucascade>, click <uicontrol>Reset</uicontrol>.</cmd>
+                <info><image href="../Images/admin/reset_cloudpbx.png" id="image_shc_bxm_ldb"
+                    /></info>
+            </step>
+            <step product="cloudpbx">
+                <cmd>Note down the new activation code.</cmd>
+                <info>You need to use the new activation code to activate the PBX after
+                    reset.</info>
+            </step>
+            <step product="s-series k2">
+                <cmd>Go to <menucascade>
+                        <uicontrol>Maintenance</uicontrol>
+                        <uicontrol>Reset</uicontrol>
+                    </menucascade>.</cmd>
+            </step>
+            <step product="k2 s-series">
+                <cmd>Select which data that you want to reset.</cmd>
+                <info>
+                    <ul id="ul_nzv_f3w_hkb">
+                        <li><uicontrol>Reset All</uicontrol>: Factory reset all the data and
+                            configurations on the PBX.</li>
+                        <li><uicontrol>Reset IP</uicontrol>: Reset the PBX's IP address to
+                            192.168.5.150.</li>
+                        <li><uicontrol>Reset CDR and Recording Files</uicontrol>: Delete CDR,
+                            one-touch recordings, and auto recording files that are stored in the
+                            Local flash of PBX. </li>
+                        <li><uicontrol>Reset Backup Files</uicontrol>: Delete the backup files that
+                            are stored in the Local flash of PBX.</li>
+                        <li><uicontrol>Reset Prompts</uicontrol>: Delete the custom prompts.</li>
+                        <li><uicontrol>Reset Other System Settings</uicontrol>: Reset all the
+                            configurations except IP address settings,and delete system logs, event
+                            logs, and operation logs.<p><image
+                                    href="../Images/admin/factory-reset-s-series-k2.png" width="650"
+                                    id="image_d1z_djw_hkb"/></p></li>
+                    </ul>
+                </info>
+            </step>
+            <step product="s-series k2">
+                <cmd>Click <uicontrol>Factory Reset</uicontrol></cmd>
+                <info>
+                    <p><image href="../Images/admin/reset_s-series.png" id="image_gr2_mjw_hkb"/></p>
+                </info>
+            </step>
+            <step>
+                <cmd>Enter the verification code.</cmd>
+            </step>
+            <step>
+                <cmd>Click
+                        <?oxy_comment_start author="carol" timestamp="20200114T173735+0800" comment="这个版本设计有缺陷，下个版本会改成 reset"?><uicontrol
+                        product="s-series k2">Factory Reset</uicontrol><?oxy_comment_end?><uicontrol
+                        product="cloudpbx">Reset</uicontrol>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

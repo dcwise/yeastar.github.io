@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_nzd_xcw_bdb">
+    <title> an Intercom/Paging Group</title>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/07/02"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <context>You can set an intercom or paging group. When users dial the group number, they can
+            make an announcement to the group members.</context>
+        <steps id="steps_xmt_jdw_bdb">
+            <step>
+                <cmd>Dial the group number on your phone.</cmd>
+                <info>The calls of the group members will be answered automatically.</info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

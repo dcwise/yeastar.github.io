@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_ard_hz1_wdb">
+    <title>Add Contacts on Conference Panel</title>
+    <shortdesc>You can add groups of contacts on the conference panel, and select a desired group of
+        contacts to invite them to a conference. Contact groups will help you invite conference
+        members efficiently.</shortdesc>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>On the <uicontrol>Conference Panel</uicontrol>, click <uicontrol>Conference
+                        Contacts</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Add</uicontrol> to add a contact group.</cmd>
+            </step>
+            <step>
+                <cmd>Set the contact group name.</cmd>
+            </step>
+            <step>
+                <cmd>Choose which type of contacts to add.</cmd>
+                <choices>
+                    <choice><uicontrol>Extension</uicontrol>: Choose an extension number or the
+                        extension user's mobile number.</choice>
+                    <choice><uicontrol>Custom</uicontrol>: Add an external number.</choice>
+                </choices>
+                <info>
+                    <note>For external number, you need to add prefix before the phone number
+                        according to the PBX's outbound route pattern. For example, if the outbound
+                        route pattern is <codeph>9.</codeph> and strip <codeph>1</codeph> digit; you
+                        need to add digit 9 before the contact phone number.</note>
+                </info>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Add</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Repeat step 4 and step 5 to add another contact.</cmd>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

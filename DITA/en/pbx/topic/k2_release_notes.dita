@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_kxw_ttl_l2b">
+    <title>Yeastar K2 IPPBX</title>
+    <shortdesc>Release notes for Yeastar K2 IPPBX. </shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/07/12"/>
+            <!--Carol-->
+            <revised modified="2018/07/12"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <p></p>
+    </conbody>
+</concept>

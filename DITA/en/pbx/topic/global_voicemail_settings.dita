@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="task_qbz_sn4_tcb">
+    <title>Global Voicemail Settings</title>
+    <shortdesc>You can change the global voicemail message settings, voicemail playback settings
+        according to your needs.</shortdesc>
+    <body>
+        <p> The global voicemail settings will be applied to all the extensions.</p>
+        <p>Navigation path: <menucascade>
+                <uicontrol>Settings</uicontrol>
+                <uicontrol>PBX</uicontrol>
+                <uicontrol>General</uicontrol>
+                <uicontrol>Voicemail</uicontrol>
+            </menucascade>.</p>
+        <p>
+            <table frame="all" rowsep="1" colsep="1" id="table_frk_1ct_nhb">
+                <title>Global Voicemail settings</title>
+                <tgroup cols="2">
+                    <colspec colname="c1" colnum="1" colwidth="1*"/>
+                    <colspec colname="c2" colnum="2" colwidth="2.44*"/>
+                    <thead>
+                        <row>
+                            <entry>Setting</entry>
+                            <entry>Description</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row id="voicemail-message-options">
+                            <entry namest="c1" nameend="c2"><uicontrol>Message
+                                Options</uicontrol></entry>
+                        </row>
+                        <row>
+                            <entry>Max Messages per Folder</entry>
+                            <entry>Each extension user has a <uicontrol>Read</uicontrol> voicemail
+                                folder and an <uicontrol>Unread</uicontrol> folder. You can set the
+                                maximum number of messages per folder.</entry>
+                        </row>
+                        <row>
+                            <entry>Max Message Time</entry>
+                            <entry>Set the maximum time of one message.</entry>
+                        </row>
+                        <row>
+                            <entry>Min Message Time</entry>
+                            <entry>Set the minimum time of one message.</entry>
+                        </row>
+                        <row>
+                            <entry>Delete Voicemail</entry>
+                            <entry>This function will work if you enable <uicontrol>Send Voicemail
+                                    to Email</uicontrol>. If the voicemail is forwarded to the
+                                user's email, PBX will delete voicemails from the user's voicemail
+                                folder.</entry>
+                        </row>
+                        <row>
+                            <entry>Ask Caller to Dial 5</entry>
+                            <entry>By default, when the caller accesses a user's voicemail, PBX
+                                starts to record message automatically. If you want to prompt the
+                                caller first, you can enable this option. The caller needs to dial 5
+                                first, then starts to record message.</entry>
+                        </row>
+                        <row>
+                            <entry>Operator Breakout from Voicemail</entry>
+                            <entry>If enabled, the users can dial 0 to exit the voicemail
+                                destination of an IVR.</entry>
+                        </row>
+                        <row id="voicemail-greeting-options">
+                            <entry namest="c1" nameend="c2"><uicontrol>Greeting
+                                Options</uicontrol></entry>
+                        </row>
+                        <row>
+                            <entry id="global-busy-prompt">Busy Prompt</entry>
+                            <entry>Select the greeting that will be played when the extension is busy.<p>
+                                    <note>To use a custom prompt, you need to upload your audio file
+                                        to the <xref href="custom_prompt.dita#topic_zrr_ffk_5cb"
+                                            >Custom Prompt</xref> page first.</note>
+                                </p></entry>
+                        </row>
+                        <row>
+                            <entry id="global-unavailable-prompt">Unavailable Prompt</entry>
+                            <entry>Select the greeting that will be played  when the extension is unavailable.<p>
+                                    <note>To use a custom prompt, you need to upload your audio file
+                                        to the <xref href="custom_prompt.dita#topic_zrr_ffk_5cb"
+                                            >Custom Prompt</xref> page first.</note>
+                                </p></entry>
+                        </row>
+                        <row>
+                            <entry>Voicemail Prompt</entry>
+                            <entry>Select the greeting that will be played before the caller leave a message.<p>
+                                    <note>To use a custom prompt, you need to upload your audio file
+                                        to the <xref href="custom_prompt.dita#topic_zrr_ffk_5cb"
+                                            >Custom Prompt</xref> page first.</note>
+                                </p></entry>
+                        </row>
+                        <row id="voicemail-playback-options">
+                            <entry namest="c1" nameend="c2"><uicontrol>Playback
+                                Options</uicontrol></entry>
+                        </row>
+                        <row>
+                            <entry>Announce Message Caller ID</entry>
+                            <entry>If enabled, the PBX will announce who left the message.</entry>
+                        </row>
+                        <row>
+                            <entry>Announce Message Duration</entry>
+                            <entry>If enabled, the PBX will announce the message duration.</entry>
+                        </row>
+                        <row>
+                            <entry>Announce Message Arrival Time</entry>
+                            <entry>If enabled, the PBX will announce when the message was
+                                received.</entry>
+                        </row>
+                        <row>
+                            <entry>Allow Users to Review Messages</entry>
+                            <entry>If enabled, the users can review their recorded message, and then
+                                send the messages.</entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+        </p>
+    </body>
+</topic>

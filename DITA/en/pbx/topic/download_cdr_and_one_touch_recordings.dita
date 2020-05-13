@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_gpz_21h_1db">
+    <title>Download CDR and One Touch Recordings</title>
+    <shortdesc>Log in the Extension User Portal to download your CDR and one touch recording
+        files.</shortdesc>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/08/23"/>
+            <!--Carol-->
+            <revised modified="2018/09/06"/>
+            <!--Carol-->
+            <revised modified="2018/09/11"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <context/>
+        <steps>
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Me</uicontrol>
+                        <uicontrol>CDR &amp; One Touch Recording</uicontrol>
+                    </menucascade>.</cmd>
+            </step>
+            <step>
+                <cmd>Search the CDR and Recordings.</cmd>
+            </step>
+            <step>
+                <cmd>To download the searched CDR, click <uicontrol>Download CDR</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>To download the searched recording files, click <uicontrol>Download
+                        Recordings</uicontrol>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

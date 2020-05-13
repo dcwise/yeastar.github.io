@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="build_up_the_openvpn_server">
+    <title>Build up the OpenVPN Server</title>
+    <body>
+        <section id="section_my2_5y1_h3b">
+            <title>Step 1. Configure the OpenVPN server</title>
+            <ol id="ol_qhk_d1b_h3b">
+                <li>Log in the PBX web interface, go to <uicontrol>VPN Server</uicontrol>, check the
+                    option <uicontrol>Enable VPN Server</uicontrol>.</li>
+                <li>Configure the OpenVPN server settings.<p>Here is an example of OpenVPN server
+                        settings:</p><p><image href="../Images/admin/openvpn-configurations.png"
+                            id="image_s2l_g1g_h3b" width="650"/></p><table id="table_kpt_41b_h3b"
+                        colsep="1" rowsep="1" frame="all">
+                        <title>Description of OpenVPN settings</title>
+                        <tgroup cols="2">
+                            <colspec colname="c1" colnum="1" colwidth="199px"/>
+                            <colspec colname="c2" colnum="2" colwidth="394px"/>
+                            <thead>
+                                <row>
+                                    <entry>Options</entry>
+                                    <entry>Description</entry>
+                                </row>
+                            </thead>
+                            <tbody>
+                                <row>
+                                    <entry align="center" valign="middle">Server Port</entry>
+                                    <entry>Specify which TCP/UDP port should OpenVPN listen on.
+                                            <p>The default port is 1194.</p></entry>
+                                </row>
+                                <row>
+                                    <entry align="center" valign="middle">Protocol</entry>
+                                    <entry>Choose the protocol.<p>
+                                            <ul id="ul_b31_rpd_phb">
+                                                <li>TCP</li>
+                                                <li>UDP</li>
+                                            </ul>
+                                        </p></entry>
+                                </row>
+                                <row>
+                                    <entry align="center" valign="middle">Device Mode</entry>
+                                    <entry>
+                                        <p>Choose the device mode:</p>
+                                        <ul id="ul_tps_xhc_5db">
+                                            <li id="tun">TUN: a TUN device is a virtual point-point
+                                                IP link.<p>If you choose TUN mode, you should
+                                                  allocate a static IP address for windows client
+                                                  because of TAP-WIN32 driver limitation.</p></li>
+                                            <li>TAP: a TAP device is a virtual Ethernet adapter.
+                                                  <p>Android and iOS clients don’t support TAP
+                                                  mode.</p></li>
+                                        </ul>
+                                        <p>
+                                            <note>If Android, iOS, and other clients need to access
+                                                to the PBX via OpenVPN network at the same time, we
+                                                recommend that you use the TUN mode.</note>
+                                        </p>
+                                    </entry>
+                                </row>
+                                <row>
+                                    <entry align="center" valign="middle">Encryption</entry>
+                                    <entry>Choose encryption method.<ul id="ul_uvz_3zw_h3b">
+                                            <li>BlowFish</li>
+                                            <li>AES-128</li>
+                                            <li>AES-256</li>
+                                            <li>Triple-DES</li>
+                                        </ul></entry>
+                                </row>
+                                <row>
+                                    <entry align="center" valign="middle">Key Length</entry>
+                                    <entry>Set the key length.<p>
+                                            <note>The value must be the same as
+                                                  <codeph>KEY_SIZE</codeph> which were set in the
+                                                  <filepath>vars.bat</filepath> file.</note>
+                                        </p></entry>
+                                </row>
+                                <row>
+                                    <entry align="center" valign="middle">Maximum Number of
+                                        Clients</entry>
+                                    <entry>Set the maximum number of clients that could connect to
+                                        the OpenVPN server.</entry>
+                                </row>
+                                <row>
+                                    <entry id="verification_mode" align="center" valign="middle"
+                                        >Verification Mode</entry>
+                                    <entry>Choose the Verification Mode of Client. <p>
+                                            <ul id="ul_axq_ypd_phb">
+                                                <li>CA Cert + Client Cert (recommend)</li>
+                                                <li>CA Cert + Client Cert + Account &amp;
+                                                  Password</li>
+                                                <li>CA Cert + Account &amp; Password</li>
+                                            </ul>
+                                        </p><note>If you choose <uicontrol>CA Cert + Client Cert +
+                                                Account &amp; Password</uicontrol> or <uicontrol>CA
+                                                Cert + Account &amp; Password</uicontrol>, you need
+                                            to <xref
+                                                href="openvpn-username-password-authentication.dita#openvpn-create-account-password-for-each-client"
+                                                >configure OpenVPN username/password
+                                                authentication</xref> for each client
+                                        later.</note></entry>
+                                </row>
+                                <row>
+                                    <entry align="center" valign="middle">Enable Compression</entry>
+                                    <entry>Whether to compress the VPN link.</entry>
+                                </row>
+                                <row>
+                                    <entry align="center" valign="middle">Address pool</entry>
+                                    <entry>Define the address pool.</entry>
+                                </row>
+                                <row>
+                                    <entry align="center" valign="middle">Subnet mask</entry>
+                                    <entry>Set the subnet mask.</entry>
+                                </row>
+                                <row>
+                                    <entry align="center" valign="middle">Global Traffic
+                                        Forwarding</entry>
+                                    <entry>If enabled, the client will configure a default gateway
+                                        to the server after the connection is successful, and all
+                                        the traffic will be forwarded by the server. (The OpenVPN
+                                        server machine may need to NAT or bridge the TUN/TAP
+                                        interface to the internet in order for this to work
+                                            properly).<p>If disabled, only the communication data
+                                            with the server will go through VPN tunnel, other
+                                            traffic will go through the original forward routing.
+                                            </p><p>This feature may not take effect on some clients.
+                                        </p></entry>
+                                </row>
+                            </tbody>
+                        </tgroup>
+                    </table></li>
+                <li>Upload certificates and keys for server.<p><image
+                            href="../Images/admin/openvpn-upload-CA.png" id="image_tjh_skh_h3b"
+                        /></p><p>
+                        <table frame="all" rowsep="1" colsep="1" id="table_obx_r1g_h3b">
+                            <title/>
+                            <tgroup cols="2" align="center">
+                                <colspec colname="c1" colnum="1" colwidth="165px"/>
+                                <colspec colname="c2" colnum="2" colwidth="492px"/>
+                                <thead>
+                                    <row>
+                                        <entry>Options</entry>
+                                        <entry>CA &amp; Key</entry>
+                                    </row>
+                                </thead>
+                                <tbody>
+                                    <row>
+                                        <entry>CA Cert</entry>
+                                        <entry align="left">Upload
+                                            <filepath>ca.crt</filepath>.</entry>
+                                    </row>
+                                    <row>
+                                        <entry align="center">Public Server Cert</entry>
+                                        <entry align="left">Upload the OpenVPN server certificate
+                                                <filepath>server.crt</filepath>.</entry>
+                                    </row>
+                                    <row>
+                                        <entry>Private Server Key</entry>
+                                        <entry align="left">Upload the OpenVPN server key
+                                                <filepath>server.key</filepath>.</entry>
+                                    </row>
+                                    <row>
+                                        <entry>DH PEM</entry>
+                                        <entry align="left">Upload the Diffie Hellman file
+                                                <filepath>dh2048.pem</filepath>. <note>If the
+                                                  <codeph>KEY_SIZE</codeph> is 1024, then upload the
+                                                file <filepath>dh1024.pem</filepath>.</note></entry>
+                                    </row>
+                                    <row>
+                                        <entry>Enable SSL/TLS</entry>
+                                        <entry align="left">Enable SSL/TLS on the VPN server, and
+                                            then upload <filepath>ta.key</filepath> file.</entry>
+                                    </row>
+                                </tbody>
+                            </tgroup>
+                        </table>
+                    </p></li>
+                <li>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</li>
+            </ol>
+        </section>
+        <section id="section_mdf_clh_h3b">
+            <title>Step 2. Check the VPN server status</title>
+            <p>
+                <ol id="ol_wk5_hlh_h3b">
+                    <li>Go to <menucascade>
+                            <uicontrol> Resource Monitor</uicontrol>
+                            <uicontrol> Network</uicontrol>
+                            <uicontrol> VPN Server</uicontrol>
+                        </menucascade>,
+                        <?oxy_delete author="Yeastar" timestamp="20190719T112601+0800" content="C"?><?oxy_insert_start author="Yeastar" timestamp="20190719T112602+0800"?>c<?oxy_insert_end?>heck
+                        the OpenVPN status and virtual IP address.<p><image
+                                href="../Images/admin/openVPN-server-status.png"
+                                id="image_c11_ymh_h3b"/></p></li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_zzs_4cc_33b">
+            <title>Step 3. Forward VPN server port</title>
+            <p>To ensure that VPN clients can access the PBX, you should forward VPN server port on
+                your router. The default VPN server port is 1194.</p>
+            <p>Note down the public IP address of PBX and the external VPN server port. Later, you
+                need to enter the remote IP address and remote server port in the client
+                configuration file.</p>
+        </section>
+    </body>
+</topic>

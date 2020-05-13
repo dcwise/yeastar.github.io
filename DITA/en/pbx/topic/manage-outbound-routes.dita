@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v3z_hb2_2jb">
+    <title>Manage Outbound Routes</title>
+    <shortdesc>After you create outbound routes, you can adjust the priority of the outbound routes.
+        You can also edit or delete the outbound routes.</shortdesc>
+    <body>
+        <section id="section_amx_2lg_2jb">
+            <title>Adjust priority of outbound routes</title>
+            <p>When a user places a call, if the dialed number matches multiple dial patterns, the
+                outbound route with the highest priority will be used. You can adjust the priority
+                of outbound routes to route calls through proper outbound routes, greatly saving
+                calling cost for your company.</p>
+            <p>
+                <note>The route priority is important, especially if there is some overlap. For
+                    example, the number 5503305 matches both a dial pattern of
+                        <codeph>ZXXXXXX</codeph> and <codeph>X.</codeph>, the PBX will send the call
+                    through the outbound route with the highest priority.</note>
+            </p>
+            <p><b>Example</b>:</p>
+            <p>When users dial 05503301, both of the two outbound routes match 05503301:</p>
+            <p>
+                <ul id="ul_xjw_nvs_2jb">
+                    <li>Outbound Route-Long-distance call: The dial pattern is
+                            <codeph>0XXXXXXX</codeph> and uses trunk 1.</li>
+                    <li>Outbound Route-Local call: The dial pattern is <codeph>X.</codeph> and uses
+                        trunk 2.</li>
+                </ul>
+            </p>
+            <p>To call 5503301 through trunk 1, you need to prioritize the outbound route of
+                "Long-distance call"; or PBX will match the outbound route of “Local call" and route
+                the call out using trunk 2.</p>
+            <p>
+                <ol id="ol_x3h_tql_2jb">
+                    <li>Go to <menucascade>
+                            <uicontrol>Settings</uicontrol>
+                            <uicontrol>PBX</uicontrol>
+                            <uicontrol>Call Control</uicontrol>
+                            <uicontrol>Outbound Routes</uicontrol>
+                        </menucascade>.</li>
+                    <li>Click the buttons <image href="../Images/ui_icons/drag.png" width="20"
+                            id="image_rxd_qql_2jb"/><image href="../Images/ui_icons/up.png"
+                            width="20" id="image_txd_qql_2jb"/><image
+                            href="../Images/ui_icons/down.png" width="20" id="image_sxd_qql_2jb"
+                            /><image href="../Images/ui_icons/botton.png" width="20"
+                            id="image_qxd_qql_2jb"/> to adjust the priority of your outbound
+                            routes.<note>PBX will match outbound route from top to
+                                bottom.</note><p><image
+                                href="../Images/admin/outbound_route_priority.png" width="650"
+                                id="image_uxd_qql_2jb"/></p></li>
+                </ol>
+            </p>
+        </section>
+        <ul id="ul_yvn_s1w_jjb">
+            <li><image href="../Images/ui_icons/drag.png" width="20" id="image_ujq_mvs_2jb"/>: Put
+                this outbound route at the top.</li>
+            <li><image href="../Images/ui_icons/up.png" width="20" id="image_vjq_mvs_2jb"/>: Move
+                this outbound route upward.</li>
+            <li><image href="../Images/ui_icons/down.png" width="20" id="image_wjq_mvs_2jb"/>: Move
+                this outbound route downward.</li>
+            <li><image href="../Images/ui_icons/botton.png" width="20" id="image_xjq_mvs_2jb"/>: Put
+                this outbound at the bottom.</li>
+        </ul>
+        <section id="section_jyx_zlf_2jb">
+            <title>Edit an outbound route</title>
+            <p>
+                <ol id="ol_c1z_c25_2jb">
+                    <li>Go to <menucascade>
+                            <uicontrol>Settings</uicontrol>
+                            <uicontrol>PBX</uicontrol>
+                            <uicontrol>Call Control</uicontrol>
+                            <uicontrol>Outbound Routes</uicontrol>
+                        </menucascade>.</li>
+                    <li>Click <image id="image_bxm_225_2jb" href="../Images/ui_icons/edit.png"
+                            width="20"/> beside the outbound route that you want to edit.</li>
+                    <li>Edit the outbound route.</li>
+                    <li>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_egq_1mf_2jb">
+            <title>Delete an outbound route</title>
+            <p>
+                <ol id="ol_hwz_k25_2jb">
+                    <li>Go to <menucascade>
+                            <uicontrol>Settings</uicontrol>
+                            <uicontrol>PBX</uicontrol>
+                            <uicontrol>Call Control</uicontrol>
+                            <uicontrol>Outbound Routes</uicontrol>
+                        </menucascade>.</li>
+                    <li>Click <image id="image_jwm_m25_2jb" href="../Images/ui_icons/delete.png"/>
+                        beside the outbound route that you want to delete.</li>
+                    <li>On the pop-up window, click <uicontrol>Yes</uicontrol> and
+                            <uicontrol>Apply</uicontrol>.<note>After you delete the outbound route,
+                            extension users can not make outbound calls through this outbound
+                            route.</note></li>
+                </ol>
+            </p>
+        </section>
+    </body>
+</topic>

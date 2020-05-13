@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_ith_5xk_zdb">
+    <title>Extension Security</title>
+    <shortdesc>Secure the VoIP extensions.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/05/30"/>
+            <!--Carol-->
+            <revised modified="2018/05/30"/>
+            <!--Carol-->
+            <revised modified="2018/06/01"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <section id="section_xhb_c1l_zdb" product="s-series">
+            <title>SIP Registration Port</title>
+            <p>To prevent malicious registration of SIP extensions, go to <menucascade>
+                    <uicontrol>Settings</uicontrol>
+                    <uicontrol>PBX</uicontrol>
+                    <uicontrol>General</uicontrol>
+                    <uicontrol>SIP</uicontrol>
+                    <uicontrol>General</uicontrol>
+                </menucascade> to change the <uicontrol>UDP Port</uicontrol>.</p>
+            <p><image href="../Images/admin/change_sip_port.png" id="image_bwg_p1l_zdb"/></p>
+            <p>
+                <note>After you change the SIP UDP registration port, you need to change the
+                    relevant auto defense rules for the SIP port.<p><image
+                            href="../Images/admin/change_auto_defense_rules.png"
+                            id="image_qj3_4bl_zdb" width="650"/></p></note>
+            </p>
+        </section>
+        <section id="section_gt3_pbl_zdb">
+            <title>Extension Password</title>
+            <p>The PBX will generate a random password for a new extension. If you want to set the
+                password manually, the password should meet the following requirements:</p>
+            <p>
+                <ul>
+                    <li>At least 8 characters</li>
+                    <li>At least 1 number</li>
+                    <li>At least 1 uppercase letter</li>
+                    <li>At least 1 lowercase letter</li>
+                    <li>Avoid word or name<p>For example, avoid word like <codeph>yeastar</codeph>,
+                                <codeph>password</codeph>, <codeph>carol</codeph> etc. Use password
+                            like <codeph>8lsS*!08k_s922</codeph>.</p></li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_ymh_hcl_zdb">
+            <title>Restrict Extension Registration</title>
+            <p>You can limit which IP address or which User Agent is allowed to register a certain
+                extension.</p>
+            <p>Go to <menucascade>
+                    <uicontrol>Settings</uicontrol>
+                    <uicontrol>PBX</uicontrol>
+                    <uicontrol>Extensions</uicontrol>
+                </menucascade> to edit the extension's <uicontrol>Advanced</uicontrol> setting.</p>
+            <p>
+                <ul id="ul_ism_mdl_zdb">
+                    <li><b>User Agent Registration Authorization</b><p>By default, the PBX allows
+                            phones to register extensions without user agent limit. To enhance the
+                            extension security, you can restrict which user agent is allowed to
+                            register the extension. </p><p>When a phone is trying to register the
+                            extension, the phone will send SIP packets that contain the user agent.
+                            If the user agent is not allowed, the registration will
+                                fail.</p><p><image
+                                href="../Images/admin/user_agent_registration_authorization.png"
+                                id="image_w4p_ldl_zdb"/></p></li>
+                </ul>
+                <ul id="ul_ng5_zdl_zdb">
+                    <li><b>IP Restriction</b><p>To enhance the extension security, you can restrict
+                            which IP is allowed to register the extension.</p><p><image
+                                href="../Images/admin/ip_restriction.png" id="image_wsg_kdl_zdb"
+                                width="650"/></p></li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_wqs_f2l_zdb">
+            <title>SRTP</title>
+            <p> SRTP is used to encrypt audio streams. If SRTP is enabled for an extension,  the
+                extension will support SRTP and will allow negotiation with calls without SRTP.</p>
+            <p>Go to <menucascade>
+                    <uicontrol>Settings</uicontrol>
+                    <uicontrol>PBX</uicontrol>
+                    <uicontrol>Extensions</uicontrol>
+                </menucascade> to edit the extension's <uicontrol>Advanced</uicontrol> setting.</p>
+            <p><image href="../Images/admin/extension_srtp.png" id="image_pc4_dfl_zdb" width="650"
+                /></p>
+        </section>
+    </conbody>
+</concept>
+<?oxy_options track_changes="on"?>

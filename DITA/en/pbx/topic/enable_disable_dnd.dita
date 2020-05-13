@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_lst_lg5_cfb">
+    <title>Enable/Disable DND</title>
+    <shortdesc>Use DND (Do Not Disturb) to silence your phone and ignore incoming call notifications
+        when you need to avoid distractions.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/09/12"/>
+            <!--Carol-->
+            <revised modified="2018/09/12"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <context>
+            <p> When the DND is enabled, your incoming calls will be forwarded to your voicemail. If
+                your Voicemail function is not enabled, the incoming calls will be declined
+                immediately.</p>
+            <p>
+                <note>The DND settings on the IP phone has a higher priority than the DND settings
+                    on PBX.</note>
+            </p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Me</uicontrol>
+                        <uicontrol>Extension Settings</uicontrol>
+                        <uicontrol>Other Settings</uicontrol>
+                    </menucascade>, check the option <uicontrol>DND</uicontrol> to enable DND.</cmd>
+            </step>
+            <step>
+                <cmd>Uncheck the option <uicontrol>DND</uicontrol> to disable DND.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

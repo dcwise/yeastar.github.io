@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_sbd_h2z_zcb">
+    <title>Check Your Route Permission</title>
+    <shortdesc>You can log in the Extension User Portal to check which outbound route is available,
+        and which number you can dial out.</shortdesc>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/09/07"/>
+            <!--Carol-->
+            <revised modified="2018/09/11"/>
+            <!--Carol-->
+            <revised modified="2018/09/12"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <context/>
+        <steps>
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Me</uicontrol>
+                        <uicontrol>Route Permission</uicontrol>
+                    </menucascade> to check the route permission.</cmd>
+                <info>If you want to have more route permissions, contact your administrator.</info>
+                <info><image href="../Images/user/route_permission.png" width="650"
+                        id="image_nqq_gkz_zcb" product="cloudpbx s-series"/></info>
+                <info><image href="../Images/user/route_permission_oem.png" width="650"
+                        id="image_kcw_r25_cfb" product="OEM"/></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

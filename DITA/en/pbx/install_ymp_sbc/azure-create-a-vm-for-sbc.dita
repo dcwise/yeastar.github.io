@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="task_f41_1y1_ygb">
+    <title>Step5. Create a VM for SBC</title>
+    <shortdesc>Create a Virtual Machine (VM) with a public IP address. This VM will be used to
+        install SBC server.</shortdesc>
+    <body>
+        <section id="section_rtk_rdg_zgb">
+            <title>1. Create a VM for SBC</title>
+            <p>
+                <ol id="ol_ow4_sdg_zgb">
+                    <li>In the search box at the top of the portal, enter <i>virtual machines</i> in
+                        the search box. When <b>Virtual machines</b> appear in the search results,
+                        select it.<p><image href="../Images/SBC/azure-virtual-machine.png"
+                                width="650" id="image_ybr_4nb_ygb"/></p></li>
+                    <li>On the <uicontrol>Virtual machines</uicontrol> page, click
+                            <uicontrol>+Add</uicontrol>.</li>
+                    <li>In the <uicontrol>Basics</uicontrol> section, enter or select the following
+                        information, click <uicontrol>Next: Disks ></uicontrol>.<itemgroup>
+                            <ul id="ul_gc2_j5b_ygb">
+                                <li><uicontrol>PROJECT DETAILS</uicontrol><p>
+                                        <ul id="ul_lwh_l5b_ygb">
+                                            <li><uicontrol>Subscription</uicontrol>: Select the same
+                                                subscription as the virtual network.</li>
+                                            <li><uicontrol>Resource group</uicontrol>: Select the
+                                                same resource group as the virtual network.</li>
+                                        </ul>
+                                    </p></li>
+                            </ul>
+                            <ul id="ul_h54_n5b_ygb">
+                                <li><uicontrol>INSTANCE DETAILS</uicontrol><p><image
+                                            href="../Images/SBC/azure-vm-sbc.png"
+                                            id="image_vbw_jvb_ygb" width="650"/></p><p>
+                                        <ul id="ul_ip3_45b_ygb">
+                                            <li><uicontrol>Virtual machine name</uicontrol>: Set a
+                                                unique name for the virtual machine. For example:
+                                                  <i>SBC</i>.</li>
+                                            <li><uicontrol>Region</uicontrol>: Select the same
+                                                region as the virtual network.</li>
+                                            <li><uicontrol>Image</uicontrol>: Select
+                                                  <uicontrol>Ubuntu Server 16.04
+                                                LTS</uicontrol>.</li>
+                                            <li><uicontrol>Size</uicontrol>: <xref
+                                                  href="system_requirements_for_sbc.dita">Change the
+                                                  size according to your needs</xref>.</li>
+                                        </ul>
+                                    </p></li>
+                                <li><uicontrol>ADMINISTRATOR ACCOUNT</uicontrol><p>
+                                        <ul id="ul_fzy_r5b_ygb">
+                                            <li><uicontrol>Authentication type</uicontrol>: Select
+                                                  <uicontrol>Password</uicontrol> or <uicontrol>SSH
+                                                  pair</uicontrol>, and configure the relevant
+                                                settings.</li>
+                                        </ul>
+                                    </p></li>
+                                <li><uicontrol>INBOUND PORT RULE</uicontrol><p><image
+                                            href="../Images/SBC/azure-vm-inbound-port-rules.png"
+                                            width="650" id="image_s1c_4vb_ygb"/></p><p>
+                                        <ul id="ul_yfg_z5b_ygb">
+                                            <li><uicontrol>Public inbound ports</uicontrol>: Select
+                                                  <uicontrol>Allow selected ports</uicontrol>.</li>
+                                            <li><uicontrol>Select inbound ports</uicontrol>: Select
+                                                  <uicontrol>SSH</uicontrol>.</li>
+                                        </ul>
+                                    </p></li>
+                            </ul>
+                        </itemgroup></li>
+                    <li>In the <uicontrol>Disks</uicontrol> section, leave the default settings and
+                        click <uicontrol>Next: Networking</uicontrol>.</li>
+                    <li>In the <uicontrol>Networking</uicontrol> section, enter or select the
+                        following information. <p><image
+                                href="../Images/SBC/azure-vm-networking-sbc.png" width="650"
+                                id="image_jsx_w1c_ygb"/></p><p>
+                            <ul>
+                                <li><uicontrol>Virtual network</uicontrol>: Select the virtual
+                                    network for Yeastar Cloud PBX.</li>
+                                <li><uicontrol>Subnet</uicontrol>: Select the SBC subnet.</li>
+                                <li><uicontrol>Public IP</uicontrol>: Click <uicontrol>Create
+                                        new</uicontrol> and set a static public IP address, then
+                                    click <uicontrol>OK</uicontrol>.<p><image
+                                            href="../Images/SBC/azure-create-new-public-ip.png"
+                                            id="image_imx_smc_ygb"/></p></li>
+                            </ul>
+                        </p></li>
+                    <li> Leave the rest of defaults, and click <uicontrol>Next: Management
+                            ></uicontrol>.</li>
+                    <li> Leave the default settings and click <uicontrol>Next: Guest config
+                            ></uicontrol>.</li>
+                    <li> Leave the default settings and click <uicontrol>Next: Tags
+                        ></uicontrol>.</li>
+                    <li> Leave the default settings and click
+                        <uicontrol>Review+create</uicontrol>.</li>
+                    <li> Click <uicontrol>Create</uicontrol>.<p>Check the SBC VM information on the
+                                <uicontrol>Virtual machines</uicontrol> page.</p><p><image
+                                href="../Images/SBC/azure-sbc-vm-overview.png" width="650"
+                                id="image_gyc_rvc_ygb"/></p></li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_cj5_n2g_zgb">
+            <title>2. Change the OS disk size</title>
+            <p>The default size of Operating System (OS) disk for each VM is 30GB. When creating a
+                VM, the OS disk size cannot be changed. You need to change the OS disk size of SBC
+                VM to 40GB.</p>
+            <p>
+                <ol id="ol_fk4_5g3_ygb">
+                    <li>On the <uicontrol>Virtual machines</uicontrol> page, right click the YMP VM,
+                        and click <uicontrol>Stop</uicontrol> to stop the VM.</li>
+                    <li>Click the SBC VM to configure the VM.</li>
+                    <li>Under <uicontrol>Settings</uicontrol>, select <uicontrol>Disks</uicontrol>,
+                        and click the OS disk.<p><image href="../Images/SBC/azure-sbc-os-disk.png"
+                                id="image_ypn_ph3_ygb"/></p></li>
+                    <li>Under <uicontrol>Settings</uicontrol>, select
+                            <uicontrol>Configuration</uicontrol>, and change the OS disk size to
+                                40GB.<p><image href="../Images/SBC/azure-sbc-change-os-disk.png"
+                                width="650" id="image_qsv_yh3_ygb"/></p></li>
+                    <li>Click <uicontrol>Save</uicontrol>.</li>
+                    <li>Back to <uicontrol>Virtual machines</uicontrol> page, right click the SBC
+                        VM, click <uicontrol>Start</uicontrol> to start the VM.</li>
+                </ol>
+            </p>
+        </section>
+    </body>
+</topic>

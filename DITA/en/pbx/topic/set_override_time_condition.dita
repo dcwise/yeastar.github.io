@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_ztx_jyn_fdb">
+    <title>Set Time Condition Override</title>
+    <taskbody>
+        <context>By default, extension users have no privilege to override time conditions. </context>
+    </taskbody>
+</task>

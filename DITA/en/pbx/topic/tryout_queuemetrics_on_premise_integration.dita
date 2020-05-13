@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_w1m_yd5_vdb">
+    <title>Tryout QueueMetrics On-Premise Integration</title>
+    <shortdesc>You can apply a trail license of QueueMetrics On-Premise from Yeastar to test the
+        integration with Yeastar S-Series VoIP PBX.</shortdesc>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/06/08"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>On your QueueMetrics server, enter the trial license of QueueMetrics.</cmd>
+            </step>
+            <step>
+                <cmd>Log in the PBX web interface, enter the <uicontrol>QueueMetrics
+                        Integration</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Check the option <uicontrol>Enable QueueMetrics Live
+                    Integration</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Choose the call center type to <codeph>QueueMetrics On-Premise</codeph>.</cmd>
+            </step>
+            <step>
+                <cmd>Enter the QueueMetrics login information.</cmd>
+                <info><image href="../Images/admin/try_qm_on_premise_integration.png"
+                        id="image_kfm_t25_vdb" width="650"/></info>
+                <choices id="choices_gqd_v25_vdb">
+                    <choice><uicontrol>QueueMetrics URL</uicontrol>: Enter the URL of your
+                        QueueMetrics server.</choice>
+                    <choice><uicontrol>Username</uicontrol>: Enter the username of the <xref
+                            href="set_up_queuemetrics_on_premise.dita#concept_mdd_db5_vdb/section_usz_zc5_vdb"
+                            >WQLOADER</xref> of QueueMetrics.</choice>
+                    <choice><uicontrol>Password</uicontrol>: Enter the password of the <xref
+                            href="set_up_queuemetrics_on_premise.dita#concept_mdd_db5_vdb/section_usz_zc5_vdb"
+                            >WQLOADER</xref> user.</choice>
+                </choices>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Visit</uicontrol> to visit the login page of the
+                    QueueMetrics.</cmd>
+                <info>
+                    <note>If the web page is not opened, copy the link and paste it in your web
+                        browser to visit it.</note>
+                </info>
+                <info><image href="../Images/admin/visit_queuemetricsonpremise.png"
+                        id="image_dfr_qf5_vdb" width="650"/></info>
+            </step>
+            <step>
+                <cmd>On the login page of QueueMetrics, enter the administrator’s user name and
+                    password, click <uicontrol>Log In</uicontrol>.</cmd>
+                <info><image href="../Images/admin/login_qm.png" id="image_bl5_5f5_vdb"/></info>
+                <choices>
+                    <choice><uicontrol>Login</uicontrol>: Enter <codeph>demoadmin</codeph></choice>
+                    <choice><uicontrol>Password</uicontrol>:  Default password is
+                            <codeph>demo</codeph>.</choice>
+                </choices>
+            </step>
+        </steps>
+    </taskbody>
+</task>

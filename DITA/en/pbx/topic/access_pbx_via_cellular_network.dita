@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_sbx_tbh_tdb">
+    <title>Access PBX via Cellular Network</title>
+    <shortdesc>Only when the cellular network has a public IP or host name can you access the PBX
+        via the cellular network.</shortdesc>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Get the IP address or host name of your 4G trunk from the carrier, or <xref
+                        href="check_pbx_network_status.dita#task_k5d_d1h_tdb">check the 4G network
+                        on the PBX</xref>.</cmd>
+            </step>
+            <step>
+                <cmd>Enter the IP address or host name in your web browser, press
+                        <uicontrol>Enter</uicontrol> to access the PBX web interface.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>
+<?oxy_options track_changes="on"?>

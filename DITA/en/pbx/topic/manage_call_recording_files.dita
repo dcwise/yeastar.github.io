@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_jhp_lml_gfb">
+    <title>Manage Call Recording Files</title>
+    <shortdesc>Go to <menucascade>
+            <uicontrol>CDR and Recordings</uicontrol>
+        </menucascade> to search, play, download, or delete the recording files.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/09/25"/>
+            <!--Carol-->
+            <revised modified="2018/09/25"/>
+            <!--Carol-->
+            <revised modified="2018/09/26"/>
+            <!--Carol-->
+            <revised modified="2018/09/27"/>
+            <!--Carol-->
+            <revised modified="2018/09/28"/>
+            <!--Carol-->
+            <revised modified="2018/10/16"/>
+        </critdates>
+    </prolog>
+    <body>
+        <section id="section_zdh_bjy_gfb">
+            <title>Search Recording Files</title>
+            <p>
+                <ol>
+                    <li>Set the search criteria <uicontrol>Time</uicontrol>.</li>
+                    <li>Enable <uicontrol>Include Recording Files</uicontrol> to filter the records
+                        that have associated recording files.</li>
+                    <li>Optional: Set other search criteria.</li>
+                    <li>Click <uicontrol>Search</uicontrol>.<p><image
+                                href="../Images/admin/search_recordings.png" width="650"
+                                id="image_w3d_hry_gfb"/></p></li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_nfz_cqq_gfb" product="s-series">
+            <title>Download Searched Recording Files</title>
+            <p>
+                <ol id="ol_td3_fjy_gfb">
+                    <li><xref href="#topic_jhp_lml_gfb/section_zdh_bjy_gfb" format="dita">Search
+                            recording files.</xref></li>
+                    <li>Click <uicontrol>Download Recordings</uicontrol> to download the searched files.<p>
+                            <note>You can download a maximum of 500MB recording files or a maximum
+                                of 100 recording files at a time. The recordings that exceeds the
+                                limit will not be downloaded.</note>
+                        </p></li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_i23_fjy_gfb">
+            <title>Download a Recording File</title>
+            <p>Click <image href="../Images/ui_icons/download.png" width="20" id="image_qhl_wtq_gfb"
+                /> behind a recording log to download the recording file.</p>
+        </section>
+        <section id="section_pm1_hjy_gfb">
+            <title>Play a Recording File</title>
+            <p>Click <image href="../Images/ui_icons/play.png" width="20" id="image_dvd_b5q_gfb"/>
+                to play the recording file on web or play to an extension.</p>
+        </section>
+        <section id="section_w1k_fx2_hfb">
+            <title>Delete a Recording File</title>
+            <p>Click <image href="../Images/ui_icons/delete.png" width="20" id="image_ftb_3x2_hfb"/>
+                behind a recording log to delete the recording file.</p>
+        </section>
+    </body>
+</topic>

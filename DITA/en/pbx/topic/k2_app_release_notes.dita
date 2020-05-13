@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_hrn_fvl_l2b">
+    <title>App Center</title>
+    <shortdesc>Release notes for applications on the Yeastar K2 IPPBX.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/07/12"/>
+            <!--Carol-->
+            <revised modified="2018/07/12"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <p></p>
+    </conbody>
+</concept>

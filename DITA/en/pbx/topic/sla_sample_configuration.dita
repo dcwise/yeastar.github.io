@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_vpg_l2w_rdb">
+    <title>SLA Sample Configuration</title>
+    <shortdesc>In a boss-assistant scenario, sometimes assistant needs to answer calls for the boss.
+        So boss and assistant need to share a trunk. In this topic, we introduce how to configure
+        SLA trunk and SLA station on <ph keyref="product_name"/> based on a boss-assistant
+        scenario.</shortdesc>
+    <conbody>
+        <p>Assume that the boss’s phone is extension 2000 and the assistant's phone is extension
+            1000. The shared trunk name is "sipabc" and the trunk number is 5503305. </p>
+        <p><image id="image_jpf_45w_fjb" href="../Images/admin/voip_trunk_sipabc.png" width="650"
+            /></p>
+        <note>SLA feature should be used in conjunction with BLF keys on phone devices.</note>
+        <p>You can set up a shared trunk as follows.</p>
+        <p>
+            <ol id="ol_vrf_mvw_fjb">
+                <li>Enable SLA feature.<p>
+                        <ol id="ol_f5g_nvw_fjb">
+                            <li>Go to <menucascade>
+                                    <uicontrol>Settings</uicontrol>
+                                    <uicontrol>PBX</uicontrol>
+                                    <uicontrol>Trunks</uicontrol>
+                                </menucascade>, click <image href="../Images/ui_icons/edit.png"
+                                    width="20" id="image_wk5_nvw_fjb"/> beside the trunk that you
+                                want to enable SLA.</li>
+                            <li>On the <uicontrol>Basic</uicontrol> page, select <uicontrol>Enable
+                                    SLA</uicontrol> and configure the SLA settings.<p><image
+                                        id="image_tg1_ktw_fjb" href="../Images/admin/sla_trunk.png"
+                                    /></p><ul id="ul_txm_dxw_fjb">
+                                    <li><b>Enable SLA</b>: Select this option to enable SLA on the
+                                        trunk.</li>
+                                    <li><uicontrol id="sla-barge-in">Allow Barge</uicontrol>:
+                                        Optional. Whether to allow other SLA stations that share the
+                                        trunk to join the ongoing call by pressing the BLF key on
+                                        phone devices.</li>
+                                    <li><uicontrol>Hold Access</uicontrol>: Whether to allow any SLA
+                                        stations to retrieve a call that's put on hold.<ul
+                                            id="ul_gpk_fxw_fjb">
+                                            <li><uicontrol>Open</uicontrol>: Any SLA stations that
+                                                share the trunk can retrieve the call.</li>
+                                            <li><uicontrol>Private</uicontrol>: The call can be
+                                                retrieved only by the SLA station that previously
+                                                put the call on hold.</li>
+                                        </ul></li>
+                                    <li><b>Failover Destination</b>: The unanswered calls will be
+                                        routed to the destination.<ul id="ul_wxv_fxw_fjb">
+                                            <li>Hang up</li>
+                                            <li>Extension</li>
+                                            <li>Voicemail</li>
+                                            <li>IVR</li>
+                                            <li>Ring Group</li>
+                                            <li>Queue</li>
+                                        </ul></li>
+                                </ul></li>
+                            <li>Click <uicontrol>Save</uicontrol> and
+                                <uicontrol>Apply</uicontrol>.</li>
+                        </ol>
+                    </p></li>
+                <li>Add two SLA stations for the same SLA trunk. One SLA station for the boss's
+                    extension 2000, the other SLA station for the assistant's extension 1000.<p>
+                        <ol id="ol_qdz_lxw_fjb">
+                            <li>Go to <menucascade>
+                                    <uicontrol>Settings</uicontrol>
+                                    <uicontrol>PBX</uicontrol>
+                                    <uicontrol>Call Control</uicontrol>
+                                    <uicontrol>SLA</uicontrol>
+                                </menucascade>, click <uicontrol>Add</uicontrol>.</li>
+                            <li>On the SLA Station configuration page, set SLA station for the
+                                        boss.<p><image id="image_uyh_gyw_fjb"
+                                        href="../Images/admin/sla_station_boss.png" width="650"
+                                    /></p><ul id="ul_tg1_11x_fjb">
+                                    <li><uicontrol>Station Name</uicontrol>: Set a name to help you
+                                        identify it.</li>
+                                    <li><uicontrol>Station</uicontrol>: Select the boss's extension
+                                        2000.</li>
+                                    <li><uicontrol>Associated SLA Trunks</uicontrol>: Select SLA
+                                        trunk from the <uicontrol>Available</uicontrol> box to the
+                                            <uicontrol>Selected</uicontrol> box.</li>
+                                    <li><uicontrol>Ring Timeout(s)</uicontrol>: Set the timeout in
+                                        seconds. When receiving an inbound call, the phone of the
+                                        SLA station will ring until timeout. The default value is
+                                        30s. </li>
+                                    <li><uicontrol>Ring Delay(s)</uicontrol>: Set the time delay in
+                                        seconds. Phone of the SLA station will delay ringing after
+                                        the time defined. The time of <uicontrol>Ring Delay(s)
+                                        </uicontrol> can not be longer than the time of
+                                            <uicontrol>Ring Timeout(s)</uicontrol>. The default
+                                        value is 0s.</li>
+                                    <li><uicontrol>Hold Access</uicontrol>:Whether to allow any SLA
+                                        stations to retrieve a call that's put on hold.<ul
+                                            id="ul_adf_wzw_fjb">
+                                            <li><uicontrol>Open</uicontrol>: Any SLA stations that
+                                                share the line can retrieve the call.</li>
+                                            <li><uicontrol>Private</uicontrol>: The call can be
+                                                retrieved only by the SLA station that previously
+                                                put the call on hold.</li>
+                                        </ul></li>
+                                </ul></li>
+                            <li>Click <uicontrol>Save</uicontrol> and
+                                <uicontrol>Apply</uicontrol>.</li>
+                            <li>Repeat steps <b>a</b> to <b>c</b> to set the other SLA station for
+                                the assistant.<note>In the <uicontrol>Station</uicontrol> field,
+                                    select the assistant's extension 1000.<p><image
+                                            id="image_rpb_k1x_fjb"
+                                            href="../Images/admin/sla_station_assistant.png"
+                                            width="650"/></p></note></li>
+                        </ol>
+                    </p></li>
+                <li>On the boss's IP phone (extension 2000), configure a BLF key to monitor SLA
+                        trunk.<note>We take an Yealink IP phone as an example.<p>
+                            <ol id="ol_dxy_w1x_fjb">
+                                <li>Log in the phone web interface, go to <menucascade>
+                                        <uicontrol>DSS key</uicontrol>
+                                        <uicontrol>Line Key</uicontrol>
+                                    </menucascade> to set a BLF key for the boss.</li>
+                                <li>Select a key to configure.<p><image
+                                            href="../Images/admin/sla_boss_blf.png"
+                                            id="image_ojm_bmv_fjb" width="650"/></p><p>
+                                        <ul id="ul_mmc_rqj_3jb">
+                                            <li><uicontrol>Type</uicontrol>: Select
+                                                  <uicontrol>BLF</uicontrol>.</li>
+                                            <li><uicontrol>Value</uicontrol>: Enter
+                                                  <codeph><varname>{ext_num}</varname>_<varname>{trunk_name}</varname></codeph>.
+                                                In this example, enter <i>2000_sipabc</i>.<note>
+                                                  <ul id="ul_etd_nqj_3jb">
+                                                  <li><varname>{ext_num}</varname> stands for
+                                                  extension number.</li>
+                                                  <li><varname>{trunk_name}</varname> stands for
+                                                  trunk name.</li>
+                                                  </ul>
+                                                </note></li>
+                                            <li><uicontrol>Line</uicontrol>: Select the line which
+                                                the extension registers to.</li>
+                                            <li><uicontrol>Extension</uicontrol>: Optional. You can
+                                                enter the key name to help you identify it.</li>
+                                        </ul>
+                                    </p></li>
+                                <li>Click <uicontrol>Confirm</uicontrol>.</li>
+                            </ol>
+                        </p></note></li>
+                <li>On the assistant's IP phone (extension 1000), configure a BLF key to monitor SLA trunk.<p>
+                        <note>We take an Yealink IP phone as an example.</note>
+                    </p><p>
+                        <ol id="ol_syn_5qj_3jb">
+                            <li>Log in the phone web interface, go to <menucascade>
+                                    <uicontrol>DSS key</uicontrol>
+                                    <uicontrol>Line Key</uicontrol>
+                                </menucascade> to set a BLF key for the assistant.</li>
+                            <li>Select a key to configure.<p><image
+                                        href="../Images/admin/sla_assistant_blf.png"
+                                        id="image_mzl_dmv_fjb"/></p><ul id="ul_n4g_brj_3jb">
+                                    <li><uicontrol>Type</uicontrol>: Select
+                                            <uicontrol>BLF</uicontrol>.</li>
+                                    <li><uicontrol>Value</uicontrol>: Enter
+                                                <codeph><varname>{ext_num}</varname>_<varname>{trunk_name}</varname></codeph>.
+                                        In this example, enter <i>1000_sipabc</i>.<note>
+                                            <ul id="ul_rfj_crj_3jb">
+                                                <li><varname>{ext_num}</varname> stands for
+                                                  extension number.</li>
+                                                <li><varname>{trunk_name}</varname> stands for trunk
+                                                  name.</li>
+                                            </ul>
+                                        </note></li>
+                                </ul><ul id="ul_a3q_drj_3jb">
+                                    <li><uicontrol>Line</uicontrol>: Select the line which the
+                                        extension registers to.</li>
+                                    <li><uicontrol>Extension</uicontrol>: Optional. You can enter
+                                        the key name to help you identify it.</li>
+                                </ul></li>
+                            <li>Click <uicontrol>Confirm</uicontrol>.</li>
+                        </ol>
+                    </p><p>If the configuration is correct, you can see the BLF key LED is on.</p><p>
+                        <ul id="ul_q4p_zbx_fjb">
+                            <li><b>Green</b>: The trunk is available.</li>
+                            <li><b>Red</b>: The trunk is busy.</li>
+                        </ul>
+                    </p></li>
+            </ol>
+        </p>
+        <p>The boss and assistant can share the trunk by SLA.</p>
+    </conbody>
+    <related-links>
+        <link href="sla_operations.dita"/>
+    </related-links>
+</concept>

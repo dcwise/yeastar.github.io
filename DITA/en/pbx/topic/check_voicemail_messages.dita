@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_jhd_vx1_5cb">
+  <title>Check Voicemail Messages</title>
+  <shortdesc>Extension users have multiple ways to check their voicemail messages.</shortdesc>
+  <body>
+    <section id="section_jhy_v5g_1db">
+      <title>Check Voicemail on Linkus</title>
+      <p>Log in Linkus, go to <menucascade>
+          <uicontrol>Me</uicontrol>
+          <uicontrol>Voicemail</uicontrol>
+        </menucascade> to check your voicemail.</p>
+    </section>
+    <section id="section_vzw_vx1_5cb">
+      <title>Check Voicemail on a Phone</title>
+      <p>
+        <ul id="ul_efq_jy1_5cb">
+          <li>Dial feature code *2 on a phone <p>A user can dial *2 on his own phone to check
+              voicemail.</p></li>
+          <li>Dial feature code *02 on a phone<p>A user can dial *02 on other user's phone to enter
+              the voicemail main menu, then enter his/her extension number and voicemail PIN to
+              check voicemail.</p></li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_kgm_by1_5cb">
+      <title>Check Voicemail on Web Page</title>
+      <p>Extension users can log in the PBX web page to check their own voicemails.<ul
+          id="ul_r3g_vy1_5cb">
+          <li>User name: The extension user's email address.</li>
+          <li>Password: The extension's <uicontrol>User Password</uicontrol>.</li>
+        </ul></p>
+      <p><image href="../Images/admin/extension_check_voicemail_web.png" width="650"
+          id="image_zbz_4z1_5cb"/></p>
+    </section>
+    <section id="section_pfy_cy1_5cb">
+      <title>Check Voicemail via Email </title>
+      <p>If <xref href="voicemail-to-email.dita#topic_l3y_qct_nhb">voicemail to email</xref> is
+        enabled for an extension user, the user can check voicemails in his/her email box.</p>
+    </section>
+    <section id="section_vx2_fy1_5cb"><title>Check Voicemail via IVR</title>If you check the option
+        <uicontrol>Dial to Check Voicemail</uicontrol> for an IVR; users can access the IVR to check
+      their voicemails. This solution is for the users who are outside the office to check their voicemails.<p>
+        <note type="tip"> If the users are using Linkus, they can dial *2 directly to check their
+          voicemails.</note>
+      </p><p><image href="../Images/admin/ivr_dial_to_check_voicemail.png" width="650"
+          id="image_wqn_m1b_5cb"/></p></section>
+  </body>
+</topic>

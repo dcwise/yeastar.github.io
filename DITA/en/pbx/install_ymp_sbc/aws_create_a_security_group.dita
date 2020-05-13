@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_vv1_z4w_kcb">
+    <title>4) Create a Security Group</title>
+    <shortdesc>A security group acts as a virtual firewall to control the traffic for its associated
+        instances. You need to create a security group and specify this security group when you
+        launch an instance into your VPC.</shortdesc>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/06/14"/>
+            <!--Carol-->
+            <revised modified="2018/06/21"/>
+            <!--Carol-->
+            <revised modified="2018/09/29"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <steps id="steps_jsb_npw_kcb">
+            <step>
+                <cmd>Open the Amazon VPC console at <xref href="https://console.aws.amazon.com/vpc/"
+                        format="html" scope="external"
+                    >https://console.aws.amazon.com/vpc/</xref>.</cmd>
+            </step>
+            <step>
+                <cmd>In the navigation pane, select <b>Security Groups</b>, then click <b>Create
+                        Security Group</b>.</cmd>
+            </step>
+            <step>
+                <cmd>On the configuration page, set the <uicontrol>Name tag</uicontrol>,
+                        <uicontrol>Group name</uicontrol>,  and <uicontrol>Description</uicontrol>.
+                </cmd>
+            </step>
+            <step>
+                <cmd>Select the <uicontrol>VPC</uicontrol> as the SBC and YMP VPC.</cmd>
+                <info><p/><image href="../Images/SBC/aws_create_security_group.png"
+                        id="image_lyq_nrw_kcb" width="650"/></info>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Yes, Create</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Set an inbound rule for the security group.</cmd>
+                <substeps>
+                    <substep>
+                        <cmd>Click <uicontrol>Inbound Rules</uicontrol>, then click
+                                <uicontrol>Edit</uicontrol>.</cmd>
+                        <info><image href="../Images/SBC/aws_edit_inbound_rule.png"
+                                id="image_k3c_rsw_kcb"/></info>
+                    </substep>
+                    <substep>
+                        <cmd>Set the inbound rule as the following figure shows.</cmd>
+                        <info><image href="../Images/SBC/aws_inbound_rule.png"
+                                id="image_jqv_zsw_kcb" width="500"/></info>
+                    </substep>
+                    <substep>
+                        <cmd>Click <uicontrol>Save</uicontrol>.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Set an outbound rule for the security group. </cmd>
+                <substeps>
+                    <substep>
+                        <cmd>Click <uicontrol>Outbound Rules</uicontrol>, then click
+                                <uicontrol>Edit</uicontrol>.</cmd>
+                        <info><image href="../Images/SBC/aws_edit_outbound_rule.png"
+                                id="image_qjv_btw_kcb"/></info>
+                    </substep>
+                    <substep>
+                        <cmd>Set the outbound rule as the following figure shows.</cmd>
+                        <info><image href="../Images/SBC/aws_inbound_rule.png"
+                                id="image_rjv_btw_kcb" width="500"/></info>
+                    </substep>
+                    <substep>
+                        <cmd>Click <uicontrol>Save</uicontrol>.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

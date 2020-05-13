@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="reference_hpp_cqj_z2b">
+    <title>Parameters of Import Files</title>
+    <shortdesc>Check the required parameters, optional parameters, restrictions for the imported
+        parameters, then edit the file that you want to import to <ph keyref="product_name"
+        />.</shortdesc>
+    <refbody>
+        <section id="section_ptr_f5j_z2b">
+            <title>Which Kind of Parameters can be Imported?</title>
+            <p><ph keyref="product_name"/> supports for importing the following parameters:</p>
+            <p>
+                <table frame="all" rowsep="1" colsep="1" id="table_mqr_zc4_mfb">
+                    <tgroup cols="3">
+                        <colspec colname="c1" colnum="1" colwidth="1*"/>
+                        <colspec colname="c2" colnum="2" colwidth="1.99*"/>
+                        <colspec colname="newCol3" colnum="3" colwidth="1.7*"/>
+                        <thead>
+                            <row>
+                                <entry>Function</entry>
+                                <entry>Description of Import Parameters</entry>
+                                <entry>The Parameter Descriptions are Applied to Which PBX
+                                    version</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>Extensions</entry>
+                                <entry><xref
+                                        href="../references/import_parameters_extensions.dita#reference_pq4_yzh_mfb"
+                                    /></entry>
+                                <entry><ph product="s-series">30.10.0.9 or later</ph><p
+                                        product="cloudpbx">81.8.0.4 or later</p><p product="k2"
+                                        >80.12.0.6 or later</p></entry>
+                            </row>
+                            <row>
+                                <entry>Trunks</entry>
+                                <entry><xref
+                                        href="../references/import_parameters_trunks.dita#reference_g3l_3f3_mfb"
+                                    /></entry>
+                                <entry><ph product="s-series">30.8.0.X or later</ph><p
+                                        product="cloudpbx">81.8.0.4 or later</p><p product="k2"
+                                        >80.12.0.6 or later</p></entry>
+                            </row>
+                            <row>
+                                <entry>Inbound Routes</entry>
+                                <entry><xref
+                                        href="../references/import_parameters_inbound_routes.dita#reference_zrm_gj3_mfb"
+                                    /></entry>
+                                <entry><ph product="s-series">30.8.0.X or later</ph><p
+                                        product="cloudpbx">81.8.0.4 or later</p><p product="k2"
+                                        >80.12.0.6 or later</p></entry>
+                            </row>
+                            <row>
+                                <entry>Outbound Routes</entry>
+                                <entry><xref
+                                        href="../references/import_parameters_outbound_routes.dita#reference_b4g_lj3_mfb"
+                                    /></entry>
+                                <entry><ph product="s-series">30.8.0.X or later</ph><p
+                                        product="cloudpbx">81.8.0.4 or later</p><p product="k2"
+                                        >80.12.0.6 or later</p></entry>
+                            </row>
+                            <row product="s-series,k2">
+                                <entry>Firewall Rules</entry>
+                                <entry><xref
+                                        href="../references/import_parameters_firewall_rules.dita#reference_lhf_sj3_mfb"
+                                    /></entry>
+                                <entry><ph product="s-series">30.8.0.X or later</ph><p product="k2"
+                                        >80.12.0.6 or later</p></entry>
+                            </row>
+                            <row>
+                                <entry>Blacklist/Whitelist</entry>
+                                <entry><xref
+                                        href="../references/import_parameters_blacklist_whitelist.dita#reference_mjx_mk3_mfb"
+                                    /></entry>
+                                <entry><ph product="s-series">30.8.0.X or later</ph><p
+                                        product="cloudpbx">81.8.0.4 or later</p><p product="k2"
+                                        >80.12.0.6 or later</p></entry>
+                            </row>
+                            <row>
+                                <entry>Speed Dial</entry>
+                                <entry><xref
+                                        href="../references/import_parameters_speed_dial.dita#reference_xsg_qk3_mfb"
+                                    /></entry>
+                                <entry><ph product="s-series">30.8.0.X or later</ph><p
+                                        product="cloudpbx">81.8.0.4 or later</p><p product="k2"
+                                        >80.12.0.6 or later</p></entry>
+                            </row>
+                            <row product="k2 s-series">
+                                <entry>Auto Provisioning</entry>
+                                <entry><xref
+                                        href="../references/import_parameters_auto_provisioning.dita#reference_c12_wj3_mfb"
+                                    /></entry>
+                                <entry><ph product="s-series">30.8.0.X or later</ph><p product="k2"
+                                        >80.12.0.6 or later</p></entry>
+                            </row>
+                            <row product="s-series">
+                                <entry>Hotel Customers</entry>
+                                <entry><xref
+                                        href="../references/import_parameters_hotel.dita#reference_ynh_fk3_mfb"
+                                    /></entry>
+                                <entry>30.10.0.9 or later</entry>
+                            </row>
+                            <row product="s-series">
+                                <entry>Billing Rate</entry>
+                                <entry><xref
+                                        href="../references/import_parameters_billing.dita#reference_frv_hk3_mfb"
+                                    /></entry>
+                                <entry>30.8.0.X or later</entry>
+                            </row>
+                            <row>
+                                <entry>LDAP Phonebook</entry>
+                                <entry><xref
+                                        href="../references/import_parameters_ldap.dita#reference_bv5_4j3_mfb"
+                                    /></entry>
+                                <entry><ph product="s-series">30.10.0.9 or later</ph><p
+                                        product="cloudpbx">81.9.0.14 or later</p><p product="k2"
+                                        >80.12.0.6 or later</p></entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+    </refbody>
+</reference>

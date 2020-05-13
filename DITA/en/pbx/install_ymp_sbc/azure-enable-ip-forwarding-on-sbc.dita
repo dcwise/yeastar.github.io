@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_uhq_cqw_dhb">
+    <title>Step7. Enable IP Forwarding on SBC</title>
+    <shortdesc>Enable IP Forwarding on SBC network interface to forward network traffic from YMP
+        virtual machine.</shortdesc>
+    <body>
+        <p>
+            <ol id="ol_ob3_ctw_dhb">
+                <li>In the search box at the top of the portal, enter <i>Network interface</i> in
+                    the search box. When <b>Route tables</b> appear in the search results, select
+                            it.<p><image href="../Images/SBC/azure-search-network-interface.png"
+                            width="650" id="image_dzc_jtc_ygb"/></p></li>
+                <li>On the <uicontrol>Network Interfaces</uicontrol> page, select the SBC network
+                    interface.</li>
+                <li>In the <uicontrol>Settings</uicontrol> section, click <uicontrol>IP
+                        configurations</uicontrol>.</li>
+                <li>Click <uicontrol>Enabled</uicontrol> to enable IP forwarding.</li>
+                <li>Click <uicontrol>Save</uicontrol>.<p><image
+                            href="../Images/SBC/azure-enable-ip-forwarding.png" width="650"
+                            id="image_bw3_ytw_dhb"/></p></li>
+            </ol>
+        </p>
+    </body>
+</topic>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_iff_ywc_zdb">
+    <title>Port Forwarding Overview</title>
+    <shortdesc>If <ph keyref="product_name"/> is behind a router, you need to set up port forwarding
+        on the router to allow external devices to access to the PBX. The router directs the
+        appropriate traffic from the Internet to the PBX. </shortdesc>
+    <conbody>
+        <section id="section_oxg_rzc_zdb">
+            <title>Forward Ports for Remote Extensions</title>
+            <p>If you want to register remote extensions to the PBX, forward the following ports on
+                your router:</p>
+            <ul id="ul_zfn_ydd_zdb">
+                <li>Port 5060 (inbound, UDP)</li>
+                <li>Port 5060 (inbound, TCP) — if you use TCP for SIP registration</li>
+                <li>Port 10000 - 12000 (inbound, UDP) for RTP </li>
+            </ul>
+            <p><image href="../Images/admin/port_forwarding_remote_extension.png"
+                    id="image_o1w_wdd_zdb" width="700"/></p>
+        </section>
+        <section id="section_itz_w2d_zdb">
+            <title>Forward Ports for Linkus</title>
+            <p>If users want to use Linkus when they are out of the office, you need to forward the
+                ports of Linkus server on your router.</p>
+            <p>
+                <ul id="ul_xcp_yhd_zdb">
+                    <li>Port 5060 (inbound, UDP)</li>
+                    <li>Port 5060 (inbound, TCP) — if you use TCP for SIP registration</li>
+                    <li>Port 10000 - 12000 (inbound, UDP) for RTP </li>
+                    <li>Port 8111 (inbound, UDP&amp;TCP) for Linkus server</li>
+                </ul>
+            </p>
+            <p><image href="../Images/admin/port_forwarding_linkus.png" id="image_ixh_whd_zdb"
+                    width="700"/></p>
+        </section>
+        <section id="section_kfx_b3d_zdb">
+            <title>Forward Ports for Remote Web Login</title>
+            <p>If you want to log in the PBX web interface remotely, you need to forward the
+                following ports:</p>
+            <p>
+                <ul id="ul_vjb_1jd_zdb">
+                    <li>Port 8088 (inbound, TCP)</li>
+                </ul>
+            </p>
+            <p><image href="../Images/admin/port_forwarding_WEB.png" id="image_zxm_y3d_zdb"
+                    width="700"/></p>
+        </section>
+    </conbody>
+</concept>
+<?oxy_options track_changes="on"?>

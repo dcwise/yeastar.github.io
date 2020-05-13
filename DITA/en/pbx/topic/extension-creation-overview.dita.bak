@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_ov2_jq4_y3b">
+    <title>Extension Creation Overview</title>
+    <shortdesc><ph product="s-series k2"><ph keyref="product_name"/> supports to set one extension
+            number to multiple extension types, such as SIP extension, IAX extension, and FXS
+            extension, so that you can use the same extension number on devices in different
+            locations.</ph><ph product="cloudpbx"><ph keyref="product_name"/> supports SIP forking,
+            which enables an extension number to register on multiple SIP
+            phone<?oxy_comment_start author="carol" timestamp="20190916T163543+0800" comment="这个词换成phones比较好理解" flag="done"?>s<?oxy_comment_end?>
+            simultaneously.</ph></shortdesc>
+    <body>
+        <section id="section_knl_jlz_z3b" product="s-series,k2">
+            <title>Set one extension number for multiple devices</title>
+            <p>You can link your office phone, softphone, and analog phone through a universal
+                extension number. When a call reaches the extension number, all phones will ring
+                simultaneously, you won't miss any business calls.</p>
+            <p>On extension configuration page, you can select multiple types for the extension.</p>
+            <p><image id="image_s1r_rdf_cjb"
+                    href="../Images/admin/multiple-types-for-one-extension.png" width="650"
+                    product="s-series"/></p>
+            <p><image id="image_q5n_cff_cjb"
+                    href="../Images/admin/multiple-types-for-one-extension-k2.png" width="650"
+                    product="k2"/></p>
+        </section>
+        <section id="section_bwj_c2f_cjb">
+            <title>SIP Forking</title>
+            <p><ph keyref="product_name"/> supports SIP forking, which enables an extension number
+                to be registered by multiple SIP phones. When a call reaches the extension, all
+                registered phones will ring simultaneously, and you can take the call from any
+                device easily.</p>
+            <p>You can configure SIP Forking on the extension configuration page. The value of
+                    <uicontrol>Concurrent Registrations</uicontrol> limits how many SIP phones the
+                extension can be registered on.</p>
+            <note>
+                <p>
+                    <ul id="ul_fkt_qqh_cjb">
+                        <li>The limit of concurrent registrations is <b product="s-series,k2"
+                                >5</b><b product="cloudpbx">4</b>.</li>
+                        <li>By default, if one SIP phone is busy, other SIP phones still can receive
+                            calls when calls reach the extension. To restrict other phones from
+                            receiving calls when the extension is busy, you can enable
+                                <uicontrol>All Busy Mode for SIP Forking</uicontrol> (<menucascade>
+                                <uicontrol>Settings</uicontrol>
+                                <uicontrol>PBX</uicontrol>
+                                <uicontrol>General</uicontrol>
+                                <uicontrol>SIP</uicontrol>
+                                <uicontrol>Advanced</uicontrol>
+                            </menucascade>).</li>
+                    </ul>
+                </p>
+            </note>
+        </section>
+        <p><image href="../Images/admin/sip-forking-cloudpbx.png" width="650" id="image_iqn_kqh_cjb"
+                product="cloudpbx k2"/></p>
+        <p><image href="../Images/admin/sip-forking-s-series.png" width="650" id="image_dz1_lqh_cjb"
+                product="s-series"/></p>
+    </body>
+</topic>

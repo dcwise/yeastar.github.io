@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_stn_lgf_hfb">
+    <title>Steps to Deploy Yeastar Cloud PBX in Data Center</title>
+    <body>
+        <p>
+            <ol>
+                <li>Set up SBC server</li>
+                <li>Set up YMP server</li>
+                <li><xref href="datacenter_set_sbc_as_gateway.dita#task_rcg_rrr_ndb">Set SBC server
+                        as a gateway</xref></li>
+                <li><xref href="datacenter_check_network.dita#task_usl_dtr_ndb">Check the
+                        network</xref></li>
+                <li>Set up a data disk in your YMP server.<p>The recording files that are made on
+                        customers' PBXs will be stored in the data disk.</p><p>
+                        <note type="important">Do NOT place any other files to the data disk, or
+                            your recording files will  be lost.</note>
+                    </p><p>
+                        <ol id="ol_r2p_ry5_hfb">
+                            <li>Install a disk to the YMP server.<p>
+                                    <note type="restriction">
+                                        <ul id="ul_lx4_d3f_hfb">
+                                            <li>Minimum 60MB/s Write speed and 60MB/s Read
+                                                speed.</li>
+                                            <li>Minimum 50GB Storage Capacity.</li>
+                                        </ul>
+                                    </note>
+                                    <note>1 GB (Storage Capacity) = 1000 minutes (Recording
+                                        Time)</note>
+                                </p></li>
+                            <li>Format and mount the disk.<p><xref
+                                        href="ali_format_mount_a_data_disk.dita#task_twx_dlc_pfb"
+                                        >Refer to this document to format and mount the
+                                    disk</xref>.</p><p>
+                                    <note>
+                                        <ul id="ul_p53_hz5_hfb">
+                                            <li>Format the entire disk with a single
+                                                  <filepath>ext4</filepath> file system.</li>
+                                            <li>Mount the disk to the path
+                                                  <filepath>/mnt/autorecording</filepath>.</li>
+                                        </ul>
+                                    </note>
+                                </p></li>
+                        </ol>
+                    </p></li>
+            </ol>
+        </p>
+    </body>
+</topic>

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="reference_c12_wj3_mfb">
+    <title>Import Parameters - Auto Provisioning</title>
+    <shortdesc>Descriptions for the Auto Provisioning parameters that you can import to <ph
+            keyref="product_name"/>.</shortdesc>
+    <refbody>
+        <section id="section_abd_334_mfb">
+            <p>
+                <table frame="all" rowsep="1" colsep="1" id="table_fh2_k34_mfb">
+                    <tgroup cols="5">
+                        <colspec colname="c1" colnum="1" colwidth="1*"/>
+                        <colspec colname="c2" colnum="2" colwidth="1.46*"/>
+                        <colspec colname="c3" colnum="3" colwidth="1.07*"/>
+                        <colspec colname="c4" colnum="4" colwidth="2.34*"/>
+                        <colspec colname="c5" colnum="5" colwidth="1.95*"/>
+                        <thead>
+                            <row>
+                                <entry>Parameter</entry>
+                                <entry>Description</entry>
+                                <entry>Importance</entry>
+                                <entry>Restriction</entry>
+                                <entry>Default Value</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>Manufacturer</entry>
+                                <entry>Phone's manufacturer</entry>
+                                <entry>Required</entry>
+                                <entry>Yealink, Yeastar, Tiptel, Htek, Fanvil, Grandstream, Snom,
+                                    Gigaset, Polycom, <p>Cisco, Alcatel, Vtech, Akuvox, Panasonic,
+                                        Mitel, Escene, Univois</p></entry>
+                                <entry>N/A</entry>
+                            </row>
+                            <row>
+                                <entry morerows="16">Phonetype</entry>
+                                <entry morerows="16">Phone's model</entry>
+                                <entry morerows="16">Required </entry>
+                                <entry>When manufacturer is Yeastar: <p>TA100, TA200, TA400, TA800,
+                                        TA1600, TA2400, TA3200</p></entry>
+                                <entry morerows="16">N/A</entry>
+                            </row>
+                            <row>
+                                <entry>When manufacturer is Yealink:
+                                        <?oxy_comment_start author="Sunmy" timestamp="20190916T101248+0800" comment="重新排序" flag="done"?><p>SIP-T19PE2</p><p>SIP-T21PE2,
+                                        SIP-T22P, SIP-T23G, SIP-T23P,SIP-T27G,SIP-T27P,
+                                        SIP-T29G,</p><p>SIP-T40G,SIP-T40P,SIP-T41S,SIP-T41P,SIP-T41U,SIP-T42S,SIP-T42G,SIP-T43U,SIP-T46S,SIP-T46G,SIP-T46U,SIP-T48S,SIP-T48G,SIP-T48U</p><p>SIP-T49G,</p><p>SIP-T52S,SIP-T53,SIP-T53W,SIP-T54W,SIP-T54S,SIP-T56A,SIP-T57W,SIP-T58,</p><p>SIP-CP860,SIP-CP920,SIP-CP960,</p><p>SIP-W52P,SIP-W56P,SIP-W60B<?oxy_comment_end?>,</p><p>SIP-<?oxy_comment_start author="Sunmy" timestamp="20190916T101236+0800" comment="add" flag="done"?>VP59<?oxy_comment_end?></p></entry>
+                            </row>
+                            <row>
+                                <entry>When manufacturer is
+                                        Vtech:<p>ET605,ET635,ET685,</p><p>VDP650,</p><p>VSP600,</p>VSP610,VSP715,VSP716,VSP725,VSP726,VSP735,VSP736<p>VCS752,VCS754</p></entry>
+                            </row>
+                            <row>
+                                <entry>When manufacturer is Snom:
+                                        D120<p>D305,D315,D345,D375,D385,<?oxy_insert_start author="Sunmy" timestamp="20190916T142612+0800"?></p><?oxy_insert_end?><p>D712,D715,D717,D725,D735,D745,D765,D785,</p><p>320,710,720,760,765,C520,M215,715,725</p></entry>
+                            </row>
+                            <row>
+                                <entry>When manufacturer is Fanvil:
+                                        <p>X1,X1S,X1SG,X2,X210,<?oxy_comment_start author="Sunmy" timestamp="20190916T103557+0800" comment="add" flag="done"?>X210i
+                                        <?oxy_comment_end?>,X2,<?oxy_comment_start author="Sunmy" timestamp="20190916T103649+0800" comment="add" flag="done"?>X2C<?oxy_comment_end?>,X3,X3S,X3P,X3G,<?oxy_comment_start author="Sunmy" timestamp="20190916T103710+0800" comment="add" flag="done"?>X3SG,X3U<?oxy_comment_end?>,X4,X4U,X5,X5G,X5S,<?oxy_comment_start author="Sunmy" timestamp="20190916T103740+0800" comment="add" flag="done"?>X5U<?oxy_comment_end?>,X6,X7,<?oxy_comment_start author="Sunmy" timestamp="20190916T103804+0800" comment="add" flag="done"?>X7C<?oxy_comment_end?></p>C01,C58,C58P,C400,C600,H2S,H3,H5</entry>
+                            </row>
+                            <row>
+                                <entry>When manufacturer is Htek: <p>UC503, UC503G</p><p>UC802,
+                                        UC802T, UC803, UC803T, UC804, UC804T, UC806, UC806T,
+                                        UC804G,</p>UC806G, UC840, UC842, UC860, UC862, UC902,
+                                    UC902S, UC903, UC912, UC912G, <p>UC921, UC921G, UC923, UC924,
+                                        UC924E, UC926, UC926E</p></entry>
+                            </row>
+                            <row>
+                                <entry>When manufacturer is Gigaset:<p>Maxwell3, Maxwell2,
+                                        MaxwellBasic</p></entry>
+                            </row>
+                            <row>
+                                <entry>When manufacturer is Tiptel:<p>3010, 3020, 3030, 3110, 3120,
+                                        3130, 3210, </p>3220, 3220XL, 3230, 3235, 3240, 3245,
+                                    3275</entry>
+                            </row>
+                            <row>
+                                <entry>When manufacturer is Grandstream: <p>GXP1100, GXP1105,
+                                        GXP1160, GXP1165,
+                                    GXP1400,GXP1405,GXP1450,</p>GXP1610,GXP1620,GXP1625, GXP1628,
+                                    GXP1630,  GXP2130, <p>GXP2135, GXP2140, GXP2160, GXP2170,
+                                        GXP2200, GXV3240, </p><p>GXV3275</p></entry>
+                            </row>
+                            <row>
+                                <entry>When manufacturer is Polycom:<p>VVX101, VVX201, VVX300,
+                                        VVX310, VVX400, VVX500, VVX600, VVX601,</p>VVX1500, IP321,
+                                    IP331, IP335, IP450, IP550, IP560, IP670</entry>
+                            </row>
+                            <row>
+                                <entry>When manufacturer is Cisco:<p>SPA301, SPA303,
+                                        SPA501G,SPA502G, SPA504G, SPA508G, SPA509G, SPA512G,
+                                        SPA514G, SPA525G2</p></entry>
+                            </row>
+                            <row>
+                                <entry>When manufacturer is
+                                        Alcatel:<p>IP100,IP150,IP151,IP251G,IP300,IP301G,IP700G,IP701G,IP1850,</p>IP2015,IP2115</entry>
+                            </row>
+                            <row>
+                                <entry>When manufacturer is Panasonic:<p>HDV100, HDV130, HDV230,
+                                        HDV330, HDV430</p></entry>
+                            </row>
+                            <row>
+                                <entry>When manufacturer is Mitel:<p>6863i, 6865i, 6867i, 6869i,
+                                        6873i</p></entry>
+                            </row>
+                            <row>
+                                <entry>When manufacturer is
+                                        Escene:<p>ES205-PN,ES206-PN,ES280-PN,ES330-PEG/ES330-PEN,ES620-PEG</p></entry>
+                            </row>
+                            <row>
+                                <entry>When manufacturer is
+                                        Akuvox:<p>R47P,R47G,R48G,R49P,R50P,R52P,R53P,R55G/R55P,</p>R59G/R59P,R63G,R67G</entry>
+                            </row>
+                            <row>
+                                <entry>When manufacturer is Univois: <p>U1S, U3S, U6S</p></entry>
+                            </row>
+                            <row>
+                                <entry>Mac Address</entry>
+                                <entry>Phone's Mac address</entry>
+                                <entry>Required </entry>
+                                <entry>A string with less than 12 characters.<p>Only alphanumeric
+                                        characters are allowed.</p></entry>
+                                <entry>N/A</entry>
+                            </row>
+                            <row>
+                                <entry>Template</entry>
+                                <entry>Template's name</entry>
+                                <entry>Optional</entry>
+                                <entry>Default or custom template's name.<p>
+                                        <note>If you want to use custom template, go to <menucascade>
+                                                <uicontrol>Auto Provisioning</uicontrol>
+                                                <uicontrol>Templates</uicontrol>
+                                                <uicontrol>Custom Template</uicontrol>
+                                            </menucascade> to create a custom template first.</note>
+                                    </p></entry>
+                                <entry>Default</entry>
+                            </row>
+                            <row>
+                                <entry>Extension</entry>
+                                <entry>The account which the phone will register with</entry>
+                                <entry>Required </entry>
+                                <entry>A string with less than 7 characters.<p>
+                                        <ul id="ul_zd3_l34_mfb">
+                                            <li>Only numbers are allowed.</li>
+                                            <li>Each row only can be configured with one Extension
+                                                number.</li>
+                                        </ul>
+                                    </p></entry>
+                                <entry>N/A</entry>
+                            </row>
+                            <row>
+                                <entry>Label</entry>
+                                <entry>The name you would like to associate with the
+                                    Extension</entry>
+                                <entry>Optional</entry>
+                                <entry>A string with less than 63 characters.<p>The following
+                                        characters are NOT allowed:</p><p>Spaces and
+                                            <codeph>:</codeph>
+                                        <codeph>!</codeph>
+                                        <codeph>$</codeph>
+                                        <codeph>(</codeph>
+                                        <codeph>)</codeph>
+                                        <codeph>/</codeph>
+                                        <codeph>#</codeph>
+                                        <codeph>;</codeph>
+                                        <codeph>,</codeph>
+                                        <codeph>[</codeph>
+                                        <codeph>]</codeph>
+                                        <codeph>\</codeph>
+                                        <codeph>"</codeph>
+                                        <codeph>=</codeph>
+                                        <codeph>&lt;</codeph>
+                                        <codeph>></codeph>
+                                        <codeph>&amp;</codeph>
+                                        <codeph>'</codeph>
+                                        <codeph>`</codeph>
+                                        <codeph>^</codeph>
+                                        <codeph>%</codeph>
+                                        <codeph>@</codeph>
+                                        <codeph>{</codeph>
+                                        <codeph>}</codeph>
+                                        <codeph>|</codeph></p></entry>
+                                <entry>[EXTENSION_NUMBER]</entry>
+                            </row>
+                            <row>
+                                <entry>Active</entry>
+                                <entry>The account's state</entry>
+                                <entry>Optional</entry>
+                                <entry>Permitted value: <p><codeph>0</codeph>:
+                                            Disabled</p><p><codeph>1</codeph>: Enabled</p></entry>
+                                <entry>1</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+    </refbody>
+</reference>

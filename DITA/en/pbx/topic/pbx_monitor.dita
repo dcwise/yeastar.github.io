@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_gl3_wt2_xdb">
+    <title>PBX Monitor</title>
+    <shortdesc>The PBX monitors the status of Trunks, Extensions, Concurrent Call, Conference. </shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/05/22"/>
+            <!--Carol-->
+            <revised modified="2018/05/22"/>
+            <!--Carol-->
+            <revised modified="2018/05/25"/>
+            <!--Carol-->
+            <revised modified="2018/10/23"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <p>You can log in the PBX web interface, go to <uicontrol>PBX Monitor</uicontrol> to check
+            the real-time status of your trunks, extensions, and conferences.</p>
+        <section id="extension-status" product="s-series">
+            <title>Extension Status</title>
+            <table frame="all" rowsep="1" colsep="1" id="table_exg_2cc_d3b">
+                <title/>
+                <tgroup cols="2">
+                    <colspec colname="c1" colnum="1" colwidth="1*"/>
+                    <colspec colname="c2" colnum="2" colwidth="1*"/>
+                    <thead>
+                        <row>
+                            <entry>Status</entry>
+                            <entry>Description</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row>
+                            <entry><image href="../Images/ui_icons/idle.png" width="20"
+                                    id="image_m1p_fcc_d3b"/></entry>
+                            <entry>The extension is idle.</entry>
+                        </row>
+                        <row>
+                            <entry><image href="../Images/ui_icons/ringing.png" width="20"
+                                    id="image_v1p_fcc_d3b"/></entry>
+                            <entry>The extension is ringing.</entry>
+                        </row>
+                        <row>
+                            <entry><image href="../Images/ui_icons/unavailable.png" width="20"
+                                    id="image_gbp_fcc_d3b"/></entry>
+                            <entry>The extension is unavailable.</entry>
+                        </row>
+                        <row>
+                            <entry><image href="../Images/ui_icons/busy.png" width="20"
+                                    id="image_qbp_fcc_d3b"/></entry>
+                            <entry>The extension is busy.</entry>
+                        </row>
+                        <row>
+                            <entry><image href="../Images/ui_icons/hold.png" width="20"
+                                    id="image_ybp_fcc_d3b"/></entry>
+                            <entry>The extension is on held.</entry>
+                        </row>
+                        <row>
+                            <entry><image href="../Images/ui_icons/module_error.png" width="20"
+                                    id="image_fcp_fcc_d3b"/></entry>
+                            <entry>Malfunction in FXS interface.<p>Check the relevant interface and
+                                    module.</p></entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+        </section>
+        <section id="FXO-status" product="s-series">
+            <title>PSTN Trunk Status</title>
+            <table frame="all" rowsep="1" colsep="1" id="table_pts_gcc_d3b">
+                <title/>
+                <tgroup cols="2">
+                    <colspec colname="c1" colnum="1" colwidth="1*"/>
+                    <colspec colname="c2" colnum="2" colwidth="1*"/>
+                    <thead>
+                        <row>
+                            <entry>Status</entry>
+                            <entry>Description</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row>
+                            <entry><image href="../Images/ui_icons/trunk_idle.png" width="20"
+                                    id="image_sjh_hcc_d3b"/></entry>
+                            <entry>The trunk is idle.</entry>
+                        </row>
+                        <row>
+                            <entry><image href="../Images/ui_icons/busy.png" width="20"
+                                    id="image_jkh_hcc_d3b"/></entry>
+                            <entry>The trunk is busy in use.</entry>
+                        </row>
+                        <row>
+                            <entry><image href="../Images/ui_icons/no_pstn.png" width="20"
+                                    id="image_tkh_hcc_d3b"/></entry>
+                            <entry>No PSTN line plugged in FXO interface.</entry>
+                        </row>
+                        <row>
+                            <entry><image href="../Images/ui_icons/module_error.png" width="20"
+                                    id="image_blh_hcc_d3b"/></entry>
+                            <entry>Malfunction in FXO interface.<p>Check the relevant interface and
+                                    module.</p></entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+        </section>
+        <section id="BRI-E1-T1-status" product="s-series">
+            <title>BRI/E1/T1 Trunk Status</title>
+            <table frame="all" rowsep="1" colsep="1" id="table_i2s_3cc_d3b">
+                <title/>
+                <tgroup cols="2">
+                    <colspec colname="c1" colnum="1" colwidth="1*"/>
+                    <colspec colname="c2" colnum="2" colwidth="3.08*"/>
+                    <thead>
+                        <row>
+                            <entry>Status</entry>
+                            <entry>Description</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row>
+                            <entry><image href="../Images/ui_icons/trunk_idle.png" width="20"
+                                    id="image_bgp_jcc_d3b"/></entry>
+                            <entry>The trunk is idle.</entry>
+                        </row>
+                        <row>
+                            <entry><image href="../Images/ui_icons/isdn_error.png" width="20"
+                                    id="image_jgp_jcc_d3b"/></entry>
+                            <entry>
+                                <ul id="ul_yz5_jcc_d3b">
+                                    <li>Broken module/interface.</li>
+                                    <li>Incorrect physical layer configuration. </li>
+                                    <li>Service provider did not activate the trunk.</li>
+                                </ul>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry><image href="../Images/ui_icons/no_pstn.png" width="20"
+                                    id="image_qgp_jcc_d3b"/></entry>
+                            <entry>
+                                <ul id="ul_f1v_jcc_d3b">
+                                    <li>Incorrect protocol layer configuration.</li>
+                                    <li>Service provider did not activate the trunk.</li>
+                                </ul>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry><image href="../Images/ui_icons/module_error.png" width="20"
+                                    id="image_wgp_jcc_d3b"/></entry>
+                            <entry>
+                                <ul id="ul_p1v_jcc_d3b">
+                                    <li>Malfunction in interface/module.<p>Check the relevant
+                                            interface/module.</p></li>
+                                </ul>
+                                <ul id="ul_q1v_jcc_d3b">
+                                    <li>No trunk plugged in. </li>
+                                    <li>Service provider doesn't activate the trunk. </li>
+                                </ul>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+        </section>
+        <section product="s-series" id="GSM-status">
+            <title>GSM/3G/4G Trunk Status</title>
+            <p>After the module and SIM card is installed, you can log in the PBX web interface
+                    <uicontrol>PBX Monitor</uicontrol> to check the trunk status.</p>
+            <table frame="all" rowsep="1" colsep="1" id="table_lzb_lcc_d3b">
+                <title/>
+                <tgroup cols="2">
+                    <colspec colname="c1" colnum="1" colwidth="1*"/>
+                    <colspec colname="c2" colnum="2" colwidth="3.35*"/>
+                    <thead>
+                        <row>
+                            <entry>Status</entry>
+                            <entry>Description</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row>
+                            <entry><image href="../Images/ui_icons/gsm_signal_1.png" width="20"
+                                    id="image_dx3_mcc_d3b"/>
+                                <image href="../Images/ui_icons/gsm_signal_2.png" width="20"
+                                    id="image_ex3_mcc_d3b"/>
+                                <image href="../Images/ui_icons/gsm_signal_3.png" width="20"
+                                    id="image_fx3_mcc_d3b"/>
+                            </entry>
+                            <entry>The trunk is idle, the icon shows the signal strength.</entry>
+                        </row>
+                        <row>
+                            <entry><image href="../Images/ui_icons/gsm_busy.png" width="20"
+                                    id="image_ox3_mcc_d3b"/></entry>
+                            <entry>The trunk is busy.</entry>
+                        </row>
+                        <row>
+                            <entry><image href="../Images/ui_icons/gsm_power_off.png" width="20"
+                                    id="image_ux3_mcc_d3b"/></entry>
+                            <entry>The module is powered off.</entry>
+                        </row>
+                        <row>
+                            <entry><image href="../Images/ui_icons/gsm_no_sim.png" width="20"
+                                    id="image_dy3_mcc_d3b"/></entry>
+                            <entry>No SIM card inserted.</entry>
+                        </row>
+                        <row>
+                            <entry><image href="../Images/ui_icons/gsm_no_signal.png" width="20"
+                                    id="image_ly3_mcc_d3b"/></entry>
+                            <entry>No signal.</entry>
+                        </row>
+                        <row>
+                            <entry><image href="../Images/ui_icons/gsm_pin_error.png" width="20"
+                                    id="image_vy3_mcc_d3b"/></entry>
+                            <entry>PIN/PUK Error.</entry>
+                        </row>
+                        <row>
+                            <entry><image href="../Images/ui_icons/gsm_registeration_failed.png"
+                                    width="20" id="image_ez3_mcc_d3b"/></entry>
+                            <entry>Cellular network registration failed.</entry>
+                        </row>
+                        <row>
+                            <entry><image href="../Images/ui_icons/module_error.png" width="20"
+                                    id="image_mz3_mcc_d3b"/></entry>
+                            <entry>Malfunction in module; please examine the relevant
+                                module.</entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+        </section>
+        <section id="VoIP-status">
+            <title>VoIP Trunk Status</title>
+            <table frame="all" rowsep="1" colsep="1" id="table_ufp_ncc_d3b">
+                <title/>
+                <tgroup cols="2">
+                    <colspec colname="c1" colnum="1" colwidth="1*"/>
+                    <colspec colname="c2" colnum="2" colwidth="3.08*"/>
+                    <thead>
+                        <row>
+                            <entry>Status</entry>
+                            <entry>Description</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row>
+                            <entry><image href="../Images/ui_icons/trunk_idle.png" width="20"
+                                    id="image_m1f_4cc_d3b"/></entry>
+                            <entry>Registered</entry>
+                        </row>
+                        <row>
+                            <entry><image href="../Images/ui_icons/trunk_registering.png" width="20"
+                                    id="image_s1f_4cc_d3b"/></entry>
+                            <entry>Registering</entry>
+                        </row>
+                        <row>
+                            <entry><image href="../Images/ui_icons/unrechable.png" width="20"
+                                    id="image_z1f_4cc_d3b"/></entry>
+                            <entry>
+                                <ul id="ul_etr_4cc_d3b">
+                                    <li>Unreachable</li>
+                                    <li>Registration failed, caused by:<p>
+                                            <ul id="ul_ftr_4cc_d3b">
+                                                <li>wrong password</li>
+                                                <li>wrong authentication name</li>
+                                                <li>wrong user name</li>
+                                                <li>transport type inconsistent</li>
+                                            </ul>
+                                        </p></li>
+                                </ul>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+        </section>
+        <section id="section_bvt_yy2_xdb">
+            <title>Concurrent Call</title>
+            <p>Check the maximum supported concurrent calls and the real-time concurrent calls on
+                the PBX.</p>
+            <p><image href="../Images/admin/concurrent_call.png" id="image_ygn_kz2_xdb" width="500"
+                /></p>
+        </section>
+        <section id="section_c1l_lz2_xdb">
+            <title>Monitor Conference</title>
+            <p>Check how many conferences are created on the PBX, and monitor the status of the
+                conferences.</p>
+            <p><image href="../Images/admin/monitor_conference.png" width="500"
+                    id="image_vdx_mz2_xdb"/></p>
+        </section>
+    </conbody>
+</concept>

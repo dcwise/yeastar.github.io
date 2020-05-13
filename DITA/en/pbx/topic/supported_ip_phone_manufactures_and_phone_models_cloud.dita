@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="reference_k41_bby_scb">
+  <title>Supported IP Phone Manufactures and Phone Models</title>
+  <refbody>
+    <section id="section_sfy_nby_scb">
+      <title>Yealink</title>
+    
+    <table frame="all" rowsep="1" colsep="1" id="table_fwp_nby_scb">
+      <tgroup cols="2">
+          <colspec colname="c1" colnum="1" colwidth="1*"/>
+          <colspec colname="c2" colnum="2" colwidth="1.33*"/>
+          <thead>
+            <row>
+              <entry>Model</entry>
+              <entry>Firmware Version</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>SIP-T19P E2</entry>
+              <entry>53.81.0.XX or later</entry>
+            </row>
+            <row>
+              <entry>SIP-T21P E2</entry>
+              <entry>52.81.0.XX or later</entry>
+            </row>
+            <row>
+              <entry>SIP-T23P</entry>
+              <entry>44.81.0.XX or later</entry>
+            </row>
+            <row>
+              <entry>SIP-T23G</entry>
+              <entry>44.81.0.XX or later</entry>
+            </row>
+            <row>
+              <entry>SIP-T27P</entry>
+              <entry>45.81.0.XX or later</entry>
+            </row>
+            <row>
+              <entry>SIP-T27G</entry>
+              <entry>69.81.0.XX or later</entry>
+            </row>
+            <row>
+              <entry>SIP-T29G</entry>
+              <entry>46.81.0.XX or later</entry>
+            </row>
+            <row>
+              <entry>SIP-T40P</entry>
+              <entry>54.81.0.XX or later</entry>
+            </row>
+            <row>
+              <entry>SIP-T40G</entry>
+              <entry>76.81.0.XX or later</entry>
+            </row>
+            <row>
+              <entry>SIP-T41P</entry>
+              <entry>36.81.0.XX or later</entry>
+            </row>
+            <row>
+              <entry>SIP-T41S</entry>
+              <entry>66.81.0.XX or later</entry>
+            </row>
+            <row>
+              <entry>SIP-T41U</entry>
+              <entry>108.84.0.119 or later</entry>
+            </row>
+            <row>
+              <entry>SIP-T42G</entry>
+              <entry>29.81.0.XX or later</entry>
+            </row>
+            <row>
+              <entry> SIP-T42S</entry>
+              <entry>66.81.0.XX or later</entry>
+            </row>
+            <row>
+              <entry>SIP-T43U</entry>
+              <entry>108.84.0.119 or later</entry>
+            </row>
+            <row>
+              <entry>SIP-T46G</entry>
+              <entry>28.81.0.XX or later</entry>
+            </row>
+            <row>
+              <entry>SIP-T46S</entry>
+              <entry>66.81.0.XX or later</entry>
+            </row>
+            <row>
+              <entry>SIP-T46U</entry>
+              <entry>108.84.0.119 or later</entry>
+            </row>
+            <row>
+              <entry>SIP-T48G</entry>
+              <entry>35.81.0.XX or later</entry>
+            </row>
+            <row>
+              <entry>SIP-T48S</entry>
+              <entry>66.81.0.XX or later</entry>
+            </row>
+            <row>
+              <entry>SIP-T48U</entry>
+              <entry>108.84.0.119 or later</entry>
+            </row>
+            <row>
+              <entry>SIP-T52S</entry>
+              <entry>70.81.0.XX or later</entry>
+            </row>
+            <row>
+              <entry>SIP-T53</entry>
+              <entry>95.84.0.30 or later</entry>
+            </row>
+            <row>
+              <entry>SIP-T53W</entry>
+              <entry>95.84.0.30 or later</entry>
+            </row>
+            <row>
+              <entry>SIP-T54W</entry>
+              <entry>96.84.0.30 or later</entry>
+            </row>
+            <row>
+              <entry>SIP-T57W</entry>
+              <entry>97.84.0.35 or later</entry>
+            </row>
+            <row>
+              <entry>SIP-T54S</entry>
+              <entry>70.81.0.XX or later</entry>
+            </row>
+            <row>
+              <entry>SIP-T56A</entry>
+              <entry>58.80.0.XX or later </entry>
+            </row>
+            <row>
+              <entry>SIP-T58A</entry>
+              <entry>58.80.0.XX or later</entry>
+            </row>
+            <row>
+              <entry>SIP-T58V</entry>
+              <entry>58.80.0.XX or later</entry>
+            </row>
+            <row>
+              <entry>W41P</entry>
+              <entry>W60B: 77.83.0.10 or later</entry>
+            </row>
+            <row>
+              <entry>W53P</entry>
+              <entry>W60B: 77.83.0.10 or later</entry>
+            </row>
+            <row>
+              <entry>W60P</entry>
+              <entry>W60B: 77.83.0.10 or later</entry>
+            </row>
+            <row>
+              <entry>W52P</entry>
+              <entry>Base for W52P: 25.81.0.30 or later</entry>
+            </row>
+            <row>
+              <entry>W56P</entry>
+              <entry>Base for W56P: 25.81.0.30 or later</entry>
+            </row>
+            <row>
+              <entry>CP930W-Base</entry>
+              <entry>W60B: 77.83.0.20 or later</entry>
+            </row>
+            <row>
+              <entry>VP59</entry>
+              <entry>91.283.0.30 or later</entry>
+            </row>
+            <row>
+              <entry>CP920</entry>
+              <entry>78.84.0.80 or later</entry>
+            </row>
+            <row>
+              <entry>CP960</entry>
+              <entry>73.83.0.30 or later</entry>
+            </row>
+          </tbody>
+        </tgroup>
+    </table>
+    </section>
+    <section id="section_py3_f1t_q2b">
+      <title>Vtech </title>
+      <p>
+        <table frame="all" rowsep="1" colsep="1" id="table_tn1_j1t_q2b">
+          <tgroup cols="2">
+            <colspec colname="c1" colnum="1" colwidth="1*"/>
+            <colspec colname="c2" colnum="2" colwidth="1*"/>
+            <tbody>
+              <row>
+                <entry><b>Model</b></entry>
+                <entry><b>Firmware Version</b></entry>
+              </row>
+              <row>
+                <entry>ET605</entry>
+                <entry>8.10.1.31 or later</entry>
+              </row>
+              <row>
+                <entry>ET635</entry>
+                <entry>8.10.1.31 or later</entry>
+              </row>
+              <row>
+                <entry>ET685</entry>
+                <entry>8.10.1.25 or later</entry>
+              </row>
+              <row>
+                <entry>VDP650</entry>
+                <entry>1.0.0.9 or later</entry>
+              </row>
+              <row>
+                <entry>VCS752</entry>
+                <entry>1.1.6.0 or later</entry>
+              </row>
+              <row>
+                <entry>VCS754</entry>
+                <entry>1.1.6.0 or later</entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+      </p>
+    </section>
+    <section id="section_x4d_spq_3gb">
+      <title>Fanvil</title>
+      <p>
+        <table frame="all" rowsep="1" colsep="1" id="table_jzd_wpq_3gb">
+          <tgroup cols="2">
+            <colspec colname="c1" colnum="1" colwidth="1*"/>
+            <colspec colname="c2" colnum="2" colwidth="1*"/>
+            <tbody>
+              <row>
+                <entry><b>Model</b></entry>
+                <entry><b>Firmware Version</b></entry>
+              </row>
+              <row>
+                <entry>C400</entry>
+                <entry>14.0.0.3.r1 or later </entry>
+              </row>
+              <row>
+                <entry>C600</entry>
+                <entry>14.0.0.3.r1 or later</entry>
+              </row>
+              <row>
+                <entry>X1</entry>
+                <entry>2.8.0.6251 or later</entry>
+              </row>
+              <row>
+                <entry>X1P</entry>
+                <entry>2.8.0.6251 or later</entry>
+              </row>
+              <row>
+                <entry>X2</entry>
+                <entry>2.8.0.6251 or later</entry>
+              </row>
+              <row>
+                <entry>X2C</entry>
+                <entry>2.8.0.6251 or later</entry>
+              </row>
+              <row>
+                <entry>X3S</entry>
+                <entry>2.8.0.6251 or later</entry>
+              </row>
+              <row>
+                <entry>X3G</entry>
+                <entry>2.8.0.6251 or later</entry>
+              </row>
+              <row>
+                <entry>X4</entry>
+                <entry>2.8.0.6251 or later</entry>
+              </row>
+              <row>
+                <entry>X5G</entry>
+                <entry>1.4.0.2016 or later</entry>
+              </row>
+              <row>
+                <entry>X5S</entry>
+                <entry>1.8.0 or later</entry>
+              </row>
+              <row>
+                <entry>X6</entry>
+                <entry>1.8.0 or later</entry>
+              </row>
+              <row>
+                <entry>H5</entry>
+                <entry>2.8.0.6251 or later</entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+      </p>
+    </section>
+    <section id="section_yr1_zsc_zgb">
+      <title>Snom</title>
+      <p>
+        <table frame="all" rowsep="1" colsep="1" id="table_ck5_1tc_zgb">
+          <tgroup cols="2">
+            <colspec colname="c1" colnum="1" colwidth="1.02*"/>
+            <colspec colname="c2" colnum="2" colwidth="1*"/>
+            <thead>
+              <row>
+                <entry>Model</entry>
+                <entry>Firmware Version</entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry>D120</entry>
+                <entry>10.1.42.14 or later</entry>
+              </row>
+              <row>
+                <entry>D305</entry>
+                <entry>10.1.42.14 or later</entry>
+              </row>
+              <row>
+                <entry>D315</entry>
+                <entry>10.1.33.33 or later</entry>
+              </row>
+              <row>
+                <entry>D345</entry>
+                <entry>10.1.33.33 or later</entry>
+              </row>
+              <row>
+                <entry>D375</entry>
+                <entry>10.1.42.14 or later</entry>
+              </row>
+              <row>
+                <entry>D385</entry>
+                <entry>10.1.33.33 or later</entry>
+              </row>
+              <row>
+                <entry>D712</entry>
+                <entry>10.1.42.14 or later</entry>
+              </row>
+              <row>
+                <entry>D715</entry>
+                <entry>10.1.42.14 or later</entry>
+              </row>
+              <row>
+                <entry>D717</entry>
+                <entry>10.1.42.14 or later</entry>
+              </row>
+              <row>
+                <entry>D725</entry>
+                <entry>10.1.42.14 or later</entry>
+              </row>
+              <row>
+                <entry>D735</entry>
+                <entry>10.1.42.14 or later</entry>
+              </row>
+              <row>
+                <entry>D745</entry>
+                <entry>10.1.42.14 or later</entry>
+              </row>
+              <row>
+                <entry>D765</entry>
+                <entry>10.1.42.14 or later</entry>
+              </row>
+              <row>
+                <entry>D785</entry>
+                <entry>10.1.33.33 or later</entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+      </p>
+    </section>
+  </refbody>
+</reference>

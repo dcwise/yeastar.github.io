@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="yealink-configuration">
+    <title>Create a Configuration File for Yealink Phone</title>
+    <body>
+        <p>You can create a client file named "<filepath>vpn.cnf</filepath>" with a text editor
+            (e.g. notepad++), or <xref href="http://help.yeastar.com/download/support/vpn.cnf"
+                format="html" scope="external">download a <filepath>client.ovpn</filepath> sample
+                file</xref>.</p>
+        <p>
+            <note>The line beginning with “;” is considered to disable the corresponding
+                option.</note>
+            <ol id="ol_ywz_33n_h3b">
+                <li>Open the <filepath>vpn.cnf</filepath> file with a text editor.</li>
+                <li>Edit the following options according to the VPN server settings on your PBX.<p>
+                        <note>The client and server must use the same settings.</note>
+                    </p><ol id="ol_vyl_q3n_h3b">
+                        <li>Specify the hostname/IP and port of VPN server.<p>In this example, we
+                                have forwarded the VPN server <i>10.8.0.1 1194</i> to
+                                    <i>110.80.36.162
+                            7086</i>.</p><codeblock>remote 110.80.36.162 7086</codeblock></li>
+                        <li>Set the protocol to <uicontrol>UDP</uicontrol> or
+                                <uicontrol>TCP</uicontrol>.<p>In this example, UDP is enabled while
+                                TCP is disabled.</p><codeblock>proto udp
+;proto tcp</codeblock></li>
+                        <li>Set the device mode to <uicontrol>TAP</uicontrol> or
+                                <uicontrol>TUN</uicontrol>. <p>In this example, TAP is enabled while
+                                TUN is disabled.</p><codeblock>dev tap
+;dev tun</codeblock></li>
+                        <li>Set the cryptographic cipher. <p>
+                                <table frame="all" rowsep="1" colsep="1" id="table_jgf_ymy_k3b">
+                                    <title/>
+                                    <tgroup cols="2" align="center">
+                                        <colspec colname="c2" colnum="1" colwidth="1*"/>
+                                        <colspec colname="c1" colnum="2" colwidth="1*"/>
+                                        <thead>
+                                            <row>
+                                                <entry>Cryptographic cipher on server</entry>
+                                                <entry>Cryptographic cipher on client</entry>
+                                            </row>
+                                        </thead>
+                                        <tbody>
+                                            <row>
+                                                <entry>BlowFish</entry>
+                                                <entry>cipher BF-CBC</entry>
+                                            </row>
+                                            <row>
+                                                <entry>AES-128</entry>
+                                                <entry>cipher AES-128-CBC</entry>
+                                            </row>
+                                            <row>
+                                                <entry>AES-256</entry>
+                                                <entry>cipher AES-256-CBC</entry>
+                                            </row>
+                                            <row>
+                                                <entry>Triple-DES</entry>
+                                                <entry>cipher DES-EDE3-CBC</entry>
+                                            </row>
+                                        </tbody>
+                                    </tgroup>
+                                </table>
+                            </p><p>In this example, AES-256 is set on server, then you should enable
+                                AES-256-CBC on
+                            client.</p><codeblock>;cipher BF-CBC
+;cipher AES-128-CBC
+cipher AES-256-CBC
+;cipher DES-EDE3-CBC</codeblock></li>
+                        <li>If <uicontrol>Compression</uicontrol> is enabled on server, you need to
+                            enable compression on the VPN
+                            client.<codeblock>comp-lzo</codeblock></li>
+                        <li>If <xref
+                                href="openvpn-username-password-authentication.dita#openvpn-create-account-password-for-each-client"
+                                >Username/Password Authentication</xref> is used on server, you need
+                            to specify the <filepath>pwd</filepath>
+                            file.<codeblock>auth-user-pass /config/openvpn/pwd</codeblock></li>
+                        <li>If <uicontrol>SSL/TLS</uicontrol> and a <filepath>ta.key</filepath> is
+                            used on the server, you need to specify the TLS Authentication &amp; TA
+                            Key.<codeblock>tls-auth ta.key 1</codeblock></li>
+                        <li>Specify the CA certificate file used on
+                            server.<codeblock>ca /config/openvpn/keys/ca.crt</codeblock></li>
+                    </ol></li>
+                <li>Specify the Yealink phone client certificate and key file.<p>In this example,
+                            <filepath>Yealink.crt</filepath> and <filepath>Yealink.key</filepath> is
+                        specified.</p><codeblock>cert /config/openvpn/keys/Yealink.crt
+key /config/openvpn/keys/Yealink.key</codeblock></li>
+                <li>Edit other options according to your
+                    need.<codeblock>persist-key
+persist-tun
+verb 3
+resolv-retry infinite
+remote-cert-tls server
+nobind
+;dev-node MyTap
+;remote-random
+;http-proxy-retry
+;http-proxy [proxy server] [proxy port #]
+;mute-replay-warnings
+;mute 20</codeblock></li>
+                <li>Save the client file.</li>
+            </ol>
+        </p>
+    </body>
+</topic>

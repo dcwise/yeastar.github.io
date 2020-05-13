@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="reference_e3g_44f_4cb">
+  <title>SBC Log File Path</title>
+  <shortdesc>References of the file paths of SBC logs. </shortdesc>
+  <prolog>
+    <critdates>
+      <!--Carol-->
+      <revised modified="2018/06/22"/>
+      <!--Carol-->
+      <revised modified="2018/10/31"/>
+    </critdates>
+  </prolog>
+  <refbody>
+    <section id="section_f5d_nr2_4db">
+      <title>Fail2Ban Log File Path</title>
+      <p>By default, your IP address will be blocked after 5 failed login attempts in 10 minutes.
+        The IP will be blocked for 10 minutes. If you want to delete the blocked IP addresses via
+        the following path.</p>
+      <p><filepath>/var/log/fail2ban.log</filepath></p>
+    </section>
+    <section id="section_s1q_5gr_ndb">
+      <title>Dynamic Defense Log File Path</title>
+      <p><filepath>/var/log/kern.log</filepath></p>
+    </section>
+    <section id="section_f4p_tgr_ndb">
+      <title>Sip Signaling Log File Path</title>
+      <p><filepath>/var/log/syslog</filepath></p>
+    </section>
+  </refbody>
+</reference>

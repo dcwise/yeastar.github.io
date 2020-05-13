@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="configure-snmp-on-pbx">
+    <title>Configure the PBX to Communicate with an NMS by SNMP</title>
+    <shortdesc><ph keyref="product_name"/> provide a Graphical User Interface for administrator to
+        configure SNMP. This topic describes how to configure SNMP on PBX to establish a connection
+        between the PBX and the NMS.</shortdesc>
+    <body>
+        <note>The SNMP settings configured on PBX and NMS must be consistent.</note>
+        <p>
+            <ol id="ol_ssl_lpb_kkb">
+                <li>Log in PBX interface, go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol>System</uicontrol>
+                        <uicontrol> SNMP</uicontrol>
+                    </menucascade>.</li>
+                <li>Select the checkbox of <uicontrol>Enable</uicontrol> to enable SNMP.</li>
+                <li>In the <uicontrol>Local Port</uicontrol> field, enter the SNMP port.</li>
+                <li>Set the SNMP connection:<note>In case that the PBX is monitored by different NMS
+                        that has different SNMP versions, you can configure SNMPv1, SNMPv2c, and
+                        SNMPv3 on the PBX for communicating with all the NMSs.</note><ul
+                        id="ul_dq2_5pb_kkb">
+                        <li>If the NMS runs SNMPv3 to manage the PBX, set the SNMP version to SNMPv3
+                            on PBX:<ol id="ol_qzy_1qb_kkb">
+                                <li>In the <uicontrol>SNMPv3 User</uicontrol> field, enter the user
+                                    name.</li>
+                                <li>In the <uicontrol>Access Limit</uicontrol> drop-down list,
+                                    select the authentication method.<ul id="ul_f5s_hqb_kkb">
+                                        <li><uicontrol>NoAuth</uicontrol>: Access control based on
+                                            the user name.</li>
+                                        <li><uicontrol>Auth</uicontrol>: Access control based on the
+                                            HMAC-MD5 authentication. If you select this
+                                            authentication, enter the authentication password.</li>
+                                        <li><uicontrol>Priv</uicontrol>: Access control based on the
+                                            HMAC-MD5 authentication, and encrypt data by CBC-DES. If
+                                            you select this authentication, enter the authentication
+                                            password and encryption password.</li>
+                                    </ul></li>
+                            </ol></li>
+                        <li>If the NMS runs SNMPv1 or SNMPv2 to manage PBX, set the SNMP version to
+                            SNMPv1 or SNMPv2 on PBX:<ol id="ol_m3h_12c_kkb">
+                                <li>In the <uicontrol>SNMP Mode</uicontrol> drop-down list, select
+                                    the SNMP version.</li>
+                                <li>In the <uicontrol>Community</uicontrol> field, enter the
+                                    community name.</li>
+                                <li>In the <uicontrol>IP/SubnetMask</uicontrol> field, enter the IP
+                                    address and Subnet Mask where the PBX and the NMS are
+                                        located.<note>For SNMPv1 and SNMPv2, the PBX and the NMS
+                                        must be in the same LAN.</note></li>
+                            </ol></li>
+                    </ul></li>
+                <li>Click <uicontrol>Save</uicontrol>.</li>
+            </ol>
+        </p>
+        <p><b>What' Next:</b> Configure SNMP on NMS to monitor
+            PBX.<?oxy_comment_start author="carol" timestamp="20200226T164120+0800" comment="新增" flag="done"?></p><?oxy_comment_end?>
+    </body>
+    <related-links>
+        <?oxy_comment_start author="carol" timestamp="20200226T164132+0800" comment="新增" flag="done"?>
+        <link href="monitor-yeastar-pbx-with-nagios.dita"/><?oxy_comment_end?>
+    </related-links>
+</topic>

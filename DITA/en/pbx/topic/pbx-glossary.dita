@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE glossgroup PUBLIC "-//OASIS//DTD DITA Glossary Group//EN" "glossgroup.dtd">
+<glossgroup id="pbx-glossary">
+    <title>PBX Glossary</title>
+    <glossentry id="id_syl_p53_y3b">
+        <glossterm>sea birds</glossterm>
+        <glossdef>aaaaaaaa</glossdef>
+    </glossentry>
+    <glossentry id="id_g5w_q53_y3b">
+        <glossterm id="landbirds">land birds</glossterm>
+        <glossdef>bbbbbbb</glossdef>
+    </glossentry>
+    <glossentry id="id_fdy_r53_y3b">
+        <glossterm id="flybirds">fly birds</glossterm>
+        <glossdef>ccccccccc</glossdef>
+    </glossentry>
+    <glossentry id="id_etm_gz3_y3b">
+        <glossterm>pbx</glossterm>
+        <glossdef/>
+    </glossentry>
+    <glossentry id="id_nmk_hz3_y3b">
+        <glossterm>gateway</glossterm>
+        <glossdef/>
+    </glossentry>
+    <glossentry id="id_fk1_lcj_y3b">
+        <glossterm>Serial Number</glossterm>
+        <glossdef>serial number contains date,mac,etc</glossdef>
+        <glossBody>
+            <glossSurfaceForm>serial number </glossSurfaceForm>
+            <glossAlt>
+                <glossAcronym>SN</glossAcronym>
+            </glossAlt>
+        </glossBody>
+    </glossentry>
+</glossgroup>

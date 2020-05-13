@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_rd1_d5d_2cb">
+    <title>Make Outbound Calls</title>
+    <shortdesc>Outbound routes are used to specify what numbers are allowed to go out a particular
+        route. When a call is placed, the actual number dialed by the user is compared with the dial
+        patterns in each route (from highest to lowest priority) until a match is found. If no match
+        is found, the call fails. If the number dialed matches a pattern in more than one route,
+        only the rules with the highest priority in the route are used.</shortdesc>
+    <taskbody>
+        <context>
+            <p>The default outbound route (with dial pattern <codeph>X.</codeph>) on the PBX will
+                allow any outgoing numbers. You can make outbound calls as you usually do on your
+                phone.</p>
+        </context>
+        <steps id="steps_ncd_j5d_2cb">
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol> PBX</uicontrol>
+                        <uicontrol>Call Control</uicontrol>
+                        <uicontrol> Outbound Routes</uicontrol>
+                    </menucascade>.</cmd>
+            </step>
+            <step>
+                <cmd>Click <image href="../Images/ui_icons/edit.png" width="20"
+                        id="image_ghj_bvd_2cb"/> to edit the default inbound route.</cmd>
+            </step>
+            <step>
+                <cmd>In the <uicontrol>Member Trunks</uicontrol> field, double click the desired
+                    trunk in the <uicontrol>Available</uicontrol> box, the trunk will appear in
+                        <uicontrol>Selected</uicontrol> box.</cmd>
+                <info>The users can only use the selected trunk to make outbound calls through this
+                    route.</info>
+                <info><image href="../Images/admin/member_trunk.png" width="650"
+                        id="image_djt_4yk_2cb"/></info>
+            </step>
+            <step>
+                <cmd>In the <uicontrol>Member Extensions</uicontrol> field, double click the desired
+                    extensions in the <uicontrol>Available </uicontrol> box,  the extensions will
+                    appear on <uicontrol>Selected</uicontrol> box.</cmd>
+                <info>Only the selected extension users can make outbound calls through this
+                    route.</info>
+                <info><image href="../Images/admin/member_extensions.png" width="650"
+                        id="image_k3b_qyk_2cb"/></info>
+            </step>
+            <step>
+                <cmd id="apply">Click <uicontrol>Save</uicontrol> and
+                    <uicontrol>Apply</uicontrol>.</cmd>
+            </step>
+        </steps>
+        <result id="result_iwn_112_2cb">Now, the selected extension users can make outbound calls
+            through this route.</result>
+    </taskbody>
+</task>

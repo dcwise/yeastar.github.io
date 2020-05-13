@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_j2k_nxl_2fb">
+    <title>Linkus Client Settings</title>
+    <shortdesc>Enable or disable Linkus client for the extension users, send Linkus emails to the
+        users, and edit the Linkus email template.</shortdesc>
+    <body>
+        <section id="section_lqr_xhy_ghb">
+            <title>Linkus Client</title>
+            <p>With Linkus, all the features of a desk phone can be realized by your mobile device
+                and desktop. Available using Microsoft Windows, macOS, iOS, and Android, Linkus
+                makes real-time communication easy across multiple devices.</p>
+            <p>To know more about the Linkus Client, refer to the <xref
+                    href="https://help.yeastar.com/en/linkus_client/topic/faq.html" format="html"
+                    scope="external">Linkus Help</xref>.</p>
+        </section>
+    </body>
+</topic>

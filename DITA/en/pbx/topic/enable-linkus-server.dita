@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_rdj_hmk_ngb">
+    <title>Enable Linkus Server</title>
+    <shortdesc>To get start with Linkus, you should first enable Linkus server on <ph
+            keyref="product_name"/>.</shortdesc>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Log in the PBX web interface, go to <uicontrol>Linkus</uicontrol>, check the
+                    option <uicontrol>Enable</uicontrol>.</cmd>
+                <info><image href="../Images/admin/enable_linkus_server.png" id="image_q34_tnk_ngb"
+                        width="650"/></info>
+            </step>
+            <step>
+                <cmd>In the dialog box, click <uicontrol>Yes</uicontrol> to confirm.</cmd>
+            </step>
+        </steps>
+        <postreq id="postreq_ebf_ydm_ngb"><xref
+                href="enable_linkus_client_for_users.dita#task_xkx_s12_2cb"/></postreq>
+    </taskbody>
+</task>

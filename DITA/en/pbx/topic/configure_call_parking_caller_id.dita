@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="topic_dzk_jz1_rfb">
+    <title>Configure Call Parking Caller ID</title>
+    <shortdesc>By default, when you retrieve a parked call, the call-park slot number (e.g. 6900)
+        will be displayed on the phone. To display the original caller ID of the user who you were
+        talking to, you need to configure SIP settings to get caller ID from Remote- Party-ID SIP
+        header.</shortdesc>
+    <taskbody>
+        <steps id="steps_zhs_j2b_rfb">
+            <step>
+                <cmd>On PBX, enable <uicontrol>Send Remote Party ID</uicontrol>.</cmd>
+                <substeps>
+                    <substep>
+                        <cmd>Go to <menucascade>
+                                <uicontrol>Settings</uicontrol>
+                                <uicontrol>PBX</uicontrol>
+                                <uicontrol>General</uicontrol>
+                                <uicontrol>SIP</uicontrol>
+                                <uicontrol>Advanced</uicontrol>
+                            </menucascade>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Check the option <uicontrol>Send Remote Party ID</uicontrol>
+                            option.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Click <uicontrol>Save</uicontrol> and
+                            <uicontrol>Apply</uicontrol>.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>On the IP phone that you will use to retrieve a parked call, configure the
+                        <uicontrol>Caller ID Source</uicontrol>.</cmd>
+                <info>
+                    <note>We take Yealink T29G v46.83.0.50 as an example below.</note>
+                </info>
+                <info><image href="../Images/admin/yealink_caller_id_source.png" width="650"
+                        id="image_nqw_gjv_rfb"/></info>
+                <substeps>
+                    <substep>
+                        <cmd>Log in the phone web interface, go to <menucascade>
+                                <uicontrol>Account</uicontrol>
+                                <uicontrol>Advanced</uicontrol>
+                            </menucascade>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>In the <uicontrol>Account</uicontrol>, select the account where the
+                            extension is registered.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>In the <uicontrol>Caller ID Source</uicontrol> field, select
+                                <uicontrol>RPID-FROM</uicontrol>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Click <uicontrol>Confirm</uicontrol>.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+        <result id="result_o3q_jjv_rfb">Test call parking. When you retrieve the parked call from
+            the IP phone, the phone screen will display the parking slot number for 1 or 2 seconds,
+            then display the original caller ID.<p>The following call flow shows how the IP phone
+                gets caller ID when a user retrieves a parked call.</p><p>
+                <ol id="ul_og2_qtj_sfb">
+                    <li>A user dials parking slot number 6900 on IP phone to retrieve a parked
+                        call.</li>
+                    <li>PBX sends a Re-INVITE packet that contains Remote-Party-ID.</li>
+                    <li>The IP phone gets the caller ID from the Remote-Party-ID header.</li>
+                </ol>
+            </p><image href="../Images/admin/callflow_retrieve_parked_call.png"
+                id="image_qxm_dtj_sfb"/></result>
+    </taskbody>
+</task>

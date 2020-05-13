@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="concept_jyf_nhl_cfb">
+    <title>Manage Your Presence</title>
+    <shortdesc>Presence status is linked to the call forwarding settings and Linkus ring strategy. </shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/09/11"/>
+            <!--Carol-->
+            <revised modified="2018/09/11"/>
+        </critdates>
+    </prolog>
+    <body>
+        <p><ph keyref="product_name"/> provides five presence statuses:</p>
+        <p><ul id="ul_h2l_14l_cfb">
+                <li>Available</li>
+                <li>Away</li>
+                <li>DND</li>
+                <li>Lunch Break</li>
+                <li>On a Business Trip</li>
+            </ul> You can configure call forwarding and ring strategy for each presence status
+            except <uicontrol>DND</uicontrol> status. </p>
+        <p>
+            <note>If the presence status is set to <uicontrol>DND</uicontrol>, you won't receive any
+                calls.</note>
+        </p>
+    </body>
+</topic>

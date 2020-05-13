@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_wjb_1rn_y2b">
+    <title>Billing</title>
+    <shortdesc></shortdesc>
+    <conbody>
+        <section id="section_cwt_24j_tkb">
+            <title>Version 2.1.4</title>
+            <p>Released Date: February 27, 2020<ul id="ul_q5f_g4j_tkb">
+                    <li>Fixed the billing issue: The <uicontrol>Hangup with Insufficient
+                            Balance</uicontrol> was enabled, but the system didn't hang up the call
+                        when the extension or account had insufficient balance. </li>
+                    <li>Fixed the CDR issue: The data in CSV file that was downloaded from web page
+                        was incorrect.</li>
+                    <li>Fixed the CDR issue: After filtering call logs, the
+                            <uicontrol>Extension</uicontrol> column was not displayed on the web
+                        page.</li>
+                </ul></p>
+        </section>
+        <section id="section_y4m_khb_wjb">
+            <title>Version 2.1.1</title>
+            <p>Released Date: December 12, 2019<ul id="ul_jyj_mhb_wjb">
+                    <li>Optimized the mechanism of applying configuration changes to improve the
+                        system stability.<ul id="ul_gnc_1vb_wjb">
+                            <li>You don't need to click <uicontrol>Apply</uicontrol> button to
+                                reload Asterisk if you save unchanged configurations.</li>
+                            <li>If no <uicontrol>Apply</uicontrol> button appears after you save
+                                some specific configuration changes, then the configurations can be
+                                saved without reloading Asterisk.</li>
+                        </ul></li>
+                    <li>Fixed the billing issue: No billing record for the inbound call that was
+                        transferred to an extension.</li>
+                    <li>Fixed the CDR issue: The call logs didn't display the billing
+                        information.</li>
+                </ul></p>
+        </section>
+        <section>
+            <title>Version 2.0.9</title>
+            <p>Released Date: May 14, 2019</p>
+            <p>
+                <ul>
+                    <li>Fixed the issue that the icon of Billing App wasn’t displayed on the web
+                        page.</li>
+                    <li>Updated Russian and Italian web interface.</li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_ejy_hxk_5gb">
+            <title>Version 2.0.8</title>
+            <p>Released Date: February 25, 2019</p>
+            <p>
+                <ul id="ul_cx1_d1l_5gb">
+                    <li>Added support for Russian web UI.</li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_mrd_5js_zfb">
+            <title>Version 2.0.7</title>
+            <p>Released Date: December 5, 2018</p>
+            <p>
+                <ul id="ul_yzn_wjs_zfb">
+                    <li>Optimized Billing Rate Import function.</li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_rcp_v5n_y2b">
+            <title>Version 2.0.3</title>
+            <p>Released Date: August 29, 2018</p>
+            <ul id="ul_s2t_y5n_y2b">
+                <li>Optimized the billing for transferred calls.</li>
+                <li>Fixed the issue that if Billing function was enabled, the PBX could not forward
+                    calls to external numbers.</li>
+            </ul>
+        </section>
+    </conbody>
+</concept>

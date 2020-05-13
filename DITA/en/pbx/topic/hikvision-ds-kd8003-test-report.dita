@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="tested-equipment-and-software">
+    <title>Test Report for Hikvision DS-KD8003 Video Intercom Door Station</title>
+    <shortdesc>This article is the Interoperability Test Report for <ph keyref="product_name"/> and
+        Hikvision DS-KD8003 Video Intercom Door Station.</shortdesc>
+    <body>
+        <section id="section_k1l_1b3_h3b">
+            <title>Tested equipment &amp; software</title>
+            <p>
+                <table frame="all" id="table_idh_513_h3b">
+                    <tgroup cols="2">
+                        <colspec colname="c1" colnum="1" colwidth="1*" colsep="1" rowsep="1"/>
+                        <colspec colname="c2" colnum="2" colwidth="1*" colsep="1" rowsep="1"/>
+                        <thead>
+                            <row>
+                                <entry>Equipment</entry>
+                                <entry>
+                                    <p>Firmware/Software Version</p>
+                                </entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>
+                                    <p>Hikvision DS-KD8003 Video Intercom Door Station</p>
+                                </entry>
+                                <entry>
+                                    <p product="s-series">2.1.0</p>
+                                    <p product="cloudpbx">2.0.0</p>
+                                </entry>
+                            </row>
+                            <row product="s-series">
+                                <entry>Yeastar S100</entry>
+                                <entry>
+                                    <p>30.10.0.67</p>
+                                </entry>
+                            </row>
+                            <row product="cloudpbx">
+                                <entry>
+                                    <p>Yeastar Cloud PBX</p>
+                                </entry>
+                                <entry>81.8.0.85</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+        <section id="section_dn3_bb3_h3b">
+            <title>Summary of test focus</title>
+            <p>The following table shows a summary of the validated capabilities.</p>
+            <p>
+                <table frame="all" id="table_ap2_db3_h3b">
+                    <tgroup cols="2">
+                        <colspec colname="c1" colnum="1" colwidth="1*" colsep="1" rowsep="1"/>
+                        <colspec colname="c2" colnum="2" colwidth="1*" colsep="1" rowsep="1"/>
+                        <thead>
+                            <row>
+                                <entry>Feature</entry>
+                                <entry>
+                                    <p>Test Result</p>
+                                </entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry namest="c1" nameend="c2"><b>DUT Services</b></entry>
+                            </row>
+                            <row>
+                                <entry>
+                                    <p>SIP Registration</p>
+                                </entry>
+                                <entry>
+                                    <p>PASS</p>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>
+                                    <p>Inbound Call (audio)</p>
+                                </entry>
+                                <entry>
+                                    <p>FAIL</p>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>
+                                    <p>Outbound Call (audio)</p>
+                                </entry>
+                                <entry>
+                                    <p>PASS</p>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>
+                                    <p>Inbound call (video)</p>
+                                </entry>
+                                <entry>
+                                    <p>PASS</p>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>
+                                    <p>Outbound call (video)</p>
+                                </entry>
+                                <entry>PASS</entry>
+                            </row>
+                            <row>
+                                <entry>
+                                    <p>Serviceability</p>
+                                </entry>
+                                <entry>PASS</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+        <section id="section_ntd_yb3_h3b">
+            <title>Definitions</title>
+            <p>Word definitions in the following test plan table.</p>
+            <p>
+                <ul id="ul_bxc_1c3_h3b">
+                    <li>
+                        <p><b>DUT</b>: Device Under Test, which in this case is the DS-KD8003 Video
+                            Intercom Door Station.</p>
+                    </li>
+                    <li>
+                        <p><b>Phone A</b>: A SIP compatible endpoint used to call the DUT.</p>
+                    </li>
+                    <li>
+                        <p><b>Phone B</b>: A SIP compatible endpoint used to call the DUT and Phone
+                            A.</p>
+                    </li>
+                    <li>
+                        <p><b>Phone C</b>: A SIP compatible endpoint registered on Yealink T58A
+                            video phone for video call.</p>
+                    </li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_wby_hc3_h3b">
+            <title>Test plan</title>
+            <p><b>SIP Registration</b></p>
+            <p product="s-series">The following test cases verify features related to the
+                registration process with Yeastar S100.</p>
+            <p product="cloudpbx">The following test cases verify features related to the
+                registration process with Yeastar Cloud PBX.</p>
+            <p>
+                <table frame="all" id="table_gzn_kc3_h3b">
+                    <tgroup cols="3">
+                        <colspec colname="c1" colnum="1" colwidth="2.28*" colsep="1" rowsep="1"/>
+                        <colspec colname="c2" colnum="2" colwidth="2.97*" colsep="1" rowsep="1"/>
+                        <colspec colname="c3" colnum="3" colwidth="1*" colsep="1" rowsep="1"/>
+                        <thead>
+                            <row>
+                                <entry>
+                                    <p>Test Case</p>
+                                </entry>
+                                <entry>
+                                    <p>Expected Result</p>
+                                </entry>
+                                <entry>
+                                    <p>Test Result</p>
+                                </entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>
+                                    <p>Attempt registering DUT Extension using incorrect password.
+                                    </p>
+                                </entry>
+                                <entry>
+                                    <p>Registration failure status is correctly displayed in web
+                                        interface.</p>
+                                </entry>
+                                <entry>
+                                    <p>PASS</p>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>
+                                    <p>Attempt registering DUT Extension using incorrect
+                                        username.</p>
+                                </entry>
+                                <entry>
+                                    <p>Registration failure status is correctly displayed in web
+                                        interface.</p>
+                                </entry>
+                                <entry>
+                                    <p>PASS</p>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>
+                                    <p>Correctly register DUT Extension.</p>
+                                </entry>
+                                <entry>
+                                    <p>DUT registers properly and status is correctly displayed in
+                                        web interface.</p>
+                                </entry>
+                                <entry>
+                                    <p>PASS</p>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>
+                                    <p>Register DUT multiple extensions.</p>
+                                </entry>
+                                <entry>
+                                    <p>DUT registers properly and status is correctly displayed in
+                                        web interface.</p>
+                                </entry>
+                                <entry>
+                                    <p>PASS</p>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>
+                                    <p>Register DUT Extension using UDP protocol.</p>
+                                </entry>
+                                <entry>
+                                    <p>DUT registers properly and status is correctly displayed in
+                                        web interface.</p>
+                                </entry>
+                                <entry>
+                                    <p>PASS</p>
+                                </entry>
+                            </row>
+                            <row product="cloudpbx">
+                                <entry>
+                                    <p>Register DUT Extension using TCP protocol.</p>
+                                </entry>
+                                <entry>
+                                    <p>DUT registers properly and status is correctly displayed in
+                                        web interface.</p>
+                                </entry>
+                                <entry>
+                                    <p>PASS</p>
+                                </entry>
+                            </row>
+                            <row product="cloudpbx">
+                                <entry>
+                                    <p>Register DUT Extension using TLS protocol.</p>
+                                </entry>
+                                <entry>
+                                    <p>DUT registers properly and status is correctly displayed in
+                                        web interface.</p>
+                                </entry>
+                                <entry>
+                                    <p>PASS</p>
+                                </entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+            <p><b>Inbound Call</b></p>
+            <p>The following test cases verify the inbound calling capability of the DUT.</p>
+            <p>
+                <table frame="all" id="table_wkn_vc3_h3b">
+                    <tgroup cols="3">
+                        <colspec colname="c1" colnum="1" colwidth="1*" colsep="1" rowsep="1"/>
+                        <colspec colname="c2" colnum="2" colwidth="1.98*" colsep="1" rowsep="1"/>
+                        <colspec colname="c3" colnum="3" colwidth="1.27*" colsep="1" rowsep="1"/>
+                        <thead>
+                            <row>
+                                <entry>
+                                    <p>Test Case</p>
+                                </entry>
+                                <entry>
+                                    <p>Expected Result</p>
+                                </entry>
+                                <entry>
+                                    <p>Test Result</p>
+                                </entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry namest="c1" nameend="c3">
+                                    <p><b>Audio call</b></p>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>
+                                    <p>Call DUT from Phone A.</p>
+                                </entry>
+                                <entry>
+                                    <p>DUT will be able to answer the call and phone A can get the
+                                        audio from DUT site.</p>
+                                </entry>
+                                <entry>
+                                    <p>FAIL</p>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry namest="c1" nameend="c3">
+                                    <p><b>Video call</b></p>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>
+                                    <p>Call DUT from Phone C.</p>
+                                </entry>
+                                <entry>
+                                    <p>DUT will auto answer the call, video call will be established
+                                        with DUT. Phone C can monitor DUT status and DUT can not see
+                                        the status on Phone C.</p>
+                                </entry>
+                                <entry>
+                                    <p>PASS</p>
+                                </entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+            <p><b>Outbound call</b></p>
+            <p>The following test cases verify the inbound calling capability of the DUT.</p>
+            <p>
+                <table frame="all" id="table_opx_bd3_h3b">
+                    <tgroup cols="3">
+                        <colspec colname="c1" colnum="1" colwidth="2.35*" colsep="1" rowsep="1"/>
+                        <colspec colname="c2" colnum="2" colwidth="2.58*" colsep="1" rowsep="1"/>
+                        <colspec colname="c3" colnum="3" colwidth="1*" colsep="1" rowsep="1"/>
+                        <thead>
+                            <row>
+                                <entry>
+                                    <p>Test Case</p>
+                                </entry>
+                                <entry>
+                                    <p>Expected Result</p>
+                                </entry>
+                                <entry>
+                                    <p>Test Result</p>
+                                </entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry namest="c1" nameend="c3">
+                                    <p><b>Audio Call</b></p>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>
+                                    <p>Press the call button on the DUT to call Phone A. </p>
+                                </entry>
+                                <entry>
+                                    <p product="s-series">When the call is answered by Phone A, a
+                                        two-way audio call is established.</p>
+                                    <p product="cloudpbx">When the call is answered by Phone A, one
+                                        way audio call is established, indoor extension can hear the
+                                        audio from outdoor, and vice versa.</p>
+                                </entry>
+                                <entry>
+                                    <p>PASS</p>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>
+                                    <p>Call the DUT from Phone A and Phone A doesn't answer the
+                                        call.</p>
+                                </entry>
+                                <entry>
+                                    <p>Phone A continues ringing until timeout.</p>
+                                </entry>
+                                <entry>
+                                    <p>PASS</p>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>
+                                    <p>When an outbound call is established on the DUT and Phone A,
+                                        call the DUT from Phone B.</p>
+                                </entry>
+                                <entry>
+                                    <p>Phone B receives busy tone for leaving message.</p>
+                                </entry>
+                                <entry>
+                                    <p>PASS</p>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry namest="c1" nameend="c3">
+                                    <p><b>Video Call</b></p>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>
+                                    <p>Press the call button on the DUT to call Phone C.</p>
+                                </entry>
+                                <entry>
+                                    <p>When Phone C answered the call, Phone C can monitor the
+                                        outdoor status in real-time, but DUT fails to monitor the
+                                        status on Phone C side.</p>
+                                </entry>
+                                <entry>
+                                    <p>PASS</p>
+                                </entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+            <p><b>Serviceability</b></p>
+            <p>The following test cases verify the serviceability of the DUT.</p>
+            <p>
+                <table frame="all" id="table_lzs_md3_h3b">
+                    <tgroup cols="3">
+                        <colspec colname="c1" colnum="1" colwidth="2.88*" colsep="1" rowsep="1"/>
+                        <colspec colname="c2" colnum="2" colwidth="3.77*" colsep="1" rowsep="1"/>
+                        <colspec colname="c3" colnum="3" colwidth="1*" colsep="1" rowsep="1"/>
+                        <thead>
+                            <row>
+                                <entry>
+                                    <p>Test Case</p>
+                                </entry>
+                                <entry>
+                                    <p>Expected Result</p>
+                                </entry>
+                                <entry>
+                                    <p>Test Result</p>
+                                </entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>
+                                    <p>Disconnect, then reconnect the Ethernet cable from the
+                                        DUT.</p>
+                                </entry>
+                                <entry>
+                                    <p>DUT registers with the PBX server after the network is
+                                        restored.</p>
+                                </entry>
+                                <entry>
+                                    <p>PASS</p>
+                                </entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+    </body>
+</topic>

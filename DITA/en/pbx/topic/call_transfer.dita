@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_kgg_bhp_bdb">
+  <title>Call Transfer</title>
+  <shortdesc><ph keyref="product_name"/> supports Attended Transfer and Blind Transfer, users can
+    dial the feature code to transfer a call on their phones.</shortdesc>
+  <prolog>
+    <critdates>
+      <!--Carol-->
+      <revised modified="2018/06/14"/>
+    </critdates>
+  </prolog>
+  <body>
+    <section id="section_ks4_shp_bdb">
+      <title>Attended Transfer (Default feature code *3)</title>
+      <p>An attended transfer, also called consult transfer or warm transfer, is when you speak with
+        the new person before the call is transferred. You can tell the new person about the
+        caller's issue and give any background information before transferring the call (without the
+        caller hearing). </p>
+    </section>
+    <section id="section_z4s_thp_bdb">
+      <title>Blind Transfer (Default feature code *03)</title>
+      <p>A blind transfer is when you transfer the caller to another person without speaking to the
+        new person first.</p>
+    </section>
+  </body>
+</topic>

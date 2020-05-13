@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_unb_bsl_cfb">
+    <title>Block Incoming/Outgoing Numbers</title>
+    <shortdesc>You can log in the Extension User Portal to add blacklist to block incoming numbers
+        from calling your extension and restrict calling undesired outgoing numbers from your
+        extension.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/09/11"/>
+            <!--Carol-->
+            <revised modified="2018/09/11"/>
+            <!--Carol-->
+            <revised modified="2018/09/12"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <context>If your PBX administrator has added a global blacklist for all users, the global
+            blacklist will be displayed on your <uicontrol>Blacklist</uicontrol> page.<p><image
+                    href="../Images/user/global_blacklist.png" id="image_t54_xhm_cfb" width="650"
+                    product="cloudpbx s-series"/></p></context>
+        <steps>
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Me</uicontrol>
+                        <uicontrol>Blacklist/Whitelist</uicontrol>
+                        <uicontrol>Blacklist</uicontrol>
+                    </menucascade>, click <uicontrol>Add</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>On the <uicontrol>Add Blacklist</uicontrol> page, set the blocked
+                    numbers.</cmd>
+                <info><image href="../Images/user/add_blacklist.png" id="image_ezc_f3m_cfb"/></info>
+                <info>
+                    <ul id="ul_v4q_fnm_cfb">
+                        <li><uicontrol>Name</uicontrol>: Set the blacklist name.</li>
+                        <li><uicontrol>Number</uicontrol>: Enter the blocked numbers.<p>
+                                <note>Besides entering specific numbers, you can also use patterns
+                                    to block a range of numbers. For example, entering
+                                        <codeph>18.</codeph> will block the numbers that start with
+                                    digits 18.</note>
+                            </p></li>
+                        <li><uicontrol>Type</uicontrol>: Select the type of blocked numbers.<p>
+                                <ul>
+                                    <li><uicontrol>Inbound</uicontrol>: The blocked numbers could
+                                        not reach your extension.</li>
+                                    <li><uicontrol>Outbound</uicontrol>: You cannot call the blocked
+                                        numbers.</li>
+                                    <li><uicontrol>Both</uicontrol>: You cannot call the blocked
+                                        numbers and the blocked numbers could not reach your
+                                        extension.</li>
+                                </ul>
+                            </p></li>
+                    </ul>
+                </info>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

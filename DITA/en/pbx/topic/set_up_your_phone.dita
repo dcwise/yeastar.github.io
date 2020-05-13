@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_lgk_ngd_2cb">
+    <title>Set up Your Phone</title>
+    <shortdesc>To use VoIP extensions, you need to register the extensions on your IP phones or soft
+        phones.</shortdesc>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/06/14"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <context>
+            <p>Yeastar provides Linkus mobile client. Linkus helps you set up your phone efficiently
+                and links you and your colleagues and customers anywhere anytime.</p>
+            <p>We have tested a number of IP phones and soft phones with <ph keyref="product_name"
+                />. Below is an example of registering an extension on Yealink phones.</p>
+            <p><b>Register an Extension on Yealink Phone</b></p>
+        </context>
+        <steps id="steps_af3_rgd_2cb">
+            <step>
+                <cmd>Log in the Yealink phone web interface, click <uicontrol>Account</uicontrol>
+                    tab.</cmd>
+            </step>
+            <step>
+                <cmd>From the <uicontrol>Account</uicontrol> drop-down list, select an available
+                    account.</cmd>
+            </step>
+            <step>
+                <cmd>Set <uicontrol>Line Active</uicontrol> to <uicontrol>Enabled</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Enter the extension information.</cmd>
+                <itemgroup>
+                    <ul id="ul_vwd_dhd_2cb">
+                        <li><uicontrol>Label</uicontrol>:  The name you want to display on the phone
+                            screen.</li>
+                        <li><uicontrol>Display Name</uicontrol>: The name you want to display on
+                            another person's phone screen when you are calling the phone.</li>
+                        <li><uicontrol>Register Name</uicontrol>:  Enter the extension's
+                            Registration Name.</li>
+                        <li><uicontrol>User Name</uicontrol>: Enter the extension number.</li>
+                        <li><uicontrol>Password</uicontrol>: Enter the extension's Registration
+                            Password.</li>
+                        <li><uicontrol>SIP Server Host</uicontrol>: Enter the PBX's domain<ph
+                                product="s-series"> or IP address</ph>.</li>
+                        <li><uicontrol>Port</uicontrol>: Enter the PBX's SIP port.</li>
+                    </ul>
+                </itemgroup>
+                <itemgroup><image href="../Images/admin/register_extension.png" width="650"
+                        id="image_hrx_hyk_2cb"/></itemgroup>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Confirm</uicontrol>.</cmd>
+            </step>
+        </steps>
+        <result id="result_jmc_xhd_2cb">If the extension is registered, you can see the Register
+            Status shows "Registered" on the <uicontrol>Account</uicontrol> page.</result>
+    </taskbody>
+</task>

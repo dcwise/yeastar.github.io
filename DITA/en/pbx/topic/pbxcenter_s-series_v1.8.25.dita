@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_n5w_wwq_pdb">
+    <title>Version 1.8.25</title>
+    <abstract>Released Date: April 25, 2018</abstract>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/06/20"/>
+        </critdates>
+    </prolog>
+    <body>
+        <section id="section_l34_l1b_pdb">
+            <title>New Feature</title>
+            <p><image href="../Images/horizon.png" id="image_rcm_n1x_pdb"/></p>
+            <p><b>API Interface</b><div>
+                    <ul id="ul_wpb_pdb_pdb">
+                        <li>Added API interface to query queue status and agent status.</li>
+                        <li>Added API interface to pause or resume an agent's service.</li>
+                        <li>The CDR reports will show DID number and the agent's ring time.</li>
+                        <li>Added support for configuring an extension's outbound route.</li>
+                        <li>Added support for quering an extension's outbounr route.</li>
+                    </ul>
+                </div></p>
+        </section>
+        <section id="section_jgr_m1b_pdb">
+            <title>Fixed Bug</title>
+            <p><image href="../Images/horizon.png" id="image_f1k_r1x_pdb"/></p>
+            <p>
+                <ul>
+                    <li>Fixed the SIP trunk issue: <p>
+                            <ul id="ul_ixb_qwq_pdb">
+                                <li>The PBX might terminate a call that was made through a SIP
+                                    trunk.</li>
+                                <li>If T.38 was enabled on the SIP trunk, Call Parking and Call Hold
+                                    would not work for inbound calls through this SIP trunk.</li>
+                            </ul>
+                        </p></li>
+                </ul>
+            </p>
+        </section>
+    </body>
+</topic>

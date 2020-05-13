@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_gfj_bgc_fhb">
+    <title>Algo 8180G2 Test Report</title>
+    <shortdesc>This article is the Interoperability Test Report for <ph keyref="product_name"/> and
+        Algo 8180G2 SIP Audio Alerter.</shortdesc>
+    <body>
+        <section id="section_ohx_rxh_fhb">
+            <title>Tested equipment &amp; software</title>
+            <p>
+                <table frame="all" rowsep="1" colsep="1" id="table_sfc_txh_fhb">
+                    <tgroup cols="2">
+                        <colspec colname="c1" colnum="1" colwidth="1*"/>
+                        <colspec colname="c2" colnum="2" colwidth="1.6*"/>
+                        <thead>
+                            <row>
+                                <entry>Equipment</entry>
+                                <entry>Firmware/Software Version</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>Algo 8180G2 Audio Alerter</entry>
+                                <entry>1.7.2</entry>
+                            </row>
+                            <row>
+                                <entry>Yeastar S300</entry>
+                                <entry>30.10.0.59</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+        <section id="section_qdm_hhq_fhb">
+            <title>Summary of test focus</title>
+            <p>The following table shows a summary of the validated capabilities.</p>
+            <p>
+                <table frame="all" rowsep="1" colsep="1" id="table_x2m_nhq_fhb">
+                    <tgroup cols="2">
+                        <colspec colname="c1" colnum="1" colwidth="1.78*"/>
+                        <colspec colname="c2" colnum="2" colwidth="1*"/>
+                        <thead>
+                            <row>
+                                <entry>Feature</entry>
+                                <entry>Test Result</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry namest="c1" nameend="c2"><b>DUT Services</b></entry>
+                            </row>
+                            <row>
+                                <entry>SIP Registration</entry>
+                                <entry>PASS</entry>
+                            </row>
+                            <row>
+                                <entry>Inbound Call: Ring Extension</entry>
+                                <entry>PASS</entry>
+                            </row>
+                            <row>
+                                <entry>Inbound Call: Page Extension</entry>
+                                <entry>PASS</entry>
+                            </row>
+                            <row>
+                                <entry>Inbound Call: Emergency Alert</entry>
+                                <entry>PASS</entry>
+                            </row>
+                            <row>
+                                <entry>Inbound Call: Multicast</entry>
+                                <entry>PASS</entry>
+                            </row>
+                            <row>
+                                <entry>Serviceability</entry>
+                                <entry>PASS</entry>
+                            </row>
+                            <row>
+                                <entry namest="c1" nameend="c2"><b>PBX Services</b></entry>
+                            </row>
+                            <row>
+                                <entry>Paging/Intercom Group</entry>
+                                <entry>PASS</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+        <section id="section_nst_g3c_fhb">
+            <title>Definitions</title>
+            <p>Word definitions in the following test plan table.</p>
+            <p>
+                <ul id="ul_dvw_g3q_fhb">
+                    <li><b>DUT</b>: Device Under Test, which in this case is the Algo 8180G2 Audio
+                        Alerter.</li>
+                    <li><b>Ring Extension</b>:  This is the extension that will be called from Phone
+                        A or Phone B in order to trigger a “Ring” sound from the DUT. The DUT will
+                        expect to play ring tones, but will not answer the call. </li>
+                    <li><b>Page Extension</b>: This is the extension that will be called from Phone
+                        A or Phone B in order to send  paging audio to the DUT. The DUT will answer
+                        the call automatically.</li>
+                    <li><uicontrol>Announcement Extension</uicontrol>: This is the extension that
+                        will be called from Phone A or Phone B in order to play selected
+                        announcement in the DUT. The DUT will answers the call automatically.</li>
+                    <li><uicontrol>Call to Cancel Extension</uicontrol>: When the DUT is playing the
+                        emergency announcement, dial this extension from Phone A or Phone B to
+                        cancel the announcement.</li>
+                    <li><uicontrol>Phone A</uicontrol>:  A SIP compatible endpoint used to call the
+                        DUT.</li>
+                    <li><b>Phone B</b>: A SIP compatible endpoint used to call the DUT and Phone
+                        A.</li>
+                    <li><b>Phone C</b>: A SIP compatible endpoint used to register a Ring/Alert
+                        Extension.</li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_vgb_4jq_fhb">
+            <title>Test plan</title>
+            <p><b>SIP Registration</b></p>
+            <p>The following test cases verify features related to the registration process with
+                Yeastar S300.</p>
+            <p>
+                <table frame="all" rowsep="1" colsep="1" id="table_qbj_zjq_fhb">
+                    <tgroup cols="3">
+                        <colspec colname="c1" colnum="1" colwidth="3.06*"/>
+                        <colspec colname="c2" colnum="2" colwidth="4.12*"/>
+                        <colspec colname="c3" colnum="3" colwidth="1*"/>
+                        <thead>
+                            <row>
+                                <entry>Test Case</entry>
+                                <entry>Expected Result</entry>
+                                <entry>Test Result</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>Attempt registering DUT Extension using incorrect password. </entry>
+                                <entry>Registration failure status is correctly displayed in web
+                                    interface </entry>
+                                <entry>PASS</entry>
+                            </row>
+                            <row>
+                                <entry>Attempt registering DUT Extension using incorrect
+                                    username.</entry>
+                                <entry>Registration failure status is correctly displayed in web
+                                    interface.</entry>
+                                <entry>PASS</entry>
+                            </row>
+                            <row>
+                                <entry>Correctly register DUT Extension.</entry>
+                                <entry>DUT registers properly and status is correctly displayed in
+                                    web interface</entry>
+                                <entry>PASS</entry>
+                            </row>
+                            <row>
+                                <entry>Register DUT multiple extensions.</entry>
+                                <entry>DUT registers properly and status is correctly displayed in
+                                    web interface.</entry>
+                                <entry>PASS</entry>
+                            </row>
+                            <row>
+                                <entry>Register DUT Extension using UDP protocol.</entry>
+                                <entry>DUT registers properly and status is correctly displayed in
+                                    web interface</entry>
+                                <entry>PASS</entry>
+                            </row>
+                            <row>
+                                <entry>Register DUT Extension using TCP protocol.</entry>
+                                <entry>DUT registers properly and status is correctly displayed in
+                                    web interface</entry>
+                                <entry>PASS</entry>
+                            </row>
+                            <row>
+                                <entry>Register DUT Extension using TLS protocol.</entry>
+                                <entry>DUT registers properly and status is correctly displayed in
+                                    web interface</entry>
+                                <entry>PASS</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+        <p><b>Inbound Call - Ring Extension</b></p>
+        <p>The following test cases verify the Ring Extension with different Ring/Alert modes of the
+            DUT.</p>
+        <p>
+            <table frame="all" rowsep="1" colsep="1" id="table_hqh_jkq_fhb">
+                <tgroup cols="3">
+                    <colspec colname="c1" colnum="1" colwidth="2.51*"/>
+                    <colspec colname="c2" colnum="2" colwidth="3.9*"/>
+                    <colspec colname="c3" colnum="3" colwidth="1*"/>
+                    <thead>
+                        <row>
+                            <entry>Test Case</entry>
+                            <entry>Expected Result</entry>
+                            <entry>Test Result</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row>
+                            <entry namest="c1" nameend="c3">
+                                <p><b>Ring/Alert Mode</b>: <b>Monitor "Ring" event on registered SIP
+                                        extension</b></p>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>Dial Ring Extension from Phone A.</entry>
+                            <entry>
+                                <ul id="ul_rjd_44r_fhb">
+                                    <li>DUT answers the call automatically and plays the selected
+                                        ring sound.</li>
+                                    <li>DUT continues to ring until the call is canceled by Phone
+                                        A.</li>
+                                </ul>
+                            </entry>
+                            <entry>PASS</entry>
+                        </row>
+                        <row>
+                            <entry namest="c1" nameend="c3"><b>Ring/Alert Mode</b>: <b>Use
+                                    ”Subscribe/Notify” dialog event (RFC4235)</b><p>
+                                    <note> Ensure Phone C is registered with the Page
+                                        Extension.</note>
+                                </p></entry>
+                        </row>
+                        <row>
+                            <entry>Select <b>Alert Event</b> to <b>Ring</b>, and call Phone C (Ring
+                                Extension registered) from Phone A. </entry>
+                            <entry>
+                                <ul id="ul_rbz_5pr_fhb">
+                                    <li>When Phone C is ringing, DUT plays ring sound. </li>
+                                    <li>When Phone C answers the call, DUT stops playing ring
+                                        sound.</li>
+                                </ul>
+                            </entry>
+                            <entry>PASS</entry>
+                        </row>
+                        <row>
+                            <entry>Select <b>Alert Event</b> to <b>In-Use</b>, and call Phone C
+                                (Ring Extension registered) from Phone A. </entry>
+                            <entry>
+                                <ul id="ul_ffr_5pr_fhb">
+                                    <li>When Phone C is ringing, DUT doesn't play ring sound.</li>
+                                    <li>When Phone C answers the call, DUT starts playing ring
+                                        sound.</li>
+                                    <li>When Phone C ends the call, DUT stops playing ring
+                                        sound.</li>
+                                </ul>
+                            </entry>
+                            <entry>PASS</entry>
+                        </row>
+                        <row>
+                            <entry>Select <b>Alert Event</b> to <b>Ring&amp;In-Use</b>, and call
+                                Phone C (Ring Extension registered) from Phone A. </entry>
+                            <entry>
+                                <ul id="ul_n1b_spr_fhb">
+                                    <li>When Phone C is ringing, DUT plays ring sound.</li>
+                                    <li>When Phone C answers the call, DUT replays the ring
+                                        sound.</li>
+                                    <li>When Phone C ends the call, DUT stops playing ring
+                                        sound.</li>
+                                </ul>
+                            </entry>
+                            <entry>PASS</entry>
+                        </row>
+                        <row>
+                            <entry namest="c1" nameend="c2"><b>Ring/Alert Mode</b>: <b>Use
+                                    "Subscribe/Notify" presence event (RFC 3856/3863
+                                PIDF)</b></entry>
+                            <entry>Not Supported</entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+        </p>
+        <p><b>Inbound Call - Page Extension</b></p>
+        <p>The following test cases verify the inbound paging feature of the DUT. </p>
+        <p>
+            <table frame="all" rowsep="1" colsep="1" id="table_w2c_lqr_fhb">
+                <tgroup cols="3">
+                    <colspec colname="c1" colnum="1" colwidth="1.85*"/>
+                    <colspec colname="c2" colnum="2" colwidth="2.7*"/>
+                    <colspec colname="c3" colnum="3" colwidth="1*"/>
+                    <thead>
+                        <row>
+                            <entry>Test Case</entry>
+                            <entry>Expected Result</entry>
+                            <entry>Test Result</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row>
+                            <entry>Dial Page Extension from Phone A.</entry>
+                            <entry>
+                                <ul id="ul_u22_jbv_fhb">
+                                    <li>DUT answers and a one-way audio page is established from
+                                        Phone A to UUT. </li>
+                                    <li>The call is terminated by hanging up Phone A.</li>
+                                </ul>
+                            </entry>
+                            <entry>PASS</entry>
+                        </row>
+                        <row>
+                            <entry>Dial Page Extension from Phone A and mute/unmute the
+                                call.</entry>
+                            <entry>
+                                <ul id="ul_apz_jbv_fhb">
+                                    <li>Mute: The DUT doesn't plays the audio from Phone A.</li>
+                                    <li>Unmute:  The DUT plays the audio from Phone A.</li>
+                                </ul>
+                            </entry>
+                            <entry>PASS</entry>
+                        </row>
+                        <row>
+                            <entry>When the Page Extension. is already in a call with Phone A, dial
+                                the Page Extension from Phone B.</entry>
+                            <entry>
+                                <ul id="ul_nd1_ybv_fhb">
+                                    <li>Phone B receives busy tone (DUT configured to allow only one
+                                        simultaneous Page call).</li>
+                                </ul>
+                            </entry>
+                            <entry>PASS</entry>
+                        </row>
+                        <row>
+                            <entry>Dial Page Extension from Phone A and maintain the call for a
+                                period of time.</entry>
+                            <entry>
+                                <ul id="ul_lp2_ccv_fhb">
+                                    <li>The call remains up after the Session Refresh (REINVITE) is
+                                        sent to the DUT.</li>
+                                </ul>
+                            </entry>
+                            <entry>PASS</entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+        </p>
+        <p><b>Inbound Call - Emergency Alert</b></p>
+        <p>The following test cases verify the inbound Emergency Alert feature of the DUT. </p>
+        <p>
+            <table frame="all" rowsep="1" colsep="1" id="table_akh_trr_fhb">
+                <tgroup cols="3">
+                    <colspec colname="c1" colnum="1" colwidth="1.64*"/>
+                    <colspec colname="c2" colnum="2" colwidth="2.47*"/>
+                    <colspec colname="c3" colnum="3" colwidth="1*"/>
+                    <thead>
+                        <row>
+                            <entry>Test Case</entry>
+                            <entry>Expected Result</entry>
+                            <entry>Test Result</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row>
+                            <entry>Dial <uicontrol>Announcement </uicontrol> Extension from Phone
+                                A.</entry>
+                            <entry>
+                                <ul id="ul_fbq_dsr_fhb">
+                                    <li>DUT answers the call automatically and plays the selected
+                                        announcement.</li>
+                                    <li>DUT keeps playing the selected announcement even the call is
+                                        canceled by Phone A.</li>
+                                </ul>
+                            </entry>
+                            <entry>PASS</entry>
+                        </row>
+                        <row>
+                            <entry>When DUT is playing an announcement, dial <uicontrol>Call to
+                                    Cancel</uicontrol> Extension from Phone A.</entry>
+                            <entry>
+                                <ul id="ul_aqy_4sr_fhb">
+                                    <li>DUT stops playing the selected announcement.</li>
+                                </ul>
+                            </entry>
+                            <entry>PASS</entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+        </p>
+        <p><b>Inbound Call: Multicast</b></p>
+        <p>The following test cases verify the Multicast Master/Sender feature on the DUT. The DUT
+            acts as a multicast master.</p>
+        <p>
+            <table frame="all" rowsep="1" colsep="1" id="table_xqr_rbw_fhb">
+                <tgroup cols="3">
+                    <colspec colname="c1" colnum="1" colwidth="2.08*"/>
+                    <colspec colname="c2" colnum="2" colwidth="3.16*"/>
+                    <colspec colname="c3" colnum="3" colwidth="1*"/>
+                    <thead>
+                        <row>
+                            <entry>Test Case</entry>
+                            <entry>Expected Result</entry>
+                            <entry>Test Result</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row>
+                            <entry namest="c1" nameend="c3">
+                                <p><b>Prerequisite</b>: </p>
+                                <p>
+                                    <ul id="ul_pq2_wbw_fhb">
+                                        <li>On the DUT, set the Multicast mode to Master/Sender and
+                                            configure the multicast IP address and port.</li>
+                                        <li>On the DUT, register a Zone 1 Page Extension.</li>
+                                        <li>On the other phones, configure the same multicast IP
+                                            address and port as the DUT to receive multicast.</li>
+                                    </ul>
+                                </p>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>Dial the Zone 1 Page Extension from Phone A.</entry>
+                            <entry>
+                                <ul id="ul_kwr_bcw_fhb">
+                                    <li>DUT plays the selected Page Tone and plays the audio from
+                                        Phone A.</li>
+                                    <li>The other phones plays the DUT selected Page Tone and plays
+                                        the audio from Phone A.</li>
+                                </ul>
+                            </entry>
+                            <entry>PASS</entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+        </p>
+        <p><b>PBX Feature: Paging/Intercom Group</b></p>
+        <p>The following test cases verify the Paging/Intercom Group of Yeastar S300. The DUT acts
+            as a multicast slaver.</p>
+        <p>
+            <table frame="all" rowsep="1" colsep="1" id="algo-test-plan-intercom-paging-group">
+                <tgroup cols="3">
+                    <colspec colname="c1" colnum="1" colwidth="2.64*"/>
+                    <colspec colname="c2" colnum="2" colwidth="4.29*"/>
+                    <colspec colname="c3" colnum="3" colwidth="1*"/>
+                    <thead>
+                        <row>
+                            <entry>Test Case</entry>
+                            <entry>Expected Result</entry>
+                            <entry>Test Result</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row>
+                            <entry namest="c1" nameend="c3"><b>Verify PBX feature: 1-Way Multicast
+                                    Paging.</b><p><b>Prerequisite</b>: </p><p>
+                                    <ul id="ul_uxd_tcw_fhb">
+                                        <li>On Yeastar S300, add a 1-Way Multicast Paging
+                                            group.</li>
+                                        <li>On the DUT, set the Multicast mode to Slave/Receiver and
+                                            configure the same multicast IP address and port as the
+                                            Yeastar S300.</li>
+                                    </ul>
+                                </p></entry>
+                        </row>
+                        <row>
+                            <entry>Dial the 1-Way Multicast Paging number from Phone A.</entry>
+                            <entry>DUT answers the call automatically, and the 1-way paging is
+                                established.</entry>
+                            <entry>PASS</entry>
+                        </row>
+                        <row>
+                            <entry>Cancel the call by hanging up Phone A.</entry>
+                            <entry>DUT ends the call and stops playing the paging audio.</entry>
+                            <entry>PASS</entry>
+                        </row>
+                        <row>
+                            <entry namest="c1" nameend="c3"><b>Verify PBX feature: 1-Way
+                                        Paging.</b><p><b>Prerequisite</b>: </p><p>
+                                    <ul id="ul_qnx_3hw_fhb">
+                                        <li>On Yeastar S300, add a 1-Way Paging group.</li>
+                                        <li>On the DUT, register a Page Extension.<p>The page
+                                                extension is a member of the 1-Way  paging
+                                                group.</p></li>
+                                    </ul>
+                                </p></entry>
+                        </row>
+                        <row>
+                            <entry>Dial the 1-Way Paging number from Phone A.</entry>
+                            <entry>DUT answers the call automatically, and the 1-way paging is
+                                established.</entry>
+                            <entry>PASS</entry>
+                        </row>
+                        <row>
+                            <entry>Cancel the call by hanging up Phone A.</entry>
+                            <entry>DUT ends the call and stops playing the paging audio.</entry>
+                            <entry>PASS</entry>
+                        </row>
+                        <row>
+                            <entry namest="c1" nameend="c3"><b>Verify PBX feature: 2-Way
+                                    Intercom.</b><p><b>Prerequisite</b>: </p><p>
+                                    <ul id="ul_ap1_qhw_fhb">
+                                        <li>On Yeastar S300, add a 2-Way Intercom group.</li>
+                                        <li>On the DUT, register a Page Extension.<p>The page
+                                                extension is a member of the 2-Way Intercom
+                                                group.</p></li>
+                                    </ul>
+                                </p></entry>
+                        </row>
+                        <row>
+                            <entry>Dial the 2-Way Intercom number from Phone A.</entry>
+                            <entry>DUT answers the call automatically, and the 2-way intercom is
+                                established.</entry>
+                            <entry>PASS</entry>
+                        </row>
+                        <row>
+                            <entry>Cancel the call by hanging up Phone A.</entry>
+                            <entry>DUT ends the call and stops playing the audio.</entry>
+                            <entry>PASS</entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+        </p>
+        <p><b>Serviceability</b></p>
+        <p>The following test cases verify the serviceability of the DUT.</p>
+        <p>
+            <table frame="all" rowsep="1" colsep="1" id="table_hzg_drr_fhb">
+                <tgroup cols="3">
+                    <colspec colname="c1" colnum="1" colwidth="2.04*"/>
+                    <colspec colname="c2" colnum="2" colwidth="2.74*"/>
+                    <colspec colname="c3" colnum="3" colwidth="1*"/>
+                    <thead>
+                        <row>
+                            <entry>Test Case</entry>
+                            <entry>Expected Result</entry>
+                            <entry>Test Result</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row>
+                            <entry>Disconnect, then reconnect, the ethernet cable from the
+                                DUT.</entry>
+                            <entry>DUT registers with the PBX server after the network is restored. </entry>
+                            <entry>PASS</entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+        </p>
+    </body>
+</topic>

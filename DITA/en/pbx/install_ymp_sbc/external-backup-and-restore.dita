@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_owr_4lt_jhb">
+    <title>External Backup &amp; Restore</title>
+    <shortdesc>Prepare a second YMP server on standby, then make a schedule and copy the backup
+        files manually to an external place. When the primary YMP server breaks down, you can
+        restore backup data to the secondary YMP server.</shortdesc>
+    <body>
+        <section id="section_cjq_n45_jhb">
+            <title>Scenarios</title>
+            <p>If a natural disaster occurs in the region where the YMP server and SBC server are
+                set up, you can restore data to a preprepared secondary server in a safe region.</p>
+        </section>
+        <section id="section_exr_145_jhb">
+            <title>External Backup planning</title>
+            <p><b>Prerequisite</b><b>: </b></p>
+            <p><xref href="local-backup-and-restore.dita"
+                    >Scheduling local backup</xref> on the YMP web interface is a required step
+                before you start to export backup files to another place.</p>
+            <p>
+                <ol id="ol_qqt_3p5_jhb">
+                    <li>Prepare a secondary YMP server and a secondary SBC server in a different region.<p>
+                            <note>The YMP server should meets the <xref
+                                    href="system_requirements_for_ymp.dita#topic_dvm_b3j_3cb">YMP
+                                    system requirements</xref>; The SBC server should meets the
+                                    <xref href="system_requirements_for_sbc.dita#topic_dyg_3qj_3cb"
+                                    >SBC system requirements</xref>.</note>
+                        </p></li>
+                    <li>Contact Yeastar to examine the two servers and install an inactivated YMP to
+                        the YMP server.</li>
+                    <li>Make a plan, and export the backup files from YMP server regularly.<p>
+                            <ol>
+                                <li>Log in YMP server via SSH.</li>
+                                <li>Check the backup files.<p>
+                                        <codeblock>sudo cd /cloudpbx/backup/system/</codeblock>
+                                    </p></li>
+                                <li>Compress the target backup file. <p>
+                                        <note>Replace <varname>{backup_name}</varname> with your
+                                            target backup file name.</note>
+                                    </p><p>
+                                        <codeblock outputclass="language-c">sudo /ysdata/server/yscore/script/coldback.sh /home/coldback.tar.gz /cloudpbx/backup/system/<varname>｛backup_name｝</varname></codeblock>
+                                    </p></li>
+                                <li>Export the compressed file.<p>
+                                        <codeblock>sudo sz /home/coldback.tar.gz</codeblock>
+                                    </p></li>
+                                <li>Choose a path to save the file.</li>
+                            </ol>
+                        </p></li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_d5h_nq5_jhb">
+            <title>Restore a backup to a secondary server</title>
+            <p>When the primary YMP server breaks down, perform the following operations:</p>
+            <p>
+                <ol id="ol_zpy_fr5_jhb">
+                    <li>Place the backup file to the secondary YMP server.</li>
+                    <li>Contact Yeastar and provide the following information, Yeastar support will
+                        restore the backup.<p>
+                            <ul>
+                                <li>SSH user name and password of the secondary YMP server<p>
+                                        <note>The user should have <codeph>sudo</codeph>
+                                            permission.</note>
+                                    </p></li>
+                                <li>Web name and password of the primary YMP server</li>
+                            </ul>
+                        </p></li>
+                </ol>
+            </p>
+        </section>
+    </body>
+</topic>

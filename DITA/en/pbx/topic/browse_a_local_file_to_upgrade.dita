@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_vyl_3sq_ldb">
+    <title>Browse a Local File to Upgrade</title>
+    <shortdesc>Upload the PBX firmware file from your local PC, then upgrade the PBX
+        firmware.</shortdesc>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/09/25"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <prereq id="prereq_x2x_dtq_ldb">
+            <p>Download the latest firmware file from <xref
+                    href="https://www.yeastar.com/firmware-download/" format="html" scope="external"
+                    >Yeastar Firmware Download center</xref>.</p>
+        </prereq>
+        <context id="context_gzs_z5q_ldb">This upgrade method is suitable when the PBX cannot access
+            the Internet.</context>
+        <steps>
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Maintenance</uicontrol>
+                        <uicontrol>Upgrade</uicontrol>
+                        <uicontrol>Manual Upgrade</uicontrol>
+                    </menucascade>.</cmd>
+                <info><image href="../Images/admin/upgrade_browse.png" id="image_st4_kzq_ldb"
+                    /></info>
+            </step>
+            <step>
+                <cmd importance="optional">If you want to reset the configuration to factory
+                    defaults, check the option <uicontrol>Reset Configuration to Factory
+                        Default</uicontrol>.</cmd>
+                <info>
+                    <note type="important">If you check this option, all your PBX configurations
+                        will be erased. We don't suggest you reset the PBX before upgrade
+                        firmware.</note>
+                </info>
+            </step>
+            <step>
+                <cmd>Set <uicontrol>Type</uicontrol> to <uicontrol>Browing File</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Browse</uicontrol> to choose your local firmware file.</cmd>
+                <info>
+                    <note>The firmware file format should be <codeph>.bin</codeph> , and the file
+                        name should not have special characters.</note>
+                </info>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Upload</uicontrol>.</cmd>
+                <stepresult>The PBX will start uploading the file and upgrading the firmware
+                    automatically.<p><note id="upgrade_note">When the PBX is updating the firmware, do NOT turn off the power. Or the
+                            system will get damaged.</note></p></stepresult>
+            </step>
+        </steps>
+    </taskbody>
+</task>

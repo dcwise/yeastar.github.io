@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="reference_wj5_x3s_lcb">
+  <title><b>Supported CA Certificates</b></title>
+  <refbody>
+    <properties id="properties_azg_1js_lcb">
+      <property>
+        <propvalue>DigiCert High Assurance EV Root CA</propvalue>
+      </property>
+      <property>
+        <propvalue>Deutsche Telekom AG Root CA-2</propvalue>
+      </property>
+      <property>
+        <propvalue>Equifax Secure Certificate Authority</propvalue>
+      </property>
+      <property>
+        <propvalue>Equifax Secure eBusiness CA-1</propvalue>
+      </property>
+      <property>
+        <propvalue>Equifax Secure Global eBusiness CA-1</propvalue>
+      </property>
+      <property>
+        <propvalue>GeoTrust Global CA</propvalue>
+      </property>
+      <property>
+        <propvalue>GeoTrust Global CA2</propvalue>
+      </property>
+      <property>
+        <propvalue>GeoTrust Primary CA</propvalue>
+      </property>
+      <property>
+        <propvalue>GeoTrust Primary CA G2 ECC</propvalue>
+      </property>
+      <property>
+        <propvalue>GeoTrust Universal CA</propvalue>
+      </property>
+      <property>
+        <propvalue>GeoTrust Universal CA2</propvalue>
+      </property>
+      <property>
+        <propvalue>Thawte Personal Freemail CA</propvalue>
+      </property>
+      <property>
+        <propvalue>Thawte Premium Server CA</propvalue>
+      </property>
+      <property>
+        <propvalue>Thawte Primary Root CA - G1 (EV)</propvalue>
+      </property>
+      <property>
+        <propvalue>Thawte Primary Root CA - G2 (ECC)</propvalue>
+      </property>
+      <property>
+        <propvalue>Thawte Primary Root CA - G3 (SHA256)</propvalue>
+      </property>
+      <property>
+        <propvalue>Thawte Server CA</propvalue>
+      </property>
+      <property>
+        <propvalue>VeriSign Class 1 Public Primary Certification Authority</propvalue>
+      </property>
+      <property>
+        <propvalue>VeriSign Class 1 Public Primary Certification Authority - G2</propvalue>
+      </property>
+      <property>
+        <propvalue>VeriSign Class 1 Public Primary Certification Authority - G3</propvalue>
+      </property>
+      <property>
+        <propvalue>VeriSign Class 2 Public Primary Certification Authority - G2</propvalue>
+      </property>
+      <property>
+        <propvalue>VeriSign Class 2 Public Primary Certification Authority - G3</propvalue>
+      </property>
+      <property>
+        <propvalue>VeriSign Class 3 Public Primary Certification Authority</propvalue>
+      </property>
+      <property>
+        <propvalue>VeriSign Class 3 Public Primary Certification Authority - G2</propvalue>
+      </property>
+      <property>
+        <propvalue>VeriSign Class 3 Public Primary Certification Authority - G3</propvalue>
+      </property>
+      <property>
+        <propvalue>VeriSign Class 3 Public Primary Certification Authority - G4</propvalue>
+      </property>
+      <property>
+        <propvalue>VeriSign Class 3 Public Primary Certification Authority - G5</propvalue>
+      </property>
+      <property>
+        <propvalue>VeriSign Class 4 Public Primary Certification Authority - G2</propvalue>
+      </property>
+      <property>
+        <propvalue>VeriSign Class 4 Public Primary Certification Authority - G3</propvalue>
+      </property>
+      <property>
+        <propvalue>VeriSign Universal Root Certification Authority</propvalue>
+      </property>
+      <property>
+        <propvalue>ISRG Root X1 (intermediate certificates: Let’s Encrypt Authority X1 and Let’s
+          Encrypt Authority X2 are signed by the root certificate ISRG Root X1.)</propvalue>
+      </property>
+      <property>
+        <propvalue>Baltimore CyberTrust Root</propvalue>
+      </property>
+      <property>
+        <propvalue>DST Root CA X3</propvalue>
+      </property>
+      <property>
+        <propvalue>Verizon Public SureServer CA G14-SHA2</propvalue>
+      </property>
+      <property>
+        <propvalue>AddTrust External CA Root</propvalue>
+      </property>
+      <property>
+        <propvalue>Go Daddy Class 2 Certification Authority</propvalue>
+      </property>
+      <property>
+        <propvalue>Class 2 Primary CA</propvalue>
+      </property>
+      <property>
+        <propvalue>Cybertrust Public SureServer SV CA</propvalue>
+      </property>
+      <property>
+        <propvalue>DigiCert Assured ID Root G2</propvalue>
+      </property>
+      <property>
+        <propvalue>DigiCert Assured ID Root G3</propvalue>
+      </property>
+      <property>
+        <propvalue>DigiCert Assured ID Root CA</propvalue>
+      </property>
+      <property>
+        <propvalue>DigiCert Global Root G2</propvalue>
+      </property>
+      <property>
+        <propvalue>DigiCert Global Root G3</propvalue>
+      </property>
+      <property>
+        <propvalue>DigiCert Global Root CA</propvalue>
+      </property>
+      <property>
+        <propvalue>DigiCert Trusted Root G4</propvalue>
+      </property>
+      <property>
+        <propvalue>Entrust Root Certification Authority</propvalue>
+      </property>
+      <property>
+        <propvalue>Entrust Root Certification Authority - G2</propvalue>
+      </property>
+      <property>
+        <propvalue>Entrust.net Certification Authority (2048)</propvalue>
+      </property>
+      <property>
+        <propvalue>GeoTrust Primary Certification Authority - G3</propvalue>
+      </property>
+      <property>
+        <propvalue>GlobalSign Root CA</propvalue>
+      </property>
+      <property>
+        <propvalue>GlobalSign</propvalue>
+      </property>
+      <property>
+        <propvalue>Starfield Root Certificate Authority - G2</propvalue>
+      </property>
+      <property>
+        <propvalue>TC TrustCenter Class 2 CA II</propvalue>
+      </property>
+      <property>
+        <propvalue>TC TrustCenter Class 3 CA II</propvalue>
+      </property>
+      <property>
+        <propvalue>TC TrustCenter Class 4 CA II</propvalue>
+      </property>
+      <property>
+        <propvalue>TC TrustCenter Universal CA I</propvalue>
+      </property>
+      <property>
+        <propvalue>TC TrustCenter Universal CA III</propvalue>
+      </property>
+      <property>
+        <propvalue>Thawte Universal CA Root</propvalue>
+      </property>
+      <property>
+        <propvalue>VeriSign Class 3 Secure Server CA - G2</propvalue>
+      </property>
+      <property>
+        <propvalue>VeriSign Class 3 Secure Server CA – G3</propvalue>
+      </property>
+      <property>
+        <propvalue>Thawte SSL CA</propvalue>
+      </property>
+      <property>
+        <propvalue>StartCom Certification Authority</propvalue>
+      </property>
+      <property>
+        <propvalue>StartCom Certification Authority G2</propvalue>
+      </property>
+      <property>
+        <propvalue>Starfield Services Root Certificate Authority - G2</propvalue>
+      </property>
+      <property>
+        <propvalue>RapidSSL_CA_bundle</propvalue>
+      </property>
+      <property>
+        <propvalue>Go Daddy Root Certificate Authority - G2</propvalue>
+      </property>
+      <property>
+        <propvalue>Cybertrust Global Root</propvalue>
+      </property>
+      <property>
+        <propvalue>COMODOSSLCA</propvalue>
+      </property>
+      <property>
+        <propvalue>COMODO RSA Domain Validation Secure Server CA</propvalue>
+      </property>
+      <property>
+        <propvalue>COMODO RSA Certification Authority</propvalue>
+      </property>
+      <property>
+        <propvalue>AmazonRootCA4</propvalue>
+      </property>
+      <property>
+        <propvalue>AmazonRootCA3</propvalue>
+      </property>
+      <property>
+        <propvalue>AmazonRootCA2</propvalue>
+      </property>
+      <property>
+        <propvalue>AmazonRootCA1</propvalue>
+      </property>
+    </properties>
+  </refbody>
+</reference>

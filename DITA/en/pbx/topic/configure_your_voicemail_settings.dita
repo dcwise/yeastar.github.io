@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_hw2_fqj_bfb">
+    <title>Configure Your Voicemail Settings</title>
+    <shortdesc>Log in the Extension User Portal to enable or disable voicemail, enable or disable
+        "voicemail to email", check or change your voicemail password, change your voicemail
+        prompt.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/09/07"/>
+            <!--Carol-->
+            <revised modified="2018/09/07"/>
+            <!--Carol-->
+            <revised modified="2018/09/12"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <context/>
+        <steps>
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Me</uicontrol>
+                        <uicontrol>Extension Settings</uicontrol>
+                        <uicontrol>Voicemail</uicontrol>
+                    </menucascade> to configure the voicemail settings.</cmd>
+                <info><image href="../Images/user/voicemail_settings_user.png" width="650"
+                        id="image_ncg_jrj_bfb" product="cloudpbx s-series"/></info>
+                <info><image href="../Images/user/voicemail_settings_user_oem.png" width="650"
+                        product="OEM" id="image_xgj_gd5_cfb"/></info>
+                <choices id="choices_hbp_fwj_bfb">
+                    <choice><uicontrol>Enable Voicemail</uicontrol>: Check this option to enable
+                        Voicemail for your extension.</choice>
+                    <choice><uicontrol>Voicemail Access PIN</uicontrol>: To access the Voicemail
+                        system by dialing *2 or *02 on your phone, you need to enter the voicemail
+                        PIN.</choice>
+                    <choice><uicontrol>Send Voicemail to Email</uicontrol>: Check this option to
+                        enable <uicontrol>Voicemail to Email</uicontrol> feature. The received
+                        voicemail messages would be delivered to your email.</choice>
+                    <choice><uicontrol>Busy Prompt</uicontrol>: The PBX system has a global Busy
+                        Prompt for all the extension users. You can upload a customized Busy Prompt
+                        for your extension.</choice>
+                    <choice><uicontrol>Unavailable Prompt</uicontrol>: The PBX system has a global
+                        Unavailable Prompt for all the extension users. You can upload a customized
+                        Unavailable Prompt for your extension.</choice>
+                </choices>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

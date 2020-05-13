@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_q2n_pqc_2cb">
+    <title>Bulk Create Extensions</title>
+    <shortdesc><ph keyref="product_name"/> supports to add SIP extensions<ph product="s-series k2">
+            and IAX extensions</ph> in
+        bulk<?oxy_comment_start author="Becky" timestamp="20190909T094558+0800" comment="原文：Add VoIP extensions in bulk. " id="g1s_cc1_1jb" flag="done" mid="1"?><?oxy_comment_start author="carol" timestamp="20190909T131837+0800" comment="一般不在shortdescription里面描述具体的指导。
+这里主要说明可以批量填写哪些类型的分机，哪些类型的分机无法批量添加。" parentID="g1s_cc1_1jb" flag="done"?>.<?oxy_comment_end?><?oxy_comment_end mid="1"?></shortdesc>
+    <taskbody>
+        <steps id="steps_dyv_qqc_2cb">
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol>PBX</uicontrol>
+                        <uicontrol>Extensions</uicontrol>
+                    </menucascade>, click <uicontrol>Bulk Add</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>On the <uicontrol>Basic</uicontrol> page, go to <uicontrol>General</uicontrol>
+                    section, and configure the following settings:</cmd>
+                <info>
+                    <note>
+                        <p>
+                            <ul id="ul_hyk_j5t_qfb">
+                                <li>A random <uicontrol>Registration Password</uicontrol> and a
+                                    random <uicontrol>User Password</uicontrol> will be assigned for
+                                    each extension.</li>
+                                <li product="k2 s-series"> If you want to edit the Registration
+                                    Password and User Password for multiple extensions, you need to
+                                    go to <menucascade>
+                                        <uicontrol>Settings</uicontrol>
+                                        <uicontrol>System</uicontrol>
+                                        <uicontrol>Security</uicontrol>
+                                        <uicontrol>Service</uicontrol>
+                                    </menucascade>,
+                                    <?oxy_comment_start author="Becky" timestamp="20190905T152116+0800" comment="原文：check the option" flag="done"?>select
+                                    the checkbox<?oxy_comment_end?> of <uicontrol>Allow Weak
+                                        Password</uicontrol>.</li>
+                            </ul>
+                        </p>
+                    </note>
+                </info>
+                <info><image href="../Images/admin/add_bulk_extensions.png" width="650"
+                        id="image_i25_n5t_qfb" product="cloudpbx"/></info>
+                <info><image href="../Images/admin/add_bulk_extensions_s.png" width="650"
+                        id="image_j25_n5t_qfb" product="k2 s-series"/></info>
+                <info>
+                    <ul id="ul_kn2_t5t_qfb">
+                        <li product="k2 s-series"><uicontrol>Type</uicontrol>: Select the extension
+                            type.</li>
+                        <li><uicontrol>Start Extension</uicontrol>: Enter the first extension
+                            number. The system will create extensions in bulk starting with the
+                            extension number.</li>
+                        <li><uicontrol>Create Number</uicontrol>:
+                            <?oxy_comment_start author="Becky" timestamp="20190905T092647+0800" comment="原文：Enter how many extensions to create" flag="done"?>Enter
+                            the number of extensions that will be created.<?oxy_comment_end?></li>
+                        <li><uicontrol>Concurrent Registrations</uicontrol>: <ph
+                                keyref="product_name"/> supports to register one extension number on
+                            multiple phones. When a call reaches the extension number, all phones
+                            will ring.</li>
+                        <li><uicontrol>Prompt Language</uicontrol>: The language of voice prompts.
+                            The default prompt language is the same as the system language. If the
+                            extension user speaks foreign language, you can set a specific system prompt.<p>
+                                <note>Before selecting other system prompts, go to <menucascade>
+                                        <uicontrol>Settings</uicontrol>
+                                        <uicontrol>PBX</uicontrol>
+                                        <uicontrol>Voice Prompts</uicontrol>
+                                        <uicontrol>System Prompt</uicontrol>
+                                    </menucascade> to download online prompts.</note>
+                            </p></li>
+                    </ul>
+                </info>
+            </step>
+            <step importance="optional">
+                <cmd>Click <uicontrol>Features</uicontrol>, <uicontrol>Advanced</uicontrol>, or
+                        <uicontrol>Call Permission</uicontrol> tab to configure other
+                    settings.</cmd>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+    <related-links>
+        <link href="bulk-edit-extension-names-and-emails.dita#task_zmb_5w4_mgb"/>
+        <link href="register-a-sip-extension.dita#topic_gdw_mr4_y3b"/>
+    </related-links>
+</task>

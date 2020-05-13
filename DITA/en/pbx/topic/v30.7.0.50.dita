@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_g2z_rps_vdb">
+    <title>Version 30.7.0.50</title>
+    <abstract>Released Date: May 17, 2018</abstract>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/06/20"/>
+        </critdates>
+    </prolog>
+    <body>
+        <section id="section_x2l_5ps_vdb">
+            <title>Fixed Bug</title>
+            <p><image href="../Images/horizon.png" id="image_aj3_vyv_pdb"/></p>
+            <p>Fixed the issue that SIP trunk could not be registered automatically if the trunk was
+                disconnected.</p>
+        </section>
+    </body>
+</topic>

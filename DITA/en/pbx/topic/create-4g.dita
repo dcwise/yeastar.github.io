@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="create-4g">
+    <title>Create a 4G Trunk</title>
+    <shortdesc></shortdesc>
+    <body>
+        <p>For 4G LTE module, you need to install in the specific module slot as the following table
+            shows:</p>
+        <p>
+            <table colsep="1" rowsep="1" id="table_wrt_gx5_cjb">
+                
+                <tgroup cols="3">
+                    <colspec colname="c1" colnum="1" colwidth="1*"/>
+                    <colspec colname="c2" colnum="2" colwidth="1.37*"/>
+                    <colspec colname="c3" colnum="3" colwidth="1.42*"/>
+                    <thead>
+                        <row>
+                            <entry>PBX Model</entry>
+                            <entry>4G Module (For Cellular Data)</entry>
+                            <entry>4G Module (For Audio Calls)</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row>
+                            <entry>S412</entry>
+                            <entry>T_Slot3</entry>
+                            <entry>T_Slot3 or T_Slot4</entry>
+                        </row>
+                        <row>
+                            <entry>S20</entry>
+                            <entry>Slot1</entry>
+                            <entry>Any slot</entry>
+                        </row>
+                        <row>
+                            <entry>S50</entry>
+                            <entry>Slot1</entry>
+                            <entry>Any slot</entry>
+                        </row>
+                        <row>
+                            <entry>S100</entry>
+                            <entry>Slot1 on Expand Board 1</entry>
+                            <entry>Any slot</entry>
+                        </row>
+                        <row>
+                            <entry>S300</entry>
+                            <entry>Slot1 on Expand Board 1</entry>
+                            <entry>Any slot</entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+        </p>
+        <ol id="ol_zqd_5fy_53b">
+            <li>Install 4G module.<ol id="ol_mhs_vvy_w3b">
+                    <li>Power off the PBX.</li>
+                    <li>Open the upper case of the PBX.</li>
+                    <li>Place the 4G module above the main board, slowly insert each pin into right
+                        slot.</li>
+                </ol></li>
+            <li>Log in the PBX web interface, go to <menucascade>
+                    <uicontrol>PBX Monitor</uicontrol>
+                    <uicontrol>Trunks</uicontrol>
+                </menucascade> to check the trunk status.<p>If the trunk status shows the signal
+                    icon <image href="../Images/ui_icons/gsm_signal_1.png" width="20"
+                        id="image_nry_qqb_y3b"/>, <image href="../Images/ui_icons/gsm_signal_2.png"
+                        width="20" id="image_khy_rqb_y3b"/> or <image
+                        href="../Images/ui_icons/gsm_signal_3.png" width="20" id="image_xt5_sqb_y3b"
+                    />, the trunk is ready for use. For more information on trunk status, see <xref
+                        href="../topic/pbx_monitor.dita#concept_gl3_wt2_xdb/GSM-status"> 4G Trunk
+                        Status</xref>.</p></li>
+            <li>Go to <menucascade>
+                    <uicontrol>Settings</uicontrol>
+                    <uicontrol> PBX</uicontrol>
+                    <uicontrol> Trunks</uicontrol>
+                </menucascade>, configure the basic settings of the 4G trunk.<ul id="ul_xlt_dcz_w3b">
+                    <li><uicontrol>Name</uicontrol>: Give this trunk a name to help you identify
+                        it.</li>
+                    <li><uicontrol>PIN Code</uicontrol>: Enter the SIM card PIN code if the card has
+                        one. </li>
+                    <li><uicontrol>RX Volume</uicontrol>: Set the receiving volume of GSM port or
+                        choose <uicontrol>Custom</uicontrol> to define the RX Gain below.</li>
+                    <li><uicontrol>TX Volume</uicontrol>: Set the transmitting volume of GSM port or
+                        choose <uicontrol>Custom</uicontrol> to define the TX Gain below.</li>
+                </ul></li>
+            <li>If you want to use cellular network of 4G module, click
+                    <uicontrol>Advanced</uicontrol> tab, configure the
+                    <uicontrol>Mode</uicontrol>.<ul id="ul_xml_xy5_cjb">
+                    <li><uicontrol>Voice and Data</uicontrol>: can be used for both voice call and
+                        data access.</li>
+                    <li><uicontrol>Voice Only</uicontrol>: can be used only for voice call.</li>
+                </ul></li>
+            <li importance="optional">Configure other <xref
+                    href="../topic/gsm-3g-4g-trunk-settings.dita#gsm-3g-4g-trunk-settings"/> as your
+                need.</li>
+            <li>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</li>
+        </ol>
+    </body>
+</topic>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_bmr_rwt_c2b">
+    <title>Access the Hotel App</title>
+    <shortdesc>The receptionist who has the Hotel App permission could log in the Hotel Management
+        system to check in or check out guests and mange other hotel settings.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/06/11"/>
+            <!--Carol-->
+            <revised modified="2018/06/11"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Log in the PBX web interface using the receptionist's account. </cmd>
+                <choices>
+                    <choice><uicontrol>User Name</uicontrol>: Enter the extension number or the
+                        email address of the receptionist.<p>
+                            <note>The PBX administrator can set the login mode. </note>
+                        </p></choice>
+                    <choice><uicontrol>Password</uicontrol>: Enter the extension's <codeph>User
+                            Password</codeph>.</choice>
+                </choices>
+                <info><image href="../Images/admin/hotel_login.png" width="500"
+                        id="image_jpb_hyt_c2b"/></info>
+            </step>
+            <step>
+                <cmd>Click Main Menu, and click <uicontrol>Hotel</uicontrol> to enter the Hotel
+                    App.</cmd>
+                <info><image href="../Images/admin/access_hotel.png" id="image_qcv_kyt_c2b"
+                        width="500"/></info>
+            </step>
+            <step>
+                <cmd>After accessing the Hotel App, you can see all the room status on the <b>Room
+                        List</b> page. </cmd>
+                <info>On this page, you can check the room status, check the room guest’s
+                    information, and also perform multiple operations:<p>
+                        <ul>
+                            <li>Check in</li>
+                            <li>Check out</li>
+                            <li>Change room’s Clean status: If the status is incorrect, you can
+                                double click the status icon to change the status. </li>
+                            <li>Move guest room</li>
+                            <li>Edit guest’s information</li>
+                            <li>Search room or guest</li>
+                        </ul>
+                    </p><p><image href="../Images/admin/hotel_room_list.png" id="image_o3x_wyt_c2b"
+                            width="650"/></p></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

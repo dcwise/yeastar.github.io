@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_er2_s51_ygb">
+    <title>Step3. Create a Subnet for YMP</title>
+    <shortdesc>All Azure resources deployed into a virtual network are deployed into a subnet within
+        a virtual network. When creating the virtual network, a subnet is defined to deploy SBC
+        Virtual Machine (VM). You need to create another subnet to deploy YMP VMs.</shortdesc>
+    <taskbody>
+        <context/>
+        <steps>
+            <step>
+                <cmd>In the search box at the top of the portal, enter <i>virtual networks</i> in
+                    the search box. When <b>Virtual networks</b> appear in the search results,
+                    select it.</cmd>
+                <info><image href="../Images/SBC/azure-virtual-networks.png" width="650"
+                        id="image_bck_2w1_ygb"/></info>
+            </step>
+            <step>
+                <cmd>From the list of virtual networks, select the virtual network you want to add a
+                    subnet to.</cmd>
+            </step>
+            <step>
+                <cmd>Under <b>Settings</b>, select <b>Subnets</b>.</cmd>
+            </step>
+            <step>
+                <cmd>Select <b>+Subnet</b>.</cmd>
+            </step>
+            <step>
+                <cmd>Enter values for the following parameters:</cmd>
+                <info>
+                    <p><image href="../Images/SBC/azure-ymp-subnet.png" id="image_qgf_fx1_ygb"/></p>
+                    <p>
+                        <table frame="all" rowsep="1" colsep="1" id="table_gzf_hx1_ygb">
+                            <tgroup cols="3">
+                                <colspec colname="c1" colnum="1" colwidth="1*"/>
+                                <colspec colname="c2" colnum="2" colwidth="2.45*"/>
+                                <colspec colname="newCol3" colnum="3" colwidth="1.72*"/>
+                                <thead>
+                                    <row>
+                                        <entry>Setting</entry>
+                                        <entry>Description</entry>
+                                        <entry>Example</entry>
+                                    </row>
+                                </thead>
+                                <tbody>
+                                    <row>
+                                        <entry>Name</entry>
+                                        <entry>Set a unique name for the subnet.</entry>
+                                        <entry>Enter <i>YMP</i>.</entry>
+                                    </row>
+                                    <row>
+                                        <entry>Address range</entry>
+                                        <entry>The range must be within the address space you
+                                            entered for the <xref
+                                                href="azure-create-the-virtual-network.dita#task_s3k_bqz_xgb"
+                                                >virtual network</xref>.</entry>
+                                        <entry>Enter <i>10.0.1.0/24</i>.</entry>
+                                    </row>
+                                </tbody>
+                            </tgroup>
+                        </table>
+                    </p>
+                </info>
+            </step>
+            <step>
+                <cmd>Leave the rest of the defaults and click <b>OK</b>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

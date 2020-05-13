@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_xkm_5cx_dcb">
+  <title>Initial System Setup</title>
+  <body>
+    <p>For the first login, you need to set the PBX according to your local language and location
+      time.</p>
+  </body>
+</topic>

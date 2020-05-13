@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_n4x_2z3_pdb">
+    <title>Version 1.8.19</title>
+    <abstract>Released Date: April 8, 2018</abstract>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/06/20"/>
+        </critdates>
+    </prolog>
+    <body>
+        <section id="section_rvk_51x_pdb">
+            <title>Optimization</title>
+            <p><image href="../Images/horizon.png" id="image_svk_51x_pdb"/></p>
+            <p><b>PBX Stability</b><div>Improved the stability of the PBX.<p><b>ITSP
+                            Template</b><div>Added the following ITSP templates on VoIP Trunk:<ul
+                                id="ul_uct_tz3_pdb">
+                                <li>Germany — Telekom/Deutschland LAN IP Voice</li>
+                                <li>Germany — Telekom/Deutschland LAN SIP-Trunk</li>
+                            </ul></div></p></div></p>
+        </section>
+        <section id="section_qps_51x_pdb">
+            <title>Fixed Bug</title>
+            <p><image href="../Images/horizon.png" id="image_rps_51x_pdb"/></p>
+            <p>
+                <ul>
+                    <li>Fixed the Password setting on SIP Trunk: the password would not take effect
+                        if the password length exceeded 63 characters.</li>
+                    <li>Fixed the video quality issue with Yealink video phones</li>
+                </ul>
+            </p>
+        </section>
+    </body>
+</topic>

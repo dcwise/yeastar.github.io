@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="v81.9.0.42">
+    <title>Version 81.9.0.43</title>
+    <abstract>Released Date: October 29, 2019</abstract>
+    <body>
+        <section>
+            <title>OPTIMIZATION</title>
+            <p>
+                <dl>
+                    <dlentry>
+                        <dt>Extension</dt>
+                        <dd>
+                            <ul id="ul_nfb_spt_jjb">
+                                <li>Optimized extension registration: The PBX would not send MWI
+                                    NOTIFY message to Linkus client after the Linkus client was
+                                    registered.</li>
+                                <li>Optimized extension registration: Speed up and shorten the time
+                                    of registering extensions in bulk.</li>
+                                <li>Optimized <uicontrol>Max Call Duration(s)</uicontrol>
+                                        setting.<ul id="ul_spf_vyg_jjb">
+                                        <li><uicontrol>Max Call Duration(s)</uicontrol> setting is
+                                            applicable to all types of calls on the PBX.</li>
+                                        <li><uicontrol>Max Call Duration(s)</uicontrol> setting for
+                                                <uicontrol>Extensions</uicontrol>: Added
+                                                <uicontrol>10800</uicontrol> option (<menucascade>
+                                                <uicontrol>PBX</uicontrol>
+                                                <uicontrol> Extensions</uicontrol>
+                                                <uicontrol> Features</uicontrol>
+                                                <uicontrol> Max Call Duration(s)</uicontrol>
+                                            </menucascade>).</li>
+                                        <li><uicontrol>Global Max Call Duration(s)</uicontrol>
+                                            setting: Added <uicontrol>10800</uicontrol> option (<menucascade>
+                                                <uicontrol>PBX</uicontrol>
+                                                <uicontrol> General</uicontrol>
+                                                <uicontrol> Preferences(s)</uicontrol>
+                                            </menucascade>).</li>
+                                    </ul><note>The precedence of <uicontrol>Max Call Duration(s)
+                                        </uicontrol>(Global v.s. Extension):<ul id="ul_wpd_zyg_jjb">
+                                            <li>For internal calls: The <uicontrol>Max Call
+                                                  Duration(s) </uicontrol>setting of the caller's
+                                                extension takes precedence. </li>
+                                            <li>For outbound calls: The <uicontrol>Max Call
+                                                  Duration(s)</uicontrol> setting of the caller's
+                                                extension takes precedence. </li>
+                                            <li>For inbound calls: The global <uicontrol>Max Call
+                                                  Duration(s)</uicontrol> setting takes precedence.
+                                            </li>
+                                        </ul></note></li>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                    <dlentry>
+                        <dt>Trunk</dt>
+                        <dd>
+                            <ul id="ul_gmm_cqt_jjb">
+                                <li>Fixed the issue of <uicontrol>Peer Trunk
+                                    (DID-based)</uicontrol>: the call might be failed when it was
+                                    routed only based on IP address without matching the
+                                        <uicontrol>DID Number</uicontrol>.</li>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                    <dlentry>
+                        <dt>SIP</dt>
+                        <dd>
+                            <ul id="ul_dcx_2qt_jjb">
+                                <li>Added support for responding 200OK when receiving 407 Proxy
+                                    Authentication Required.</li>
+                                <li>Fixed the SIP call issue: The inbound call matched a wrong SIP
+                                    trunk, and caused the call failed.</li>
+                                <li>Fixed the issue of SIP INFO compatibility: PBX did not respond
+                                    when receiving SIP INFO packets (content-type=application/QSIG),
+                                    and the call was ended after 32 seconds.</li>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                    <dlentry>
+                        <dt>CDR</dt>
+                        <dd>
+                            <ul id="ul_dqr_3qt_jjb">
+                                <li>Optimized the search method of <uicontrol>CDR and
+                                        recordings</uicontrol>: Speed up and shorten the time of
+                                    searching CDR and recordings.</li>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                    <dlentry>
+                        <dt>Linkus Server</dt>
+                        <dd><b>The new version of Linkus Server (2.3.15) is pre-installed after
+                                upgrading the PBX. Check the updates below: </b><ul
+                                id="ul_hrs_bwv_jjb">
+                                <li>Improved Linkus performance.</li>
+                            </ul></dd>
+                    </dlentry>
+                    <dlentry>
+                        <dt>LDAP Server</dt>
+                        <dd><b>The new version of LDAP Server (1.0.4) is pre-installed after
+                                upgrading the PBX. Check the updates below:</b><ul
+                                id="ul_hj1_dzt_jjb">
+                                <li>Improved functional stability.</li>
+                            </ul></dd>
+                    </dlentry>
+                </dl>
+            </p>
+        </section>
+    </body>
+</topic>

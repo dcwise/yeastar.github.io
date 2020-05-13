@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_ns5_p22_2cb">
+    <title>Send Linkus Emails to Users</title>
+    <shortdesc>Linkus server has an email template that contains instructions on how to log in via
+        QR code and link. You can send Linkus emails to allow users to log in Linkus clients by
+        themselves.</shortdesc>
+    <taskbody>
+        <prereq id="prereq_hfs_msq_ngb">
+            <p>Make sure the following settings are configured:</p>
+            <p>
+                <ul id="ul_ytj_4sq_ngb">
+                    <li>The <xref href="email.dita#concept_ls5_r3k_xdb">System Email </xref> is
+                        working.</li>
+                </ul>
+            </p>
+            <ul id="ul_m4v_lpm_2fb">
+                <li>Email addresses are bound with the extensions.</li>
+            </ul>
+        </prereq>
+        <steps id="steps_qcl_t22_2cb">
+            <step>
+                <cmd>Log in the PBX web interface, go to <menucascade>
+                        <uicontrol>Linkus</uicontrol>
+                        <uicontrol product="s-series"> Linkus Client Settings</uicontrol>
+                    </menucascade>.</cmd>
+            </step>
+            <step product="s-series">
+                <cmd>To send Linkus emails for all users, do the followings:</cmd>
+                <info><image href="../Images/admin/send_linkus__emails.png" width="650"
+                        id="image_wpz_chm_2fb"/></info>
+                <substeps id="substeps_hgm_4gm_2fb">
+                    <substep>
+                        <cmd>To display more users in one page, set a larger
+                                <uicontrol>Displaying</uicontrol> number. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Select the checkbox for all the extensions.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Click <uicontrol>Send Email</uicontrol>.</cmd>
+                    </substep>
+                    <substep importance="optional">
+                        <cmd>If you have more extensions in the next page, go to next page, and
+                            repeat step <b>b</b>-<b>c</b>.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step product="cloudpbx">
+                <cmd>To send Linkus email to all the users, do the followings:</cmd>
+                <substeps>
+                    <substep>
+                        <cmd>Click <uicontrol>Welcome Email</uicontrol>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>On the <uicontrol>Send Welcome Email</uicontrol> page, select
+                                <uicontrol>All Extensions</uicontrol>.</cmd>
+                        <info><image href="../Images/admin/linkus-welcome-email-all-extensions.jpg"
+                                width="650" id="image_u4k_5cp_mgb"/></info>
+                    </substep>
+                    <substep>
+                        <cmd>Click <uicontrol>Send</uicontrol>.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>To send Linkus email to a specific user, do the followings:</cmd>
+                <info><image href="../Images/admin/send_linkus__email_to_a_user.jpg"
+                        id="image_wyx_xjm_2fb" width="650" product="s-series"/></info>
+                <info><image href="../Images/admin/linkus-welcome-email-specific-extension.jpg"
+                        width="650" id="image_mjl_2dp_mgb" product="cloudpbx"/></info>
+                <substeps id="substeps_eqv_svm_2fb">
+                    <substep>
+                        <cmd>Search the user by extension number or name.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Select the desired extension user.</cmd>
+                    </substep>
+                    <substep product="cloudpbx">
+                        <cmd>Click <uicontrol>Welcome Email</uicontrol>.</cmd>
+                    </substep>
+                    <substep product="cloudpbx">
+                        <cmd>On the <uicontrol>Send Welcome Email</uicontrol> page, click
+                                <uicontrol>Send</uicontrol>.</cmd>
+                    </substep>
+                    <substep product="s-series">
+                        <cmd>Click <uicontrol>Send Email</uicontrol>.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+    <related-links>
+        <link href="linkus_email.dita#task_pwp_fwm_2fb"/>
+        <link href="bulk-edit-extension-names-and-emails.dita#task_zmb_5w4_mgb"/>
+    </related-links>
+</task>

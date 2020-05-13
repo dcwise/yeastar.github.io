@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_f5g_jkm_ldb">
+    <title>Schedule Auto Reboot</title>
+    <shortdesc>You can schedule auto reboot to keep the system running smoothly.</shortdesc>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/10/23"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Maintenance</uicontrol>
+                        <uicontrol>Reboot</uicontrol>
+                    </menucascade>, check the option <uicontrol>Enable Auto
+                    Reboot</uicontrol>.</cmd>
+                <info/>
+            </step>
+            <step>
+                <cmd>Set the frequency and time of auto reboot.</cmd>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_tws_dvw_kcb">
+    <title>Step3. Launch an Instance for SBC</title>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/06/14"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <steps id="steps_yy4_3vw_kcb">
+            <step>
+                <cmd>Open the Amazon EC2 console at <xref href="https://console.aws.amazon.com/ec2/"
+                        format="html" scope="external">https://console.aws.amazon.com/ec2/</xref>,
+                    click <uicontrol>Launch Instance</uicontrol>.</cmd>
+                <info>
+                    <note> In the navigation bar, on the top-right, ensure that you select the same
+                        region in which you created your VPC and security group.</note>
+                </info>
+            </step>
+            <step>
+                <cmd>Choose the AMI as <uicontrol>Ubuntu Server 16.04 LTS (HVM)</uicontrol>, click
+                        <uicontrol>Select</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Choose an Instance Type according to your needs, click <uicontrol>Next:
+                        Configure Instance Details</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Configure Instance Details, click <uicontrol>Next: Add
+                    Storage</uicontrol>.</cmd>
+                <substeps>
+                    <substep>
+                        <cmd>Select <uicontrol>Network</uicontrol> as the VPC for SBC and YMP.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Select <uicontrol>Subnet</uicontrol> as the SBC WAN subnet.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Set <uicontrol>Auto-assign Public IP</uicontrol> to
+                                <uicontrol>Disable</uicontrol>.</cmd>
+                        <info><image href="../Images/SBC/aws_configure_instance_details.png"
+                                id="image_zng_cyw_kcb" width="650"/></info>
+                    </substep>
+                    <substep>
+                        <cmd>In the <uicontrol>Network interface</uicontrol> section, configure eth0
+                            and add eth1. </cmd>
+                        <info>
+                            <p>
+                                <note>eth0 interface acts as WAN, eth1 interface acts LAN. </note>
+                            </p>
+                        </info>
+                    </substep>
+                </substeps>
+                <info><image href="../Images/SBC/aws_network_interface.png" id="image_zxh_d1x_kcb"
+                        width="650"/></info>
+            </step>
+            <step>
+                <cmd>Configure the storage according to your needs, click <uicontrol>Next, Add
+                        Tags</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Add tags to help you identify the instance, click <uicontrol>Next: Configure
+                        Security Group</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Select <uicontrol>Select an existing security group</uicontrol>, and select the
+                    security group which was created for SBC and YMP, click <uicontrol>Review and
+                        Launch</uicontrol>.</cmd>
+                <info><image href="../Images/SBC/aws_configure_security_group.png"
+                        id="image_bx1_fcx_kcb" width="650"/></info>
+            </step>
+            <step>
+                <cmd> On the <uicontrol>Review</uicontrol> page, click
+                    <uicontrol>Launch</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Choose an existing key pair or create a new key pair, click <uicontrol>Launch
+                        Instances</uicontrol>.</cmd>
+                <info><image href="../Images/SBC/aws_select_key.png" id="image_hc3_sdx_kcb"
+                        width="650"/></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

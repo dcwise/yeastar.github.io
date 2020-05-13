@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_odx_rhx_kdb">
+    <title>Auto Provision Phones by PnP Method</title>
+    <taskbody>
+      
+            <context id="context_zb4_b3x_kdb">
+            <note conref="steps_to_auto_provision_phones.dita#task_b3f_hnq_5cb/reset"/>
+            </context>
+            <steps id="steps_ac4_b3x_kdb">
+            <step>
+                <cmd>Connect your phones to the same network of the PBX.</cmd>
+            </step>
+                <step>
+                    <cmd>Check your phones' basic information, including phone manufacturer, MAC
+                        address, phone model.</cmd>
+                </step>
+            <step>
+                <cmd>Enable <uicontrol>PnP</uicontrol> function on your phone.</cmd>
+            </step>
+                <step>
+                <cmd>On the PBX <uicontrol>Auto Provisioning</uicontrol> page, scan phones, all the
+                    detected phones will appear on the page.</cmd>
+            </step>
+            <step>
+                <cmd>Edit or add phones, set your phones' manufacturer, MAC address, model.</cmd>
+                <info><image href="../Images/admin/autop_phone_info.png" width="650"
+                        id="image_kwf_rjx_kdb"/></info>
+            </step>
+            <step>
+                <cmd>Set the phone lines.</cmd>
+                <info><image href="../Images/admin/autop_set_phone_line.png" width="650"
+                        id="image_bxb_vjx_kdb"/></info>
+            </step>
+                <step>
+                    <cmd>Set the phones' language and time.</cmd>
+                <info><image href="../Images/admin/autop_preference.png" width="650"
+                        id="image_ykc_1kx_kdb"/></info>
+                </step>
+                <step importance="optional">
+                <cmd>Set other phone settings.</cmd>
+            </step>
+                <step>
+                    <cmd>Save the settings and REBOOT your phones.</cmd>
+                    <info>
+                        <note type="note">
+                        <ul id="ul_rmd_w3x_kdb">
+                            <li>If the phones do not reboot automatically, reboot the phone manually
+                                to make the configurations take effect.</li>
+                            <li>After auto provisioned successfully, each time when your phones
+                                reboot, they will get and apply configurations (phonebook, language,
+                                time, etc.) from the PBX. </li>
+                        </ul>
+                    </note>
+                    </info>
+                </step>
+            </steps>
+    </taskbody>
+</task>

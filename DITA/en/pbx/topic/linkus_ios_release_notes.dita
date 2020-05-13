@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_chy_p4j_pdb">
+    <title>Linkus iOS Version</title>
+    <shortdesc>Release notes for Linkus client iOS version.</shortdesc>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/05/21"/>
+        </critdates>
+    </prolog>
+    <body>
+        <section id="section_nzm_rdw_wdb">
+            <title>Version 1.7.12</title>
+            <p>Released Date: May 21, 2018</p>
+            <p>
+                <ul id="ul_u2d_ybw_wdb">
+                    <li>Added Provacy Policy Agreement in the Linkus client.</li>
+                    <li>Added supported for inviting multiple members in a conference.</li>
+                    <li>Improved the user experience.</li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_q23_npj_pdb">
+            <title>Version 1.6.5</title>
+            <p>Released Date: March 5, 2018</p>
+            <p>
+                <ul id="ul_hn2_xpj_pdb">
+                    <li>Added email login method.</li>
+                    <li>Added Help documents in Linkus.</li>
+                    <li>Improved the login security.</li>
+                    <li>Optimized the user experience of receiving calls and ending calls.</li>
+                    <li>Optimized call logs.</li>
+                </ul>
+            </p>
+        </section>
+        <section>
+            <title>Version 1.5.10</title>
+            <p>Released Date: January 26, 2018</p>
+            <p>
+                <ul id="ul_brf_ypj_pdb">
+                    <li>Added support for displaying the name of mobile phone contact when a Linkus
+                        call comes.</li>
+                    <li>Fixed the Linkus login failure issue.</li>
+                </ul>
+            </p>
+        </section>
+        <section>
+            <title>Version 1.5.9</title>
+            <p>Released Date: January 12, 2018</p>
+            <p>
+                <ul id="ul_fjj_zpj_pdb">
+                    <li>Improved the stability of Linkus client.</li>
+                </ul>
+            </p>
+        </section>
+        <section>
+            <title>Version 1.5.8</title>
+            <p>Released Date: January 10, 2018</p>
+            <p>
+                <ul id="ul_nqk_1qj_pdb">
+                    <li>Compatible with Yeastar Cloud PBX.</li>
+                    <li>Fixed the Linkus Contacts issue: if the contact number contains blank
+                        characters, you cannot dial the number out through Linkus.</li>
+                </ul>
+            </p>
+        </section>
+        <section>
+            <title>Version 1.5.3</title>
+            <p>Released Date: November 28, 2017</p>
+            <p>
+                <ul id="ul_ux5_bqj_pdb">
+                    <li><ph id="OLE_LINK6">Added support to</ph> make Linkus calls via Siri.</li>
+                    <li>Added support for iPhone X.</li>
+                    <li>Optimized number rewriting feature: users can directly rewrite the contact’s
+                        number on Linkus, then dial the customized number.</li>
+                    <li>Optimized “Linkus Login” e-mail: added download information of Linkus client
+                        in the e-mail.</li>
+                    <li>Fixed the compatibility issue with iOS11: the Linkus screen would
+                        blink.</li>
+                    <li>Fixed the compatibility issue with iOS11: the callee could not hear any
+                        voice for first two seconds when he/she receive a Linkus call. </li>
+                    <li>Fixed the Linkus dial pad issue: searching contacts by name could not work
+                        when users were trying to add a conference member.</li>
+                    <li>Fixed the dial pad issue: there was no keypad tone when dialing number
+                        during conference or making a second-dial. </li>
+                    <li>Deleted Background Mode settings.</li>
+                </ul>
+            </p>
+        </section>
+        <section>
+            <title>Version 1.4.8</title>
+            <p>Released Date: September 28, 2017</p>
+            <p>
+                <ul id="ul_evb_dqj_pdb">
+                    <li>Fixed the issue of call push when a Linkus Server version earlier than 1.4.7
+                        was used.</li>
+                </ul>
+            </p>
+        </section>
+        <section>
+            <title>Version 1.4.7</title>
+            <p>Released Date: September 18, 2017</p>
+            <p>
+                <ul id="ul_s1v_2qj_pdb">
+                    <li>Added Call Waiting feature.</li>
+                    <li>Added support for Italian and German User Interface.</li>
+                    <li>Optimized interaction between Linkus Mobile Client and iOS: iOS Callkit will
+                        not only be used to receive calls from Linkus but also make Linkus
+                        calls.</li>
+                    <li>Optimized Call Push feature and improved the success rate of pushing
+                        incoming call.</li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_u3q_spj_pdb">
+            <title>Version 1.3.8</title>
+            <p>Released Date: June 16, 2017</p>
+            <p>
+                <ul id="ul_ogx_fqj_pdb">
+                    <li>Improved Linkus security: users would be forced to change the Linkus login
+                        password after login.</li>
+                    <li>Improved Linkus stability: Linkus client would stay online for a long
+                        time.</li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_v3q_spj_pdb">
+            <title>Version 1.2.15</title>
+            <p>Released Date: May 9, 2017</p>
+            <p>
+                <ul id="ul_j2b_hqj_pdb">
+                    <li>Added support for Russian User Interface.</li>
+                    <li>Added compatibility with K2 VoIP PBX Linkus server.</li>
+                    <li>Improved the success rate of pushing incoming calls.</li>
+                </ul>
+            </p>
+        </section>
+        <section>
+            <title>Version 1.2.7</title>
+            <p>Released Date: April 1, 2017</p>
+            <p>
+                <ul id="ul_e54_3qj_pdb">
+                    <li>Added support for Turkish User Interface.</li>
+                    <li>Fixed the login issue: if you entered both local IP and remote IP in the
+                        login page, you could not log in Linkus via an external Wi-Fi network.</li>
+                </ul>
+            </p>
+        </section>
+        <section>
+            <title>Version 1.2.6</title>
+            <p>Released Date: March 30, 2017</p>
+            <p>
+                <ul id="ul_itm_jqj_pdb">
+                    <li>Added Conference feature.</li>
+                    <li><ph id="OLE_LINK1">Added support for checking voicemail.</ph></li>
+                    <li>Added Linkus debug feature.</li>
+                    <li>Added support for answering and terminating a Linkus call via Bluetooth
+                        headset.</li>
+                    <li>Deleted “Call Waiting” setting.</li>
+                </ul>
+            </p>
+        </section>
+        <section>
+            <title>Version 1.1.14</title>
+            <p>Released Date: January 18, 2017</p>
+            <p>
+                <ul id="ul_bmw_kqj_pdb">
+                    <li>Added support for Turkish interface.</li>
+                    <li>Added support for enabling and disabling Dialpad Touch Tones. </li>
+                    <li>Optimized loading speed of extension status.</li>
+                    <li>Fixed the issue that Linkus client could not connect to the server after
+                        upgrading the Linkus App.</li>
+                </ul>
+            </p>
+        </section>
+        <section>
+            <title>Version 1.1.8</title>
+            <p>Released Date: January 4, 2017</p>
+            <p>
+                <ul id="ul_n42_mqj_pdb">
+                    <li>Added support for logging in Linkus client via QR scan code or login
+                        link.</li>
+                    <li>Added support for checking and playing one-touch recording files on Linkus
+                        client.</li>
+                    <li>Added blind transfer feature.</li>
+                    <li>Limit Linkus login attempts 5 times to protect Linkus from brute force
+                        attacks.</li>
+                </ul>
+            </p>
+        </section>
+    </body>
+</topic>

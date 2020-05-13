@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_sn4_njm_ggb">
+    <title>Download Zoho CRM Integration</title>
+    <shortdesc>The Zoho CRM Integration App is supported on
+            <?oxy_insert_start author="Sunmy" timestamp="20191111T103525+0800"?><ph
+            keyref="product_name"
+        /><?oxy_insert_end?><?oxy_delete author="Sunmy" timestamp="20191111T103520+0800" content="Yeastar Cloud PBX firmware version 81.8.0.X or later"?>.
+        Upgrade the PBX firmware first, then install the Zoho CRM Integration.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/12/27"/>
+            <!--Carol-->
+            <revised modified="2018/12/27"/>
+            <!--Carol-->
+            <revised modified="2018/12/28"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Log in the PBX web page, go to <uicontrol>App Center</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Find the Zoho CRM Integration, click <uicontrol>Install</uicontrol>.</cmd>
+                <info><?oxy_comment_start author="Sunmy" timestamp="20191111T105702+0800" comment="图片，要改"?><image
+                        href="../Images/admin/install-zoho-crm-integration.jpg" width="650"
+                        id="image_afw_h1t_ggb"/><?oxy_comment_end?></info>
+                <stepresult>After installed successfully, click the <uicontrol>Main Menu</uicontrol>
+                    to find the Zoho CRM Integration.<p><image
+                            href="../Images/admin/main-menu-zoho.jpg" width="650"
+                            id="image_rrz_41t_ggb"/></p></stepresult>
+            </step>
+        </steps>
+    </taskbody>
+</task>
+<?oxy_options track_changes="on"?>

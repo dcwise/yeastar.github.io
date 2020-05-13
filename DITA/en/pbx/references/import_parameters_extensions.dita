@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="reference_pq4_yzh_mfb">
+    <title>Import Parameters - Extensions</title>
+    <shortdesc>Descriptions for the Extension parameters that you can import to <ph
+            keyref="product_name"/>.</shortdesc>
+    <refbody>
+        <section id="section_kqj_5c3_mfb">
+            <p>
+                <table id="table_e1x_kd3_mfb">
+                    <tgroup cols="5">
+                        <colspec colnum="1" colname="col1" colwidth="1.1*" colsep="1" rowsep="1"/>
+                        <colspec colnum="2" colname="col2" colwidth="1.43*" colsep="1" rowsep="1"/>
+                        <colspec colnum="3" colname="col3" colwidth="1*" colsep="1" rowsep="1"/>
+                        <colspec colnum="4" colname="col6" colwidth="2.81*" colsep="1" rowsep="1"/>
+                        <colspec colname="col5" colnum="5" colwidth="1.01*" rowsep="1" colsep="1"/>
+                        <thead>
+                            <row>
+                                <entry>Parameter</entry>
+                                <entry>Description</entry>
+                                <entry>Importance</entry>
+                                <entry>Restriction</entry>
+                                <entry>Default Value</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row product="k2 s-series">
+                                <entry>type</entry>
+                                <entry>Extension Type</entry>
+                                <entry>Required </entry>
+                                <entry>Permitted value: <p><codeph>SIP</codeph>
+                                        <codeph>IAX</codeph></p></entry>
+                                <entry>N/A</entry>
+                            </row>
+                            <row>
+                                <entry>username</entry>
+                                <entry>Extension Number</entry>
+                                <entry>Required</entry>
+                                <entry>Only numbers are allowed. <p>The maximum length is
+                                    7.</p></entry>
+                                <entry>N/A</entry>
+                            </row>
+                            <row>
+                                <entry>registerpassword</entry>
+                                <entry>Registration Password</entry>
+                                <entry>Required</entry>
+                                <entry><p>Only alphanumeric characters and the following special
+                                        characters are allowed: </p><p><codeph>~</codeph>
+                                        <codeph>^</codeph>
+                                        <codeph>*</codeph>
+                                        <codeph>-</codeph>
+                                        <codeph>_</codeph>
+                                        <codeph>?</codeph></p><p>
+                                        <note>The password will be generated randomly if you leave
+                                            this field empty.</note>
+                                    </p>Strong password is required by default.<ul
+                                        id="ul_k2q_xdn_mfb">
+                                        <li>Must contain non-consecutive numbers, uppercase and
+                                            lowercase letters.</li>
+                                        <li>Do not contain "Extension" and "Caller ID Name" of this
+                                            extension.</li>
+                                        <li>The password length should be longer than 16.</li>
+                                    </ul><p product="k2 s-series">If <xref
+                                            href="../topic/service.dita#topic_a3k_523_ffb/waek_password"
+                                            >Weak password</xref> is enabled:</p><p
+                                        product="k2 s-series">
+                                        <ul id="ul_htv_f2n_mfb">
+                                            <li>Must contain numbers and both uppercase and
+                                                lowercase letters.</li>
+                                            <li>The password length should be longer than 8.</li>
+                                        </ul>
+                                    </p></entry>
+                                <entry>Generate Randomly</entry>
+                            </row>
+                            <row>
+                                <entry>fullname</entry>
+                                <entry>Caller ID name</entry>
+                                <entry>Required </entry>
+                                <entry>The following characters are NOT allowed:
+                                            <p><codeph>!</codeph>
+                                        <codeph>%</codeph>
+                                        <codeph>.</codeph>
+                                        <codeph>@</codeph>
+                                        <codeph>:</codeph>
+                                        <codeph>;</codeph>
+                                        <codeph>&amp;</codeph>
+                                        <codeph>"</codeph>
+                                        <codeph>'</codeph>
+                                        <codeph>\</codeph>
+                                        <codeph>&lt;</codeph>
+                                        <codeph>></codeph>
+                                        <codeph>`</codeph>
+                                        <codeph>$</codeph>
+                                    </p></entry>
+                                <entry>N/A</entry>
+                            </row>
+                            <row>
+                                <entry>callerid</entry>
+                                <entry>Caller ID</entry>
+                                <entry>Required </entry>
+                                <entry>Only alphanumeric characters are allowed. The maximum length
+                                    is 31.</entry>
+                                <entry>N/A</entry>
+                            </row>
+                            <row>
+                                <entry>registername</entry>
+                                <entry>Registration Name</entry>
+                                <entry>Required </entry>
+                                <entry>Only alphanumeric characters are allowed. The maximum length
+                                    is 31.</entry>
+                                <entry>N/A</entry>
+                            </row>
+                            <row>
+                                <entry>maxregistrations</entry>
+                                <entry>Concurrent Registration</entry>
+                                <entry>Required </entry>
+                                <entry>Permitted value: <p><codeph>1</codeph>
+                                        <codeph>2</codeph>
+                                        <codeph>3</codeph>
+                                        <codeph>4</codeph>
+                                        <codeph product="k2 s-series">5</codeph></p></entry>
+                                <entry>1</entry>
+                            </row>
+                            <row>
+                                <entry>loginpassword</entry>
+                                <entry>User Password for extension users to log into PBX. It is also
+                                    the password for extension users to log into Linkus.</entry>
+                                <entry>Required</entry>
+                                <entry>
+                                    <p>Only alphanumeric characters and the following special
+                                        characters are allowed: </p>
+                                    <p><codeph>~</codeph>
+                                        <codeph>^</codeph>
+                                        <codeph>*</codeph>
+                                        <codeph>-</codeph>
+                                        <codeph>_</codeph>
+                                        <codeph>?</codeph>
+                                    </p>
+                                    <p>
+                                        <note>The password will be generated randomly if you leave
+                                            this field empty.</note>
+                                    </p>
+                                    <p>Strong password is required by default.</p>
+                                    <p>
+                                        <ul id="ul_x3s_hgn_mfb">
+                                            <li>Must contain non-consecutive numbers, uppercase and
+                                                lowercase letters.</li>
+                                            <li>Do not contain "Extension" and "Caller ID Name" of
+                                                this extension.</li>
+                                            <li>The password length should be longer than 10.</li>
+                                        </ul>
+                                    </p>
+                                    <p product="k2 s-series">If <xref
+                                            href="../topic/service.dita#topic_a3k_523_ffb/waek_password"
+                                            >Weak password</xref> is enabled:</p>
+                                    <p product="k2 s-series">
+                                        <ul id="ul_awq_mgn_mfb">
+                                            <li>Must contain numbers and both uppercase and
+                                                lowercase letters. </li>
+                                            <li>The minimum length is 6.</li>
+                                        </ul>
+                                    </p>
+                                </entry>
+                                <entry>Generate Randomly</entry>
+                            </row>
+                            <row>
+                                <entry>email</entry>
+                                <entry>Extension user's email address</entry>
+                                <entry>Optional</entry>
+                                <entry>Must be email address format. Space and <codeph>#</codeph>
+                                    <codeph>;</codeph>
+                                    <codeph>,</codeph>
+                                    <codeph>[</codeph>
+                                    <codeph>]</codeph>
+                                    <codeph>=</codeph>
+                                    <codeph>&amp;</codeph>
+                                    <codeph>"</codeph>
+                                    <codeph>'</codeph>
+                                    <codeph>\</codeph>
+                                    <codeph>&lt;</codeph>
+                                    <codeph>></codeph>
+                                    <codeph>`</codeph>
+                                    <codeph>$</codeph> are NOT allowed.</entry>
+                                <entry>N/A</entry>
+                            </row>
+                            <row>
+                                <entry>mobile</entry>
+                                <entry>Extension user's mobile number</entry>
+                                <entry>Optional</entry>
+                                <entry>Only numbers are allowed.</entry>
+                                <entry>N/A</entry>
+                            </row>
+                            <row>
+                                <entry>hasvoicemail</entry>
+                                <entry>Enable Voicemail</entry>
+                                <entry>Optional</entry>
+                                <entry>Permitted value: <p><codeph>yes</codeph>
+                                        <codeph>no</codeph></p></entry>
+                                <entry>yes</entry>
+                            </row>
+                            <row>
+                                <entry>enablevmtoemail</entry>
+                                <entry>Send Voicemail to Email</entry>
+                                <entry>Required</entry>
+                                <entry>Permitted value: <p><codeph>yes</codeph>
+                                        <codeph>no</codeph></p></entry>
+                                <entry>no</entry>
+                            </row>
+                            <row>
+                                <entry>vmsecret</entry>
+                                <entry>Voicemail PIN</entry>
+                                <entry>Required</entry>
+                                <entry>Only numbers are allowed. <p>The maximum length is
+                                    63.</p></entry>
+                                <entry>N/A</entry>
+                            </row>
+                            <row>
+                                <entry>allowbeingspy</entry>
+                                <entry>Allow Being Monitored</entry>
+                                <entry>Required</entry>
+                                <entry>Permitted value: <p><codeph>yes</codeph>
+                                        <codeph>no</codeph></p></entry>
+                                <entry>no</entry>
+                            </row>
+                            <row>
+                                <entry>spymode</entry>
+                                <entry>Monitor Mode</entry>
+                                <entry>Required</entry>
+                                <entry>Permitted value: <p><codeph>none</codeph>
+                                        <codeph>generalspy</codeph>
+                                        <codeph>normalspy</codeph>
+                                        <codeph>wisperspy</codeph>
+                                        <codeph>bargespy</codeph></p></entry>
+                                <entry>none</entry>
+                            </row>
+                            <row>
+                                <entry>ringtimeout</entry>
+                                <entry>Ring Timeout(s)</entry>
+                                <entry>Required</entry>
+                                <entry>Permitted value: <p><codeph>15</codeph>
+                                        <codeph>30</codeph>
+                                        <codeph>60</codeph>
+                                        <codeph>120</codeph>
+                                        <codeph>300</codeph></p></entry>
+                                <entry>30</entry>
+                            </row>
+                            <row>
+                                <entry>maxduration</entry>
+                                <entry>Max Call Duration(s)</entry>
+                                <entry>Required </entry>
+                                <entry>Permitted value: <p><codeph>60</codeph>
+                                        <codeph>300</codeph>
+                                        <codeph>600</codeph>
+                                        <codeph>900</codeph>
+                                        <codeph>1800</codeph>
+                                        <codeph>3600</codeph>
+                                        <codeph>6000</codeph>
+                                        <codeph>0</codeph>
+                                        <codeph>-1</codeph></p><p>
+                                        <note>
+                                            <ul id="ul_w4h_vhn_mfb">
+                                                <li><codeph>0</codeph> means use system default
+                                                  setting.</li>
+                                                <li><codeph>-1</codeph> means unlimited.</li>
+                                            </ul>
+                                        </note>
+                                    </p></entry>
+                                <entry>-1</entry>
+                            </row>
+                            <row>
+                                <entry>dnd</entry>
+                                <entry>Do Not Disturb</entry>
+                                <entry>Required</entry>
+                                <entry>Permitted value: <p><codeph>yes</codeph>
+                                        <codeph>no</codeph></p></entry>
+                                <entry>no</entry>
+                            </row>
+                            <row>
+                                <entry>sendmailnotify</entry>
+                                <entry>Send email notification when extension user password is
+                                    changed</entry>
+                                <entry>Required </entry>
+                                <entry>Permitted value: <p><codeph>yes</codeph>
+                                        <codeph>no</codeph></p></entry>
+                                <entry>no</entry>
+                            </row>
+                            <row product="k2 s-series">
+                                <entry>nat</entry>
+                                <entry>NAT</entry>
+                                <entry>Required </entry>
+                                <entry>Permitted value: <p><codeph>yes</codeph>
+                                        <codeph>no</codeph></p></entry>
+                                <entry>no</entry>
+                            </row>
+                            <row>
+                                <entry>qualify</entry>
+                                <entry>Qualify</entry>
+                                <entry>Required </entry>
+                                <entry>Permitted value: <p><codeph>yes</codeph>
+                                        <codeph>no</codeph></p></entry>
+                                <entry>yes</entry>
+                            </row>
+                            <row product="k2 s-series">
+                                <entry>remoteregister</entry>
+                                <entry>Register Remotely</entry>
+                                <entry>Required </entry>
+                                <entry>Permitted value: <p><codeph>yes</codeph>
+                                        <codeph>no</codeph></p></entry>
+                                <entry>no</entry>
+                            </row>
+                            <row>
+                                <entry>enablesrtp</entry>
+                                <entry>Enable SRTP</entry>
+                                <entry>Required </entry>
+                                <entry>Permitted value: <p><codeph>yes</codeph>
+                                        <codeph>no</codeph></p></entry>
+                                <entry>no</entry>
+                            </row>
+                            <row>
+                                <entry>t38support</entry>
+                                <entry>T.38 Support</entry>
+                                <entry>Required </entry>
+                                <entry>Permitted value: <p><codeph>yes</codeph>
+                                        <codeph>no</codeph></p></entry>
+                                <entry>no</entry>
+                            </row>
+                            <row>
+                                <entry>dtmfmode</entry>
+                                <entry>DTMF Mode</entry>
+                                <entry>Required </entry>
+                                <entry>Permitted value: <p><codeph>rfc4733</codeph>
+                                        <codeph>info</codeph>
+                                        <codeph>inband</codeph>
+                                        <codeph>auto</codeph></p></entry>
+                                <entry>rfc4733</entry>
+                            </row>
+                            <row>
+                                <entry>transport</entry>
+                                <entry>Transport</entry>
+                                <entry>Required </entry>
+                                <entry>Permitted value: <p><codeph>udp</codeph>
+                                        <codeph>tcp</codeph>
+                                        <codeph>tls</codeph></p></entry>
+                                <entry>udp</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+    </refbody>
+</reference>

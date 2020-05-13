@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_yxv_phw_rdb">
+    <title>Share Trunks by SLA</title>
+    <shortdesc>After setting up SLA stations on PBX and configuring BLF keys on IP phones, users can
+        monitor SLA trunks, receive calls from SLA trunks, and make outbound calls through SLA
+        trunks.</shortdesc>
+    <conbody>
+        <section id="section_lzg_yhw_rdb">
+            <title><b>Make outbound calls</b></title>
+            <p>SLA station can monitor the status of SLA trunk according to BLF keys status.</p>
+            <p>
+                <note>For different phone models, there may be some difference in the status of BLF
+                    keys.</note>
+            </p>
+            <p>
+                <ul id="ul_xd2_nkp_wfb">
+                    <li>If the BLF key used to monitor SLA trunk turns green, it indicates that the
+                        trunk is available, and the associated SLA station can make outbound calls
+                        through this trunk.
+                            <?oxy_comment_start author="Becky" timestamp="20190929T174316+0800" comment="If the BLF key shows the shared line is idle, the boss or the assistant could press the BLF key to use the line. After hearing a dial tone, he/she could dial the external number to call out." flag="done"?><p>To
+                            make outbound calls, the SLA station should press BLF key first, and
+                            dial the external number out after hearing a dial
+                        tone.</p><?oxy_comment_end?></li>
+                    <li>If the BLF key used to monitor SLA trunk turns red, it indicates that the
+                        trunk is in use. Other SLA stations can not use the trunk to make outbound
+                        calls now.</li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_qnr_13w_rdb">
+            <title>Handle incoming calls</title>
+            <p>When an external call reaches the SLA trunk, all phones of associated SLA stations
+                will ring, and BLF keys on phone devices will flash in red. Any SLA stations can
+                answer the call by pressing BLF keys.</p>
+        </section>
+        <section id="section_zzx_b3w_rdb">
+            <title>Barge-in an active call</title>
+            <p>If <xref href="sla_sample_configuration.dita#concept_vpg_l2w_rdb/sla-barge-in"
+                        ><uicontrol>Allow Barge</uicontrol></xref> is enabled for an SLA trunk,
+                other SLA stations are allowed to join an active call.</p>
+            <?oxy_comment_start author="Becky" timestamp="20190930T144032+0800" comment="When there is an active call between an SLA station and an external number through the shared line, other SLA stations can join the call by pressing the BLF key. " flag="done"?>
+            <p>When an SLA station is in a call with other users using this SLA trunk, other SLA
+                stations can join the active call by pressing the BLF key.</p><?oxy_comment_end?>
+        </section>
+        <section id="section_t4b_33w_rdb">
+            <title>Hold and retrieve calls</title>
+            <p>During the call, the SLA station can press the BLF key to hold and retrieve the call.
+                Whether an SLA station can retrieve a call or not depends on the <uicontrol>Hold
+                    Access</uicontrol>.<note><uicontrol>Hold Access</uicontrol> of SLA station has a
+                    higher priority than the <uicontrol>Hold Access</uicontrol> of a
+                    trunk.</note><ul id="ul_q1t_lgc_3jb">
+                    <li>If <uicontrol>Hold Access</uicontrol> is set to <uicontrol>Open</uicontrol>,
+                        other stations that share the trunk can press BLF key to retrieve the
+                        call.</li>
+                    <li>If <uicontrol>Hold Access</uicontrol> is set to
+                            <uicontrol>Private</uicontrol>, the call can be retrieved only by the
+                        station that previously put the call on hold.</li>
+                </ul></p>
+        </section>
+    </conbody>
+    <related-links>
+        <link href="sla_sample_configuration.dita"/>
+    </related-links>
+</concept>

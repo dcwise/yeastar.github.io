@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_yhh_2xg_tdb">
+    <title>Configure Cellular Network on 4G Module</title>
+    <shortdesc>Set your 4G module to cellular network and set the module mode to Voice and
+        Data.</shortdesc>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Check if your 4G module is installed in the correct slot:</cmd>
+                <choices id="choices_hrj_qxg_tdb">
+                    <choice>S412: Slot3</choice>
+                    <choice>S20: Slot1</choice>
+                    <choice>S50: Slot1</choice>
+                    <choice>S100: Slot1 on Expand Board1</choice>
+                    <choice>S300: Slot1 on Expand Board1</choice>
+                </choices>
+            </step>
+            <step>
+                <cmd>Log in the PBX web interface, go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol>PBX</uicontrol>
+                        <uicontrol>Trunks</uicontrol>
+                    </menucascade>, edit your 4G trunk.</cmd>
+                <info><image href="../Images/admin/4g_trunk_data.png" width="650"
+                        id="image_ryt_vxg_tdb"/></info>
+                <choices>
+                    <choice><uicontrol>Mode</uicontrol>: Select <uicontrol>Voice and
+                            Data</uicontrol>.</choice>
+                    <choice><uicontrol>Network Type</uicontrol>: Select the network type according
+                        the network environment of the PBX.<p>For example, if the 4G network is
+                            better than 3G network in the PBX location, select <uicontrol>LTE
+                                Only</uicontrol>.</p></choice>
+                </choices>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol>, reboot the PBX to take effect.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>
+<?oxy_options track_changes="on"?>

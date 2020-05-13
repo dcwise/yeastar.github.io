@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_nkr_3qt_c2b">
+    <title>Add Room Types</title>
+    <shortdesc>You can classify and price the hotel rooms according to the type of bed, number of
+        occupants, number of bed, decor, specific furnishings or features.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/06/11"/>
+            <!--Carol-->
+            <revised modified="2018/06/11"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Hotel</uicontrol>
+                        <uicontrol>Room Management</uicontrol>
+                        <uicontrol>Room Type</uicontrol>
+                    </menucascade>, click <uicontrol>Add</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Set the room type settings.</cmd>
+                <info><image href="../Images/admin/hotel_add_room_type.png" id="image_e5z_xrt_c2b"
+                        width="650"/></info>
+                <choices>
+                    <choice><uicontrol>Room Type</uicontrol>: Set a name for the room type.</choice>
+                    <choice><uicontrol>VAT</uicontrol>: Set the Value Added Tax (VAT). <p>For
+                            example, if a room price is 200$, and the VAT is 10%, the customer
+                            should pay 220$ (200+200*10%) for the room per day.</p></choice>
+                    <choice><uicontrol>Weekday/Weekend</uicontrol>: Set the week days and weekend
+                        days. <p>Generally, the weekday rate and weekend rate will be different.
+                        </p></choice>
+                    <choice><uicontrol>Weekday Price</uicontrol>: Set weekday price.</choice>
+                    <choice><uicontrol>Weekend Price</uicontrol>: Set weekend price.</choice>
+                    <choice><uicontrol>Holiday Price</uicontrol>: Set holiday price.</choice>
+                    <choice><uicontrol>Allow Hourly Stay</uicontrol>: Enable this option, and the
+                        room type can be used as an hourly room.</choice>
+                    <choice><uicontrol>Available Time</uicontrol>: Set when the room can be used as
+                        hourly room. Customers can only use this room as hourly room in the period
+                        of time.</choice>
+                    <choice><uicontrol>Initial Time</uicontrol>: Set a period of time used to bill
+                        initial price.</choice>
+                    <choice><uicontrol>Initial Price</uicontrol>: Set the cost of the room in the
+                        initial time.</choice>
+                    <choice><uicontrol>Hourly Price</uicontrol>: If the customer stays in the hourly
+                        room over the “Initial Time”, the price will be charged by hour.<p>Example:
+                            If the hourly room set as below:</p><p>
+                            <ul id="ul_afx_2tt_c2b">
+                                <li>Initial Time: 3 hours</li>
+                                <li>Initial Price: 88 $</li>
+                                <li>Hourly Price: 35 $</li>
+                            </ul>
+                        </p><p>The customer stays in the room for 4 hours and 20 minutes, he should
+                            pay 158 $ (88+35*2).</p></choice>
+                </choices>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

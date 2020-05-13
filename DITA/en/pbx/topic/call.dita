@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+  PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topicID">
+   <title>Inbound Call</title>
+   <body>
+      <p>If the trunk’s API has Inbound Call Answering Control
+enabled, then when the trunk answers call, the PBX will send an
+Incoming event to the application server.</p>
+      <p>
+         <b>Report sample:</b>
+      </p>
+      <p>
+{“action”:“Incoming”,“callid”:“1495707950.331”,“inbound”:{“from”:“1000”,“to”:“1002”,“trunk”:“sip-142”,“inboundid”:“1495707950.331”}}</p>
+      <p>
+         <b>Report parameters descriptions:</b>
+      </p>
+      <table>
+         <tgroup cols="4">
+            <thead>
+               <row>
+                  <entry>
+                     <b>Parameter Name</b>
+                  </entry>
+                  <entry>
+                     <b>Type</b>
+                  </entry>
+                  <entry>
+                     <b>Description</b>
+                  </entry>
+                  <entry>
+                     <b>Sample</b>
+                  </entry>
+               </row>
+            </thead>
+            <tbody>
+               <row>
+                  <entry>
+                     <b>&lt;action&gt;</b>
+                  </entry>
+                  <entry>String</entry>
+                  <entry>Call coming in</entry>
+                  <entry>Incoming</entry>
+               </row>
+               <row>
+                  <entry>
+                     <b>&lt;callid&gt;</b>
+                  </entry>
+                  <entry>String</entry>
+                  <entry>A unique identifier of the call</entry>
+                  <entry>1495707950.331</entry>
+               </row>
+               <row>
+                  <entry>
+                     <b>&lt;inbound&gt;</b>
+                  </entry>
+                  <entry>Object</entry>
+                  <entry>Inbound call</entry>
+                  <entry/>
+               </row>
+               <row>
+                  <entry>
+                     <b>&lt;trunk&gt;</b>
+                  </entry>
+                  <entry>String</entry>
+                  <entry>The trunk name</entry>
+                  <entry>sip-142</entry>
+               </row>
+               <row>
+                  <entry>
+                     <b>&lt;inboundid&gt;</b>
+                  </entry>
+                  <entry>String</entry>
+                  <entry>Inbound ID</entry>
+                  <entry>1495707950.331</entry>
+               </row>
+               <row>
+                  <entry>
+                     <b>&lt;from&gt;</b>
+                  </entry>
+                  <entry>String</entry>
+                  <entry>The caller’s number</entry>
+                  <entry>1000</entry>
+               </row>
+               <row>
+                  <entry>
+                     <b>&lt;to&gt;</b>
+                  </entry>
+                  <entry>String</entry>
+                  <entry>The callee’ number</entry>
+                  <entry>1002</entry>
+               </row>
+            </tbody>
+         </tgroup>
+      </table>
+   </body>
+</topic>

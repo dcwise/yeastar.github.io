@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>Admin Guide</title>
+    <topicmeta>
+        <category>Admin Guide</category>
+        <prodinfo>
+            <prodname>
+                <data><ph keyref="product_name"/></data>
+                <data><ph product="s-series">30.13.0.30</ph>
+                    <ph product="cloudpbx">81.13.0.30</ph>
+                    <ph product="k2">80.13.0.30</ph></data>
+            </prodname>
+        </prodinfo>
+    </topicmeta>
+    <keydef keys="product_name" product="s-series">
+        <topicmeta>
+            <keywords>
+                <keyword>Yeastar S-Series VoIP PBX</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="product_name" product="cloudpbx">
+        <topicmeta>
+            <keywords>
+                <keyword>Yeastar Cloud PBX</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="product_name" product="k2">
+        <topicmeta>
+            <keywords>
+                <keyword>Yeastar K2 IPPBX</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <topicref href="../topic/admin_guide.dita">
+        <topichead navtitle="Extensions">
+            <topicref href="../topic/extensions.dita"/>
+            <topichead navtitle="Extension Basic Setup">
+                <topichead navtitle="Create Extensions">
+                    <topicref href="../topic/extension-creation-overview.dita"/>
+                    <topicref href="../topic/create-an-extension.dita" product="cloudpbx"/>
+                    <topicref href="../topic/create-a-sip-extension.dita" product="s-series k2"/>
+                    <topicref href="../topic/create-an-iax-extension.dita" product="s-series k2"/>
+                    <topicref href="../topic/create-an-fxs-extension.dita" product="s-series"/>
+                    <topicref href="../topic/bulk-create-extensions.dita"/>
+                </topichead>
+                <topichead navtitle="Register Extensions">
+                    <topicref href="../topic/register-a-sip-extension.dita"/>
+                    <topicref href="../topic/register-an-iax-extension.dita" product="k2 s-series"/>
+                    <topicref href="../topic/register-a-remote-extension.dita" product="s-series k2"/>
+                </topichead>
+                <topichead navtitle="Manage Extensions">
+                    <topicref href="../topic/change-extension-range.dita"/>
+                    <topicref href="../topic/edit-extensions.dita"/>
+                    <topicref href="../topic/bulk-edit-extension-names-and-emails.dita"/>
+                    <topicref href="../topic/delete-extensions.dita"/>
+                    <topicref href="../topic/import-or-export-extensions.dita"/>
+                    <topicref href="../topic/send-extension-information.dita" product="cloudpbx"/>
+                    <topicref href="../topic/edit-welcome-email-template.dita" product="cloudpbx"/>
+                </topichead>
+            </topichead>
+            <topichead navtitle="Extension Groups">
+                <topicref href="../topic/create-an-extension-group.dita"/>
+                <topicref href="../topic/manage-extension-groups.dita"/>
+            </topichead>
+            <topichead navtitle="Presence">
+                <topicref href="../topic/extension_presence.dita"/>
+                <topicref href="../topic/set-call-forwarding-rules-and-presence-status.dita"/>
+                <topicref href="../topic/set_call_forwarding_prompt.dita"/>
+                <topicref href="../topic/activate_or_deactivate_call_forwarding.dita"/>
+            </topichead>
+            <topichead navtitle="Voicemail">
+                <topicref href="../topic/voicemail.dita"/>
+                <topicref href="../topic/enable-or-disable-voicemail-function.dita"/>
+                <topicref href="../topic/change-voicemail-pin-password.dita"/>
+                <topicref href="../topic/voicemail-to-email.dita"/>
+                <topicref href="../topic/check_voicemail_messages.dita"/>
+                <topicref href="../topic/change_voicemail_greetings.dita"/>
+                <topicref href="../topic/manage-voicemail-messages-centrally.dita"/>
+                <topicref href="../topic/global_voicemail_settings.dita"/>
+                <topicref href="../topic/voicemail_menu.dita"/>
+            </topichead>
+            <topicref href="../topic/mobility-extension.dita" product="k2 s-series"/>
+            <topichead navtitle="Call Monitoring">
+                <topicref href="../topic/call-monitoring-overview.dita"/>
+                <topicref href="../topic/configure-call-monitoring.dita"/>
+            </topichead>
+            <topichead navtitle="Call Permission">
+                <topicref href="../topic/set-call-permission-of-an-extension.dita"/>
+            </topichead>
+            <topichead navtitle="Extension Settings">
+                <topicref href="../topic/sip-extension-settings.dita"/>
+                <topicref href="../topic/iax-extension-settings.dita" product="s-series k2"/>
+                <topicref href="../topic/fxs-extension-settings.dita" product="s-series"/>
+            </topichead>
+        </topichead>
+        <topichead navtitle="Contacts">
+            <mapref href="contacts.ditamap" format="ditamap"/>
+        </topichead>
+        <topichead navtitle="Trunks">
+            <topicref href="../topic/trunk_management.dita">
+                <topicmeta>
+                    <shortdesc>Set up trunks to make outbound calls or receive inbound
+                        calls.</shortdesc>
+                </topicmeta>
+            </topicref>
+            <topichead navtitle="VoIP Trunks">
+                <topicref href="../topic/voip_trunk.dita"/>
+                <topichead navtitle="Create a VoIP Trunk">
+                    <topicref href="../topic/voip_trunk_setup.dita"/>
+                    <topicref href="../topic/set-up-voip-trunk-by-templates.dita"/>
+                    <topicref href="../topic/set_up_a_voip_register_trunk.dita"/>
+                    <topicref href="../topic/set_up_a_voip_peer_trunk.dita" product="s-series k2"/>
+                    <topicref href="../topic/set-up-peer-trunk-cloud.dita" product="cloudpbx"/>
+                    <topicref href="../topic/set_up_a_voip_account_trunk.dita"/>
+                </topichead>
+                <topicref href="../topic/manage-voip-trunk.dita"/>
+                <topicref href="../topic/voip-trunk-settings.dita"/>
+            </topichead>
+            <topichead navtitle="WebRTC Trunks" product="cloudpbx">
+                <topicref href="../topic/webrtc_click_to_call.dita" product="cloudpbx"/>
+                <topicref href="../topic/set_up_webrtc_click_to_call.dita" product="cloudpbx"/>
+                <topicref href="../topic/webrtc-trunk-settings.dita" product="cloudpbx"/>
+            </topichead>
+            <topichead navtitle="PSTN Trunks" product="s-series">
+                <topicref href="../topic/pstn_trunk.dita" product="s-series"/>
+                <topicref href="../topic/set-up-a-pstn-trunk.dita"/>
+                <topicref href="../topic/pstn-trunk-settings.dita"/>
+            </topichead>
+            <topichead navtitle="GSM/3G/4G Trunks" product="s-series">
+                <topicref href="../topic/gsm_3g_4g_trunk.dita" product="s-series"/>
+                <topicref href="../topic/create-4g.dita"/>
+                <topicref href="../topic/install_gsm_3g_4g.dita"/>
+                <topicref href="../topic/gsm-3g-4g-trunk-settings.dita"/>
+                <topicref href="../topic/4g_lte_module_frequency_bands.dita"/>
+            </topichead>
+            <topichead navtitle="ISDN E1/T1 Trunks" product="s-series">
+                <topicref href="../topic/e1_t1_j1_trunk.dita" product="s-series"/>
+                <topicref href="../topic/pri_crossover_cable.dita"/>
+                <topicref href="../topic/set_up_e1_t1_j1_trunk.dita"/>
+                <topicref href="../topic/e1_t1_j1_trunk_settings.dita"/>
+            </topichead>
+            <topichead navtitle="ISDN BRI Trunks" product="s-series">
+                <topicref href="../topic/bri_trunk.dita" product="s-series"/>
+                <topicref href="../topic/bri_cable.dita"/>
+                <topicref href="../topic/set_up_a_bri_trunk.dita"/>
+                <topicref href="../topic/bri_trunk_settings.dita"/>
+            </topichead>
+            <topicref href="../topic/seize_a_line_to_call.dita" product="s-series"/>
+        </topichead>
+        <topichead navtitle="Call Control">
+            <topichead navtitle="Emergency Numbers">
+                <topicref href="../topic/add-an-emergency-number.dita"/>
+                <topicref href="../topic/manage-emergency-numbers.dita"/>
+            </topichead>
+            <topichead navtitle="Time Conditions">
+                <topicref href="../topic/time_condition.dita"/>
+                <topicref href="../topic/set-time-conditions.dita"/>
+                <topicref href="../topic/manage-time-conditions.dita"/>
+                <topicref href="../topic/time_condition_examples.dita"/>
+                <topicref href="../topic/time_condition_override.dita"/>
+                <topicref href="../topic/monitor_time_condition_state.dita"/>
+            </topichead>
+            <topichead navtitle="Inbound Routes">
+                <topicref href="../topic/inbound_route.dita"/>
+                <topicref href="../topic/add_an_inbound_route.dita"/>
+                <topicref href="../topic/manage-inbound-routes.dita"/>
+                <topicref href="../topic/import-inbound-routes.dita"/>
+                <topicref href="../topic/adapt_caller_id.dita"/>
+                <topichead navtitle="Inbound Route Examples">
+                    <topicref href="../topic/inbound_route_examples.dita"/>
+                    <topicref href="../topic/did_routing.dita"/>
+                    <topicref href="../topic/route-inbound-calls-based-on-callerid.dita"/>
+                </topichead>
+                <topichead navtitle="Distinguish Inbound Calls">
+                    <topicref href="../topic/set_distinctive_ringtone.dita"/>
+                    <topicref href="../topic/distinguish_inbound_calls_by_dnis_name.dita"/>
+                    <topicref href="../topic/distinguish_inbound_calls_by_caller_id.dita"/>
+                </topichead>
+            </topichead>
+            <topichead navtitle="Outbound Routes">
+                <topicref href="../topic/outbound_route.dita"/>
+                <topicref href="../topic/dial_patterns_of_outbound_route.dita"/>
+                <topicref href="../topic/add_outbound_route.dita"/>
+                <topicref href="../topic/outbound_route_examples.dita"/>
+                <topicref href="../topic/import-outbound-routes.dita"/>
+                <topicref href="../topic/manage-outbound-routes.dita"/>
+            </topichead>
+            <topichead navtitle="Outbound Restriction">
+                <topicref href="../topic/outbound-restriction.dita"/>
+                <topicref href="../topic/restrict_outbound_calls.dita"/>
+                <topicref href="../topic/manage-outbound-restriction-rules.dita"/>
+            </topichead>
+            <topichead navtitle="AutoCLIP Routes">
+                <topicref href="../topic/auto_clip.dita"/>
+                <topicref href="../topic/set_up_autoclip_routes.dita"/>
+            </topichead>
+            <topichead navtitle="SLA Stations">
+                <topicref href="../topic/sla.dita"/>
+                <topicref href="../topic/sla_sample_configuration.dita"/>
+                <topicref href="../topic/sla_operations.dita"/>
+            </topichead>
+        </topichead>
+        <topicref href="../topic/call_features.dita">
+            <topicref href="../topic/ivr.dita">
+                <topicref href="../topic/set_up_an_ivr.dita"/>
+                <topicref href="../topic/set_an_ivr_prompt.dita"/>
+                <topicref href="../topic/change_ivr_prompt_clip.dita"/>
+                <topicref href="../topic/dial_by_name.dita"/>
+                <topicref href="../topic/forward-incoming-calls-to-an-external-number-with-IVR.dita"/>
+            </topicref>
+            <topicref href="../topic/ring_group.dita">
+                <topicref href="../topic/add_a_ring_group.dita"/>
+            </topicref>
+            <topicref href="../topic/queue.dita">
+                <topicref href="../topic/add_a_queue.dita"/>
+                <topicref href="../topic/queue_settings.dita"/>
+                <topicref href="../topic/log_in_out_a_queue.dita"/>
+                <topicref href="../topic/monitor_agent_status_by_blf.dita"/>
+            </topicref>
+            <topicref href="../topic/conference.dita">
+                <topicref href="../topic/add_a_conference.dita"/>
+                <topicref href="../topic/join_a_conference.dita"/>
+                <topicref href="../topic/conference_voice_menu.dita"/>
+            </topicref>
+            <topicref href="../topic/call_pickup.dita">
+                <topicref href="../topic/extension_call_pickup.dita">
+                    <topicref href="../topic/pick_up_an_extension_call_by_blf.dita"/>
+                </topicref>
+                <topicref href="../topic/group_call_pickup.dita">
+                    <topicref href="../topic/add_a_pickup_group.dita"/>
+                    <topicref href="../topic/pick_up_a_group_member_call_by_blf.dita"/>
+                </topicref>
+            </topicref>
+            <topicref href="../topic/call_transfer.dita">
+                <topicref href="../topic/attended_transfer.dita"/>
+                <topicref href="../topic/blind_transfer.dita"/>
+            </topicref>
+            <topicref href="../topic/busy-camp-on.dita"/>
+            <topicref href="../topic/callback.dita">
+                <topicref href="../topic/set_up_callback.dita"/>
+            </topicref>
+            <topicref href="../topic/speed_dial.dita"/>
+            <topicref href="../topic/disa.dita">
+                <topicref href="../topic/set_up_disa.dita"/>
+            </topicref>
+            <topicref href="../topic/intercom_and_paging.dita">
+                <topicref href="../topic/set_1-way_paging.dita"/>
+                <topicref href="../topic/set_up_2-way_intercom.dita"/>
+                <topicref href="../topic/set_up_1-way_multicast_paging.dita"/>
+                <topicref href="../topic/make_an_intercom_call.dita"/>
+            </topicref>
+            <topicref href="../topic/call_parking.dita">
+                <topicref href="../topic/park_calls_by_blf.dita"/>
+                <topicref href="../topic/configure_call_parking_caller_id.dita"/>
+            </topicref>
+            <topicref href="../topic/fax.dita">
+                <topicref href="../topic/fax_to_email.dita"/>
+                <topicref href="../topic/send_fax_from_the_pbx.dita" product="s-series"/>
+                <topicref href="../topic/receive_fax_through_a_dedicated_trunk.dita"/>
+                <topicref href="../topic/receive_fax_via_fax_detection.dita"/>
+                <topicref href="../topic/edit_fax_to_email_template.dita"/>
+            </topicref>
+            <topicref href="../topic/pin-list.dita"/>
+            <topicref href="../topic/blacklist_whitelist.dita"/>
+            <topichead navtitle="SMS" product="s-series">
+                <topicref href="../topic/send_sms_to_email.dita"/>
+                <topicref href="../topic/send_email_to_sms.dita"/>
+            </topichead>
+        </topicref>
+        <topichead navtitle="Call Recording">
+            <topicref href="../topic/call_recording.dita"/>
+            <topicref href="../topic/one_touch_record.dita"/>
+            <topicref href="../topic/auto-recording.dita">
+                <topicref href="../topic/set-up-auto-recording.dita"/>
+                <topicref href="../topic/pause_resume_call_recording.dita"/>
+                <topicref href="../topic/monitor-auto-recording-status.dita"/>
+                <topicref href="../topic/share_recording_files.dita" product="s-series"/>
+                <topicref href="../topic/auto_clean_up_recording_files.dita"/>
+                <topicref href="../topic/manage_call_recording_files.dita"/>
+                <topicref href="../topic/grant_recording_permissions_to_users.dita"/>
+            </topicref>
+        </topichead>
+        <topicref href="../topic/voice_prompts.dita">
+            <topicref href="../topic/system_prompt.dita">
+                <topicref href="../topic/change_system_prompt.dita"/>
+                <topicref href="../topic/customize_system_prompt.dita"/>
+                <topicref href="../topic/change_an_extension_system_prompt.dita"/>
+            </topicref>
+            <topicref href="../topic/music_on_hold.dita">
+                <topicref href="../topic/add_a_custom_moh_playlist.dita"/>
+                <topicref href="../topic/change_the_moh_playlist_dita.dita"/>
+            </topicref>
+            <topicref href="../topic/custom_prompt.dita">
+                <topicref href="../topic/requirements_of_custom_audio_file.dita"/>
+                <topicref href="../topic/upload_a_custom_prompt.dita"/>
+                <topicref href="../topic/record_a_custom_prompt.dita"/>
+                <topicref href="../topic/play_a_custom_prompt.dita"/>
+                <topicref href="../topic/convert_audio_files_via_wavepad.dita"/>
+                <topicref href="../topic/convert_audio_files_via_online_tool.dita"/>
+            </topicref>
+            <topicref href="../topic/set_prompts_for_failed_calls.dita"/>
+        </topicref>
+        <topichead navtitle="Network" product="k2 s-series">
+            <topichead navtitle="Basic Network">
+                <topicref href="../topic/general-network-overview.dita"/>
+                <topicref href="../topic/configure-static-ip-address.dita"/>
+                <topicref href="../topic/configure_dhcp.dita"/>
+                <topicref href="../topic/configure_pppoe.dita"/>
+            </topichead>
+            <topichead navtitle="Cellular Network Configuration" product="s-series">
+                <topicref href="../topic/configure_cellular_network_on_4g_module.dita"/>
+                <topicref href="../topic/enable_cellular_network_on_the_pbx.dita"/>
+                <topicref href="../topic/configure_lte_dial_up.dita"/>
+                <topicref href="../topic/access_pbx_via_cellular_network.dita"/>
+                <topicref href="../topic/usage-scenarios-of-cellular-network.dita"/>
+                <topicref href="../topic/manage_cellular_data.dita"/>
+            </topichead>
+            <topichead navtitle="VLAN" product="s-series">
+                <topicref href="../topic/vlan-introduction.dita"/>
+                <topicref href="../topic/vlan.dita"/>
+            </topichead>
+            <topichead navtitle="OpenVPN Client" product="k2 s-series">
+                <topicref href="../topic/openvpn_client.dita"/>
+                <topicref href="../topic/connect-openvpn.dita"/>
+            </topichead>
+            <topichead navtitle="DDNS">
+                <topicref href="../topic/ddns.dita"/>
+                <topicref href="../topic/set-up-no-ip-ddns.dita"/>
+            </topichead>
+            <topichead navtitle="Port Forwarding">
+                <topicref href="../topic/port_forwarding.dita"/>
+                <topicref href="../topic/set-up-port-forwarding-on-mikrotik-router.dita"/>
+            </topichead>
+            <topichead navtitle="NAT">
+                <topicref href="../topic/nat.dita"/>
+                <topicref href="../topic/set_nat_with_external_ip_address.dita"/>
+                <topicref href="../topic/set_nat_with_external_host.dita"/>
+                <topicref href="../topic/set_nat_with_stun.dita"/>
+            </topichead>
+            <topichead navtitle="Static Route">
+                <topicref href="../topic/static_route.dita"/>
+                <topicref href="../topic/system-route-entries.dita"/>
+                <topicref href="../topic/add-a-static-route.dita"/>
+                <topicref href="../topic/manage-the-static-routes.dita"/>
+                <topicref href="../topic/dedicated-sip-trunking.dita"/>
+            </topichead>
+        </topichead>
+        <topicref href="../topic/system_management.dita">
+            <topicref href="../topic/system_general_settings.dita">
+                <topicref href="../topic/system_preferences.dita"/>
+                <topicref href="../topic/feature_code.dita"/>
+                <topicref href="../topic/sip_settings.dita"/>
+                <topicref href="../topic/iax_settings.dita" product="s-series"/>
+                <topicref href="../topic/jitter_buffer_settings.dita" product="s-series"/>
+            </topicref>
+            <topicref href="../topic/secuirty.dita">
+                <topicref href="../topic/firewall.dita" product="s-series">
+                    <topicref href="../topic/examples_of_firewall_rules.dita"/>
+                </topicref>
+                <topicref href="../topic/ip_auto_defense.dita" product="s-series"/>
+                <topicref href="../topic/blocked_ip_address.dita"/>
+                <topicref href="../topic/service.dita"/>
+                <topicref href="../topic/database-grant.dita" product="s-series">
+                    <topicref href="../topic/cdr-database.dita"/>
+                </topicref>
+                <topicref href="../topic/certificates.dita" product="s-series"/>
+            </topicref>
+            <topicref href="../topic/user_permission.dita">
+                <topicref href="../topic/configure_user_permission.dita"/>
+            </topicref>
+            <topicref href="../topic/date_and_time.dita">
+                <topicref href="../topic/change_the_pbx_time.dita"/>
+                <topicref href="../topic/synchronize_time_with_ntp_server.dita"
+                    product="k2 s-series"/>
+            </topicref>
+            <topicref href="../topic/email.dita"/>
+            <topicref href="../topic/auto_cleanup.dita" product="cloudpbx"/>
+            <topicref href="../topic/storage.dita" product="k2 s-series">
+                <topicref href="../topic/add_a_windows_network_drive.dita"/>
+                <topicref href="../topic/auto_cleanup.dita"/>
+                <topicref href="../topic/set_up_file_share.dita"/>
+                <topicref href="../topic/set_up_ftp_file_share.dita"/>
+            </topicref>
+            <topicref href="../topic/event_center.dita">
+                <topicref href="../topic/add_notification_contacts.dita"/>
+            </topicref>
+            <topicref href="../topic/hot_standby.dita" product="k2 s-series">
+                <topicref href="../topic/set_up_hot_standby.dita"/>
+                <topicref href="../topic/set_failover_notification_of_hot_standby.dita"/>
+            </topicref>
+            <topicref href="../topic/remote_management.dita"/>
+            <topichead navtitle="SNMP" product="k2 s-series">
+                <topicref href="../topic/snmp-overview.dita"/>
+                <topicref href="../topic/configure-pbx-to-communicate-with-an-snmp-manager.dita"/>
+                <topicref href="../topic/monitor-yeastar-pbx-with-nagios-snmp.dita"/>
+                <topicref href="../topic/monitor-yeastar-pbx-with-nagios.dita"/>
+                <topicref href="../topic/yeastar-pbx-mib.dita"/>
+            </topichead>
+            <topicref href="../topic/api.dita"/>
+        </topicref>
+        <topicref href="../topic/multisite_interconnect.dita" product="s-series">
+            <topicref href="../topic/interconnect_multiple_s-series_voip_pbxs.dita"
+                product="s-series">
+                <topicref href="../topic/plan_and_assign_extensions.dita" product="s-series"/>
+                <topicref href="../topic/forward_ports_for_headquarter_pbx.dita" product="s-series"/>
+                <topicref href="../topic/set_up_headquarter_pbx.dita" product="s-series"/>
+                <topicref href="../topic/connect_brancha_pbx_and_headquarter.dita"
+                    product="s-series"/>
+                <topicref href="../topic/connect_branchb_pbx_and_headquarter.dita"
+                    product="s-series"/>
+            </topicref>
+        </topicref>
+        <topicref href="../topic/maintenance.dita">
+            <topicref href="../topic/upgrade_firmware.dita">
+                <topicref href="../topic/upgrade-firmware-automatically.dita"/>
+                <topicref href="../topic/browse_a_local_file_to_upgrade.dita" product="s-series"/>
+                <topicref href="../topic/upgrade_firmware_by_http_method.dita" product="s-series"/>
+                <topicref href="../topic/upgrade_firmware_by_tftp_method.dita" product="s-series"/>
+            </topicref>
+            <topicref href="../topic/backup_and_restore.dita">
+                <topicref href="../topic/create_a_backup_file.dita"/>
+                <topicref href="../topic/upload_a_backup_file.dita"/>
+                <topicref href="../topic/restore_a_backup_file.dita"/>
+                <topicref href="../topic/schedule_auto_backup.dita" product="s-series k2"/>
+            </topicref>
+            <topicref href="../topic/reboot_the_pbx.dita"/>
+            <topicref href="../topic/reset_the_pbx.dita"/>
+            <topicref href="../topic/system_log.dita"/>
+            <topicref href="../topic/operation_log.dita"/>
+            <topicref href="../topic/troubleshooting.dita">
+                <topicref href="../topic/access_the_pbx_via_ssh_s.dita" product="s-series"/>
+                <topicref href="../topic/access_the_pbx_via_ssh_cloud.dita" product="cloudpbx"/>
+                <topicref href="../topic/access_the_pbx_via_ftp.dita" product="s-series"/>
+                <topicref href="../topic/capture_ethernet_packet.dita"/>
+                <topicref href="../topic/monitor_physical_port.dita" product="s-series"/>
+                <topicref href="../topic/ping_ip_address.dita"/>
+                <topicref href="../topic/trace_route.dita"/>
+            </topicref>
+        </topicref>
+        <topicref href="../topic/pbx_monitor.dita"/>
+        <topicref href="../topic/resource_monitor.dita"/>
+        <topicref href="../topic/cdr_and_recordings.dita">
+            <topicref href="../topic/search_cdr_and_recordings.dita"/>
+            <topicref href="../topic/fuzzy_search_cdr_and_recordings.dita"/>
+            <topicref href="../topic/download_cdr_and_recordings.dita"/>
+        </topicref>
+    </topicref>
+</map>

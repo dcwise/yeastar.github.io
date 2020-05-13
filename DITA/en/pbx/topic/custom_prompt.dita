@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_zrr_ffk_5cb">
+  <title>Custom Prompt</title>
+  <body>
+    <p>The default voice prompts and announcements in the system are suitable for almost every
+      situation. </p>
+    <p>However, you may want to use your own voice prompt to make it more meaningful and suitable
+      for your case. In this case, you need to upload a custom prompt to the system or record a new
+      prompt and apply it to the place you want to change.</p>
+  </body>
+</topic>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="query-and-use-contacts-on-ip-phone">
+    <title>Query and Use Contacts on an IP Phone</title>
+    <shortdesc>After assigning Contacts permission to an IP phone, the IP phone synchronizes
+        external contacts information from PBX server, and allows easy contact dialing and call
+        matching based on Caller ID.</shortdesc>
+    <body>
+        <section id="section_p3g_mxx_flb">
+            <title>Requirements</title>
+            <p>To query and use Contacts on IP phone, the following requirements must be met:</p>
+            <p>
+                <dl>
+                    <dlentry>
+                        <dt>PBX requirements:</dt>
+                        <dd>
+                            <note product="s-series">Yeastar S50, S100, and S300 support Contacts
+                                feature.</note>
+                        </dd>
+                        <dd product="s-series">PBX firmware: 30.13.0.30 or later.</dd>
+                        <dd product="k2">PBX firmware: 80.13.0.30 or later.</dd>
+                        <dd product="cloudpbx">PBX firmware: 81.13.0.30 or later.</dd>
+                    </dlentry>
+                </dl>
+                <dl>
+                    <dlentry>
+                        <dt>IP phone requirements:</dt>
+                        <dd>Only support to assign Contacts permission to the following Yealink IP
+                            phones currently.<note>A maximum of 1000 company contacts and 300
+                                personal contacts can be displayed on Yealink IP phone.</note></dd>
+                        <dd>
+                            <ul conref="v30.13.0.30.dita#v30.13.0.b/ul_vt1_svv_clb"
+                                id="ul_pj3_ygf_jlb">
+                                <li/>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                </dl>
+            </p>
+        </section>
+        <section id="section_lxr_2ws_3lb">
+            <title>Assign Contacts permission to an IP phone</title>
+            <p>To query and use Contacts on an IP phone, you should assign Contacts permission to
+                the IP phone via PBX's Auto Provisioning.</p>
+            <p>
+                <note>
+                    <ul id="ul_gsw_jnz_3lb">
+                        <li>To display company contacts on an IP phone, you need to <xref
+                                href="configure-company-contacts-permissions-for-users.dita#manage-company-contacts-permissions-for-contacts/section_gsj_1nf_skb"
+                                >configure Company Contacts permissions</xref> for the user.</li>
+                        <li>If you change user's permission of viewing company contacts, you should
+                            go to <uicontrol>Auto Provisioning</uicontrol> App to update IP phone
+                            settings, or the permission change will not take effect.</li>
+                    </ul>
+                </note>
+            </p>
+            <p><b>Procedure</b>:</p>
+            <ol id="update-phone-settings">
+                <li>Log in PBX web page, and go to <uicontrol>Auto Provisioning</uicontrol>
+                    App.</li>
+                <li>On <uicontrol>Device List</uicontrol> page, select an IP phone and click <image
+                        href="../Images/ui_icons/edit.png" width="20" id="image_acs_4gb_skb"
+                        />.<note>If multiple accounts are registered on an IP phone, the IP phone
+                        can only obtain the first account's Contacts.<p><image
+                                id="image_obf_k3t_3lb" href="../Images/1010-contacts.png"
+                                width="650"/></p></note></li>
+                <li>Directly click <uicontrol>Save</uicontrol> or set other phone settings according
+                    to your needs and then click <uicontrol>Save</uicontrol>.<note>On the Auto
+                        Provisioning web page, there are no relevant Contacts options. After
+                        updating IP phone settings via Auto Provisioning, the IP phone will
+                        automatically get the permission of accessing Contacts.</note></li>
+                <li>On the pop-up window, click <uicontrol>Yes</uicontrol> to reboot the IP
+                    phone.</li>
+            </ol>
+        </section>
+        <section id="section_tbg_hzx_flb">
+            <title>Query and Use Contacts on IP phone</title>
+            <p>We take Yealink T56A as an example to show you how to query and use Contacts on IP
+                phone.</p>
+            <p>
+                <ol>
+                    <li>Tap <menucascade>
+                            <uicontrol><image href="../Images/admin/yealink-account.png"
+                                    id="image_l1l_khy_flb" width="20"/></uicontrol>
+                            <uicontrol> Remote Phonebook</uicontrol>
+                        </menucascade>. </li>
+                    <li>Tap <uicontrol>Search</uicontrol>.</li>
+                    <li>In the search box, enter contact name or number. The system will query
+                        contact from Contacts.<p><image
+                                href="../Images/admin/Yealink-query-contacts.jpg"
+                                id="image_hrd_33y_flb" width="500"/></p></li>
+                    <li>Select a contact, tap the contact number to quickly dial out.</li>
+                </ol>
+            </p>
+        </section>
+    </body>
+</topic>

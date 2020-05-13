@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="openvpn-set-up-s_series-ippbx-bulid-in-openvpn-server">
+    <title>Set up <ph keyref="product_name"/> as an OpenVPN Server</title>
+    <shortdesc><ph keyref="product_name">Yeastar S Series PBX </ph> - VPN Server App helps you
+        configure the PBX as an OpenVPN server. There is a Graphical User Interface for
+        administrator to set up an OpenVPN server.</shortdesc>
+    <body>
+        <p>This topic shows you how to set up an OpenVPN server with OpenVPN authentication, and
+            allocate a static IP address for each VPN client.</p>
+    </body>
+</topic>
+<?oxy_options track_changes="on"?>

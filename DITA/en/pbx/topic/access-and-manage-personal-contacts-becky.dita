@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="manage-personal-contacts">
+    <?oxy_comment_start author="Becky" timestamp="20200214T095243+0800" comment="参考：
+https://support.google.com/a/users/answer/9310345?hl=en&amp;ref_topic=9296545&amp;visit_id=637172377813472662-2690173437&amp;rd=1
+
+https://oneview.mitel.com/s/article/Personal-Phonebook"?>
+    <title>Access and Manage Personal Contacts</title><?oxy_comment_end?>
+    <shortdesc>Every extension user can create and manage his own Personal Contacts entries, such as
+        add, edit, delete, import &amp; export Personal Contacts.</shortdesc>
+    <body>
+        <note>If an extension user uses Linkus, the user can also access and manage Personal
+            Contacts on Linkus Mobile Client.</note>
+        <section id="section_t4t_vyd_skb"><title>Access Personal Contacts</title>Extension users can
+            access his own Personal Contacts as follows:<p>
+                <ol id="ol_s5j_xyd_skb">
+                    <li>Log in PBX web interface by the following credentials.<p>
+                            <ul>
+                                <li><uicontrol>Username</uicontrol>: Extension number.</li>
+                                <li><uicontrol>Password</uicontrol>: The login password for PBX web
+                                    interface.</li>
+                            </ul>
+                        </p></li>
+                    <li>Go to <uicontrol>Contacts</uicontrol> (<image
+                            href="../Images/admin/contacts-main-menu.png" width="20"
+                            id="image_s3n_xqb_tkb"/>), and click <uicontrol>Personal
+                            Contacts</uicontrol> tab to view the list of Personal Contacts.<p><image
+                                id="image_mb1_lrb_tkb"/></p></li>
+                </ol>
+            </p></section>
+        <section id="section_c2q_bzd_skb">
+            <title> Manage Personal Contacts </title>
+            <p>Personal Contacts entries are only manageable for extension users who create them.
+                <?oxy_comment_start author="carol" timestamp="20200218T104357+0800" comment="角色混了。
+You 是管理员
+这边可以写 Extension users" flag="done"?>An
+                extension user <?oxy_comment_end?>can manage his own Personal Contacts as
+                follows.</p>
+            <p>Go to <uicontrol>Contacts</uicontrol> (<image
+                    href="../Images/admin/contacts-main-menu.png" width="20" id="image_ovh_lrb_tkb"
+                />), and click <uicontrol>Personal Contacts</uicontrol> tab to manage contacts.</p>
+            <dl>
+                <dlentry>
+                    <dt>Add a contact</dt>
+                    <dd>
+                        <ol>
+                            <li>Click <uicontrol>Add</uicontrol> to add a Personal Contact, and edit
+                                the contact's information.</li>
+                            <li>Click <uicontrol>Save</uicontrol>.</li>
+                        </ol>
+                        <note>
+                            <ul id="ul_whd_fdg_skb">
+                                <li><uicontrol>First Name</uicontrol>, <uicontrol>Last
+                                        Name</uicontrol>, and at least one phone number are
+                                    required. </li>
+                                <li>Every extension user can add 300 personal contacts at most.</li>
+                            </ul>
+                        </note>
+                    </dd>
+                </dlentry>
+            </dl>
+            <dl>
+                <dlentry>
+                    <dt>Edit a contact</dt>
+                    <dd>
+                        <ol>
+                            <li>Click <image href="../Images/admin/edit-contact.png" width="20"
+                                    id="image_ady_yj1_tkb"/> beside the desired contact to edit the
+                                contact's information.</li>
+                            <li>Click
+                                <uicontrol>Save</uicontrol><?oxy_comment_start author="carol" timestamp="20200218T104434+0800" comment="不需要apply" flag="done"?>.<?oxy_comment_end?></li>
+                        </ol>
+                    </dd>
+                </dlentry>
+            </dl>
+            <dl>
+                <dlentry>
+                    <dt>Delete a contact</dt>
+                    <dd>
+                        <p>
+                            <ol>
+                                <li>Click <image href="../Images/admin/delete-ldap-phonebook.png"
+                                        id="image_a1q_4zd_skb"/> beside the desired contact to
+                                    delete. </li>
+                                <li>Click <uicontrol>Save</uicontrol>.</li>
+                            </ol>
+                        </p>
+                    </dd>
+                </dlentry>
+                <dlentry>
+                    <dt>Bulk delete contacts</dt>
+                    <dd>
+                        <ol>
+                            <li>Select the
+                                checkbox<?oxy_insert_start author="carol" timestamp="20200218T104447+0800"?>es<?oxy_insert_end?>
+                                of the desired contacts, and click <uicontrol>Delete</uicontrol> to
+                                bulk delete contacts.</li>
+                            <li>Click <uicontrol>Save</uicontrol>.</li>
+                        </ol>
+                    </dd>
+                </dlentry>
+            </dl>
+            <dl>
+                <dlentry>
+                    <dt>Import contacts</dt>
+                    <dd>You can import Personal Contact entries from a CSV file as follows. </dd>
+                    <dd>
+                        <ol id="ol_bmv_ckf_skb">
+                            <li>Download the
+                                    <?oxy_comment_start author="carol" timestamp="20200218T104500+0800" comment="没有sample" flag="done"?><codeph>.csv</codeph><?oxy_comment_end?>
+                                template to bulk edit contacts' information.<note><uicontrol>First
+                                        Name</uicontrol>, <uicontrol>Last Name</uicontrol>, and at
+                                    least one phone number are required.</note></li>
+                            <li>Go to <uicontrol>Contacts</uicontrol>, and click
+                                    <uicontrol>Import</uicontrol>. </li>
+                            <li>Click <uicontrol>Browse</uicontrol> to upload the
+                                    <codeph>.csv</codeph> file that you edit.</li>
+                            <li>Click <uicontrol>Import</uicontrol>.</li>
+                        </ol>
+                    </dd>
+                </dlentry>
+            </dl>
+            <dl>
+                <dlentry>
+                    <dt>Export contacts</dt>
+                    <dd>Click <uicontrol>Export</uicontrol> to save all contacts' information as a
+                        UTF-8 <filepath>.csv</filepath> file.</dd>
+                </dlentry>
+            </dl>
+        </section>
+    </body>
+</topic>

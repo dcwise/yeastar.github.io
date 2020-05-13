@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_uth_sht_jhb">
+    <title>Snapshot Solution</title>
+    <shortdesc>Snapshot is a copy of the virtual machine's disk data, configurations, and disk files
+        at a particular point in time. We suggest that you create a snapshot to safeguard against a
+        disaster. </shortdesc>
+    <body>
+        <section id="section_wsf_2t5_jhb">
+            <title>Scenarios</title>
+            <p>You can use snapshots in the following scenarios:</p>
+            <p>
+                <ul id="ul_o2r_gt5_jhb">
+                    <li><b>YMP or SBC system failures</b><p>If the YMP or SBC server is down and
+                            cannot return to work in a short time, you can use a snapshot to restore
+                            data to the original server.</p></li>
+                    <li><b>Disaster Backup</b><p>If a natural disaster occurs in the region where
+                            the primary server was set up, you can restore data to the secondary
+                            server in a different region.</p></li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_u3g_lmt_jhb">
+            <title>Snapshot planing</title>
+            <p>
+                <ol id="ol_vvm_5nt_jhb">
+                    <li>Prepare a secondary instance for YMP and a secondary instance for SBC in a
+                        different region.<p>
+                            <note>
+                                <ul id="ul_dqj_nhs_lhb">
+                                    <li>The YMP server should meets the <xref
+                                            href="system_requirements_for_ymp.dita#topic_dvm_b3j_3cb"
+                                            >YMP system requirements</xref>; The SBC server should
+                                        meets the <xref
+                                            href="system_requirements_for_sbc.dita#topic_dyg_3qj_3cb"
+                                            >SBC system requirements</xref>.</li>
+                                    <li>Make sure the network configurations on the secondary
+                                        servers are the same as the primary servers.<p>If the
+                                            network configurations are different, you need to
+                                            contact Yeastar senior engineer to recover the servers,
+                                            which requires professional technical knowledge and
+                                            takes time. We don't recommend you configure different
+                                            network settings on secondary servers.</p></li>
+                                </ul>
+                            </note>
+                        </p></li>
+                    <li>Schedule auto snapshot on the cloud platform or data center.<p>
+                            <note>Make a schedule to create snapshots everyday and keep each
+                                snapshot stored for at least 7 days.</note>
+                        </p><p>
+                            <ul id="ul_p3f_xcp_jhb">
+                                <li><xref
+                                        href="https://cloud.google.com/compute/docs/disks/create-snapshots"
+                                        format="html" scope="external">How to use snapshot on Google
+                                        Cloud?</xref></li>
+                                <li><xref
+                                        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-creating-snapshot.html"
+                                        format="html" scope="external">How to use snapshot on Amazon
+                                        Web Services (AWS)?</xref></li>
+                                <li><xref
+                                        href="https://www.alibabacloud.com/help/doc-detail/25455.htm?spm=a2c63.p38356.b99.177.13cd343cP4RKn7"
+                                        format="html" scope="external">How to use snapshot on
+                                        Alibaba Cloud?</xref></li>
+                            </ul>
+                        </p></li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_l2p_mmv_jhb">
+            <title>Recover your server by a snapshot</title>
+            <p>
+                <ul id="ul_zs2_1nv_jhb">
+                    <li><b>YMP or SBC system failure</b><p>Restore the snapshot to the original
+                            server yourself. The server will return to work in a few
+                        minutes.</p></li>
+                    <li><b>Disaster recovery</b><p>
+                            <ol id="ol_ftn_knv_jhb">
+                                <li>Restore the SBC snapshot to the secondary SBC server.</li>
+                                <li>Restore the YMP snapshot to the secondary YMP server.</li>
+                                <li>Unbind the elastic IP (public IP) with the primary SBC server,
+                                    and bind the same IP with the secondary SBC server.</li>
+                            </ol>
+                        </p><p><b>Result:</b> Your customers' PBXs will return to work and run
+                            normally for 7 days while the YMP server is inactivated and the YMP web
+                            GUI is unaccessible.</p><p>
+                            <note>Contact Yeastar in 7 days to activate the secondary YMP server to
+                                ensure that your customers' business is keep running.</note>
+                        </p></li>
+                </ul>
+            </p>
+        </section>
+    </body>
+</topic>

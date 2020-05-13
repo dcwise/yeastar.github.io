@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="topic_hhl_wxl_2fb">
+    <title>Set up Linkus Server with LCS</title>
+    <shortdesc>LCS (Linkus Cloud Service) avoids the necessity of port forwarding when using Linkus
+        outside of the company so the network security will not be compromised. With LCS (Linkus
+        Cloud Service), you can easily and quickly set up your Linkus server and enable Linkus Chat
+        function for the users.</shortdesc>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Linkus</uicontrol>
+                        <uicontrol>Linkus Server Settings</uicontrol>
+                    </menucascade>.</cmd>
+            </step>
+            <step>
+                <cmd>Enable Linkus Server.</cmd>
+                <substeps>
+                    <substep>
+                        <cmd>Check the option <uicontrol>Enable Linkus Server</uicontrol>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>In the pop-up dialog box, click <uicontrol>Yes</uicontrol> to
+                            confirm.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Enable Linkus Cloud Service.</cmd>
+                <substeps>
+                    <substep>
+                        <cmd>Check the option <uicontrol>Enable Linkus Cloud
+                            Service</uicontrol>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>In the pop-up dialog box, click <uicontrol>Yes</uicontrol> to
+                            confirm.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Enable Linkus Chat function.</cmd>
+                <substeps>
+                    <substep>
+                        <cmd>Check the option <uicontrol>Enable Chat function for
+                            Linkus</uicontrol>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>In the pop-up dialog box, click <uicontrol>Yes</uicontrol> to
+                            confirm.</cmd>
+                    </substep>
+                </substeps>
+                <info><image href="../Images/admin/set_up_linkus_server_with_lcs.png"
+                        id="image_gcf_yfr_2fb" width="650"/></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

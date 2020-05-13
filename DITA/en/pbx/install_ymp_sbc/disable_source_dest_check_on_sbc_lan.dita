@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_fvl_zdp_f2b">
+    <title>2) Disable 'Source/Dest. Check' on SBC LAN</title>
+    <shortdesc>To make the YMP instance access the Internet through the SBC LAN (eth1) interface,
+        you need to disable source/dest. check on the eth1 network interface of SBC
+        instance.</shortdesc>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Open the Amazon EC2 console at <xref href="https://console.aws.amazon.com/ec2/"
+                        format="html" scope="external"
+                    >https://console.aws.amazon.com/ec2/</xref>.</cmd>
+            </step>
+            <step>
+                <cmd>In the navigation pane, select <b>Network Interfaces</b>. </cmd>
+                <info>You can see the network interfaces of the SBC instance and YMP
+                    instance.</info>
+                <info>
+                    <note type="tip">By default, the network interfaces have no name. You can set
+                        the name to help you identify the network interface.</note>
+                </info>
+            </step>
+            <step>
+                <cmd>Right click the SBC eth1 interface, choose <uicontrol>Change Source/Dest. Check
+                    </uicontrol>.</cmd>
+                <info><image href="../Images/SBC/aws_change_source_dest_check.png"
+                        id="image_uwz_vfp_f2b"/></info>
+            </step>
+            <step>
+                <cmd>Check <uicontrol>Disabled</uicontrol>, click <uicontrol>Save</uicontrol>.</cmd>
+                <info><image href="../Images/SBC/aws_disable_source_dest_check.png"
+                        id="image_gvc_cgp_f2b"/></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

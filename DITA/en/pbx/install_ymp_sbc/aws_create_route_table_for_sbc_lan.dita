@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_vjz_x3w_kcb">
+    <title>4) Create Route Table for SBC LAN</title>
+    <shortdesc>Create a route table for the SBC LAN (eth1) and YMP LAN (eth0), this route will allow
+        the SBC LAN and YMP LAN to communicate through the SBC LAN subnet.</shortdesc>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/06/14"/>
+            <!--Carol-->
+            <revised modified="2018/06/21"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+
+        <steps id="steps_uhk_3yv_kcb">
+            <step>
+                <cmd>In the navigation pane, select <b>Route Tables</b>, then click <b>Create Route
+                        Table</b>.</cmd>
+            </step>
+            <step>
+                <cmd>Set the <uicontrol>Name tag</uicontrol>, for example,
+                    <codeph>SBC-LAN</codeph>.</cmd>
+            </step>
+            <step>
+                <cmd>Select the <uicontrol>VPC</uicontrol> which is for the SBC and YMP.</cmd>
+                <info><image href="../Images/SBC/aws_route_table_sbc_lan.png" id="image_bp3_m2w_kcb"
+                        width="650"/></info>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Yes, Create</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Associate subnet to the route.</cmd>
+                <substeps id="substeps_jmh_r4w_kcb">
+                    <substep>
+                        <cmd>Click <uicontrol>Subnet Associations</uicontrol> tab, then click
+                                <uicontrol>Edit</uicontrol>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Select the SBC LAN subnet.</cmd>
+                        <info><image href="../Images/SBC/aws_subnet_association_lan.png"
+                                id="image_xjw_14w_kcb" width="500"/></info>
+                    </substep>
+                    <substep>
+                        <cmd>Click <uicontrol>Save</uicontrol>.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

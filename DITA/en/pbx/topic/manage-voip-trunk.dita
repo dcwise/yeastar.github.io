@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="manage-voip-trunk">
+    <title>Manage VoIP Trunks</title>
+    <body>
+        <section id="section_z4b_z1m_53b">
+            <title>Import the VoIP register Trunks</title>
+            <p>You can create multiple VoIP register trunks by importing a UTF-8
+                    <filepath>.csv</filepath> file.</p>
+            <p>For requirements of the import parameters, see <xref
+                    href="../references/import_parameters_trunks.dita"/>.</p>
+            <p>
+                <ol id="ol_zrr_bbm_53b">
+                    <li>Go to <menucascade>
+                            <uicontrol>Settings</uicontrol>
+                            <uicontrol> PBX</uicontrol>
+                            <uicontrol> Trunks</uicontrol>
+                        </menucascade>, click <uicontrol>Import</uicontrol>.</li>
+                    <li>Click <uicontrol>Download the Template</uicontrol>, add the VoIP register
+                        trunks information in the template file.</li>
+                    <li>Click <uicontrol>Browse</uicontrol> to upload the template file, and then
+                        click <uicontrol>Import</uicontrol>.</li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_btn_pnl_53b">
+            <title>Edit the VoIP Trunk</title>
+            <p>
+                <ol id="edit-trunk">
+                    <li>Go to <menucascade>
+                            <uicontrol>Settings</uicontrol>
+                            <uicontrol> PBX</uicontrol>
+                            <uicontrol> Trunks</uicontrol>
+                        </menucascade>.</li>
+                    <li>Search and find your VoIP Trunk, click <image
+                            href="../Images/ui_icons/edit.png" width="20" id="image_x2s_2pl_53b"
+                        />.</li>
+                    <li id="edit-voip-settings-step">Click the desired tab to edit the <xref
+                            href="voip-trunk-settings.dita#topic_pyd_f3t_2fb"/> as your need.</li>
+                    <li>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_p41_mpl_53b">
+            <title>Delete the VoIP Trunk</title>
+            <p>
+                <ol id="delete-trunk">
+                    <li>Go to <menucascade>
+                            <uicontrol>Settings</uicontrol>
+                            <uicontrol> PBX</uicontrol>
+                            <uicontrol> Trunks</uicontrol>
+                        </menucascade>.</li>
+                    <li>Search and find your VoIP Trunk, click <image
+                            href="../Images/ui_icons/delete.png" width="20" id="image_xgc_ppl_53b"
+                        />.</li>
+                    <li>Click <uicontrol>Yes</uicontrol> to confirm the deletion.</li>
+                </ol>
+            </p>
+        </section>
+    </body>
+</topic>

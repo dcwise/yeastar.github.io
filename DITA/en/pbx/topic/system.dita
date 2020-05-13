@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+  PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topicID">
+   <title>System</title>
+   <body>
+      <p>Through this interface, developers could fetch basic S-Series
+system information, like firmware version, hardware version, system
+time, etc.</p>
+   </body>
+</topic>

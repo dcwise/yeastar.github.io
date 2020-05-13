@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_i21_j1c_5cb">
+    <title>Register Panasonic Phone with <ph keyref="product_name"/></title>
+    <shortdesc>This article is based on Panasonic KX-HDV130 v01.008 and <ph keyref="product_name"/>
+        <ph product="cloudpbx">v81.8.0.7</ph><ph product="s-series">v30.8.0.14</ph>.</shortdesc>
+    <taskbody>
+        <context>This article is applicable to the following Panasonic IP Phones.<ul
+                id="ul_epg_r4h_ycb">
+                <li>KX-HDV130</li>
+                <li>KX-UT113 </li>
+                <li>KX-UT123 </li>
+                <li>KX-UT133 </li>
+                <li>KX-UT136 </li>
+                <li>KX-UT248</li>
+                <li>KX-UT670</li>
+                <li>TGP500</li>
+                <li>TGP550</li>
+            </ul></context>
+        <steps>
+            <step>
+                <cmd>Start up the phone and check its IP address.</cmd>
+                <substeps>
+                    <substep>
+                        <cmd>Press <uicontrol>Menu</uicontrol>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Go to <menucascade>
+                                <uicontrol>System Settings</uicontrol>
+                                <uicontrol>Network Settings</uicontrol>
+                                <uicontrol>IPv4 Settings</uicontrol>
+                                <uicontrol>Static</uicontrol>
+                            </menucascade>.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Open the web service for the Panasonic phone.</cmd>
+                <substeps>
+                    <substep>
+                        <cmd>Press <uicontrol>Menu</uicontrol>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Go to <menucascade>
+                                <uicontrol>Basic Settings</uicontrol>
+                                <uicontrol>Other Option</uicontrol>
+                                <uicontrol>Embedded Web</uicontrol>
+                            </menucascade>.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Log in the web page of the IP phone.</cmd>
+                <choices>
+                    <choice><uicontrol>Username</uicontrol>: admin </choice>
+                    <choice><uicontrol>Password</uicontrol>: adminpass</choice>
+                </choices>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>VoIP</uicontrol>, choose a line to configure.</cmd>
+                <substeps id="substeps_hj1_4qh_ycb">
+                    <substep>
+                        <cmd>In the <uicontrol>Basic</uicontrol> section:</cmd>
+                        <info><image href="../Images/admin/register_panasonic1.png"
+                                id="image_ljv_tph_ycb"/></info>
+                        <info>
+                            <ul id="ul_ew3_4qh_ycb">
+                                <li><uicontrol>Phone Number</uicontrol>: Fill in the extension
+                                    number.</li>
+                                <li><uicontrol>Registrar Server Address</uicontrol>: Fill the
+                                        domain<ph product="s-series"> or IP address</ph> of your
+                                    PBX.</li>
+                                <li><uicontrol>Registrar Server Port</uicontrol>: Fill in the SIP
+                                    port of your PBX. </li>
+                                <li><uicontrol>Proxy Server Address</uicontrol>: Fill in the
+                                        domain<ph product="s-series"> or IP address</ph> of your
+                                    PBX.</li>
+                                <li><uicontrol>Proxy Server Port</uicontrol>: Fill in the SIP port
+                                    of your PBX. </li>
+                                <li><uicontrol>Authentication ID</uicontrol>: Fill in the
+                                    extension's <uicontrol>Registration Name</uicontrol>.</li>
+                                <li><uicontrol>Authentication Password</uicontrol>: Fill in the
+                                    extension's <uicontrol>Registration Password</uicontrol>.</li>
+                            </ul>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>In the <uicontrol>Advanced</uicontrol> section:</cmd>
+                        <info><image href="../Images/admin/register_panasonic2.png"
+                                id="image_pvw_wqh_ycb"/></info>
+                        <info>
+                            <ul id="ul_opn_yqh_ycb">
+                                <li><uicontrol>SRV lookup Prefix for UDP</uicontrol>: Enter
+                                        <codeph>_sip_udp</codeph>.</li>
+                                <li><uicontrol>SRV lookup Prefix for TCP</uicontrol>: Enter
+                                        <codeph>_sip_tcp</codeph>.</li>
+                                <li><uicontrol>Local SIP Port</uicontrol>: The SIP port number for
+                                    each line must be unique, default value: 5060 (for Line 1) and
+                                    5070 (for Line 2).</li>
+                                <li><uicontrol>Transport Protocol</uicontrol>: Choose the same
+                                    transport protocol as the PBX.</li>
+                            </ul>
+                        </info>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol>.</cmd>
+                <info>If the extension is registered, you can see the VoIP status shows
+                    "Registered".</info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

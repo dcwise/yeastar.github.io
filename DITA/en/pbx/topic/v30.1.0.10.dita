@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_hyz_y4k_jdb">
+  <title>Version 30.1.0.10</title>
+  <abstract>Released Date: August 29, 2016</abstract>
+  <prolog>
+    <critdates>
+      <!--Carol-->
+      <revised modified="2018/06/20"/>
+    </critdates>
+  </prolog>
+  <body>
+    <section id="section_nyk_p4g_jdb">
+      <title>New Feature</title>
+      <p><image href="../Images/horizon.png" id="image_v4t_j1w_pdb"/></p>
+      <p>
+        <ul id="ul_umy_3wk_jdb">
+          <li>Added support for Polish Web User Interface language.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_gzb_54g_jdb">
+      <title>Optimization</title>
+      <p><image href="../Images/horizon.png" id="image_ufx_j1w_pdb"/></p>
+      <p>
+        <ul id="ul_xrl_kwk_jdb">
+          <li>Updated Spanish Web User Interface language.</li>
+          <li>Updated Russian Web User Interface language.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_cmm_x4g_jdb">
+      <title>Fixed Bug</title>
+      <p><image href="../Images/horizon.png" id="image_lbn_k1w_pdb"/></p>
+      <p>
+        <ul id="ul_x2j_lwk_jdb">
+          <li>Fixed the call parking issue: if you monitored a parking extension using BLF key on
+            your phone, the BLF LED did not turn red when the extension was being used.</li>
+          <li>Fixed the Automatic Upgrade issue: the system would give a wrong prompt saying the
+            checked failed because of network issues.</li>
+          <li>Fixed the FXO trunk issue: if you set the “Caller ID Start” as “After Ring”, set
+            “Caller ID Signaling” as “DTMF”, incoming calls could not reach the FXO trunk.</li>
+        </ul>
+      </p>
+    </section>
+  </body>
+</topic>

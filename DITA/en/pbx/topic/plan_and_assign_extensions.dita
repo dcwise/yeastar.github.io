@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_nfn_qmy_ldb">
+    <title>Step1. Plan and Assign Extensions </title>
+    <shortdesc>Before you start to connect the Yeastar S-Series VoIP PBXs, you need to plan and
+        assign extensions for the headquarter and the branch offices.</shortdesc>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/05/22"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <context id="context_kt4_tmy_ldb">In our example, we assign extensions as bellow:<ul
+                id="ul_ekq_vmy_ldb">
+                <li><b>Headquarter PBX</b>: 1XXX (extension number starts with 1)</li>
+                <li><b>BranchA PBX</b>: 2XXX (extension number starts with 2)</li>
+                <li><b>BranchB PBX</b>: 3XXX (extension number starts with 3)</li>
+            </ul><p><b>Plan and assign the extensions on the headquarter PBX and the branch
+                    PBXs.</b></p></context>
+        <steps>
+            <step>
+                <cmd>Log in the PBX web interface, go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol>PBX</uicontrol>
+                        <uicontrol>General</uicontrol>
+                        <uicontrol>Preferences</uicontrol>
+                    </menucascade>.</cmd>
+            </step>
+            <step>
+                <cmd>Change the <uicontrol>User Extensions</uicontrol> to the desired range.</cmd>
+                <info><image
+                        href="../Images/admin/multisite_interconnect_change_extension_range.png"
+                        id="image_spl_hny_ldb"/></info>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol>PBX</uicontrol>
+                        <uicontrol>Extensions</uicontrol>
+                    </menucascade>, create extensions.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

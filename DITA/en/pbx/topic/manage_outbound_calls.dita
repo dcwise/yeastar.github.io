@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_tp3_lcr_5cb">
+  <title>Manage Outbound Calls</title>
+  <body>
+    <p>To make outbound calls, you need to set up outbound routes on the PBX.</p>
+  </body>
+</topic>

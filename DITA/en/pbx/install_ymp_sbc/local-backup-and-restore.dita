@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="concept_wjt_b5v_k2b">
+    <title>Local Backup &amp; Restore </title>
+    <shortdesc>Schedule auto backup on YMP web interface to ensure an alternative option in case of
+        any failure of the YMP system and customers' PBXs.</shortdesc>
+    <body>
+        <section id="section_qfj_st5_jhb">By default, Backup Schedule is enabled on YMP, and the
+            system automatically creates a backup file stored in the system at midnight every day. <p>
+                <note type="important">You can <xref href="schedule-auto-backup.dita">adjust the
+                        backup schedule settings</xref> on YMP, but do NOT disable Backup Schedule
+                    feature.</note>
+            </p></section>
+        <section id="section_q42_yt5_jhb">
+            <title>Backup Data</title>
+            <p>YMP supports for backing up the following data:</p>
+            <p>
+                <ul>
+                    <li>YMP system configurations</li>
+                    <li>System configurations of PBXs</li>
+                    <li>Call logs of PBXs</li>
+                    <li>Voicemails of PBXs</li>
+                    <li>Custom prompts of PBXs</li>
+                    <li>One Touch Recordings of PBXs</li>
+                    <li>Voicemail, one-touch recordings, and CDRs of PBXs</li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_r5z_d55_jhb">
+            <title>Scenarios</title>
+            <p>When the YMP web interface is accessible, the local backup files are applied for the
+                following scenarios:</p>
+            <p>
+                <ul id="ul_bt2_f55_jhb">
+                    <li><b>Customer PBX restore</b><p>When your customer's PBX data is abnormal or
+                            the PBX data is lost, you can quickly restore an individual PBX backup
+                            for the customer's PBX.</p><p><xref
+                                href="restore-local-backups.dita"
+                                >How to restore a customer's PBX?</xref></p></li>
+                </ul>
+            </p>
+            <p>
+                <ul id="ul_dkm_g55_jhb">
+                    <li><b>YMP system restore</b><p>When the data loss or data error occurs in the
+                            YMP system or in all the customers' PBXs, you can restore the entire YMP
+                            backup to fix this issue.</p><p><xref
+                                href="restore-local-backups.dita#topic_mvj_3fs_lhb/section_hnb_rct_jhb"
+                                >How to restore the YMP system?</xref></p></li>
+                </ul>
+            </p>
+        </section>
+    </body>
+</topic>

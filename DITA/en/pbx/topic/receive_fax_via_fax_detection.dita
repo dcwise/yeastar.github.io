@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_yzr_n12_xdb">
+    <title>Receive Fax via Fax Detection</title>
+    <shortdesc>If you want to receive calls and also receive faxes through a trunk, you can set fax
+        detection on your inbound route.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/05/22"/>
+            <!--Carol-->
+            <revised modified="2018/05/22"/>
+            <!--Carol-->
+            <revised modified="2018/05/28"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol>PBX</uicontrol>
+                        <uicontrol>Call Control</uicontrol>
+                        <uicontrol>Inbound Route</uicontrol>
+                    </menucascade>, configure your inbound route.</cmd>
+            </step>
+            <step>
+                <cmd>Select the trunk to the <uicontrol>Selected</uicontrol> box.</cmd>
+            </step>
+            <step>
+                <cmd>Set the <uicontrol>Destination</uicontrol> to <codeph>IVR</codeph>.</cmd>
+            </step>
+            <step>
+                <cmd>Check the option <uicontrol>Enable Fax Detection</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Set the <uicontrol>Fax Destination</uicontrol> to<ph product="s-series"> an FXS
+                        extension or</ph>
+                    <xref href="fax_to_email.dita#concept_w2l_g22_xdb">Fax to Email</xref>.</cmd>
+                <info product="s-series">If you choose a FXS extension, your fax machine should be
+                    connected the relevant FXS port on the PBX.</info>
+                <info><image href="../Images/admin/fax_detection.png" id="image_cdy_vzd_xdb"
+                        width="650"/></info>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

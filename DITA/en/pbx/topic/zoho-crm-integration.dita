@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="zoho">
+    <title>Zoho CRM Integration</title>
+    <shortdesc>Zoho CRM Integration is a tool to easily integrate Yeastar Cloud PBX and Zoho CRM.
+        You will be empowered with features like click to call, incoming call screen pop-ups, add
+        follow-up activities in the Zoho CRM.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/12/27"/>
+            <!--Carol-->
+            <revised modified="2018/12/27"/>
+            <!--Carol-->
+            <revised modified="2018/12/28"/>
+            <!--Carol-->
+            <revised modified="2019/01/10"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <p/>
+    </conbody>
+</concept>

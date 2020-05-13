@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_jfq_4kj_kfb">
+    <title>Version 1.11.8</title>
+    <abstract>Released Date: October 18, 2018</abstract>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/10/09"/>
+            <!--Carol-->
+            <revised modified="2018/10/09"/>
+            <!--Carol-->
+            <revised modified="2018/10/10"/>
+        </critdates>
+    </prolog>
+    <body>
+        <section>
+            <title>Optimization</title>
+            <p><image href="../Images/horizon.png" id="image_xcc_4wb_kfb"/></p>
+            <p><b>System Security</b></p>
+            <p>
+                <ul id="ul_xfd_vt3_kfb">
+                    <li>Optimized Extension Registration Password and User Password.<p>A strong
+                            password is required by default. The administrator can enable
+                                <uicontrol>Allow Weak Password</uicontrol> on <menucascade>
+                                <uicontrol>Settings</uicontrol>
+                                <uicontrol>System</uicontrol>
+                                <uicontrol/>
+                                <uicontrol>Security</uicontrol>
+                            </menucascade> page.</p></li>
+                </ul>
+            </p>
+            <p><b>Extension</b></p>
+            <p>
+                <ul id="ul_lm4_tq3_kfb">
+                    <li>Added support for configuring overlapped Extension ranges (<menucascade>
+                            <uicontrol>Settings</uicontrol>
+                            <uicontrol>PBX</uicontrol>
+                            <uicontrol>General</uicontrol>
+                            <uicontrol>Preferences</uicontrol>
+                            <uicontrol>Extension Preferences</uicontrol>
+                        </menucascade>).</li>
+                    <li>Optimized Extension setup: PBX will allow you to create an extension number
+                        that is not in the User Extension range.</li>
+                    <li>Fixed Extension Group issue: Creating an extension would fail if the
+                        extension number was used as an Extension Group name.</li>
+                    <li>Fixed the FXS extension issue on S412: There would be no sound during a call
+                        if the call was made by an FXS extension.</li>
+                </ul>
+            </p>
+            <p><b>SIP Trunk</b></p>
+            <p>
+                <ul id="ul_mwc_tt3_kfb">
+                    <li>Optimized the web configuration page of ITSP template.</li>
+                    <li>Optimized ITSP template of  Germany LAN IP Voice.</li>
+                    <li>Fixed the issue that the PBX NAT settings could not take effect if the SIP
+                        trunk TCP or TLS was enabled.</li>
+                    <li>Fixed the issue that custom configuration file could not take effect if
+                        blank spaces were included in the SIP trunk name.</li>
+                </ul>
+            </p>
+            <p><b>Call Features</b></p>
+            <p>
+                <ul id="ul_qfh_dy3_kfb">
+                    <li>Optimized Call Pickup: Users can see the incoming caller ID before they pick
+                        up the call.</li>
+                    <li>Optimized Call Pickup: If an extension's incoming call is picked up by other
+                        person, the extension's phone will not display any missed call
+                        information.</li>
+                    <li>Fixed the Call Forwarding issue: The system would hang up if a call was
+                        forwarded to a queue.</li>
+                    <li>Fixed the BLF monitoring issue on Extension: The BLF LED could not properly
+                        indicate the monitored extension's status if the extension had multiple
+                        calls at the same time.</li>
+                    <li>Fixed the BLF monitoring issue on Extension: The BLF LED status was
+                        incorrect when the monitored extension was not registered. </li>
+                    <li>Fixed the BLF monitoring issue on Static Agent: The BLF LED status was
+                        incorrect if the agent's <uicontrol>Caller ID Name</uicontrol> was not the
+                        extension number.</li>
+                </ul>
+            </p>
+            <p><b>Import Function</b></p>
+            <p>
+                <ul id="ul_yt5_px3_kfb">
+                    <li>Optimized the Import function for Extensions, Trunks, Inbound Routes,
+                        Outbound Routes.</li>
+                </ul>
+            </p>
+            <p><b>Multisite Interconnect</b></p>
+            <p>
+                <ul id="ul_vxw_qw3_kfb">
+                    <li>Added support for configuring multiple Extension Format.</li>
+                    <li>Added support for displaying Branch name as Caller ID name in
+                        Headquarter.</li>
+                    <li>Optimized the incoming caller ID and CDR.</li>
+                    <li>Fixed the issue that inviting external users on Conference Panel could not
+                        work if Multisite Interconnect was enabled.</li>
+                </ul>
+            </p>
+            <p><b>CDR</b></p>
+            <p>
+                <ul id="ul_ff3_jhj_kfb">
+                    <li>Fixed the issue that when users were invited by Conference Panel, the CDR
+                        was incorrect.</li>
+                </ul>
+            </p>
+            <p><b>Compatibility</b></p>
+            <p>
+                <ul id="ul_hnb_3fj_kfb">
+                    <li>Fixed the compatibility issue with Asternic: The Asternic Control Panel
+                        displayed incorrect status.</li>
+                    <li>Added support for synchronizing DND settings on PBX and Yealink IP
+                        phones.</li>
+                    <li>Optimized the compatibility with video door phone: Added support for
+                        checking the video before answering a call.</li>
+                </ul>
+            </p>
+        </section>
+    </body>
+</topic>

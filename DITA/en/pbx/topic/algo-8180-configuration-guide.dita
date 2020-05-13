@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_vc1_mfb_fhb">
+    <title>Register Algo 8180G2 Audio Alerter with <ph keyref="product_name"/></title>
+    <shortdesc>This guide describes the configuration steps required for Algo 8180G2 SIP Audio
+        Alerter to interoperate with <ph keyref="product_name"/>. </shortdesc>
+    <body>
+        <p>Below is a guideline of how to register a Ring extension and a Page extension on Algo
+            8180G2.You may need to configure the other settings of the Algo 8180G2 Audio Alerter
+            depending on your VoIP solution.</p>
+        <section id="section_nmk_fnb_fhb">
+            <title>Network Topology</title>
+            <p>The following diagram shows how the testing network is configured for reference.</p>
+            <p><image href="../Images/admin/algo-8180-topology.png" width="650"
+                    id="image_ryx_vyg_fhb"/></p>
+        </section>
+        <section id="section_ewh_gmb_fhb">
+            <title>Yeastar S300 configuration</title>
+            <p>Add two SIP extensions on Yeastar S300, and provide the extension details in Algo
+                8101G2 web page.</p>
+            <p>
+                <ol id="ol_e3q_xqb_fhb">
+                    <li>Log in Yeastar S300 web interface, go to <menucascade>
+                            <uicontrol>Settings</uicontrol>
+                            <uicontrol>PBX</uicontrol>
+                            <uicontrol>Extensions</uicontrol>
+                        </menucascade>.</li>
+                    <li>Add an extension, this extension will be registered as the Algo Ring extension.<p>
+                            <ol id="ol_bg1_ggd_fhb">
+                                <li>Click <uicontrol>Add</uicontrol>.</li>
+                                <li>Leave the default settings or change the General settings
+                                    according to your needs.</li>
+                                <li>Click <uicontrol>Save</uicontrol> and
+                                        <uicontrol>Apply</uicontrol>.<p><image
+                                            href="../Images/admin/add-algo-ring-extension.png"
+                                            width="650" id="image_byv_t1c_fhb"/></p></li>
+                            </ol>
+                        </p></li>
+                    <li>Add an extension, this extension will be registered as the Algo Page extension.<p>
+                            <ol id="ol_dxm_lgd_fhb">
+                                <li>Click <uicontrol>Add</uicontrol>.</li>
+                                <li>Leave the default settings or change the General settings
+                                    according to your needs.</li>
+                                <li>Click <uicontrol>Save</uicontrol> and
+                                        <uicontrol>Apply</uicontrol>.<p><image
+                                            href="../Images/admin/add-algo-paging-extension.png"
+                                            width="650" id="image_usf_4bc_fhb"/></p></li>
+                            </ol>
+                        </p></li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_apt_kfd_fhb">
+            <title>Algo 8180G2 configuration</title>
+            <p>
+                <ol id="ol_tsf_4gd_fhb">
+                    <li>Access the Algo 8180G2 web interface, enter the password, and click
+                            <uicontrol>Login</uicontrol>.<p>The default password is
+                        <i>algo</i>.</p></li>
+                    <li>Go to <menucascade>
+                            <uicontrol>Basic Settings</uicontrol>
+                            <uicontrol>SIP</uicontrol>
+                        </menucascade>, enter the following settings.<p><image
+                                href="../Images/admin/algo-8180-registration.png" width="650"
+                                id="image_irb_mcc_fhb"/></p><p>
+                            <ul id="ul_ugs_3cc_fhb">
+                                <li><uicontrol>SIP Domain (Proxy Server)</uicontrol>: Enter the IP
+                                    address of <ph keyref="product_name"/>.</li>
+                                <li><uicontrol>Ring/Alert Mode</uicontrol>: Select
+                                        <uicontrol>Monitor "Ring" event on registered SIP
+                                        extension</uicontrol>.</li>
+                                <li><uicontrol>Ring/Alert Extension</uicontrol><p>Enter the
+                                        extension details of Ring/Alert extension.</p><p>
+                                        <ul id="ul_sbj_scc_fhb">
+                                            <li><uicontrol>Ring/Alert Extension</uicontrol>: Enter
+                                                the extension number.</li>
+                                            <li><uicontrol>Authentication ID</uicontrol>: Enter the
+                                                extension's <uicontrol>Registration
+                                                Name</uicontrol>.</li>
+                                            <li><uicontrol>Authentication Password</uicontrol>:
+                                                Enter the extension's <uicontrol>Registration
+                                                  Password</uicontrol>.</li>
+                                        </ul>
+                                    </p></li>
+                                <li><uicontrol>Base/Page Extension</uicontrol><p>Enter the extension
+                                        details of Base/Page extension.</p><p>
+                                        <ul id="ul_ont_kfd_fhb">
+                                            <li><uicontrol>Ring/Alert Extension</uicontrol>: Enter
+                                                the extension number.</li>
+                                            <li><uicontrol>Authentication ID</uicontrol>: Enter the
+                                                extension's <uicontrol>Registration
+                                                Name</uicontrol>.</li>
+                                            <li><uicontrol>Authentication Password</uicontrol>:
+                                                Enter the extension's <uicontrol>Registration
+                                                  Password</uicontrol>.</li>
+                                        </ul>
+                                    </p></li>
+                            </ul>
+                        </p></li>
+                    <li>Click <uicontrol>Save</uicontrol>.</li>
+                    <li>Go to <menucascade>
+                            <uicontrol>Status</uicontrol>
+                        </menucascade> to check the registration status.<p>If the extension is
+                            registered successfully, the status will display
+                                "Successful".</p><p><image
+                                href="../Images/admin/algo-8180-status.png" width="650"
+                                id="image_dz1_wdc_fhb"/></p><p><b>Result:</b></p><p>
+                            <ul id="ul_wtj_kfc_fhb">
+                                <li>When you dial the Ring/Alert extension 1000, the Algo 8180G will
+                                    play ring tones until the you hang up the call. <p>
+                                        <note>The call is not answered.</note>
+                                    </p></li>
+                            </ul>
+                        </p><p>
+                            <ul id="ul_hgk_lfc_fhb">
+                                <li>When you dial the Base/Page extension 1006, the Algo 8180G will
+                                    answer the call automatically.</li>
+                            </ul>
+                        </p></li>
+                </ol>
+            </p>
+        </section>
+    </body>
+</topic>

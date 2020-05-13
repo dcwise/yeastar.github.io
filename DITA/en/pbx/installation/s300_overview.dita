@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_wcy_ffb_b2b">
+    <title>S300 Overview</title>
+    <conbody>
+        <section id="section_vwz_hfb_b2b">
+            <title>Front Panel (1*EX30 + 2*EX08)</title>
+            <p><image href="../Images/admin/s300_front.png" id="image_dyz_tfb_b2b"/></p>
+            <p>
+                <table frame="all" rowsep="1" colsep="1" id="table_rkj_bgb_b2b">
+                    <title>Descriptions of 3100 Front Panel</title>
+                    <tgroup cols="4">
+                        <colspec colname="c1" colnum="1" colwidth="1.25*"/>
+                        <colspec colname="c2" colnum="2" colwidth="1*"/>
+                        <colspec colname="c3" colnum="3" colwidth="1.69*"/>
+                        <colspec colname="c4" colnum="4" colwidth="3.74*"/>
+                        <thead>
+                            <row>
+                                <entry>Port</entry>
+                                <entry namest="c2" nameend="c4">Description</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>E1/T1 </entry>
+                                <entry namest="c2" nameend="c4">Connect the E1/T1 line.</entry>
+                            </row>
+                            <row>
+                                <entry>1-8 Port<p>(RJ11 port)</p></entry>
+                                <entry namest="c2" nameend="c4">
+                                    <ul id="ul_qgr_trb_b2b">
+                                        <li><b>FXO port </b>(red light): For the connection of PSTN
+                                            lines or FXS ports of traditional PBX. </li>
+                                        <li><b>FXS port</b> (green light): For the connection of
+                                            analog phones. </li>
+                                        <li><b>BRI port </b>(orange light): For the connection of
+                                            ISDN BRI lines. </li>
+                                    </ul>
+                                    <note>The sequence number of the ports corresponds to that of
+                                        the Indicator lights in the front panel. (I.e. the LED
+                                        lights in the front indicate the connection status of the
+                                        corresponding ports at the back panel.)</note>
+                                </entry>
+                            </row>
+                            <row id="s3100-front-ports">
+                                <entry><b>LED</b></entry>
+                                <entry><b>Indication</b></entry>
+                                <entry><b>Status</b></entry>
+                                <entry><b>Description</b></entry>
+                            </row>
+                            <row>
+                                <entry morerows="9">1-8<p>(RJ11 port status)</p></entry>
+                                <entry morerows="1">FXS</entry>
+                                <entry>Green: static</entry>
+                                <entry>The analog phone is idle.</entry>
+                            </row>
+                            <row>
+                                <entry>Green: blinking</entry>
+                                <entry>The analog phone is busy.</entry>
+                            </row>
+                            <row>
+                                <entry morerows="2">GSM/3G/4G</entry>
+                                <entry>Red: static</entry>
+                                <entry>The GSM/3G/4G Trunk is idle.</entry>
+                            </row>
+                            <row>
+                                <entry>Red: blinking slowly</entry>
+                                <entry>No SIM card.</entry>
+                            </row>
+                            <row>
+                                <entry>Red: blinking rapidly</entry>
+                                <entry>The GSM/3G/4G trunk is in use.</entry>
+                            </row>
+                            <row>
+                                <entry morerows="1">BRI</entry>
+                                <entry>Orange: blinking</entry>
+                                <entry>The BRI line is disconnected.</entry>
+                            </row>
+                            <row>
+                                <entry>Orange: static</entry>
+                                <entry>The BRI line is connected or in use.</entry>
+                            </row>
+                            <row>
+                                <entry morerows="2">FXO</entry>
+                                <entry>Red: static</entry>
+                                <entry>The PSTN line is idle.</entry>
+                            </row>
+                            <row>
+                                <entry>Red: blinking slowly</entry>
+                                <entry>No PSTN line is connected to the FXO port.</entry>
+                            </row>
+                            <row>
+                                <entry>Red: blinking rapidly</entry>
+                                <entry>The PSTN line is busy.</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+        <section id="section_xnm_5fb_b2b">
+            <title>Rear Panel</title>
+            <p><image href="../Images/admin/s300_rear.png" id="image_ibc_vfb_b2b"/></p>
+            <p>
+                <table frame="all" rowsep="1" colsep="1" id="table_gzb_ryy_22b">
+                    <title>Descriptions of S300 Rear Panel</title>
+                    <tgroup cols="4">
+                        <colspec colname="c1" colnum="1" colwidth="1.14*"/>
+                        <colspec colname="c2" colnum="2" colwidth="1.14*"/>
+                        <colspec colname="c3" colnum="3" colwidth="1*"/>
+                        <colspec colname="c4" colnum="4" colwidth="4.04*"/>
+                        <thead>
+                            <row>
+                                <entry>LED</entry>
+                                <entry>Indication</entry>
+                                <entry>Status</entry>
+                                <entry>Description</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry morerows="1">POWER</entry>
+                                <entry morerows="1">Power status</entry>
+                                <entry>On</entry>
+                                <entry>The power is switched on.</entry>
+                            </row>
+                            <row>
+                                <entry>Off</entry>
+                                <entry>The power is switched off.</entry>
+                            </row>
+                            <row>
+                                <entry morerows="1">SYSTEM</entry>
+                                <entry morerows="1">System status</entry>
+                                <entry>Blinking</entry>
+                                <entry>The system is running properly.</entry>
+                            </row>
+                            <row>
+                                <entry>Static/Off</entry>
+                                <entry>The system goes wrong.</entry>
+                            </row>
+                            <row id="s3100-ports-description">
+                                <entry><b>Port</b></entry>
+                                <entry namest="c2" nameend="c4"><b>Description</b></entry>
+                            </row>
+                            <row>
+                                <entry>WAN/LAN</entry>
+                                <entry namest="c2" nameend="c4">
+                                    <p>Yeastar S300 provides two 10/100/1000Mbps adaptive RJ45
+                                        Ethernet ports, and supports 3 Ethernet modes. The default
+                                        mode is “Single”.</p>
+                                    <ul id="ul_p4c_dzy_22b">
+                                        <li><b>Single</b>: LAN port will be used for uplink
+                                            connection. WAN port is disabled.</li>
+                                        <li><b>Bridge</b>: LAN port will be used for uplink
+                                            connection. WAN port will be used as bridge for PC
+                                            connection. </li>
+                                        <li><b>Dual</b>: Both LAN and WAN ports can be used for
+                                            uplink connection.</li>
+                                    </ul>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>SD</entry>
+                                <entry namest="c2" nameend="c4">Insert SD card to store auto
+                                    recording files.</entry>
+                            </row>
+                            <row>
+                                <entry>Reset button</entry>
+                                <entry namest="c2" nameend="c4">Press and hold for 10 seconds to
+                                    restore the factory defaults.</entry>
+                            </row>
+                            <row>
+                                <entry>USB</entry>
+                                <entry namest="c2" nameend="c4">Insert USB device to store auto
+                                    recording files.</entry>
+                            </row>
+                            <row>
+                                <entry>Console</entry>
+                                <entry namest="c2" nameend="c4">Connect RS232 line to debug the
+                                    system.</entry>
+                            </row>
+                            <row>
+                                <entry>Power Switch</entry>
+                                <entry namest="c2" nameend="c4">Press this button to switch on/off
+                                    the device.</entry>
+                            </row>
+                            <row>
+                                <entry>Power Inlet</entry>
+                                <entry namest="c2" nameend="c4">Connect the supplied power supply to
+                                    the port.</entry>
+                            </row>
+                            <row>
+                                <entry>Protective Earth</entry>
+                                <entry namest="c2" nameend="c4">Connect to the ground to reduce the
+                                    risk of electrocution to the user or protect the PBX from the
+                                    bad effects of external noise in the case of a lightning
+                                    strike.</entry>
+                            </row>
+                            <row>
+                                <entry>Antenna Socket</entry>
+                                <entry namest="c2" nameend="c4">Rotate the antenna into the Antenna
+                                    Socket.</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+    </conbody>
+</concept>
+<?oxy_options track_changes="on"?>

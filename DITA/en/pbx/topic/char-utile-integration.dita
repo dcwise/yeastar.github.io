@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="app-char">
+    <title>char utile h+ Integration</title>
+    <shortdesc>char utile will act as a middleware between Yeastar S-Series VoIP PBX and the
+        client’s property management system (PMS). </shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/06/12"/>
+            <!--Carol-->
+            <revised modified="2018/06/12"/>
+            <!--Carol-->
+            <revised modified="2018/12/19"/>
+            <!--Carol-->
+            <revised modified="2018/12/20"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <p>With the integration, the PMS will be able to:</p>
+        <ul id="ul_agt_bxz_c2b">
+            <li>Check-in and check-out</li>
+            <li>Manage room status</li>
+            <li>Schedule wake-up calls</li>
+            <li>Keep records of call details</li>
+            <li>Receive voice messages</li>
+        </ul>
+    </conbody>
+</concept>

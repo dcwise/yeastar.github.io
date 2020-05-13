@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_oqk_ml3_ffb">
+    <title>Certificates</title>
+    <shortdesc><ph keyref="product_name"/> supports TLS protocol<ph product="s-series"> and HTTPS
+            protocol</ph>. Before using TLS protocol<ph product="s-series"> and HTTPS protocol</ph>,
+        you need to upload the relevant certificates to the PBX.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/09/21"/>
+            <!--Carol-->
+            <revised modified="2018/09/21"/>
+        </critdates>
+    </prolog>
+    <body>
+        <p>Go to <menucascade>
+                <uicontrol>Settings</uicontrol>
+                <uicontrol>System</uicontrol>
+                <uicontrol>Security</uicontrol>
+                <uicontrol>Certificates</uicontrol>
+            </menucascade>, and click <uicontrol>Upload</uicontrol> to upload your certificates.</p>
+        <p>The PBX supports two kinds of certificate types:</p>
+        <ul id="ul_z1j_nm3_ffb">
+            <li><b>Trusted Certificate</b>: This certificate is a CA certificate. When you check
+                    <uicontrol>TLS Verify Client</uicontrol> (<menucascade>
+                    <uicontrol>Settings</uicontrol>
+                    <uicontrol>General</uicontrol>
+                    <uicontrol>SIP</uicontrol>
+                    <uicontrol>TLS</uicontrol>
+                </menucascade>), you should upload a CA certificate. The relevant TLS client (i.e.
+                IP phone) should also have this certificate.</li>
+            <li><b>PBX Certificate</b>: This certificate is a server certificate. <ul
+                    id="ul_dkk_q5j_w3b">
+                    <li product="s-series">If the PBX uses HTTPS protocol, you need to upload the
+                            <uicontrol>PBX Certificate</uicontrol>.</li>
+                    <li>If the PBX uses TLS protocol, you need to upload the <uicontrol>PBX
+                            Certificate</uicontrol> whether <uicontrol>TLS Verify Client</uicontrol>
+                        is checked or not.</li>
+                </ul></li>
+        </ul>
+    </body>
+</topic>

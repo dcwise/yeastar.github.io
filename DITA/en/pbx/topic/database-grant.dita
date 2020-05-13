@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="database-grant">
+    <title>Database Grant</title>
+    <shortdesc><ph keyref="product_name"/> is based on MySQL database. A third-party software can
+        access to the database of PBX. Grant permissions to database before accessing to the
+        database of PBX.</shortdesc>
+    <body>
+        <section id="section_y3b_sn3_w3b">
+            <title>Applications</title>
+            <p>Database Grant is usually applied in below cases:</p>
+            <p>
+                <ul id="ul_ekk_yn3_w3b">
+                    <li><b>Billing</b><p>By accessing to the database of PBX, you can get CDR and
+                            save it to the local database of billing software. Then you can charge
+                            the calls by CDR.</p></li>
+                    <li><b>Call Center</b><p>By accessing to the database of PBX, you can<ul id="ul_y5w_mbk_w3b">
+                                <li>get CDR and save it to the local database of call center
+                                    software. </li>
+                                <li>get storage path of recordings, and download recordings by FTP
+                                    or File Sharing. </li>
+                            </ul></p></li>
+                </ul>
+            </p>
+        </section>
+        <section>
+            <title>Capture Data in Database</title>
+            <p>
+                <ol id="ol_hx4_y43_w3b">
+                    <li>Add database grant on PBX for the targeted device.<p>
+                            <ol id="ol_j3l_tr3_w3b">
+                                <li>Log in the PBX web interface, go to <menucascade>
+                                        <uicontrol>Settings</uicontrol>
+                                        <uicontrol>System</uicontrol>
+                                        <uicontrol>Security</uicontrol>
+                                        <uicontrol>Database Grant</uicontrol>
+                                    </menucascade>, and click <uicontrol>Add</uicontrol>.</li>
+                                <li>On the pop-up window, change below settings:<p><image
+                                            id="image_zrw_zr3_w3b"
+                                            href="../Images/admin/add-database-grant.png"/></p><ul
+                                        id="ul_iz4_453_w3b">
+                                        <li><uicontrol>Username</uicontrol>: Enter the username
+                                            which can be used by third party to access the database
+                                            of PBX.</li>
+                                        <li><uicontrol>Password</uicontrol>: Enter the password
+                                            which can be used by third party to access the database
+                                            of PBX.</li>
+                                        <li><uicontrol>Permitted IP</uicontrol>: Enter the IP
+                                            address or IP section which is allowed to access the
+                                            database of PBX. The input format should be
+                                                <i>XXX.XXX.XXX.XXX</i> or
+                                                <i>XXX.XXX.XXX.%</i>.<p>For example:<ul
+                                                  id="ul_ol5_zck_w3b">
+                                                  <li><i>216.207.245.47</i> means that only the
+                                                  device with IP address 216.207.245.47 is allowed
+                                                  to access the database of PBX.</li>
+                                                  <li><i>192.168.6.%</i> means that only the devices
+                                                  whose IP section is 192.168.6.X are allowed to
+                                                  access the database of PBX.</li>
+                                                </ul></p></li>
+                                    </ul></li>
+                                <li>Click <uicontrol>Save</uicontrol> and
+                                        <uicontrol>Apply</uicontrol>.</li>
+                            </ol>
+                        </p></li>
+                    <li>Access the database of PBX.<p>Take <b>Navicat for MySQL</b> for example, to
+                            introduce how to access the database of PBX.</p><p>
+                            <ol id="ol_hsw_2pb_1hb">
+                                <li>Open <b>Navicat for MySQL</b>, and click
+                                        <uicontrol>Connection</uicontrol>.</li>
+                                <li>On the pop-up window, change below settings:<p><image
+                                            id="image_ujt_2mj_w3b"
+                                            href="../Images/admin/Navicat-connect.png"/></p><ul
+                                        id="ul_p2r_sdk_w3b">
+                                        <li><uicontrol>Connection Name</uicontrol>: Enter connection
+                                            name to help you identify it.</li>
+                                        <li><uicontrol>Host</uicontrol>: Enter the IP address of
+                                            PBX.</li>
+                                        <li><uicontrol>Port</uicontrol>: Enter <i>3066</i>.</li>
+                                        <li><uicontrol>User Name</uicontrol>: Enter the user name
+                                            configured in Database Grant of PBX.</li>
+                                        <li><uicontrol>Password</uicontrol>: Enter the password
+                                            configured in Database Grant of PBX.</li>
+                                    </ul></li>
+                                <li>Click <uicontrol>OK</uicontrol>.</li>
+                                <li>Click cdr table, you can see existing cdr tables on
+                                            PBX.<p><note>The database generates a cdr table every
+                                            month</note><image id="image_qz2_g2k_w3b"
+                                            href="../Images/admin/Navicat-cdr.png" width="650"
+                                    /></p></li>
+                            </ol>
+                        </p></li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_fq1_dnj_w3b">
+            <title>Download Recordings</title>
+            <p>The third party software can get storage path of recordings, and download recordings. </p>
+            <p>To download recordings by third party software, you need to <xref
+                    href="set_up_file_share.dita"/> or save recordings on <xref
+                    href="add_a_windows_network_drive.dita#task_ym2_3lr_xdb">Network Drive</xref>.</p>
+            <p>
+                <ol>
+                    <li>Access the database to query the value of <codeph>recordpatch</codeph>.</li>
+                    <li>Set access path for recordings by different file sharing methods.<ul
+                            id="ul_or4_tpj_w3b">
+                            <li><b>External Storage File Sharing</b><p>For example, the value of
+                                        <codeph>recordpatch</codeph> is
+                                        <i>/tmp/media/harddisk1/autorecords/20170503/20170503162206-161-6222-Inbound.wav</i>.</p><p>The
+                                    shared folder is <filepath>CarolShare</filepath>, the IP address
+                                    of PBX is <i>192.168.7.112</i>, then access path for recordings
+                                    is:</p><p><filepath>//192.168.7.112/CarolShare/harddisk1/autorecords/20170503/20170503162206-161-6222-Inbound.wav</filepath>.</p></li>
+                            <li><b>Network Drive</b><p>For example, the value of
+                                        <codeph>recordpatch</codeph> is
+                                        <i>/tmp/media/networkdisk1/autorecords/20170503/20170503162206-161-6222-Inbound.wav</i>.</p><p>The
+                                    shared folder of computer is <filepath>recordings</filepath>,
+                                    the IP address of computer is <i>192.168.6.100</i>, then access
+                                    path for recordings
+                                        is:</p><p><filepath>//192.168.6.100/recordings/autorecords/20170503/20170503162206-161-6222-Inbound.wav</filepath>.</p></li>
+                        </ul></li>
+                </ol>
+            </p>
+        </section>
+    </body>
+</topic>

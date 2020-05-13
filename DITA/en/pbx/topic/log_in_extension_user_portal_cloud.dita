@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_xdl_nxr_zcb">
+    <title>Log in Extension User Portal</title>
+    <shortdesc>After setting up extensions, the super administrator will send an email that contains
+        the login information to the extension users. You can check the email to get the login
+        information of Extension User Portal.</shortdesc>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/08/21"/>
+            <!--Carol-->
+            <revised modified="2018/08/22"/>
+            <!--Carol-->
+            <revised modified="2018/09/06"/>
+            <!--Carol-->
+            <revised modified="2018/09/07"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <context/>
+        <steps id="steps_owp_sfs_zcb">
+            <step>
+                <cmd>Open the email that is sent by the administrator, click the reset password link
+                    to set the login password.</cmd>
+                <info>
+                    <note> The reset password link is valid in 24 hours.</note>
+                </info>
+                <info><image href="../Images/user/reset_password.png" id="image_pm4_qhs_zcb"
+                        width="400"/></info>
+            </step>
+            <step>
+                <cmd>Visit the PBX domain, enter the email address that is bound with the extension
+                    and the password, click <uicontrol>Login</uicontrol>. </cmd>
+                <info><image href="../Images/user/cloudpbx_login.png" width="400"
+                        id="image_odf_kgx_zcb"/></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

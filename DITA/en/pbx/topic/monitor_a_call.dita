@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_og3_wcr_bdb">
+    <title>Monitor a Call</title>
+    <shortdesc>To monitor other person's call, you need Call Monitor permission. If you need to
+        monitor calls, contact your administrator to set the Call Monitor permission for
+        you.</shortdesc>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/08/23"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <context>
+            <p> You can dial "feature codes" + "extension number" to monitor the extension user's
+                call. For example, dial *911000 to monitor extension 1000.</p>
+            <p> The PBX supports the following monitor modes:<ul id="ul_dqm_hms_scb">
+                    <li><uicontrol>Listen</uicontrol> (Default code: *90)<p>You can listen to the
+                            monitored extension user's call, but cannot speak to him/her.</p></li>
+                    <li><uicontrol>Whisper</uicontrol> (Default code: *91)<p>You can listen and
+                            speak to the monitored extension user. The other party could not hear
+                            your voice.</p></li>
+                    <li><uicontrol>Barge-in</uicontrol> (Default code: *92)<p>You can join the
+                            monitored extension's call. </p></li>
+                </ul></p>
+        </context>
+    </taskbody>
+</task>

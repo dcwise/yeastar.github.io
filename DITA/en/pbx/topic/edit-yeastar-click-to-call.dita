@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="edit-yeastar-click-to-call">
+    <title>Edit Yeastar Click to Call</title>
+    <shortdesc>After installing Yeastar Click to Call, you may need to configure Chrome-specific
+        settings, which is associated with the Extension, such as permissions and icon
+        display.</shortdesc>
+    <body>
+        <section id="section_cwn_4g5_xjb">
+            <title>Edit Yeastar Click to Call permissions</title>
+            <p>You can change the permission of reading and changing site data for Yeastar Click to
+                Call at any time. </p>
+            <p>
+                <ol id="ol_twz_xg5_xjb">
+                    <li>On you computer, open Google Chrome Browser.</li>
+                    <li>On the right of the address bar (URL field), click <image
+                            id="image_fcs_cht_xjb" href="../Images/admin/yeastar.png" width="20"
+                        />.</li>
+                    <li>Hover your mouse over <uicontrol>This can read and change site
+                            data</uicontrol>, and decide which permission should be granted to
+                        Yeastar Click to Call.<ul id="ul_crp_lh5_xjb">
+                            <li><uicontrol>When you click the extension</uicontrol>: Only when you
+                                click <image href="../Images/admin/yeastar.png" width="20"
+                                    id="image_ent_qh5_xjb"/> will Yeastar Click to Call work. This
+                                only allows Yeastar Click to Call to access the current site in the
+                                open tab or window. If you close the tab or window, you should click
+                                    <image href="../Images/admin/yeastar.png" width="20"
+                                    id="image_ybg_c35_xjb"/> to turn the Extension on again.</li>
+                            <li><uicontrol>On <varname>current site</varname></uicontrol>: Allow
+                                Yeastar Click to Call to automatically read and change data on the
+                                current site.</li>
+                            <li><uicontrol>On all sites</uicontrol>: Allow Yeastar Click to Call to
+                                automatically read and change data on all sites.</li>
+                        </ul></li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_szv_435_xjb">
+            <title>Hide/Unhide Yeastar Click to Call</title>
+            <p>You can decide whether to display Yeastar icon <image
+                    href="../Images/admin/yeastar.png" width="20" id="image_cmq_4k1_yjb"/> right
+                beside the address bar (URL field).</p>
+            <p>Open Google Chrome Browser, and go to the right of the address bar (URL field):<ul
+                    id="ul_sfn_pk1_yjb">
+                    <li>To hide Yeastar icon, go to <menucascade>
+                            <uicontrol><image href="../Images/admin/yeastar.png" width="20"
+                                    id="image_qmg_hl1_yjb"/></uicontrol>
+                            <uicontrol>Hide in Chrome menu</uicontrol>
+                        </menucascade>.<p><image id="image_hvc_hm1_yjb"
+                                href="../Images/admin/unhide-yeastar-icon-1.png"/></p></li>
+                    <li>
+                        <p>To unhide Yeastar icon, go to <menucascade>
+                                <uicontrol><image href="../Images/admin/chrome-settins.png"
+                                        id="image_kzc_nl1_yjb"/></uicontrol>
+                                <uicontrol><image href="../Images/admin/yeastar.png" width="20"
+                                        id="image_yhp_nl1_yjb"/></uicontrol>
+                                <uicontrol>Show in toolbar</uicontrol>
+                            </menucascade>.</p>
+                        <p><image id="image_vmm_rj5_xjb"
+                                href="../Images/admin/unhide-yeastar-icon.png"/></p>
+                    </li>
+                </ul></p>
+        </section>
+    </body>
+</topic>

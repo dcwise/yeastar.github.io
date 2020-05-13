@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="task_f2z_fdn_2fb">
+    <title>Linkus Login Mode</title>
+    <shortdesc>Linkus server provides two login modes for users: Extension Mode and Email Mode. By
+        default, users should log in Linkus client by their extension numbers. To enhance the Linkus
+        security, you can change the login mode to Email Mode, which will force users to log in
+        Linkus by email addresses.</shortdesc>
+    <body>
+        <section id="section_qs3_syn_hhb">
+            <title>Set Linkus login mode</title>
+            <p>
+                <ol>
+                    <li> Go to <menucascade>
+                            <uicontrol>Linkus</uicontrol>
+                            <uicontrol>Linkus Client Settings</uicontrol>
+                        </menucascade>, click <uicontrol>Login Mode</uicontrol>.</li>
+                    <li> On the <uicontrol>Login Mode</uicontrol> page, select the login mode.<itemgroup>
+                            <note>If you select both <uicontrol>Extension</uicontrol> mode and
+                                    <uicontrol>Email</uicontrol> mode, users can log in Linkus by
+                                extension numbers or email addresses.</note>
+                        </itemgroup>
+                        <itemgroup><image href="../Images/admin/linkus_login_mode.png"
+                                id="image_cvp_qfn_2fb"/></itemgroup>
+                        <itemgroup>
+                            <ul id="ul_bqq_rfn_2fb">
+                                <li><uicontrol>Extension</uicontrol>: Users should log in Linkus by
+                                    their extension numbers.</li>
+                                <li><uicontrol>Email</uicontrol>: Users should log in Linkus by the
+                                    email addresses that are associated with their extensions.</li>
+                            </ul>
+                        </itemgroup>
+                    </li>
+                    <li> Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</li>
+                </ol>
+            </p>
+        </section>
+    </body>
+</topic>

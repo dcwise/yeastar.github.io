@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_ijw_jgg_4fb">
+    <title>Access the PBX via SSH</title>
+    <shortdesc>To debug the system, you can establish a temporary SSH connection on the PBX, and
+        access the PBX via SSH to check the logs.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/10/23"/>
+            <!--Carol-->
+            <revised modified="2018/10/23"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Establish SSH connection.</cmd>
+                <substeps>
+                    <substep>
+                        <cmd>Go to <menucascade>
+                                <uicontrol>Maintenance</uicontrol>
+                                <uicontrol>SSH Connection</uicontrol>
+                            </menucascade>, click <uicontrol>Establish Connection</uicontrol>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>On the <uicontrol>Time Settings</uicontrol> dialog box, select the time
+                            period in the <uicontrol>Timeout</uicontrol> drop-down menu, click
+                                <uicontrol>OK</uicontrol>.</cmd>
+                        <info>
+                            <p>
+                                <note>When the connection times out, the SSH tunnel will be closed,
+                                    you will not be able to access PBX via SSH.</note>
+                            </p>
+                        </info>
+                        <info>The SSH connection information is displayed on the <uicontrol>SSH
+                                Connection</uicontrol> page.</info>
+                        <info><image href="../Images/admin/ssh_connection_cloud.png"
+                                id="image_nsg_4hg_4fb"/></info>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Use <xref href="https://www.putty.org/" format="html" scope="external"
+                        >PuTTY</xref> to access the PBX via SSH. </cmd>
+                <info><image href="../Images/admin/putty_login_cloud.png" id="image_cgj_b4j_zdb"
+                        width="400"/></info>
+                <info>
+                    <ul id="ul_df1_zhg_4fb">
+                        <li><uicontrol>Host Name (or IP address)</uicontrol>: Enter the PBX
+                            domain.</li>
+                        <li><uicontrol>Port</uicontrol>: Enter the SSH port.</li>
+                        <li><uicontrol>Connection Type</uicontrol>: Choose
+                                <uicontrol>SSH</uicontrol>.</li>
+                    </ul>
+                </info>
+            </step>
+            <step>
+                <cmd>To get more logs in the window, set the <uicontrol>Lines of
+                        scrollback</uicontrol> to a larger value, click
+                    <uicontrol>Apply</uicontrol>.</cmd>
+                <info><image href="../Images/admin/putty_lines_of_scrollback.png"
+                        id="image_etl_p4j_zdb" width="400"/></info>
+            </step>
+            <step>
+                <cmd>Enter the username and password to access the PBX.</cmd>
+                <info>
+                    <ul id="ul_q55_54j_zdb">
+                        <li><uicontrol>login as</uicontrol>: Enter <codeph>support</codeph>.</li>
+                        <li><uicontrol>password</uicontrol>: Enter the SSH password.</li>
+                    </ul>
+                    <note type="tip">After copying the SSH password, right click on the Putty
+                        interface to paste password.</note>
+                </info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

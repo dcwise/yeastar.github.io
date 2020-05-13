@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_p3g_btz_scb">
+    <title>Update Auto Provision Settings</title>
+    <shortdesc>After finishing the auto provision configurations, you can update auto provision
+        settings for specific phones or all the phones.</shortdesc>
+    <taskbody>
+        <context>
+            <p>
+                <note> Only the phone with extension registered to the PBX can update the auto
+                    provision settings.</note>
+            </p>
+        </context>
+        <steps id="steps_st2_gtz_scb">
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Auto Provisioning</uicontrol>
+                        <uicontrol>Device List</uicontrol>
+                    </menucascade>.</cmd>
+            </step>
+            <step>
+                <cmd>Select the desired phone(s), click <image href="../Images/ui_icons/edit.png"
+                        width="20" id="image_l5f_mtz_scb"/> to edit the settings.</cmd>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol> to save your configurations.</cmd>
+            </step>
+            <step>
+                <cmd>On the pop-up window, click <uicontrol>Yes</uicontrol> to reboot the phone(s)
+                    and update the configurations.</cmd>
+                <info>
+                    <note>If the phones do not reboot automatically, reboot the phones automatically
+                        to make the configuration take effect.</note>
+                </info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

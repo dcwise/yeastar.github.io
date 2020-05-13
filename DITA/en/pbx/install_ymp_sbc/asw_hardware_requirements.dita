@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_rgm_41y_3cb">
+  <title>Hardware Requirements</title>
+  <body>
+    <p><b>Hardware Requirements for YMP Server</b></p>
+    <p>The server used to host the YMP must meet the following minimum requirements.</p>
+    <p>
+      <table frame="all" rowsep="1" colsep="1" id="table_pg5_d3j_3cb">
+        <tgroup cols="6">
+          <colspec colname="c1" colnum="1" colwidth="1*"/>
+          <colspec colname="newCol5" colnum="2" colwidth="1*"/>
+          <colspec colname="newCol2" colnum="3" colwidth="1*"/>
+          <colspec colname="newCol3" colnum="4" colwidth="1*"/>
+          <colspec colname="newCol4" colnum="5" colwidth="1*"/>
+          <colspec colname="c2" colnum="6" colwidth="3.65*"/>
+          <thead>
+            <row>
+              <entry>Concurrent Calls</entry>
+              <entry>CPU Frequency</entry>
+              <entry>CPU</entry>
+              <entry>Memory</entry>
+              <entry>Storage</entry>
+              <entry>Ethernet</entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry>50</entry>
+              <entry morerows="3" valign="middle">2.4GHz -2.9GHz</entry>
+              <entry>2 cores</entry>
+              <entry>4G</entry>
+              <entry>50G</entry>
+              <entry> 1000Mbit/s</entry>
+            </row>
+            <row>
+              <entry>100</entry>
+              <entry>4 cores</entry>
+              <entry>4G</entry>
+              <entry>100G</entry>
+              <entry>1000Mbit/s</entry>
+            </row>
+            <row>
+              <entry>200-300</entry>
+              <entry>8 cores</entry>
+              <entry>8G</entry>
+              <entry>200G</entry>
+              <entry>1000Mbit/s</entry>
+            </row>
+            <row>
+              <entry>400-500</entry>
+              <entry>16 cores</entry>
+              <entry>16G</entry>
+              <entry>400G</entry>
+              <entry>1000Mbit/s</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table>
+    </p>
+  </body>
+</topic>

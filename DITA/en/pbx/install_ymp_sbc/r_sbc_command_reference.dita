@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="reference_bff_bm2_4cb">
+  <title>Reference of Security Commands</title>
+  <prolog>
+    <critdates>
+      <!--Carol-->
+      <revised modified="2018/06/22"/>
+      <!--Carol-->
+      <revised modified="2018/06/29"/>
+      <!--Carol-->
+      <revised modified="2018/08/24"/>
+      <!--Carol-->
+      <revised modified="2018/09/30"/>
+    </critdates>
+  </prolog>
+  <refbody>
+    <section id="section_rpw_nw2_4cb">
+      <title>Start yssc (Yeastar Security Center)</title>
+      <p>The yssc is enabled by default. If you disabled the yssc, you can use the following command
+        to restart the yssc.</p>
+      <p>
+        <codeblock>sudo systemctl start yssc</codeblock>
+      </p>
+    </section>
+    <section id="section_osc_sx2_4cb">
+      <title>Stop yssc (Yeastar Security Center)</title>
+      <p>To stop the yssc, use the following command.</p>
+      <p>
+        <note type="important">If the yssc is disabled, the security rules in the SBC will not work
+          to protect your network.</note>
+      </p>
+      <p>
+        <codeblock>sudo systemctl stop yssc </codeblock>
+      </p>
+    </section>
+    <section id="section_xyg_wx2_4cb">
+      <title>Modify Security Rules &amp; Reload yssc</title>
+      <p>The SBC has embedded with default security rules. You can modify the rules according to
+        your needs and reload yssc to make the configurations take effect.</p>
+      <p>
+        <codeblock outputclass="language-c">sudo vi /yeasafe/yssc/conf/yssc.conf        /* Modify yssc.conf */</codeblock>
+      </p>
+      <p>
+        <codeblock outputclass="language-c">sudo systemctl reload yssc                 /* Reload yssc */</codeblock>
+      </p>
+    </section>
+    <section id="section_pnz_cnf_4cb">
+      <title>Description of SBC Security Rules</title>
+      <p>The security center contains fail2ban rules and dynamic defense rules. Below are the
+        default security rules in the <codeph>yssc.conf</codeph> file. </p>
+      <p>
+        <note> To disable a dynamic defense rule, set <codeph>"enable": false</codeph>.</note>
+      </p>
+    </section>
+    <section id="section_xmz_cnf_4cb">
+      <p>
+        <codeblock outputclass="language-c">root@ip-10-0-0-4:~# vi /yeasafe/yssc/conf/yssc.conf 
+{
+"fail2ban":{
+  "interval":600,      /* Set the Max. retry duration (seconds) */
+  "tries":5,          /* Set the Max. retry times */
+  "block":600        /* Set the banned duration (seconds) */
+            },
+"dynamic_defense":[
+{"name":"ssh", "port":1022, "enable":true, "protocol":"tcp","packets":100, "interval":60},
+{"name":"sip", "port":5060, "enable":true, "protocol":"tcp","packets":225, "interval":1},
+{"name":"sip", "port":5060, "enable":true, "protocol":"udp","packets":225, "interval":1},
+{"name":"sip_tls","port":5061,"enable":true,"protocol":"tcp","packets":225,"interval":1,
+{"name":"sip_tls","port":5061,"enable":true,"protocol":"udp","packets":225,"interval":1},
+{"name":"sip_wss","port":5062,"enable":true,"protocol":"udp","packets":225,"interval":1},
+{"name":"sip_wss","port":5062,"enable":true,"protocol":"tcp","packets":225,"interval":1},
+]}</codeblock>
+      </p>
+    </section>
+  </refbody>
+</reference>

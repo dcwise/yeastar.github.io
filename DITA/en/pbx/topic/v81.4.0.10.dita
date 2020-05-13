@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_shf_bp1_pdb">
+    <title>Version 81.4.0.10</title>
+    <abstract>Released Date: May 2, 2018<note type="important">
+            <p>In this firmware version, we enhanced the PBX security. This security update will
+                make your Yeastar Cloud PBX more secure and protect it from attacks. We recommend
+                you update the firmware as soon as possible.</p>
+        </note></abstract>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/06/20"/>
+        </critdates>
+    </prolog>
+    <body>
+        <section id="section_jdl_1yv_pdb">
+            <title>Optimization</title>
+            <p><image href="../Images/horizon.png" id="image_pry_dyv_pdb"/></p>
+            <p>Improved the security of PBX instance.</p>
+        </section>
+    </body>
+  
+</topic>

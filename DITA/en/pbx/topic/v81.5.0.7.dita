@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_ijw_dbg_f2b">
+    <title>Version 81.5.0.7</title>
+    <abstract>Released Date: June 29, 2018</abstract>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/06/20"/>
+            <!--Carol-->
+            <revised modified="2018/06/20"/>
+            <!--Carol-->
+            <revised modified="2018/06/22"/>
+            <!--Carol-->
+            <revised modified="2018/06/25"/>
+            <!--Carol-->
+            <revised modified="2018/06/26"/>
+            <!--Carol-->
+            <revised modified="2018/06/27"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <section id="section_mgs_mbg_f2b">
+            <title>Optimization</title>
+            <p><image href="../Images/horizon.png" id="image_pry_dyv_pdb"/></p>
+            <p><b>Security</b></p>
+            <p>
+                <ul id="ul_obz_4bg_f2b">
+                    <li>Improved the security and stability of the PBX.</li>
+                </ul>
+            </p>
+            <p><b>Extension</b></p>
+            <p>
+                <ul id="ul_bkj_qbg_f2b">
+                    <li>Fixed SIP Forking issue: When the number of registered phones exceeds the
+                        pre-set <uicontrol>Concurrent Registrations</uicontrol>, the earlier
+                        registered phone would lose the registration with the extension.</li>
+                    <li>Fixed the issue that the SIP <uicontrol>Subscription Timers</uicontrol>
+                        didn't take effect.</li>
+                    <li>Fixed the video quality issue with Yealink video phones.</li>
+                </ul>
+            </p>
+            <p><b>SIP Trunk</b></p>
+            <p>
+                <ul id="ul_rrq_vfg_f2b">
+                    <li>Optimized the Peer to Peer trunk: The PBX will assign a different port for a
+                        Peer to Peer trunk.</li>
+                    <li>Optimized the DID number settings.</li>
+                    <li>Supports up to 64 DID numbers.</li>
+                    <li>The <uicontrol>Password</uicontrol> setting of SIP Register trunk supports
+                        127 characters.</li>
+                    <li>Fixed the compatibility issue with gnTel ITSP: <p>
+                            <ul id="ul_fcm_1xg_f2b">
+                                <li>The call through the SIP trunk could not be terminated normally,
+                                    because the ACK packet that the PBX responded to the ITSP didn't
+                                    contain the domain of the ITSP. </li>
+                                <li>No sound during a call.</li>
+                            </ul>
+                        </p></li>
+                    <li>Fixed the compatibility issue with Alfdom ITSP: <p>
+                            <ul id="ul_ppj_cfh_f2b">
+                                <li>When a call was forwarded to an external number, the call could
+                                    not be terminated normally. </li>
+                            </ul>
+                        </p></li>
+                    <li>Fixed the compatibility issue with VoIPVoice ITSP: <p>
+                            <ul id="ul_b5m_srx_g2b">
+                                <li>The call through the SIP trunk could not be terminated
+                                    normally.</li>
+                            </ul>
+                        </p></li>
+                    <li>Fixed the Outbound Proxy issue: If a SIP trunk had enabled outbound proxy,
+                        the SIP trunk might not work.</li>
+                    <li>If T.38 was enabled on the SIP trunk, Call Parking and Call Hold would not
+                        work for inbound calls through this SIP trunk.</li>
+                    <li>Fixed the issue that SIP trunk could not be registered automatically if the
+                        trunk was disconnected.</li>
+                </ul>
+            </p>
+            <p><uicontrol>API Interfaces</uicontrol></p>
+            <p>
+                <ul id="cloud_api_1.0.4">
+                    <li>Added API interface to query queue status and agent status.</li>
+                    <li>Added API interface to pause or resume an agent's service.</li>
+                    <li>The CDR reports will show DID number and the agent's ring time.</li>
+                    <li>Added support for configuring an extension's outbound route.</li>
+                    <li>Added support for querying an extension's outbound route.</li>
+                </ul>
+            </p>
+            <p><b>Email Template</b></p>
+            <p>
+                <ul id="ul_hgb_shg_f2b">
+                    <li>Optimized the welcome email template.</li>
+                </ul>
+            </p>
+            <p><b>Voicemail to Email</b></p>
+            <p>
+                <ul id="ul_cvq_5hg_f2b">
+                    <li>Fixed the issue that the email subject might contain messy codes.</li>
+                </ul>
+            </p>
+            <p><b>Backup and Restore</b></p>
+            <p>
+                <ul id="ul_rk3_xhg_f2b">
+                    <li>Added support for one touch recording files and voicemail files.</li>
+                </ul>
+            </p>
+            <p><b>Ethernet Capture Tool</b></p>
+            <p>
+                <ul id="ul_vky_h1h_f2b">
+                    <li>Deleted <uicontrol>Port</uicontrol> and <uicontrol>IP Address</uicontrol>
+                        settings. You can click <uicontrol>Start</uicontrol> directly to capture
+                        packets.</li>
+                </ul>
+            </p>
+            <p><b>Event Center</b></p>
+            <p>
+                <ul id="ul_ipt_m1h_f2b">
+                    <li>Added <uicontrol>Modify the Port of Peer Trunk</uicontrol> event.</li>
+                    <li>Fixed the event log issue: The log of  "VoIP Trunk registration failed"
+                        might be incorrect. </li>
+                </ul>
+            </p>
+            <p><b>System Log</b></p>
+            <p>
+                <ul id="ul_wtl_1bh_f2b">
+                    <li>Optimized the system logs.</li>
+                </ul>
+            </p>
+        </section>
+    </conbody>
+</concept>

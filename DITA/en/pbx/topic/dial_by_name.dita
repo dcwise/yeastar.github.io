@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_xnw_vlg_tdb">
+    <title>Dial by Name</title>
+    <shortdesc>You can set the IVR Keypress to "Dial by Name", that will allow the callers to find
+        the person by entering the first 3 letters of extensions' first name.</shortdesc>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2019/01/22"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <prereq id="prereq_sxr_nmg_tdb">
+            <p>To use <uicontrol>Dial by Name</uicontrol>, you need to do the followings:</p>
+            <ul id="ul_u5t_nmg_tdb">
+                <li>
+                    <p>Specify names for extensions on the PBX.</p>
+                </li>
+                <li>
+                    <p>Better to instruct the callers to use the feature in the IVR prompt.</p>
+                </li>
+            </ul>
+        </prereq>
+        <steps>
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol>PBX</uicontrol>
+                        <uicontrol>Call Features</uicontrol>
+                        <uicontrol>IVR</uicontrol>
+                    </menucascade>, edit your IVR.</cmd>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Key Press Event</uicontrol> tab, set a key action to
+                        <uicontrol>Dial by Name</uicontrol>. </cmd>
+                <info><image href="../Images/admin/dial_by_name.png" id="image_xy3_3mg_tdb"
+                        width="650"/></info>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

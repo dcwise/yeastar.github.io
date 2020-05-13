@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="app-ldap">
+    <title>LDAP Server </title>
+    <conbody>
+        <section id="section_l5q_hsb_r3b">
+            <title>About this guide</title>
+            <p>In this guide, we introduce the configuration settings needed to set up <ph
+                    keyref="product_name"/> as LDAP server and provide configuration examples of <ph
+                    product="k2 s-series">Zoiper Softphone and </ph>mainstream IP phones like
+                Yealink, Fanvil, Snom, Htek, Cisco, and Grandstream.</p>
+        </section>
+        <section id="section_slg_2dl_s3b">
+            <title>Audience</title>
+            <p>This guide is intended for the administrators who are responsible for setting up LDAP
+                server and have a basic knowledge of LDAP.</p>
+        </section>
+    </conbody>
+</concept>

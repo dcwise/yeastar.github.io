@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="task_ym2_3lr_xdb">
+    <title>Add a Windows Network Drive</title>
+    <shortdesc> The Network Drive feature is used to extend storage space. You can store voicemails,
+        CDR, recordings, logs and backup files to a network drive. In this topic, we introduces how
+        to add a shared folder on Windows 10 and mount the shared folder to <ph
+            keyref="product_name"/>.</shortdesc>
+    <body>
+        <section id="section_gyj_13w_1jb">
+            <title>Configuration Example </title>
+            <p>
+                <ol id="ol_y5h_d3w_1jb">
+                    <li>Create a shared folder in Windows 10 PC.<p>
+                            <note> Make sure that the computer is always in service, or PBX cannot
+                                add files to the shared folder.</note>
+                        </p><p>
+                            <ol id="ol_b3t_33w_1jb">
+                                <li>Create a folder on the computer, and gives a name to the
+                                    folder.</li>
+                                <li>Right click the folder, select <menucascade>
+                                        <uicontrol>Properties</uicontrol>
+                                        <uicontrol>Sharing</uicontrol>
+                                    </menucascade>.</li>
+                                <li>Click <uicontrol>Share...</uicontrol>, configure the Share
+                                        properties.<p>Share the folder to
+                                            <uicontrol>Everyone</uicontrol>, set the
+                                            <uicontrol>Permission Level</uicontrol> to
+                                            <uicontrol>Read/Write</uicontrol>, then click
+                                            <uicontrol>Share</uicontrol>.</p><p><image
+                                            href="../Images/admin/share-add-everyone.png"
+                                            width="600" id="image_r1x_kjw_1jb"/></p></li>
+                                <li>Click <uicontrol>Advanced Sharing...</uicontrol>, configure
+                                    advanced Share properties.<p>Select the checkbox of
+                                            <uicontrol>Share this folder</uicontrol>, allow all the
+                                        permissions, then click
+                                            <uicontrol>OK</uicontrol>.</p><p><image
+                                            href="../Images/admin/advanced-share-settings.png"
+                                            width="600" id="image_ab5_dmw_1jb"/></p></li>
+                            </ol>
+                        </p></li>
+                    <li>Turn off Windows Defender Firewall to ensure that PBX can access the Windows computer.<p>
+                            <ol id="ol_dpk_xmw_1jb">
+                                <li>Go to <menucascade>
+                                        <uicontrol>Control Panel</uicontrol>
+                                        <uicontrol>Windows Defender Firewall</uicontrol>
+                                    </menucascade>.</li>
+                                <li>Click <uicontrol>Turn Windows Defender Firewall on or
+                                        off</uicontrol>.<p><image
+                                            href="../Images/admin/turn-windows-defender-firewall-on-or-off.png"
+                                            width="600" id="image_atg_pnw_1jb"/></p></li>
+                                <li>Select <uicontrol>Turn off Windows Defender Firewall (not
+                                        recommended)</uicontrol>.<p><image
+                                            href="../Images/admin/turn-off-windows-defender-firewall.png"
+                                            width="600" id="image_ztv_24w_1jb"/></p></li>
+                                <li>Click <uicontrol>OK</uicontrol>.</li>
+                            </ol>
+                        </p></li>
+                    <li>Mount the shared folder to PBX.<p>
+                            <ol id="ol_sxs_k4w_1jb">
+                                <li>Log in the PBX web interface, go to <menucascade>
+                                        <uicontrol>Settings</uicontrol>
+                                        <uicontrol>System</uicontrol>
+                                        <uicontrol>Storage</uicontrol>
+                                        <uicontrol>Preference</uicontrol>
+                                    </menucascade>, click <uicontrol>Add Network
+                                    Drive</uicontrol>.</li>
+                                <li>In the <uicontrol>Add Network Drive</uicontrol> dialog box,
+                                    configure the following settings.<p><image
+                                            href="../Images/admin/add-network-drive.png"
+                                            id="image_h1m_jmr_xdb" width="500"/></p><p>
+                                        <ul>
+                                            <li><uicontrol>Name</uicontrol>: Give this network drive
+                                                a name to help you identify it.</li>
+                                            <li><uicontrol>Host/IP</uicontrol>: Enter the IP address
+                                                of the Windows PC.</li>
+                                            <li><uicontrol>Share Name</uicontrol>: Enter the name of
+                                                the shared folder that you have created on the
+                                                Windows PC.</li>
+                                            <li><uicontrol>Access Username</uicontrol>: Enter the
+                                                username to access the shared folder.<p><xref
+                                                  href="#task_ym2_3lr_xdb/network-drive-faq1"
+                                                  format="dita">How to check the user name that is
+                                                  used to access the shared folder?</xref></p></li>
+                                            <li><uicontrol>Access Password</uicontrol>: Enter the
+                                                password to access the shared folder.<p><xref
+                                                  href="#task_ym2_3lr_xdb/network-drive-faq2"
+                                                  format="dita">How to configure Network Drive if no
+                                                  password is set on the Windows PC?</xref></p></li>
+                                            <li><uicontrol>Work Group</uicontrol>: Optional. If you
+                                                have set work group on your network drive, enter the
+                                                name of the work group. If not, leave this field
+                                                blank.</li>
+                                            <li><uicontrol>The Version of Samba</uicontrol>: Select
+                                                the Samba version for the network drive. </li>
+                                        </ul>
+                                    </p></li>
+                                <li>Click <uicontrol>Save</uicontrol>.</li>
+                            </ol>
+                        </p><itemgroup>If the configurations are correct, you can see the network
+                            drive in the <uicontrol>Storage Device</uicontrol> list.<p><image
+                                    href="../Images/admin/Network_Drive_status.png"
+                                    id="image_kzr_ynr_xdb" width="650"/>
+                            </p></itemgroup></li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_x3k_stw_1jb">
+            <title>Network Drive FAQ</title>
+            <ol id="ol_itf_l5w_1jb">
+                <li id="network-drive-faq1"><b>How to check the user name that is used to access the
+                        shared folder?</b><p>
+                        <ol id="ol_gnm_s5w_1jb">
+                            <li>On the Windows PC where the shared folder is created, press
+                                    <uicontrol>WIN</uicontrol> + <uicontrol>R</uicontrol> key to
+                                open the Run Window.<p><image href="../Images/admin/run-window.png"
+                                        id="image_vnm_lww_1jb"/></p></li>
+                            <li>Enter <codeph>cmd</codeph> and click
+                                    <uicontrol>OK</uicontrol>.<p>The user name is displayed on the
+                                    Command Prompt.</p><p><image
+                                        href="../Images/admin/command-prompt.png"
+                                        id="image_wtv_pww_1jb" width="500"/></p></li>
+                        </ol>
+                    </p></li>
+                <li id="network-drive-faq2"><b>How to configure Network Drive if no password is set
+                        on the Windows PC?</b><p>
+                        <ul id="ul_qb4_sww_1jb">
+                            <li>We recommend that you set a password on the Windows PC.<p>Enter the
+                                    access password on PBX when you configure the Network Drive,
+                                    then try to mount the network drive again.</p></li>
+                            <li>If you want to leave the blank password on the Windows PC, configure
+                                the following settings, and try to mount the network drive again.<p>
+                                    <ul id="ul_qbl_3xw_1jb">
+                                        <li>On the Windows PC, select <uicontrol>Turn off password
+                                                protected sharing</uicontrol> (Path: <menucascade>
+                                                <uicontrol>Control Panel</uicontrol>
+                                                <uicontrol>Network and Sharing Center</uicontrol>
+                                                <uicontrol>Advanced sharing settings</uicontrol>
+                                            </menucascade>). <p><image
+                                                  href="../Images/admin/turn-off-password-protected-sharing.png"
+                                                  width="650" id="image_rf2_wxw_1jb"/></p></li>
+                                        <li>On the Network Drive configuration page, leave the
+                                                <uicontrol>Username</uicontrol> and
+                                                <uicontrol>Password</uicontrol> blank.</li>
+                                    </ul>
+                                </p></li>
+                        </ul>
+                    </p></li>
+            </ol>
+        </section>
+    </body>
+</topic>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_t5v_vkn_tdb">
+    <title>PIN List</title>
+    <shortdesc>PIN List is used to manage lists of PIN (numerical passwords) that can be used to
+        access restricted features such as outbound routes. </shortdesc>
+    <conbody>
+        <p>
+            <note>The PIN can also be added to the CDR record.</note>
+        </p>
+        <section id="section_pwt_ykn_tdb">
+            <title>Apply a PIN List to Outbound Routes/DISA</title>
+            <p>After creating PIN lists, you can linking the PIN lists to Outbound routes or DISA.
+                On outbound route/DISA edit page, you can select the PIN list from the
+                    <uicontrol>Password</uicontrol> drop-down menu.</p>
+        </section>
+    </conbody>
+</concept>

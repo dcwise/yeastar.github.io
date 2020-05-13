@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_iz2_nmx_zdb">
+    <title>Network Security</title>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/06/01"/>
+            <!--Carol-->
+            <revised modified="2018/06/01"/>
+            <!--Carol-->
+            <revised modified="2018/06/05"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <section id="section_tnl_xjz_zdb">
+            <title>Separate Voice Traffic and Data Traffic</title>
+            <p> For some VoIP ISPs, they provide dedicated SIP trunks that supports NGN ports (Next
+                Generation Network). NGN can  separate data, voice and video networks or any
+                combination of the three to form a converged network.</p>
+            <p>You can also set up <xref href="vlan.dita#concept_wn3_d5w_ydb">VLAN (Virtual Local
+                    Networks)</xref> on the PBX. VLAN can improve the call quality, but also can
+                secure your PBX. </p>
+            <p>The voice traffic and data traffic can be logically separated by a VLAN switch. If
+                one VLAN is penetrated, the other will remain secured. Also, limiting the rate of
+                traffic to IP telephony VLANs can slow down an outside attack. </p>
+        </section>
+        <section id="section_izb_znz_zdb">
+            <title>Use VPN - Avoid Port Forwarding</title>
+            <p>We strongly recommend you to set up VPN network for your PBX. Avoid port forwarding
+                on your router and do not enable DMZ on your router.</p>
+            <p>VPN can secure communications between remote devices and your PBX.</p>
+            <p>Yeastar S-Series VoIP PBX can be set as an <xref href="vpn_server.dita">OpenVPN
+                    server</xref> and also can be an <xref
+                    href="openvpn_client.dita#concept_tpq_d1x_ydb">OpenVPN client</xref>.</p>
+        </section>
+    </conbody>
+</concept>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_hwy_srh_5cb">
+    <title>Add Additional Settings in Custom Template</title>
+    <shortdesc> Search your desired setting in the default templates, if the desired setting is not
+        included in the default template, you can add a relevant sentence or change the default
+        value in your custom template. </shortdesc>
+    <taskbody>
+        <context>
+            <p>
+                <note>The values you will add in the template should be supported by the phone
+                    manufacturer.</note>
+            </p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Auto Provisioning</uicontrol>
+                        <uicontrol>Template</uicontrol>
+                        <uicontrol>Custom Template</uicontrol>
+                    </menucascade>, add a template or edit a template.</cmd>
+            </step>
+            <step>
+                <cmd>On the configuration page, click <uicontrol>Other</uicontrol> tab.</cmd>
+            </step>
+            <step>
+                <cmd>Enter your desired sentence(s). </cmd>
+                <info><image href="../Images/admin/autop_custom_template_other.png" width="650"
+                        id="image_gdk_kzh_5cb"/></info>
+            </step>
+            <step>
+                <cmd>You can also change the default value in the customized template.</cmd>
+                <info><image href="../Images/admin/autop_custom_template_change_value.png"
+                        width="650" id="image_kcs_mb3_5cb"/></info>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+    <related-links>
+        <link href="add_a_customized_auto_provisioning_template.dita#task_hdh_rmy_scb"/>
+        <link href="search_and_view_default_template.dita#task_djh_dry_scb"/>
+    </related-links>
+</task>

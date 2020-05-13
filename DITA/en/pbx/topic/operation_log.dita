@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_xq3_hqv_ydb">
+    <title>Operation Log</title>
+    <shortdesc>The PBX records all the users' operations, and keep the logs in Operation
+        Log.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/05/28"/>
+            <!--Carol-->
+            <revised modified="2018/05/28"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <p>Go to <menucascade>
+                <uicontrol>Maintenance</uicontrol>
+                <uicontrol>Operation Log</uicontrol>
+            </menucascade> to search and check the operation logs.</p>
+        <p><image href="../Images/admin/operation_log.png" id="image_nxp_rrv_ydb" width="650"/></p>
+    </conbody>
+</concept>

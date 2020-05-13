@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_egh_qgn_4fb">
+    <title>Pick up an Extension's Call by BLF</title>
+    <shortdesc>You can set a BLF key of Extension Call Pickup on your phone. The BLF key will show
+        the real-time status of the extension. When the extension is ringing, you can press the BLF
+        key to pick up the call.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/10/24"/>
+            <!--Carol-->
+            <revised modified="2018/10/24"/>
+            <!--Carol-->
+            <revised modified="2018/11/02"/>
+            <!--Carol-->
+            <revised modified="2018/11/06"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <context>
+            <p>We take Yealink T27G v69.82.0.20 as an example below.</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Set a BLF key to monitor and pick up an extension.</cmd>
+                <substeps id="substeps_qfq_2mb_rfb">
+                    <substep>
+                        <cmd>Log in the phone web interface, go to <uicontrol>Dsskey</uicontrol>
+                            page.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Set the BLF key as below.</cmd>
+                        <info><image href="../Images/admin/blf_extension_pickup.png"
+                                id="image_tbs_tgn_4fb"/></info>
+                        <info>
+                            <ul>
+                                <li><uicontrol>Type</uicontrol>: Select
+                                    <uicontrol>BLF</uicontrol>.</li>
+                                <li><uicontrol>Value</uicontrol>: Enter the extension number that
+                                    you want to monitor.</li>
+                                <li><uicontrol>Line</uicontrol>: Choose the line where your
+                                    extension is registered on.</li>
+                                <li><uicontrol>Extension</uicontrol>: Enter the feature code of
+                                    extension pickup. The default code is *04.</li>
+                            </ul>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Click <uicontrol>Confirm</uicontrol>.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>To get notified when the monitored extension has an incoming call, set visual
+                    alerts and audio alerts for the BLF Pickup.</cmd>
+                <info><image href="../Images/admin/alert_settings_blf_pickup.png"
+                        id="image_act_snb_rfb"/></info>
+                <substeps>
+                    <substep>
+                        <cmd>On the phone web page, go to <menucascade>
+                                <uicontrol>Phone</uicontrol>
+                                <uicontrol>Features</uicontrol>
+                                <uicontrol>Call Pickup</uicontrol>
+                            </menucascade>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>In the <uicontrol>Visual Alert for BLF Pickup</uicontrol>, select
+                                <uicontrol>Enabled</uicontrol>.</cmd>
+                        <info>When a call reaches the monitored extension, you can see the incoming
+                            caller ID on your phone.</info>
+                    </substep>
+                    <substep>
+                        <cmd>In the <uicontrol>Audio Alert for BLF Pickup</uicontrol>, select
+                                <uicontrol>Enabled</uicontrol>.</cmd>
+                        <info>
+                            <p> A “beep” sound will remind you of an incoming call for the monitored
+                                extension.</p>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Click <uicontrol>Confirm</uicontrol>.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step id="notify_caller_id" product="s-series">
+                <cmd> To display the incoming caller ID on the phone, enable <uicontrol>Notify
+                        Caller ID</uicontrol>.</cmd>
+                <info>
+                    <note>Notify Caller ID is supported on the firmware version 30.10.0.9 or
+                        later.</note>
+                </info>
+                <substeps id="substeps_csn_34b_rfb">
+                    <substep>
+                        <cmd>On the PBX web interface, go to <menucascade>
+                                <uicontrol>Settings</uicontrol>
+                                <uicontrol>PBX</uicontrol>
+                                <uicontrol>General</uicontrol>
+                                <uicontrol>SIP</uicontrol>
+                                <uicontrol>Advanced</uicontrol>
+                            </menucascade>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Check the option <uicontrol>Notify Caller ID</uicontrol>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Click <uicontrol>Save</uicontrol> and
+                            <uicontrol>Apply</uicontrol>.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+        <result id="result_eyd_1hn_4fb">If your configuration is correct, the BLF LED will turn
+                green.<p>When the monitored extension has an incoming call, the followings occur on
+                your phone, press BLF key to pick up the call.</p><ul id="ul_hj5_15b_rfb">
+                <li>The phone plays a warning tone.</li>
+                <li>The BLF LED turns red.</li>
+                <li product="s-series">The incoming caller ID name appears on the LCD screen.</li>
+            </ul><p product="s-series">The following figure indicates that the monitored extension
+                1008 has an incoming call from user 15882252201.</p><p product="s-series"><image
+                    href="../Images/admin/calls_for_pickup.png" id="image_p1k_5tb_rfb"
+            /></p></result>
+    </taskbody>
+</task>

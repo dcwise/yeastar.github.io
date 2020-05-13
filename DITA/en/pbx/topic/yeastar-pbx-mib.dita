@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="queryable-information-by-snmp">
+    <title><ph keyref="product_name"/> MIB</title>
+    <shortdesc>The following table shows information provided in the <xref
+            href="https://help.yeastar.com/download/docs/snmp/YEASTAR-PBX-MIB-V4.txt" format="html"
+            scope="external"><ph keyref="product_name"/> MIB</xref>. </shortdesc>
+    <refbody>
+        <table frame="all" rowsep="1" colsep="1" id="table_kyv_jgz_5kb">
+            <tgroup cols="4">
+                <colspec colname="c1" colnum="1" colwidth="1.86*"/>
+                <colspec colname="c2" colnum="2" colwidth="1.76*"/>
+                <colspec colname="c3" colnum="3" colwidth="1*"/>
+                <colspec colname="c4" colnum="4" colwidth="2.57*"/>
+                <thead>
+                    <row>
+                        <entry>OID</entry>
+                        <entry>Name</entry>
+                        <entry>Type</entry>
+                        <entry>Description</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>1.3.6.1.4.1.22736.2.1.1</entry>
+                        <entry>sTotalCalls.0</entry>
+                        <entry>integer</entry>
+                        <entry>The number of total calls.</entry>
+                    </row>
+                    <row>
+                        <entry>1.3.6.1.4.1.22736.2.1.2</entry>
+                        <entry>sInternalCalls.0</entry>
+                        <entry>integer</entry>
+                        <entry>The number of internal calls.</entry>
+                    </row>
+                    <row>
+                        <entry>1.3.6.1.4.1.22736.2.1.3</entry>
+                        <entry>sOutboundCalls.0</entry>
+                        <entry>integer</entry>
+                        <entry>The number of outbound calls.</entry>
+                    </row>
+                    <row>
+                        <entry>1.3.6.1.4.1.22736.2.1.4</entry>
+                        <entry>sInboundCalls.0</entry>
+                        <entry>integer</entry>
+                        <entry>The number of inbound calls.</entry>
+                    </row>
+                    <row>
+                        <entry>1.3.6.1.4.1.22736.2.1.5</entry>
+                        <entry>sAnsweredCalls.0</entry>
+                        <entry>integer</entry>
+                        <entry>The number of answered call.</entry>
+                    </row>
+                    <row>
+                        <entry>1.3.6.1.4.1.22736.2.1.6</entry>
+                        <entry>sFailedCalls.0</entry>
+                        <entry>integer</entry>
+                        <entry>The number of failed calls.</entry>
+                    </row>
+                    <row>
+                        <entry>1.3.6.1.4.1.22736.2.1.7</entry>
+                        <entry>sBusyCalls.0</entry>
+                        <entry>integer</entry>
+                        <entry>The number of calls in busy state.</entry>
+                    </row>
+                    <row>
+                        <entry>1.3.6.1.4.1.22736.2.1.8</entry>
+                        <entry>sNoAnsweredCalls.0</entry>
+                        <entry>integer</entry>
+                        <entry>The number of unanswered calls.</entry>
+                    </row>
+                    <row>
+                        <entry>1.3.6.1.4.1.22736.2.2.1</entry>
+                        <entry>sProductType.0</entry>
+                        <entry>string</entry>
+                        <entry>The product type.</entry>
+                    </row>
+                    <row>
+                        <entry>1.3.6.1.4.1.22736.2.2.2</entry>
+                        <entry>sHardwareVersion.0</entry>
+                        <entry>string</entry>
+                        <entry>The hardware version of PBX.</entry>
+                    </row>
+                    <row>
+                        <entry>1.3.6.1.4.1.22736.2.2.3</entry>
+                        <entry>sFirmwareVersion.0</entry>
+                        <entry>string</entry>
+                        <entry>The firmware version of PBX.</entry>
+                    </row>
+                    <row>
+                        <entry>1.3.6.1.4.1.22736.2.2.4</entry>
+                        <entry>sSerialNumber.0</entry>
+                        <entry>string</entry>
+                        <entry>The serial number of PBX</entry>
+                    </row>
+                    <row>
+                        <entry>1.3.6.1.4.1.22736.2.2.5</entry>
+                        <entry>sUptime.0</entry>
+                        <entry>string</entry>
+                        <entry>The Uptime of PBX.</entry>
+                    </row>
+                    <row>
+                        <entry>1.3.6.1.4.1.22736.2.2.6</entry>
+                        <entry>sDiskUsage.0</entry>
+                        <entry>string</entry>
+                        <entry>The disk usage.</entry>
+                    </row>
+                    <row>
+                        <entry>1.3.6.1.4.1.22736.2.2.7</entry>
+                        <entry>sMemoryUsage.0</entry>
+                        <entry>string</entry>
+                        <entry>The Memory usage.</entry>
+                    </row>
+                    <row>
+                        <entry>1.3.6.1.4.1.22736.2.2.8</entry>
+                        <entry>concurrentCall.0</entry>
+                        <?oxy_comment_start author="Sunmy" timestamp="20200320T102057+0800" comment="13.B
+【【S系列】30.13.0.15+city+SNMP的并发输出是字符型，造成snmp服务器无法绘图】https://www.tapd.cn/32809406/bugtrace/bugs/view?bug_id=1132809406001022471" flag="done"?>
+                        <entry>Integer</entry><?oxy_comment_end?>
+                        <entry>The number of concurrent calls.</entry>
+                    </row>
+                    <row>
+                        <entry>1.3.6.1.4.1.22736.2.2.9</entry>
+                        <entry>avgCpuLoad.0</entry>
+                        <entry>string</entry>
+                        <entry>The load average of CPU.</entry>
+                    </row>
+                    <row>
+                        <entry>1.3.6.1.4.1.22736.2.2.10</entry>
+                        <entry>asteriskStatus.0</entry>
+                        <entry>string</entry>
+                        <entry>The asterisk status.</entry>
+                    </row>
+                    <row>
+                        <entry>1.3.6.1.4.1.22736.2.2.11</entry>
+                        <entry>cpuTop10.0</entry>
+                        <entry>string</entry>
+                        <entry>The top 10 CPU consumption processes.</entry>
+                    </row>
+                    <row>
+                        <entry>1.3.6.1.4.1.22736.2.2.12</entry>
+                        <entry>memTop10.0</entry>
+                        <entry>string</entry>
+                        <entry>The top 10 memory consumption processes.</entry>
+                    </row>
+                    <row>
+                        <entry>1.3.6.1.4.1.22736.2.3.1</entry>
+                        <entry>sHostName.0</entry>
+                        <entry>string</entry>
+                        <entry>The host name of PBX.</entry>
+                    </row>
+                    <row>
+                        <entry>1.3.6.1.4.1.22736.2.3.2</entry>
+                        <entry>sLanStatus.0</entry>
+                        <entry>string</entry>
+                        <entry>The LAN status.</entry>
+                    </row>
+                    <row>
+                        <entry>1.3.6.1.4.1.22736.2.3.3</entry>
+                        <entry>sLanName.0</entry>
+                        <entry>string</entry>
+                        <entry>The name of LAN.</entry>
+                    </row>
+                    <row>
+                        <entry>1.3.6.1.4.1.22736.2.3.4</entry>
+                        <entry>sLanMac.0</entry>
+                        <entry>string</entry>
+                        <entry>The MAC address of LAN.</entry>
+                    </row>
+                    <row>
+                        <entry>1.3.6.1.4.1.22736.2.3.5</entry>
+                        <entry>sLanIpaddress.0</entry>
+                        <entry>string</entry>
+                        <entry>The IP address of LAN.</entry>
+                    </row>
+                    <row>
+                        <entry>1.3.6.1.4.1.22736.2.3.6</entry>
+                        <entry>sLanSubnetMask.0</entry>
+                        <entry>string</entry>
+                        <entry>The subnet mask of LAN.</entry>
+                    </row>
+                    <row>
+                        <entry>1.3.6.1.4.1.22736.2.3.7</entry>
+                        <entry>sLanGateWay.0</entry>
+                        <entry>string</entry>
+                        <entry>The gateway of LAN.</entry>
+                    </row>
+                    <row>
+                        <entry>1.3.6.1.4.1.22736.2.3.8</entry>
+                        <entry>sLanConnectType.0</entry>
+                        <entry>string</entry>
+                        <entry>The network connect type of LAN.</entry>
+                    </row>
+                    <row>
+                        <entry>1.3.6.1.4.1.22736.2.3.9</entry>
+                        <entry>sLanPrimaryDns.0</entry>
+                        <entry>string</entry>
+                        <entry>The primary DNS of LAN.</entry>
+                    </row>
+                    <row>
+                        <entry>1.3.6.1.4.1.22736.2.3.10</entry>
+                        <entry>sLanSecondaryDns.0</entry>
+                        <entry>string</entry>
+                        <entry>The second DNS of LAN.</entry>
+                    </row>
+                    <row>
+                        <entry>1.3.6.1.4.1.22736.2.3.11</entry>
+                        <entry>sWanStatus.0</entry>
+                        <entry>string</entry>
+                        <entry>The WAN status.</entry>
+                    </row>
+                    <row>
+                        <entry>1.3.6.1.4.1.22736.2.3.12</entry>
+                        <entry>sWanName.0</entry>
+                        <entry>string</entry>
+                        <entry>The name of WAN.</entry>
+                    </row>
+                    <row>
+                        <entry>1.3.6.1.4.1.22736.2.3.13</entry>
+                        <entry>sWanMac.0</entry>
+                        <entry>string</entry>
+                        <entry>The MAC address of WAN.</entry>
+                    </row>
+                    <row>
+                        <entry>1.3.6.1.4.1.22736.2.3.14</entry>
+                        <entry>sWanIpaddress.0</entry>
+                        <entry>string</entry>
+                        <entry>The IP address of WAN.</entry>
+                    </row>
+                    <row>
+                        <entry>1.3.6.1.4.1.22736.2.3.15</entry>
+                        <entry>sWanSubnetMask.0</entry>
+                        <entry>string</entry>
+                        <entry>The subnet mask of WAN.</entry>
+                    </row>
+                    <row>
+                        <entry>1.3.6.1.4.1.22736.2.3.16</entry>
+                        <entry>sWanGateWay.0</entry>
+                        <entry>string</entry>
+                        <entry>The gateway of WAN.</entry>
+                    </row>
+                    <row>
+                        <entry>1.3.6.1.4.1.22736.2.3.17</entry>
+                        <entry>sWanConnectType.0</entry>
+                        <entry>string</entry>
+                        <entry>The network connect type of WAN.</entry>
+                    </row>
+                    <row>
+                        <entry>1.3.6.1.4.1.22736.2.3.18</entry>
+                        <entry>sWanPrimaryDns.0</entry>
+                        <entry>string</entry>
+                        <entry>The primary DNS of WAN.</entry>
+                    </row>
+                    <row>
+                        <entry>1.3.6.1.4.1.22736.2.3.19</entry>
+                        <entry>sWanSecondaryDns.0</entry>
+                        <entry>string</entry>
+                        <entry>The second DNS of WAN.</entry>
+                    </row>
+                    <row>
+                        <entry>1.3.6.1.4.1.22736.2.4.1.1.1</entry>
+                        <entry>sExternsionsIndex.0</entry>
+                        <entry>integer</entry>
+                        <entry>The serial number of extension.</entry>
+                    </row>
+                    <row>
+                        <entry>1.3.6.1.4.1.22736.2.4.1.1.2</entry>
+                        <entry>sExternsionsPort.0</entry>
+                        <entry>string</entry>
+                        <entry>The port of extension.</entry>
+                    </row>
+                    <row>
+                        <entry>1.3.6.1.4.1.22736.2.4.1.1.3</entry>
+                        <entry>sExternsionsNum.0</entry>
+                        <entry>string</entry>
+                        <entry>The extension number.</entry>
+                    </row>
+                    <row>
+                        <entry>1.3.6.1.4.1.22736.2.4.1.1.4</entry>
+                        <entry>sExternsionsStatus.0</entry>
+                        <entry>string</entry>
+                        <entry>The extension status.</entry>
+                    </row>
+                    <row>
+                        <entry>1.3.6.1.4.1.22736.2.4.1.1.5</entry>
+                        <entry>sExternsionsVoiceMail.0</entry>
+                        <entry>string</entry>
+                        <entry>The voice mail of extension.</entry>
+                    </row>
+                    <row>
+                        <entry>1.3.6.1.4.1.22736.2.4.1.1.6</entry>
+                        <entry>sExternsionsType.0</entry>
+                        <entry>string</entry>
+                        <entry>The extension type.</entry>
+                    </row>
+                    <row>
+                        <entry>1.3.6.1.4.1.22736.2.5.1.1.1</entry>
+                        <entry>sTrunksIndex.0</entry>
+                        <entry>integer</entry>
+                        <entry>The serial number of extension.</entry>
+                    </row>
+                    <row>
+                        <entry>1.3.6.1.4.1.22736.2.5.1.1.2</entry>
+                        <entry>sTrunksName.0</entry>
+                        <entry>string</entry>
+                        <entry>The trunk name.</entry>
+                    </row>
+                    <row>
+                        <entry>1.3.6.1.4.1.22736.2.5.1.1.3</entry>
+                        <entry>sTrunksType.0</entry>
+                        <entry>string</entry>
+                        <entry>The trunk type.</entry>
+                    </row>
+                    <row>
+                        <entry>1.3.6.1.4.1.22736.2.5.1.1.4</entry>
+                        <entry>sTrunksPort.0</entry>
+                        <entry>string</entry>
+                        <entry>The trunk port.</entry>
+                    </row>
+                    <row>
+                        <entry>1.3.6.1.4.1.22736.2.5.1.1.5</entry>
+                        <entry>sTrunksStatus.0</entry>
+                        <entry>string</entry>
+                        <entry>The trunk status.</entry>
+                    </row>
+                    <row>
+                        <entry>1.3.6.1.4.1.22736.2.5.1.1.6</entry>
+                        <entry>sTrunksHostName.0</entry>
+                        <entry>string</entry>
+                        <entry>The host name of trunk.</entry>
+                    </row>
+                    <row>
+                        <entry>1.3.6.1.4.1.22736.2.5.1.1.7</entry>
+                        <entry>sTrunksUserName.0</entry>
+                        <entry>string</entry>
+                        <entry>The user name of trunk.</entry>
+                    </row>
+                    <row>
+                        <entry>1.3.6.1.4.1.22736.2.6.1.1.1</entry>
+                        <entry>sIpAttacksIndex.0</entry>
+                        <entry>integer</entry>
+                        <entry>The serial number of IP attack.</entry>
+                    </row>
+                    <row>
+                        <entry>1.3.6.1.4.1.22736.2.6.1.1.2</entry>
+                        <entry>sIpattacksTime.0</entry>
+                        <entry>string</entry>
+                        <entry>The attacked time.</entry>
+                    </row>
+                    <row>
+                        <entry>1.3.6.1.4.1.22736.2.6.1.1.3</entry>
+                        <entry>sIpattacksPort.0</entry>
+                        <entry>string</entry>
+                        <entry>The attacked port.</entry>
+                    </row>
+                    <row>
+                        <entry>1.3.6.1.4.1.22736.2.6.1.1.4</entry>
+                        <entry>sIpattacksIpAddress.0</entry>
+                        <entry>string</entry>
+                        <entry>The source IP address of attacker.</entry>
+                    </row>
+                    <row>
+                        <entry>1.3.6.1.4.1.22736.2.6.1.1.5</entry>
+                        <entry>sIpattacksProtocol.0</entry>
+                        <entry>string</entry>
+                        <entry>The protocol that is used of attack source.</entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </refbody>
+</reference>

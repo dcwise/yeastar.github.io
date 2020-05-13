@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_p3t_m4k_jdb">
+  <title>Version 30.5.0.8</title>
+  <abstract>Released Date: July 12, 2017</abstract>
+  <prolog>
+    <critdates>
+      <!--Carol-->
+      <revised modified="2018/06/20"/>
+    </critdates>
+  </prolog>
+  <body>
+    <section id="section_nyk_p4g_jdb">
+      <title>New Feature</title>
+      <p><image href="../Images/horizon.png" id="image_jtn_pzv_pdb"/></p>
+      <p>
+        <ul id="ul_dxp_5tk_jdb">
+          <li>Added FTP access for voicemail, One-Touch recording, Auto Recording and CDR when those
+            are stored in external storage like TF card, USB drive or internal hard disk.</li>
+          <li>Added SIP Message by using MESSAGE method communicated between SIP phones.</li>
+          <li>Added Caller ID name modification for SIP trunk DOD settings. Note that Global DOD has
+            been removed, and “Caller ID Number” and “Caller ID Name” have been added on trunk edit
+            page.</li>
+          <li>Added All Busy Mode for SIP Forking. When one SIP terminal registers one extension is
+            called and is already in call, the other SIP terminals registered to the same extension
+            will be marked as busy and can’t be called. Outgoing call will not be restricted.</li>
+          <li>Added support for different extensions to use the same email address. Note that when
+            email address has been used by different extensions, the user Web interface will only be
+            logged in with extension number.</li>
+          <li>Added support for DSS Key type – Call Park of Yealink phones. Call can be parked
+            directly by pressing the Call Park key as well as monitoring and pressing to retrieve
+            parked call.</li>
+          <li>Added support for counting the duration from “Queue receives call” to “Agent answers
+            call”.</li>
+          <li>Added 2 VLAN subinterfaces for LAN and WAN. </li>
+          <li>Added DTMF pass-through for FXS when connected with door phone.</li>
+          <li>Added warning to create backup when trying to upgrade.</li>
+          <li>Added CDR query condition for Caller ID name. There will have a separate column of
+            Caller ID name in the CDR CSV file that you download.</li>
+          <li>Added support for Auto Recording file, One-Touch Recording file, and CDR backup in
+            real time to stand-by device in Hot Standby configuration.</li>
+          <li>Added silence detection for FXO, BRI and E1.</li>
+          <li>Added new Italian and German Web language.</li>
+          <li>Added support for saving Web configuration by pressing Enter.</li>
+          <li>Added Local Loop trunk for IP address 127.0.0.1.</li>
+          <li>Added BLF monitoring support for Time Condition default feature code like *800.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_gzb_54g_jdb">
+      <title>Optimization</title>
+      <p><image href="../Images/horizon.png" id="image_ccy_pzv_pdb"/></p>
+      <p><ul id="ul_yb4_wtk_jdb">
+          <li>Optimized SMTP authentication. Account authentication is added.</li>
+          <li>Optimized China PRI default configuration to match most of China PRI lines.</li>
+          <li>Optimized Web text on Adapt Caller ID page. “Dial Patterns” is replaced by “Adaptation
+            Patterns”.</li>
+          <li>Optimized Adapt Caller ID feature. Now it is also available for Ring Group and
+            Queue.</li>
+          <li>Optimized Web text in Event Center. “Storage Space Full” is replaced by “Storage
+            Full”.</li>
+          <li>Added feature conflict prompt that when Char and Hotel App is enabled at the same
+            time, the Mini Bar feature of Hotel will affected. Some feature codes will not work
+            well.</li>
+          <li>Optimized the name of extension type when Char App is enabled. “Hotel Extension” is
+            replaced by “Normal Extension”, and “Room Extension” is replaced by “cHar
+            Extension”.</li>
+          <li>Optimized the SIP qualify feature for Peer-Type SIP trunk. Some providers doesn’t
+            support OPTION to be qualified which makes the trunk status “unknown” and calls can’t be
+            made. Currently when Quality option is unchecked, it would show “unmonitored” on the PBX
+            monitor page and calls are allowed to make.</li>
+          <li>Removed check box of Feature Code header and parking number range.</li>
+          <li>Added Italian SLA dial prompt.</li>
+          <li>Added prompt for Email to SMS: when country code is not working, try the customized
+            country code.</li>
+        </ul> Optimized PAI and Remote Party ID would be disabled by default.</p>
+    </section>
+    <section id="section_cmm_x4g_jdb">
+      <title>Fixed Bug</title>
+      <p><image href="../Images/horizon.png" id="image_l1s_qzv_pdb"/></p>
+      <p>
+        <ul id="ul_zhb_ytk_jdb">
+          <li>Fixed Dial by Name issue: the recorded name can be played in the Dial by Name
+            event.</li>
+          <li>Fixed Booking issue for Hotel App: when the room type 1 has been booked and room type
+            1 has one last room, this room still can be checked in by other person.</li>
+          <li>Fixed the “More” button display issue on Notification menu: “More” button would still
+            be clickable when there is no notification.</li>
+          <li>Fixed the issue that voicemail couldn’t be found when Caller ID name including “&amp;”
+            on the user Me page.</li>
+          <li>Fixed network disk issue that it couldn’t be reconnected when it was disconnected due
+            to unstable network.</li>
+          <li>Fixed the issue that users could still call into Queue when Join Empty and Leave When
+            Empty is both checked. Note that users can still call into the Queue if any extension in
+            the Queue has enabled Mobility Extension and Simultaneous Ring.</li>
+          <li>Fixed the issue that Ring Group members’ status would still show ringing when the call
+            had been answered by Pick Up.</li>
+          <li>Fixed incorrect CPU display when PBX has been up for many days.</li>
+          <li>Fixed the issue that lacking External Host Refresh Internal in SIP NAT settings would
+            cause host parsing failure.</li>
+          <li><ph id="OLE_LINK6">Fixed the issue that Only Keep Missed Call Records of Auto CLIP was
+              not available for PSTN line. Note that this would work only when Answer Detection
+              checked as Polarity as well as the line provider should deliver polarity
+            signal.</ph></li>
+          <li>Fixed the call recording file playback problem that call recoding file would often be
+            played by the first extension number of PBX rather than the extension number
+            selected.</li>
+          <li>Fixed no video problem caused by codec payload negotiation that video phone would
+            include different payload. Note that currently the payload is fixed to 99 for PBX.</li>
+          <li>Fixed the issue that content of users.conf would be erased after executing command
+            “astconfig”.</li>
+          <li>Fixed the issue that paging initiator would also be paged when he was in the paging
+            group that he paged.</li>
+          <li>Fixed the issue that DND status of Hotel APP page would not change when DND was
+            enabled by a hotel extension.</li>
+        </ul>
+      </p>
+    </section>
+  </body>
+</topic>

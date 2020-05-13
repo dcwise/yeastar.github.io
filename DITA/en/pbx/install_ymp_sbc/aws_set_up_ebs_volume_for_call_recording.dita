@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_d4t_nnf_hfb">
+    <title>Step5. Set up EBS Volume for Call Recording</title>
+    <shortdesc>The recording files that are made on customers' PBXs will be stored on your YMP
+        server, you need to attach an EBS volume to your YMP instance.</shortdesc>
+    <body>
+        <p>
+            <note>The recording files are encrypted and only the PBX users can play the recording
+                files.</note>
+        </p>
+    </body>
+</topic>

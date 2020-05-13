@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_jpq_5d3_kcb">
+    <title>Step1. Create the VPC</title>
+    <shortdesc>Use the Amazon VPC wizard in the Amazon VPC console to create a VPC.</shortdesc>
+    <taskbody>
+        <context id="context_ut3_w5m_hfb">The following diagram represents the architecture of your
+            VPC after you've completed this step.<p><image
+                    href="../Images/SBC/aws_create_vpc_diagram.png" id="image_nbm_bsn_hfb"
+                    height="450"/></p></context>
+        <steps id="steps_g1l_b23_kcb">
+            <step>
+                <cmd>Open the Amazon VPC console at <xref href="https://console.aws.amazon.com/vpc/"
+                        format="html" scope="external"
+                    >https://console.aws.amazon.com/vpc/</xref>.</cmd>
+                <info>
+                    <note>In the navigation bar (on the top-right), take note of the region in which
+                        you'll be creating the VPC. Ensure that you continue working in the same
+                        region for the rest of this exercise, as you cannot launch an instance into
+                        your VPC from a different region.</note>
+                </info>
+            </step>
+            <step>
+                <cmd>In the navigation pane, select <b>Your VPCs</b>, then click <b>Create
+                    VPC</b>.</cmd>
+                <info><image href="../Images/SBC/aws_start_vpc_wizard.png" id="image_fk4_5f3_kcb"
+                        width="400"/></info>
+            </step>
+            <step>
+                <cmd>On the VPC configuration page, set the VPC.</cmd>
+                <info><image href="../Images/SBC/aws_create_vpc.png" id="image_xxb_ntm_hfb"
+                        width="650"/></info>
+                <info>
+                    <ul id="ul_tg4_4tm_hfb">
+                        <li><uicontrol>Name tag</uicontrol>: Specify a name for the VPC. For
+                            example, <codeph>Yeastar-Cloud-PBX</codeph>.</li>
+                        <li><uicontrol>IPv4 CIDR block</uicontrol>: Set the range of IPs to be used
+                            for your VPC. For example, <codeph>10.0.0.0/16</codeph>.<p>
+                                <note type="restriction">The IP segments 172.19.0.0 and 172.17.0.0
+                                    are NOT allowed.</note>
+                            </p></li>
+                        <li><uicontrol>IPv6 CIDR block</uicontrol>: Select <uicontrol>No IPv6 CIDR
+                                Block</uicontrol>.</li>
+                        <li><uicontrol>Tenancy</uicontrol>: Select
+                            <uicontrol>Default</uicontrol>.</li>
+                    </ul>
+                </info>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Create VPC</uicontrol>.</cmd>
+                <info>
+                    <p>The <b>Your VPCs</b> page displays the new created VPC and a main route table
+                        is automatically created for the VPC.</p>
+                </info>
+                <info><image href="../Images/SBC/aws_vpc_status.png" id="image_un4_g5m_hfb"
+                        width="650"/></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

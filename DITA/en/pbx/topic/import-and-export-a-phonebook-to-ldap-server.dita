@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="import-a-phonebook-to-ldap-server">
+    <title>Export/Import an LDAP Phonebook </title>
+    <shortdesc>You can export existing phonebooks from LDAP server to mass update LDAP entries and
+        import the phonebooks to LDAP server again.</shortdesc>
+    <body>
+        <section id="section_ucz_fyl_s3b">
+            <title>Export a Phonebook from LDAP Server</title>
+            <p>You can export phonebook from LDAP Server. The exported phonebook can be used as a
+                record or a sample CSV file for you to edit contacts and be imported to LDAP Server
+                again.</p>
+            <p>
+                <ol id="ol_bcx_zpm_s3b">
+                    <li>Go to LDAP Server page, and select the desired phonebook.</li>
+                    <li>Click <uicontrol>Export</uicontrol>.<p><image id="image_mgv_nhr_53b"
+                                href="../Images/admin/export-phonebook-s-series.png" width="700"
+                                product="k2 s-series"/></p><p><image
+                                href="../Images/admin/export-phonebook.png" width="700"
+                                id="image_qwg_3yl_s3b" product="cloudpbx"/></p></li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_n3c_hrl_s3b"><title>Import a Phonebook to LDAP Server</title>Before you
+            start to import a phonebook, prepare a phonebook file, the phonebook should meet the
+            following requirements:<p>
+                <ul id="ul_gg5_yyr_s3b">
+                    <li><b>File format</b>: CSV file with UTF-8 encoding. <p>
+                            <note type="tip">You can open the CSV file with <b>Notepad</b> and save
+                                it with UTF-8 encoding.</note>
+                        </p></li>
+                    <li><b>Import parameters</b>: The parameters in the CSV file should meet the
+                        requirements demonstrated in <xref
+                            href="../references/import_parameters_ldap.dita"/>.</li>
+                </ul>
+            </p></section>
+        <p>
+            <ol>
+                <li>Go to LDAP Server page, and click <uicontrol>Import</uicontrol>.</li>
+                <li>In the <uicontrol>Import Phonebook</uicontrol> dialog box, click
+                        <uicontrol>Browse</uicontrol>.<p><image id="image_dfg_khc_r3b"
+                            href="../Images/admin/import-phonebook-to-ldap-server.png" width="500"
+                        /></p></li>
+                <li>Click <uicontrol>Import</uicontrol>.</li>
+            </ol>
+        </p>
+        <section id="section_z2k_fbs_s3b">
+            <title>Example LDAP Phonebook</title>
+            <p>With the phonebook file, you can do the following operations:</p>
+            <p>
+                <ul id="ul_ahb_xds_s3b">
+                    <li><b>Centrally manage multiple phonebooks </b><p>Add multiple phonebook nodes in the phonebook file, and import the file to LDAP server.<note>For
+                                phonebook node, only alphanumerics are valid.</note></p><p><image id="image_tnf_dks_s3b"
+                                href="../Images/admin/centrally-manage-multiple-phonebooks.png"
+                                width="650"/></p><p><image id="image_mdb_fms_s3b"
+                                href="../Images/admin/mass-add-multiple-phonebooks.png" width="650"
+                            /></p></li>
+                    <li><b>Add a new contact to an existing phonebook</b><p>Add a new contact
+                            "Angela" to an existing phonebook "colleagues", and import the file to
+                            LDAP server.</p><p><image id="image_tbl_wns_s3b"
+                                href="../Images/admin/add-contacts-to-existing-phonebook.png"
+                                width="650"/></p><p><image id="image_wqc_kdt_s3b"
+                                href="../Images/admin/add-new-contacts-to-phonebook-pbx.png"
+                        /></p></li>
+                    <li><b>Add a new phonebook with a new contact</b><p>Add a new phonebook "VIP"
+                            with a new contact "Jay".</p><p><image id="image_cpg_mdt_s3b"
+                                href="../Images/admin/add-new-phonebook-with-new-contacts.png"
+                                width="650"/></p><p><image id="image_r53_zdt_s3b"
+                                href="../Images/admin/add-new-phonebook-with-new-contacts-pbx.png"
+                                width="650" product="k2 s-series"/></p><p><image
+                                id="image_yg1_yhr_53b"
+                                href="../Images/admin/add-new-phonebook-with-new-contacts-cloud.png"
+                                width="650" product="cloudpbx"/></p></li>
+                    <li><b>Update information of existing contacts</b><p>Update the information of
+                            existing contact "Angela", and import the file to LDAP server. The
+                            following dialog will appear. Click <uicontrol>Yes</uicontrol> to check
+                            the replaced fields.</p><p><image
+                                href="../Images/admin/import-existing-contacts-information.png"
+                                id="image_kyr_jht_s3b"/></p><p><image id="image_hbb_gzs_s3b"
+                                href="../Images/admin/update-info-about-existing-contacts.png"
+                                width="650"/></p><image id="image_tkq_n2t_s3b"
+                            href="../Images/admin/update-existing-contacts-pbx.png"/></li>
+                </ul>
+            </p>
+        </section>
+    </body>
+</topic>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_qdf_fyt_vdb">
+    <title>Tryout QueueMetrics Live Integration</title>
+    <shortdesc>After you apply an ID of QueueMetrics Live, you can try the integration of Yeastar
+        S-Series VoIP PBX and the Queue Metrics Live.</shortdesc>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Log in the PBX web interface, go to <uicontrol>QueueMetrics
+                        Integration</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Check the option <uicontrol>Enable QueueMetrics Live
+                    Integration</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Choose call center type to <codeph>QueueMetrics Live</codeph>.</cmd>
+            </step>
+            <step>
+                <cmd>Enter your demo ID and password.</cmd>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Visit</uicontrol> to visit the login page of
+                    QueueMetrics.</cmd>
+                <info>
+                    <note>If the web page is not opened, copy the link and paste it in your web
+                        browser to visit it.</note>
+                </info>
+                <info><image href="../Images/admin/visit_queuemetricslive.png"
+                        id="image_p4x_xyt_vdb" width="650"/></info>
+            </step>
+            <step>
+                <cmd>On the login page of QueueMetrics, enter the user name and password, click
+                        <uicontrol>Log in</uicontrol>.</cmd>
+                <info><image href="../Images/admin/login_qm.png" id="image_atf_dzt_vdb"/></info>
+                <info>
+                    <ul id="ul_nnt_dzt_vdb">
+                        <li><uicontrol>Login</uicontrol>: Enter <codeph>demoadmin</codeph>
+                            <p>
+                                <note>Do not enter your QueueMetrics ID.</note>
+                            </p></li>
+                        <li><uicontrol>Password</uicontrol>: Enter the password of your QueueMetrics
+                            ID.</li>
+                    </ul>
+                </info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

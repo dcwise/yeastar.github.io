@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>Zoho Integration</title>
+    <topicmeta>
+        <category>Zoho Integration</category>
+        <prodinfo>
+            <prodname>
+                <data><ph keyref="product_name"/></data>
+                <data><ph product="s-series">1.0.9</ph>
+                    <ph product="cloudpbx">1.0.9</ph></data>
+            </prodname>
+        </prodinfo>
+    </topicmeta>
+    <keydef keys="product_name" product="cloudpbx">
+        <topicmeta>
+            <keywords>
+                <keyword>Yeastar Cloud PBX</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="product_name" product="s-series">
+        <topicmeta>
+            <keywords>
+                <keyword>Yeastar S-Series VoIP PBX</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="product_name" product="k2">
+        <topicmeta>
+            <keywords>
+                <keyword>Yeastar K2 IPPBX</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <topicref href="../topic/zoho-integration-guide.dita">
+        <topicmeta>
+            <shortdesc>Zoho Integration App is designed to facilitate quick integration between
+                    your <ph keyref="product_name"/> and multiple Zoho applications. </shortdesc>
+        </topicmeta>
+        <topicref href="../topic/zoho-integration-introduction.dita"/>
+        <topicref href="../topic/zoho-integration-download-app.dita"/>
+        <topichead navtitle="Zoho Integration">
+            <topicref href="../topic/zoho-integration-preparations.dita" product="s-series"/>
+            <topicref href="../topic/zoho-integration-procedures.dita"/>
+        </topichead>
+        <topicref href="../topic/zoho-integration-usages.dita"/>
+        <topicref href="../topic/zoho-integration-disable-app.dita"/>
+        <topicref href="../topic/zoho-integration-faq.dita"/>
+    </topicref>
+</map>

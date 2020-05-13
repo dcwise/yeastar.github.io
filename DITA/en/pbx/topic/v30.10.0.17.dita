@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_cq1_gwk_qfb">
+    <title>Version 30.10.0.17</title>
+    <abstract>Released Date: November 5, 2018</abstract>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/10/31"/>
+            <!--Carol-->
+            <revised modified="2018/10/31"/>
+            <!--Carol-->
+            <revised modified="2018/11/05"/>
+        </critdates>
+    </prolog>
+    <body>
+        <section>
+            <title>Optimization</title>
+            <p><image href="../Images/horizon.png" id="image_xcc_4wb_kfb"/></p>
+            <p><b>Hotel App</b></p>
+            <p>
+                <ul id="ul_eqw_ynt_4fb">
+                    <li>Fixed the issue that the room extension could not be configured correctly
+                        when adding or editing a hotel room.</li>
+                </ul>
+            </p>
+        </section>
+    </body>
+</topic>

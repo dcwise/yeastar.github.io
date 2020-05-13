@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>Contacts</title>
+    <topicref href="../topic/contacts-overview-becky.dita"/>
+    <topicref href="../topic/manage-company-contacts-permissions-for-users-becky.dita"/>
+    <topicref href="../topic/identify-callers-from-contacts-becky.dita"/>
+    <topicref href="../topic/access-and-manage-company-contacts-becky.dita"/>
+    <topicref href="../topic/access-and-manage-personal-contacts-becky.dita"/>
+</map>

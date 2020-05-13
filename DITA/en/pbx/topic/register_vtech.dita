@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_i3x_k1c_5cb">
+    <title>Register Vtech Phone with <ph keyref="product_name"/></title>
+    <shortdesc>This guide is based on the Vtech VSP610A v2. 0. 3. 0 and <ph keyref="product_name"/>
+        <ph product="cloudpbx">v81.8.0.7</ph><ph product="s-series">v30.8.0.14</ph>.</shortdesc>
+    <taskbody>
+        <context>
+            <p conref="register_htek.dita#task_n3s_q1c_5cb/different_phone_web"/>
+        </context>
+    
+ 
+       
+            <section id="section_c2q_3cg_ycb">
+                <title>Configure the IP address via phone user interface</title>
+                <p>
+                    <ol id="ol_w3b_rcg_ycb">
+                        <li>Press <menucascade>
+                                <uicontrol>System</uicontrol>
+                                <uicontrol>Network</uicontrol>
+                                <uicontrol>Basic Settings</uicontrol>
+                                <uicontrol>Dual Mode</uicontrol>
+                                <uicontrol>WAN Setting</uicontrol>
+                            </menucascade>.</li>
+                        <li>Choose <b>Static IP</b> and alter the <b>IP Address, Subnet Mask</b>,
+                            <b>Preferred DNS Server</b>, <b>Alternate DNS Server</b>.</li>
+                        <li><b>Apply </b>it after input the correct information.</li>
+                        <li><b>Reboot</b> the phone and log in the phone web user interface using
+                            the new IP address.</li>
+                        <li>Enter the user name and password, click <b>Log In</b> to enter the web
+                            user interface.<p>
+                                <ul id="ul_hlt_wcg_ycb">
+                                    <li><b>User Name</b>: admin</li>
+                                    <li><b>Default Password</b>: admin</li>
+                                </ul>
+                            </p></li>
+                    </ol>
+                </p>
+            </section>
+            <section id="section_vtf_zcg_ycb">
+                <title>Account Registration</title>
+                <ol id="ol_i4w_cdg_ycb">
+                    <li>Log in the IP phone, go to <menucascade>
+                            <uicontrol>System</uicontrol>
+                            <uicontrol>SIP Account Management</uicontrol>
+                        </menucascade>, select one account to configure.</li>
+                    <li>Enable the account and fill in the extension information.<p><image
+                            href="../Images/admin/register_vtech1.png" id="image_q4l_ndg_ycb"
+                            width="650"/></p><p>
+                        <ul id="ul_w22_rfg_ycb">
+                            <li>
+                                <p><b>Enable Register</b>: check</p>
+                            </li>
+                            <li>
+                                <p><b>Account Label</b>: The name you want to display on the phone
+                                    screen.</p>
+                            </li>
+                            <li>
+                                <p><b>Display Name</b>: The name you want to display on another
+                                    person's phone screen when you are calling the phone.</p>
+                            </li>
+                            <li>
+                                <p><b>User Identifier</b>: Enter the extension's <b>Caller
+                                    ID</b>.</p>
+                            </li>
+                            <li>
+                                <p><b>Authentication Name</b>: Enter the extension's <b>Registration
+                                        Name</b>.</p>
+                            </li>
+                            <li>
+                                <p><b>Authentication Password</b>: Enter the extension's
+                                        <uicontrol>Registration Password</uicontrol>.</p>
+                            </li>
+                        </ul>
+                    </p></li>
+                    <li>In the <uicontrol>SIP Server</uicontrol> section and
+                        <uicontrol>Registration</uicontrol> section, fill in your PBX
+                            information.<p><image href="../Images/admin/alcatel2.png"
+                            id="image_dnj_p2g_ycb" width="650"/></p><p>
+                        <ul id="ul_qtm_lgg_ycb">
+                            <li><b>SIP Server</b><p>
+                                    <ul id="ul_ycq_mgg_ycb">
+                                        <li><b>Server Address: </b>Enter the domain<ph
+                                                product="s-series"> or IP address</ph> of your
+                                            PBX.</li>
+                                        <li><b>Server Port: </b>Enter the SIP port of your PBX.</li>
+                                    </ul>
+                                </p></li>
+                        </ul>
+                        <ul id="ul_rnb_qgg_ycb">
+                            <li><b>Registration</b><p>
+                                    <ul id="ul_jfd_qgg_ycb">
+                                        <li><b>Server Address: </b>Enter the domain<ph
+                                                product="s-series"> or IP address</ph> of your
+                                            PBX.</li>
+                                        <li><b>Port: </b>Enter the SIP port of your PBX.</li>
+                                    </ul>
+                                </p></li>
+                        </ul>
+                    </p></li>
+                    <li>Click <uicontrol>Apply</uicontrol>.<p>If the registration is successfully,
+                            the register status would show "Registered". </p></li>
+                </ol>
+            </section>
+        </taskbody>
+    
+</task>

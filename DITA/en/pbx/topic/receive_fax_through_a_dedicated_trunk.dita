@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_y3m_kxd_xdb">
+    <title>Receive Fax through a Dedicated Trunk</title>
+    <shortdesc>You can assign one or more trunks to receive faxes, and tell your customers to send
+        faxes to the dedicated trunk number. </shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/05/22"/>
+            <!--Carol-->
+            <revised modified="2018/05/22"/>
+            <!--Carol-->
+            <revised modified="2018/05/28"/>
+            <!--Carol-->
+            <revised modified="2018/06/01"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <context id="context_my3_wyd_xdb" product="s-series">To receive a fax on the PBX, you need
+            to install S2 module or SO module on the PBX, and connect a fax machine to the FXS port
+            on the PBX.</context>
+        <steps>
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol>PBX</uicontrol>
+                        <uicontrol>Call Control</uicontrol>
+                        <uicontrol>Inbound Route</uicontrol>
+                    </menucascade>, click <uicontrol>Add</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>On the configuration page, select the dedicated trunk to the
+                        <uicontrol>Selected</uicontrol> box.</cmd>
+                <info>
+                    <note>The selected trunk will be used to receive faxes only, users cannot make
+                        audio calls through the selected trunk.</note>
+                </info>
+                <info><image href="../Images/admin/private_fax_trunk.png" id="image_nmn_f12_xdb"
+                        width="650"/></info>
+            </step>
+            <step>
+                <cmd>Set the <uicontrol>Destination</uicontrol> to<ph product="s-series"> an FXS
+                        extension or</ph>
+                    <xref href="fax_to_email.dita#concept_w2l_g22_xdb">Fax to Email.</xref></cmd>
+                <info product="s-series">If you choose a FXS extension, your fax machine should be
+                    connected the relevant FXS port on the PBX.</info>
+                <info><image href="../Images/admin/private_fax_destination.png"
+                        id="image_cdy_vzd_xdb" width="650"/></info>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</cmd>
+            </step>
+        </steps>
+        <result id="result_cky_xzd_xdb">Users can dial the number of  the dedicated trunk, then send
+            fax to the PBX.</result>
+    </taskbody>
+</task>

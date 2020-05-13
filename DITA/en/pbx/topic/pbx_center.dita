@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_ygx_q51_5db">
+    <title>PBX Center</title>
+    <shortdesc>The PBX Center separately manages all the functionalities under PBX, CDR Recording,
+        and PBX</shortdesc>
+    <conbody>
+        <p>Monitor. It delivers a quick update of these functionalities. </p>
+        <p></p>
+    </conbody>
+</concept>

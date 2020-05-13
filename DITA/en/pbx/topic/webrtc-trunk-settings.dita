@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="webrtc-trunk-settings">
+    <title>WebRTC Trunk Settings</title>
+    <shortdesc>When you configure a WebRTC Trunk, you may need to configure some of the advanced
+        settings. This reference describes all the settings on a WebRTC Trunk.</shortdesc>
+    <body>
+        <section id="section_kmk_qdt_53b">
+            <title>Basic Settings</title>
+            <p>Navigation path: <menucascade>
+                    <uicontrol>Settings</uicontrol>
+                    <uicontrol> PBX</uicontrol>
+                    <uicontrol> Trunks</uicontrol>
+                </menucascade>, edit WebRTC trunk on the <uicontrol>Basic</uicontrol> tab. </p>
+            <p>
+                <table colsep="1" rowsep="1">
+                    <tgroup cols="2" align="left">
+                        <colspec colname="c1" colnum="1" colwidth="1*"/>
+                        <colspec colname="c2" colnum="2" colwidth="2.66*"/>
+                        <thead>
+                            <row>
+                                <entry>Settings</entry>
+                                <entry>Description</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>Name</entry>
+                                <entry>Enter the trunk name.</entry>
+                            </row>
+                            <row>
+                                <entry>Trunk Status</entry>
+                                <entry>Enable or disable the trunk.</entry>
+                            </row>
+                            <row>
+                                <entry>Trunk Type</entry>
+                                <entry>Select a trunk type.</entry>
+                            </row>
+                            <row>
+                                <entry align="left" valign="middle">Trunk Number</entry>
+                                <entry><p>Use the default number or change the <uicontrol>Trunk
+                                            Number</uicontrol>.</p>When a WebRTC call is made
+                                    through this trunk, the trunk number will be displayed on the
+                                    ringing endpoint.</entry>
+                            </row>
+                            <row>
+                                <entry>WebRTC Inbound Call Link</entry>
+                                <entry>Place the link on your web page. When your website visitors
+                                    click the link, they will be connected to the destination of
+                                    this WebRTC trunk.</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+        <section id="section_xwr_g3t_53b">
+            <title>Codec Settings</title>
+            <p><ph keyref="product_name"/> supports a-law and u-law codecs.</p>
+            <p>Navigation path: <menucascade>
+                    <uicontrol>Settings</uicontrol>
+                    <uicontrol> PBX</uicontrol>
+                    <uicontrol> Trunks</uicontrol>
+                </menucascade>, edit WebRTC trunk on the <uicontrol>Codec</uicontrol> tab. </p>
+            <p>
+                <dl>
+                    <dlentry>
+                        <dt>Select Codec</dt>
+                        <dd>In the <uicontrol>Available</uicontrol> box, double click a codec, the
+                            selected codec will appear in the <uicontrol>Selected</uicontrol>
+                            box.</dd>
+                    </dlentry>
+                    <dlentry>
+                        <dt>Set the Codec Priority</dt>
+                        <dd>In the <b>Selected</b> box, click a codec, and click <image
+                                href="../Images/ui_icons/to_top.png" id="image_nbs_vb2_2fb"/>
+                            <image href="../Images/ui_icons/to_down.png" id="image_zzm_wb2_2fb"/>
+                            <image href="../Images/ui_icons/to_up.png" id="image_lpl_yb2_2fb"/>
+                            <image href="../Images/ui_icons/to_bottom.png" id="image_lrh_xb2_2fb"/>
+                            to change the priority.</dd>
+                    </dlentry>
+                </dl>
+            </p>
+        </section>
+        <section id="section_rcj_43t_53b">
+            <title>Maximum Channel Settings</title>
+            <p>Navigation path: <menucascade>
+                    <uicontrol>Settings</uicontrol>
+                    <uicontrol> PBX</uicontrol>
+                    <uicontrol> Trunks</uicontrol>
+                </menucascade>, edit WebRTC trunk on the <uicontrol>Advanced</uicontrol> tab. </p>
+            <p><uicontrol>Maximum Channels</uicontrol>: Defines the maximum number of concurrent
+                calls allowed in this trunk.</p>
+        </section>
+    </body>
+</topic>

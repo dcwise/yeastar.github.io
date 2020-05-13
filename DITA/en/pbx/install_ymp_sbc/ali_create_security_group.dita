@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_oy5_25q_lcb">
+    <title>Step2. Create a Security Group</title>
+    <shortdesc>A security group acts as a virtual firewall to control the traffic for its associated
+        instances. You need to create a security group for the instances which are in the target
+        VPC.</shortdesc>
+    <taskbody>
+        <steps id="steps_xvl_fyq_lcb">
+            <step>
+                <cmd>Log on to the <xref href="https://ecs.console.aliyun.com/#/home" format="html"
+                        scope="external">ECS console</xref>.</cmd>
+            </step>
+            <step>
+                <cmd>In the left-side navigation pane, click <uicontrol>Security
+                    Groups</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Select a region. The region of the security group should be the same with the
+                    region of the VPC.</cmd>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Create Security Group</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>On the configuration page, set the security group.</cmd>
+                <substeps>
+                    <substep>
+                        <cmd>Set the <uicontrol>Name</uicontrol>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Select the <uicontrol>Network Type</uicontrol> as
+                                <uicontrol>VPC</uicontrol>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Select the <uicontrol>VPC</uicontrol> which was created for the SBC and
+                            YMP.</cmd>
+                    </substep>
+                </substeps>
+                <info><image href="../Images/SBC/ali_create_security_group.png"
+                        id="image_w5h_vzq_lcb" width="500"/></info>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>OK</uicontrol> and <uicontrol>Set the rules
+                        immediately</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Add inbound security rule.</cmd>
+                <substeps id="substeps_snx_b1r_lcb">
+                    <substep>
+                        <cmd>Click <uicontrol>Add Security Group Rules</uicontrol>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Set the inbound rule as the figure below.</cmd>
+                        <info><image href="../Images/SBC/ali_inbound_rule.png"
+                                id="image_a1x_n1r_lcb" width="500"/></info>
+                    </substep>
+                </substeps>
+                <substeps id="substeps_fwj_v1r_lcb">
+                    <substep>
+                        <cmd>Click <uicontrol>OK</uicontrol>.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Add outbound security rule.</cmd>
+                <substeps id="substeps_ky4_41r_lcb">
+                    <substep>
+                        <cmd>Click <uicontrol>Add Security Group Rules</uicontrol>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Set the outbound rule as the figure below.</cmd>
+                        <info><image href="../Images/SBC/ali_outbound_rule.png"
+                                id="image_jbc_51r_lcb" width="500"/></info>
+                    </substep>
+                    <substep>
+                        <cmd>Click <uicontrol>OK</uicontrol>.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

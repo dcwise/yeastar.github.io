@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_dyg_3qj_3cb">
+  <title>System Requirements for SBC</title>
+  <shortdesc>To deploy SBC server, you need to know the requirements of hardware, ethernet port,
+    operation system, and network bandwidth.</shortdesc>
+  <body>
+    <section id="section_q2x_xnm_mcb">
+      <title>Hardware Requirements</title>
+      <p>The server used to host the SBC should  meet the following minimum requirements.</p>
+      <p>
+        <ul id="ul_pqt_14s_lcb">
+          <li><b>CPU</b>: Intel brand, 4 vCPU (thread), 2.4GHz -2.9GHz <note>
+              <ul id="ul_ab5_jtr_w3b">
+                <li>Intel® Streaming SIMD Extensions 4 (Intel® SSE4) should be supported on the
+                  CPU.</li>
+                <li>For Data center, we suggest that you use Intel Xeron E5 series CPU.</li>
+              </ul>
+            </note></li>
+          <li><b>Memory</b>: 8GB</li>
+          <li><b>Storage</b>: 100GB</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_hkr_f4m_mcb">
+      <title>Ethernet Port Requirements</title>
+      <p>
+        <ul id="ul_myb_h4m_mcb">
+          <li>For Data Center: The SBC server needs 2 Ethernet ports.</li>
+          <li>For AWS: The SBC server needs 2 Ethernet ports.</li>
+          <li>For Ali Cloud: The SBC server needs 1 Ethernet ports.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_z1w_ynm_mcb">
+      <title>Operation System Requirement</title>
+      <p>Ubuntu 16.04.2 (or 16.04.3 or 16.04.4) LTS Server Edition - 64 bit</p>
+      <p>
+        <note>Other Ubuntu versions are not tested and supported.</note>
+      </p>
+      <ul id="ul_fkm_yly_zcb">
+        <li><xref
+            href="https://update-ys2015-alicloud.oss-cn-hongkong.aliyuncs.com/Ubuntu/ubuntu-16.04.2-server-amd64.iso"
+            format="html" scope="external">Download Ubuntu 16.04.2 LTS</xref></li>
+      </ul>
+    </section>
+    <section id="section_y5m_znm_mcb">
+      <title>Network Bandwidth Requirements</title>
+      <p>The network bandwidth for the server should meet the following minimum requirements.</p>
+      <p>
+        <ul id="ul_urt_4lj_3cb">
+          <li>
+            <p><b>Upstream Bandwidth</b>: 31 Mbps</p>
+          </li>
+          <li>
+            <p><b>Downstream Bandwidth</b>: 31 Mbps</p>
+          </li>
+        </ul>
+      </p>
+      <p>VOIP Bandwidth consumption naturally depends on the codec used. Set up your network
+        bandwidth according to the requirements of audio codecs. </p>
+      <p> In the following table, CC stands for Concurrent Calls.<table frame="all" rowsep="1"
+          colsep="1" id="codec_data">
+          <tgroup cols="5">
+            <colspec colname="c1" colnum="1" colwidth="1*"/>
+            <colspec colname="c2" colnum="2" colwidth="1.73*"/>
+            <colspec colname="c3" colnum="3" colwidth="1.77*"/>
+            <colspec colname="c4" colnum="4" colwidth="1.7*"/>
+            <colspec colname="c5" colnum="5" colwidth="1.7*"/>
+            <thead>
+              <row>
+                <entry>Audio Codec</entry>
+                <entry>Upstream/Downstream<p>(50 CC)</p></entry>
+                <entry>Upstream/Downstream<p>(100 CC)</p></entry>
+                <entry>Upstream/Downstream<p>(200 CC)</p></entry>
+                <entry>Upstream/Downstream<p>(500 CC)</p></entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry>G729</entry>
+                <entry>3.1 Mbps</entry>
+                <entry>6.2 Mbps</entry>
+                <entry>12.4 Mbps</entry>
+                <entry>31 Mbps</entry>
+              </row>
+              <row>
+                <entry>G711</entry>
+                <entry>8.55 Mbps</entry>
+                <entry>17.1 Mbps</entry>
+                <entry>34.2 Mbps</entry>
+                <entry>85.5 Mbps</entry>
+              </row>
+              <row>
+                <entry>iLBC</entry>
+                <entry>2.75 Mpbs</entry>
+                <entry>5.5 Mbps</entry>
+                <entry>11 Mbps</entry>
+                <entry>27.5 Mbps</entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table></p>
+    </section>
+  </body>
+  <related-links>
+    <link href="aws_recommended_instance_type.dita#reference_zpq_ppl_x2b"/>
+    <link href="ali_recommended_instance_type.dita#reference_lhw_2zq_ndb"/>
+  </related-links>
+</topic>

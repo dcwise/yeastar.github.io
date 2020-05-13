@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>QueueMetrics Integration</title>
+    <keydef keys="product_name" product="s-series">
+        <topicmeta>
+            <keywords>
+                <keyword>Yeastar S-Series VoIP PBX</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <topicref href="../topic/queuemetrics-integration.dita" product="s-series" print="yes">
+        <topicmeta>
+            <shortdesc> QueueMetrics Integration App provides the interface to connect <ph
+                    keyref="product_name"/> and QueueMetrics. </shortdesc>
+        </topicmeta>
+        <topicref href="../topic/queuemetrics_live_integration.dita">
+            <topicref href="../topic/apply_a_demo_id_of_queuemetrics.dita"/>
+            <topicref href="../topic/tryout_queuemetrics_live_integration.dita"/>
+            <topicref href="../topic/activate_qm_live_integration.dita"/>
+        </topicref>
+        <topicref href="../topic/queuemetrices_on_premise.dita">
+            <topicref href="../topic/set_up_queuemetrics_on_premise.dita"/>
+            <topicref href="../topic/tryout_queuemetrics_on_premise_integration.dita"/>
+            <topicref href="../topic/activate_qm_on_premise_integration.dita"/>
+        </topicref>
+        <topicref href="../topic/initial_settings_on_qm.dita">
+            <topicref href="../topic/create_agents_on_qm.dita"/>
+            <topicref href="../topic/create_queues_on_qm.dita"/>
+            <topicref href="../topic/create_qm_system_users.dita"/>
+        </topicref>
+    </topicref>
+</map>

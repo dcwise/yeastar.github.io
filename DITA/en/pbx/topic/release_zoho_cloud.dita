@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="release_zoho_cloud">
+    <title>Zoho</title>
+    <shortdesc>Release notes for Zoho Integration on Yeastar Cloud PBX.</shortdesc>
+    <body>
+        <section id="section_mhf_s4j_tkb">
+            <title>Version 1.1.4</title>
+            <p>Released Date: March 12, 2020<ul id="ul_gqz_s4j_tkb">
+                    <li>The Zoho Integration App is free, no more license from Yeastar is
+                        needed.</li>
+                </ul></p>
+        </section>
+    </body>
+</topic>

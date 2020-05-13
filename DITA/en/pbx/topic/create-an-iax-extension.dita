@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="topic_wxq_nq4_y3b">
+    <title>Create an IAX Extension</title>
+    <shortdesc><?oxy_comment_start author="Becky" timestamp="20190909T094656+0800" comment="新增" flag="done"?><ph
+            keyref="product_name"/> supports Inter-Asterisk Exchange (IAX) protocol. IAX is used for
+        transporting VoIP telephony sessions between servers and terminal devices. Before
+        registering an IAX account on phones, you need to create an IAX
+        account.<?oxy_comment_end?></shortdesc>
+    <taskbody>
+        <context id="context_n4t_3xv_y3b">
+            <note><?oxy_comment_start author="Becky" timestamp="20190911T091129+0800" comment="新增" flag="done"?>Only
+                few phones support IAX protocol, we recommend that you use SIP
+                extensions.<?oxy_comment_end?></note>
+        </context>
+        <steps id="ol_rmh_hfq_y3b">
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol>PBX</uicontrol>
+                        <uicontrol>Extensions</uicontrol>
+                    </menucascade>, click <uicontrol>Add</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>On the <uicontrol>Basic</uicontrol> page, go to <uicontrol>General</uicontrol>
+                    section, and set the general settings of the extension.</cmd>
+                <info><p><image id="image_gcj_vfq_y3b"
+                            href="../Images/admin/add_iax_extension_general.png" width="650"
+                            product="s-series"/></p><image id="image_bpp_3vx_y3b"
+                        href="../Images/admin/add_iax_extension_general_k2.png" width="650"
+                        product="k2"/></info>
+                <info>
+                    <ul id="ul_fsn_wjn_1jb">
+                        <li><uicontrol>Type</uicontrol>: Select the checkbox of
+                                <uicontrol>IAX</uicontrol>.</li>
+                        <li><uicontrol>Extension</uicontrol>: Enter the extension number.</li>
+                        <li><uicontrol>Caller ID</uicontrol>: Enter the caller ID number. The called
+                            party will see this caller ID number when the extension user makes an
+                            outgoing call.</li>
+                        <li><uicontrol>Caller ID name</uicontrol>: Enter the caller ID name. The
+                            called party will see this caller ID name when the extension user makes
+                            an outgoing call.</li>
+                        <li><uicontrol>Registration Password</uicontrol>: The password is used to
+                            register the extension.</li>
+                    </ul>
+                </info>
+            </step>
+            <step>
+                <cmd>On the <uicontrol>Basic</uicontrol> page, go to <uicontrol>User
+                        Information</uicontrol> section, and set the user information.</cmd>
+                <info>
+                    <p><image href="../Images/admin/extension_user_info.png" width="650"
+                            id="image_hrp_jgq_y3b"/></p>
+                    <ul id="ul_ptd_zjn_1jb">
+                        <li><uicontrol>Email</uicontrol>: Extension user can reset his/her login
+                            password, receive voice mails, faxes, or PBX notifications via this
+                            email address.</li>
+                        <li><uicontrol>User Password</uicontrol>: Extension user can log in the PBX
+                            or log in Linkus mobile client by the user password.</li>
+                        <li><uicontrol>Prompt Language</uicontrol>: The language of voice prompts.
+                            The default prompt language is the same as the system language. If the
+                            extension user speaks foreign language, you can set a specific system prompt.<p>
+                                <note>Before selecting other system prompts, go to <menucascade>
+                                        <uicontrol>Settings</uicontrol>
+                                        <uicontrol>PBX</uicontrol>
+                                        <uicontrol>Voice Prompts</uicontrol>
+                                        <uicontrol>System Prompt</uicontrol>
+                                    </menucascade> to download online prompts.</note>
+                            </p></li>
+                        <li><uicontrol>Mobile Number</uicontrol>: Extension user can receive the PBX
+                            notifications or forwarded calls on this mobile number.</li>
+                    </ul>
+                </info>
+            </step>
+            <step>
+                <cmd importance="optional">Click <uicontrol>Presence</uicontrol>,
+                        <uicontrol>Features</uicontrol>, <uicontrol>Advanced</uicontrol>, or
+                        <uicontrol>Call Permission</uicontrol> tab to configure
+                        <?oxy_comment_start author="Becky" timestamp="20190912T131727+0800" comment="新增链接到iax extension settings
+" flag="done"?><xref
+                        href="iax-extension-settings.dita#reference_ul3_3t4_y3b">other
+                        settings</xref><?oxy_comment_end?>.</cmd>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+    <related-links>
+        <link href="register-an-iax-extension.dita#topic_i2v_4r4_y3b"/>
+    </related-links>
+</task>

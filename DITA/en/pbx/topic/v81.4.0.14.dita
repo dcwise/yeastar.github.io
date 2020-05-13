@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_mh4_g5v_wdb">
+    <title>Version 81.4.0.14</title>
+    <abstract>Released Date: May 23, 2018</abstract>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/05/21"/>
+            <!--Carol-->
+            <revised modified="2018/05/21"/>
+            <!--Carol-->
+            <revised modified="2018/06/20"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <section id="section_yy2_swv_wdb">
+            <title>New Feature</title>
+            <p><image href="../Images/horizon.png" id="image_pry_dyv_pdb"/></p>
+            <p>
+                <ul id="ul_ipc_qxw_wdb">
+                    <li>Added Privacy Policy Agreement and Data Processing Agreement in the Cloud
+                        PBX.</li>
+                </ul>
+            </p>
+        </section>
+    </conbody>
+</concept>

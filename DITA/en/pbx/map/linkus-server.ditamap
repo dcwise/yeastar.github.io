@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>Linkus Server</title>
+    <topicmeta>
+        <category>Linkus Server</category>
+        <prodinfo>
+            <prodname>
+                <data><ph keyref="product_name"/></data>
+                <data>2.6.10</data>
+            </prodname>
+        </prodinfo>
+    </topicmeta>
+    <topicref href="../topic/linkus_server.dita">
+        <topicmeta>
+            <shortdesc>Linkus Server is designed to work with Linkus client. </shortdesc>
+        </topicmeta>
+        <topichead navtitle="Quick Start">
+            <topicref href="../topic/linkus-qsg-step1.dita"/>
+            <topicref href="../topic/linkus-qsg-step2.dita"/>
+            <topicref href="../topic/linkus-qsg-step3.dita"/>
+        </topichead>
+        <topicref href="../topic/set_up_linkus_server.dita" product="k2 s-series">
+            <topichead navtitle="Linkus Server with LCS" product="k2 s-series">
+                <topicref href="../topic/set_up_linkus_server_with_LCS.dita" product="k2 s-series"/>
+                <topicref href="../topic/buy_linkus_cloud_service.dita" product="k2 s-series"/>
+            </topichead>
+            <topichead navtitle="Linkus Server without LCS">
+                <topicref href="../topic/set_up_linkus_server_without_lcs.dita"
+                    product="k2 s-series"/>
+            </topichead>
+            <topicref href="../topic/linkus_event_settings.dita" product="k2 s-series"/>
+            <topicref href="../topic/linkus_login_information.dita"/>
+        </topicref>
+        <topicref href="../topic/set_up_linkus_server.dita" product="cloudpbx">
+            <topicref href="../topic/linkus_login_information.dita"/>
+            <topicref href="../topic/linkus_event_settings.dita"/>
+        </topicref>
+        <topicref href="../topic/linkus_client_settings.dita">
+            <topicref href="../topic/enable_disable_linkus_client_for_users.dita"/>
+            <topicref href="../topic/linkus_email.dita"/>
+            <topicref href="../topic/linkus-login-mode.dita" product="s-series"/>
+        </topicref>
+    </topicref>
+    <keydef keys="product_name" product="s-series">
+        <topicmeta>
+            <keywords>
+                <keyword>Yeastar S-Series VoIP PBX</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="product_name" product="cloudpbx">
+        <topicmeta>
+            <keywords>
+                <keyword>Yeastar Cloud PBX</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="product_name" product="k2">
+        <topicmeta>
+            <keywords>
+                <keyword>Yeastar K2 IPPBX</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+</map>

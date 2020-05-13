@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="reference_ul3_3t4_y3b">
+    <title>IAX Extension
+        <?oxy_comment_start author="carol" timestamp="20190910T134130+0800" comment="本文作为参考性信息，
+应该包含所有tabs 下面的设置项说明。" flag="done"?>Settings<?oxy_comment_end?></title>
+    <shortdesc>This reference describes all settings on an IAX extension.</shortdesc>
+    <refbody>
+        <section>
+            <title>Basic Settings</title>
+            <p>Navigation path: <menucascade>
+                    <uicontrol>Settings</uicontrol>
+                    <uicontrol>PBX</uicontrol>
+                    <uicontrol>Extensions</uicontrol>
+                </menucascade>, edit an IAX extension under the <uicontrol>Basic</uicontrol>
+                tab.</p>
+            <p><b>General Settings</b></p>
+            <p>
+                <table frame="all" id="table_ics_rd4_1jb">
+                    <tgroup cols="2">
+                        <colspec colname="c1" colnum="1" colwidth="1*" colsep="1" rowsep="1"/>
+                        <colspec colname="c2" colnum="2" colwidth="1*" colsep="1" rowsep="1"/>
+                        <thead>
+                            <row>
+                                <entry>Settings</entry>
+                                <entry>Description</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row product="k2 s-series">
+                                <entry>Type</entry>
+                                <entry>Select <uicontrol>IAX</uicontrol>.</entry>
+                            </row>
+                            <row>
+                                <entry>Extension</entry>
+                                <entry>Enter the extension number.</entry>
+                            </row>
+                            <row>
+                                <entry>Caller ID</entry>
+                                <entry>If you set the caller ID number, the called party will see
+                                    this caller ID number when the extension user makes an outgoing
+                                    call.</entry>
+                            </row>
+                            <row>
+                                <entry>Caller ID name</entry>
+                                <entry>If you set the caller ID name, the called party will see this
+                                    caller ID name when the extension user makes an outgoing
+                                    call.</entry>
+                            </row>
+                            <row>
+                                <entry>Registration Password</entry>
+                                <entry>The password is used to register a SIP extension. The
+                                    password is generated randomly by default.</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+            <p><b>User Information Settings</b></p>
+            <table conref="sip-extension-settings.dita#sip-extension-settings/userInfo"
+                id="table_f45_344_1jb">
+                <tgroup cols="1">
+                    <tbody>
+                        <row>
+                            <entry/>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+        </section>
+        <section id="section_n3j_zpn_1jb">
+            <title id="presenceSettings">Presence Settings</title>
+            <p>Extension Presence indicates the availability status of an extension. Presence
+                settings are linked to the Call Forwarding rules and Linkus ring strategy. You can
+                set different call forwarding rules and ring strategy for each presence status.</p>
+            <p>Navigation path: <menucascade>
+                    <uicontrol>Settings</uicontrol>
+                    <uicontrol>PBX</uicontrol>
+                    <uicontrol>Extensions</uicontrol>
+                </menucascade>, edit an IAX extension under the <uicontrol>Presence</uicontrol>
+                tab.</p>
+            <table conref="sip-extension-settings.dita#sip-extension-settings/presence"
+                id="table_d55_m44_1jb">
+                <tgroup cols="1">
+                    <tbody>
+                        <row>
+                            <entry/>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <p><b>Call Forwarding Settings</b></p>
+            <p conref="sip-extension-settings.dita#sip-extension-settings/callForwarding"/>
+            <table conref="sip-extension-settings.dita#sip-extension-settings/callForwardingTable"
+                id="table_cys_jr4_1jb">
+                <tgroup cols="1">
+                    <tbody>
+                        <row>
+                            <entry/>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <p><b>Ring Strategy Settings</b></p>
+            <p>You can set ring strategy for the following terminals that the IAX extension
+                registered to.<ul id="ul_wbr_qr4_1jb">
+                    <li>Extension</li>
+                    <li>Linkus Mobile Client</li>
+                    <li>Linkus Desktop Client</li>
+                </ul><table
+                    conref="sip-extension-settings.dita#sip-extension-settings/RingStrategyTable"
+                    id="table_krn_gs4_1jb">
+                    <tgroup cols="1">
+                        <tbody>
+                            <row>
+                                <entry/>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table></p>
+        </section>
+        <section id="features"><title id="featuresSettings">Features Settings</title>You can
+            configure voicemail, mobility extension, call monitoring, and other settings under the
+                <uicontrol>Features</uicontrol> tab.<p>Navigation path: <menucascade>
+                    <uicontrol>Settings</uicontrol>
+                    <uicontrol>PBX</uicontrol>
+                    <uicontrol>Extensions</uicontrol>
+                </menucascade>, edit an IAX extension under the <uicontrol>Features</uicontrol>
+                tab.</p><p><b>Voicemail Settings</b></p><table
+                conref="sip-extension-settings.dita#sip-extension-settings/voicemailTable"
+                id="table_eln_yt4_1jb">
+                <tgroup cols="1">
+                    <tbody>
+                        <row>
+                            <entry/>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table><p><b>Mobility Extension</b></p><p>Yeastar Mobility Extension allows you to stay
+                in contact with colleagues and clients using either office phone or mobile phone
+                with the same extension number.</p><table
+                conref="sip-extension-settings.dita#sip-extension-settings/mobilityTable"
+                id="table_q33_s54_1jb">
+                <tgroup cols="1">
+                    <tbody>
+                        <row>
+                            <entry/>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table><p><b>Monitor Settings</b></p><p>Call Monitoring allows authorized users to
+                monitor another extension user's call in real time. </p><table
+                conref="sip-extension-settings.dita#sip-extension-settings/monitorTable"
+                id="table_jgn_kv4_1jb">
+                <tgroup cols="1">
+                    <tbody>
+                        <row>
+                            <entry/>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table><p><b>Other Settings</b></p><p>
+                <table conref="sip-extension-settings.dita#sip-extension-settings/otherSetTable"
+                    id="table_n4l_qv4_1jb">
+                    <tgroup cols="1">
+                        <tbody>
+                            <row>
+                                <entry/>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p></section>
+        <section id="section_fb1_g3w_y3b">
+            <title>Advanced Settings</title>
+            <p>Navigation path: <menucascade>
+                    <uicontrol>Settings</uicontrol>
+                    <uicontrol>PBX</uicontrol>
+                    <uicontrol>Extensions</uicontrol>
+                </menucascade>, edit an IAX extension under the <uicontrol>Advanced</uicontrol> tab. </p>
+            <p><b>IP Restriction</b></p>
+            <p>
+                <table frame="all" id="table_ocr_whw_y3b">
+                    <tgroup cols="2">
+                        <colspec colname="c1" colnum="1" colwidth="1*" colsep="1" rowsep="1"/>
+                        <colspec colname="c2" colnum="2" colwidth="1*" colsep="1" rowsep="1"/>
+                        <thead>
+                            <row>
+                                <entry>Settings</entry>
+                                <entry>Description</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>Enable IP Restriction</entry>
+                                <entry
+                                    conref="sip-extension-settings.dita#sip-extension-settings/IPrestriction"/>
+                            </row>
+                            <row>
+                                <entry>Permitted IP/Subnet mask</entry>
+                                <entry
+                                    conref="sip-extension-settings.dita#sip-extension-settings/permittedIP"/>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+        <section id="section_vxv_sxn_1jb">
+            <title id="callPermission">Call Permission Settings</title>
+            <p>You can set the outbound call permissions for the IAX extension.</p>
+            <p>Navigation path: <menucascade>
+                    <uicontrol>Settings</uicontrol>
+                    <uicontrol>PBX</uicontrol>
+                    <uicontrol>Extensions</uicontrol>
+                </menucascade>, edit an IAX extension under the <uicontrol>Call
+                    Permission</uicontrol> tab.</p>
+            <p>
+                <table conref="sip-extension-settings.dita#sip-extension-settings/callPermissionTab"
+                    id="table_cnd_tw4_1jb">
+                    <tgroup cols="1">
+                        <tbody>
+                            <row>
+                                <entry/>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+    </refbody>
+</reference>

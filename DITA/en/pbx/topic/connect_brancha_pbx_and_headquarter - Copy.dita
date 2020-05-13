@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_kc5_kqy_ldb">
+    <title>Step4. Connect BranchA PBX and Headquarter PBX</title>
+    <shortdesc>Set the role of the BranchA PBX as <b>Branch</b>, and connect to the headquarter PBX.
+        Users can make internal calls between the branch office A and the headquarter.</shortdesc>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/05/22"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Log in the web interface of the BranchA PBX, go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol>Multisite Interconnect</uicontrol>
+                    </menucascade>.</cmd>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Branch Office</uicontrol> to set the PBX as a branch
+                    PBX.</cmd>
+                <info><image href="../Images/admin/set_branch_office.png" id="image_ufj_v1z_ldb"
+                    /></info>
+            </step>
+            <step>
+                <cmd>Create an interconnection to the headquarter PBX.</cmd>
+                <substeps>
+                    <substep>
+                        <cmd>Click <uicontrol>Add</uicontrol> to add an interconnection.</cmd>
+                        <info><image href="../Images/admin/add_headquarter.png"
+                                id="image_dyv_dbz_ldb"/></info>
+                    </substep>
+                    <substep>
+                        <cmd>Enter the IP/domain and SIP port of the headquarter PBX.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Enter the branch ID and password that were set on the headquarter PBX
+                            for branch office A.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</cmd>
+                <stepresult>If the interconnection status shows <image
+                        href="../Images/ui_icons/ok.png" width="20" id="image_yrd_kbz_ldb"/>, the
+                    branch PBX is connected to the headquarter PBX. <p>The users in Branch Office A
+                        and the Headquarter Office can make internal calls.</p></stepresult>
+            </step>
+        </steps>
+    </taskbody>
+</task>

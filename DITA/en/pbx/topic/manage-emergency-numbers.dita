@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="task_ok3_czd_2jb">
+    <title>Manage Emergency Numbers</title>
+    <shortdesc>After you add emergency numbers, you can edit or delete them.</shortdesc>
+    <body>
+        <section id="section_anq_rl2_2jb">
+            <title>Edit an emergency number</title>
+            <p>
+                <ol>
+                    <li>Go to <menucascade>
+                            <uicontrol>Settings</uicontrol>
+                            <uicontrol>PBX</uicontrol>
+                            <uicontrol>Emergency Number</uicontrol>
+                        </menucascade>, click <image id="image_aff_dwl_2jb"
+                            href="../Images/ui_icons/edit.png" width="20"/> beside the emergency
+                        number that you want to edit.</li>
+                    <li>Edit information of emergency number.</li>
+                    <li>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_xwc_2m2_2jb">
+            <title>Delete an emergency number</title>
+            <p>
+                <ol>
+                    <li>Go to <menucascade>
+                            <uicontrol>Settings</uicontrol>
+                            <uicontrol>PBX</uicontrol>
+                            <uicontrol>Emergency Number</uicontrol>
+                        </menucascade>, click <image id="image_iqg_mwl_2jb"
+                            href="../Images/ui_icons/delete.png"/> beside the emergency number that
+                        you want to delete.</li>
+                    <li>In the pop-up window, click <uicontrol>Yes</uicontrol> to delete the
+                        selected emergency number.</li>
+                    <li>Click <uicontrol>Apply</uicontrol>.</li>
+                </ol>
+            </p>
+        </section>
+    </body>
+</topic>

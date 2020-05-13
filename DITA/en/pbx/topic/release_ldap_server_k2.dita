@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_xyn_nqn_y2b">
+    <title>LDAP Server</title>
+    <conbody>
+        <section>
+            <title>Version 2.2.5</title>
+            <p>Released Date: May 14, 2019</p>
+            <p>
+                <ul id="ul_yh5_wh5_4hb">
+                    <li>Updated Russian and Italian web interface.</li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_vsn_yhs_zfb">
+            <title>Version 2.2.4</title>
+            <p>Released Date: December 5, 2018</p>
+            <p>
+                <ul id="ul_yxp_b3s_zfb">
+                    <li>Optimized LDAP Contact Import function.</li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_kg3_ftn_y2b">
+            <title>Version 2.2.2</title>
+            <p>Released Date: August 29, 2018</p>
+            <p>
+                <ul id="ul_hpq_mtn_y2b">
+                    <li>Optimized the Contacts Importing function.</li>
+                    <li>Fixed the issue the phone would display incorrect contact information when
+                        you queried a contact on your phone.</li>
+                    <li>Fixed the issue that the LDAP server might not work after you restored data
+                        from a backup file. </li>
+                </ul>
+            </p>
+        </section>
+    </conbody>
+</concept>

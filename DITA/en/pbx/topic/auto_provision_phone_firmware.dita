@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_elr_rny_scb">
+    <title>Auto Provision Phone Firmware</title>
+    <shortdesc>You can update the phone firmware by Auto Provision method.</shortdesc>
+    <taskbody>
+        <context>
+            <p>
+                <note> Auto provisioning phone firmware only works for the phones that were
+                    registered to the PBX via auto provisioning.</note>
+            </p>
+        </context>
+        <steps id="steps_tbm_zmz_scb">
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Auto Provisioning</uicontrol>
+                        <uicontrol>Firmware Upgrade</uicontrol>
+                    </menucascade>, the page displays the auto provisioned phone models.</cmd>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Check for New Version</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Click the <uicontrol>Upgrade To</uicontrol> drop-down menu, check if the phones
+                    have new firmware version available.</cmd>
+                <info>If the phone has new firmware version, you can see the version in the
+                    drop-down menu.</info>
+                <info><image href="../Images/admin/autop_firmware_new_version.png"
+                        id="image_jpk_yxz_scb"/></info>
+            </step>
+            <step>
+                <cmd>Select a firmware version that you want to upgrade to.</cmd>
+            </step>
+            <step>
+                <cmd>Reboot the phone(s) and update the firmware.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

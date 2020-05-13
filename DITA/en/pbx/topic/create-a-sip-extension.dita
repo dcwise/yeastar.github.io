@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_rt2_q3j_3db">
+    <title>Create a SIP Extension</title>
+    <shortdesc><?oxy_comment_start author="Becky" timestamp="20190909T094035+0800" comment="新增" flag="done"?><ph
+            keyref="product_name"/> supports Session Initiation Protocol (SIP). SIP is used in VoIP
+        communications allowing users to make and receive voice calls for free over the Internet.
+        Before registering a SIP account on phones, you need to create a SIP
+        account.<?oxy_comment_end?></shortdesc>
+    <taskbody>
+        <steps id="steps_onw_t1l_ldb">
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol>PBX</uicontrol>
+                        <uicontrol>Extensions</uicontrol>
+                    </menucascade>, click <uicontrol>Add</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>On the <uicontrol>Basic</uicontrol> page, go to <uicontrol>General</uicontrol>
+                    section, and set the general settings of the extension.</cmd>
+                <info><image href="../Images/admin/add_voip_extension_general.png" width="650"
+                        id="image_n2s_twk_scb" product="s-series"/><p><image id="image_inq_45x_y3b"
+                            href="../Images/admin/add_voip_extension_general_iax.png" width="650"
+                            product="k2"/><ul id="ul_qx5_23n_1jb">
+                            <li><uicontrol>Type</uicontrol>:
+                                <?oxy_comment_start author="Becky" timestamp="20190905T091211+0800" comment="原文：Select SIP, IAX, or both." flag="done"?>Select
+                                the checkbox of <uicontrol>SIP</uicontrol>.<?oxy_comment_end?></li>
+                            <li><uicontrol>Extension</uicontrol>: Enter the extension number.</li>
+                            <li><uicontrol>Caller ID</uicontrol>: Enter the caller ID number. The
+                                called party will see this caller ID number when the extension user
+                                makes an outgoing call.</li>
+                            <li><uicontrol>Registration Name</uicontrol>: The name used to register
+                                a SIP extension.</li>
+                            <li><uicontrol>Caller ID name</uicontrol>: Enter the caller ID name. The
+                                called party will see this caller ID name when the extension user
+                                makes an outgoing call.</li>
+                            <li><uicontrol>Concurrent Registrations</uicontrol>: <ph
+                                    keyref="product_name"/> supports to register one SIP extension
+                                number on multiple phones. When a call reaches the extension number,
+                                all phones will ring. The maximum number of concurrent registrations
+                                is
+                                <?oxy_comment_start author="carol" timestamp="20190909T112435+0800" comment="确认下这个是不是最新的数据" id="lss_cjn_1jb"?><?oxy_comment_start author="Becky" timestamp="20190917T110523+0800" comment="跟产品部确认，没改
+" parentID="lss_cjn_1jb" mid="3"?>5<?oxy_comment_end mid="3"?><?oxy_comment_end?>. </li>
+                            <li><uicontrol>Registration Password</uicontrol>: The password is used
+                                to register the extension.</li>
+                        </ul></p></info>
+            </step>
+            <step>
+                <cmd>On the <uicontrol>Basic</uicontrol> page, go to <uicontrol>User
+                        Information</uicontrol> section, and set the user information.</cmd>
+                <info><image href="../Images/admin/extension_user_info.png" width="650"
+                        id="image_um5_lxk_scb"/><ul id="ul_svt_33n_1jb">
+                        <li><uicontrol>Email</uicontrol>: Extension user can reset his/her login
+                            password, receive voice mails, faxes, or PBX notifications via this
+                            email address.</li>
+                        <li><uicontrol>User Password</uicontrol>: The password is used to log in the
+                            PBX or log in Linkus client.
+                                <ph><?oxy_comment_start author="carol" timestamp="20190909T112904+0800" comment="这个确认一下最新版本的默认设置是什么，S系列默认好像是Password +分机号码" id="nqj_my4_1jb" flag="done" mid="4"?><?oxy_comment_start author="Becky" timestamp="20190911T142120+0800" comment="跟产品部确认：现在都是随机的" parentID="nqj_my4_1jb" flag="done"?>The
+                                password is generated randomly by
+                                default.<?oxy_comment_end?><?oxy_comment_end mid="4"?></ph></li>
+                        <li><uicontrol>Prompt Language</uicontrol>: The language of voice prompts.
+                            The default prompt language is the same as the system language. If the
+                            extension user speaks foreign language, you can set a specific system prompt.<p>
+                                <note>Before selecting other system prompts, go to <menucascade>
+                                        <uicontrol>Settings</uicontrol>
+                                        <uicontrol>PBX</uicontrol>
+                                        <uicontrol>Voice Prompts</uicontrol>
+                                        <uicontrol>System Prompt</uicontrol>
+                                    </menucascade> to download online prompts.</note>
+                            </p></li>
+                        <li><uicontrol>Mobile Number</uicontrol>: Extension user can receive the PBX
+                            notifications or forwarded calls on this mobile number.</li>
+                    </ul></info>
+            </step>
+            <step importance="optional">
+                <cmd>Click <uicontrol>Presence</uicontrol>, <uicontrol>Features</uicontrol>,
+                        <uicontrol>Advanced</uicontrol>, or <uicontrol>Call Permission</uicontrol>
+                    tab to configure <xref href="sip-extension-settings.dita#sip-extension-settings"
+                        >other
+                    settings</xref><?oxy_comment_start author="carol" timestamp="20190909T112937+0800" comment="链接到SIP extension settings" flag="done"?>.<?oxy_comment_end?></cmd>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+    <related-links>
+        <link href="register-a-sip-extension.dita#topic_gdw_mr4_y3b"/>
+        <link href="steps_to_auto_provision_phones.dita#task_b3f_hnq_5cb"/>
+    </related-links>
+</task>

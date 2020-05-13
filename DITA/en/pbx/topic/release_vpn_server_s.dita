@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_vxc_3gn_jdb">
+  <title>VPN Server</title>
+  <shortdesc>Release notes for VPN Server on Yeastar S-Series VoIP PBX.</shortdesc>
+  <body>
+    <section id="section_prx_g4w_clb">
+      <title>Version 1.0.19</title>
+      <p><ph conref="v30.13.0.30.dita#v30.13.0.b/date"/></p>
+      
+      
+    </section>
+    <ul id="ul_k3h_jrh_jlb">
+      <li>Fixed the issue of <uicontrol>Static Routes</uicontrol>: After the PBX or the
+          <uicontrol>VPN Server</uicontrol> restarted, the manually added static routes of OpenVPN
+        would be lost.</li>
+    </ul>
+    
+    
+    <section>
+      <title>Version 1.0.17</title>
+      <p>Released Date: May 14, 2019</p>
+      <p>
+        <ul id="ul_bjn_kf5_4hb">
+          <li>Updated Russian and Italian web interface.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_rs5_pmp_kfb">
+      <title>Version 1.0.16</title>
+      <p>Released Date: October 18, 2018</p>
+      <p>
+        <ul id="ul_k4d_rmp_kfb">
+          <li>Optimized the message prompt of port conflicts.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_p5z_nmj_pdb">
+      <title>Version 1.0.14</title>
+      <p>Released Date: April 8, 2018</p>
+      <p>
+        <ul id="ul_b43_rmj_pdb">
+          <li>Compatible with S-Series VoIP PBX v30.7.0.27.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_hcr_rmj_pdb"><title>Version 1.0.13</title>Released Date: July 13, 2017<p>
+        <ul id="ul_npm_5mj_pdb">
+          <li>Added support for German Web interface.</li>
+          <li>Updated Italian Web interface.</li>
+        </ul>
+      </p></section>
+    <section id="section_gbq_5mj_pdb">
+      <title>Version 1.0.10</title>
+      <p>Released Date: March 30, 2017</p>
+      <p>
+        <ul id="ul_zz2_xmj_pdb">
+          <li>Added support for assigning IP addresses for VPN clients.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_wvd_ymj_pdb">
+      <title>Version 1.0.7</title>
+      <p>Released Date: March 30, 2017</p>
+      <p>
+        <ul id="ul_nk2_1nj_pdb">
+          <li>Added support for assigning IP addresses for VPN clients.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_brn_1nj_pdb"><title>Version 1.0.6</title>Released Date: January 4, 2017<p>
+        <ul id="ul_bkp_cnj_pdb">
+          <li>Added support for Portugues and Serbia web interface languages.</li>
+          <li>Updated English, Chinese Simplified and Spanish web interface languages.</li>
+        </ul>
+      </p></section>
+  </body>
+</topic>

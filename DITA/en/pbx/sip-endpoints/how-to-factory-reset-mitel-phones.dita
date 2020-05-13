@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="how-to-factory-reset-mitel-phones">
+    <title>How to Factory Reset Mitel Phones</title>
+    <shortdesc>This guide takes Mitel 6867i running firmware 4.1.0.148 as an example.</shortdesc>
+    <body>
+        <p>
+            <ol id="ol_u31_3tm_xhb">
+                <li>Find the phone IP address. <p>Press the <uicontrol>Options</uicontrol> key
+                            <image href="../Images/Mtel-opitons-key.png" id="image_p43_v32_b3b"
+                            width="20"/> when the phone is idle, press the
+                            <uicontrol>Select</uicontrol> soft key to enter
+                            <uicontrol>Status</uicontrol>.</p></li>
+                <li>Log in the phone web interface with your username and password. <ul
+                        id="ul_gyj_sp3_yhb">
+                        <li>username: admin</li>
+                        <li>password: 22222</li>
+                    </ul></li>
+                <li>Go to <menucascade>
+                        <uicontrol>Reset</uicontrol>
+                        <uicontrol> Restore To Factory Defaults</uicontrol>
+                    </menucascade>, click <b>Restore</b>.<p><image
+                            href="../Images/autop-mtel-factory-reset.png" width="650"
+                            id="image_p3w_xzt_xhb"/></p></li>
+                <li>Click <uicontrol>OK</uicontrol> to reset the phone.<p>The phone will be reset
+                        successfully after startup.</p><p>
+                        <note type="caution">Do not power off during phone startup. </note>
+                    </p></li>
+            </ol>
+        </p>
+    </body>
+</topic>

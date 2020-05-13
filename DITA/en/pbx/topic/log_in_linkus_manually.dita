@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_hdl_kvr_2cb">
+    <title>Log in Linkus Manually</title>
+    <taskbody>
+        <context id="context_vqw_sfm_qcb">The Linkus users can log in Linkus manually. You need to
+            send the Linkus server information and account information to the users. After the users
+            get the information, they can follow the steps below to log in Linkus.</context>
+        <steps id="steps_cjf_svr_2cb">
+            <step>
+                <cmd>Launch Linkus mobile client.</cmd>
+            </step>
+            <step>
+                <cmd>Tap <uicontrol>Server Settings</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>On the <uicontrol>Configure Server Address</uicontrol> page, enter the external
+                    server address and port.</cmd>
+                <info>
+                    <ul>
+                        <li><uicontrol>External Hostname/IP</uicontrol>: Enter the external
+                            hostname/IP of the PBX.</li>
+                        <li><uicontrol>External Port</uicontrol>: Enter the external port of Linkus
+                            server.</li>
+                    </ul>
+                </info>
+                <info><image href="../Images/admin/log_in_linkus_manually.jpg" height="450"
+                        id="image_nsz_t5x_sdb"/></info>
+            </step>
+            <step>
+                <cmd>Tap <uicontrol>OK</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>On the Linkus login page, enter the username and password.</cmd>
+                <info>
+                    <ul>
+                        <li><uicontrol>Username</uicontrol>: Enter the email address of the
+                            extension user.</li>
+                        <li><uicontrol>Password</uicontrol>: Enter the <uicontrol>User
+                                Password</uicontrol> of the extension.</li>
+                    </ul>
+                </info>
+            </step>
+            <step>
+                <cmd>Tap <uicontrol>Login</uicontrol>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

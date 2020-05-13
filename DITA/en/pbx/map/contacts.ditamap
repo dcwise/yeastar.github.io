@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>Contacts</title>
+    <topicref href="../topic/contacts-overview.dita"/>
+    <topicref href="../topic/manage-company-contacts.dita"/>
+    <topicref href="../topic/manage-personal-contacts.dita"/>
+    <topicref href="../topic/configure-company-contacts-permissions-for-users.dita"/>
+    <topicref href="../topic/identify-callers-from-contacts.dita"/>
+    <topicref href="../topic/query-and-use-contacts-on-ip-phone.dita"/>
+    <topicref href="../topic/contacts-faq.dita"/>
+</map>

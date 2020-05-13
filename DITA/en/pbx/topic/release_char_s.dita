@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_yn1_pgn_jdb">
+  <title>char utile h+ Integration</title>
+  <shortdesc>Release notes for char utile h+ Integration on Yeastar S-Series VoIP PBX.</shortdesc>
+  <body>
+    <section id="section_ps2_44v_hlb">
+      <title>Version 1.1.4</title>
+      <p><ph conref="v30.13.0.30.dita#v30.13.0.b/date"/></p>
+      <p>
+        <ul id="ul_e22_p4v_hlb">
+          <li conref="v30.13.0.30.dita#v30.13.0.b/italian-language"/>
+        </ul>
+      </p>
+    </section>
+    <section id="section_y5v_ntj_yjb">
+      <title>Version 1.1.0</title>
+      <p>Released Date: December 12, 2019</p>
+      <p>
+        <ul id="ul_mn5_stj_yjb">
+          <li>Optimized the mechanism of applying configuration changes to improve the system
+              stability.<ul id="ul_gqc_5tj_yjb">
+              <li>You don't need to click <uicontrol>Apply</uicontrol> button to reload Asterisk if
+                you save unchanged configurations.</li>
+              <li>If no <uicontrol>Apply</uicontrol> button appears after you save some specific
+                configuration changes, then the configurations can be saved without reloading
+                Asterisk.</li>
+            </ul></li>
+        </ul>
+      </p>
+    </section>
+    <section>
+      <title>Version 1.0.21</title>
+      <p>Released Date: October 22, 2019</p>
+      <p>
+        <ul id="ul_bct_3yt_jjb">
+          <li>
+            <p>Changed the alarm codes of <uicontrol>Char App</uicontrol>.</p>
+            <p>The alarm codes on newly installed <uicontrol>Char App</uicontrol> are as
+              follows:</p>
+            <p>
+              <ul id="ul_slp_lkt_jjb">
+                <li>The default code of <uicontrol>Set Alarm</uicontrol> is: *95.</li>
+                <li>The default code of <uicontrol>Delete Alarm</uicontrol> is: *96.</li>
+                <li>The default code of <uicontrol>Delete All Alarm</uicontrol> is: *97.</li>
+                <li>The default code of <uicontrol>Check Alarm</uicontrol> is: *98.</li>
+              </ul>
+            </p>
+          </li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_q3v_np3_n2b">
+      <title>Version 1.0.18</title>
+      <p>Released Date: July 20, 2018</p>
+      <p>
+        <ul id="ul_dds_pp3_n2b">
+          <li>Added support for calling 1-digit number.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_lnd_dnj_pdb">
+      <title>Version 1.0.17</title>
+      <p>Released Date: March 20, 2018</p>
+      <p>
+        <ul id="ul_xg1_hnj_pdb">
+          <li>Optimized web interface.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_zns_hnj_pdb">
+      <title>Version 1.0.16</title>
+      <p>Released Date: December 27, 2017</p>
+      <p>
+        <ul id="ul_dbp_jnj_pdb">
+          <li>Improved the security of shared files on cHar: the administrator can add permitted IP
+            addresses to access the shared files.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_czs_jnj_pdb">
+      <title>Version 1.0.14</title>
+      <p>Released Date: July 13, 2017</p>
+      <p>
+        <ul id="ul_nyt_lnj_pdb">
+          <li>Added support for German Web interface.</li>
+          <li>Updated Italian Web interface.</li>
+        </ul>
+      </p>
+    </section>
+  </body>
+</topic>

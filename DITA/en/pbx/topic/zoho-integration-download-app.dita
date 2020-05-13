@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_sn4_njm_ggb">
+    <title> Install Zoho Integration App</title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Log in PBX web interface, go to <uicontrol>App Center</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Find the <uicontrol>Zoho Integration</uicontrol>, click
+                        <uicontrol>install</uicontrol>.</cmd>
+                <info><image href="../Images/zoho/zoho-installation.png" width="650"
+                        id="image_gn1_ljq_rjb"/></info>
+                <stepresult>Refresh the page after the installation is complete, click the main
+                    menu, the Zoho Integration icon appears.<p><image
+                            href="../Images/zoho/zoho-installation-finish.png" width="650"
+                            id="image_rmn_3kq_rjb"/></p></stepresult>
+            </step>
+        </steps>
+    </taskbody>
+</task>
+

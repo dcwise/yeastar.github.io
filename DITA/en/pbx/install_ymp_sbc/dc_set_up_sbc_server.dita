@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_kgn_tnr_ndb">
+    <title>Step2. Set up SBC Server</title>
+    <shortdesc></shortdesc>
+    <taskbody>
+        <context>
+            <p>The SBC server has two ethernet interfaces</p>
+            <example>
+                <p><b>Example</b></p>
+                <ul id="ul_dwn_24r_ndb">
+                    <li>External interface eth0 in Vlan1 subnet at: 10.0.0.4</li>
+                    <li>Internal interface eth1 in Vlan2 subnet at: 10.0.1.9</li>
+                </ul>
+            </example>
+            <p></p>
+        </context>
+        <steps>
+            <step>
+                <cmd></cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

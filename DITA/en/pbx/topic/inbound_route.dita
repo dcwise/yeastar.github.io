@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_gqc_fdr_5cb">
+ <title>Inbound Route Overview</title>
+ <shortdesc>An inbound route is used to tell the PBX where to route inbound calls based on the
+  caller's phone number or the DID number. Inbound routes are often used in conjunction with time
+  conditions and an IVR.</shortdesc>
+ <conbody>
+  <section id="section_zk2_tdr_5cb"><title>DID routing &amp; Caller ID routing</title><ph
+    keyref="product_name"/> allows two specific types of inbound routing: DID Routing and Caller ID
+   Routing. You can set both DID routing and Caller ID routing for an inbound route, or set one of
+   the routing types. <p>If you don't specify  DID numbers and Caller ID numbers on the inbound
+    route, the inbound route will match and route all inbound calls to a pre-configured internal
+    destination on the PBX. </p><p>Inbound routes can send inbound calls to destinations as
+     follows:<ul id="ul_if5_z4s_2jb">
+     <li>Hang up </li>
+    </ul></p><p>
+    <ul id="ul_ety_s4s_2jb">
+     <li>Extension</li>
+     <li>Extension Range</li>
+     <li>Voicemail</li>
+     <li>IVR</li>
+     <li>Ring Group</li>
+     <li>Queue</li>
+     <li>Conference</li>
+     <li>DISA</li>
+     <li>Callback </li>
+     <li>Outbound Route</li>
+     <li>Fax to Email</li>
+    </ul>
+   </p></section>
+ </conbody>
+</concept>

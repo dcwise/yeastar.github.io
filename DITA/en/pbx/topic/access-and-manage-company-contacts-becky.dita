@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="manage-company-contacts">
+    <?oxy_comment_start author="Becky" timestamp="20200214T112917+0800" comment="参考：
+https://oneview.mitel.com/s/article/Company-Phonebook?r=5&amp;ui-force-components-controllers-recordGlobalValueProvider.RecordGvp.getRecord=1"?>
+    <title>Access and Manage Company Contacts</title><?oxy_comment_end?>
+    <shortdesc>The authorized users and administrator can access and manage Company Contacts, such
+        as add, edit, delete, import &amp; export Company Contacts.</shortdesc>
+    <body>
+        <note>If the authorized users use Linkus, the users can also access and manage Company
+            Contacts on Linkus Mobile Client.</note>
+        <section id="section_tmm_g32_skb">
+            <title>Access Company Contacts</title>
+            <p>Only the authorized users and administrator can access Company Contacts.<ol>
+                    <li>Log in PBX web interface by your admin account and password.<note>For
+                            authorized users, log in PBX web interface by the following
+                                credentials.<ul id="ul_mmq_m2j_tkb">
+                                <li><uicontrol>Username</uicontrol>: Extension number.</li>
+                                <li><uicontrol>Password</uicontrol>: Login password for PBX web
+                                    interface.</li>
+                            </ul></note></li>
+                    <li>Go to <uicontrol>Contacts</uicontrol> (<image
+                            href="../Images/admin/contacts-main-menu.png" width="20"
+                            id="image_ihv_zfj_tkb"/>), and click <uicontrol>Company
+                            Contacts</uicontrol> tab to view the list of Company Contacts.</li>
+                </ol></p>
+        </section>
+        <section id="section_a5q_n32_skb">
+            <title>Manage Company Contacts</title>
+            <p>Only the authorized users and admin can manage Company Contacts.</p>
+            <p>Go to <uicontrol>Contacts</uicontrol> (<image
+                    href="../Images/admin/contacts-main-menu.png" width="20" id="image_s3n_xqb_tkb"
+                />), and click <uicontrol>Company Contacts</uicontrol> tab to manage contacts.</p>
+            <dl>
+                <dlentry>
+                    <dt>Add a contact</dt>
+                    <dd>
+                        <ol id="ol_fzc_gj1_tkb">
+                            <li>Click <uicontrol>Add</uicontrol> to add a Company Contact, and edit
+                                the contact's information.</li>
+                            <li>Click <uicontrol>Save</uicontrol> and
+                                        <uicontrol>Apply</uicontrol>.<note><uicontrol>First
+                                        Name</uicontrol>, <uicontrol>Last Name</uicontrol>, and at
+                                    least one phone number are required. </note></li>
+                        </ol>
+                    </dd>
+                </dlentry>
+            </dl>
+            <dl>
+                <dlentry>
+                    <dt>Edit a contact</dt>
+                    <dd>
+                        <ol id="ol_ur3_l31_tkb">
+                            <li>Click <image href="../Images/admin/edit-contact.png" width="20"
+                                    id="image_ggp_lzd_skb"/> beside the desired contact to edit the
+                                contact's information.</li>
+                            <li>Click <uicontrol>Save</uicontrol>.</li>
+                        </ol>
+                    </dd>
+                </dlentry>
+            </dl>
+            <dl>
+                <dlentry>
+                    <dt>Delete a contact</dt>
+                    <dd>
+                        <p>
+                            <ol id="ol_zd2_n31_tkb">
+                                <li>Click <image href="../Images/admin/delete-ldap-phonebook.png"
+                                        id="image_a1q_4zd_skb"/> beside the desired contact to
+                                    delete. </li>
+                                <li>Click <uicontrol>Save</uicontrol>.</li>
+                            </ol>
+                        </p>
+                    </dd>
+                </dlentry>
+            </dl>
+            <dl>
+                <dlentry>
+                    <dt>Bulk delete contacts</dt>
+                    <dd>
+                        <ol id="ol_cnm_2j1_tkb">
+                            <li>Select the checkbox of the desired contacts, and click
+                                    <uicontrol>Delete</uicontrol> to bulk delete contacts.</li>
+                            <li>Click <uicontrol>Save</uicontrol>.</li>
+                        </ol>
+                    </dd>
+                </dlentry>
+            </dl>
+            <dl>
+                <dlentry>
+                    <dt>Import a contact</dt>
+                    <dd>You can import Company Contacts entries from a CSV file as follows. </dd>
+                    <dd>
+                        <ol id="ol_bmv_ckf_skb">
+                            <li>Download the <codeph>.csv</codeph> template to bulk edit contacts'
+                                    information.<note product="cloudpbx k2">
+                                    <ul id="ul_e11_ggj_tkb">
+                                        <li><uicontrol>First Name</uicontrol>, <uicontrol>Last
+                                                Name</uicontrol>, and at least one phone number are
+                                            required. </li>
+                                    </ul>
+                                    <ul id="ul_r5q_fgj_tkb">
+                                        <li product="cloudpbx">You can add 1000 Company Contacts at
+                                            most.</li>
+                                        <li product="k2">You can add 20000 Company Contacts at
+                                            most.</li>
+                                    </ul>
+                                </note><note product="s-series">
+                                    <ul id="ul_jzy_kj1_tkb">
+                                        <li><uicontrol>First Name</uicontrol>, <uicontrol>Last
+                                                Name</uicontrol>, and at least one phone number are
+                                            required. </li>
+                                        <li>Refer to the following table to see how many Company
+                                            Contacts you can add.<table frame="all"
+                                                id="table_kzy_kj1_tkb">
+                                                <tgroup cols="2" align="left">
+                                                  <colspec colname="c1" colnum="1" colwidth="1*"
+                                                  colsep="1" rowsep="1"/>
+                                                  <colspec colname="c2" colnum="2" colwidth="2.97*"
+                                                  colsep="1" rowsep="1"/>
+                                                  <thead>
+                                                  <row>
+                                                  <entry>Model</entry>
+                                                  <entry>The maximum number of Company
+                                                  Contacts</entry>
+                                                  </row>
+                                                  </thead>
+                                                  <tbody>
+                                                  <row>
+                                                  <entry>Yeastar S50</entry>
+                                                  <entry>500</entry>
+                                                  </row>
+                                                  <row>
+                                                  <entry>Yeastar S100</entry>
+                                                  <entry>1000</entry>
+                                                  </row>
+                                                  <row>
+                                                  <entry>Yeastar S300</entry>
+                                                  <entry>3000</entry>
+                                                  </row>
+                                                  </tbody>
+                                                </tgroup>
+                                            </table></li>
+                                    </ul>
+                                </note></li>
+                            <li>Go to <uicontrol>Contacts</uicontrol>, and click
+                                    <uicontrol>Import</uicontrol>. </li>
+                            <li>Click <uicontrol>Browse</uicontrol> to upload the
+                                    <codeph>.csv</codeph> file that you edit.</li>
+                            <li>Click <uicontrol>Import</uicontrol>.</li>
+                        </ol>
+                    </dd>
+                </dlentry>
+            </dl>
+            <dl>
+                <dlentry>
+                    <dt>Export a contact</dt>
+                    <dd>Click <uicontrol>Export</uicontrol> to save all contacts' information as a
+                            <filepath>.csv</filepath> file.</dd>
+                </dlentry>
+            </dl>
+        </section>
+    </body>
+</topic>

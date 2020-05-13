@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_hj4_lqt_c2b">
+    <title>Add a Room</title>
+    <shortdesc>After you set up the room types, you can add rooms according to the room
+        types.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/06/11"/>
+            <!--Carol-->
+            <revised modified="2018/06/11"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Hotel</uicontrol>
+                        <uicontrol>Room Management</uicontrol>
+                        <uicontrol>Room Setup</uicontrol>
+                    </menucascade> , click <uicontrol>Add</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Set the room settings.</cmd>
+                <info><image href="../Images/admin/hotel_add_a_room.png" id="image_p4q_stt_c2b"
+                    /></info>
+                <choices>
+                    <choice><uicontrol>Room Name</uicontrol>: Set a name for the room.</choice>
+                    <choice><uicontrol>Extension</uicontrol>: Choose the phone number of the
+                        room.</choice>
+                    <choice><uicontrol>Room Type</uicontrol>: Choose the room type of the
+                        room.</choice>
+                </choices>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

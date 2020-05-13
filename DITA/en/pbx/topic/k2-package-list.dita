@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="Package_List">
+    <title>Package List</title>
+    <shortdesc>Package list of <ph keyref="product_name"/>.</shortdesc>
+    <conbody>
+        <p>After opening the package, please check that if the accessories are complete. If you have
+            any missing, please contact your dealer.</p>
+        <p>
+            <table frame="none" rowsep="0" colsep="0" id="table_qcx_qww_whb">
+                <tgroup cols="4" align="center">
+                    <colspec colname="c1" colnum="1" colwidth="1*" colsep="0" rowsep="0"/>
+                    <colspec colname="c2" colnum="2" colwidth="1*" colsep="0" rowsep="0" align="center"/>
+                    <colspec colname="c3" colnum="3" colwidth="1*"/>
+                    <colspec colname="c4" colnum="4" colwidth="1*" align="center" colsep="0" rowsep="0"/>
+                    <tbody>
+                        <row rowsep="0" valign="bottom">
+                            <entry colsep="0" rowsep="0" valign="bottom"><image placement="inline" href="../Images/admin/k2-PBX.png" id="image_frf_2xw_whb" width="150"/><p>PBX×1</p></entry>
+                            <entry valign="bottom"><image placement="inline"
+                                    href="../Images/admin/k2-power-line.png" width="150"
+                                    id="image_brr_gbx_whb"/><p>Power Cable×1</p></entry>
+                            <entry valign="bottom"><image placement="inline" href="../Images/admin/k2-static-rail-kit.png" width="150" id="image_mvj_kbx_whb"/><p>Static Rail×2</p></entry>
+                            <entry align="center" valign="bottom" colsep="0" rowsep="0">
+                                <p><image placement="inline" href="../Images/admin/k2-chaassis-rail.png" width="150" id="image_i13_ngx_whb"/></p>
+                                <p>Chassis rails×2</p>
+                            </entry>
+                        </row>
+                        <row rowsep="0" valign="bottom">
+                            <entry valign="bottom"><image placement="inline" href="../Images/admin/k2-velcro-straps.png" width="150" id="image_ocf_pbx_whb"/><p>Velcro Straps (×2</p></entry>
+                            <entry align="center" valign="bottom"><image placement="inline" href="../Images/admin/k2-certificate.png" width="80" id="image_mzp_ybx_whb"/><p>Certificate×1</p></entry>
+                            <entry valign="bottom"><image placement="inline" href="../Images/admin/k2-quick-start-gudie.png" width="100" id="image_ltr_sbx_whb"/><p>Quick Start Guide×1</p></entry>
+                            <entry valign="bottom"><image placement="inline" href="../Images/admin/k2-warranty-card.png" width="100" id="image_mrx_tbx_whb"/><p>Warranty Card×1</p></entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+        </p>
+    </conbody>
+</concept>

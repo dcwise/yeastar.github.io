@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_rzp_dmx_zcb">
+  <title>Get to Know the PBX Desktop</title>
+  <shortdesc>After you log in the PBX web interface, you will see the desktop. From here, you can
+    manage your extension settings and check the voicemail messages, CDR, and
+    recordings.</shortdesc>
+  <prolog>
+    <critdates>
+      <!--Carol-->
+      <revised modified="2018/08/21"/>
+      <!--Carol-->
+      <revised modified="2018/08/22"/>
+    </critdates>
+  </prolog>
+  <body>
+    <p> </p>
+    <p><image href="../Images/user/user_desktop.png" id="image_rm3_npx_zcb" width="700"/></p>
+    <p>
+      <ul id="ul_smc_tpx_zcb">
+        <li><b>Main Menu</b>: View all your applications. <p>
+            <note type="tip">To add application shortcut to the desktop, right click the application
+              icon.</note>
+          </p></li>
+        <li><b>Open Application</b>:<p>
+            <ul id="ul_zf5_ztx_zcb">
+              <li>Click the icon of an application to show or hide its window on the desktop.</li>
+              <li>Right click the icon to  minimize, maximize,  restore, or close the application
+                window.</li>
+            </ul>
+          </p></li>
+        <li><b>Help</b>: Click to visit our online help documents.</li>
+        <li><b>Options</b>: Click to change the web language or log out.</li>
+      </ul>
+    </p>
+  </body>
+</topic>

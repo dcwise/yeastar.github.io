@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_sfw_pvm_sjb">
+    <title>Zoho Integration Introduction</title>
+    <shortdesc>
+        <?oxy_comment_start author="carol" timestamp="20191125T085020+0800" comment="简单说明是什么" flag="done"?>Zoho
+        Integration App is designed to facilitate quick integration between your <ph
+            keyref="product_name"/> and multiple Zoho applications<?oxy_comment_end?>.</shortdesc>
+    <conbody>
+        <section id="section_mhg_4ws_5jb">
+            <title>Supported Zoho applications and features</title>
+            <p>The Zoho Integration App is applicable to the following Zoho applications:</p>
+            <p>
+                <ul id="ul_yf3_xqm_vjb">
+                    <li><?oxy_comment_start author="carol" timestamp="20191125T085032+0800" comment="提供必要概念" flag="done"?><b>Zoho
+                            One</b>: An all-in-one suite of Zoho applications designed to meet
+                        user‘s every business need.</li>
+                    <li><b>Zoho CRM</b>: Online CRM customer relationship management system and
+                        sales management software.</li>
+                    <li><b>Zoho Mail</b>: Enterprise cloud mailbox designed for corporate users
+                        especially.</li>
+                    <li><b>Zoho Recruit</b>: Online intelligent recruitment management software for
+                        corporate human
+                        resources<?oxy_comment_start author="Sunmy" timestamp="20200316T091802+0800" comment="删除 zoho desk
+Zoho Desk: Cloud-based online customer service management system."?>.<?oxy_comment_end?></li><?oxy_comment_end?>
+                </ul>
+            </p>
+        </section>
+        <section>
+            <p>The Zoho Integration App enables the following features and benefits in the above
+                Zoho applications:</p>
+            <p>
+                <ul id="ul_ukb_rrm_vjb">
+                    <li><?oxy_comment_start author="carol" timestamp="20191125T090059+0800" comment="解释功能" flag="done"?><b>One-for-all
+                            Integration</b>: Integrate multiple Zoho applications at one time in one
+                        simple integration process.</li>
+                    <li><b>Click-to-call</b>: Click on any phone number to make an outbound call
+                        right straight from Zoho.</li>
+                    <li><b>Call Pop-ups</b>: Automatically display the caller information as a
+                        screen pop-up upon an inbound call.</li>
+                    <li><b>Call Journals</b>: All call details will be automatically logged in Zoho
+                        to help you keep track of every conversation.</li>
+                </ul><?oxy_comment_end?>
+            </p>
+            <p>
+                <?oxy_comment_start author="carol" timestamp="20191125T090112+0800" comment="提供具体支持的信息" flag="done"?>
+                <table frame="all" rowsep="1" colsep="1" id="table_x5y_xrm_vjb">
+                    <tgroup cols="5">
+                        <colspec colname="c1" colnum="1" colwidth="1.06*"/>
+                        <colspec colname="c2" colnum="2" colwidth="1*" align="center"/>
+                        <colspec colname="c3" colnum="3" colwidth="1.13*" align="center"/>
+                        <colspec colname="c4" colnum="4" colwidth="1.12*" align="center"/>
+                        <colspec colname="c5" colnum="5" colwidth="1.13*" align="center"/>
+                        <thead>
+                            <row>
+                                <entry/>
+                                <entry>Zoho One</entry>
+                                <entry>Zoho CRM</entry>
+                                <entry>Zoho Mail</entry>
+                                <entry>Zoho Recruit</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>One for all Integration</entry>
+                                <entry align="center" valign="middle">√</entry>
+                                <entry align="center" valign="middle">√</entry>
+                                <entry align="center" valign="middle">√</entry>
+                                <entry align="center" valign="middle">√</entry>
+                            </row>
+                            <row>
+                                <entry>Click to Call</entry>
+                                <entry align="center" valign="middle">√</entry>
+                                <entry align="center" valign="middle">√</entry>
+                                <entry align="center" valign="middle">√</entry>
+                                <entry align="center" valign="middle">√</entry>
+                            </row>
+                            <row>
+                                <entry>Call Pop-ups</entry>
+                                <entry align="center" valign="middle">√</entry>
+                                <entry align="center" valign="middle">√</entry>
+                                <entry align="center" valign="middle">√</entry>
+                                <entry align="center" valign="middle">√</entry>
+                            </row>
+                            <row>
+                                <entry>Call Journals</entry>
+                                <entry align="center" valign="middle">√</entry>
+                                <entry align="center" valign="middle">√</entry>
+                                <entry align="center" valign="middle">- </entry>
+                                <entry align="center" valign="middle">-</entry>
+                            </row>
+                        </tbody>
+                    </tgroup><?oxy_comment_end?>
+                </table>
+            </p>
+        </section>
+        <section id="section_fvh_zn4_tjb">
+            <title>Terminologies</title>
+            <ul id="ul_zn2_q44_tjb">
+                <li><b>Zoho super administrator</b>: The master that can access all the data and
+                    manage all the users in Zoho applications, such as CEO, senior executive, senior
+                    administrator, etc.</li>
+                <li><b>Zoho User</b>: The corporate staff who can only access specific data based on
+                    assigned permissions (roles), such as sales manager, FAE, etc.</li>
+                <li><b>PBX Extension</b>: The extension number
+                    <?oxy_comment_start author="carol" timestamp="20191122T151220+0800" comment="概念理解错误。分配给员工的分机，跟zoho 没有关系。
+
+基本语法错误：register the extension, their phone, 按照你原来的表达都要加s" flag="done"?>to
+                    each staff. <?oxy_comment_end?>The staffs can register the extension on a phone
+                    and use the extension to make calls.</li>
+                <li>
+                    <p><b>Zoho Account</b>: The companies or departments within a company with which
+                        you have business dealings. Single or multiple contacts can be associated to
+                        an account.</p>
+                </li>
+                <li>
+                    <p><b>Zoho Contact</b>: The people in an organization with whom your company has
+                        business communications in pursuit of business opportunities.</p>
+                </li>
+            </ul>
+        </section>
+    </conbody>
+</concept>

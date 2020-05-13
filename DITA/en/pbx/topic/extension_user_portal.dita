@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_qmv_vm5_ydb">
+    <title>Extension User Portal</title>
+    <shortdesc>By default, extension users can log in the PBX web interface by their own extension
+        accounts. All the extension users can check their own voicemail, one-touch recordings, and
+        configure the extension settings.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/05/28"/>
+            <!--Carol-->
+            <revised modified="2018/09/06"/>
+            <!--Carol-->
+            <revised modified="2018/09/12"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <p>The PBX administrator can grant more permissions for an extension user according to
+            his/her role and duty.</p>
+        <p>For example, a supervisor will have permission to check the CDR and recordings of all
+            extension users.</p>
+        <p>
+            <note>For more information of the PBX functions, refer to our <ph product="cloudpbx">
+                    <xref href="https://help.yeastar.com/en/cloudpbx/topic/admin_guide.html"
+                        format="html" scope="external">Admin Guide</xref></ph><xref
+                    href="https://help.yeastar.com/en/s-series/topic/admin_guide.html" format="html"
+                    scope="external" product="s-series">Admin Guide</xref><ph product="OEM">Admin
+                    Guide</ph>. </note>
+        </p>
+    </conbody>
+</concept>

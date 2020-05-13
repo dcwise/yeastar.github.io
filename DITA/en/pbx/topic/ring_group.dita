@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_gmw_dvm_tdb">
+    <title>Ring Group</title>
+    <shortdesc>A ring group helps you to ring a group of extensions in a variety of ring strategies.
+        For example, you could define all the technical support guys' extensions in a ring group and
+        ring the support guys one by one.</shortdesc>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/10/24"/>
+        </critdates>
+    </prolog>
+</concept>

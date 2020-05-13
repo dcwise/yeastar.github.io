@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="task_pwp_fwm_2fb">
+    <title>Linkus Email</title>
+    <shortdesc>The PBX has a default Linkus email template. You can edit the template according to
+        your needs.</shortdesc>
+    <body>
+        <section conref="linkus-qsg-step3.dita#task_syw_2xz_ghb/send-linkus-email"
+            id="section_wby_yyn_hhb"/>
+        <section id="section_ndm_zyn_hhb">
+            <title>Linkus email template</title>
+            <p>The PBX has a default Linkus email template. You can edit the template according to
+                your needs.</p>
+            <p>
+                <ol id="ol_fgq_d14_hhb">
+                    <li product="cloudpbx">Go to Linkus App, click <b>Welcome Email</b>.</li>
+                    <li product="cloudpbx">On the <uicontrol>Send Welocme Email</uicontrol> page,
+                        click <uicontrol>Edit Template</uicontrol>.</li>
+                    <li product="k2 s-series">Go to <menucascade>
+                            <uicontrol>Linkus</uicontrol>
+                            <uicontrol>Linkus Client Settings</uicontrol>
+                        </menucascade>, click <b>Edit Template</b>.</li>
+                    <li>On the <b>Edit Email Template</b> page, edit the email subject and email contents.<p>
+                            <note>The variable names are unchangeable. You can adjust the placement
+                                of the variables according to your contents.</note>
+                        </p><p><image href="../Images/admin/linkus_email_template.png"
+                                id="image_mxp_ftz_ljb" width="650"/></p></li>
+                    <li>Click <b>Save</b> and <b>Apply</b>.</li>
+                </ol>
+            </p>
+        </section>
+    </body>
+</topic>

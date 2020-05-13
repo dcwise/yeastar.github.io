@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_g5s_fvh_vkb">
+    <title>Provision Gigaset N670/N870 IP PRO with <ph keyref="product_name"/></title>
+    <shortdesc>This guide is based on Gigaset N870 v2.26.0 and <ph keyref="product_name"/>
+        v30.13.0.15.</shortdesc>
+    <body>
+        <section id="section_ljx_4yh_vkb">
+            <title>Supported phone models</title>
+            <p>This guide is applicable to the following devices:</p>
+            <p>
+                <table frame="all" rowsep="1" colsep="1" id="table_kr4_hmf_xkb">
+                    <tgroup cols="2">
+                        <colspec colname="c1" colnum="1" colwidth="1*"/>
+                        <colspec colname="c2" colnum="2" colwidth="1.47*"/>
+                        <thead>
+                            <row>
+                                <entry>Gigaset DECT</entry>
+                                <entry>Gigaset handsets</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>
+                                    <ul>
+                                        <li>Gigaset N670 IP PRO </li>
+                                        <li>Gigaset N870 IP PRO </li>
+                                    </ul>
+                                </entry>
+                                <entry>
+                                    <ul>
+                                        <li>Gigaset Maxwell C</li>
+                                        <li>Gigaset S650H Pro</li>
+                                        <li>Gigaset SL750H Pro</li>
+                                        <li>Gigaset R650H Pro</li>
+                                    </ul>
+                                </entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+        <section id="section_and_tzm_vkb">
+            <title>Requirements</title>
+            <p>
+                <dl>
+                    <dlentry>
+                        <dt>Firmware</dt>
+                        <dd>Update PBX firmware, Auto Provisioning App, and DECT firmware to the
+                            required version.</dd>
+                        <dd>
+                            <ul id="ul_tt2_lnf_xkb">
+                                <li><b>PBX firmware</b>: 30.13.0.15 or later</li>
+                                <li><b>Auto Provisioning App</b>: 1.8.24 or later</li>
+                                <li><b>DECT firmware</b>: 2.26.0 or later<p><xref
+                                            href="https://teamwork.gigaset.com/gigawiki/pages/viewpage.action?pageId=702251506"
+                                            format="html" scope="external">Download the latest
+                                            firmware from Gigaset website</xref>.</p></li>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                </dl>
+                <dl>
+                    <dlentry>
+                        <dt>DHCP Server</dt>
+                        <dd>Make sure that a DHCP server is enabled in your local network to assign
+                            an IP address to the DECT.</dd>
+                    </dlentry>
+                </dl>
+                <dl>
+                    <dlentry>
+                        <dt>Network</dt>
+                        <dd>
+                            <ul id="ul_cbg_51n_vkb">
+                                <li>Connect the DECT and PBX in the same network segment, or the
+                                    DECT could not be detected by PBX.</li>
+                                <li>Auto Provisioning cannot work in VPN network.</li>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                </dl>
+            </p>
+        </section>
+        <section id="section_dx3_tzh_vkb">
+            <title>Step1. Enable "All in One - dynamic IP" mode</title>
+            <p>On delivery all N870 IP PRO devices are configured as base station. </p>
+            <p>Before provisioning the N870 IP PRO, you need to change the device role to "All in
+                One - dynamic IP" mode. For more Information of the device role, see Gigaset <xref
+                    href="https://teamwork.gigaset.com/gigawiki/display/GPPPO/FAQ+Nx70+-+Installation"
+                    format="html" scope="external">FAQ Nx70 - Installation</xref>.</p>
+            <p>
+                <ol id="ol_xtz_5k3_vkb">
+                    <li>Press the device button for at least 10 seconds until all LEDs switch
+                        off.</li>
+                    <li>Release the button.</li>
+                    <li>Short press the device button to switch the device role. <p>
+                            <note>The IP address will be assigned by a DHCP server in your network.
+                            </note>
+                        </p><p>When both LEDs become blue, the device role is "All in One - dynamic
+                            IP".</p><image
+                            href="../Images/sip-endpoints/gigaset/gigaset-n870-led-status.png"
+                            id="image_frq_pm3_vkb" width="100"/></li>
+                    <li>Press the device button for 5 seconds to confirm the new role.<p>The device
+                            is rebooted and reset.</p><p>
+                            <note>The device takes few minutes to reboot.</note>
+                        </p></li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_cgn_vm3_vkb">
+            <title>Step2. Provision the DECT </title>
+            <p>The easiest way to provision the Gigaset N870 is using Plug &amp; Play method (PnP).
+                Alternatively, you can configure the phone using DHCP option 66. For more
+                information, see <xref href="../topic/auto_provision_phones_by_dhcp.dita"/>.</p>
+            <p>
+                <ol>
+                    <li>Connect the DECT to the same network of the PBX. <p>A PnP request is sent to
+                            the PBX.</p></li>
+                    <li>Log in the PBX web page, go to <menucascade>
+                            <uicontrol>Auto Provisioning</uicontrol>
+                            <uicontrol>Device List</uicontrol>
+                        </menucascade>.<p>The detected devices are displayed. If the DECT is not
+                            displayed, click <uicontrol>Scan</uicontrol> to scan devices in the
+                            local network.</p><p><image
+                                href="../Images/sip-endpoints/gigaset/device-list-gigaset-n870.png"
+                                id="image_kfd_12n_vkb" width="650"/></p></li>
+                    <li>Find the DECT, and click <image href="../Images/ui_icons/edit.png"
+                            width="20" id="image_jvn_r2n_vkb"/>.</li>
+                    <li>Select the handsets, and assign extensions to them.<p><image
+                                href="../Images/sip-endpoints/gigaset/gigaset-n870-accounts.png" width="650"
+                                id="image_ehy_wfn_vkb"/></p></li>
+                    <li importance="optional">Configure other settings according to your needs.</li>
+                    <li>Click <uicontrol>Save</uicontrol>.<p>A pop-up dialog prompts you whether to
+                            reboot the phone immediately or not.</p><p><image
+                                href="../Images/sip-endpoints/autop-reboot-now.png"
+                                id="image_sng_lgn_vkb"/></p></li>
+                    <li>Click <uicontrol>Yes</uicontrol>.<p>
+                            <note>
+                                <ul id="ul_efz_myc_ykb">
+                                    <li>For the first time that you provision the DECT, you must
+                                        reboot the DECT to take effect.</li>
+                                    <li>For updating the Auto Provision settings, the configurations
+                                        take effect after you save the changes. You don't need to
+                                        reboot the DECT.</li>
+                                </ul>
+                            </note>
+                        </p></li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_glt_f3n_vkb">
+            <title>Step3. Register handsets</title>
+            <p>
+                <ol id="ol_ipy_j3n_vkb">
+                    <li>Log in the DECT web interface, go to <menucascade>
+                            <uicontrol>SETTINGS</uicontrol>
+                            <uicontrol>Mobile Devices</uicontrol>
+                            <uicontrol>Administration</uicontrol>
+                        </menucascade>.<p><image
+                            href="../Images/sip-endpoints/gigaset/gigaset-mobile-devices.png"
+                                id="image_as1_djn_vkb" width="650"/></p></li>
+                    <li>Click <image href="../Images/sip-endpoints/gigaset/gigaset-edit-icon.png"
+                            id="image_r1c_mjn_vkb" width="20"/> to edit a handset.</li>
+                    <li>Set <uicontrol>RegStatus</uicontrol> to <uicontrol>To register</uicontrol>,
+                        and scroll down the page, click <uicontrol>Register
+                                Now</uicontrol>.<p><image
+                                href="../Images/sip-endpoints/gigaset/gigaset-n870-regstatus.png"
+                                id="image_e32_wkn_vkb" width="650"/></p></li>
+                    <li>Go to <menucascade>
+                            <uicontrol>Mobile Devices</uicontrol>
+                            <uicontrol>Registration Centre</uicontrol>
+                        </menucascade>, click <uicontrol>Start Now</uicontrol>.<p><image
+                                href="../Images/sip-endpoints/gigaset/gigaset-n87-start-now.png" width="650"
+                                id="image_drm_tmn_vkb"/></p></li>
+                    <li>Confirm registration on handsets.<p>
+                            <ol id="ol_z4q_34n_vkb">
+                                <li>On the handset, press <menucascade>
+                                        <uicontrol>Menu</uicontrol>
+                                        <uicontrol>Settings</uicontrol>
+                                        <uicontrol>Registration</uicontrol>
+                                        <uicontrol>Register Handset</uicontrol>
+                                        <uicontrol>OK</uicontrol>
+                                    </menucascade>.</li>
+                                <li>Enter the PIN code (default 0000).</li>
+                                <li>Press <uicontrol>OK</uicontrol>.</li>
+                            </ol>
+                        </p></li>
+                </ol>
+            </p>
+        </section>
+        <section>
+            <title>Gigaset N670/N870 Provisioning options</title>
+            <p>In addition to provision the DECT <uicontrol>Account</uicontrol>, you can provision
+                other settings to match your needs.</p>
+            <sectiondiv>
+                <sectiondiv>
+                    <ul id="ul_igz_l1v_xhb">
+                        <li><uicontrol>Features</uicontrol><p>Configure Call Waiting, Voicemail and
+                                Central phonebook.</p></li>
+                    </ul>
+                </sectiondiv>
+            </sectiondiv>
+            <sectiondiv>
+                <ul id="ul_krq_m1v_xhb">
+                    <li><uicontrol>Preference</uicontrol><p>Configure the phone preference settings,
+                            such as Language, Time Zone, Admin Password, etc.</p></li>
+                </ul>
+                <sectiondiv>
+                    <ul id="ul_jhb_41v_xhb">
+                        <li><uicontrol>Codec</uicontrol><p>Select and configure the preferred codec
+                                list for the phone.</p><p>
+                                <note>Select at least one codec that is the same with the PBX codec,
+                                    or audio problem will occur during a call.</note>
+                            </p></li>
+                        <li><uicontrol>LDAP</uicontrol><p>Configure LDAP phonebooks and assign LDAP
+                                phonebooks to specific handsets on <uicontrol>Account</uicontrol>
+                                page. </p><p>For more information, see <xref
+                                    href="../topic/use-ldap-on-gigaset.dita#use-ldap-on-gigaset/access-ldap-server"
+                                    >Descriptions of LDAP Settings </xref> on Gigaset DECT.</p></li>
+                    </ul>
+                </sectiondiv>
+            </sectiondiv>
+        </section>
+    </body>
+</topic>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_kry_rrh_ycb">
+    <title>Register Fanvil Phone with <ph keyref="product_name"/></title>
+    <shortdesc>This guide is based on Fanvil C400 and <ph keyref="product_name"/>
+        <ph product="cloudpbx">v81.8.0.7</ph><ph product="s-series">v30.8.0.14</ph>.</shortdesc>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2019/01/22"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <context>This guide is applicable to the following phones:<p>
+                <ul id="ul_wg5_kth_ycb">
+                    <li>Fanvil C Series: C01, C58, C58P, C400, C600</li>
+                    <li>Fanvil X3 Series: X3, X3P, X3SP</li>
+                    <li>Fanvil X5 Series: X5,X5G</li>
+                </ul>
+            </p><p conref="register_htek.dita#task_n3s_q1c_5cb/different_phone_web"/></context>
+        <steps id="steps_l2y_lth_ycb">
+            <step>
+                <cmd>Log in the web page of the phone.</cmd>
+                <choices>
+                    <choice><uicontrol>User</uicontrol>: admin</choice>
+                    <choice><uicontrol>Password</uicontrol>: admin</choice>
+                </choices>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Line</uicontrol> and choose a line to configure.</cmd>
+                <info><image href="../Images/admin/register_fanvil1.png" width="650"
+                        id="image_kgy_tth_ycb"/></info>
+                <choices>
+                    <choice><uicontrol>User Name</uicontrol>: Fill in the extension number.</choice>
+                    <choice><uicontrol>Display Name</uicontrol>: Set the name you want to appear on
+                        other phone's screen when calling other phones. </choice>
+                    <choice><uicontrol>Authentication Name</uicontrol>: Fill in the extension's
+                            <uicontrol>Registration Name</uicontrol>.</choice>
+                    <choice><uicontrol>Authentication Password</uicontrol>: Fill in the extension's
+                            <uicontrol>Registration Password</uicontrol>.</choice>
+                    <choice><uicontrol>Active</uicontrol>: Check</choice>
+                    <choice><uicontrol>SIP Proxy Server Address</uicontrol>: Fill in the domain<ph
+                            product="s-series"> or IP address</ph> of your PBX.</choice>
+                    <choice><uicontrol>SIP Proxy Server Port</uicontrol>: Fill in the SIP port of
+                        your PBX. </choice>
+                </choices>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Apply</uicontrol>.</cmd>
+                <info>If the extension is registered, the <uicontrol>Line Status</uicontrol> will
+                    show "Registered".</info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

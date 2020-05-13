@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_ddc_vbt_2fb">
+    <title>WebRTC Trunk</title>
+    <shortdesc>A WebRTC (Web Real-Time Communication) trunk is used to set up WebRTC Click to Call.
+        After you create a WebRTC trunk on the <ph keyref="product_name"/>, a link will be generated
+        automatically.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/09/19"/>
+            <!--Carol-->
+            <revised modified="2018/10/08"/>
+        </critdates>
+    </prolog>
+    <conbody/>
+</concept>

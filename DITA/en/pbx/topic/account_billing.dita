@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_nqd_sl5_c2b">
+    <title>Account Billing</title>
+    <shortdesc>The Billing App supports to charge cost from an account. This solution is typically
+        for a shared extension, which is shared by multiple users. Everyone can use the extension to
+        make outgoing calls with their personal account credentials.</shortdesc>
+    <conbody>
+        <p>Go to <menucascade>
+                <uicontrol>Billing</uicontrol>
+                <uicontrol>Account</uicontrol>
+            </menucascade> to configure the billing settings for the accounts.</p>
+        <p>At the top of the page, you can see the total top-up and total balance, also the
+            extension and account top-up and balance.</p>
+        <p><image href="../Images/admin/billing_account.png" id="image_tfd_x45_c2b" width="700"
+            /></p>
+        <p>
+            <ul id="ul_vgv_cp5_c2b">
+                <li><image href="../Images/ui_icons/locked.png" width="20" id="image_jls_dp5_c2b"/>:
+                    Locked. The account is locked, and could not be used to dial out make outbound
+                    calls.</li>
+                <li><image href="../Images/admin/billing_available.png" width="20"
+                        id="image_ncf_fp5_c2b"/>: Available. The account is available to be
+                    used.</li>
+            </ul>
+        </p>
+        <section id="section_szz_xt5_c2b">
+            <title>Add an Account</title>
+            <p>
+                <ol id="ol_igv_d55_c2b">
+                    <li>Go to <menucascade>
+                            <uicontrol>Billing</uicontrol>
+                            <uicontrol>Account</uicontrol>
+                        </menucascade>, click <uicontrol>Add</uicontrol>.</li>
+                    <li>Configure the account settings.<p><image
+                                href="../Images/admin/billing_add_account.png"
+                                id="image_e32_355_c2b"/></p><p>
+                            <ul id="ul_fys_355_c2b">
+                                <li><uicontrol>Account</uicontrol>: You can fill in letters or
+                                    numbers.</li>
+                                <li><uicontrol>Credit Limit</uicontrol>: Set the credit limit.<ul
+                                        id="ul_pfb_455_c2b">
+                                        <li>If the pay type is prepaid, when the account balance is
+                                            less than the <b>Credit Limit</b>, it will not be able
+                                            to dial out external numbers.</li>
+                                        <li>If the pay type is postpaid, the <b>Credit Limit</b> is
+                                            the total amount the account can owe.</li>
+                                    </ul></li>
+                                <li><uicontrol>Status</uicontrol>: Set the account status.<ul
+                                        id="ul_jmx_p55_c2b">
+                                        <li><uicontrol>Available</uicontrol>: the account is
+                                            available to use.</li>
+                                        <li><uicontrol>Locked</uicontrol>: the account could not be
+                                            used to dial out make outbound calls.</li>
+                                    </ul></li>
+                                <li><uicontrol>Pay Type</uicontrol>: Choose the pay type.<ul
+                                        id="ul_rj1_s55_c2b">
+                                        <li><uicontrol>Prepaid</uicontrol></li>
+                                        <li><uicontrol>Postpaid</uicontrol></li>
+                                    </ul></li>
+                                <li><uicontrol>Password</uicontrol>: Set a password for the account.
+                                    When users will call out by the account, they need to enter the password.<p>
+                                        <note>The password for accounts cannot be the same.</note>
+                                    </p></li>
+                            </ul>
+                        </p></li>
+                    <li>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_kg4_lr5_c2b">
+            <title>Top up an Account</title>
+            <p>
+                <ol id="ol_ukj_cv5_c2b">
+                    <li>Go to <menucascade>
+                            <uicontrol>Billing</uicontrol>
+                            <uicontrol>Account</uicontrol>
+                        </menucascade>, choose an account, click <image
+                            href="../Images/ui_icons/top_up.png" id="image_yxt_qs5_c2b"/>.</li>
+                    <li>Enter the top up amount, and click <uicontrol>Top Up</uicontrol>.<p><image
+                                href="../Images/admin/billing_top_up_account.png"
+                                id="image_mgb_ws5_c2b"/></p></li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_qr2_xs5_c2b">
+            <title>Top up Bulk Accounts</title>
+            <p>
+                <ol id="ol_vkj_cv5_c2b">
+                    <li>Go to <menucascade>
+                            <uicontrol>Billing</uicontrol>
+                            <uicontrol>Account</uicontrol>
+                        </menucascade>, select the checkbox of the desired accounts, and click
+                            <uicontrol>Top Up</uicontrol>.</li>
+                    <?oxy_comment_start author="Becky" timestamp="20191126T165155+0800" comment="新增"?>
+                    <li>In the <uicontrol>Top Up</uicontrol> field, enter top up amount.</li><?oxy_comment_end?>
+                    <li>Select the accounts that you want to top up to the
+                            <uicontrol>Selected</uicontrol> box, click <uicontrol>Top
+                                Up</uicontrol>.<p><image
+                                href="../Images/admin/billing_top_up_bulk_account.png"
+                                id="image_isb_nv5_c2b" width="650"/></p></li>
+                </ol>
+            </p>
+        </section>
+    </conbody>
+</concept>

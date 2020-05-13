@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="system-route-entries">
+    <title>System Route Entries</title>
+    <shortdesc>The system route entries are added to the routing table after you configure the PBX
+        network interface.</shortdesc>
+    <body>
+        <p>In the routing table, you can check the original rule after configuring the network
+                settings:<ul id="ul_hg5_5hn_mgb">
+                <li>A <uicontrol>default</uicontrol> route entry. The packets that are destined to
+                    any unknown destinations will be routed to the default gateway.</li>
+                <li>A route entry destined for the IP address range of LAN or WAN interface. The
+                    packets that are destined to the IP address range can be sent directly to the
+                    destination.</li>
+                <li>A route entry for broadcast packets. The broadcast packets can be sent directly
+                    to the destination.</li>
+            </ul></p>
+        <p>
+            <note>You cannot delete the default route entries from the routing table.</note>
+        </p>
+        <p>For example, you enable both LAN interface and WAN interface, and set LAN as the default
+            network interface. </p>
+        <p><image href="../Images/admin/dual_network.jpg" width="650" id="image_vms_bpg_mgb"/></p>
+        <p>You can go to <menucascade>
+                <uicontrol>Settings</uicontrol>
+                <uicontrol>System</uicontrol>
+                <uicontrol>Network</uicontrol>
+                <uicontrol>Static Routes</uicontrol>
+                <uicontrol>Routing Table</uicontrol>
+            </menucascade> to check the routing entries.</p>
+        <p>The following route entries are automatically added to the routing table of the PBX.</p>
+        <p><image href="../Images/admin/default-routing-table.jpg" width="650"
+                id="image_jnk_r4g_mgb"/></p>
+        <p>
+            <ul id="ul_ggk_mpg_mgb">
+                <li>The route entry with the <uicontrol>Destination</uicontrol> of
+                        <codeph>default</codeph> is the default route entry. By default, all the
+                    packets will be routed to the gateway <codeph>192.168.6.1</codeph> through LAN
+                    interface.</li>
+                <li>The route entry with the <uicontrol>Destination</uicontrol> of
+                        <codeph>10.10.1.0/255.255.255.0</codeph> is the route entry that is
+                    automatically added for WAN interface. <p>The packets for the network
+                            <codeph>10.10.1.0/255.255.255.0</codeph> don't need to be routed. The
+                        network is locally connected, so packets can be sent directly to the
+                        destination.</p></li>
+                <li>The route entry with the <uicontrol>Destination</uicontrol> of
+                        <codeph>192.168.6.0/255.255.255.0</codeph> is the route entry that is
+                    automatically added for LAN interface. <p>The packets for the network
+                            <codeph>192.168.6.0/255.255.255.0</codeph> don't need to be routed. The
+                        network is locally connected, so packets can be sent directly to the
+                        destination.</p></li>
+                <li>The route entry with the <uicontrol>Destination</uicontrol> of
+                        <codeph>224.0.0.0</codeph> is the route entry that is automatically added
+                    for broadcast packets. The broadcast packets can be sent directly to the
+                    destination.</li>
+            </ul>
+        </p>
+    </body>
+</topic>
+<?oxy_options track_changes="on"?>

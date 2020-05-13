@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_w2l_g22_xdb">
+    <title>Fax to Email</title>
+    <shortdesc>Fax to Email feature helps you receive faxes on your smart phone or computer. Yeastar
+            <ph product="s-series">S-Series VoIP PBX</ph><ph product="cloudpbx">Cloud PBX</ph> will
+        convert the received fax and forward it to an extension user's email.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/05/22"/>
+            <!--Carol-->
+            <revised modified="2018/05/22"/>
+            <!--Carol-->
+            <revised modified="2018/05/28"/>
+            <!--Carol-->
+            <revised modified="2018/06/05"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <section id="section_apx_t22_xdb">
+            <title>Steps to Configure 'Fax to Email'</title>
+            <p>
+                <ol id="ol_wjr_cf2_xdb">
+                    <li>Configure the PBX <uicontrol>System Email</uicontrol>.<p>Make sure the PBX
+                            system email works, or the PBX cannot forward the received faxes to an
+                            extension user's email.</p></li>
+                    <li>Check if the extension user's email is configured.<p><image
+                                href="../Images/admin/extension_email.png" id="image_lxw_qf2_xdb"
+                                width="650"/></p></li>
+                    <li>Configure the destination of your inbound route.<p>
+                            <ul id="ul_cz1_wf2_xdb">
+                                <li>If you want to<xref
+                                        href="receive_fax_via_fax_detection.dita#task_yzr_n12_xdb">
+                                        receive fax via fax detection</xref>, set the
+                                        <uicontrol>Destination</uicontrol> to <codeph>IVR</codeph>,
+                                    and set <uicontrol>Fax Destination</uicontrol> to <codeph>Fax to
+                                        Email</codeph>.<p><image
+                                            href="../Images/admin/fax_to_email_fax_detection.png"
+                                            id="image_qhg_sg2_xdb" width="650"/></p></li>
+                                <li>If you want to <xref
+                                        href="receive_fax_through_a_dedicated_trunk.dita#task_y3m_kxd_xdb"
+                                        >receive fax through a private trunk</xref>, set the
+                                        <uicontrol>Destination</uicontrol> to <codeph>Fax to
+                                        Email</codeph>.<p><image
+                                            href="../Images/admin/fax_to_email_destination.png"
+                                            id="image_rkf_tg2_xdb" width="650"/></p></li>
+                            </ul>
+                        </p></li>
+                </ol>
+            </p>
+        </section>
+    </conbody>
+</concept>

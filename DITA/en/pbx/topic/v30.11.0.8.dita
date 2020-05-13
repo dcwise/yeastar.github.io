@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_rwv_4q1_y3b">
+    <title>Version 30.11.0.8</title>
+    <abstract>Released Date: September 2, 2019</abstract>
+    <body>
+        <section id="section_iff_yq1_y3b">
+            <title>BUG FIXES</title>
+            <p>
+                <ul id="ul_wv4_1r1_y3b">
+                    <li>Fixed the system issue： If <uicontrol>Multisite Interconnect</uicontrol> was
+                        enabled and the PBX was set as a Branch Office，the system would hang when an
+                        inbound call reached a queue.</li>
+                </ul>
+            </p>
+        </section>
+    </body>
+</topic>

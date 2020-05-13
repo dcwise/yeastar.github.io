@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="factory-reset-snom-phones">
+    <title>How to Factory Reset Snom Phones</title>
+    <shortdesc> This guide takes Snom D745 running firmware 8.9.3.80 as an example.</shortdesc>
+    <body>
+        <p>
+            <note>The following steps are applicable to snom D1, D3, 7, D7 and 8 Series. For other
+                phones, you can do a factory reset via <xref
+                    href="https://helpdesk.snom.com/support/solutions/articles/6000071238-how-to-reset-a-desktop-phone-to-the-factory-defaults-via-network-recovery"
+                    format="html" scope="external">network
+                recovery</xref><?oxy_comment_start author="carol" timestamp="20200225T160949+0800" comment="这个链接失效了"?>.<?oxy_comment_end?></note>
+        </p>
+        <p>
+            <ol id="ol_apc_jvn_13b">
+                <li>Press <uicontrol>* * # </uicontrol> keys on the keypad. </li>
+                <li>Press and Hold <varname>#</varname> key to reboot the phone.</li>
+                <li>Keep holding the <varname>#</varname> key until you see the <uicontrol>Rescue
+                        Mode</uicontrol>.</li>
+                <li>Press <uicontrol>1</uicontrol> key for a settings reset.</li>
+                <li>Press any key when prompted to reboot. <p>The phone will be reset successfully
+                        after startup.</p><p>
+                        <note type="caution">Do not power off during phone startup. </note>
+                    </p></li>
+            </ol>
+        </p>
+    </body>
+</topic>

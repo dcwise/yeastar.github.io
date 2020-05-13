@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_oqk_jbd_5db">
+    <title>Step4. Set PBX B as OpenVPN Client</title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol>System</uicontrol>
+                        <uicontrol>Network</uicontrol>
+                        <uicontrol>OpenVPN</uicontrol>
+                    </menucascade>, check the option <uicontrol>Enable OpenVPN</uicontrol>. </cmd>
+            </step>
+            <step>
+                <cmd>Set the <uicontrol>Type</uicontrol> as <codeph>Manual
+                    Configurations</codeph>.</cmd>
+            </step>
+            <step>
+                <cmd>Configure the OpenVPN client settings according to the server settings.</cmd>
+                <choices>
+                    <choice><uicontrol>Server address</uicontrol>: Enter the public IP address of
+                        the OpenVPN server.</choice>
+                    <choice><uicontrol>Server port</uicontrol>: Eenter the forwarded OpenVPN server
+                        port on the router.</choice>
+                    <choice><uicontrol>Protocol</uicontrol>: Choose the same protocol as the OpenVPN
+                        server.</choice>
+                    <choice><uicontrol>Device Mode</uicontrol>: Choose the same mode as the OpenVPN
+                        server.</choice>
+                    <choice><uicontrol>Encryption</uicontrol>: Choose the same type as the OpenVPN
+                        server.</choice>
+                    <choice><uicontrol>Username</uicontrol>: As the verification mode on the VPN
+                        server is set to <codeph>CA Cert + Client Cert</codeph>, leave this filed
+                        blank.</choice>
+                    <choice><uicontrol>Password</uicontrol>: As the verification mode on the VPN
+                        server is set to <codeph>CA Cert + Client Cert</codeph>, leave this filed
+                        blank.</choice>
+                </choices>
+            </step>
+            <step>
+                <cmd>Upload certificates and keys of the OpenVPN client.</cmd>
+                <choices id="choices_jyf_33c_5db">
+                    <choice><uicontrol>CA Cert</uicontrol>: Upload
+                        <filepath>ca.crt</filepath>.</choice>
+                    <choice><uicontrol>Cert</uicontrol>: The certificate for the PBX VPN client.
+                            <p>For example, if you named the certificate as "s20", the file should
+                            be <filepath>s20.crt</filepath>.</p></choice>
+                    <choice><uicontrol>Key</uicontrol>: The key for the PBX VPN client. <p>For
+                            example, if you named the key as "s20", the file should be
+                                <filepath>s20.key</filepath>.</p></choice>
+                    <choice><uicontrol>Enable SSL/TLS</uicontrol>: If you enable SSL/TLS on the
+                        OpenVPN server, upload <filepath>ta.key</filepath> file.</choice>
+                </choices>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Resource Monitor</uicontrol>
+                        <uicontrol>Network</uicontrol>
+                    </menucascade>, check the VPN client status and IP address.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

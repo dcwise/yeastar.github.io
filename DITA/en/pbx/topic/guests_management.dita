@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_emj_nxt_c2b">
+    <title>Guests Management</title>
+    <shortdesc>The Hotel system will keep the guest information if the guest has stayed in the hotel
+        before.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/06/11"/>
+            <!--Carol-->
+            <revised modified="2018/06/11"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <p>The guests that are in the <uicontrol>Guest List</uicontrol> are treated as the hotel's
+            old guests.</p>
+        <p>Go to <menucascade>
+                <uicontrol>Hotel</uicontrol>
+                <uicontrol>Room Operations</uicontrol>
+                <uicontrol>Guest List</uicontrol>
+            </menucascade> to manage the guests.</p>
+        <p><image href="../Images/admin/hotel_guest_list.png" width="650" id="image_fcm_dh5_c2b"
+            /></p>
+        <p>
+            <ul id="ul_bfy_fh5_c2b">
+                <li>Click <image href="../Images/ui_icons/edit.png" width="20"
+                        id="image_hhq_hh5_c2b"/> to edit the information of the guest.</li>
+                <li>Click <uicontrol>Add</uicontrol> to add a guest.</li>
+                <li>Click <image href="../Images/ui_icons/delete.png" width="20"
+                        id="image_b5y_jh5_c2b"/> to delete a guest.</li>
+                <li>Click <uicontrol>Import</uicontrol> to import a guest list<p>
+                        <note type="tip">You can export a guest file from PBX and use it as a sample
+                            to start with.</note>
+                    </p></li>
+            </ul>
+            <ul id="ul_t3p_nh5_c2b">
+                <li>Click <uicontrol>Export</uicontrol> to export the guests into a
+                        <codeph>csv</codeph> file</li>
+            </ul>
+        </p>
+    </conbody>
+</concept>

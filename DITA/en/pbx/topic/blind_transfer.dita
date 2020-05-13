@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_ivh_mkp_bdb">
+    <title>Blind Transfer</title>
+    <shortdesc>If you don't need to consult the new person who you want to transfer the call to, you
+        can perform a blind transfer. Your call will be ended after you transfer the
+        call.</shortdesc>
+    <taskbody>
+        <context>
+            <p><b>Scenario</b>: You (B) are talking with A, then transfer the call the C.</p>
+        </context>
+        <steps id="steps_dhg_skp_bdb">
+            <step>
+                <cmd>During the call with person A, dial *03 on your phone.</cmd>
+                <info>You will hear the prompt "transfer" and the dial tone.</info>
+            </step>
+            <step>
+                <cmd>Dial C's number and hang up.</cmd>
+                <info>C's phone is ringing. After C answers the call, the call between A and C is
+                    established.</info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

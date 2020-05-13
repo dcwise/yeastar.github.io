@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_m4f_rs1_5db">
+    <title>App Center</title>
+    <shortdesc> Yeastar <ph product="s-series">S-Series VoIP PBX</ph><ph product="cloudpbx">Cloud
+            PBX</ph> has integrated Yeastar-designed applications into packages that can be
+        installed on the PBX and managed with App Center.</shortdesc>
+</concept>

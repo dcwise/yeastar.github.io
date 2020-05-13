@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="task_yzj_5r1_mdb">
+    <title>LDAP Configurations on Yealink Phone</title>
+    <shortdesc>In this example,we demonstrate how to configure and use LDAP phonebook using a <ph
+            product="k2 s-series">Yealink T41 (version 36.80.0.95)</ph><ph product="cloudpbx"
+            >Yealink T42S (version 66.84.0.10)</ph>.</shortdesc>
+    <body>
+        <section id="section_zdd_rrc_r3b"><title>Configuration Example</title><p>The example
+                configurations are set according to default settings of <ph keyref="product_name"/>
+                LDAP server. You can use the following settings as a starting point and adjust the
+                filter and display attributes according to your needs.</p><p>Log in the Yealink
+                phone web interface, go to <menucascade>
+                    <uicontrol>Directory</uicontrol>
+                    <uicontrol>LDAP</uicontrol>
+                </menucascade> to configure LDAP.</p><p><image id="image_pz1_mym_s3b"
+                    href="../Images/admin/ldap_yealink.png" width="650" product="k2 s-series"
+                /></p><image id="image_thj_nym_s3b"
+                href="../Images/admin/yealink-ldap-cloud-pbx.png" width="650" product="cloudpbx"
+                /><table frame="all" id="table_h1n_yrh_r3b">
+                <tgroup cols="3">
+                    <colspec colname="c1" colnum="1" colwidth="1*" colsep="1" rowsep="1"/>
+                    <colspec colname="c2" colnum="2" colwidth="2.28*" colsep="1" rowsep="1"/>
+                    <colspec colname="c3" colnum="3" colwidth="1.88*" colsep="1" rowsep="1"/>
+                    <thead>
+                        <row>
+                            <entry>Setting</entry>
+                            <entry>Description</entry>
+                            <entry>Example</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row>
+                            <entry><ph product="k2 s-series">Enable LDAP</ph>
+                                <ph product="cloudpbx">LDAP Enable</ph></entry>
+                            <entry>Enable or disable LDAP on IP phone.</entry>
+                            <entry>Enabled</entry>
+                        </row>
+                        <row>
+                            <entry>LDAP Label</entry>
+                            <entry>Specify the name of phonebook.</entry>
+                            <entry>Telephone Directory</entry>
+                        </row>
+                        <row>
+                            <entry>LDAP Name Filter</entry>
+                            <entry>
+                                <p>Specify the name attributes for LDAP searching. </p>
+                                <p>
+                                    <ul id="ul_zpk_csh_r3b">
+                                        <li>The <codeph>*</codeph> symbol in the filter stands for
+                                            any character.</li>
+                                        <li>The <codeph>%</codeph> symbol in the filter stands for
+                                            the entering string used as the prefix of the filter
+                                            condition.</li>
+                                    </ul>
+                                </p>
+                            </entry>
+                            <entry>(|(cn=%)(sn=%)) </entry>
+                        </row>
+                        <row>
+                            <entry>LDAP Number Filter</entry>
+                            <entry>
+                                <p>Specify the number attributes for LDAP searching. </p>
+                                <p>
+                                    <ul id="ul_y1q_dsh_r3b">
+                                        <li>The <codeph>*</codeph> symbol in the filter stands for
+                                            any character.</li>
+                                        <li>The <codeph>%</codeph> symbol in the filter stands for
+                                            the entering string used as the prefix of the filter
+                                            condition.</li>
+                                    </ul>
+                                </p>
+                            </entry>
+                            <entry>(|(telephoneNumber=%)(homePhone=%)<p>(mobile=%))</p></entry>
+                        </row>
+                        <row>
+                            <entry>LDAP TLS Mode</entry>
+                            <entry>Specify the connection mode between the LDAP server and the IP phone.<p>
+                                    <ul id="ul_xwj_bwt_23b">
+                                        <li>LDAP</li>
+                                        <li>LDAP TLS Start</li>
+                                        <li>LDAPS<p>
+                                                <note>
+                                                  <p product="k2 s-series"><ph keyref="product_name"
+                                                  /> supports LDAP.</p>
+                                                  <p product="cloudpbx"><ph keyref="product_name"/>
+                                                  supports LDAP and LDAPS. We recommend using LDAPS
+                                                  protocol to connect IP phones and Cloud PBX for
+                                                  security.</p>
+                                                </note>
+                                            </p></li>
+                                    </ul>
+                                </p></entry>
+                            <entry><ph product="k2 s-series">LDAP</ph>
+                                <ph product="cloudpbx">LDAPS</ph></entry>
+                        </row>
+                        <row>
+                            <entry><ph product="cloudpbx">LDAP </ph>Server Address</entry>
+                            <entry>Enter the <ph product="k2 s-series">IP address of PBX</ph><ph
+                                    product="cloudpbx">domain name of Cloud PBX</ph>.</entry>
+                            <entry><ph product="k2 s-series">192.168.6.216</ph><ph
+                                    product="cloudpbx">ray.isbc.yeastarcloud.com</ph></entry>
+                        </row>
+                        <row>
+                            <entry>Port</entry>
+                            <entry>Enter the LDAP server port.</entry>
+                            <entry>
+                                <ph product="k2 s-series">389</ph><ph product="cloudpbx"
+                                >636</ph></entry>
+                        </row>
+                        <row>
+                            <entry><ph product="cloudpbx">LDAP </ph>Base</entry>
+                            <entry>Specify a starting point in the directory tree from which to
+                                    search.<ul id="ul_xzd_kgm_s3b">
+                                    <li>To search all contacts, enter the Base DN of LDAP
+                                        server.</li>
+                                    <li>To search part of contacts, enter the desired phonebook
+                                        node.</li>
+                                </ul></entry>
+                            <entry><ph product="k2 s-series">dc=pbx,dc=com</ph><ph
+                                    product="cloudpbx"
+                                >dc=ray,dc=isbc,dc=yeastarcloud,dc=com</ph></entry>
+                        </row>
+                        <row>
+                            <entry><ph product="cloudpbx">LDAP </ph>Username</entry>
+                            <entry>Enter the user name to log in the LDAP server.</entry>
+                            <entry><ph product="k2 s-series">cn=admin,dc=pbx,dc=com</ph><ph
+                                    product="cloudpbx"
+                                    >cn=admin,dc=ray,dc=isbc,dc=yeastarcloud,dc=com</ph></entry>
+                        </row>
+                        <row>
+                            <entry><ph product="cloudpbx">LDAP </ph>Password</entry>
+                            <entry>Enter the password to log in the LDAP server.</entry>
+                            <entry><ph product="k2 s-series">password</ph><ph product="cloudpbx"
+                                    >Yeastar134</ph></entry>
+                        </row>
+                        <row>
+                            <entry>Max Hits (1~1000)</entry>
+                            <entry>Specify the maximum number of search results to be returned by
+                                the LDAP server.</entry>
+                            <entry>50</entry>
+                        </row>
+                        <row>
+                            <entry>LDAP Name Attributes</entry>
+                            <entry>Specify the name attributes of each record to be returned by the
+                                LDAP server. The user can configure multiple name attributes
+                                separated by space. </entry>
+                            <entry>cn sn displayName</entry>
+                        </row>
+                        <row>
+                            <entry>LDAP Number Attributes</entry>
+                            <entry>Specify the number attributes of each record to be returned by
+                                the LDAP server. The user can configure multiple number attributes
+                                separated by space.</entry>
+                            <entry>telephoneNumber homePhone mobile mail departmentNumber</entry>
+                        </row>
+                        <row>
+                            <entry>LDAP Display Name</entry>
+                            <entry>Specify the display name of the contact record displayed on the
+                                LCD screen. This parameter value must start with <codeph>%</codeph>
+                                symbol.</entry>
+                            <entry>%cn </entry>
+                        </row>
+                        <row>
+                            <entry>Protocol</entry>
+                            <entry><ph keyref="product_name"/> LDAP server uses Version 3.</entry>
+                            <entry>3</entry>
+                        </row>
+                        <row>
+                            <entry>LDAP Lookup for Incoming Call</entry>
+                            <entry>Enable or disable IP phone to perform an LDAP search when
+                                receiving an incoming call.</entry>
+                            <entry>Enabled </entry>
+                        </row>
+                        <row>
+                            <entry>LDAP Lookup for Callout</entry>
+                            <entry>Enable or disable IP phone to perform an LDAP search for on-going
+                                calls.</entry>
+                            <entry>Enabled</entry>
+                        </row>
+                        <row>
+                            <entry>LDAP Sorting Results </entry>
+                            <entry>Enable or disable IP phone to sort out search results in
+                                alphabetical and numerical order.</entry>
+                            <entry>Enabled</entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table></section>
+        <section id="section_hm3_g5m_s3b">
+            <title>Search Contacts via Directory</title>
+            <p>
+                <ul id="ul_vdn_3vm_s3b">
+                    <li><b>Enable LDAP on Yealink Phone</b><p>
+                            <ol>
+                                <li>Log in the Yealink phone web interface, go to <menucascade>
+                                        <uicontrol>Directory</uicontrol>
+                                        <uicontrol>Setting</uicontrol>
+                                    </menucascade> to enable LDAP.<p><image
+                                            href="../Images/admin/enable_yealink_ldap_phonebook.png"
+                                            width="650" product="k2 s-series" id="image_fsc_pvm_s3b"
+                                            /><image
+                                            href="../Images/admin/enable-yealink-ldap-phonebook-cloud-pbx.png"
+                                            product="cloudpbx" id="image_z25_pvm_s3b"/></p></li>
+                                <li>Click <uicontrol>Confirm</uicontrol>.</li>
+                            </ol>
+                        </p></li>
+                </ul>
+            </p>
+        </section>
+        <ul id="ul_axj_rvm_s3b">
+            <li>
+                <p><b>Search LDAP Contacts</b></p>
+                <p>
+                    <ol>
+                        <li>Press <uicontrol>Directory</uicontrol> to access LDAP phonebook.</li>
+                        <li>Search the contact name or number using the keypad. The contacts whose
+                            name or phone number match the characters entered will appear on the LCD
+                                    screen.<p><image href="../Images/admin/yealink_ldap_1.png"
+                                    id="image_fnw_5vm_s3b"/></p></li>
+                        <li>Press the navigation key to select the desired contact.</li>
+                        <li>Press <uicontrol>Send</uicontrol> to call the contact.</li>
+                    </ol>
+                </p>
+            </li>
+        </ul>
+        <section id="section_rts_h5m_s3b">
+            <title>Search Contacts via LDAP Key</title>
+            <p>
+                <ul id="ul_bfh_xvm_s3b">
+                    <li><b>Set an LDAP Key on Yealink Phone</b><p>Set an LDAP key on the phone to
+                            quickly access the LDAP phonebook.</p><p>
+                            <ol id="ol_asg_yvm_s3b">
+                                <li>Log in the Yealink phone web interface, go to <menucascade>
+                                        <uicontrol>DSSKey</uicontrol>
+                                        <uicontrol>LineKey</uicontrol>
+                                    </menucascade>.</li>
+                                <li>Choose a DSS key, and select key type to
+                                        <uicontrol>LDAP</uicontrol>.<p><image
+                                            href="../Images/admin/set_yealink_ldap_key.png"
+                                            width="650" product="k2 s-series" id="image_nzw_yvm_s3b"
+                                        /></p><p><image
+                                            href="../Images/admin/set-yealink-ldap-key-cloud-pbx.png"
+                                            width="650" product="cloudpbx" id="image_ozw_yvm_s3b"
+                                        /></p></li>
+                                <li>Click <uicontrol>Confirm</uicontrol>.</li>
+                            </ol>
+                        </p></li>
+                </ul>
+            </p>
+            <ul id="ul_zj4_1wm_s3b">
+                <li><b>Search LDAP Contacts</b><p>
+                        <ol>
+                            <li>Press the LDAP key to access the LDAP phonebook.<itemgroup><image
+                                        href="../Images/admin/yealink_ldap_key.png"
+                                        id="image_v1b_hwm_s3b"/></itemgroup></li>
+                            <li>Search the contact name or number using the keypad. The contacts
+                                whose name or phone number match the characters entered will appear
+                                on the LCD screen.</li>
+                            <li>Press the navigation key to select the desired contact.</li>
+                            <li>Press <uicontrol>Send</uicontrol> to call the contact.</li>
+                        </ol>
+                    </p></li>
+            </ul>
+        </section>
+    </body>
+</topic>

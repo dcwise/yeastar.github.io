@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title></title>
+    <topicmeta>
+        <author type="creator">Carol</author>
+        <author type="contributor">Carol</author>
+        <critdates>
+            <created date="2018/11/26"/>
+            <!--Carol-->
+            <revised modified="2018/11/26"/>
+            <!--Carol-->
+            <revised modified="2018/12/12"/>
+            <!--Carol-->
+            <revised modified="2018/12/13"/>
+            <!--Carol-->
+            <revised modified="2018/12/18"/>
+        </critdates>
+    </topicmeta>
+    <topicref href="glossary/sip.dita" keys="sip"/>
+</map>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_ens_v5c_phb">
+    <title>Check the Generated OpenVPN Certificates and Keys</title>
+    <shortdesc>After generating certificates and keys on the Command Window, you can find the
+        certificates and keys in the <filepath>%ProgramFiles%\OpenVPN\easy-rsa</filepath> (e.g.
+            <filepath>D:\OpenVPN\easy-rsa</filepath>). </shortdesc>
+    <body>
+        <bodydiv>
+                        <table frame="all" rowsep="1" colsep="1" id="table_i4f_xzc_phb">
+                            <title>Explanation of generated certificates and keys</title>
+                            <tgroup cols="3">
+                    <colspec colname="c1" colnum="1" colwidth="160px"/>
+                    <colspec colname="newCol2" colnum="2" colwidth="210px"/>
+                    <colspec colname="c2" colnum="3" colwidth="318px"/>
+                    <thead>
+                        <row>
+                            <entry>File </entry>
+                            <entry>Needed by</entry>
+                            <entry>Purpose</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row>
+                            <entry align="center" valign="middle"
+                                ><filepath>ca.crt</filepath></entry>
+                            <entry align="center" valign="middle">server and clients</entry>
+                            <entry>Root CA certificate</entry>
+                        </row>
+                        <row>
+                            <entry align="center" valign="middle"
+                                ><filepath>ca.key</filepath></entry>
+                            <entry align="center" valign="middle">key signing machine only</entry>
+                            <entry>Root CA key</entry>
+                        </row>
+                        <row>
+                            <entry align="center" valign="middle"
+                                ><filepath>server.crt</filepath></entry>
+                            <entry align="center" valign="middle">server only</entry>
+                            <entry>Server Certificate</entry>
+                        </row>
+                        <row>
+                            <entry align="center" valign="middle"
+                                ><filepath>server.key</filepath></entry>
+                            <entry align="center" valign="middle">server only</entry>
+                            <entry>Server Key</entry>
+                        </row>
+                        <row>
+                            <entry align="center" valign="middle"
+                                ><filepath>client.crt</filepath></entry>
+                            <entry align="center" valign="middle">client only</entry>
+                            <entry valign="middle">Client certificate</entry>
+                        </row>
+                        <row>
+                            <entry align="center" valign="middle"
+                                ><filepath>client.key</filepath></entry>
+                            <entry align="center" valign="middle">client only</entry>
+                            <entry valign="middle">Client key</entry>
+                        </row>
+                        <row>
+                            <entry align="center" valign="middle"
+                                ><filepath>dh2048.pem</filepath></entry>
+                            <entry align="center" valign="middle">server only</entry>
+                            <entry>Diffie Hellman parameters.<p>
+                                    <note>If the <codeph>KEY_SIZE</codeph> in the
+                                            <filepath>vars.bat</filepath> file is set to
+                                            <codeph>1024</codeph>, the DH PEM file name is
+                                            <filepath>dh1024.pem</filepath>.</note>
+                                </p></entry>
+                        </row>
+                        <row>
+                            <entry align="center" valign="middle"
+                                ><filepath>ta.key</filepath></entry>
+                            <entry align="center" valign="middle">server and clients</entry>
+                            <entry>
+                                <p>TLS authentication key.</p>
+                                <p>
+                                    <note>If SSL/TLS is enabled on the OpenVPN server, you should
+                                        upload the <filepath>ta.key</filepath> to the OpenVPN server
+                                        and OpenVPN clients.</note>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+                        </table>
+        </bodydiv>
+    </body>
+</topic>

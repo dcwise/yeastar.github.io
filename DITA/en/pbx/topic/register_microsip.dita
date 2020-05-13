@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_z15_z1c_5cb">
+    <title>Register MicroSIP Soft Phone with <ph keyref="product_name"/></title>
+    <shortdesc>This guide is based on the MicroSIP v3.17.3  and <ph keyref="product_name"/>
+        <ph product="cloudpbx">v81.8.0.7</ph><ph product="s-series">v30.8.0.14</ph>.</shortdesc>
+    <taskbody>
+        <steps id="steps_oz4_kgn_ycb">
+            <step>
+                <cmd>Launch MicroSIP, go to <menucascade>
+                        <uicontrol>Menu</uicontrol>
+                        <uicontrol>Add Account</uicontrol>
+                    </menucascade>, configure the account settings.</cmd>
+                <info><image href="../Images/admin/register_microsip2.png" id="image_jzt_ghn_ycb"
+                    /></info>
+                <choices id="choices_zxw_3hn_ycb">
+                    <choice><uicontrol>Account Name</uicontrol>: Set the name that you want to
+                        appear on the soft phone screen.</choice>
+                    <choice><uicontrol>SIP Server</uicontrol>: Enter the domain<ph
+                            product="s-series"> or IP address</ph> of your PBX.</choice>
+                    <choice><uicontrol>User</uicontrol>: Enter the extension number.</choice>
+                    <choice><uicontrol>Domain</uicontrol>: Enter the domain<ph product="s-series">
+                            or IP address</ph> of your PBX.</choice>
+                    <choice><uicontrol>Password</uicontrol>: Enter the extension's
+                            <uicontrol>Registration Password</uicontrol>.</choice>
+                    <choice><uicontrol>Display Name</uicontrol>: Set the name you want to appear on
+                        the other phone's screen when calling out.</choice>
+                    <choice><uicontrol>Transport</uicontrol>: Choose the same protocol of the PBX.
+                        The default protocol on PBX is UDP.</choice>
+                </choices>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol>.</cmd>
+                <info>If the extension is registered, you can see the status shows as
+                            below.<p><image href="../Images/admin/register_microsip3.png"
+                            id="image_ln2_1jn_ycb"/></p></info>
+            </step>
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Menu</uicontrol>
+                        <uicontrol>Settings</uicontrol>
+                    </menucascade>, enable G729 and iLBC codecs.</cmd>
+                <info>
+                    <note>G729 and iLBC are the default enabled codecs on the PBX. To ensure the
+                        call is normal, you need to enable the G729 or iLBC codec on the soft
+                        phone.</note>
+                </info>
+                <info><image href="../Images/admin/register_microsip4.png" id="image_q2n_ckn_ycb"
+                    /></info>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

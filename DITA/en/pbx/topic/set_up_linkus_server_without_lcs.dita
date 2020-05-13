@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="concept_ddz_tny_5db">
+    <title>Set up Linkus Server without LCS</title>
+    <shortdesc>If you don't use Linkus server with LCS, you need to configure the Linkus server
+        according to your network environment.</shortdesc>
+    <body>
+        <p>
+            <note>
+                <p>
+                    <ul id="ul_fs4_xdn_hhb">
+                        <li>To configure Linkus server without LCS, you should have a good knowledge
+                            of your network environment.</li>
+                        <li>The <b>Linkus server without LCS</b> doesn't support Linkus Chat
+                            function.</li>
+                    </ul>
+                </p>
+            </note>
+        </p>
+        <p>This article introduces how to set up Linkus server with LCS according to different
+            network scenarios。</p>
+        <section id="section_e1j_wny_5db">
+            <title>PBX is behind a router</title>
+            <p>If the PBX is behind a router and the Linkus communicates with the PBX through the
+                network interface that is configured with a private IP, you need to forward the
+                Linkus relevant ports on your router and configure NAT on your PBX.</p>
+            <p><image href="../Images/admin/linkus_server_nat.png" id="image_jbq_t4y_5db"
+                    width="700"/></p>
+            <p>
+                <ol id="ol_gvj_kpy_5db">
+                    <li>Forward the Linkus relevant ports on your router. In this example, forward
+                        the following ports:<p>
+                            <table frame="all" rowsep="1" colsep="1" id="table_yq1_gqs_2fb">
+                                <tgroup cols="3">
+                                    <colspec colname="c1" colnum="1" colwidth="1*"/>
+                                    <colspec colname="c2" colnum="2" colwidth="1.03*"/>
+                                    <colspec colname="newCol3" colnum="3" colwidth="1.79*"/>
+                                    <thead>
+                                        <row>
+                                            <entry>Service Port</entry>
+                                            <entry>Local Port</entry>
+                                            <entry>External Port</entry>
+                                        </row>
+                                    </thead>
+                                    <tbody>
+                                        <row>
+                                            <entry>Linkus Service Port</entry>
+                                            <entry>TCP&amp;UDP 8111</entry>
+                                            <entry><?oxy_comment_start author="Becky" timestamp="20200220T150117+0800" comment="改"?>TCP&amp;UDP
+                                                8111<?oxy_comment_end?></entry>
+                                        </row>
+                                        <row>
+                                            <entry>SIP Registration Port</entry>
+                                            <entry>TCP&amp;UDP 5060</entry>
+                                            <entry>TCP&amp;UDP 6023</entry>
+                                        </row>
+                                        <row>
+                                            <entry>RTP Ports</entry>
+                                            <entry>UDP 10000-12000</entry>
+                                            <entry><?oxy_comment_start author="Becky" timestamp="20200220T150129+0800" comment="改"?>UDP
+                                                10000-12000<?oxy_comment_end?></entry>
+                                        </row>
+                                    </tbody>
+                                </tgroup>
+                            </table>
+                        </p></li>
+                    <li>To ensure successful communication through Linkus, configure the PBX NAT
+                            settings.<p>Go to <menucascade>
+                                <uicontrol>Settings</uicontrol>
+                                <uicontrol>PBX</uicontrol>
+                                <uicontrol>General</uicontrol>
+                                <uicontrol>SIP</uicontrol>
+                                <uicontrol>NAT</uicontrol>
+                            </menucascade> to configure NAT settings.</p><p><image
+                                href="../Images/admin/nat_settings.png" id="image_skc_wqy_5db"/></p><p>
+                            <ul id="ul_ufc_pqy_5db">
+                                <li><uicontrol>NAT Type</uicontrol>: Select a type according to your
+                                    network environment. In this example, select <uicontrol>External
+                                        IP Address</uicontrol>.</li>
+                                <li><uicontrol>External IP Address</uicontrol>: Enter the public IP
+                                    address, and enter the external SIP port. In this example, enter
+                                        <i>11.11.11.11:6023</i>.</li>
+                                <li><uicontrol>Local Network Identification</uicontrol>: Enter the
+                                    local IP address and subnet mask of the PBX. In this example,
+                                    enter <i>192.168.7.0/255.255.255.0</i>.</li>
+                                <li><uicontrol>NAT Mode</uicontrol>: Select
+                                        <uicontrol>Yes</uicontrol>.</li>
+                            </ul>
+                        </p></li>
+                    <li>Configure the Linkus Server according to your network circumstance.<p><image
+                                href="../Images/admin/linkus_server_setting_1.png"
+                                id="image_bdm_ksy_5db"/></p><p>
+                            <ul id="ul_dh3_nsy_5db">
+                                <li><uicontrol>Local Hostname/IP:Port</uicontrol>: Enter the local
+                                    IP address of the PBX and Linkus local port. In this example,
+                                    enter <i>192.168.7.112：8111</i>。</li>
+                                <li><uicontrol>External Hostname/IP:Port</uicontrol>: Enter the
+                                    public IP address or domain name of the PBX and the Linkus
+                                    external port. In this example, enter
+                                        <?oxy_comment_start author="Becky" timestamp="20200220T150212+0800" comment="改"?><i>11.11.11.11:8111</i>.<?oxy_comment_end?></li>
+                                <li><uicontrol>SIP Remote Registration Port</uicontrol>: Enter the
+                                    SIP external port. In this example, enter <i>6023</i>.</li>
+                            </ul>
+                        </p></li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_ucr_2ty_5db">
+            <title>PBX is connected to the ISP router directly</title>
+            <p>If the PBX is connected to a ISP router, you do NOT need to do port forwarding and
+                configure NAT on your PBX.</p>
+            <p><image href="../Images/admin/linkus_server2.png" width="700" id="image_vvx_lnl_ngb"
+                /></p>
+            <p>
+                <ol>
+                    <li>Configure the Linkus server according to your network circumstance.<p><image
+                                href="../Images/admin/linkus_server_setting_2.png"
+                                id="image_zyc_35y_5db"/></p><p>
+                            <ul id="ul_wpm_fvn_2fb">
+                                <li><uicontrol>Local Hostname/IP: Port</uicontrol>: Enter the IP
+                                    address of the PBX and the Linkus local port. In this example,
+                                    enter <i>11.11.11.11：8111</i>.</li>
+                                <li><uicontrol>External Hostname/IP:Port</uicontrol>: Leave it
+                                    blank.</li>
+                                <li><uicontrol>SIP Remote Registration Port</uicontrol>: Leave it
+                                    blank.</li>
+                            </ul>
+                        </p></li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_fpf_n5y_5db">
+            <title>PBX is connected to a VPN network</title>
+            <p>You do NOT need to do port forwarding on your router. </p>
+            <p><image href="../Images/admin/linkus_server-vpn.png" width="700"
+                    id="image_qn5_b4l_ngb"/></p>
+            <p>
+                <ol>
+                    <li>Configure the Linkus Server according to the VPN network
+                                information.<p><image
+                                href="../Images/admin/linkus_server_setting_3.png"
+                                id="image_tpf_t5y_5db"/></p><p>
+                            <ul id="ul_zvt_3vn_2fb">
+                                <li><uicontrol>Local Hostname/IP:Port</uicontrol>: Enter the VPN IP
+                                    address of the PBX and the Linkus local port. In this example,
+                                    enter <i>10.8.0.6:8111</i>.</li>
+                                <li><uicontrol>External Hostname/IP:Port</uicontrol>: Leave it
+                                    blank.</li>
+                                <li><uicontrol>SIP Remote Registration Port</uicontrol>: Leave it
+                                    blank.</li>
+                            </ul>
+                        </p></li>
+                </ol>
+            </p>
+        </section>
+    </body>
+</topic>

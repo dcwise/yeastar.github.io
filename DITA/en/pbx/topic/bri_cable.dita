@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_gkp_gl4_tdb">
+    <title>BRI Crossover Cable</title>
+    <shortdesc>Get a ISDN BRI crossover cable from the BRI carrier or make a ISDN BRI
+        cable.</shortdesc>
+    <conbody>
+        <p>You can take an Ethernet cable to make BRI crossover cable. Check the BRI cable pinouts
+            below.</p>
+        <p><image href="../Images/admin/bri_pinouts.png" id="image_wqf_zr4_tdb"/></p>
+    </conbody>
+</concept>

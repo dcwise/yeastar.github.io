@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="yeastar-click-to-call-overview">
+    <title>Yeastar Click to Call Overview</title>
+    <shortdesc><?oxy_comment_start author="carol" timestamp="20191210T141539+0800" comment="1. 描述不到位：
+不能讲chrome-based 我们只是做了chrome 的插件，也可以在其他浏览器做，只是目前没有做。
+2. 概念混淆
+CRM 
+web-based CRM
+web pages
+
+这几个概念得理清楚，写出来的句子才会正确
+
+3. 对象没有写清楚
+Linkus
+Linkus Desktop Client
+
+4. 简洁描述
+simple click 就好了，
+simple click of mouse 就多余了
+
+旧：
+Yeastar Click to Call is a Chrome-based extension, which allows you to place a call from web pages or CRMs via Linkus with a simple click of mouse.
+
+修改后：
+Yeastar Click to Call extension for Chrome allows you to place calls from web pages with Linkus Desktop Client."?>Yeastar
+        Click to Call <?oxy_insert_start author="carol" timestamp="20191210T141449+0800"?>extension
+        for Chrome<?oxy_comment_end?><?oxy_insert_end?><?oxy_delete author="carol" timestamp="20191210T141446+0800" content="is a Chrome-based extension,"?><?oxy_delete author="carol" timestamp="20191210T141609+0800" content=" which "?><?oxy_insert_start author="carol" timestamp="20191210T141616+0800"?>
+        <?oxy_insert_end?>allows you to place
+        <?oxy_insert_start author="carol" timestamp="20191210T141639+0800"?>calls<?oxy_insert_end?><?oxy_delete author="carol" timestamp="20191210T141637+0800" content="a call"?>
+        from <?oxy_insert_start author="carol" timestamp="20191210T141709+0800"?>web pages<?oxy_insert_end?><?oxy_delete author="carol" timestamp="20191210T141708+0800" content="web pages or CRMs"?>
+        <?oxy_insert_start author="carol" timestamp="20191210T142313+0800"?>with<?oxy_insert_end?><?oxy_delete author="carol" timestamp="20191210T142312+0800" content="via"?>
+        Linkus<?oxy_insert_start author="carol" timestamp="20191210T142331+0800"?> Desktop
+        Client<?oxy_insert_end?><?oxy_delete author="carol" timestamp="20191210T142325+0800" content=" with a simple click of mouse"?>.</shortdesc>
+    <conbody>
+        <section id="section_rxy_4ys_xjb">
+            <title><?oxy_comment_start author="carol" timestamp="20191210T113345+0800" comment="这个section 可以删掉，直接在short description 描述即可。
+"?>What<?oxy_comment_end?>
+                is Yeastar Click to Call? </title>
+            <p>Yeastar Click to Call is a free extension for Chrome that automatically identifies
+                phone numbers on web pages or CRMs, and turns detected phone numbers into clickable
+                links with an underline highlighted. With a simple click, you can place a call via
+                Linkus without the need to dial a phone number manually.</p>
+        </section>
+        <section id="section_a5v_tys_xjb">
+            <title><?oxy_comment_start author="carol" timestamp="20191210T113227+0800" comment="这部分不要展开描述，跟use click to call 重复了。
+具体操作在Use Click to Call 文章中详细讲就好。
+
+参考描述：
+After you install the Yeastar Click to Call extension, the extension identifies phone numbers on your web pages and add a link to each phone number. With a simple click, you can dial from Linkus Desktop Client."?>How<?oxy_comment_end?>
+                Yeastar Click to Call works?</title>
+            <p>Yeastar Click to Call strictly follows the steps below to work.</p>
+            <p>
+                <ol id="ol_s44_5ys_xjb">
+                    <li>Detect phone number. Yeastar Click to Call detects phone numbers in web
+                        pages or CRMs and turns detected phone numbers into clickable links with
+                        underlines highlighted.<p>Hover your mouse over the detected phone number,
+                            and a floating window will display, prompting you to call the phone
+                            number with Linkus.</p><p><image id="image_slx_f1t_xjb"
+                                href="../Images/admin/highlight-phone-number.png"/></p></li>
+                    <li>Click the phone number that you want to dial. A window pops up as
+                                below:<p><image id="image_wl5_p1t_xjb"
+                                href="../Images/admin/click-to-call-select-linkus.png"/></p></li>
+                    <li>Click <uicontrol>Linkus</uicontrol>. Linkus will place the call
+                                immediately.<p><image id="image_o1v_ry1_yjb"
+                                href="../Images/admin/linkus-call.png"/></p></li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_mkr_ybt_xjb">
+            <title><?oxy_comment_start author="carol" timestamp="20191210T113416+0800" comment="Title 改为 Features
+内容可以copy这里的
+https://chrome.google.com/webstore/detail/yeastar-click-to-call/ldkinnfkollhaghfaioheokmnkjejmpm"?>Why
+                use Yeastar Click to Call?<?oxy_comment_end?></title>
+            <p>
+                <ul id="ul_vgb_1ct_xjb">
+                    <li><b>Automatic number-dialing</b><p>Enable sales and support agents to reach
+                            customers directly without the need to dial a phone number manually.
+                        </p></li>
+                    <li><b>Productivity &amp; selling boost</b><p>Enable your business to capture
+                            and convert leads on your website while customers are still interested
+                            in your products.</p></li>
+                    <li><b>Cost-saving</b><p>Enable you to place calls using available trunks on
+                            your company's PBX. </p></li>
+                </ul>
+            </p>
+        </section>
+    </conbody>
+</concept>
+<?oxy_options track_changes="on"?>

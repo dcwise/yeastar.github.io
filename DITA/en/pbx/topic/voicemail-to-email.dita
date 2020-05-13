@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_l3y_qct_nhb">
+    <title>Configure Voicemail to Email</title>
+    <shortdesc><?oxy_comment_start author="carol" timestamp="20190910T093319+0800" comment="The Voicemail to Email feature of Yeastar XXXX PBX allows extension users to receive voicemail audio files as email attachments and quicken response time when they are out of office." flag="done"?>The
+        Voicemail to Email feature of  <ph keyref="product_name"/> allows extension users to receive
+        voicemail audio files as email attachments and quicken response time when they are out of
+        office.<?oxy_comment_end?></shortdesc>
+    <body>
+        <section id="section_klg_vct_nhb">
+            <title>Enable Voicemail to Email</title>
+            <p>Voicemail to Email function is disabled by default. If an extension user would like
+                to check voicemail messages via email, you need to enable Voicemail to Email for
+                his/her extension.</p>
+            <p>
+                <note>To receive voicemail via email successfully, make sure the <xref
+                        href="email.dita#concept_ls5_r3k_xdb">system email</xref> is working.</note>
+            </p>
+            <p>
+                <ol id="ol_jb3_h2t_nhb">
+                    <li>Go to <menucascade>
+                            <uicontrol>Settings</uicontrol>
+                            <uicontrol>PBX</uicontrol>
+                            <uicontrol>Extensions</uicontrol>
+                        </menucascade>, select the desired extension, click <image
+                            href="../Images/ui_icons/edit.png" width="20" id="image_i23_k2t_nhb"
+                        />.</li>
+                    <li>Click the <uicontrol>Features</uicontrol> tab.</li>
+                    <li>In the <uicontrol>Send Voicemail to Email</uicontrol> drop-down list, select
+                        an email type.<p><image href="../Images/admin/voicemail-to-email.png"
+                                width="650" id="image_xsh_dft_nhb"/></p><p>
+                            <ul id="ul_agx_jht_nhb">
+                                <li><uicontrol>Send to user's email</uicontrol>: Send voicemail to
+                                    the extension user's email address.</li>
+                                <li><uicontrol>Send to custom email</uicontrol>: Send voicemail to a
+                                    custom email address.</li>
+                            </ul>
+                        </p></li>
+                    <li>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_nnv_vht_nhb">
+            <title>Email template of 'Voicemail to Email'</title>
+            <p>The PBX has a default email template for <b>Voicemail to Email</b>. You can edit the
+                template according to your needs.</p>
+            <p>
+                <ol id="ol_fsw_b3t_nhb">
+                    <li>Go to <menucascade>
+                            <uicontrol>Settings</uicontrol>
+                            <uicontrol>System</uicontrol>
+                            <uicontrol>Email</uicontrol>
+                            <uicontrol>Email Templates</uicontrol>
+                        </menucascade>, click <image href="../Images/ui_icons/edit.png" width="20"
+                            id="image_pcp_5jv_42b"/> beside <uicontrol>Voicemail to
+                            Email</uicontrol>.<p><image
+                                href="../Images/admin/edit-voicemail-to-email-template.png"
+                                id="image_itc_j3t_nhb"/></p></li>
+                    <li>Edit the email subject and email contents.<p><image
+                                href="../Images/admin/edit_voicemail_to_email_template.png"
+                                width="650" id="image_jhs_4vr_scb"/></p></li>
+                    <li>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</li>
+                </ol>
+            </p>
+        </section>
+    </body>
+</topic>

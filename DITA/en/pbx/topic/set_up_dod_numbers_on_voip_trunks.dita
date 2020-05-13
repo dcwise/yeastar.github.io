@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_rrh_vgf_2fb">
+    <title>Set up DOD Numbers for VoIP Trunk</title>
+    <shortdesc><?oxy_comment_start author="Sunmy" timestamp="20190821T130518+0800" comment="英文描述修改
+
+英文原文：DOD (Direct Outwards Dialing) is the caller ID of associated extensions that will be displayed when making outbound calls. You can bind one DOD number to one extension or one DOD number to multiple extensions." id="qjr_wf1_v3b"?><?oxy_comment_start author="carol" timestamp="20190822T164420+0800" comment="这个改完没有更好啊。
+有个错误：shows the same caller ID to the callee， 这个说法不对" parentID="qjr_wf1_v3b" mid="1"?>Direct
+        Outward Dialing (DOD) is a service of VoIP provider. It allows multiple extension users
+        within a PBX system to make a outbound call directly, and shows the same caller ID to the
+        callee.<?oxy_comment_end mid="1"?><?oxy_comment_end?> DOD is often used together with Direct
+        Inward Dialing (DID).</shortdesc>
+    <taskbody>
+        <context>
+            <?oxy_comment_start author="Sunmy" timestamp="20190821T152423+0800" comment="中英文不一致，哪个为准？看不懂这个场景，实际DOD只是控制呼出而已，呼入是DID和路由控制，本章又没有给定完整方案DID+路由设置。按下面的配置操作无法实现这个场景吧？
+
+框架调整建议：
+1、要么DOD依赖于DID，将DID+DOD+路由==独立出一个案例应用统一介绍。原文对于DID的设置，仅仅只是一个配置项的描述而已。
+
+2、要么独立模块介绍DOD，仅介绍DOD是什么，能做什么，怎么设置，应只是呼叫对方显示的来电号码吧？" id="wf4_yf1_v3b"?>
+            <?oxy_comment_start author="carol" timestamp="20190822T164453+0800" comment="这个确实有问题,需要联系到DID 设置
+可以先把这篇文章撤掉（不要删，从map移除就好）
+
+DID 我们有一篇专门介绍的，在Inbound-Route里面： DID Routing
+
+可以考虑专门一篇文章介绍DOD，这个加入计划，后面再写（好像确实没什么好写的），这次先整Trunk模块" parentID="wf4_yf1_v3b" mid="3"?>
+            <p>
+                <note>DOD is often used together with DID (Direct Inward Dialing).</note>
+            </p>
+            <p>Assume that a company has a trunk that is associated with 5 DID numbers:
+                5503301-5503305.</p>
+            <p>When users make outbound calls, their caller IDs are displayed as 5503301, and all
+                customers will call this number to the company. This would cause problem if the CEO
+                would like to receive his incoming calls directly on his extension without having to
+                go through an operator.</p>
+            <p>In this scenario, you can bind a DOD number for the CEO's extension. You can also set
+                DOD numbers for other users.<?oxy_comment_end mid="3"?><?oxy_comment_end?></p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol>PBX</uicontrol>
+                        <uicontrol>Trunks</uicontrol>
+                    </menucascade>, edit your trunk and click <uicontrol>DOD</uicontrol> tab.</cmd>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Add</uicontrol> to add DOD number.</cmd>
+                <info><image href="../Images/admin/dod_for_ceo.png" width="650"
+                        id="image_ut4_qzs_2fb"/></info>
+                <info>
+                    <ul id="ul_nmj_yzs_2fb">
+                        <li><uicontrol>DOD Number</uicontrol>: Enter one of the DID numbers that are
+                            received from the trunk provider.</li>
+                        <li><uicontrol>DOD Name</uicontrol>: Set a DOD name.</li>
+                    </ul>
+                </info>
+            </step>
+            <step>
+                <cmd>Select the extension to the <uicontrol>Selected</uicontrol> box. </cmd>
+                <info>The selected extension will be associated with the DOD number. When the user
+                    makes outbound call through this trunk, the DOD number will be displayed.</info>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Ensure</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

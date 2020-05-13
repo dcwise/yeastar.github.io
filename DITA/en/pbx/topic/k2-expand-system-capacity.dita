@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="k2-expand-system-capacity">
+    <title>Expand System Capacity of Yeastar K2 IPPBX</title>
+    <shortdesc>If you need to expand the number of extensions, concurrent calls or other features,
+        contact Yeastar to upgrade your license, and then update your license on your PBX. </shortdesc>
+    <body>
+        <section id="section_fy4_fpm_c3b">
+            <title>Update methods</title>
+            <p>Choose the same update method as the one you choose to update the license according
+                to the  environment of your PBX.</p>
+            <p>
+                <ul id="ul_b1s_s3k_g3b">
+                    <li><xref href="#k2-expand-system-capacity/section_jpd_1dm_c3b" format="dita"
+                        /></li>
+                    <li><xref href="#k2-expand-system-capacity/section_btp_wdm_c3b" format="dita"
+                        /></li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_jpd_1dm_c3b">
+            <title>Update license online</title>
+            <p>Contact Yeastar to update your license, and confirm the license update on your
+                PBX.</p>
+            <p>
+                <ol id="ol_ky5_vb4_f3b">
+                    <li>Log in the PBX web interface, go to <menucascade>
+                            <uicontrol>Maintenance</uicontrol>
+                            <uicontrol>Activation</uicontrol>
+                        </menucascade>, click <uicontrol>Update</uicontrol>.<p><image
+                                href="../Images/admin/k2-upgrade-k2-license.jpg"
+                                id="image_y34_4sq_d3b"/></p></li>
+                    <li>Click <uicontrol>OK</uicontrol> after update.<p><image
+                                href="../Images/admin/k2-update-success.png" id="image_czk_djt_23b"
+                            /></p></li>
+                </ol>
+                <note>Keep your PBX connected to the internet, or the PBX will be detected as an
+                    abnormal device.</note>
+            </p>
+        </section>
+        <section id="section_btp_wdm_c3b">
+            <title>Update license offline (USB Key)</title>
+            <p>Contact Yeastar to update your license, you will get a new license, enter the new
+                license on your PBX.</p>
+            <p>
+                <ol id="ol_sp2_lc4_f3b">
+                    <li>Log in the PBX web interface, go to <menucascade>
+                            <uicontrol>Maintenance</uicontrol>
+                            <uicontrol>Activation </uicontrol>
+                        </menucascade>, click <uicontrol>Update</uicontrol>.</li>
+                    <li>Enter your new license, click <uicontrol>Activate</uicontrol>.<p><image
+                                href="../Images/admin/k2-USB-key-update.png" id="image_ngd_dyr_d3b"
+                            /></p></li>
+                    <li>Click <uicontrol>OK</uicontrol> after update.<p><image
+                                href="../Images/admin/k2-update-success.png" id="image_gpz_djt_23b"
+                            /></p></li>
+                </ol>
+                <note>Keep the USB Key connected to the PBX, or the PBX will be detected as an
+                    abnormal device.</note>
+            </p>
+        </section>
+    </body>
+</topic>

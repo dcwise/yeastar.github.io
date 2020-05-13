@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_vx1_mv3_kgb">
+    <title>Version 30.10.0.34</title>
+    <abstract>Released Date: January 10, 2019</abstract>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2019/01/10"/>
+            <!--Carol-->
+            <revised modified="2019/01/10"/>
+        </critdates>
+    </prolog>
+    <body>
+        <section>
+            <title>Fixed Bug</title>
+            <p><image href="../Images/horizon.png" id="image_xcc_4wb_kfb"/></p>
+            <p>
+                <ul id="ul_eqw_ynt_4fb">
+                    <li>Fixed the issue that <uicontrol>Remote Management</uicontrol> was lost from
+                        the web interface.</li>
+                    <li>Fixed the issue that the <uicontrol>Me</uicontrol> web page failed to
+                        load.</li>
+                </ul>
+            </p>
+        </section>
+    </body>
+</topic>

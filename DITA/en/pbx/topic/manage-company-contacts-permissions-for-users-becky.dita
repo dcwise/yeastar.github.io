@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="manage_company_permissions_for_users">
+    <title>Manage Company Contacts Permissions for Users</title>
+    <shortdesc><?oxy_comment_start author="Becky" timestamp="20200217T140650+0800" comment="参考：
+https://help.bronto.com/bmp/help-source/task/t_bmp_home_users_permissions_user_can_manage_contacts.html"?>You
+        can grant the permissions of viewing and managing Company Contacts to extension
+        users.<?oxy_comment_end?></shortdesc>
+    <taskbody>
+        <context>
+            <?oxy_comment_start author="carol" timestamp="20200218T100243+0800" comment="这边是管理员，可以换一种表述，
+你可以为他们分配以下权限。
+
+这边可以再次优化：
+清晰定义 view 的权限和 Manage 的权限" flag="done"?>
+            <p>You can grant the following permissions to users:<ul id="ul_e1t_wq3_tkb">
+                    <li>View Company Contacts.<p>The authorized users can only view the list and
+                            details of Company Contacts.</p></li>
+                </ul><ul id="ul_u5q_4cb_tkb">
+                    <li>Manage Company Contacts.<p>The authorized users can not only view but also
+                            manage Company Contacts, such as add, edit, delete, import &amp; export
+                            contact entries.</p></li><?oxy_comment_end?>
+                </ul></p>
+            <p>To grant an extension user the permission of viewing and managing Company Contacts,
+                you should proceed as follows:</p>
+        </context>
+        <steps id="steps_vlz_pcb_tkb">
+            <step>
+                <cmd>Log in PBX web interface by your admin account and password.</cmd>
+            </step>
+            <step>
+                <cmd>Go to <uicontrol>Contacts</uicontrol> (<image
+                        href="../Images/admin/contacts-main-menu.png" width="20"
+                        id="image_wlb_gy1_tkb"/>), and click <uicontrol>Settings</uicontrol>
+                    tab.</cmd>
+            </step>
+            <step>
+                <cmd>In the <uicontrol>View Company Contacts</uicontrol> section, select extension
+                    users from <uicontrol>Available</uicontrol> box to
+                        <uicontrol>Selected</uicontrol> box.</cmd>
+                <info>
+                    <p> The selected users can view and quickly contact Company Contacts.</p>
+                </info>
+            </step>
+            <step>
+                <cmd>In the <uicontrol>Manage Company Contacts</uicontrol> section, select extension
+                    users from <uicontrol>Available</uicontrol> box to
+                        <uicontrol>Selected</uicontrol> box.</cmd>
+                <info>When you're busy or out of office, the selected users can help you manage
+                    Company Contacts, such as add, edit, delete, import &amp; export
+                    contacts.</info>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

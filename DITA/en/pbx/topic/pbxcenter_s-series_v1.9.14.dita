@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="concept_sdm_gp3_n2b">
+    <title>Version 1.9.14</title>
+    <abstract>Released Date: July 20, 2018</abstract>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/07/19"/>
+            <!--Carol-->
+            <revised modified="2018/07/19"/>
+            <!--Carol-->
+            <revised modified="2018/07/23"/>
+            <!--Carol-->
+            <revised modified="2018/07/24"/>
+        </critdates>
+    </prolog>
+    <body>
+        <section id="section_spx_vtb_n2b">
+            <title>Optimization</title>
+            <p><image href="../Images/horizon.png" id="image_aj3_vyv_pdb"/></p>
+            <p>
+                <ul id="ul_vnv_rg3_n2b">
+                    <li>Improved the security of the default password for extensions.</li>
+                    <li>Optimized Time Condition: Each Inbound route has a different feature code of
+                        Time condition.</li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_v24_wg3_n2b">
+            <title>Fixed Bug</title>
+            <p><image href="../Images/horizon.png" id="image_bvk_xg3_n2b"/></p>
+            <ul id="ul_olr_xg3_n2b">
+                <li><b>API Interfaces</b>:<p>
+                        <ul id="ul_ulb_1h3_n2b">
+                            <li>Fixed the issue that PBX would send API reports repeatedly.</li>
+                            <li>Fixed the issue that the call could not be terminated if the
+                                extension has more than one "Concurrent Registration".</li>
+                            <li>Fixed the issue that call pop-up could not work during a call pickup
+                                process.</li>
+                            <li>Optimized DTMF API reports.</li>
+                        </ul>
+                    </p></li>
+                <li><b>BLF</b>:<p>
+                        <ul id="ul_fdn_xh3_n2b">
+                            <li>Fixed BLF key of Call Parking: The BLF key might not work after
+                                rebooting the PBX. </li>
+                            <li>Fixed BLF key of BRI trunk: The call could not be terminated if you
+                                called out through the BRI trunk.</li>
+                        </ul>
+                    </p></li>
+                <li><b>AutoCLIP</b>:<p>
+                        <ul id="ul_g4t_z33_n2b">
+                            <li>Fixed the issue that AutoCLIP could not match incoming caller
+                                ID.</li>
+                            <li>Fixed the issue that AutoCLIP could not be disabled.</li>
+                        </ul>
+                    </p></li>
+                <li><b>SIP Peer Trunk</b>:<p>
+                        <ul id="ul_bqy_2j3_n2b">
+                            <li>Fixed the issue that the trunk could not work if DNS-NAPTR transport
+                                was enabled for the trunk.</li>
+                            <li>Fixed the issue the Music on Hold could not be played if the T.38
+                                was enabled for the trunk.</li>
+                        </ul>
+                    </p></li>
+                <li><b>Conference</b>:<p>
+                        <ul id="ul_s35_ll3_n2b">
+                            <li>Fixed the issue that when you transferred a call to a conference,
+                                the call would be terminated automatically.</li>
+                            <li>Fixed the issue that pressing <codeph>#</codeph> to invite a
+                                conference member would fail.</li>
+                            <li>Fixed the issue that the PBX might initiate a conference
+                                automatically.</li>
+                        </ul>
+                    </p></li>
+                <li><b>Fax</b>:<p>
+                        <ul id="ul_hk5_bm3_n2b">
+                            <li>Fixed the issue that sending multi-page fax would fail.</li>
+                            <li>Fixed the compatibility issue with Yeastar TA gateway.</li>
+                        </ul>
+                    </p></li>
+                <li>Fixed GSM/3G/4G trunk issue: PBX could not detect DTMF signal correctly.</li>
+                <li>Fixed BRI trunk issue: When you called out through a BRI trunk, you could not
+                    hear the Music on Hold from the BRI provider.</li>
+                <li>Fixed the Queue issue: The Queue could not work properly if the "Satisfaction
+                    Survey" was enabled.</li>
+            </ul>
+        </section>
+    </body>
+</topic>

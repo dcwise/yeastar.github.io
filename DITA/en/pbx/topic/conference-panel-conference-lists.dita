@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="conference-lists">
+    <title>Conference List</title>
+    <shortdesc>Click <uicontrol>Conference List</uicontrol> tab, you can view the created
+        conference, in-conference members, and start time of each conference. You can also go to the
+        specific conference page to monitor and manage conference.</shortdesc>
+    <body>
+        <p><image id="image_yyc_gcl_33b" href="../Images/admin/conference-lists.png" width="700"
+            /></p>
+        <section id="section_x1f_13l_33b">
+            <title>Go to the specific conference page</title>
+        </section>
+        <ol>
+            <li>Go to PBX web interface, and go to <uicontrol>Conference Panel</uicontrol>.</li>
+            <li>Click <uicontrol>Conference List</uicontrol> tab.</li>
+            <li>Select a conference, and click <image
+                    href="../Images/admin/conference-list-operation.png" id="image_atv_dln_h3b"/> to
+                go to the specific conference page.<p><image id="image_z5b_zxt_zjb"
+                        href="../Images/admin/conference-panel-sales-meeting.png"/></p></li>
+        </ol>
+    </body>
+</topic>

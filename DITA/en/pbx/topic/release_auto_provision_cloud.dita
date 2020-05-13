@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_fd3_xfn_jdb">
+  <title>Auto Provision</title>
+  <shortdesc>Release notes for Auto Provision on Yeastar Cloud PBX Instance.</shortdesc>
+  <body>
+    <section id="section_ahp_5nw_clb">
+      <title>Version 1.8.10</title>
+      <p><ph conref="v30.13.0.30.dita#v30.13.0.b/date"/></p>
+      <p>
+        <ul conref="v30.13.0.30.dita#v30.13.0.b/autop-contacts" id="ul_rqn_scc_dlb">
+          <li/>
+        </ul>
+        <ul conref="v30.13.0.30.dita#v30.13.0.b/autop" id="ul_czt_2qv_hlb">
+          <li/>
+        </ul>
+      </p>
+    </section>
+    <section id="section_f1z_mjm_jkb">
+      <title>Version 1.8.7</title>
+      <p>Released Date: January 14, 2020</p>
+      <p>
+        <ul id="ul_cv1_tjm_jkb">
+          <li>Added support for the following IP phones:<p>
+              <ul id="ul_t5g_vjm_jkb">
+                <li>Snom: D120, D305, D375, D712, D715, D725, D745, and D765.</li>
+                <li>Yealink: SIP-T41U, SIP-T43U, SIP-T46U, and SIP-T48U.</li>
+              </ul>
+            </p></li>
+          <li>For Snom phones (D1XX series, D3XX series, and D7XX series): Added
+              <uicontrol>Administrator Mode</uicontrol>, <uicontrol>Administrator
+              Password</uicontrol>, <uicontrol>HTTP Server Username</uicontrol>, and <uicontrol>HTTP
+              Server Password</uicontrol> settings on the <uicontrol>Preference</uicontrol>
+            page.</li>
+          <li>Fixed the issue of Default Template: The drop-down list of
+              <uicontrol>Series/Model</uicontrol> couldn't be expanded on the default template
+            page.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_b4w_knn_1jb">
+      <title>Version 1.8.4</title>
+      <p>Released Date: September 18, 2019<ul id="ul_vm4_14n_1jb">
+          <li>
+            <p>Added support for the following IP phones:</p>
+            <p>
+              <ul id="ul_ach_p4n_1jb">
+                <li>Snom: D735 and D717</li>
+                <li>
+                  <p>Yealink: VP59, CP960, and CP920</p>
+                </li>
+              </ul>
+            </p>
+          </li>
+          <li>Optimized DSS settings on Fanvil phones (X5/X5G, X4/X4G, X5S and X6): Added
+              <uicontrol>Action URL</uicontrol> type of DSS key.</li>
+          <li>Optimized settings on Snom phones (D315, D345 and D385): Added the <uicontrol>Tone
+              Scheme</uicontrol> setting on <uicontrol>Preference</uicontrol> page.</li>
+          <li>Fixed the auto provision template issue of Fanvil phones: the value of &lt;language>
+            parameter in the template was inaccuracy.</li>
+          <li>Fixed the phonebook issue on Yealink W60B: Only 5 handsets could download the
+            phonebook from PBX after auto provisioning.</li>
+          <li>Fixed the issue of custom template: Custom template did not take effect if you add
+            devices in bulk or import auto provisioning file.</li>
+        </ul></p>
+    </section>
+    <section id="section_or5_hj1_43b">
+      <title>Version 1.7.12</title>
+      <p>Released Date: August 15, 2019</p>
+      <p>
+        <ul>
+          <li>Optimized <uicontrol>DSSKey/Line Key</uicontrol> setting: The
+              <uicontrol>Value</uicontrol> field is allowed to enter maximum 255 characters.</li>
+          <li>
+            <p>Optimized <uicontrol>Account</uicontrol> settings for IP phones: The extension
+                <uicontrol>Caller ID Name</uicontrol> will be automatically filled in the
+                <uicontrol>Label</uicontrol> field.</p>
+            <p>
+              <note>In the earlier version, the extension number will be automatically filled in the
+                  <uicontrol>Label</uicontrol> field.</note>
+            </p>
+          </li>
+          <li>Fixed the issue of Auto Provision Template: The special characters %cn in the custom
+            template could not be identified correctly and would be deleted.</li>
+          <li>Fixed the issue of <uicontrol>Auto Provisioning Device List</uicontrol> page: The
+              <uicontrol>Auto Provisioning Device List</uicontrol> could not display if the assigned
+            extension name contained a line break.</li>
+          <li>
+            <p>Fixed the DSSkey issue on Fanvil: The DSSkey setting could not take effect when the <menucascade>
+                <uicontrol>DSSkey</uicontrol>
+                <uicontrol>Line</uicontrol>
+              </menucascade> is set to <uicontrol>Auto</uicontrol>.</p>
+          </li>
+          <li>
+            <p>Fixed the issue of Auto Provision Template: The setting in
+                <uicontrol>Other</uicontrol> tab would be cleared if the characters
+                <codeph>`</codeph> was contained in the custom template.</p>
+          </li>
+          <li>
+            <p>Fixed the issue that the auto provisioning would be failed after restoring
+              configurations from a backup file.</p>
+          </li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_vbn_m25_4hb">
+      <title>Version 1.7.7</title>
+      <p>Released Date: May 14, 2019</p>
+      <p>
+        <ul>
+          <li>Updated Russian and Italian web interface.</li>
+          <li>Optimized Auto Provisioning template: Blank spaces are allowed in the
+              <uicontrol>Name</uicontrol> filed.</li>
+          <li>
+            <p>Fixed the Auto Provisioning template issue: The customized parameters on the template
+              would be lost.</p>
+          </li>
+          <li>
+            <p>Fixed Auto Provisioning template issue: A template error would occur if the special
+              character &amp; was contained in the customized parameters.</p>
+          </li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_odk_chp_fhb">
+      <title>Version 1.7.3</title>
+      <p>Released Date: March 27, 2019</p>
+      <p>
+        <ul id="ul_kx2_2hp_fhb">
+          <li>Added support for Yealink phones: SIP-T53, SIP-T53W, SIP-T54W, and SIP-T57W.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_ymz_qmc_zgb">
+      <title>Version 1.6.6</title>
+      <p>Released Date: March 4, 2019</p>
+      <p>
+        <ul id="ul_mvq_cnc_zgb">
+          <li>Added support for Snom phones: D315, D345, D385, and D785.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_g5f_nxk_5gb">
+      <title>Version 1.5.7</title>
+      <p>Released Date: February 25, 2019</p>
+      <p>
+        <ul id="ul_vkr_hbl_5gb">
+          <li>Fixed Auto Provisioning might not take effect.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_o5j_54q_3gb">
+      <title>Version 1.5.4</title>
+      <p>Released Date: January 7, 2018</p>
+      <p>
+        <ul id="ul_wjh_z4q_3gb">
+          <li>Added support for Fanvil phones: C400, C600, X1, X1P, X2, X2C, X3S, X3G, X4, X5G, X5S,
+            X6, H5.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_wcz_2rv_1gb">
+      <title>Version 1.4.14</title>
+      <p>Released Date: December 13, 2018</p>
+      <p>
+        <ul id="ul_trc_hrv_1gb">
+          <li>Improved the Web security.</li>
+        </ul>
+      </p>
+    </section>
+    <section>
+      <title>Version 1.4.13</title>
+      <p>Released Date: November 9, 2018</p>
+      <p>
+        <ul id="ul_tht_gtd_qfb">
+          <li>Added support for Vtech phones: ET635 and ET605.</li>
+          <li>Added support for Yealink phones: T40G, W60P, W53P, W41P, W52P and W56P.</li>
+          <li>Added support for configuring iLBC_13_33kbps and iLBC_15_2kbps on Yealink phones.</li>
+          <li>Added support for configuring "User Password" on Vtech phones.</li>
+          <li>Optimized time settings on Yealink phone and Vtech phone: The default time zone and
+            NTP server on the phones are the same as the PBX settings.</li>
+          <li>Fixed the issue that adding contacts on Auto Provisioning web page would cause
+            excessive CPU consumption.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_c55_1pr_q2b">
+      <title>Version 1.4.6</title>
+      <p>Released Date: July 31, 2018</p>
+      <p>
+        <ul id="ul_b1l_cpr_q2b">
+          <li>Added support for the Vtech phones: ET685, VDP650, VCS752, VCS754.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_lmx_fpr_g2b">
+      <title>Version 1.3.4</title>
+    </section>
+    <p>Released Date: June 29, 2018</p>
+    <p>
+      <ul id="ul_f2y_tpr_g2b">
+        <li>This version of Auto Provisioning is compatible with the cloud PBX version
+          81.5.0.7.</li>
+      </ul>
+    </p>
+    <section id="section_kdq_ck3_pdb">
+      <title>Version 1.3.2</title>
+      <p>Released Date: April 10, 2018</p>
+      <p>
+        <ul id="ul_ec5_hk3_pdb">
+          <li>Supported Yealink phones that have MAC addresses with 805ec0.</li>
+          <li>Fixed the issue that auto provision might not take effect.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_o2m_3k3_pdb">
+      <title>Version 1.2.1</title>
+      <p>Released Date: December 5, 2017</p>
+      <p>
+        <ul id="ul_qsd_lk3_pdb">
+          <li>This version of Auto Provisioning is compatible with the cloud PBX version
+            81.2.0.8.</li>
+        </ul>
+      </p>
+    </section>
+  </body>
+</topic>

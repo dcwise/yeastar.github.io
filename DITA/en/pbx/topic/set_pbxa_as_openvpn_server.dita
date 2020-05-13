@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_eng_vdc_5db">
+    <title>Step3. Set PBX A as OpenVPN Server</title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Log in the PBX A's web interface, go to <uicontrol>VPN Server</uicontrol>,
+                    check the option <uicontrol>Enable VPN Server</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>On the <uicontrol>Configuration</uicontrol> page, configure the VPN server
+                    settings.</cmd>
+                <choices>
+                    <choice><uicontrol>Server Port</uicontrol>: Specify which TCP/UDP port should
+                        OpenVPN listen on. The default port is 1194.</choice>
+                    <choice><uicontrol>Enable Compression</uicontrol>: Whether to compression on the
+                        VPN link.<p>
+                            <note>If you enable this option, you need to enable compression on the
+                                VPN client.</note>
+                        </p></choice>
+                    <choice><uicontrol>Protocol</uicontrol>: Choose the protocol.</choice>
+                    <choice><uicontrol>Address pool</uicontrol>: Define the address pool.</choice>
+                    <choice><uicontrol>Subnet mask</uicontrol>: Set the subnet mask.</choice>
+                    <choice><uicontrol>Global Traffic Forwarding</uicontrol>: If enabled, this
+                        directive will configure all clients to redirect their default network
+                        gateway through the VPN, causing all IP traffic such as web browsing and DNS
+                        lookups to go through the VPN. (The OpenVPN server machine may need to NAT
+                        or bridge the TUN/TAP interface to the internet in order for this to work
+                        properly).</choice>
+                    <choice><uicontrol>Device Mode</uicontrol>: Choose the device mode:<ul
+                            id="ul_tps_xhc_5db">
+                            <li>TUN: a TUN device is a virtual point-point IP link.</li>
+                            <li>TAP: a TAP device is a virtual Ethernet adapter.</li>
+                        </ul><note>Android clients don’t support TAP mode, please set the device
+                            mode to TUN if you uses Android VPN client.</note></choice>
+                    <choice><uicontrol>Encryption</uicontrol>: Choose encryption method.</choice>
+                    <choice><uicontrol>Key Length</uicontrol>: Set the key length.<p>
+                            <note>The value must be the same with <codeph>KEY_SIZE</codeph> which
+                                were set in the <filepath>vars.bat.sample</filepath> file</note>
+                        </p></choice>
+                    <choice><uicontrol>Maximum Number of Clients</uicontrol>: Set the maximum number
+                        of clients that could connect to the VPN server.</choice>
+                    <choice><uicontrol>Verification Mode</uicontrol>: Select the verification mode
+                        to <codeph>CA Cert+ Client Certificate</codeph>. </choice>
+                </choices>
+            </step>
+            <step>
+                <cmd>Upload certificates and keys.</cmd>
+                <choices id="choices_jyf_33c_5db">
+                    <choice><uicontrol>CA Cert</uicontrol>: Upload
+                        <filepath>ca.crt</filepath>.</choice>
+                    <choice><uicontrol>Public Server Cert</uicontrol>: Upload the VPN server
+                        certificate <filepath>server.crt</filepath>.</choice>
+                    <choice><uicontrol>Private Server Key</uicontrol>: Upload the VPN server key
+                            <filepath>server.key</filepath>.</choice>
+                    <choice><uicontrol>DH PEM</uicontrol>: Upload the DH file
+                            <filepath>dh1024.pem</filepath>. <p>
+                            <note>If the <codeph>KEY_SIZE</codeph> is 2048, then upload the file
+                                    <filepath>dh2048.pem</filepath>.</note>
+                        </p></choice>
+                    <choice><uicontrol>Enable SSL/TLS</uicontrol>: If you enable SSL/TLS on the VPN
+                        server, upload <filepath>ta.key</filepath> file.<p>
+                            <note>If you enable SSL/TLS on the VPN server, you need to enable
+                                SSL/TLS on the VPN clients, and upload <filepath>ta.key</filepath>
+                                on the VPN clients.</note>
+                        </p></choice>
+                </choices>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Resource Monitor</uicontrol>
+                        <uicontrol>Network</uicontrol>
+                    </menucascade>, check the VPN server status and IP address.</cmd>
+            </step>
+            <step>
+                <cmd>Forward the VPN server port on the router that is connected to the PBX.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

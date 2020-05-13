@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="use-yeastar-click-to-call">
+    <title><?oxy_comment_start author="carol" timestamp="20191210T134834+0800" comment="这个标题是产品角度，用户角度不是为了用这个功能，是为了实现某个目的。
+Click to Call from Web Pages"?>Use
+        Yeastar Click to Call<?oxy_comment_end?></title>
+    <shortdesc><?oxy_comment_start author="carol" timestamp="20191210T135920+0800" comment="这个没有必要说明是用什么网页，都是网页，全部操作一致，没有必要特别说明。
+
+The Yeastar Click to Call extension automatically detects phone numbers on web pages and works with the Linkus desktop client.
+
+这篇文章建议用Yeastar Contact 页面来演示"?>In
+        this example, we take HubSpot as an example to show you how to use Yeastar Click to
+        Call.<?oxy_comment_end?></shortdesc>
+    <body>
+        <p><?oxy_comment_start author="carol" timestamp="20191210T140140+0800" comment="分两个section：
+Before You Begin
+Procudures 
+
+或者用Task topic
+"?><b>Before
+                you get started</b>: <?oxy_comment_end?></p>
+        <?oxy_comment_start author="carol" timestamp="20191210T140312+0800" comment="原描述问题：
+1. 第一个条件描述不够简洁
+2. 第二个条件描述，存在错误
+3. 最后一句话的位置不对，重要的说明，应该提前说。
+
+这段重新描述。
+
+为保持可以使用Linkus 成功点击呼叫，确保 Linkus 处于可用状态 （ready for use）
+
+"?>
+        <p>Make sure Linkus meets at least one of the following requirements:<ul id="ul_gtv_nnv_xjb">
+                <li>Linkus is running with an authenticated extension user logging in.</li>
+                <li><uicontrol>Auto Login</uicontrol> is enabled.</li>
+            </ul></p>
+        <p>If neither of the requirements are met, you can not place a call using Yeastar Click to
+            Call.<?oxy_comment_end?></p>
+        <p>
+            <ol id="ol_s4n_tlv_xjb">
+                <li>Click the detected phone number
+                    on<?oxy_comment_start author="carol" timestamp="20191210T143445+0800" comment="不用特别指明hubspot"?>
+                    Hubspot<?oxy_comment_end?> that you want to dial.<p><image
+                            id="image_mgg_vhv_xjb"
+                            href="../Images/admin/hubspot-click-phone-number.png" width="650"
+                        /></p><p><?oxy_delete author="carol" timestamp="20191210T143833+0800" content="A dialog box pops up, prompting you to select a calling method."?></p></li>
+                <li><?oxy_insert_start author="carol" timestamp="20191210T143611+0800"?>In the
+                    dialog box,
+                    c<?oxy_insert_end?><?oxy_delete author="carol" timestamp="20191210T143844+0800" content="C"?>lick
+                        <uicontrol>Linkus</uicontrol>.
+                        <?oxy_insert_start author="carol" timestamp="20191210T143856+0800"?><p>The
+                        call will be placed by Linkus Desktop Client.</p><p>
+                        <note><?oxy_comment_start author="carol" timestamp="20191210T145106+0800" comment="这个作为一个补充说明就好了。
+内部的号码处理，大部分客户并不关心，他们只关心电话是否能够呼出。"?>The
+                            phone number is automatically filtered (only numbers and "+" are kept)
+                            and pasted on Linkus Dialpad before calling
+                            out.<?oxy_comment_end?></note>
+                    </p><?oxy_insert_end?><?oxy_delete author="carol" timestamp="20191210T143900+0800" content="The phone number will be automatically filtered (only numbers and &quot;+&quot; are kept) and pasted on Linkus Dialpad."?><p><?oxy_comment_start author="carol" timestamp="20191210T144045+0800" comment="给这一段定一个标题或提炼主旨，并放在安装部分 讲。
+并加一些相关的图示说明。"?><note>If
+                            your operating system is Windows 10 and it's the first time for you to
+                            use Yeastar Click to Call, you should go to <menucascade>
+                                <uicontrol>Control Panel</uicontrol>
+                                <uicontrol>Default Programs</uicontrol>
+                                <uicontrol>Associate a file type or protocol with a
+                                    program</uicontrol>
+                                <uicontrol>Default Apps</uicontrol>
+                                <uicontrol>Choose default apps by protocol</uicontrol>
+                                <uicontrol>TEL</uicontrol>
+                            </menucascade>, click <image
+                                href="../Images/admin/choose-as-default.png" width="20"
+                                id="image_cp2_xlv_xjb"/> right beside TEL, and select
+                                <uicontrol>Linkus</uicontrol> as the default
+                            app.<?oxy_comment_end?></note><?oxy_comment_start author="carol" timestamp="20191210T144148+0800" comment="这个图只需要对话框就好了。"?><image
+                            href="../Images/admin/click-linkus-to-call.png" width="650"
+                            id="image_ply_xlv_xjb"/><?oxy_comment_end?></p></li>
+                <li><?oxy_comment_start author="carol" timestamp="20191210T144732+0800" comment="这个不是用户操作的步骤，作为第二部的结果说明即可，图可以不用加，没有意义。
+"?>Linkus
+                    places the call immediately.<p><image id="image_a2w_mlv_xjb"
+                            href="../Images/admin/linkus-place-the-call.png" width="300"
+                            ><?oxy_comment_end?></image>
+                    </p></li>
+            </ol>
+        </p>
+    </body>
+</topic>
+<?oxy_options track_changes="on"?>

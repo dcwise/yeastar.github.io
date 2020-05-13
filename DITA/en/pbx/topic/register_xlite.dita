@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_dbs_w1c_5cb">
+    <title>Register X-Lite Soft Phone with <ph keyref="product_name"/></title>
+    <shortdesc>This guide is based on X-Lite PC client v5.2.0 and <ph keyref="product_name"/>
+        <ph product="cloudpbx">v81.8.0.7</ph><ph product="s-series">v30.8.0.14</ph>.</shortdesc>
+    <taskbody>
+        <steps id="steps_fwr_fln_ycb">
+            <step>
+                <cmd>Launch X-Lite, go to <menucascade>
+                        <uicontrol>Softphone</uicontrol>
+                        <uicontrol>Account Settings</uicontrol>
+                    </menucascade>, configure the SIP account.</cmd>
+                <info><image href="../Images/admin/register_xlite1.png" id="image_nsw_wln_ycb"
+                        width="300"/></info>
+                <choices>
+                    <choice><uicontrol>Account name</uicontrol>: Set a name for the
+                        account.</choice>
+                    <choice><uicontrol>User ID</uicontrol>: Enter the extension number.</choice>
+                    <choice><uicontrol>Domain</uicontrol>: Enter the domain<ph product="s-series">
+                            or IP address</ph> of your PBX.</choice>
+                    <choice><uicontrol>Password</uicontrol>: Enter the extension's
+                            <uicontrol>Registration Password</uicontrol>.</choice>
+                    <choice><uicontrol>Display name</uicontrol>: Set the name that you want to
+                        appear on the soft phone screen.</choice>
+                    <choice><uicontrol>Authorization name</uicontrol>: Enter the extension's
+                            <uicontrol>Registration Name</uicontrol>.</choice>
+                </choices>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>OK</uicontrol>.</cmd>
+                <info>If the extension is registered, you can see the status shows as
+                            below.<p><image href="../Images/admin/register_xlite2.png"
+                            id="image_mhc_3nn_ycb" width="300"/></p></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

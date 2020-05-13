@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="installation">
+    <title>Installation Guide</title>
+    <shortdesc>Installation Guide for  <ph keyref="product_name"/>.</shortdesc>
+    <conbody>
+        <section id="section_bvp_y2z_b3b">
+            <title>About this guide</title>
+            <p>This guide describes hardware ports and indicators on the <ph keyref="product_name"
+                />, and give instructions on  how to install the PBX and telephony modules.</p>
+        </section>
+    </conbody>
+</concept>

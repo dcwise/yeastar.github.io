@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="task_y2d_jjs_ngb">
+    <title>Set up No-IP DDNS on <ph keyref="product_name"/></title>
+    <shortdesc>If your ISP doesn't provide a static public IP address for you, you can create a
+        No-IP DDNS account, and set up DDNS on <ph keyref="product_name"/>.</shortdesc>
+    <body>
+        <section>
+            <title>Step 1. Create a No-IP account</title>
+            <p>
+                <ol id="ol_oxr_qpx_ngb">
+                    <li>Go to the <xref href="https://www.noip.com/sign-up" format="html"
+                            scope="external">No-IP Sign Up page</xref>.</li>
+                    <li>On the new account form, fill in the required fields.<p>
+                            <ul id="ul_elg_hqx_ngb">
+                                <li><uicontrol>Email</uicontrol>: Enter your email address as the
+                                    No-IP account.</li>
+                                <li><uicontrol>Password</uicontrol>: Set the password of the No-IP
+                                    account.</li>
+                                <li><uicontrol>Hostname</uicontrol>: Select your desired domain
+                                    name, and enter your desired hostname.</li>
+                            </ul>
+                        </p><p><image href="../Images/admin/create-no-ip-account.png"
+                                id="image_kbq_bks_ngb" width="400"/></p></li>
+                    <li>At the bottom of the page, click <uicontrol>Free Sign
+                            Up</uicontrol>.<p>No-IP will send a confirmation email to your email
+                            address.</p></li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_z3v_gqx_ngb">
+            <title>Step 2. Confirm your No-IP account</title>
+            <p>Check your email from No-IP, click <uicontrol>Confirm Account</uicontrol>. Your No-IP
+                account is activated.</p>
+            <p><image href="../Images/admin/confirm-no-ip.png" width="400" id="image_skn_zms_ngb"
+                /></p>
+        </section>
+        <section id="section_zdn_lqx_ngb">
+            <title>Step 3. Set up No-IP DDNS on PBX</title>
+            <p>
+                <ol>
+                    <li> Log in the PBX web interface, go to <menucascade>
+                            <uicontrol>Settings</uicontrol>
+                            <uicontrol>System</uicontrol>
+                            <uicontrol>Network</uicontrol>
+                            <uicontrol>DDNS Settings</uicontrol>
+                        </menucascade>.</li>
+                    <li> Select the checkbox of <uicontrol>Enable DDNS</uicontrol>.</li>
+                    <li> In the <uicontrol>DDNS Server</uicontrol> drop-down list, select
+                            <uicontrol>www.no-ip.com</uicontrol>.</li>
+                    <li> Enter your No-IP account information and the fully qualified domain
+                        name.</li>
+                    <li> Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</li>
+                </ol>
+            </p>
+            <p><image href="../Images/admin/ddns-settings-no-ip.png" id="image_o24_qns_ngb"/></p>
+        </section>
+        <section id="section_tdh_pqx_ngb">
+            <title>Step 4. Set up Port Forwarding and NAT</title>
+        </section>
+        <ul id="ul_ztq_fy2_4gb">
+            <li>If your PBX is behind a router, you need to <xref
+                    href="port_forwarding.dita#concept_iff_ywc_zdb">set up Port Forwarding on the
+                    router</xref> to allow external devices to access to the PBX.</li>
+            <li>To ensure that the external traffic packets can be sent to the correct destination,
+                you need to set <xref href="nat.dita#concept_cch_djd_zdb">NAT</xref> on your PBX.<p>
+                    <note type="important">To enhance the security of your PBX, we suggest you to
+                        change the default ports.</note>
+                </p><p>
+                    <table frame="all" rowsep="1" colsep="1" id="table_kx2_my2_4gb">
+                        <title>Common ports on <ph keyref="product_name"/></title>
+                        <tgroup cols="2">
+                            <colspec colname="c1" colnum="1" colwidth="1*"/>
+                            <colspec colname="c2" colnum="2" colwidth="1*"/>
+                            <thead>
+                                <row>
+                                    <entry>Service</entry>
+                                    <entry>Default Port</entry>
+                                </row>
+                            </thead>
+                            <tbody>
+                                <row>
+                                    <entry>Web</entry>
+                                    <entry>8088</entry>
+                                </row>
+                                <row>
+                                    <entry>SIP </entry>
+                                    <entry>5060</entry>
+                                </row>
+                                <row>
+                                    <entry>Linkus</entry>
+                                    <entry>8111</entry>
+                                </row>
+                                <row>
+                                    <entry>RTP</entry>
+                                    <entry>10000-12000</entry>
+                                </row>
+                            </tbody>
+                        </tgroup>
+                    </table>
+                </p></li>
+        </ul>
+        <p>
+            <note type="tip">To verify that you have set up your router correctly, you can visit the
+                website <xref href="http://www.portchecktool.com/" format="html" scope="external"
+                    >www.portchecktool.com</xref>.</note>
+        </p>
+        <section id="section_gfk_mrx_ngb">
+            <title>Step 5. Check the DDNS connection</title>
+            <p>To check the connection of an external device from the Internet, enter the domain
+                name and external port to access the PBX.</p>
+        </section>
+        <example><i><b>Example: Access PBX by DDNS</b></i><p>On a PC that is NOT in the PBX's
+                network, enter the domain name and external web port to access the PBX web
+                interface.</p><p><image href="../Images/admin/no-ip-ddns-web.png" width="450"
+                    id="image_jg3_yvx_ngb"/></p></example>
+        <example><i><b>Example: Register a remote extension by DDNS</b></i><p>On an IP phone that is
+                NOT in the PBX's network, enter the domain name and external SIP port to register a
+                remote extension.</p><p><image
+                    href="../Images/admin/no-ip-ddns-remote-extension.png" width="450"
+                    id="image_exv_1yx_ngb"/></p></example>
+    </body>
+</topic>
+<?oxy_options track_changes="on"?>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_s11_bjh_tdb">
+    <title>Send Email to SMS</title>
+    <shortdesc>Email to SMS is a feature that allows users to send SMS to mobile phone number via
+        email. </shortdesc>
+    <conbody>
+        <p>When users would like to send a SMS, they just need to send an email to the <ph
+                keyref="product_name"/> email address, with the destination mobile phone number as
+            the email subject. The system will then receive the email and forward the email to the
+            GSM/3G/4G port, so that the email can be sent out through SMS to expected destinations. </p>
+        <section id="section_tc1_hjh_tdb">
+            <title>Before You Begin</title>
+            <p>To make <uicontrol>Email to SMS</uicontrol> work, you need to:<ul id="ul_qln_h3h_tdb">
+                    <li>
+                        <p>Install GSM/3G/4G module and SIM card on the PBX.</p>
+                    </li>
+                    <li>
+                        <p>Check the trunk status and make sure that the GSM/3G/4G trunk is
+                            ready.</p>
+                    </li>
+                    <li>Make sure the Email setting on the PBX is working.</li>
+                </ul></p>
+        </section>
+        <section id="section_jss_ljh_tdb">
+            <title>Email Subject Format</title>
+            <p>Users need to send emails to the PBX's system email address according to the Email
+                Subject format.</p>
+            <p>For S20/S50/S412:
+                        <codeph>num:<varname>{num}</varname>;port:<varname>{port}</varname>;code:<varname>{code}</varname>;</codeph></p>
+            <p>For S100/S300:
+                        <codeph>num:<varname>{num}</varname>;port:<varname>{span}</varname>_<varname>｛port｝</varname>;code:<varname>{code}</varname>;</codeph></p>
+            <p>
+                <note>
+                    <p>
+                        <ul id="ul_slh_jng_hfb">
+                            <li>The <b>num</b> is required field.</li>
+                            <li>Check the <b>port</b> information on the PBX web interface <menucascade>
+                                    <uicontrol>PBX Monitor</uicontrol>
+                                    <uicontrol>Trunks</uicontrol>
+                                </menucascade>.</li>
+                        </ul>
+                    </p>
+                </note>
+            </p>
+            <p>
+                <ul id="ul_rsh_lfg_hfb">
+                    <li><varname>{num}</varname> is the destination number where you want to send
+                        SMS to.</li>
+                    <li><varname>{span}</varname> is the expansion board number where the GSM/3G/4G
+                        module is installed.</li>
+                    <li><varname>{port}</varname> is the GSM/3G/4G port number.</li>
+                    <li><varname>{code}</varname> is the access code that you set on the PBX for
+                        verifying email subjects.</li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_xvl_vkh_tdb">
+            <title>'Email to SMS' Examples</title>
+            <p>Assume that the PBX Email address: spbx@yeastar.com</p>
+            <p>
+                <ul id="ul_yy1_2lh_tdb">
+                    <li><b>Send Email to SMS through default GSM/3G/4G trunk</b><p><b>Email
+                                Subject:</b>
+                            <codeph>num:[DSTN_NUM];</codeph></p><p>As the following figure shows,
+                            the email will sent to the number 15880290900 through an available
+                            GSM/3G/4G trunk.</p><p><image
+                                href="../Images/admin/email_to_sms_subject1.png"
+                                id="image_wdp_zmh_tdb" width="700"/></p></li>
+                </ul>
+                <ul id="ul_bqp_bnh_tdb">
+                    <li><b>Send Email to SMS through a Specific GSM/3G/4G Trunk</b><p><b>Email
+                                Subject</b>: <codeph>num:[DSTN_NUM];port:[SPAN]_[GSM_PORT];</codeph>
+                            or <codeph>num:[DSTN_NUM];port:[GSM_PORT];</codeph>
+                        </p><p>As the following figure shows, the email will be sent to the number
+                            15880290900 through GSM port 5.</p><p><image
+                                href="../Images/admin/email_to_sms_subject2.png"
+                                id="image_bm5_14h_tdb" width="700"/></p></li>
+                </ul>
+                <ul id="ul_fn4_c4h_tdb">
+                    <li><b>Send Email to SMS with Access Code through Default GSM/3G/4G
+                                Trunk</b><p><b>Email Subject</b>:
+                                <codeph>num:[DSTN_NUM];code:[ACCESS_CODE];</codeph></p><p><image
+                                href="../Images/admin/email_to_sms_subject3.png" width="700"
+                                id="image_lx4_q4h_tdb"/></p></li>
+                </ul>
+            </p>
+        </section>
+    </conbody>
+</concept>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="task_j54_kvq_gfb">
+    <title>Auto Clean up Recording Files</title>
+    <shortdesc><ph product="cloudpbx">When the recording capacity limit is reached, the PBX will
+            automatically delete the oldest recording files. When 80% of the maximum recording
+            capacity is reached, the PBX will send an email notification to you.</ph><ph
+            product="s-series">By default, when the USB device, TF card, or hard disk reaches 80% of
+            its maximum storage capacity, the PBX will automatically delete the oldest recording
+            files. When the 70% of the maximum storage capacity is reached, the PBX will send an
+            email notification to you.</ph>
+    </shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/09/26"/>
+            <!--Carol-->
+            <revised modified="2018/09/26"/>
+            <!--Carol-->
+            <revised modified="2018/09/27"/>
+            <!--Carol-->
+            <revised modified="2018/09/30"/>
+        </critdates>
+    </prolog>
+    <body>
+        <section id="section_rqb_1pr_gfb" product="s-series">
+            <title>Recordings Auto Cleanup</title>
+            <p>Go to <menucascade>
+                    <uicontrol>Settings</uicontrol>
+                    <uicontrol>System</uicontrol>
+                    <uicontrol>Storage</uicontrol>
+                    <uicontrol>Auto Cleanup</uicontrol>
+                </menucascade> to change the default <uicontrol>Auto Recordings Auto
+                    Cleanup</uicontrol> settings.</p>
+            <p>
+                <ul id="ul_lky_1wr_gfb">
+                    <li><uicontrol>Max Usage of Device (%)</uicontrol>: Set the maximum storage
+                        percentage of the device that is allowed to store recording files.<p>The
+                            oldest recording files will be deleted when the threshold is
+                            reached.</p></li>
+                    <li><uicontrol>Auto Recordings Preservation Duration</uicontrol>: Set the
+                        maximum number of days that the PBX will retain the recording files.<p>The
+                            value <userinput>0</userinput> indicates no limit.</p></li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_jkq_rnl_gfb">
+            <title>Enable 'Auto Cleanup Reminder'</title>
+            <p>To get informed of the recording usage, you can enable <uicontrol>Auto Cleanup
+                    Reminder</uicontrol>. </p>
+            <p>
+                <ol id="ol_wb5_tnq_gfb">
+                    <li>Go to <menucascade>
+                            <uicontrol>Settings</uicontrol>
+                            <uicontrol>Event Center</uicontrol>
+                            <uicontrol>Event Settings</uicontrol>
+                            <uicontrol>System</uicontrol>
+                        </menucascade>, enable Notification and Record for <uicontrol>Auto Cleanup
+                            Reminder</uicontrol>.<p><image
+                                href="../Images/admin/enable_auto_cleanup_reminder.png" width="650"
+                                id="image_nsn_4nq_gfb"/></p><p>
+                            <ul id="ul_xjh_5nq_gfb">
+                                <li><uicontrol>Record</uicontrol>: The event of Recording Auto
+                                    Cleanup will be recorded in Event Log.</li>
+                                <li><uicontrol>Notification</uicontrol>: When the recording capacity
+                                    is about to be reached, the PBX will send notification email to
+                                    the <xref href="add_notification_contacts.dita#task_yn4_bq1_ydb"
+                                        >Notification Contacts</xref>.</li>
+                            </ul>
+                        </p></li>
+                    <li>To modify the email template, click <image
+                            href="../Images/ui_icons/edit.png" width="20" id="image_wvp_zpq_gfb"
+                        />.</li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_ycz_zml_gfb">
+            <title>Check Recording Usage</title>
+            <p product="cloudpbx">Go to <menucascade>
+                    <uicontrol>Resource Monitor</uicontrol>
+                    <uicontrol>Recording Usage</uicontrol>
+                </menucascade> to check your Recording usage.</p>
+            <p><image href="../Images/admin/recording_usage.png" id="image_xxm_3nl_gfb"
+                    product="cloudpbx"/></p>
+            <p product="s-series">Go to <menucascade>
+                    <uicontrol>Resource Monitor</uicontrol>
+                    <uicontrol>Storage</uicontrol>
+                </menucascade> to check the usage of the USB device, TF card, or hard disk that is
+                used to store recording files.</p>
+            <p><image href="../Images/admin/check_recording_usage.png" width="650"
+                    id="image_sc2_gzr_gfb" product="s-series"/></p>
+        </section>
+    </body>
+</topic>

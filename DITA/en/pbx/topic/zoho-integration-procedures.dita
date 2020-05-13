@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="task_kj5_rjm_ggb">
+    <title>Integrate <ph keyref="product_name"/> and Zoho
+        <?oxy_comment_start author="carol" timestamp="20191125T100214+0800" comment="语法问题。" flag="done"?>Applications<?oxy_comment_end?></title>
+
+    <shortdesc>This topic introduces how to integrate <ph keyref="product_name"/> and Zoho
+        applications.</shortdesc>
+    <body>
+        <p>Log in the
+            <?oxy_comment_start author="carol" timestamp="20191125T100236+0800" comment="指明位置" flag="done"?>PBX
+            web interfac<?oxy_comment_end?>e, open <uicontrol>Zoho Integration</uicontrol>, follow
+            the steps below to complete integration.</p>
+        <p>
+            <note>
+                <ul id="ul_zww_gjm_sjb">
+                    <li>Only an super administrator can enable the integration.</li>
+                    <li>Once integration enabled by the super administrator, the integration is
+                        activated for all users.</li>
+                </ul>
+            </note>
+        </p>
+        <section id="section_jmj_yfs_ggb">
+            <title>Prerequisite<?oxy_comment_start author="carol" timestamp="20191125T100326+0800" comment="语法问题。
+标题如没有加冠词，统一用复数形式" flag="done"?>
+                steps<?oxy_comment_end?></title>
+            <p>
+                <ol id="ol_yw3_cgs_ggb">
+                    <li>Agree with integration statement.</li>
+                    <li>Read the integration statement, and select the check-box of I agree with the
+                        statement.</li>
+                    <li>Click <uicontrol>Next</uicontrol>.<p><image
+                                href="../Images/zoho/zoho-agree-statement.png" width="500"
+                                id="image_etn_t5q_rjb"/></p></li>
+                </ol>
+            </p>
+        </section>
+        <section id="public-address">
+            <title>Step 1. Enter the public IP address or domain</title>
+        </section>
+        <p>
+            <ol id="ol_q2v_k1r_rjb">
+                <li><?oxy_comment_start author="Sunmy" timestamp="20191125T182003+0800" comment="需要备注说明，如果是 HTTPS 只能填写域名" flag="done"?>In
+                    the <uicontrol>Public IP Address or Domain</uicontrol> field, enter the public
+                    IP address or domain of your PBX.<?oxy_comment_end?><p>
+                        <note>If your PBX uses HTTPS protocol, you need to enter the domain in the
+                                <uicontrol>Public IP Address or Domain</uicontrol> field.</note>
+                    </p></li>
+                <li>In the drop-down list of  <uicontrol>Protocol and external port</uicontrol>,
+                    select the forwarded external port.<p>
+                        <note product="s-series">
+                            <ul id="ul_gvf_mr5_sjb">
+                                <li>We recommend that you use HTTPS 8040 for secure communication,
+                                    and <xref
+                                        href="zoho-integration-preparations.dita#zoho-integration-preparations/https-set"
+                                        >upload HTTPS certificate</xref> to PBX.</li>
+                                <li><?oxy_comment_start author="carol" timestamp="20191125T101104+0800" comment="make sure that" flag="done"?>Make
+                                    sure tha<?oxy_comment_end?>t the web access port of your PBX is
+                                    forwarded to the selected external port on public IP or domain .
+                                    Otherwise, the
+                                    authorization<?oxy_comment_start author="carol" timestamp="20191125T101204+0800" comment="用词准确。这里是必然发生的问题" flag="done"?>
+                                    will<?oxy_comment_end?> fail.</li>
+                            </ul>
+                        </note>
+                    </p><p><image href="../Images/zoho/zoho-public-IP-config.png" width="650" id="image_q4m_lbr_rjb"/></p></li>
+                <li>Click <uicontrol>Next</uicontrol>, <xref href="#task_kj5_rjm_ggb/integrate"
+                        format="dita">enable Phonebridge on Zoho</xref>.</li>
+            </ol>
+        </p>
+        <section id="integrate">
+            <title>Step 2. Enable Phonebridge on Zoho</title>
+            <p>The procedures are different on Zoho One and Zoho applications:</p>
+            <p>
+                <ul id="ul_k5b_lds_gkb">
+                    <li><xref href="#task_kj5_rjm_ggb/enable-phonebridge-zoho-one" format="dita"
+                            >Enable Phonebridge on Zoho One</xref></li>
+                    <li><xref href="#task_kj5_rjm_ggb/enable-phonebridge-zoho-apps" format="dita"
+                            >Enable Phonebridge on Zoho CRM, Zoho Mail or Zoho Recruit</xref></li>
+                </ul>
+            </p>
+            <dl>
+                <dlentry id="enable-phonebridge-zoho-one">
+                    <dt>Enable Phonebridge on Zoho One</dt>
+                    <dd>
+                        <ol>
+                            <li>Log in the Zoho One with super administrator account.</li>
+                            <li>Go to <menucascade>
+                                    <uicontrol>Marketplace</uicontrol>
+                                    <uicontrol>Telephone</uicontrol>
+                                </menucascade>.</li>
+                            <li>Click <uicontrol>Learn More</uicontrol> button.</li>
+                            <li>Click <uicontrol>ENABLE PHONEBRIDGE</uicontrol>.<p><image
+                                        href="../Images/zoho/zoho-enable-integrate-one.png" width="650"
+                                        id="image_wxn_1vm_gkb"/></p></li>
+                            <li>Back to PBX web interface, click <uicontrol>Next</uicontrol> in the
+                                    <uicontrol>Zoho Integration</uicontrol> page, <xref
+                                    href="#task_kj5_rjm_ggb/Authorize" format="dita">get Zoho user
+                                    consent</xref>.</li>
+                        </ol>
+                    </dd>
+                </dlentry>
+            </dl>
+            <dl>
+                <dlentry id="enable-phonebridge-zoho-apps">
+                    <dt>Enable Phonebridge on Zoho CRM, Zoho Mail or Zoho Recruit</dt>
+                    <dd>
+                        <ol>
+                            <li>Log in your Zoho application with super administrator account.</li>
+                            <li>Go to <menucascade>
+                                    <uicontrol>Setup</uicontrol>
+                                    <uicontrol>Channels</uicontrol>
+                                    <uicontrol>Telephone</uicontrol>
+                                </menucascade>.</li>
+                            <li>Click <uicontrol>ENABLE PHONEBRIDGE</uicontrol> button.<p><image
+                                        href="../Images/zoho/zoho-enable-integrate.png" width="650"
+                                        id="image_pfm_jqm_gkb"/></p></li>
+                            <li>Back to PBX web interface, click <uicontrol>Next</uicontrol> in the
+                                    <uicontrol>Zoho Integration</uicontrol> page, <xref
+                                    href="#task_kj5_rjm_ggb/Authorize" format="dita">get Zoho user
+                                    consent</xref>.</li>
+                        </ol>
+                    </dd>
+                </dlentry>
+            </dl>
+        </section>
+        <section id="Authorize">
+            <title>Step 3. Get Zoho User consent</title>
+            <p>
+                <note>Do NOT integrate your Zoho with multiple PBXs, or you cannot make calls and
+                    receive calls in Zoho.</note>
+            </p>
+            <p>
+                <ol id="ol_d4x_lls_ggb">
+                    <li>In the <uicontrol>Zoho Login Address</uicontrol> drop-down list, select your
+                        Zoho application address. <p><image href="../Images/zoho/zoho-user-authorize.png" width="500" id="image_aq2_b3r_rjb"/></p></li>
+                    <li>Click <uicontrol>Authorize</uicontrol>, the browser
+                        <?oxy_comment_start author="carol" timestamp="20191125T101619+0800" comment="优先考虑现在时态" flag="done"?>automatically
+                        opens<?oxy_comment_end?> the Zoho authentication page.<p><image
+                                href="../Images/zoho/zoho-user-authorize-accept.png" width="400"
+                                id="image_t1v_33r_rjb"/></p></li>
+                    <li>In the Zoho authentication page, click <uicontrol>Accept</uicontrol>, and
+                        allow the PBX to access data in Zoho account.</li>
+                    <li>Back to PBX <uicontrol>Zoho Integration</uicontrol> page.<p>If authorization
+                            success, the following page will appear, click
+                                <uicontrol>Continue</uicontrol>, and <xref href="#task_kj5_rjm_ggb/extension-assoicate" format="dita">associate
+                                Zoho user with PBX extension</xref>.</p><p><image href="../Images/zoho/zoho-authorize-success.png" id="image_lcm_1mw_rjb" width="300"/></p></li>
+                </ol>
+            </p>
+        </section>
+        <section id="extension-assoicate">
+            <title>Step 4. Associate Zoho users with PBX extensions</title>
+        </section>
+        <p>To allow Zoho users make calls on Zoho applications, you need to associate their Zoho
+            accounts and extensions.</p>
+        <p>
+            <ol id="ol_sg4_kts_ggb">
+                <li>In the <uicontrol>Zoho Integration</uicontrol> page, click <image href="../Images/ui_icons/refresh.png" width="20" id="image_mws_cts_ggb"/> to
+                    refresh the user list.</li>
+                <li>Associate Zoho users with PBX extensions:<ul id="ul_fxd_pqw_rjb">
+                        <li><b>Associate Automatically</b>: Zoho users and the extensions with the
+                            same email address will be associated directly.<ol id="ol_on3_qqw_rjb">
+                                <li>Click <uicontrol>Associate Automatically</uicontrol>.</li>
+                                <li>Click <uicontrol>Yes</uicontrol>.<p><image
+                                            href="../Images/zoho/zoho-extension-associate.png"
+                                            id="image_egr_znw_rjb"/></p></li>
+                            </ol></li>
+                        <li id="associate-manually"><b>Associate Manually</b>: If a user binds
+                            different email addresses to his/her Zoho account and PBX extension, you
+                            need to manually associate the user's Zoho User account and PBX
+                                extension.<ol id="ol_irh_nrw_rjb">
+                                <li>Beside the Zoho user, click <image
+                                        href="../Images/ui_icons/edit.png" width="20"
+                                        id="image_bxw_fxs_ggb"/>, select an extension.</li>
+                                <li>Click
+                                            <uicontrol>Ensure</uicontrol>.<p><?oxy_comment_start author="carol" timestamp="20191125T103025+0800" comment="这个图里面的zhoho 账号和pbx邮箱账号明显是两个人啊？
+一般一个人的两个邮箱账号只有有域名的差别。
+例如：
+sunmy@yeastar.com  sunmy123@gmail.com.
+
+截图的名字尽量规范：不要包含apple， cherry 等英文名。" flag="done"?><image
+                                            href="../Images/zoho/zoho-associate-extension.png"
+                                            id="image_gk3_gqw_rjb" width="650"
+                                        /><?oxy_comment_end?></p></li>
+                            </ol></li>
+                    </ul></li>
+            </ol>
+        </p>
+    </body>
+</topic>

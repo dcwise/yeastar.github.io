@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_rp5_2ql_2cb">
+    <title>Log in Linkus via QR Code</title>
+    <taskbody>
+        <context>
+            <p>
+                <note>
+                    <p>For security reason, your email server may intercept the QR code. If you
+                        don't receive the QR code, try to log in Linkus by other method.</p>
+                </note>
+            </p>
+        </context>
+        <steps id="steps_kgc_hql_2cb">
+            <step>
+                <cmd>Open the e-mail with the subject "Login Linkus Mobile Client" on your PC.</cmd>
+            </step>
+            <step>
+                <cmd>Open Linkus mobile client, tap the QR button, and scan the QR code in the
+                    e-mail. </cmd>
+                <info>The Linkus client will get the login information and log in
+                    automatically.</info>
+                <info><image href="../Images/admin/login_linkus_qr.png" height="450"
+                        id="image_edw_jql_2cb"/></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

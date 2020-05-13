@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="identify-callers-from-contacts">
+    <title>Identify Callers from Contacts</title>
+    <shortdesc>Yeastar Contacts feature allows users to identify incoming callers if the caller
+        information is saved in the Company Contacts or Personal Contacts.</shortdesc>
+    <body>
+        <section id="section_mjv_p5f_skb">
+            <title>Requirements</title>
+            <p>Identifying Caller ID is supported on all endpoints, including Linkus, desktop phone,
+                and other softphones.</p>
+            <p>
+                <dl>
+                    <dlentry>
+                        <dt>Identifying callers from Company Contacts</dt>
+                        <dd>Supported for the authorized users who have permissions to view or
+                            manage the Company Contacts. </dd>
+                        <dd>For more information of the permissions, see <xref
+                                href="configure-company-contacts-permissions-for-users.dita"/>.</dd>
+                    </dlentry>
+                </dl>
+                <dl>
+                    <dlentry>
+                        <dt>Identifying callers from Personal Contacts</dt>
+                        <dd>Supported for each extension user.</dd>
+                    </dlentry>
+                </dl>
+            </p>
+        </section>
+        <section id="section_llj_jwf_skb">
+            <title>Priority of Caller ID matching</title>
+            <p>If an incoming number is stored in Company Contacts, Personal Contacts, and mobile
+                phone book at the same time, the priority of Caller ID matching is as follows:</p>
+            <p>
+                <ol id="ol_vbx_rxf_skb">
+                    <li>Mobile phone book</li>
+                    <li>Company Contacts</li>
+                    <li>Personal Contacts</li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_jym_5xf_skb">
+            <title>Configure Caller ID Match</title>
+        </section>
+        <p>
+            <ol id="ol_inb_t2g_skb">
+                <li>Go to <menucascade>
+                        <uicontrol>Contacts</uicontrol>
+                        <uicontrol>Settings</uicontrol>
+                    </menucascade>.</li>
+                <li>Select the checkbox of <uicontrol>Enable Caller ID Match</uicontrol>.</li>
+                <li>Specify to match the exact caller ID or minimum number of caller ID digits.<p>
+                        <ul id="ul_jnb_t2g_skb">
+                            <li><uicontrol>Exact Match</uicontrol>: Only when the incoming Caller ID
+                                matches exactly your existing contact number will the contact name
+                                be displayed.</li>
+                            <li><uicontrol>Fuzzy matching</uicontrol>: When the last few digits of
+                                the incoming Caller ID matches that of your existing contact number,
+                                the contact name will be displayed. The default value is 7.</li>
+                        </ul>
+                    </p></li>
+                <li>In the <uicontrol>Name Display Format</uicontrol> field, select the contact
+                    display order.<ul id="ul_ucy_11q_rkb">
+                        <li><uicontrol>First Name Last Name</uicontrol></li>
+                        <li><uicontrol>Last Name First Name</uicontrol></li>
+                    </ul></li>
+                <li>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</li>
+            </ol>
+        </p>
+        <example><b>Example</b><p>The contact Dora's phone number 12345678 is saved in Company
+                Contacts. </p><p>
+                <ul id="ul_fvw_52g_skb">
+                    <li><uicontrol>Exact Match</uicontrol> is selected: <p>
+                            <ul>
+                                <li>If the incoming caller ID is 12345678, the contact name "Dora"
+                                    will be displayed.</li>
+                                <li>If the incoming caller ID is +012345678, the contact name will
+                                    not be displayed.</li>
+                            </ul>
+                        </p></li>
+                    <li><uicontrol>Fuzzy matching last 8 digits</uicontrol> is configured:<p>
+                            <ul id="ul_kky_z2g_skb">
+                                <li>If the incoming caller ID is +012345678, the contact name "Dora"
+                                    will be displayed.</li>
+                                <li>If the incoming caller ID is 62345678, the contact name "Dora"
+                                    will not be displayed.</li>
+                            </ul>
+                        </p></li>
+                </ul>
+            </p></example>
+    </body>
+</topic>

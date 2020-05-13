@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_xdl_nxr_zcb">
+    <title>Log in the PBX Web Interface</title>
+    <taskbody>
+        <context>Your administrator will send an email that contains the login information to you.
+            Check the information in the email, and log in the PBX web interface.<p>
+                <note> If you didn't receive the email, contact your administrator to get your
+                    extension information and the login information.</note>
+            </p></context>
+        <steps id="steps_owp_sfs_zcb">
+            <step>
+                <cmd>Open the email that your administrator sent to you, click the password reset
+                    link to set your login password.</cmd>
+                <info>
+                    <note> You need to reset your password in 24 hours after you receive the email,
+                        or the password reset link will be invalid.</note>
+                </info>
+                <info><image href="../Images/user/reset_password.png" id="image_pm4_qhs_zcb"
+                        width="400"/></info>
+            </step>
+            <step>
+                <cmd>Visit the domain of your PBX, enter your email address and your password, click
+                        <uicontrol>Login</uicontrol>. </cmd>
+                <info><image href="../Images/user/cloudpbx_login.png" width="400"
+                        id="image_odf_kgx_zcb"/></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title/>
+    <topicmeta>
+        <author type="contributor">Carol</author>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/05/21"/>
+            <!--Carol-->
+            <revised modified="2018/06/20"/>
+            <!--Carol-->
+            <revised modified="2018/06/22"/>
+            <!--Carol-->
+            <revised modified="2018/06/25"/>
+            <!--Carol-->
+            <revised modified="2018/06/26"/>
+            <!--Carol-->
+            <revised modified="2018/06/27"/>
+            <!--Carol-->
+            <revised modified="2018/07/02"/>
+            <!--Carol-->
+            <revised modified="2018/07/04"/>
+            <!--Carol-->
+            <revised modified="2018/07/19"/>
+            <!--Carol-->
+            <revised modified="2018/07/31"/>
+            <!--Carol-->
+            <revised modified="2018/08/01"/>
+            <!--Carol-->
+            <revised modified="2018/09/18"/>
+            <!--Carol-->
+            <revised modified="2018/09/19"/>
+            <!--Carol-->
+            <revised modified="2018/09/25"/>
+            <!--Carol-->
+            <revised modified="2018/10/10"/>
+            <!--Carol-->
+            <revised modified="2018/10/17"/>
+            <!--Carol-->
+            <revised modified="2018/10/25"/>
+            <!--Carol-->
+            <revised modified="2018/10/26"/>
+            <!--Carol-->
+            <revised modified="2018/10/30"/>
+            <!--Carol-->
+            <revised modified="2018/10/31"/>
+            <!--Carol-->
+            <revised modified="2018/11/02"/>
+            <!--Carol-->
+            <revised modified="2018/11/05"/>
+            <!--Carol-->
+            <revised modified="2018/11/29"/>
+            <!--Carol-->
+            <revised modified="2018/11/30"/>
+            <!--Carol-->
+            <revised modified="2018/12/13"/>
+            <!--Carol-->
+            <revised modified="2018/12/18"/>
+            <!--Carol-->
+            <revised modified="2019/01/10"/>
+        </critdates>
+    </topicmeta>
+    <topichead navtitle="PBX">
+        <topicref href="../topic/v30.13.0.30.dita"/>
+        <topicref href="../topic/v30.13.0.15.dita"/>
+        <topicref href="../topic/v30.12.0.9.dita"/>
+        <topicref href="../topic/v30.12.0.7.dita"/>
+        <topicref href="../topic/v30.11.0.28.dita"/>
+        <topicref href="../topic/v30.11.0.8.dita"/>
+        <topicref href="../topic/v30.11.0.7.dita"/>
+        <topicref href="../topic/v30.10.0.75.dita"/>
+        <topicref href="../topic/v30.10.0.67.dita"/>
+        <topicref href="../topic/v30.10.0.59.dita"/>
+        <topicref href="../topic/v30.10.0.17.dita"/>
+        <topicref href="../topic/v30.10.0.16.dita"/>
+        <topicref href="../topic/v30.10.0.9.dita"/>
+        <topicref href="../topic/v30.9.0.20.dita"/>
+        <topicref href="../topic/v30.9.0.5.dita"/>
+        <topicref href="../topic/v30.8.0.14.dita"/>
+        <topicref href="../topic/v30.8.0.8.dita"/>
+        <topicref href="../topic/v30.7.0.50.dita"/>
+        <topicref href="../topic/v30.7.0.35.dita"/>
+        <topicref href="../topic/v30.7.0.27.dita"/>
+        <topicref href="../topic/v30.7.0.11.dita"/>
+        <topicref href="../topic/v30.6.0.20.dita"/>
+        <topicref href="../topic/v30.6.0.16.dita"/>
+        <topicref href="../topic/v30.5.0.30.dita"/>
+        <topicref href="../topic/v30.5.0.8.dita"/>
+        <topicref href="../topic/v30.4.0.25.dita"/>
+        <topicref href="../topic/v30.4.0.6.dita"/>
+        <topicref href="../topic/v30.3.0.17.dita"/>
+        <topicref href="../topic/v30.3.0.10.dita"/>
+        <topicref href="../topic/v30.2.0.27.dita"/>
+        <topicref href="../topic/v30.2.0.8.dita"/>
+        <topicref href="../topic/v30.1.0.16.dita"/>
+        <topicref href="../topic/v30.1.0.13.dita"/>
+        <topicref href="../topic/v30.1.0.10.dita"/>
+        <topicref href="../topic/v30.1.0.7.dita"/>
+    </topichead>
+    <topichead navtitle="Apps">
+        <topicref href="../topic/release_auto_provision_s.dita"/>
+        <topicref href="../topic/release_linkus_server_s.dita"/>
+        <topicref href="../topic/release_qm_s.dita"/>
+        <topicref href="../topic/release_vpn_server_s.dita"/>
+        <topicref href="../topic/release_ldap_server_s.dita"/>
+        <topicref href="../topic/release_hotel_s.dita"/>
+        <topicref href="../topic/release_billing_s.dita"/>
+        <topicref href="../topic/release_conference_panel_s.dita"/>
+        <topicref href="../topic/release_char_s.dita"/>
+        <topicref href="../topic/release_zoho_s.dita"/>
+    </topichead>
+</map>

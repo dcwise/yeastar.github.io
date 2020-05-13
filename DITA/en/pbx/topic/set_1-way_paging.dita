@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_a13_23p_32b">
+    <title>Set up 1-Way Paging</title>
+    <shortdesc>Paging is used to make an announcement over the speakerphone to a phone or group of
+        phones. The called parties will not ring, but instead answer immediately into speakerphone
+        mode. </shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/07/02"/>
+            <!--Carol-->
+            <revised modified="2018/07/02"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <context>
+            <p>
+                <note>Paging is typically one way for announcements only.</note>
+            </p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol>PBX</uicontrol>
+                        <uicontrol>Call Features</uicontrol>
+                        <uicontrol>Paging/Intercom</uicontrol>
+                    </menucascade>, click <uicontrol>Add</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Set a 1-Way paging group.</cmd>
+                <info><image href="../Images/admin/add_1-way_paging.png" width="650"
+                        id="image_gfm_1jp_32b"/></info>
+                <choices>
+                    <choice><uicontrol>Number</uicontrol>: Use the default or specify an number for
+                        the paging group.</choice>
+                    <choice><uicontrol>Name</uicontrol>: Enter a name for the paging group.</choice>
+                    <choice><uicontrol>Type</uicontrol>: Choose <codeph>1-Way
+                        Paging</codeph>.</choice>
+                    <choice><uicontrol>Dial * to Answer</uicontrol>: If this option is checked, the
+                        paging group members can dial <codeph>*</codeph> to talk to the paging
+                        initiator. <note>When a member dials <codeph>*</codeph>, the group
+                            announcement will terminate, and the member who dials <codeph>*</codeph>
+                            can have a private call with the paging initiator.</note></choice>
+                    <choice><uicontrol>Member</uicontrol>: Choose the group members to the
+                            <uicontrol>Selected</uicontrol> box.</choice>
+                </choices>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</cmd>
+            </step>
+        </steps>
+        <result id="result_zwt_2kp_32b">When you dial the paging group number, the members in the
+            group will hear the announcement.</result>
+    </taskbody>
+</task>

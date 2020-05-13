@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_psv_f1c_5cb">
+    <title>Register Yealink Phone with <ph keyref="product_name"/></title>
+    <shortdesc>This guide is applicable to all the Yealink phones and <ph keyref="product_name"/>
+        <ph product="cloudpbx">v81.8.0.7</ph><ph product="s-series">v30.8.0.14</ph>.</shortdesc>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2019/01/22"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <context>
+            <p conref="register_htek.dita#task_n3s_q1c_5cb/different_phone_web"/>
+        </context>
+        <steps id="steps_h42_2vm_ycb">
+            <step>
+                <cmd>Log in the web page of the phone.</cmd>
+                <choices>
+                    <choice><uicontrol>Username</uicontrol>: admin</choice>
+                    <choice><uicontrol>Password</uicontrol>: admin</choice>
+                </choices>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Account</uicontrol> tab, and choose one account to
+                    configure.</cmd>
+                <info><image href="../Images/admin/register_yealink1.png" width="650"
+                        id="image_asf_nvm_ycb"/></info>
+                <choices>
+                    <choice><uicontrol>Account</uicontrol>: Choose one account.</choice>
+                    <choice><uicontrol>Line Active</uicontrol>: Enabled</choice>
+                    <choice><uicontrol>Label</uicontrol>: Set the name you want to appear on the
+                        phone screen.</choice>
+                    <choice><uicontrol>Display Name</uicontrol>: Set the name you want to appear on
+                        the other phone's screen when calling out.</choice>
+                    <choice><uicontrol>Register Name</uicontrol>: Fill in the extension's
+                            <uicontrol>Register Name</uicontrol>.</choice>
+                    <choice><uicontrol>User Name</uicontrol>: Fill in the extension number.</choice>
+                    <choice><uicontrol>Password</uicontrol>: Fill in the extension's
+                            <uicontrol>Registration Password</uicontrol>.</choice>
+                    <choice><uicontrol>Server Host</uicontrol>: Fill in the domain<ph
+                            product="s-series"> or IP address</ph> of your PBX.</choice>
+                    <choice><uicontrol>Port</uicontrol>: Fill in the same SIP port of the
+                        PBX.</choice>
+                    <choice><uicontrol>Transport</uicontrol>: Choose the same transport protocol of
+                        your PBX.</choice>
+                </choices>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Confirm</uicontrol>.</cmd>
+                <info>If the extension is registered, you can see the <uicontrol>Register
+                        Status</uicontrol> shows "Registered".<p><image
+                            href="../Images/admin/register_yealink2.png" id="image_zc3_xwm_ycb"
+                            width="650"/></p></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

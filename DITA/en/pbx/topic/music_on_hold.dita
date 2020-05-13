@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_f1w_zwc_5cb">
+  <title>Music on Hold (MoH)</title>
+  <shortdesc>Music on hold (MoH) is the business practice of playing recorded music to fill the
+    silence that would be heard by callers who have been placed on hold. </shortdesc>
+  <prolog>
+    <critdates>
+      <!--Carol-->
+      <revised modified="2018/06/14"/>
+    </critdates>
+  </prolog>
+  <body>
+    <p>The PBX has a default MoH playlist, you can add MoH playlists and upload music files to the
+      PBX. </p>
+    <p><image href="../Images/admin/default_moh.png" width="650" id="image_cvr_w4j_5cb"/></p>
+    <note type="notice"> The default MoH files are distributed under the Creative Commons
+      Attribution-ShareAlike3.0 license through explicit permission from their authors. </note>
+  </body>
+</topic>

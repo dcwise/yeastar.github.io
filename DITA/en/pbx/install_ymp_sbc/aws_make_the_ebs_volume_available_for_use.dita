@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_gtf_mmv_hfb">
+    <title>2) Make the EBS Volume Available for Use </title>
+    <shortdesc>To make the EBS volume available for use, you need to format and mount the EBS volume
+        to YMP instance.</shortdesc>
+    <taskbody>
+        <steps id="steps_zsn_xcf_hfb">
+            <step>
+                <cmd>Log in YMP server via SSH.</cmd>
+            </step>
+            <step>
+                <cmd>Run <codeph>sudo -i</codeph> to get administrator privileges.</cmd>
+            </step>
+            <step>
+                <cmd>Run the <codeph>lsblk</codeph> command to view the data disk that is attached
+                    to your instance and find the disk that you want to format and mount.</cmd>
+                <info>
+                    <codeblock>root@XXXXXXX: lsblk
+NAME  MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+xvda    202:0    0    8G  0 disk 
+└─xvda1 202:1    0    8G  0 part /
+xvdf    202:80   0  100G  0 disk </codeblock>
+                </info>
+                <info>The output removes the <codeph>/dev/</codeph> prefix from full device
+                    paths.</info>
+                <info>In this example, <codeph>/dev/xvda1</codeph> is mounted as the root device,
+                    and <codeph>/dev/xvdf</codeph> is attached, but has not been mounted yet.</info>
+            </step>
+            <step>
+                <cmd>Create a single-partition data disk and execute the following commands in
+                    sequence:</cmd>
+                <substeps id="substeps_atn_xcf_hfb">
+                    <substep>
+                        <cmd>Run <codeph>fdisk /dev/xvdf</codeph> to partition the data disk.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Enter <codeph>n</codeph> and press the <uicontrol>Enter</uicontrol> key
+                            to create a new partition.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Enter <codeph>p</codeph> and press the <uicontrol>Enter</uicontrol> key
+                            to select the primary partition.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Enter the partition number. Press the <uicontrol>Enter</uicontrol> key
+                            to use the default value.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Enter the first available sector number. Press the
+                                <uicontrol>Enter</uicontrol> key to use the default value.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Enter a number for the last sector. Press the
+                                <uicontrol>Enter</uicontrol> key to use the default value.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Run <codeph>wq</codeph> and press the <uicontrol>Enter</uicontrol>
+                            key.</cmd>
+                    </substep>
+                </substeps>
+                <info>
+                    <codeblock>root@XXXXXXX:~# fdisk /dev/xvdf
+
+Welcome to fdisk (util-linux 2.27.1).
+Changes will remain in memory only, until you decide to write them.
+Be careful before using the write command.
+
+Device does not contain a recognized partition table.
+Created a new DOS disklabel with disk identifier 0xbde11612.
+
+Command (m for help): n
+Partition type
+   p   primary (0 primary, 0 extended, 4 free)
+   e   extended (container for logical partitions)
+Select (default p): p
+Partition number (1-4, default 1): 
+First sector (2048-209715199, default 2048): 
+Last sector, +sectors or +size{K,M,G,T,P} (2048-209715199, default 209715199): 
+Created a new partition 1 of type 'Linux' and of size 100 GiB.
+
+Command (m for help): wq
+The partition table has been altered.
+Calling ioctl() to re-read partition table.
+Syncing disks.</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Run the <codeph>fdisk -l</codeph> command to view the new partition. If the
+                    following information appears, the new partition /<filepath>dev/xvdf1</filepath>
+                    is created.</cmd>
+                <info>
+                    <codeblock>root@XXXXXXX:~# fdisk -l
+Disk /dev/ram0: 64 MiB, 67108864 bytes, 131072 sectors
+....
+....
+Device     Boot Start      End  Sectors Size Id Type
+/dev/xvda1 *     2048 16777182 16775135   8G 83 Linux
+
+Disk /dev/xvdf: 100 GiB, 107374182400 bytes, 209715200 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0xbde11612
+
+Device     Boot Start       End   Sectors  Size Id Type
+/dev/xvdf1       2048 209715199 209713152  100G 83 Linux</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Run the command <codeph>mkfs.ext4 /dev/xvdf1</codeph> to create a file system
+                    on the new partition. </cmd>
+            </step>
+            <step>
+                <cmd>Run the command <codeph>cp /etc/fstab /etc/fstab.bak</codeph> to back up the
+                    data disk.</cmd>
+            </step>
+            <step>
+                <cmd>Run the command <codeph>blkid</codeph> to find the UUID of the device.</cmd>
+                <info>
+                    <codeblock>root@XXXXXXX:~# blkid
+/dev/xvda1: LABEL="/" UUID="ca774df7-756d-4261-a3f1-76038323e572" TYPE="xfs" PARTLABEL="Linux" PARTUUID="02dcd367-e87c-4f2e-9a72-a3cf8f299c10"
+/dev/xvdf1: UUID="<varname>aebf131c-6957-451e-8d34-ec978d9581ae</varname>" TYPE="xfs"</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Run the command <codeph>echo
+                            UUID=<varname>aebf131c-6957-451e-8d34-ec978d9581ae</varname>
+                        /mnt/autorecording ext4 defaults,nofail 0 0 >> /etc/fstab</codeph> to write
+                    new partition information to <filepath>/etc/fstab</filepath>.</cmd>
+            </step>
+            <step>
+                <cmd>View the new partition information in <filepath>/etc/fstab</filepath>: Run the
+                    command <codeph>cat /etc/fstab</codeph>.</cmd>
+                <info>
+                    <codeblock>root@XXXXXXX:~# cat /etc/fstab
+LABEL=cloudimg-rootfs	/	 ext4	defaults,discard	0 0
+UUID=<varname>aebf131c-6957-451e-8d34-ec978d9581ae</varname> /mnt/autorecording ext4 defaults 0 0</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Create a folder <filepath>autorecording</filepath> under
+                        <filepath>/mnt</filepath>: Run the command <codeph>mkdir -p
+                        /mnt/autorecording</codeph>.</cmd>
+            </step>
+            <step>
+                <cmd>Mount the file system: Run the command <codeph>mount
+                            UUID=<varname>aebf131c-6957-451e-8d34-ec978d9581ae</varname>
+                        /mnt/autorecording</codeph>.</cmd>
+            </step>
+            <step>
+                <cmd>To view disk space and usage: Run the command <codeph>df -h</codeph>.</cmd>
+                <info>
+                    <p> If the new file system information appears in the returned results, the
+                        mount operation is successful and you can use the new file system.</p>
+                </info>
+                <info>
+                    <codeblock>root@XXXXXXX:~# df -h
+root@ip-10-0-1-53:~# df -h
+Filesystem      Size  Used Avail Use% Mounted on
+udev            488M     0  488M   0% /dev
+tmpfs           100M  3.3M   96M   4% /run
+/dev/xvda1      7.7G  960M  6.8G  13% /
+tmpfs           496M     0  496M   0% /dev/shm
+tmpfs           5.0M     0  5.0M   0% /run/lock
+tmpfs           496M     0  496M   0% /sys/fs/cgroup
+/dev/loop0       88M   88M     0 100% /snap/core/5328
+/dev/loop1       13M   13M     0 100% /snap/amazon-ssm-agent/495
+tmpfs           100M     0  100M   0% /run/user/1000
+tmpfs           100M     0  100M   0% /run/user/1001
+/dev/xvdf1       99G   60M   94G   1% /mnt/autorecording</codeblock>
+                </info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

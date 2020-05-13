@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_fmp_yzh_ffb">
+    <title>IP Auto Defense</title>
+    <shortdesc><ph keyref="product_name"/> has default auto defense rules to prevent massive
+        connection attempts or brute force attacks. </shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/09/21"/>
+            <!--Carol-->
+            <revised modified="2018/09/21"/>
+        </critdates>
+    </prolog>
+    <body>
+        <p>
+            <note type="important">
+                <ul id="ul_g3j_p1z_zdb">
+                    <li>Do NOT delete the default IP defense rules.</li>
+                    <li>Change the default IP defense rules under the instruction of our
+                        support.</li>
+                </ul>
+            </note>
+        </p>
+        <p>Go to <menucascade>
+                <uicontrol>Settings</uicontrol>
+                <uicontrol>System</uicontrol>
+                <uicontrol>Security</uicontrol>
+                <uicontrol>IP Auto Defense</uicontrol>
+                <uicontrol>Auto Defense Rules</uicontrol>
+            </menucascade> to configure auto defense rules.</p>
+        <p><image href="../Images/admin/ip_auto_defense_rule.png" id="image_hcd_jnx_zdb"/></p>
+        <p>
+            <ul id="ul_crp_jnx_zdb">
+                <li><uicontrol>Port</uicontrol>: The auto defense port.</li>
+                <li><uicontrol>Protocol</uicontrol>: The protocol of the auto defense port.</li>
+                <li><uicontrol>Number of IP Packets</uicontrol>: The number of IP Packets permitted
+                    within a specific time interval.</li>
+                <li><uicontrol>Time Interval</uicontrol>: The time interval to receive IP Packets.
+                        <p>For example, <uicontrol>Number of IP Packets</uicontrol> is
+                            <codeph>90</codeph> and <uicontrol>Time Interval</uicontrol> is
+                            <codeph>60</codeph>; The PBX will block the IP that sends more than 90
+                        IP packets in 60 seconds.</p></li>
+            </ul>
+        </p>
+    </body>
+</topic>

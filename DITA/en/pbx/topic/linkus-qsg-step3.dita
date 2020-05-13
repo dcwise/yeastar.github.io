@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="task_syw_2xz_ghb">
+    <title>Step3. Send Linkus Emails to Users</title>
+    <shortdesc>Linkus server has an email template that contains instructions on how to log in via
+        QR code and link. You can send Linkus emails to allow users to log in Linkus clients by
+        themselves.</shortdesc>
+    <body>
+        <section id="send-linkus-email" >
+            <title>Send Linkus emails</title>
+            <p><b>Prerequisite</b>:</p>
+            <p>Make sure the following settings are configured:</p>
+            <p>
+                <ul id="ul_ytj_4sq_ngb">
+                    <li>The <xref href="email.dita#concept_ls5_r3k_xdb">System Email </xref> is
+                        working.</li>
+                </ul>
+            </p>
+            <ul id="ul_m4v_lpm_2fb">
+                <li>Email addresses are bound with the extensions.</li>
+            </ul>
+            <p>
+                <ol>
+                    <li> Log in the PBX web interface, go to <menucascade>
+                            <uicontrol>Linkus</uicontrol>
+                            <uicontrol product="k2 s-series"> Linkus Client Settings</uicontrol>
+                        </menucascade>.</li>
+                    <li product="k2 s-series"> To send Linkus emails for all users, do the followings:<itemgroup>
+                            <note type="tip">PBX only supports selecting all the extensions for the
+                                current page. You can set a larger <uicontrol>Displaying</uicontrol>
+                                value to display more extensions on one page.</note>
+                        </itemgroup><ol id="ol_yb2_t3h_hhb">
+                            <li>In the right-bottom corner, set a larger
+                                    <uicontrol>Displaying</uicontrol> value.</li>
+                            <li>Select the checkbox for all the extensions.</li>
+                            <li>Click <uicontrol>Send Email</uicontrol>.</li>
+                            <li importance="optional"> If you have more extensions in the next page,
+                                go to next page, and repeat step <b>a</b> - <b>d</b>. </li>
+                        </ol><p><image href="../Images/admin/send_linkus__emails.png" width="650"
+                                id="image_wpz_chm_2fb"/></p> Click Welcome Email.On the Send Welcome
+                        Email page, select All Extensions.</li>
+                    <li product="cloudpbx"> To send Linkus email to all the users, do the
+                            followings:<ol id="ol_ac2_t3h_hhb">
+                            <li>Click <uicontrol>Welcome Email</uicontrol>.</li>
+                            <li>On the <uicontrol>Send Welcome Email</uicontrol> page, select
+                                    <uicontrol>All Extensions</uicontrol>.<p><image
+                                        href="../Images/admin/linkus-welcome-email-all-extensions.jpg"
+                                        width="650" id="image_u4k_5cp_mgb"/></p></li>
+                            <li>Click <uicontrol>Send</uicontrol>. </li>
+                        </ol>
+                    </li>
+                    <li> To send Linkus email to a specific user, do the followings:<ol
+                            id="ol_cc2_t3h_hhb">
+                            <li> Search the user by extension number or name.</li>
+                            <li> Select the desired extension user.</li>
+                            <li product="cloudpbx"> Click <uicontrol>Welcome Email</uicontrol>.</li>
+                            <li product="cloudpbx"> On the <uicontrol>Send Welcome Email</uicontrol>
+                                page, click <uicontrol>Send</uicontrol>.</li>
+                            <li product="k2 s-series"> Click <uicontrol>Send Email</uicontrol>.
+                            </li>
+                        </ol><p>
+                            <image href="../Images/admin/send_linkus__email_to_a_user.jpg"
+                                id="image_wyx_xjm_2fb" width="650" product="k2 s-series"/></p><p>
+                            <image
+                                href="../Images/admin/linkus-welcome-email-specific-extension.jpg"
+                                width="650" id="image_mjl_2dp_mgb" product="cloudpbx"/>
+                        </p></li>
+                </ol>
+            </p>
+        </section>
+    </body>
+</topic>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_tps_gkm_ldb">
+    <title>Reboot the PBX Immediately</title>
+    <shortdesc>Reboot the PBX  immediately via the PBX web interface.</shortdesc>
+    <taskbody>
+        <context>
+            <p>
+                <note>When the PBX is rebooting, all the on-going calls will be terminated.</note>
+            </p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Maintenance</uicontrol>
+                        <uicontrol>Reboot</uicontrol>
+                    </menucascade>, click <uicontrol>Reboot</uicontrol>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

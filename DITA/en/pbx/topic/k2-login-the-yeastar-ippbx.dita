@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="k2-login-the-yeastar-k2-ippbx">
+    <title>Log in the Yeastar K2 IPPBX </title>
+    <shortdesc>After installing Yeastar K2 IPPBX system successfully, you can log in your PBX using
+        a local browser.</shortdesc>
+    <body>
+        <p>The default IP address of the PBX is 192.168.5.150. To log in the PBX, you need to make
+            sure that your server is in the same network segment of 192.168.5.X.<ol
+                id="ol_bkm_43z_b3b">
+                <li>Launch your Web browser, enter the default IP address, and press
+                        <uicontrol>Enter</uicontrol>.<p>A connection warning appears. Ignore the
+                        warning and proceed to the Yeastar IPPBX web page.</p><p><image
+                            href="../Images/admin/login-yeastar-k2.png" width="500"
+                            id="image_phj_nf4_f3b"/></p></li>
+                <li>Enter the default user name and password, click <uicontrol>Login</uicontrol>.<p>
+                        <ul id="ul_ptw_fjz_b3b">
+                            <li>Username: admin</li>
+                            <li>Password: password</li>
+                        </ul>
+                    </p></li>
+            </ol></p>
+    </body>
+</topic>

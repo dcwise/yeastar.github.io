@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_n4x_2z3_pdb">
+    <title>Version 1.1.5</title>
+    <abstract>Released Date: August 23, 2016</abstract>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/06/20"/>
+        </critdates>
+    </prolog>
+    <body>
+        <section id="section_fck_mbx_pdb">
+            <title>New Feature</title>
+            <p><image href="../Images/horizon.png" id="image_gck_mbx_pdb"/></p>
+            <p>
+                <ul>
+                    <li>Added SLA feature.</li>
+                    <li>Added SIP “Jitter Buffer” settings.</li>
+                    <li>Added support for importing and exporting extensions.</li>
+                    <li>Added support for the following Tone Regions: Turkey, Korea, Serbia,
+                        Panama.</li>
+                    <li>Added “Echo Cancellation” setting on GSM/3G trunk and FXO trunk.</li>
+                    <li>Added support for registering SIP trunk with random SIP port.</li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_bwg_nbx_pdb">
+            <title>Optimization</title>
+            <p><image href="../Images/horizon.png" id="image_cwg_nbx_pdb"/></p>
+            <p>
+                <ul>
+                    <li>AutoCLIP routing could match incoming numbers with area codes and special
+                        character “+”.</li>
+                    <li>The callback list will display each callback’s detailed destination.</li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_s4y_nbx_pdb">
+            <title>Fixed Bug</title>
+            <p><image href="../Images/horizon.png" id="image_t4y_nbx_pdb"/></p>
+            <p>
+                <ul id="ul_smp_b2j_pdb">
+                    <li>Fixed the DNS SRV Lookup issue: if the DNS SRV analysis result was a domain,
+                        a VoIP trunk registered using the domain would not work.</li>
+                    <li>Fixed VoIP Trunk issue: if entering an IP address in the “Hostname/IP” field
+                        and entering a domain in the “Domain” field, the trunk could not be
+                        registered.</li>
+                    <li>Fixed the queue ring strategy issue: if a queue agent has registered his own
+                        extension number on multiple phones, incoming calls could only reach one of
+                        the agent’s phones.</li>
+                    <li>Fixed the compatibility issue with VoIP provider netelip.</li>
+                    <li>Fixed the issue that sending email to SMS would fail if the content exceeded
+                        the length limit.</li>
+                    <li>Fixed the issue that the system would automatically make outbound calls
+                        through FXO trunks.</li>
+                    <li>Fixed the Holiday issue: the holiday worked based on Time Zone GMT +0.</li>
+                    <li>Fixed the E1 trunk issue: the call quality was bad when using the E1
+                        trunk.</li>
+                </ul>
+            </p>
+        </section>
+    </body>
+</topic>

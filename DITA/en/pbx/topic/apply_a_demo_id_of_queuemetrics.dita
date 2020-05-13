@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_bct_xwt_vdb">
+    <title>Apply a Demo ID of QueueMetrics</title>
+    <shortdesc>The QueueMetrics Integration App provides 30-days free trial. You can apply a demo ID
+        of QueueMetrics on the PBX, and test the integration by the demo ID.</shortdesc>
+    <taskbody>
+        <context>
+            <p>
+                <note>You can apply only one demo ID of QueueMetrics on one PBX.</note>
+            </p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Log in the PBX web interface, go to <uicontrol>QueueMetrics
+                        Integration</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Choose the call center type to <codeph>QueueMetrics Live</codeph>.</cmd>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>I wanna create a QueueMetrics ID</uicontrol>.</cmd>
+                <info><image href="../Images/admin/apply_queue_metricslive.png" width="650"
+                        id="image_jxy_nxt_vdb"/></info>
+            </step>
+            <step>
+                <cmd>Enter your desired ID, password and other information.</cmd>
+                <info><image href="../Images/admin/apply_queue_metricslive2.png"
+                        id="image_lln_sxt_vdb"/></info>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Next</uicontrol>.</cmd>
+                <stepresult>The PBX will send you an email to activate your QueueMetrics Live ID.
+                </stepresult>
+            </step>
+        </steps>
+    </taskbody>
+</task>

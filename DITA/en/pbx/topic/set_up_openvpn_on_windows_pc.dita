@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_j3r_5gb_5db">
+    <title>Set up OpenVPN on Windows PC</title>
+    <shortdesc>Set up your windows PC as an OpenVPN client, and access the Yeastar S-Series VoIP PBX
+        via VPN network. </shortdesc>
+    <conbody>
+        <image href="../Images/admin/vpn_server_windows.png" width="700" id="image_byj_jwc_5db"/>
+    </conbody>
+</concept>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_kzd_png_tdb">
+    <title>VoIP Trunks Introduction</title>
+    <shortdesc>VoIP Trunks are phone lines that transmits calls over the Internet. A VoIP provider
+        can assign a local number to one or more cities or countries and route it to the PBX phone
+        system. Usually VoIP trunks are cheaper than traditional PSTN trunks.</shortdesc>
+    <conbody>
+        <section id="section_bhb_3n3_t3b" product="s-series">
+            <title>SIP protocol and &amp; IAX2 protocol</title>
+            <p><ph keyref="product_name"/> supports VoIP trunk based on SIP (Session Initiation
+                Protocol) protocol and IAX (Inter-Asterisk eXchange ) protocol. <ul
+                    id="ul_e3d_pn3_t3b">
+                    <li><b>SIP protocol</b><p>SIP ( Session Initiation Protocol ) is a multimedia
+                            communication protocol developed by the IETF ( Internet Engineering Task
+                            Force ), an application-layer control (signaling) protocol for creating,
+                            modifying, and terminating sessions with one or more
+                        participants.</p></li>
+                </ul><ul id="ul_orn_qn3_t3b">
+                    <li><b>IAX2 protocol</b><p>IAX2 is a VoIP protocol native to Asterisk. IAX2 is
+                            attractive in bandwidth conservation and NAT traversal. IAX2 is not the
+                            an IETF protocol, it is not supported widely and is used
+                        rarely.</p></li>
+                </ul></p>
+        </section>
+        <section id="section_wcf_lj5_mfb">
+            <title>VoIP Trunk Types</title>
+            <p><ph keyref="product_name"/> supports the following VoIP trunk types:</p>
+            <p>
+                <ul id="ul_qzz_nj5_mfb">
+                    <li><b>VoIP Register Trunk</b>: Registration based VoIP trunk. VoIP Register
+                        Trunk uses the username and password for registration with SIP
+                        providers.</li>
+                </ul>
+                <ul id="ul_c55_pj5_mfb" product="cloudpbx">
+                    <li><b>VoIP Peer Trunk</b>: Uses the IP address &amp; port or domain of PBX for
+                        authentication or connect PBX directly to VoIP provider's dedicated network.
+                        Your VoIP provider route incoming and outgoing calls based on the DID
+                        number, PBX port or PBX domain, or route calls by a private network.</li>
+                </ul>
+                <ul id="peer-trunk-s">
+                    <li product="s-series">
+                        <p><b>VoIP Peer Trunk</b>: IP based VoIP trunk. Uses the IP address and port
+                            of PBX for authentication. </p>
+                    </li>
+                </ul>
+                <ul id="ul_krc_sj5_mfb">
+                    <li><b>VoIP Account Trunk</b><p>Account Trunk is designed for connection between
+                                <ph keyref="product_name"/> and other devices. <ph
+                                keyref="product_name"/> will act as a VoIP account provider, the
+                            other device should register this account to connect to <ph
+                                keyref="product_name"/>.</p></li>
+                    <li product="cloudpbx"><b>WebRTC Trunk</b><p>A WebRTC (Web Real-Time
+                            Communication) trunk is used to set up WebRTC Click to Call. After you
+                            create a WebRTC trunk on the <ph keyref="product_name"/>, a link will be
+                            generated automatically.</p></li>
+                </ul>
+            </p>
+        </section>
+    </conbody>
+</concept>

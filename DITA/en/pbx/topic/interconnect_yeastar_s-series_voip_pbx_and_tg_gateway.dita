@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_aqr_sv5_1fb">
+    <title>Interconnect Yeastar S-Series VoIP PBX and TG Gateway</title>
+    <shortdesc>Connect Yeastar S-Series VoIP  PBX and Yeastar TG gateway to extend GSM/3G/4G
+        trunks.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/09/05"/>
+            <!--Carol-->
+            <revised modified="2018/09/05"/>
+            <!--Carol-->
+            <revised modified="2018/12/06"/>
+        </critdates>
+    </prolog>
+    <body>
+        <p>In the following instruction, we tested with Yeastar S300 v30.10.0.28 and Yeastar TG200
+            v91.2.0.4, the two devices are in the same local network.</p>
+        <p>After connecting the Yeastar S300 and the Yeastar TG200, the Yeastar S300 users can
+            achieve the followings:</p>
+        <p>
+            <ul id="ul_whq_xv5_1fb">
+                <li>Make outbound calls through GSM/3G/4G trunks of TG400</li>
+                <li>Receive inbound calls from GSM/3G/4G trunks of TG400</li>
+            </ul>
+        </p>
+        <p><image href="../Images/integration/tg200+s300.png" width="650" id="image_fp3_mq4_1gb"
+            /></p>
+        <section id="section_yhq_xv5_1fb">
+            <title>1. Connect Yeastar S300 and TG400</title>
+            <p>
+                <ol id="ol_zhq_xv5_1fb">
+                    <li>On the Yeastar S300, create a SIP Peer Trunk, connecting to TG400.<p>
+                            <ol id="ol_a3q_xv5_1fb">
+                                <li>Go to <menucascade>
+                                        <uicontrol>Settings</uicontrol>
+                                        <uicontrol>Trunks</uicontrol>
+                                    </menucascade>, click <uicontrol>Add</uicontrol>.</li>
+                                <li>Set the trunk as a Peer Trunk.<p><image
+                                            href="../Images/integration/s300+tg200-peertrunk-totg200.png"
+                                            width="650" id="image_b3q_xv5_1fb"/></p><p>
+                                        <ul id="ul_c3q_xv5_1fb">
+                                            <li><uicontrol>Name</uicontrol>: Set a name to help you
+                                                identify it.</li>
+                                            <li><uicontrol>Trunk Status</uicontrol>: Select
+                                                  <uicontrol>Enabled</uicontrol>.</li>
+                                            <li><uicontrol>Select Country</uicontrol>: Select
+                                                  <uicontrol>General</uicontrol>.</li>
+                                            <li><uicontrol>Trunk Type</uicontrol>: Select
+                                                  <uicontrol>Peer Trunk</uicontrol>.</li>
+                                            <li><uicontrol>Protocol</uicontrol>: Select
+                                                  <uicontrol>SIP</uicontrol>.</li>
+                                            <li><uicontrol>Transport</uicontrol>: Select
+                                                  <uicontrol>UDP</uicontrol>.</li>
+                                            <li><uicontrol>Hostname/IP</uicontrol>: Enter the IP
+                                                address of  TG200 and use the default SIP port
+                                                5060.</li>
+                                            <li><uicontrol>Domain</uicontrol>: Enter the IP address
+                                                of TG200.</li>
+                                            <li><uicontrol>Caller ID Number</uicontrol>: Leave it
+                                                blank.</li>
+                                            <li><uicontrol>Caller ID Name</uicontrol>: Leave it
+                                                blank.</li>
+                                        </ul>
+                                    </p></li>
+                                <li>Click <uicontrol>Save</uicontrol> and
+                                        <uicontrol>Apply</uicontrol>.</li>
+                                <li>Go to <menucascade>
+                                        <uicontrol>Status</uicontrol>
+                                        <uicontrol>System Status</uicontrol>
+                                        <uicontrol>Trunk Status</uicontrol>
+                                    </menucascade> to check the trunk status.<p>If the connection is
+                                        successful, the status will show <image
+                                            href="../Images/ui_icons/ok.png" width="20"
+                                            id="image_fy3_1t4_1gb"/>.</p><p><image
+                                            href="../Images/integration/to-tg200-status.png"
+                                            width="650" id="image_ldq_ft4_1gb"/></p></li>
+                            </ol>
+                        </p></li>
+                    <li>On the TG400, create a SIP Peer Trunk, connecting to Yeastar S300.<p>
+                            <ol id="ol_d3q_xv5_1fb">
+                                <li>Go to <menucascade>
+                                        <uicontrol>Gateway</uicontrol>
+                                        <uicontrol>VoIP Settings</uicontrol>
+                                        <uicontrol>VoIP Trunk</uicontrol>
+                                    </menucascade>, click <uicontrol>Add VoIP
+                                    Trunk</uicontrol>.</li>
+                                <li>Configure the VoIP trunk.<p><image
+                                            href="../Images/integration/s300+tg200-peertrunk-from-s300.png"
+                                            id="image_e3q_xv5_1fb"/></p><p>
+                                        <ul id="ul_f3q_xv5_1fb">
+                                            <li><uicontrol>Trunk Type</uicontrol>: Select
+                                                  <uicontrol>Peer Trunk</uicontrol>.</li>
+                                            <li><uicontrol>Type</uicontrol>: Select
+                                                  <uicontrol>SIP</uicontrol>.</li>
+                                            <li><uicontrol>Provider Name</uicontrol>: Set the trunk
+                                                name.</li>
+                                            <li><uicontrol>Hostname/IP</uicontrol>: Enter the IP
+                                                address of S300 and use the default SIP port
+                                                5060.</li>
+                                        </ul>
+                                    </p></li>
+                                <li>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply
+                                        Changes</uicontrol>.</li>
+                                <li>Go to <menucascade>
+                                        <uicontrol>Status</uicontrol>
+                                        <uicontrol>System Status</uicontrol>
+                                        <uicontrol>Trunk Status</uicontrol>
+                                    </menucascade> to check the trunk status.<p>If the connection is
+                                        successful, the status will show "OK".</p><p><image
+                                            href="../Images/integration/s300+tg200-from-s300-status.png"
+                                            id="image_cry_d54_1gb" width="700"/></p></li>
+                            </ol>
+                        </p></li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_k3q_xv5_1fb">
+            <title>2. Make Outbound Calls Through GSM/3G/4G Trunks</title>
+            <p>
+                <ol id="ol_l3q_xv5_1fb">
+                    <li>On Yeastar S300, create an outbound route to allow users make outbound calls
+                        through TG200.<p>
+                            <ol id="ol_m3q_xv5_1fb">
+                                <li>Go to <menucascade>
+                                        <uicontrol>Settings</uicontrol>
+                                        <uicontrol>PBX</uicontrol>
+                                        <uicontrol>Call Control</uicontrol>
+                                        <uicontrol>Outbound Routes</uicontrol>
+                                    </menucascade>, click <uicontrol>Add</uicontrol>.</li>
+                                <li>Configure the outbound route.<p><image
+                                            href="../Images/integration/s300+tg200-outbound-totg200.png"
+                                            width="650" id="image_o1j_z54_1gb"/></p><p>
+                                        <ul id="ul_o3q_xv5_1fb">
+                                            <li><uicontrol>Name</uicontrol>: Set the outbound route
+                                                name.</li>
+                                            <li><uicontrol>Dial Patterns</uicontrol>: Set the dial
+                                                patterns according to your needs. <p>In our
+                                                  scenario, set <uicontrol>Patterns</uicontrol> to
+                                                  <codeph>9.</codeph>, set
+                                                  <uicontrol>Strip</uicontrol> to
+                                                  <codeph>1</codeph>; users should dial prefix 9
+                                                  before the target number. For example, to call
+                                                  number 123456, you should dial 9123456.</p></li>
+                                            <li><uicontrol>Member Trunks</uicontrol>: Select the SIP
+                                                trunk that is connected to TG200 to
+                                                  <uicontrol>Selected</uicontrol> box.</li>
+                                            <li><uicontrol>Member Extensions</uicontrol>: Select
+                                                extensions to <uicontrol>Selected</uicontrol> box.
+                                                The selected extensions can make outbound calls
+                                                through TG200.</li>
+                                        </ul>
+                                    </p></li>
+                                <li>Click <uicontrol>Save</uicontrol> and
+                                        <uicontrol>Apply</uicontrol>.</li>
+                            </ol>
+                        </p></li>
+                    <li>On TG200, set an <uicontrol>IP to Mobile</uicontrol> route to allow the PBX
+                        users make outbound calls through the GSM/3G/4G trunks.<p>
+                            <ol id="ol_p3q_xv5_1fb">
+                                <li>Go to <menucascade>
+                                        <uicontrol>Gateway</uicontrol>
+                                        <uicontrol>Route Settings</uicontrol>
+                                        <uicontrol>IP to Mobile</uicontrol>
+                                    </menucascade>, click <uicontrol>Add IP to Mobile
+                                        Route</uicontrol>.</li>
+                                <li>Configure the <uicontrol>IP to Mobile</uicontrol>
+                                            route.<p><image
+                                            href="../Images/integration/s300+tg200-iptomobile.png"
+                                            id="image_z3b_dx4_1gb"/></p><p>
+                                        <ul id="ul_r3q_xv5_1fb">
+                                            <li><uicontrol>Simple Mode</uicontrol>: Select
+                                                  <uicontrol>Yes</uicontrol>.</li>
+                                            <li><uicontrol>Route Name</uicontrol>: Set the route
+                                                name.</li>
+                                            <li><uicontrol>Call Source</uicontrol>: Select the SIP
+                                                trunk that is connected to the S300.</li>
+                                            <li><uicontrol>Call Destination</uicontrol>: Select a
+                                                Mobile trunk or a Mobile trunk group. </li>
+                                        </ul>
+                                    </p></li>
+                                <li>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply
+                                        Changes</uicontrol>.</li>
+                            </ol>
+                        </p></li>
+                    <li>Make a call to test.<p>For example, the PBX extension 1000 dials
+                            91588035242, the user 1588035242 will ring.</p></li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_s3q_xv5_1fb">
+            <title>3. Receive Inbound Calls From GSM/3G/4G Trunks</title>
+            <p>
+                <ol id="ol_t3q_xv5_1fb">
+                    <li>On Yeastar S300, create an inbound route to accept incoming calls from TG200.<p>
+                            <ol id="ol_u3q_xv5_1fb">
+                                <li>Go to <menucascade>
+                                        <uicontrol>Settings</uicontrol>
+                                        <uicontrol>PBX</uicontrol>
+                                        <uicontrol>Call Control</uicontrol>
+                                        <uicontrol>Inbound Routes</uicontrol>
+                                    </menucascade>, click <uicontrol>Add</uicontrol>.</li>
+                                <li>Configure the inbound route.<p><image
+                                            href="../Images/integration/cloud+tg400_inbound_route.png"
+                                            width="650" id="image_v3q_xv5_1fb"/></p><p>
+                                        <ul id="ul_w3q_xv5_1fb">
+                                            <li><uicontrol>Name</uicontrol>: Set the inbound route
+                                                name.</li>
+                                            <li><uicontrol>DID Pattern</uicontrol>: Set a DID
+                                                number. This DID number will be used to match the
+                                                incoming calls from TG200.</li>
+                                            <li><uicontrol>Member Trunks</uicontrol>: Select the SIP
+                                                trunk that is connected to TG200 to
+                                                  <uicontrol>Selected</uicontrol> box.</li>
+                                            <li><uicontrol>Destination</uicontrol>: Set a
+                                                destination for the inbound route.<p>In our
+                                                  scenario, set the
+                                                  <uicontrol>Destination</uicontrol> to an IVR. The
+                                                  PBX will route incoming calls of  TG200 to the
+                                                  IVR.</p></li>
+                                        </ul>
+                                    </p></li>
+                                <li>Click <uicontrol>Save</uicontrol> and
+                                        <uicontrol>Apply</uicontrol>.</li>
+                            </ol>
+                        </p></li>
+                    <li>On TG200, create a <uicontrol>Mobile to IP</uicontrol> route to route
+                        incoming calls to the PBX.<p>
+                            <ol id="ol_x3q_xv5_1fb">
+                                <li>Go to <menucascade>
+                                        <uicontrol>Gateway</uicontrol>
+                                        <uicontrol>Route Settings</uicontrol>
+                                        <uicontrol>Mobile to IP</uicontrol>
+                                    </menucascade>, click <uicontrol>Add Mobile to IP
+                                        Route</uicontrol>.</li>
+                                <li>Configure the <uicontrol>Mobile to IP</uicontrol>
+                                            route.<p><image
+                                            href="../Images/integration/s300+tg200-mobile-to-ip.png"
+                                            id="image_uvk_rx4_1gb"/></p><p>
+                                        <ul id="ul_z3q_xv5_1fb">
+                                            <li><uicontrol>Simple Mode</uicontrol>: Select
+                                                  <uicontrol>Yes</uicontrol>.</li>
+                                            <li><uicontrol>Route Name</uicontrol>: Set the route
+                                                name.</li>
+                                            <li><uicontrol>Call Source</uicontrol>: Select a Mobile
+                                                trunk or a Mobile trunk group.</li>
+                                            <li><uicontrol>Call Destination</uicontrol>: Choose the
+                                                SIP trunk that is connected to the S300.</li>
+                                            <li><uicontrol>Hotline</uicontrol>: Enter the DID number
+                                                that is set on the inbound route of S300.</li>
+                                        </ul>
+                                    </p></li>
+                                <li>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply
+                                        Changes</uicontrol>.</li>
+                            </ol>
+                        </p></li>
+                    <li>Make a call to test.<p>For example, the GSM trunk number is 17283733; use
+                            your mobile phone to call 17283733, you will hear the IVR
+                        prompt.</p></li>
+                </ol>
+            </p>
+        </section>
+    </body>
+</topic>

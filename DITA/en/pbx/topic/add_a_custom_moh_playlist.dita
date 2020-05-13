@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_j4t_1pj_5cb">
+    <title>Add a Custom MoH Playlist</title>
+    <shortdesc>You can add a custom MoH playlist and upload your audio files to the PBX.</shortdesc>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/06/14"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <steps id="steps_kdk_xsj_5cb">
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol>PBX</uicontrol>
+                        <uicontrol>Voice Prompts</uicontrol>
+                        <uicontrol>Music on Hold</uicontrol>
+                    </menucascade>, click <uicontrol>Create New Playlist</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>On the configuration page, set the playlist name and the playlist order, click
+                        <uicontrol>Save</uicontrol>.</cmd>
+                <info><image href="../Images/admin/add_moh_playlist.png" id="image_sxf_htj_5cb"
+                    /></info>
+            </step>
+            <step>
+                <cmd>On the <uicontrol>Music On Hold</uicontrol> page, choose the new created
+                    playlist.</cmd>
+                <info><image href="../Images/admin/choose_moh_playlist.png" id="image_ytx_j5j_5cb"
+                    /></info>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Browse</uicontrol> to choose an audio file from your local PC,
+                    then click <uicontrol>Upload</uicontrol>.</cmd>
+                <info>
+                    <note>The uploaded file should meet the <xref
+                            href="requirements_of_custom_audio_file.dita#concept_kwb_pyj_5cb">audio
+                            file requirements</xref>.</note>
+                </info>
+            </step>
+            <step>
+                <cmd>Repeat the step 4 to add another audio file.</cmd>
+                <info>You can see the uploaded audio files in the MoH list.<p><image
+                            href="../Images/admin/moh_file_List.png" width="650"
+                            id="image_kxn_dvj_5cb"/></p></info>
+            </step>
+        </steps>
+    </taskbody>
+    <related-links>
+        <link href="change_the_moh_playlist_dita.dita#task_vzx_pvj_5cb"/>
+        <link href="requirements_of_custom_audio_file.dita#concept_kwb_pyj_5cb"/>
+        <link href="convert_audio_files_via_wavepad.dita#task_oq5_t1k_5cb"/>
+        <link href="convert_audio_files_via_online_tool.dita#task_vkr_31k_5cb"/>
+    </related-links>
+</task>

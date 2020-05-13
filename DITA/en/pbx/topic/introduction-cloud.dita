@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_llj_jmq_2cb">
+  <title>Introduction</title>
+  <prolog>
+    <critdates>
+      <!--Carol-->
+      <revised modified="2018/06/08"/>
+    </critdates>
+  </prolog>
+  
+  <body>
+    <p>Yeastar Cloud PBX provides a powerful Yeastar Management Plane (YMP) and easy to deploy
+      dedicated PBX instances for solution providers and telecom resellers to easily start their
+      hosted PBX business. Yeastar Cloud PBX inherits the essence of our robust premise based IPPBX
+      that has been improved over the last eleven years and evolves into a scalable, reliable, and
+      fully-fledged communication services platform.</p>
+    <p>
+      <b>Build up Your Private-branded Cloud PBX</b></p>
+    <p>Self host the Yeastar Cloud PBX in your data center, fully virtualized platform such as KVM,
+      VMware, or public cloud platform, you make the call. And you also build up a strong recurring
+      revenue model with reduced cost, higher margins, increased reliability, and incredible
+      flexibility. </p>
+    <p><b>Manage and Create PBX Centrally in YMP</b></p>
+    <p>Yeastar Management Plane (YMP) is an embedded platform on which you can create and manage PBX
+      instances. YMP eliminates the overwhelming workload of separate instance installation and
+      management. In addition, it displays real-time status of CPU, network, memory and storage, and
+      provides alarm notifications, enhanced security mechanisms, backup, upgrade, and multi-level
+      user access.</p>
+    <p>
+      <ph id="OLE_LINK7"><b>Expand Instance Capacity Flexibly and Easily</b></ph></p>
+    <p>With Yeastar Purchase System (YPS), capacity including users and concurrent calls can be
+      increased effortlessly for each individual instance. Whether you have a handful of customers
+      or thousands, you have the flexibility to provide different customers with capacity that fits
+      their needs.</p>
+    <p><b>Stay Connected with Linkus Mobile Client</b></p>
+    <p>Yeastar Cloud PBX enhances efficiency and creates consistent in-office experience for mobile
+      workers with Linkus Mobile Client. Your Android or Apple mobile phone is also your office
+      extension; no missing calls when working away from the office. Linkus Mobile Client can also
+      reduce mobile voice charges with VoIP phone calls made through Yeastar Cloud PBX.</p>
+    <p>
+      <b>Enjoy the Rich Features of S-Series PBX in the Cloud</b></p>
+    <p>With most hosted solutions you may have to give up many of your favorite features. But that’s
+      not the case for Yeastar Cloud PBX. Delivering a comprehensive set of business communications
+      features, including unified messaging, conferencing, and IP phone auto provision, Yeastar
+      Cloud PBX ensures the customer’s needs are met in a user friendly and future friendly way.</p>
+  </body>
+</topic>

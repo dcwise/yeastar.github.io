@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_mp2_tfn_jdb">
+  <title>LDAP Server</title>
+  <shortdesc>Release notes for LDAP Server on Yeastar S-Series VoIP PBX.</shortdesc>
+  <body>
+    <section id="section_xg3_wxt_jjb">
+      <title>Version 1.4.12</title>
+      <p>Released Date: October 22, 2019<ul id="ul_ecj_yxt_jjb">
+          <li>Optimized LDAP authentication: Anonymous access to the LDAP server is not
+            allowed.</li>
+        </ul></p>
+    </section>
+    <section>
+      <title>Version 1.4.11</title>
+      <p>Released Date: May 14, 2019</p>
+      <p>
+        <ul id="ul_iht_lf5_4hb">
+          <li>Updated Russian and Italian web interface.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_s5s_1kp_kfb">
+      <title>Version 1.4.9</title>
+      <p>Released Date: October 18, 2018</p>
+      <p>
+        <ul id="ul_erp_ckp_kfb">
+          <li>Optimized <xref href="../references/import_parameters_ldap.dita#reference_bv5_4j3_mfb"
+              >LDAP Contact Import</xref> function.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_bfv_gmg_j2b">
+      <title>Version 1.4.6</title>
+      <p>Released Date: July 5, 2018</p>
+      <p>
+        <ul id="ul_l5z_hmg_j2b">
+          <li>Fixed the issue that the LDAP server might not work after you restored data from a
+            backup file. </li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_og3_v3j_pdb">
+      <title>Version 1.4.4</title>
+      <p>Released Date: April 8, 2018</p>
+      <p>
+        <ul id="ul_zw2_wkj_pdb">
+          <li>Compatible with Yeastar S-Series VoIP PBX v30.7.0.27.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_bvl_xkj_pdb">
+      <title>Version 1.4.2</title>
+      <p>Released Date: March 20, 2018</p>
+      <p>
+        <ul id="ul_p3s_zkj_pdb">
+          <li>Optimized the Contacts Importing function.</li>
+          <li>Fixed the issue the phone would display incorrect contact information when you queried
+            a contact on your phone.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_bkp_1lj_pdb">
+      <title>Version 1.3.18</title>
+      <p>Released Date: December 27, 2017</p>
+      <p>
+        <ul id="ul_as4_clj_pdb">
+          <li>When importing LDAP, the system can automatically add new phonebook nodes.</li>
+          <li>Optimized phonebook: you can order the contacts by contact names.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_d2s_clj_pdb">
+      <title>Version 1.3.13</title>
+      <p>Released Date: July 13, 2017</p>
+      <p>
+        <ul id="ul_g4p_flj_pdb">
+          <li>Added support for German Web interface.</li>
+          <li>Updated Italian Web interface.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_txs_flj_pdb">
+      <title>Version 1.3.10</title>
+      <p>Released Date: January 13, 2017</p>
+      <p>
+        <ul id="ul_pbb_3lj_pdb">
+          <li>Added support for French, Italian Web interface.</li>
+          <li>Updated Turkish Web interface.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_d22_3lj_pdb">
+      <title>Version 1.3.8</title>
+      <p>Released Date: January 4, 2017</p>
+      <p>
+        <ul id="ul_whb_klj_pdb">
+          <li>Added support for Portugues and Serbia web interface languages.</li>
+          <li>Updated English, Chinese Simplified and Spanish web interface languages.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_d52_klj_pdb">
+      <title>Version 1.3.3</title>
+      <p>Released Date: November 2, 2016</p>
+      <p>
+        <ul id="ul_ugd_mlj_pdb">
+          <li>Fixed LDAP phonebook issue: edit the default LDAP phonebook, set the settings as one
+            new created phonebook settings, then all the phonebooks would be changed to the same
+            phonebook automatically.</li>
+        </ul>
+      </p>
+    </section>
+  </body>
+</topic>

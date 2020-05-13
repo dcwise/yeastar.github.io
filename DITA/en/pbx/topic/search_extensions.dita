@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_rmj_xdl_scb">
+    <title>Search Extensions</title>
+    <shortdesc>To quickly find an extension, you can search extensions by extension number or
+        extension name.</shortdesc>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/06/14"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <steps id="steps_hpj_f2l_scb">
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol>PBX</uicontrol>
+                        <uicontrol>Extensions</uicontrol>
+                    </menucascade>.</cmd>
+            </step>
+            <step>
+                <cmd>In the search field, enter extension number or user name.</cmd>
+                <info>The page automatically displays the matched extensions.</info>
+                <info product="cloudpbx"><image href="../Images/admin/search_extensions.png"
+                        width="650" id="image_vdk_q2l_scb" product="cloudpbx"/></info>
+                <info product="s-series"><image href="../Images/admin/search_extension_s.png"
+                        width="650" id="image_eyb_vgv_hdb"/></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

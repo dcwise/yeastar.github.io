@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_usl_dtr_ndb">
+    <title>Check Network</title>
+    <shortdesc>Check how long it takes for users' packets to reach SBC server. If the one-way delay
+        from users to the SBC should be lower than 100ms, or the call quality would be
+        bad.</shortdesc>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/06/21"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Find a website that supports checking one-way delay from different locations to
+                    the SBC server.</cmd>
+                <info><xref href="https://www.dotcom-tools.com/ping-test.aspx" format="html"
+                        scope="external">Here is a ping test tool on website for
+                    reference.</xref></info>
+            </step>
+            <step>
+                <cmd>Enter the public IP address or domain name of the SBC server.</cmd>
+            </step>
+            <step>
+                <cmd>Check the ping result.</cmd>
+                <info>The one-way delay from your target users' locations to the SBC should be lower
+                    than 100ms.</info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

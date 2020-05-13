@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_umc_hjd_f3b">
+    <title>Version 81.8.0.112</title>
+    <abstract>Released Date: June 27, 2019</abstract>
+    <body>
+        <section id="section_sdw_nj5_4hb">
+            <title>Optimization</title>
+            <p><image href="../Images/horizon.png" id="image_xcc_4wb_kfb"/></p>
+            <p>
+                <ul id="ul_g24_kjd_f3b">
+                    <li>Improved the system performance.</li>
+                </ul>
+            </p>
+        </section>
+    </body>
+</topic>

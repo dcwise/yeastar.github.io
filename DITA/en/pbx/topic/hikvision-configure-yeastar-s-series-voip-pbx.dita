@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="configure-yeastar-s-series-voip-pbx">
+    <title>Step1. Configure <ph keyref="product_name"/></title>
+    <shortdesc>Before you start to configure the Hikvision devices, you need to add extensions for
+        the Hikvision devices and configure the audio and video codecs on <ph keyref="product_name"
+        /> to ensure normal audio calls and video calls between the Hikvision devices.</shortdesc>
+    <body>
+        <section id="section_oqm_ftf_h3b">
+            <title>Add two extensions for Hikvison devices</title>
+        </section>
+        <ol id="ol_hbl_wtf_h3b">
+            <li> Log in the PBX web interface, go to <menucascade>
+                    <uicontrol>Settings</uicontrol>
+                    <uicontrol> PBX</uicontrol>
+                    <uicontrol> Extensions</uicontrol>
+                </menucascade>, click <uicontrol>Add</uicontrol>.</li>
+            <li> Add an extension for Hikvision DS-KH6320 Indoor Station.<p>In this example, add
+                    extension 3620 for Hikvision DS-KH6320 Indoor Station.</p><p><image
+                        id="image_onk_jz3_f3b"
+                        href="../Images/sip-endpoints/hikvision/add-3620-for-indoor-station.png"
+                        width="600"/></p></li>
+            <li>Add an extension for Hikvision DS-KD8003 Door Station.<p>In this example, add
+                    extension 3621 for Hikvision DS-KD8003 Door Station.</p><p><image
+                        id="image_h5j_5p4_f3b"
+                        href="../Images/sip-endpoints/hikvision/add-3621-for-indoor-station.png"
+                        width="600"/></p></li>
+        </ol>
+        <section id="section_zbl_wtf_h3b">
+            <title>Configure audio and video codecs</title>
+            <p>The default audio and video codecs on Hikvision devices are
+                    <uicontrol>G711_U</uicontrol> and <uicontrol>STD_H264</uicontrol>.</p>
+            <p>To ensure the normal audio calls and video calls between Hikvision devices, the
+                codecs <uicontrol>u-law</uicontrol> and <uicontrol>H264</uicontrol> should be
+                selected on your PBX.</p>
+            <p>Go to <menucascade>
+                    <uicontrol>General</uicontrol>
+                    <uicontrol> SIP</uicontrol>
+                    <uicontrol> Codec</uicontrol>
+                </menucascade>, check if the two codecs are selected.</p>
+            <p><image id="image_qgq_vq4_f3b"
+                    href="../Images/sip-endpoints/hikvision/choose-codec-on-s100.png"/></p>
+        </section>
+    </body>
+</topic>

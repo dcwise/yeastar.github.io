@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_egl_psd_qfb">
+    <title>Version 1.11.16</title>
+    <abstract>Released Date: October 26, 2018</abstract>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/10/30"/>
+            <!--Carol-->
+            <revised modified="2018/10/30"/>
+        </critdates>
+    </prolog>
+    <body>
+        <section>
+            <title>Optimization</title>
+            <p><image href="../Images/horizon.png" id="image_qml_vsd_qfb"/></p>
+            <p><b>VoIP Trunk</b></p>
+            <p>
+                <ul id="ul_rml_vsd_qfb">
+                    <li>Added support for entering special character <codeph>@</codeph> in the
+                            <uicontrol>Authentication Name</uicontrol> field.</li>
+                </ul>
+            </p>
+            <p><b>Extension</b></p>
+            <p>
+                <ul id="ul_sml_vsd_qfb">
+                    <li>Fixed the issue that if Weak Password function is enabled, the extension
+                        passwords that contain special characters could not be saved.</li>
+                </ul>
+            </p>
+        </section>
+    </body>
+</topic>

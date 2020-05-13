@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_syz_1rg_tdb">
+    <title>Install SIM Card</title>
+    <shortdesc>Power off the PBX before you start to install or remove the SIM card.</shortdesc>
+    <taskbody>
+        <context>
+            <p><image href="../Images/admin/install_sim_card.png" id="image_th1_frg_tdb" width="700"
+                /></p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Unlock the SIM card slot.</cmd>
+            </step>
+            <step>
+                <cmd>Insert the SIM card to the slot.</cmd>
+            </step>
+            <step>
+                <cmd>Lock the SIM card slot.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

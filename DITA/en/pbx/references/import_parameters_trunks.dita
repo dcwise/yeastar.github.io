@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="reference_g3l_3f3_mfb">
+    <title>Import Parameters - Trunks</title>
+    <shortdesc>Descriptions for the Trunk parameters that you can import to <ph
+            keyref="product_name"/>.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/10/16"/>
+            <!--Carol-->
+            <revised modified="2018/10/16"/>
+            <!--Carol-->
+            <revised modified="2018/10/17"/>
+        </critdates>
+    </prolog>
+    <refbody>
+        <section id="section_yrl_2v4_mfb">
+            <note>Only VoIP Register Trunk can be imported.</note>
+        </section>
+        <section id="section_hkh_zf3_mfb">
+            <p>
+                <table id="table_a43_1g3_mfb">
+                    <tgroup cols="4">
+                        <colspec colnum="1" colname="col1" colsep="1" rowsep="1" colwidth="2.52*"/>
+                        <colspec colnum="2" colname="col2" colsep="1" rowsep="1" colwidth="1.14*"/>
+                        <colspec colnum="3" colname="col5" colsep="1" rowsep="1" colwidth="3.2*"/>
+                        <colspec colname="col4" colnum="4" colwidth="1*" colsep="1" rowsep="1"/>
+                        <thead>
+                            <row>
+                                <entry>Parameter</entry>
+                                <entry>Importance</entry>
+                                <entry>Restriction</entry>
+                                <entry>Default Value</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>Provider Name</entry>
+                                <entry>Required</entry>
+                                <entry>The following characters are NOT
+                                            allowed:<p><codeph>!</codeph>
+                                        <codeph>$</codeph>
+                                        <codeph>(</codeph>
+                                        <codeph>)</codeph>
+                                        <codeph>/</codeph>
+                                        <codeph>#</codeph>
+                                        <codeph>;</codeph>
+                                        <codeph>,</codeph>
+                                        <codeph>[</codeph><codeph>]</codeph>
+                                        <codeph>"</codeph>
+                                        <codeph>=</codeph>
+                                        <codeph>&lt;</codeph>
+                                        <codeph>></codeph>
+                                        <codeph>&amp;</codeph>
+                                        <codeph>'</codeph>
+                                        <codeph>`</codeph>
+                                        <codeph>^</codeph><codeph>%</codeph>
+                                        <codeph>@</codeph>
+                                        <codeph>{</codeph>
+                                        <codeph>}</codeph>
+                                        <codeph>|</codeph>
+                                    </p></entry>
+                                <entry>N/A</entry>
+                            </row>
+                            <row>
+                                <entry>Transport(UDP/TCP/TLS/DNS-NAPTR)</entry>
+                                <entry>Required</entry>
+                                <entry>Permitted value:<p><codeph>udp</codeph>
+                                        <codeph>tcp</codeph>
+                                        <codeph>tls</codeph>
+                                        <codeph>dnsnaptr</codeph></p></entry>
+                                <entry>UDP</entry>
+                            </row>
+                            <row>
+                                <entry>Hostname</entry>
+                                <entry>Required</entry>
+                                <entry>IP or hostname format required.</entry>
+                                <entry>N/A</entry>
+                            </row>
+                            <row>
+                                <entry>Port</entry>
+                                <entry>Required</entry>
+                                <entry>The valid port range is 0-65535.</entry>
+                                <entry>5060</entry>
+                            </row>
+                            <row>
+                                <entry>Domain</entry>
+                                <entry>Required</entry>
+                                <entry>IP or domain format required.</entry>
+                                <entry>N/A</entry>
+                            </row>
+                            <row>
+                                <entry>User Name</entry>
+                                <entry>Required</entry>
+                                <entry>The following special characters are NOT allowed: <p>Space
+                                        and <codeph>;</codeph>
+                                        <codeph>&amp;</codeph>
+                                        <codeph>"</codeph>
+                                        <codeph>'</codeph>
+                                        <codeph>\</codeph>
+                                        <codeph>&lt;</codeph>
+                                        <codeph>></codeph>
+                                        <codeph>`</codeph>
+                                        <codeph>|</codeph></p></entry>
+                                <entry>N/A</entry>
+                            </row>
+                            <row>
+                                <entry>Authentication Name</entry>
+                                <entry>Required</entry>
+                                <entry>The following special characters are NOT allowed: <p>Space
+                                        and <codeph>;</codeph>
+                                        <codeph>&amp;</codeph>
+                                        <codeph>"</codeph>
+                                        <codeph>'</codeph>
+                                        <codeph>\</codeph>
+                                        <codeph>&lt;</codeph>
+                                        <codeph>></codeph>
+                                        <codeph>`</codeph>
+                                        <codeph>|</codeph></p></entry>
+                                <entry>N/A</entry>
+                            </row>
+                            <row>
+                                <entry>From User</entry>
+                                <entry>Optional</entry>
+                                <entry><p>The following special characters are NOT allowed:
+                                    </p>Spaces and <codeph>:</codeph>
+                                    <codeph>!</codeph>
+                                    <codeph>$</codeph>
+                                    <codeph>(</codeph>
+                                    <codeph>)</codeph>
+                                    <codeph>/</codeph>
+                                    <codeph>#</codeph>
+                                    <codeph>;</codeph>
+                                    <codeph>,</codeph>
+                                    <codeph>[</codeph>
+                                    <codeph>]</codeph>
+                                    <codeph>\</codeph>
+                                    <codeph>"</codeph>
+                                    <codeph>=</codeph>
+                                    <codeph>&lt;</codeph>
+                                    <codeph>></codeph>
+                                    <codeph>&amp;</codeph>
+                                    <codeph>'</codeph>
+                                    <codeph>`</codeph>
+                                    <codeph>^</codeph>
+                                    <codeph>%</codeph>
+                                    <codeph>@</codeph>
+                                    <codeph>{</codeph>
+                                    <codeph>}</codeph>
+                                    <codeph>|</codeph></entry>
+                                <entry>N/A</entry>
+                            </row>
+                            <row>
+                                <entry>Password</entry>
+                                <entry>Required</entry>
+                                <entry>
+                                    <p>The following special characters are NOT allowed: </p>
+                                    <p>Space and <codeph>;</codeph>
+                                        <codeph>&amp;</codeph>
+                                        <codeph>"</codeph>
+                                        <codeph>'</codeph>
+                                        <codeph>\</codeph>
+                                        <codeph>&lt;</codeph>
+                                        <codeph>></codeph>
+                                        <codeph>`</codeph>
+                                        <codeph>|</codeph>
+                                    </p>
+                                </entry>
+                                <entry>N/A</entry>
+                            </row>
+                            <row>
+                                <entry>Outbound Proxy Server</entry>
+                                <entry>Optional</entry>
+                                <entry>IP or domain format required.</entry>
+                                <entry>N/A</entry>
+                            </row>
+                            <row>
+                                <entry>Outbound Proxy Server Port</entry>
+                                <entry>Optional</entry>
+                                <entry>The valid port range is 0-65535.</entry>
+                                <entry>5060</entry>
+                            </row>
+                            <row>
+                                <entry>DTMF(RFC4733/Info/Inband/Auto)</entry>
+                                <entry>Required</entry>
+                                <entry><p>Permitted value:</p><codeph>RFC4733</codeph>
+                                    <codeph>Info</codeph>
+                                    <codeph>Inband</codeph>
+                                    <codeph>Auto</codeph></entry>
+                                <entry>RFC4733</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+    </refbody>
+</reference>

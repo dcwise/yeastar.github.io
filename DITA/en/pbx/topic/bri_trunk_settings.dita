@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="reference_otc_bwl_4fb">
+    <title>BRI Trunk Settings</title>
+    <shortdesc>When you configure a BRI trunk, you may need to configure some of the advanced
+        settings. This reference describes all the settings on a BRI trunk.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/10/24"/>
+            <!--Carol-->
+            <revised modified="2018/10/24"/>
+        </critdates>
+    </prolog>
+    <refbody>
+        <section id="section_mj1_dyl_4fb">
+            <title>BRI Trunk Basic Settings</title>
+            <p>Navigation path: <menucascade>
+                    <uicontrol>Settings</uicontrol>
+                    <uicontrol> PBX</uicontrol>
+                    <uicontrol> Trunks</uicontrol>
+                </menucascade>, edit a trunk on the <uicontrol>Basic</uicontrol> tab.</p>
+            <p>
+                <table frame="all" rowsep="1" colsep="1" id="table_fnd_czl_4fb">
+                    <tgroup cols="2">
+                        <colspec colname="c1" colnum="1" colwidth="1*"/>
+                        <colspec colname="c2" colnum="2" colwidth="3.55*"/>
+                        <thead>
+                            <row>
+                                <entry>Option</entry>
+                                <entry>Description</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>Name</entry>
+                                <entry>Give this trunk a name to help you identify it.</entry>
+                            </row>
+                            <row>
+                                <entry>Signaling</entry>
+                                <entry>Specify the signaling type according to the direction
+                                    provided by your service provider.</entry>
+                            </row>
+                            <row>
+                                <entry>Signaling Role</entry>
+                                <entry>
+                                    <p>Specify whether this interface will act like the user or the
+                                        network. <ul id="ul_kxq_2yp_w3b">
+                                            <li><uicontrol>User</uicontrol></li>
+                                            <li><uicontrol>Network</uicontrol></li>
+                                        </ul></p>
+                                    <p>If the service provider acts as the network, the PBX needs to
+                                        be set as the user.</p>
+                                    <p>If the service provider acts as the user, the PBX needs to be
+                                        set as the network.</p>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>Switch Type</entry>
+                                <entry>
+                                    <p>Configure the switch type according to the direction provided
+                                        by your service provider.</p>
+                                </entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+        <section id="section_cnw_wzl_4fb">
+            <title>BRI Trunk Advanced Settings</title>
+            <p>Navigation path: <menucascade>
+                    <uicontrol>Settings</uicontrol>
+                    <uicontrol> PBX</uicontrol>
+                    <uicontrol> Trunks</uicontrol>
+                </menucascade>, edit a trunk on the <uicontrol>Advanced</uicontrol> tab.</p>
+            <p>
+                <table frame="all" rowsep="1" colsep="1" id="table_bdq_yzl_4fb">
+                    <tgroup cols="2">
+                        <colspec colname="c1" colnum="1" colwidth="1*"/>
+                        <colspec colname="c2" colnum="2" colwidth="2.5*"/>
+                        <thead>
+                            <row>
+                                <entry>Option</entry>
+                                <entry>Description</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>Echo Cancellation</entry>
+                                <entry>
+                                    <p>This option enables or disables echo cancellation.</p>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>Codec</entry>
+                                <entry>
+                                    <p>Choose the codec for this trunk.</p>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>Facility-based ISDN Supplementary Services</entry>
+                                <entry>
+                                    <p>Decide whether to enable transmission of facility-based ISDN
+                                        supplementary services (such as caller name from CPE over
+                                        facility) or not. </p>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>Overlap Dial</entry>
+                                <entry>
+                                    <p>Define whether the system can dial this switch using overlap
+                                        digits or not. If you need Direct Dial-in, then enable this
+                                        option. </p>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>Reset Interval</entry>
+                                <entry>
+                                    <p>This sets the time in seconds between restart of unused B
+                                        channels. Set the internal to Never if you don't like the
+                                        channel to restarts. </p>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>PRI Indication</entry>
+                                <entry>
+                                    <p>Tells how PBX should indicate busy and congestion to the
+                                        switch/user. </p>
+                                    <p>
+                                        <ul id="ul_ep5_41m_4fb">
+                                            <li><uicontrol>Inband</uicontrol>: PBX plays indication
+                                                tones without answering; not available on all
+                                                PRI/BRI subscription lines.</li>
+                                            <li><uicontrol>Out-of-Band</uicontrol>: PBX disconnects
+                                                with busy/congestion information code so the switch
+                                                will play the indication tones to the caller.</li>
+                                        </ul>
+                                    </p>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>Carrier Hangup Tone Detection</entry>
+                                <entry>
+                                    <ul id="ul_mfh_2bm_4fb">
+                                        <li>Check this option: You will hear the hangup tone played
+                                            by your carrier when the other party hangs up. <p>
+                                                <note>First check with your carrier whether they
+                                                  will send the prompt or not.</note>
+                                            </p></li>
+                                        <li>Uncheck this option: You will hear the hangup tone
+                                            played by the system when the other party hangs up.</li>
+                                    </ul>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>Hide CallerID</entry>
+                                <entry>
+                                    <p>Whether to hide caller ID or not.</p>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>Enable DNIS</entry>
+                                <entry>
+                                    <p>Dialed Number Identification Service is a telephone service
+                                        that enables a company to identify which telephone number
+                                        was dialed. Users could configure DNIS to allow the IP
+                                        phones to display which trunk is passing the call.</p>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>DNIS Name</entry>
+                                <entry>
+                                    <p>A name for this DNIS, when a call reaches the selected trunk,
+                                        the name will be displayed on the ringing phone.</p>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>DID Number</entry>
+                                <entry>This number is used to identify which line of the trunk is
+                                    passing the call.</entry>
+                            </row>
+                            <row>
+                                <entry>Ignore Remote Hold Indications</entry>
+                                <entry>If you wish to ignore remote hold indications and use PBX's
+                                        <xref href="music_on_hold.dita#topic_f1w_zwc_5cb">Music on
+                                        Hold</xref>, enable this option.</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+        <section id="section_lcg_1dm_4fb">
+            <title>Dialplan</title>
+            <p>Navigation path: <menucascade>
+                    <uicontrol>Settings</uicontrol>
+                    <uicontrol> PBX</uicontrol>
+                    <uicontrol> Trunks</uicontrol>
+                </menucascade>, edit a trunk on the <uicontrol>Advanced</uicontrol> tab.</p>
+            <p>
+                <table frame="all" rowsep="1" colsep="1" id="table_vwc_bdm_4fb">
+                    <tgroup cols="2">
+                        <colspec colname="c1" colnum="1" colwidth="1*"/>
+                        <colspec colname="c2" colnum="2" colwidth="2.51*"/>
+                        <thead>
+                            <row>
+                                <entry>Option</entry>
+                                <entry>Description</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>Calling Party Numbering Plan</entry>
+                                <entry>
+                                    <p>Select the Calling Party Numbering Plan.</p>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>Calling Party Numbering Type</entry>
+                                <entry>
+                                    <p>Select the Calling Party Numbering Type.</p>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>Called Party Numbering Plan</entry>
+                                <entry>
+                                    <p>Select the Called Party Numbering Plan.</p>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>Called Party Numbering Type</entry>
+                                <entry>
+                                    <p>Select the Called Party Numbering Type.</p>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>Presentation Indicator</entry>
+                                <entry>
+                                    <p>The PI provides instructions on whether or not the provided
+                                        calling line identity is allowed to be presented, or
+                                        indicate that the number is not available.</p>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>Screen Indicator</entry>
+                                <entry>
+                                    <p>The SI provides information on the source and the quality of
+                                        the provided information.</p>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>ISDN Dialplan</entry>
+                                <entry>
+                                    <p>ISDN/telephony numbering plan (Recommendation E.164)</p>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>International Prefix</entry>
+                                <entry>
+                                    <p>Dialplan: '(Remote Dialplan:ISDN +) Remote Number Type:
+                                        international'.</p>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>National Prefix</entry>
+                                <entry>
+                                    <p>Dialplan: '(Remote Dialplan:ISDN +)Remote Number
+                                        Type:national'.</p>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>Local Prefix</entry>
+                                <entry>
+                                    <p>Dialplan: '(Remote Dialplan:ISDN +)Remote Number
+                                        Type:subscriber'.</p>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>Private Prefix</entry>
+                                <entry>
+                                    <p>Dialplan: 'Remote Dialplan:private + Remote Number Type:
+                                        subscriber'.</p>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>Unknown Prefix</entry>
+                                <entry>
+                                    <p>Dialplan: '(Remote Dialplan:ISDN +)Remote Number
+                                        Type:unknown'.</p>
+                                </entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+        <section conref="voip-trunk-settings.dita#topic_pyd_f3t_2fb/adapt-caller-ID"
+            id="section_m2w_blf_x3b"/>
+    </refbody>
+</reference>

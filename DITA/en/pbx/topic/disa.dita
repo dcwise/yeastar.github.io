@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_qvh_vvm_tdb">
+    <title>DISA</title>
+    <shortdesc>DISA (Direct Inward System Access) allows users outside the office to make calls
+        through the PBX's trunks. For the staffs who are outside the office, they can use DISA
+        feature to take advantage of lower long-distance rates that are provided by the PBX
+        trunks.</shortdesc>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/07/11"/>
+            <!--Carol-->
+            <revised modified="2018/10/30"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <p/>
+    </conbody>
+</concept>

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="k2-install-yeastar-k2-ippbx">
+    <?oxy_comment_start author="carol" timestamp="20190929T134644+0800" comment="虚拟机安装的时候，网络设置有什么需要注意的吗？"?>
+    <title>Install Yeastar K2 System on VMware Workstation<?oxy_comment_end?></title>
+    <shortdesc>This topic describes how to install Yeastar K2 IPPBX system on VMware workstation
+        12.0.</shortdesc>
+    <body>
+        <section id="section_agk_gb1_fjb">
+            <title>Before You Begin</title>
+            <p>To install the K2 system on a virtual machine, make sure that both the Virtual
+                machine and the hardware meets the requirements.</p>
+            <p>
+                <ul id="ul_p32_lb1_fjb">
+                    <li><xref
+                            href="k2-hardware-and-system-requirements.dita#k2-hardware-and-system-requirements/section_uql_j2y_b3b"
+                            >Hardware requirements</xref></li>
+                    <li><xref
+                            href="k2-hardware-and-system-requirements.dita#k2-hardware-and-system-requirements/section_gx3_4b1_fjb"
+                            >Supported virtual machine platforms</xref></li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_mqf_g1z_b3b">
+            <title>Step 1. Configure language and location</title>
+            <p>The installer will begin with a prompt to select a language for the installation
+                    wizard.<ol id="ol_mzx_k1z_b3b">
+                    <li>Select a language for the installation wizard.<p><image
+                                href="../Images/admin/k2-select-language.jpg" id="image_atr_p1z_b3b"
+                                width="650"/></p></li>
+                    <li>Select <uicontrol>Install Ubuntu Server</uicontrol>.<p><image
+                                href="../Images/admin/k2-install-ubunto-server.jpg"
+                                id="image_jbs_bbz_b3b" width="500"/></p></li>
+                    <li>Select a language to be used for the installation process and installed
+                                system.<p><image
+                                href="../Images/admin/k2-select-language-for-process.jpg"
+                                id="image_e41_swd_23b"/></p></li>
+                    <li>Select your location based on the language you selected.<p><image
+                                href="../Images/admin/k2-select-location.jpg" id="image_r13_twd_23b"
+                            /></p></li>
+                </ol></p>
+        </section>
+        <section id="section_tbp_2bz_b3b">
+            <title>Step 2. Configure the keyboard</title>
+            <p>
+                <ol id="ol_mct_gbz_b3b">
+                    <li>Select <uicontrol>NO</uicontrol>, not to do keyboard layout
+                                detection.<p><image href="../Images/admin/k2-keyboard-no.jpg"
+                                id="image_h3g_kbz_b3b"/></p></li>
+                    <li>Select a country of origin for the keyboard of this computer.<p><image
+                                href="../Images/admin/k2-country-of-keyboard.jpg"
+                                id="image_rtt_gxd_23b"/></p></li>
+                    <li>Select the layout matching the keyboard for your machine.<p><image
+                                href="../Images/admin/k2-keyboard-layout.jpg" id="image_akb_pxd_23b"
+                            /></p></li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_qvj_4bz_b3b">
+            <title>Step 3. Plan and create partition disk</title>
+            <ol id="ol_eqb_qbz_b3b">
+                <li>Select <uicontrol>Manual</uicontrol> partitioning method.<p><image
+                            href="../Images/admin/k2-manual-partition-disk.jpg"
+                            id="image_ogp_5bz_b3b"/></p></li>
+                <li importance="optional"> Delete all the existed partition disk.</li>
+                <li>Select the partition of the virtual machine.<p><image
+                            href="../Images/admin/k2-select-partition-VM.jpg" id="image_ogy_zbz_b3b"
+                        /></p></li>
+                <li>Select <uicontrol>Yes</uicontrol> to create new empty partition table on this
+                            device.<p><image
+                            href="../Images/admin/k2-create-new-partition-table.jpg"
+                            id="image_ivc_hcz_b3b"/></p></li>
+                <li>Create partition 1: root directory for system files<ol id="ol_zzk_3cz_b3b">
+                        <li>Select the <uicontrol>FREE SPACE</uicontrol> to create partition
+                                    1.<p><image
+                                    href="../Images/admin/k2-select-free-space-partition1.jpg"
+                                    id="image_tmg_ncz_b3b"/></p></li>
+                        <li>Select <uicontrol>Create a new partition</uicontrol>.<p><image
+                                    href="../Images/admin/k2-create-new-partition-partition1.jpg"
+                                    id="image_o3j_xcz_b3b" width="400"/></p></li>
+                        <li>Set the partition size.<p>Partition size recommend: 50GB.</p><p><image
+                                    href="../Images/admin/k2-set-partition-size-partition1.jpg"
+                                    id="image_khy_1dz_b3b"/></p></li>
+                        <li>Choose the partition type as <uicontrol>Primary</uicontrol>.<p><image
+                                    href="../Images/admin/k2-choose-pritition-type-partition1.jpg"
+                                    id="image_kw2_fdz_b3b" width="300"/></p></li>
+                        <li>Select location for the partition as
+                                    <uicontrol>Beginning</uicontrol>.<p><image
+                                    href="../Images/admin/k2-select-beginning-location-partition1.jpg"
+                                    id="image_xzr_jdz_b3b"/></p></li>
+                        <li>Set <uicontrol>Use as</uicontrol> and <uicontrol>Mount point</uicontrol>
+                            for the partition 1, then select <uicontrol>Done settings up the
+                                partition</uicontrol>.<ul id="ul_uh2_ndz_b3b">
+                                <li><uicontrol>Use as</uicontrol>: Ext4 journaling file system</li>
+                                <li><uicontrol>Mount point</uicontrol>: /</li>
+                                <li><uicontrol>Bootable flag</uicontrol>: on</li>
+                            </ul><p><image href="../Images/admin/k2-set-mount-point-parition1.jpg"
+                                    id="image_czk_5dz_b3b"/></p></li>
+                    </ol></li>
+                <li>Create partition 2: home directory for data and recordings.<ol
+                        id="ol_fbz_xdz_b3b">
+                        <li>Select the <uicontrol>FREE SPACE</uicontrol> to create partition 2.
+                                    <p><image
+                                    href="../Images/admin/k2-select-free-space-partition2.png"
+                                    id="image_khq_42z_b3b"/></p></li>
+                        <li>Select <uicontrol>Create a new partition</uicontrol>.<p><image
+                                    href="../Images/admin/k2-create-new-partition-partition2.png"
+                                    width="400"/></p></li>
+                        <li>Set the partition size.<p>
+                                <note>
+                                    <ul id="ul_ljh_x4t_cjb">
+                                        <li>1000-minute recordings require about 1GB space.</li>
+                                        <li>We recommend that you set a larger space for the
+                                            partition to have more space to store your recordings
+                                            and other data. </li>
+                                    </ul>
+                                </note>
+                            </p><p><image
+                                    href="../Images/admin/k2-set-partition-size-partition2.png"
+                                /></p></li>
+                        <li>Choose the partition type as <uicontrol>Logical</uicontrol>.<p><image
+                                    href="../Images/admin/k2-choose-pritition-type-partition2.png"
+                                    id="image_w55_q2z_b3b" width="300"/></p></li>
+                        <li>Select location for the partition as
+                                    <uicontrol>Beginning</uicontrol>.<p><image
+                                    href="../Images/admin/k2-select-beginning-location-partition2.png"
+                                /></p></li>
+                        <li>Set <uicontrol>Use as</uicontrol> and <uicontrol>Mount point</uicontrol>
+                            for the partition 2, then select <uicontrol>Done settings up the
+                                partition</uicontrol>.<ul id="ul_y55_q2z_b3b">
+                                <li>Use as: Ext4 journaling file system</li>
+                                <li>Mount point: /home</li>
+                            </ul><p><image href="../Images/admin/k2-set-mount-point-partition2.png"
+                                /></p></li>
+                    </ol></li>
+                <li>Create partition 3: swap area for storing data when system hibernates.<ol
+                        id="ol_olq_tfz_b3b">
+                        <li>Select the <uicontrol>FREE SPACE</uicontrol> to create a new partition.
+                                    <p><image
+                                    href="../Images/admin/k2-select-free-space-partition3.png"
+                            /></p></li>
+                        <li>Select <uicontrol>Create a new partition</uicontrol>.<p><image
+                                    href="../Images/admin/k2-create-new-partition-partition3.png"
+                                    width="400"/></p></li>
+                        <li>Set the partition size.<p>Partition size recommend: 10G.</p><p><image
+                                    href="../Images/admin/k2-set-partition-size-partition3.png"
+                                /></p></li>
+                        <li>Choose the partition type as <uicontrol>Logical</uicontrol>.<p><image
+                                    href="../Images/admin/k2-choose-pritition-type-partition3.png"
+                                    width="300"/></p></li>
+                        <li>Select location for the partition as
+                                    <uicontrol>Beginning</uicontrol>.<p><image
+                                    href="../Images/admin/k2-select-beginning-location-partition3.png"
+                                /></p></li>
+                        <li>Set <uicontrol>Use as</uicontrol> for the partition 3, then select
+                                <uicontrol>Done settings up the partition</uicontrol>.<ul
+                                id="ul_ulq_tfz_b3b">
+                                <li>Use as: swap area</li>
+                            </ul><p><image href="../Images/admin/k2-set-mount-point-partition3.png"
+                                /></p></li>
+                    </ol></li>
+                <li>Select <uicontrol>Finish partitioning and write changes to
+                            disk</uicontrol>.<p><image
+                            href="../Images/admin/k2-finish-partition.jpg" id="image_ehx_wgz_b3b"
+                        /></p></li>
+                <li>Select <uicontrol>Yes</uicontrol>, write the changes to disks.<p><image
+                            href="../Images/admin/k2-write-change-disk.jpg" id="image_jsk_ygz_b3b"
+                        /></p></li>
+            </ol>
+        </section>
+        <section id="section_ep2_1hz_b3b">
+            <title>Step 4. Install the IPPBX System</title>
+            <p>After finishing partitioning and write changes to disk, the virtual machine starts to
+                install the system. Wait for a few minutes for the installation.<ol
+                    id="ol_gzq_2hz_b3b">
+                    <li>Select <uicontrol>No automatic updates</uicontrol>.<p>
+                            <note type="important">Do not select other options.<p><image
+                                        href="../Images/admin/k2-no-automatic-updates.jpg"
+                                        id="image_wlr_xhz_b3b"/></p></note>
+                        </p></li>
+                    <li>Press <uicontrol>Tab</uicontrol> to select <uicontrol>Continue</uicontrol>
+                        to skip this step.<p><image
+                                href="../Images/admin/k2-install-system-continute.jpg"
+                                id="image_u43_b3z_b3b"/></p></li>
+                    <li>Select <uicontrol>Yes</uicontrol> to install the GPUB boot loader.<p><image
+                                href="../Images/admin/k2-select-yes-install.jpg"
+                                id="image_hht_c3z_b3b"/></p></li>
+                    <li>Select <uicontrol>Continue</uicontrol> to boot into your system.<p><image
+                                href="../Images/admin/k2-finish-intallation.jpg"
+                                id="image_c5f_23z_b3b"/></p><p>When the following screen displays,
+                            the IPPBX system is successfully installed.</p><p><image
+                                href="../Images/admin/k2-install-success-screen.jpg"
+                                id="image_x2p_h3z_b3b" width="500"/></p></li>
+                </ol></p>
+        </section>
+    </body>
+</topic>

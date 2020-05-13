@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_rcy_byz_c2b">
+    <title>Configure Extensions on the PBX</title>
+    <shortdesc>After the char utile h+ Integration App is installed in the Yeastar S-Series VoIP
+        PBX, all the extensions are regarded as Hotel extensions. </shortdesc>
+    <conbody>
+        <p>Go to <menucascade>
+                <uicontrol>Settings</uicontrol>
+                <uicontrol>PBX</uicontrol>
+                <uicontrol>Extensions</uicontrol>
+                <uicontrol>General</uicontrol>
+            </menucascade> to change the extension type.</p>
+        <p><image href="../Images/admin/char_extension_type.png" width="650" id="image_n1b_pyz_c2b"
+            /></p>
+        <p>
+            <ul id="ul_i4n_ryz_c2b">
+                <li><b>Normal Extension</b><p>A Normal Extension has no limitation. You can use the
+                        hotel extension to make internal calls, outbound calls and receive inbound
+                        calls. Generally, the Normal extensions will be assigned to the Hotel
+                        reception and managers.</p></li>
+                <li><b>char Extension</b><p>A char Extension’s features are limited by the room
+                        status of the char server. If a room status is Check-in, you can use the
+                        room extension to make internal calls, outbound calls and receive inbound
+                        calls. If the room status is Check-out, you can only use the room extension
+                        to make internal calls.</p></li>
+            </ul>
+        </p>
+    </conbody>
+</concept>

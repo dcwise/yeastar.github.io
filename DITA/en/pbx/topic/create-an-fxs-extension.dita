@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_uvd_w3j_3db">
+    <title>Create an FXS Extension</title>
+    <shortdesc><ph keyref="product_name"/> supports
+        <?oxy_comment_start author="Becky" timestamp="20190905T093443+0800" comment="原文：Yeastar xxxx  supports Foreign eXchange Subscriber (FXS) interface. You can add an FXS extension when you need to connect analog phones or fax machines to the Yeastar XXXX." flag="done"?>Foreign
+        Exchange Station<?oxy_comment_end?> (FXS) interface. You can add an FXS extension when you
+        need to connect analog phones or fax machines to the FXS ports of <ph keyref="product_name"
+        />.</shortdesc>
+    <taskbody>
+        <prereq id="prereq_phq_q4z_z3b">
+            <p>Install an S2 module or SO module on the PBX, then connect an analog phone or fax
+                machine to the FXS port.</p>
+        </prereq>
+        <steps id="steps_ttq_kcl_ldb">
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol>PBX</uicontrol>
+                        <uicontrol>Extensions</uicontrol>
+                    </menucascade>, click <uicontrol>Add</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>On the <uicontrol>Basic</uicontrol> page, go to <uicontrol>General</uicontrol>
+                    section, and set the general settings of the extension.</cmd>
+                <info><image href="../Images/admin/add_fxs_extension.png" width="650"
+                        id="image_n2s_twk_scb"/></info>
+                <info>
+                    <ul id="ul_n3l_2kn_1jb">
+                        <li><uicontrol>Type</uicontrol>: Select checkbox of
+                                <uicontrol>FXS</uicontrol> and select an FXS port.</li>
+                        <li><uicontrol>Extension</uicontrol>: Enter the extension number.</li>
+                        <li><uicontrol>Caller ID</uicontrol>: Enter the caller ID number. The called
+                            party will see this caller ID number when the extension user makes an
+                            outgoing call.</li>
+                        <li><uicontrol>Caller ID Name</uicontrol>: Enter the caller ID name. The
+                            called party will see this caller ID name when the extension user makes
+                            an outgoing call.</li>
+                    </ul>
+                </info>
+            </step>
+            <step>
+                <cmd>On the <uicontrol>Basic</uicontrol> page, go to <uicontrol>User
+                        Information</uicontrol> section, and set the user information.</cmd>
+                <info><image href="../Images/admin/extension_user_info.png" width="650"
+                        id="image_um5_lxk_scb"/><ul id="ul_jkf_gkn_1jb">
+                        <li><uicontrol>Email</uicontrol>: Extension user can reset his/her login
+                            password, receive voice mails, faxes, or PBX notifications via this
+                            email address.</li>
+                        <li><uicontrol>User Password</uicontrol>: Extension user can log in the PBX
+                            or log in Linkus client by the user password.</li>
+                        <li><uicontrol>Prompt Language</uicontrol>: The language of voice prompts.
+                            The default prompt language is the same as the system language. If the
+                            extension user speaks foreign language, you can set a specific system prompt.<p>
+                                <note>Before selecting other system prompts, go to <menucascade>
+                                        <uicontrol>Settings</uicontrol>
+                                        <uicontrol>PBX</uicontrol>
+                                        <uicontrol>Voice Prompts</uicontrol>
+                                        <uicontrol>System Prompt</uicontrol>
+                                    </menucascade> to download online prompts.</note>
+                            </p></li>
+                        <li><uicontrol>Mobile Number</uicontrol>: Extension user can receive the PBX
+                            notifications or forwarded calls on this mobile number.</li>
+                    </ul></info>
+            </step>
+            <step importance="optional">
+                <cmd>Click <uicontrol>Presence</uicontrol>, <uicontrol>Features</uicontrol>,
+                        <uicontrol>Advanced</uicontrol>, or <uicontrol>Call Permission</uicontrol>
+                    tab to configure <xref href="fxs-extension-settings.dita#reference_kgz_jt4_y3b"
+                        ><?oxy_comment_start author="carol" timestamp="20190909T114142+0800" comment="链接到FXS Extension Settings" flag="done"?>other
+                        settings<?oxy_comment_end?></xref>.</cmd>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_n4x_2z3_pdb">
+    <title>Version 1.5.25</title>
+    <abstract>Released Date: May 23, 2017</abstract>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/06/20"/>
+        </critdates>
+    </prolog>
+    <body>
+        <section id="section_q4g_dbx_pdb">
+            <title>Optimization</title>
+            <p><image href="../Images/horizon.png" id="image_r4g_dbx_pdb"/></p>
+            <p>
+                <ul>
+                    <li>Optimized outbound route security: the administrator can limit how many
+                        outbound calls the extension</li>
+                    <li>users can make during a specific time (Settings > PBX > Call Control >
+                        Outbound Restriction).</li>
+                    <li>Optimized Local SIP Port: the system has a default IP auto defense rule for
+                        the local SIP ports.</li>
+                    <li>Optimized extension registration security: only the registered extension can
+                        dial out, direct IP call is</li>
+                    <li>forbidden.</li>
+                    <li>Optimized extension registration security: added support for user agent
+                        registration authorization</li>
+                    <li>(Settings > General > SIP > Advanced > SIP > User Agent Registration
+                        Authorization). Fill in user</li>
+                    <li>agent prefixes in the User Agent Registration Authorization field, only the
+                        matched user agent can</li>
+                    <li>register extension to the IPPBX.</li>
+                    <li>Optimized extension/trunk registration security: the system will not reply
+                        OPTIONS packets from</li>
+                    <li>unknown extensions or trunks.</li>
+                    <li>Optimized CDR feature: users can choose to show “Caller IP Address” in the
+                        CDR log.</li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_czy_dbx_pdb">
+            <title>Fixed Bug</title>
+            <p><image href="../Images/horizon.png" id="image_dzy_dbx_pdb"/></p>
+            <p>
+                <ul>
+                    <li>Fixed Queue: the call duration time was incorrect.</li>
+                    <li>Fixed Queue: “Ring in Use” was disabled, and the queue strategy wasn’t “Ring
+                        All”, but the agent who</li>
+                    <li>was in a call still could receive a new call.</li>
+                    <li>Fixed the Ring Group: if there were more than 50 members in the group, and
+                        the ring strategy was</li>
+                    <li>“Ring All”, the system would not ring all the members if a call reached the
+                        ring group.</li>
+                </ul>
+            </p>
+        </section>
+    </body>
+</topic>

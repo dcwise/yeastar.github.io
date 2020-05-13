@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_ljm_jpw_pcb">
+ <title>Domain Structure of Yeastar Cloud PBX</title>
+ <shortdesc>In your local network, you can deploy multiple YMP servers. To get better domain deploy
+  of Yeastar Cloud PBX, you need to know the domain structure of Yeastar Cloud PBX.</shortdesc>
+ <conbody>
+  <p>
+   <ol id="ul_apy_jpx_pcb">
+    <li>SBC server doesn't need a domain.</li>
+    <li>All your YMP servers must have the same 2LD or 3LD.<p>
+      <note> We recommend that you choose 3LD for YMP servers.</note>
+     </p><p><b>Example 1: YMP Servers have the same 2LD.</b></p><p><image
+       href="../Images/SBC/ymp_domain_example1.png" id="image_akv_222_qcb" width="400"
+       /></p><p><b>Example 2:</b>
+      <b>YMP Servers have the same 3LD.</b></p><p><image
+       href="../Images/SBC/ymp_domain_example2.png" width="450" id="image_d2p_g22_qcb"/></p></li>
+    <li>The PBX instances and YMP servers have the same domain level.<p><b>Example:</b></p><p>
+      <ul id="ul_tjw_c5c_qcb">
+       <li>YMP A: <codeph>ympa.example.com</codeph></li>
+       <li>PBX 1: <codeph>pbxa1.example.com</codeph></li>
+      </ul>
+     </p></li>
+    <li>You need to forward all the domains of YMP servers and PBX instances to the SBC IP
+      address.<p>As the following figure shows, you need to forward <codeph>*.example.com</codeph>
+      to <codeph>123.25.36.2</codeph>.</p><p><image href="../Images/SBC/domain_structure.png"
+       width="650" id="image_gqt_1vc_qcb"/></p></li>
+   </ol>
+  </p>
+ </conbody>
+</concept>

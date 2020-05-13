@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_orp_rkt_c2b">
+    <title>Hotel General Settings</title>
+    <shortdesc>Enable the Hotel App and set the hotel information, currency unit and Value Added Tax
+        (VAT).</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/06/11"/>
+            <!--Carol-->
+            <revised modified="2018/06/11"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <section id="section_ekb_svs_c2b">
+            <title>Enable Hotel App</title>
+            <p>
+                <ol id="ol_f3n_wvs_c2b">
+                    <li>Log in the PBX web interface, go to <uicontrol>Hotel</uicontrol> app, check
+                        the option <uicontrol>Enable Hotel</uicontrol>.<image
+                            href="../Images/admin/enable_hotel.png" id="image_a3c_3ws_c2b"
+                            width="650"/></li>
+                    <li>Click <uicontrol>Save</uicontrol>.</li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_bg4_nws_c2b">
+            <title>Hotel General Settings</title>
+            <p>
+                <ol id="ol_fqh_4ws_c2b">
+                    <li><b>Set the hotel information.</b><p>Go to <menucascade>
+                                <uicontrol>Hotel General Settings</uicontrol>
+                                <uicontrol>Company</uicontrol>
+                            </menucascade>, enter your hotel name, address, contact and upload the
+                            hotel logo. The hotel information will be displayed on the billing
+                            report.</p><p><image href="../Images/admin/hotel_information.png"
+                                id="image_utk_tws_c2b"/></p></li>
+                    <li><b>Set the currency unit and Value Added Tax (VAT).</b><p>Go to
+                                <uicontrol>Hotel General Settings</uicontrol><uicontrol>Currency
+                                Unit and VAT</uicontrol>, set the hotel currency unit and VAT.
+                            </p><p>The currency unit and the name of Tax will be displayed on the
+                            billing report.</p><p><image href="../Images/admin/hotel_currency.png"
+                                id="image_otp_bxs_c2b" width="650"/></p></li>
+                </ol>
+            </p>
+        </section>
+    </conbody>
+</concept>

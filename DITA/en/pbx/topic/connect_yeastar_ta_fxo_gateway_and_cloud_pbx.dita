@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_fyg_jh4_1fb">
+    <title>Interconnect Yeastar Cloud PBX and TA FXO Gateway</title>
+    <shortdesc>Interconnect Yeastar Cloud PBX and Yeastar TA FXO gateway to extend analog FXO
+        trunks.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/09/04"/>
+            <!--Carol-->
+            <revised modified="2018/09/04"/>
+            <!--Carol-->
+            <revised modified="2018/09/05"/>
+        </critdates>
+    </prolog>
+    <body>
+        <p>In the following instruction, we tested with Yeastar Cloud PBX version 81.6.0.3 and
+            Yeastar TA810 version 41.19.0.23.</p>
+        <p>After connecting the Yeastar Cloud PBX and the Yeastar TA FXO gateway, the users of
+            Yeastar Cloud PBX can achieve the followings:</p>
+        <p>
+            <ul id="ul_fgr_hjk_b2b">
+                <li>Make outbound calls through FXO trunks of TA FXO gateway</li>
+                <li>Receive inbound calls from FXO trunks of TA FXO gateway</li>
+            </ul>
+        </p>
+        <p><image href="../Images/integration/cloud+ta-fxo.png" id="image_d1g_bn4_1fb"
+                product="cloudpbx"/></p>
+        <section id="section_imj_4p4_1fb">
+            <title>1. Connect Yeastar Cloud PBX and TA810</title>
+            <p>
+                <ol id="ol_hyq_tp4_1fb">
+                    <li>On the Yeastar Cloud PBX, create an Account Trunk.<p>
+                            <ol id="ol_zv5_wq4_1fb">
+                                <li>Go to <menucascade>
+                                        <uicontrol>Settings</uicontrol>
+                                        <uicontrol>Trunks</uicontrol>
+                                    </menucascade>, click <uicontrol>Add</uicontrol>.</li>
+                                <li>Set the trunk as an Account Trunk.<p><image
+                                            href="../Images/integration/cloud+ta810_account_trunk.png"
+                                            width="650" id="image_s1y_mq4_1fb"/></p><p>
+                                        <ul>
+                                            <li><uicontrol>Name</uicontrol>: Set a name to help you
+                                                identify it.</li>
+                                            <li><uicontrol>Trunk Status</uicontrol>: Select
+                                                  <uicontrol>Enabled</uicontrol>.</li>
+                                            <li><uicontrol>Protocol</uicontrol>: Select
+                                                  <uicontrol>SIP</uicontrol>.</li>
+                                            <li><uicontrol>Trunk Type</uicontrol>: Select
+                                                  <uicontrol>Account Trunk</uicontrol>.</li>
+                                            <li><uicontrol>Transport</uicontrol>: Select
+                                                  <uicontrol>UDP</uicontrol>.</li>
+                                            <li><uicontrol>Username</uicontrol>: Use the default or
+                                                change the number.</li>
+                                            <li><uicontrol>Password</uicontrol>: Use the default or
+                                                change the password.</li>
+                                            <li><uicontrol>Authentication Name</uicontrol>: Set to
+                                                the same with <uicontrol>Username</uicontrol>.</li>
+                                        </ul>
+                                    </p></li>
+                                <li>Click <uicontrol>Save</uicontrol> and
+                                        <uicontrol>Apply</uicontrol>.</li>
+                            </ol>
+                        </p></li>
+                    <li>On the TA810, create a register-based VoIP trunk.<p>
+                            <ol id="ol_rnh_gr4_1fb">
+                                <li>Go to <menucascade>
+                                        <uicontrol>Gateway</uicontrol>
+                                        <uicontrol>VoIP Settings</uicontrol>
+                                        <uicontrol>VoIP Trunk</uicontrol>
+                                    </menucascade>, click <uicontrol>Add New Trunk</uicontrol>.</li>
+                                <li>Configure the VoIP trunk.<p><image
+                                            href="../Images/integration/cloud+ta810_register_trunk.png"
+                                            id="image_vlc_vr4_1fb"/></p><p>
+                                        <ul id="ul_sq4_xr4_1fb">
+                                            <li><uicontrol>Trunk Type</uicontrol>: Select
+                                                  <uicontrol>Trunk</uicontrol>.</li>
+                                            <li><uicontrol>Type</uicontrol>: Select
+                                                  <uicontrol>SIP</uicontrol>.</li>
+                                            <li><uicontrol>Provider Name</uicontrol>: Set the trunk
+                                                name.</li>
+                                            <li><uicontrol>Hostname/IP</uicontrol>: Enter the domain
+                                                or IP address of the PBX; Enter the SIP port.</li>
+                                            <li><uicontrol>Domain</uicontrol>: Enter the domain or
+                                                IP address of the PBX.</li>
+                                            <li><uicontrol>User Name</uicontrol>: Enter the
+                                                  <uicontrol>Username</uicontrol> of Account Trunk
+                                                that is created on the PBX.</li>
+                                            <li><uicontrol>Authorization Name</uicontrol>: Enter the
+                                                  <uicontrol>Authentication Name</uicontrol> of
+                                                Account Trunk that is created on the PBX.</li>
+                                            <li><uicontrol>Password</uicontrol>: Enter the
+                                                  <uicontrol>Password</uicontrol> of Account Trunk
+                                                that is created on the PBX.</li>
+                                        </ul>
+                                    </p></li>
+                                <li>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply
+                                        Changes</uicontrol>.</li>
+                            </ol>
+                        </p></li>
+                    <li>Check the connection status.<p>
+                            <ol id="ol_wm3_vs4_1fb">
+                                <li>On the TA810, go to <menucascade>
+                                        <uicontrol>Status</uicontrol>
+                                        <uicontrol>System Status</uicontrol>
+                                        <uicontrol>Port/Trunk Status</uicontrol>
+                                    </menucascade> to check the trunk status.<p>If the connection is
+                                        successful, the status will show "Registered".</p><p><image
+                                            href="../Images/integration/cloud+ta810_voip_trunk_status.png"
+                                            id="image_cpm_rt4_1fb" width="700"/></p></li>
+                                <li>On the Yeastar Cloud PBX, go to <uicontrol>PBX
+                                        Monitor</uicontrol> to check the trunk status. <itemgroup>If
+                                        the connection is successful, the status will show <image
+                                            href="../Images/ui_icons/ok.png" width="20"
+                                            id="image_bv2_t5k_p2b"/>.</itemgroup><p><image
+                                            href="../Images/integration/cloud+ta810_account_trunk_status.png"
+                                            id="image_fsh_d54_1fb" width="700"/></p></li>
+                            </ol>
+                        </p></li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_qvx_j54_1fb">
+            <title>2. Make Outbound Calls Through FXO Trunks</title>
+            <p>
+                <ol id="ol_qqs_n54_1fb">
+                    <li>On Yeastar Cloud PBX, create an outbound route to allow users make outbound
+                        calls through TA810.<p>
+                            <ol id="ol_axy_s54_1fb">
+                                <li>Go to <menucascade>
+                                        <uicontrol>Settings</uicontrol>
+                                        <uicontrol>PBX</uicontrol>
+                                        <uicontrol>Call Control</uicontrol>
+                                        <uicontrol>Outbound Routes</uicontrol>
+                                    </menucascade>, click <uicontrol>Add</uicontrol>.</li>
+                                <li>Configure the outbound route.<p><image
+                                            href="../Images/integration/cloud+ta810_outbound_route.png"
+                                            id="image_qpy_4v4_1fb" width="650"/></p><p>
+                                        <ul id="ul_fw2_qv4_1fb">
+                                            <li><uicontrol>Name</uicontrol>: Set the outbound route
+                                                name.</li>
+                                            <li><uicontrol>Dial Patterns</uicontrol>: Set the dial
+                                                patterns according to your needs. <p>In our
+                                                  scenario, set <uicontrol>Patterns</uicontrol> to
+                                                  <codeph>9.</codeph>, set
+                                                  <uicontrol>Strip</uicontrol> to
+                                                  <codeph>1</codeph>; users should dial prefix 9
+                                                  before the target number. For example, to call
+                                                  number 123456, you should dial 9123456.</p></li>
+                                            <li><uicontrol>Member Trunks</uicontrol>: Select the
+                                                trunk that is connected to TA810 to
+                                                  <uicontrol>Selected</uicontrol> box.</li>
+                                            <li><uicontrol>Member Extensions</uicontrol>: Select
+                                                extensions to <uicontrol>Selected</uicontrol> box.
+                                                The selected extensions can make outbound calls
+                                                through TA810.</li>
+                                        </ul>
+                                    </p></li>
+                                <li>Click <uicontrol>Save</uicontrol> and
+                                        <uicontrol>Apply</uicontrol>.</li>
+                            </ol>
+                        </p></li>
+                    <li>On TA810, set an IP->Port route to allow the PBX users make outbound calls
+                        through the FXO trunks.<p>
+                            <ol id="ol_rv4_pw4_1fb">
+                                <li>Go to <menucascade>
+                                        <uicontrol>Gateway</uicontrol>
+                                        <uicontrol>Route Settings</uicontrol>
+                                        <uicontrol>IP->Port</uicontrol>
+                                    </menucascade>,  click <uicontrol>Add IP->Port
+                                    Route</uicontrol>.</li>
+                                <li>Configure IP->Port route.<p><image
+                                            href="../Images/integration/cloud+ta810_ip_to_port.png"
+                                            id="image_ykt_qx4_1fb"/></p><p>
+                                        <ul id="ul_rky_tx4_1fb">
+                                            <li><uicontrol>Simple Mode</uicontrol>: Select
+                                                  <uicontrol>No</uicontrol>.</li>
+                                            <li><uicontrol>Route Name</uicontrol>: Set the route
+                                                name.</li>
+                                            <li><uicontrol>Call Source</uicontrol>: Select the trunk
+                                                that is connected to the PBX.</li>
+                                            <li><uicontrol>DID Number</uicontrol>: Set to
+                                                  <codeph>.</codeph> to allow users dial any
+                                                number.</li>
+                                            <li><uicontrol>Call Destination</uicontrol>: Select an
+                                                FXO port an FXO port group.</li>
+                                        </ul>
+                                    </p></li>
+                                <li>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply
+                                        Changes</uicontrol>.</li>
+                            </ol>
+                        </p></li>
+                    <li>Make a call to test.<p>For example, the PBX extension 1000 dials
+                            91588035242, the user 1588035242 will ring.</p></li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_jpb_my4_1fb">
+            <title>3. Receive Inbound Calls From FXO Trunks</title>
+            <p>
+                <ol id="ol_j5c_py4_1fb">
+                    <li>On Yeastar Cloud PBX, create an inbound route to accept incoming calls from TA810.<p>
+                            <ol id="ol_vcn_sz4_1fb">
+                                <li>Go to <menucascade>
+                                        <uicontrol>Settings</uicontrol>
+                                        <uicontrol>PBX</uicontrol>
+                                        <uicontrol>Call Control</uicontrol>
+                                        <uicontrol>Inbound Routes</uicontrol>
+                                    </menucascade>, click <uicontrol>Add</uicontrol>.</li>
+                                <li>Configure the inbound route.<p><image
+                                            href="../Images/integration/cloud+ta810_inbound_route.png"
+                                            width="650" id="image_htb_21p_1fb"/></p><p>
+                                        <ul id="ul_dwm_21p_1fb">
+                                            <li><uicontrol>Name</uicontrol>: Set the inbound route
+                                                name.</li>
+                                            <li><uicontrol>DID Pattern</uicontrol>: Set a DID
+                                                number. This DID number will be used to match the
+                                                incoming calls from TA810.</li>
+                                            <li><uicontrol>Member Trunks</uicontrol>: Select the
+                                                trunk that is connected to TA810 to
+                                                  <uicontrol>Selected</uicontrol> box.</li>
+                                            <li><uicontrol>Destination</uicontrol>: Set a
+                                                destination for the inbound route.<p>In our
+                                                  scenario, set the
+                                                  <uicontrol>Destination</uicontrol> to an IVR. The
+                                                  PBX will route incoming calls of TA810 to the
+                                                  IVR.</p></li>
+                                        </ul>
+                                    </p></li>
+                                <li>Click <uicontrol>Save</uicontrol> and
+                                        <uicontrol>Apply</uicontrol>.</li>
+                            </ol>
+                        </p></li>
+                    <li>On TA810, create a Port->IP route to route incoming calls to the PBX.<p>
+                            <ol id="ol_hdh_cz4_1fb">
+                                <li>Go to <menucascade>
+                                        <uicontrol>Gateway</uicontrol>
+                                        <uicontrol>Route Settings</uicontrol>
+                                        <uicontrol>Port->IP/Port</uicontrol>
+                                    </menucascade>, click <uicontrol>Add Port->IP/Port
+                                        Route</uicontrol>.</li>
+                                <li>Configure the Port->IP/Port route.<p><image
+                                            href="../Images/integration/cloud+ta810_port_to_ip.png"
+                                            id="image_mn4_xlt_1fb"/></p><p>
+                                        <ul id="ul_xqx_ylt_1fb">
+                                            <li><uicontrol>Simple Mode</uicontrol>: Select
+                                                  <uicontrol>Yes</uicontrol>.</li>
+                                            <li><uicontrol>Route Name</uicontrol>: Set the route
+                                                name.</li>
+                                            <li><uicontrol>Call Source</uicontrol>: Select an FXO
+                                                port or an FXO port group.</li>
+                                            <li><uicontrol>Call Destination</uicontrol>: Choose the
+                                                trunk that is connected to the PBX.</li>
+                                            <li><uicontrol>Hotline</uicontrol>: Enter the DID number
+                                                that is set on the PBX's inbound route.</li>
+                                        </ul>
+                                    </p></li>
+                                <li>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply
+                                        Changes</uicontrol>.</li>
+                            </ol>
+                        </p></li>
+                    <li>Make a call to test.<p>For example, the FXO trunk number is 17283733; use
+                            your mobile phone to call  17283733, you will hear the PBX's IVR
+                            prompt.</p></li>
+                </ol>
+            </p>
+        </section>
+    </body>
+</topic>

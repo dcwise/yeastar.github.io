@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_yzl_km5_cfb">
+    <title>Enable/Disable Call Waiting</title>
+    <shortdesc>Call waiting allows you to receive incoming call alerts while you are on a
+        call.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/09/12"/>
+            <!--Carol-->
+            <revised modified="2018/09/12"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <context>
+            <p>
+                <note>The Call Waiting settings on the IP phone has a higher priority than the Call
+                    Waiting settings on PBX.</note>
+            </p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Me</uicontrol>
+                        <uicontrol>Extension Settings</uicontrol>
+                        <uicontrol>Other Settings</uicontrol>
+                    </menucascade>, check the option <uicontrol>Call Waiting</uicontrol> to enable
+                    call waiting.</cmd>
+            </step>
+            <step>
+                <cmd>Uncheck the option <uicontrol>Call Waiting</uicontrol> to disable call
+                    waiting.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

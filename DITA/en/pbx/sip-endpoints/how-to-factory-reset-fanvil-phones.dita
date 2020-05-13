@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="how-to-factory-reset-fanvil-phones">
+    <title>How to Factory Reset Fanvil Phones</title>
+    <shortdesc>This guide takes Fanvil X5S running firmware 1.8.0 as an example.</shortdesc>
+    <body>
+        <p>
+            <ol>
+                <li>Find the phone IP address. <p>Navigate to <menucascade>
+                            <uicontrol>Menu</uicontrol>
+                            <uicontrol>Status</uicontrol>
+                            <uicontrol> Network</uicontrol>
+                        </menucascade> on the phone.</p></li>
+                <li>Log in the phone web interface with your username and password. <ul
+                        id="ul_gyj_sp3_yhb">
+                        <li>username: admin</li>
+                        <li>password: admin</li>
+                    </ul></li>
+                <li>Go to <menucascade>
+                        <uicontrol>System</uicontrol>
+                        <uicontrol>Configurations</uicontrol>
+                    </menucascade>.<p><image href="../Images/autop-fanvil-factory-reset.png"
+                            id="image_zzk_yrp_yhb" width="650"/></p></li>
+                <li>Click <uicontrol>Reset</uicontrol>.<p>A pop-up dialog prompts you whether to
+                        reset the phone.</p></li>
+                <li>Click <uicontrol>OK</uicontrol>.<p>The phone will be reset successfully after
+                        startup.</p><p>
+                        <note type="caution">Do not power off during phone startup. </note>
+                    </p></li>
+            </ol>
+        </p>
+    </body>
+</topic>

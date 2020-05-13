@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_oyj_mcm_2db">
+  <title>Time Condition Override</title>
+  <shortdesc>The Time Condition Override function is used to switch the inbound call routing against
+    the Time Condition. An authorised user can dial Time Condition feature code to override the time
+    condition.</shortdesc>
+  <body>
+    <section id="section_rgp_bfz_kjb">
+      <title>Scenarios</title>
+      <p>Company A sets day time condition and night time condition in an inbound route with
+        different destinations. </p>
+      <p>The staffs occasionally leave early or someone needs to enable the night time condition
+        manually. In this scenario, the staffs can dial override feature code to override the time
+        condition.</p>
+    </section>
+    <section id="section_qxd_kbc_pdb">
+      <title>Time Condition feature code</title>
+      <p>When you enable and add Time Condition on an inbound route, you will see the default
+        generated feature code for the Time Condition. If you want to disable Time Condition
+        Override, dial the Reset feature code *800.</p>
+      <p>You can go to <menucascade>
+          <uicontrol>Settings</uicontrol>
+          <uicontrol>PBX</uicontrol>
+          <uicontrol>General</uicontrol>
+          <uicontrol>Feature Code</uicontrol>
+          <uicontrol>Time Condition</uicontrol>
+        </menucascade> to change the feature code prefix.</p>
+      <p><image href="../Images/admin/time_condition_feature_code.png" width="650"
+          id="image_l44_1cc_pdb"/></p>
+    </section>
+    <section id="section_bdh_rcc_pdb">
+      <title>Set extension permission to override Time Condition</title>
+      <p>By default, users have no permission to override Time Condition. You can set which
+        extension users can override Time Condition.</p>
+      <p>
+        <ol id="ol_x1k_cdc_pdb">
+          <li>Go to <menucascade>
+              <uicontrol>Settings</uicontrol>
+              <uicontrol>PBX</uicontrol>
+              <uicontrol>General</uicontrol>
+              <uicontrol>Feature Code</uicontrol>
+              <uicontrol>Time Condition</uicontrol>
+            </menucascade>, click <uicontrol>Set Extension Permission</uicontrol>.<p><image
+                href="../Images/admin/set_time_condition.png" id="image_y3b_zcc_pdb"/></p></li>
+          <li>Select the desired extensions from <uicontrol>Available</uicontrol> box to
+              <uicontrol>Selected</uicontrol> box.</li>
+          <li>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</li>
+        </ol>
+      </p>
+    </section>
+  </body>
+</topic>

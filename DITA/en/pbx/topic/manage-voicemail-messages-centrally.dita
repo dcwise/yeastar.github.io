@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_um5_q11_4hb">
+    <title>Manage Voicemail Messages Centrally</title>
+    <shortdesc>In <ph keyref="product_name"/>, you have two options to manage voicemail messages
+        centrally and efficiently: subscribe BLF keys on a phone to monitor multiple extensions'
+        voicemail status and receive multiple extensions' voicemail messages from one
+        mailbox.</shortdesc>
+    <body>
+        <section id= "monitor-voicemail-status">
+            <title>Monitor voicemail status by BLF keys</title>
+            <p>By default, an extension's voicemail status cannot be monitored by other users. To
+                monitor an extension's voicemail status, you need to enable <uicontrol>Share
+                    Voicemail Status</uicontrol> on the extension.</p>
+            <p>We take Yealink T27G v69.82.0.20 as an example below to introduce how to monitor
+                voicemail status of extension 4000 by extension 1000.</p>
+            <p>
+                <ol id="ol_npy_hb4_4hb">
+                    <li><b>Enable voicemail status sharing feature of extension 4000.</b><p>
+                            <ol id="ol_xyw_gc4_4hb">
+                                <li>Log in the PBX web interface, go to <menucascade>
+                                        <uicontrol>Settings</uicontrol>
+                                        <uicontrol>PBX</uicontrol>
+                                        <uicontrol>Extensions</uicontrol>
+                                    </menucascade>, edit the extension 4000.</li>
+                                <li>On the extension <uicontrol>Features</uicontrol> page, enable
+                                        <uicontrol>Share Voicemail Status</uicontrol>.<p><image
+                                            href="../Images/admin/enable-share-voicemail-status.png"
+                                            width="650" id="image_y4y_lc4_4hb"/></p></li>
+                                <li>Click <uicontrol>Save</uicontrol> and
+                                        <uicontrol>Apply</uicontrol>.</li>
+                            </ol>
+                        </p></li>
+                    <li>Set BLF key to monitor the voicemail status.<ol id="ol_zhb_mf4_4hb">
+                            <li>Log in the IP phone where extension 1000 is registered, go to
+                                    <uicontrol>Dsskey</uicontrol>.</li>
+                            <li>Set a BLF key to monitor voicemail status of extension 4000.<p>
+                                    <ul id="ul_jyc_vf4_4hb">
+                                        <li><uicontrol>Type</uicontrol>: Select
+                                                <uicontrol>BLF</uicontrol>.</li>
+                                        <li><uicontrol>Value</uicontrol>: Enter
+                                                  <i><varname>*2{ext_num}</varname></i>. In this
+                                            example, enter *24000.</li>
+                                        <li><uicontrol>Line</uicontrol>: Select the line where
+                                            extension 1000 is registered on.</li>
+                                    </ul>
+                                </p><p><image href="../Images/admin/monitor-voicemail-status.png"
+                                        id="image_xkg_5f4_4hb"/></p></li>
+                            <li>Click <uicontrol>Confirm</uicontrol>.</li>
+                        </ol><p><b>Result: </b></p><p>
+                            <ul id="ul_jc2_hg4_4hb">
+                                <li><b>Green BLF LED:</b> The extension 4000 has NO unread voicemail
+                                    messages.</li>
+                                <li><b>Red BLF LED:</b> The extension 4000 has unread voicemail
+                                    messages.</li>
+                            </ul>
+                        </p></li>
+                </ol>
+            </p>
+        </section>
+        <section id="receive-voicemail-from-a-mailbox">
+            <title>Receive voicemail from a mailbox</title>
+            <p>To receive multiple extensions' voicemail messages from one mailbox, you can
+                configure sending voicemail to a same custom email address for these extensions.</p>
+            <p>For example, to receive multiple extensions' voicemail messages from the mailbox
+                    <i>voicemial@yeastar.com</i>. Set <uicontrol>Send Voicemail to Email</uicontrol>
+                to the same custom email address <i>voicemial@yeastar.com</i> for these
+                extensions.</p>
+            <p><image href="../Images/admin/send-voicemail-to-email-custom.png" width="650"
+                    id="image_lsg_244_4hb"/></p>
+        </section>
+    </body>
+</topic>

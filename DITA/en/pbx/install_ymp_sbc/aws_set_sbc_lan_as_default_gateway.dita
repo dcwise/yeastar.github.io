@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_dyg_dlp_f2b">
+    <title>4) Set SBC LAN as Default Gateway</title>
+    <shortdesc>Set SBC LAN interface as the default gateway, so that the YMP can initiate outbound
+        connections to the Internet through the SBC gateway. </shortdesc>
+    <taskbody>
+        <context id="context_opc_1kt_hfb">The following diagram represents the architecture of your
+            VPC after you've completed this step.<p><image
+                    href="../Images/SBC/aws_set_sbc_gateway_diagram.png" id="image_ojy_wd5_hfb"
+                    height="450"/></p></context>
+        <steps id="steps_awx_wrr_ndb">
+            <step>
+                <cmd>Connect SSH to the SBC server, then type the following command:</cmd>
+                <info>
+                    <codeblock outputclass="language-bourne">sudo echo 1 > /proc/sys/net/ipv4/ip_forward
+sudo iptables -t nat -A POSTROUTING -o SBCwaniface -j MASQUERADE</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Connect SSH to the YMP server, set the gateway IP address to the IP address of
+                    SBC LAN.</cmd>
+                <substeps id="substeps_z1v_slp_f2b">
+                    <substep>
+                        <cmd>Type <codeph>ifconfig</codeph> to get IP address of your YMP
+                            server.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Edit the configuration file
+                            <filepath>50-cloud-init.cfg</filepath>.</cmd>
+                        <info>
+                            <codeblock>sudo vi /etc/network/interfaces.d/50-cloud-init.cfg</codeblock>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Add the following sentences.</cmd>
+                        <info>
+                            <ul id="ul_xgn_vcj_f3b">
+                                <li><varname>｛ymp_wan_interface｝</varname> is the network interface
+                                    name of your YMP WAN port. Generally, the WAN interface name is
+                                        <codeph>eth0</codeph>. For different AMI chosen on the
+                                    instance, the interface name may be different. </li>
+                                <li><varname>{ymp_ip}</varname> is the IP address of your YMP
+                                    server. </li>
+                                <li><varname>{sbc_lan_ip}</varname> is the IP address of your SBC
+                                    LAN interface.</li>
+                            </ul>
+                        </info>
+                        <info>
+                            <codeblock>sudo iface <varname>｛ymp_wan_interface｝</varname> inet static
+sudo address <varname>{ymp_ip}</varname>
+sudo netmask 255.255.255.0
+sudo gateway <varname>{sbc_lan_ip}</varname></codeblock>
+                        </info>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Restart the network.</cmd>
+                <info>
+                    <codeblock>sudo /etc/init.d/networking restart</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Install traceroute.</cmd>
+                <info>
+                    <codeblock>sudo apt-get update &amp;&amp; apt install traceroute</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Check if the configuration is correct.</cmd>
+                <info>
+                    <codeblock outputclass="language-bourne">sudo traceroute google.com</codeblock>
+                </info>
+                <stepresult>If the configuration is successful, the route table should show SBC LAN
+                    IP address as the gateway IP.<p><image href="../Images/SBC/aws_traceroute.png"
+                            width="650" id="image_wkm_zk5_f2b"/></p></stepresult>
+            </step>
+        </steps>
+    </taskbody>
+</task>

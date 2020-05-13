@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_xnp_zqm_ggb">
+    <title>Zoho CRM Integration - FAQ</title>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/12/27"/>
+            <!--Carol-->
+            <revised modified="2018/12/28"/>
+            <!--Carol-->
+            <revised modified="2019/01/10"/>
+            <!--Carol-->
+            <revised modified="2019/01/15"/>
+            <!--Carol-->
+            <revised modified="2019/01/24"/>
+        </critdates>
+    </prolog>
+    <body>
+        <p>
+            <ol id="ol_aws_1zt_ggb">
+                <li><b>There is no call pop-up in Zoho CRM when a call comes. Why?</b><p>
+                        <ul id="ul_xjv_ypg_4gb">
+                            <li>Check if the Zoho account is associated with the PBX extension.</li>
+                            <li>Check the Zoho CRM Integration status on the PBX. If the status
+                                shows "Error", click <uicontrol>Refresh</uicontrol> to refresh the
+                                        status.<p><image href="../Images/admin/zoho-error.png"
+                                        width="650" id="image_a5f_sqg_4gb"/></p></li>
+                        </ul>
+                    </p></li>
+                <li><b>There is no click-to-call phone icon beside the phone number in the
+                        Lead/Contact Details page. Why?</b><p>
+                        <ul id="ul_hqj_tqg_4gb">
+                            <li>Check if the Zoho account is associated with the PBX extension.</li>
+                        </ul>
+                    </p></li>
+                <li><b>PBX doesn't display all the Zoho accounts on the Zoho CRM Integration page.
+                        Why? </b><p>
+                        <ul id="ul_bxq_tqg_4gb">
+                            <li>Check if the Zoho accounts are activated on Zoho CRM.</li>
+                        </ul>
+                    </p></li>
+            </ol>
+        </p>
+    </body>
+</topic>

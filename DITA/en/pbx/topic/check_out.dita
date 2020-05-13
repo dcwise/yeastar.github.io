@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_sh4_hxt_c2b">
+    <title>Check Out</title>
+    <shortdesc>Check out a guest or check out a guest group.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/06/11"/>
+            <!--Carol-->
+            <revised modified="2018/06/11"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <section id="section_ejy_nf5_c2b">
+            <title>Check out a Guest</title>
+            <p>
+                <ol id="ul_oxd_qf5_c2b">
+                    <?oxy_comment_start author="Becky" timestamp="20191127T133205+0800" comment="新增"?>
+                    <li>Go to <menucascade>
+                            <uicontrol>Hotel</uicontrol>
+                            <uicontrol>Room Operations</uicontrol>
+                            <uicontrol>Room List</uicontrol>
+                        </menucascade>.<?oxy_comment_end?></li>
+                    <li><ph id="OLE_LINK17">On the <b>Room List</b> page, select the guest, click
+                                <image href="../Images/ui_icons/edit.png" id="image_sjk_sf5_c2b"
+                                width="20"/> to check all the information of the guest and the
+                            room.</ph><p><image href="../Images/admin/hotel_check_info.png"
+                                width="650" id="image_dsc_wf5_c2b"/></p></li>
+                    <li>Click <b>Check Out</b> if you have confirmed all the information.<p><image
+                                href="../Images/admin/hotel_check_out.png" width="650"
+                                id="image_kry_1g5_c2b"/></p></li>
+                    <li>Select the <b>Check-out Time</b>.</li>
+                    <li>Input <b>Extra Charges </b>if the guest has damaged things in the room or
+                        others.</li>
+                    <li>Make a note of the extra charges information or others in the<b> Note</b>
+                        field.</li>
+                    <li>Enable <b>Send Email</b>, the system will send a billing report to the
+                        guest’s email address.</li>
+                    <li>Click <b>Save</b>.</li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_q5n_2g5_c2b">
+            <title>Check Out a Guest Group</title>
+            <p>
+                <ol id="ul_zyd_gg5_c2b">
+                    <?oxy_comment_start author="Becky" timestamp="20191127T133205+0800" comment="新增"?>
+                    <li>Go to <menucascade>
+                            <uicontrol>Hotel</uicontrol>
+                            <uicontrol>Room Operations</uicontrol>
+                            <uicontrol>Room List</uicontrol>
+                        </menucascade>.</li><?oxy_comment_end?>
+                    <li>On the <b>Room List</b> page, select the guest, click to check all the
+                        information of each guest and room.<p><image
+                                href="../Images/admin/hotel_check_info.png" width="650"
+                                id="image_kfm_hg5_c2b"/></p></li>
+                    <li>Click <b>Group Check-out</b> after you have confirmed all the guests’
+                        information.</li>
+                    <li>Select a group and check-out time.</li>
+                    <li>Enable <b>Send Email</b>, and enter the guest’s <b>Email Address</b>, the
+                        group billing report will send to the email address.</li>
+                    <li>Click <b>Save</b>.</li>
+                </ol>
+            </p>
+        </section>
+    </conbody>
+</concept>

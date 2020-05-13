@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_tk5_tpf_lkb">
+    <title>Call Recording Overview</title>
+    <shortdesc><ph keyref="product_name"/> supports One Touch Recording and Auto
+        Recording.</shortdesc>
+    <body>
+        <dl>
+            <dlentry>
+                <dt>One Touch Recording</dt>
+                <dd>One Touch Reording, also known as On-demand Recording, allows users to dial *1
+                    on their phones to record calls at any time.</dd>
+                <dd>For more detail of One Touch Recording, refer to <xref
+                        href="one_touch_record.dita"/>.</dd>
+            </dlentry>
+        </dl>
+        <dl>
+            <dlentry>
+                <dt>Auto Recording</dt>
+                <dd>Auto Recording is a feature that enables the PBX to automatically record
+                    internal calls, external calls, and conference calls. </dd>
+                <dd>For more detail of Auto Recording, refer to <xref href="auto-recording.dita"
+                    />.</dd>
+            </dlentry>
+        </dl>
+    </body>
+</topic>

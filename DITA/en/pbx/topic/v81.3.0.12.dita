@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+
+<concept id="concept_rkk_yxs_hdb">
+ <title>Version 81.3.0.12 </title>
+ <abstract>Released Date: January 25, 2018</abstract>
+ <prolog>
+  <critdates>
+   <!--Carol-->
+   <revised modified="2018/06/20"/>
+  </critdates>
+ </prolog>
+ <conbody>
+  <section id="section_i2x_zng_jdb">
+   <title>New Feature</title>
+   <p><image href="../Images/horizon.png" id="image_pry_dyv_pdb"/></p>
+   <p>
+    <div>
+     <ul id="ul_yxf_d4g_jdb">
+      <li>Added system Email settings (Settings > System > Email).</li>
+     </ul>
+    </div>
+   </p>
+  </section>
+  <section id="section_lrp_hys_hdb">
+   <title>Optimization</title>
+   <p><image href="../Images/horizon.png" width="760" id="image_vj4_qyv_pdb"/></p>
+   <p>
+    <ul id="ul_n35_rkt_hdb">
+     <li><ph id="OLE_LINK1">Optimized PBX activation process.</ph></li>
+     <li>Extended the expiration time for the login password reset link to 24 hours.</li>
+     <li>Added <uicontrol>IP Whitelist</uicontrol>, <uicontrol>Limited Country </uicontrol>Access
+      settings. </li>
+     <li>Optimized SSH access: SSH access is disabled by default. The administrator can enable a
+      temporary SSH connection for a debug requirement (Maintenance > SSH Connection).</li>
+     <li>Optimized VoIP Register trunk: if the DID number of the trunk is different from the
+      registered number, the administrator needs to set the trunk “phone number” (VoIP Trunk >
+      Advanced > Other Settings > phone number).</li>
+    </ul>
+   </p>
+  </section>
+  <section id="section_m1v_w3t_hdb">
+   <title>Fixed Bug</title>
+   <p><image href="../Images/horizon.png" id="image_wpm_ryv_pdb"/></p>
+   <p>
+    <ul id="ul_nxb_5kt_hdb">
+     <li>Fixed Auto Defense function.</li>
+     <li>Fixed VoIP Peer Trunk: the trunk with TCP protocol could not work properly. </li>
+    </ul>
+   </p>
+  </section>
+ </conbody>
+</concept>

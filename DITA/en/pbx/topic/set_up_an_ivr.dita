@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_spq_k2x_rdb">
+    <title>Set up an IVR</title>
+    <shortdesc>Set up your own IVR if you need to routing incoming calls via an auto
+        attendant.</shortdesc>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/10/24"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol>PBX</uicontrol>
+                        <uicontrol>Call Features</uicontrol>
+                        <uicontrol>IVR</uicontrol>
+                    </menucascade>, click <uicontrol>Add</uicontrol> to add an IVR or edit the
+                    default IVR.</cmd>
+            </step>
+            <step>
+                <cmd>Edit the <uicontrol>Basic</uicontrol> settings of the IVR.</cmd>
+                <info><image href="../Images/admin/ivr_basic.png" id="image_ejk_rgg_tdb"/></info>
+                <choices id="choices_ip4_tjg_tdb">
+                    <choice><uicontrol>Number</uicontrol>: PBX treats IVR as an extension; you can
+                        dial this extension number to reach the IVR from internal extensions. </choice>
+                    <choice><uicontrol>Name</uicontrol>: Set a name for the IVR.</choice>
+                    <choice><uicontrol>Prompt</uicontrol>: Use the default IVR prompt or select your
+                            <xref href="set_an_ivr_prompt.dita#task_hjq_d5w_rdb">custom IVR
+                            prompt</xref>.</choice>
+                    <choice><uicontrol>Prompt Repeat Count</uicontrol>: Set how many times the
+                        prompt will be played.</choice>
+                    <choice><uicontrol>Response Timeout</uicontrol>: Set how long  the PBX will wait
+                        for the caller to operate.</choice>
+                    <choice><uicontrol>Digit Timeout</uicontrol>: After the user enters a digit, the
+                        user needs to enter the next digit within the timeout.</choice>
+                    <choice><uicontrol>Dial Extensions</uicontrol>: Whether to allow callers to dial
+                        extension numbers via IVR.</choice>
+                    <choice><uicontrol>Dial Outbound Routes</uicontrol>: Whether to allow callers to
+                        dial outbound calls via IVR.<p>
+                            <note>This option is useful if you interconnect two PBXs. The callers
+                                can dial the other PBX's extension number via the IVR. In this
+                                solution, you need to configure the appropriate outbound route and
+                                inbound route in both of the two connected PBXs.</note>
+                        </p></choice>
+                    <choice><uicontrol>Dial to Check Voicemail</uicontrol>: Whether to allow users
+                        to check voicemail via IVR.<p>
+                            <note>This option is for the users who work out of the office. They can
+                                call in the PBX and check their voicemail messages via the
+                                IVR.</note>
+                        </p></choice>
+                </choices>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Key Press Event</uicontrol> tab, set the destination based on
+                    callers key presses. </cmd>
+                <info><?oxy_comment_start author="Sunmy" timestamp="20200325T132647+0800" comment="13.B 同步中文，新增"?>The
+                    following Key Press destination are supported:<ul id="ul_s3c_gjj_dlb">
+                        <li><b>Hang up</b></li>
+                        <li><uicontrol>Extension</uicontrol></li>
+                        <li><uicontrol>Voicemail</uicontrol></li>
+                        <li><uicontrol>IVR</uicontrol></li>
+                        <li><uicontrol>Ring Group</uicontrol></li>
+                        <li><uicontrol>Queue</uicontrol></li>
+                        <li><uicontrol>Conference</uicontrol></li>
+                        <li><uicontrol>External Number</uicontrol></li>
+                        <li><uicontrol>DISA</uicontrol></li>
+                        <li><uicontrol>Callback</uicontrol></li>
+                        <li><uicontrol>Fax to Email</uicontrol></li>
+                        <li><uicontrol>Dial by Name</uicontrol></li>
+                        <li><uicontrol>Custom Prompt</uicontrol><?oxy_comment_end?></li>
+                    </ul></info>
+            </step>
+            <step>
+                <cmd>On the <uicontrol>Key Press Event</uicontrol> page, set the
+                        <uicontrol>Timeout</uicontrol> destination and the <uicontrol>Invalid
+                        Destination</uicontrol>.</cmd>
+                <info><image href="../Images/admin/ivr_timeout.png" id="image_pmy_wkg_tdb"
+                        width="650"/></info>
+                <choices>
+                    <choice><uicontrol>Timeout</uicontrol>: If callers do not make an entry within
+                        the <uicontrol>Prompt Repeat Count</uicontrol>, they will be transferred to
+                        the <uicontrol>Timeout</uicontrol> destination. </choice>
+                    <choice><uicontrol>Invalid</uicontrol>: If callers enter a digit that is not
+                        defined in the IVR, they will be transferred to the
+                            <uicontrol>Invalid</uicontrol> destination.</choice>
+                </choices>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_xnp_zqm_ggb">
+    <title>Zoho Integration - FAQ</title>
+    <body>
+        <p>
+            <ul id="ul_rlf_lrc_flb">
+                <li><xref href="#topic_xnp_zqm_ggb/section_u4d_crc_flb" format="dita"/></li>
+                <li><xref href="#topic_xnp_zqm_ggb/section_g3s_drc_flb" format="dita"/></li>
+                <li><xref href="#topic_xnp_zqm_ggb/section_phg_frc_flb" format="dita"/></li>
+                <li><xref href="#topic_xnp_zqm_ggb/section_bgs_grc_flb" format="dita"/></li>
+                <li><xref href="#topic_xnp_zqm_ggb/section_hfy_hrc_flb" format="dita"/></li>
+            </ul>
+        </p>
+        <section id="section_u4d_crc_flb">
+            <title>The integration status shows "Error"</title>
+            <p>
+                <ol>
+                    <li>Click <uicontrol>Refresh</uicontrol>, the status will be changed to
+                            <uicontrol>Connected</uicontrol>.</li>
+                    <li>If the integration is still disconnected, do the followings:<ul
+                            id="ul_krf_qw2_5jb">
+                            <li>Check if PBX can access to the Internet or not.</li>
+                            <li>Check if the Yeastar Integration is enabled or not on the Zoho
+                                applications.</li>
+                        </ul></li>
+                    <li>If the integration status is still abnormal, contact Yeastar support.</li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_g3s_drc_flb"><title>There is no click-to-call phone icon beside the
+                phone number in the Lead/Contact Details page</title>Check if the Zoho account is
+            associated with the PBX extension. <p>If fail to associate, you can <xref
+                    href="zoho-integration-procedures.dita#task_kj5_rjm_ggb/associate-manually"
+                    >associate them manually</xref>.</p></section>
+        <section id="section_phg_frc_flb">
+            <title>There is no call pop-up in Zoho CRM when a call comes</title>
+            <p>
+                <ul>
+                    <li>Check if the Zoho account is associated with the PBX extension.</li>
+                    <li>Check if the <uicontrol>Caller ID</uicontrol> of PBX extension is consistent
+                        with the <uicontrol>Extension</uicontrol>. If not, there is no call pop-up
+                        when a call comes.</li>
+                    <li>Check the
+                        Zoho<?oxy_comment_start author="carol" timestamp="20191125T104700+0800" comment="细节" flag="done"?>
+                        I<?oxy_comment_end?>ntegration status on the PBX. If the status shows
+                        "Error", click <uicontrol>Refresh</uicontrol> to refresh the status.</li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_bgs_grc_flb">
+            <title>PBX doesn't display all the Zoho accounts on the Zoho CRM Integration
+                page</title>
+            <p>
+                <ul>
+                    <li>Check if the Zoho accounts are activated on Zoho CRM.</li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_hfy_hrc_flb">
+            <title><b>Failed to integrate the PBX and Zoho application</b></title>
+            <p>Zoho uses <filepath>appcenter.yeastar.com</filepath> to interact with <ph
+                    keyref="product_name"/>. If the PBX is behind the firewall, add
+                    <filepath>appcenter.yeastar.com</filepath> to the firewall whitelist.</p>
+        </section>
+    </body>
+</topic>

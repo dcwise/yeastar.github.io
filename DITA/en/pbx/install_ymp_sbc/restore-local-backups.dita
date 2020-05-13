@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_mvj_3fs_lhb">
+    <title>Restore Local Backups</title>
+    <shortdesc>When a data error a data loss occurs in your system, you can restore local backups
+        for the whole YMP system or for a specific PBX via Web GUI.</shortdesc>
+    <body>
+        <section id="section_mbb_4xw_k2b">
+            <title>Recover a customer's PBX</title>
+            <p>When your customer's PBX data is abnormal or the PBX data is lost, you can quickly
+                restore an individual PBX backup for the customer's PBX.</p>
+            <p>
+                <ol id="ol_xln_ydt_jhb">
+                    <li>Log in the YMP web interface, go to <uicontrol>PBX</uicontrol>, select the
+                        customer's PBX, click <image href="../Images/SBC/pbx_detail_icon.png"
+                            id="image_ggk_1hc_l2b"/>.</li>
+                    <li>On the PBX settings page, click <uicontrol>Restore</uicontrol>, select a
+                        backup file, click <image href="../Images/SBC/restore_icon.png"
+                            id="image_wvb_dhc_l2b"/>.<p>
+                            <note>The name of the backup file contains the name of the YMP backup
+                                file and the PBX firmware version.</note>
+                        </p><p><image href="../Images/SBC/ymp_restore_pbx.png"
+                                id="image_ksd_fhc_l2b"/></p></li>
+                    <li>Click <uicontrol>Confirm</uicontrol> to restore the backup.</li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_hnb_rct_jhb">
+            <title>Recover the YMP system</title>
+            <p>When the data loss or data error occurs in the YMP system or in all the customers'
+                PBXs, you can restore the entire YMP backup to fix this issue.</p>
+            <p>
+                <ol id="ol_iyv_kfs_lhb">
+                    <li>Log in the YMP web interface, go to <menucascade>
+                            <uicontrol>Maintenance</uicontrol>
+                            <uicontrol>Backup &amp; Restore</uicontrol>
+                        </menucascade>.</li>
+                    <li>Select a backup file, click <image href="../Images/SBC/restore_icon.png"
+                            id="image_yf3_vzw_k2b"/>.</li>
+                    <li>Click <uicontrol>Confirm</uicontrol> to restore the backup.</li>
+                </ol>
+            </p>
+        </section>
+    </body>
+</topic>

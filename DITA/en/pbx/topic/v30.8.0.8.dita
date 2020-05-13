@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="concept_lwk_kph_f2b">
+    <title>Version 30.8.0.8</title>
+    <abstract>Released Date: July 5, 2018</abstract>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/06/20"/>
+            <!--Carol-->
+            <revised modified="2018/06/20"/>
+            <!--Carol-->
+            <revised modified="2018/06/25"/>
+            <!--Carol-->
+            <revised modified="2018/06/26"/>
+            <!--Carol-->
+            <revised modified="2018/06/27"/>
+        </critdates>
+    </prolog>
+    <body>
+        <section id="section_lqk_nph_f2b">
+            <title>New Feature</title>
+            <p><image href="../Images/horizon.png" id="image_aj3_vyv_pdb"/></p>
+            <p>
+                <ul id="ul_bbk_pph_f2b">
+                    <li><b>Multicast Paging</b><p>Multicast Paging allows you to easily and quickly
+                            broadcast instant audio announcements to phone users who</p><p>are
+                            listening to the configured multicast IP address and channel.</p><p>
+                            <note>The IP phone should support multicast paging feature.</note>
+                        </p></li>
+                    <li><b>Added support for monitoring status of dynamic agents</b><p>Set a BLF key
+                            on IP phone to monitor the status of dynamic agents. The BLF key value
+                            is <codeph>*75{extension number}*{queue number}</codeph>.</p><p>For
+                            example, to monitor the status of agent 1000 that is in queue 6700, set
+                            BLF key value to <codeph>*751000*6700</codeph>.</p><p>In the new
+                            version, dynamic agents have two methods to log in and log out a
+                            queue.</p><p>
+                            <ul id="ul_utq_sqh_f2b">
+                                <li>Dial <codeph>{queue number}*</codeph> to log in a queue; dial
+                                        <codeph>{queue number}**</codeph> to log out a queue.</li>
+                                <li>Dial <codeph>*75{queue number}</codeph> to log in a queue, dial
+                                        <codeph>*75{queue number}</codeph> again to log out a
+                                    queue.</li>
+                            </ul>
+                        </p></li>
+                    <li><b>Added email template for <i>Voicemail to Email</i> and <i>Fax to
+                                Email</i></b><p>Go to <menucascade>
+                                <uicontrol>Settings</uicontrol>
+                                <uicontrol>System</uicontrol>
+                                <uicontrol>Email</uicontrol>
+                                <uicontrol>Email Template</uicontrol>
+                            </menucascade> to modify the email template.</p></li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_bfk_frh_f2b">
+            <title>Optimization</title>
+            <p><image href="../Images/horizon.png" id="image_vfw_frh_f2b"/></p>
+            <p><b>Security</b></p>
+            <p>
+                <ul id="ul_vc2_hrh_f2b">
+                    <li>Improved the security of web login.</li>
+                    <li>Improved the security of SSH login.</li>
+                </ul>
+            </p>
+            <p><b>Extension</b></p>
+            <p>
+                <ul id="ul_mcw_krh_f2b">
+                    <li>Deleted the <uicontrol>Name</uicontrol> setting, added <uicontrol>Caller ID
+                            name</uicontrol> setting. Generally, set <uicontrol>Caller ID
+                            name</uicontrol> to the user's name.</li>
+                    <li>Fixed the issue that <uicontrol>All Busy Mode for SIP Forking</uicontrol>
+                        setting didn't take effect if the extension had a DOD number.</li>
+                    <li>Fixed the compatibility issue with Vtech IP phone: TLS extension could not
+                        be registered.</li>
+                </ul>
+            </p>
+            <p><b>SIP Trunk</b></p>
+            <p>
+                <ul id="ul_z31_xrh_f2b">
+                    <li>Added <uicontrol>Outbound Parameters</uicontrol> to configure SIP parameters
+                        for outbound calls.<p>
+                            <ul id="ul_x4v_zrh_f2b">
+                                <li>P Asserted Identify: Choose which "P Asserted Identify" value
+                                    should be contained in the SIP INVITE headers.</li>
+                                <li>Diversion: Choose which "Diversion" value should be contained in
+                                    the SIP INVITE headers.</li>
+                                <li>Remote Party ID: Choose which "Remote Party ID" value should be
+                                    contained in the SIP INVITE headers.</li>
+                            </ul>
+                        </p></li>
+                    <li>Added <uicontrol>Transfer Parameters</uicontrol> to configure SIP parameters
+                        for transferred calls.<p>
+                            <ul id="ul_n4j_sth_f2b">
+                                <li>From: Choose which "From" value should be contained in the SIP
+                                    INVITE headers.</li>
+                                <li>Diversion: Choose which "Diversion" value should be contained in
+                                    the SIP INVITE headers.</li>
+                                <li>Remote Party ID: Choose which "Remote Party ID" value should be
+                                    contained in the SIP INVITE headers.</li>
+                                <li>P Asserted Identify: Choose which "P Asserted Identify" value
+                                    should be contained in the SIP INVITE headers.</li>
+                            </ul>
+                        </p></li>
+                    <li>Supports up to 64 DID numbers.</li>
+                </ul>
+            </p>
+            <p><b>Jitter Buffer</b></p>
+            <p>
+                <ul id="ul_dyl_f5h_f2b">
+                    <li>The path of <uicontrol>Jitter Buffer</uicontrol> settings are changed to <menucascade>
+                            <uicontrol>Settings</uicontrol>
+                            <uicontrol>PBX</uicontrol>
+                            <uicontrol>General</uicontrol>
+                            <uicontrol>Jitter Buffer</uicontrol>
+                        </menucascade>.</li>
+                    <li>Added support for choosing which extensions and trunks to apply jitter
+                        buffer settings.</li>
+                    <li id="s-pbxcenter-30.8">Added support for configuring the <uicontrol>Adaptive
+                            Adjustment Size</uicontrol> of jitter buffer.</li>
+                </ul>
+            </p>
+            <p><b>API Interfaces</b></p>
+            <p>
+                <ul id="ul_a4n_p5h_f2b">
+                    <li>Added support for sending API reports to an absolute path of the third-party
+                        software.</li>
+                    <li>Added support for querying, downloading, and deleting voicemail files.</li>
+                    <li>Optimized the Hotel Wake-up Service.</li>
+                    <li>Optimized the DTMF output.</li>
+                    <li>Fixed the issue that monitoring analog phones would fail.</li>
+                    <li>Fixed the issue that the PBX didn't stop sending API reports when the API
+                        token expired.</li>
+                    <li>Fixed the issue that API reports would be omitted.</li>
+                    <li>Fixed the issue on the calls between extensions: The called extension would
+                        ring even though the caller didn't pick up the phone to trigger the
+                        call.</li>
+                    <li>Fixed the issue that the extension status on the PBX Monitor page didn't
+                        refresh automatically.</li>
+                </ul>
+            </p>
+            <p><b>Storage</b></p>
+            <p>
+                <ul id="ul_xzn_kwh_f2b">
+                    <li>Optimized Network Drive settings: If the configurations are incorrect, the
+                        system will prompt the cause of the error.</li>
+                    <li>Optimized FTP sharing: <p>
+                            <ul id="ul_uxv_ywh_f2b">
+                                <li>When you enable FTP sharing, the system will prompt you to
+                                    enable FTP service.</li>
+                                <li>When you disable FTP sharing, the system will prompt you that
+                                    the FTP sharing is enabled.</li>
+                            </ul>
+                        </p></li>
+                    <li>Fixed the Network Drive issue: If a mounted network drive was disconnected
+                        then automatically mounted again, the PBX could not recognize the network
+                        drive.</li>
+                </ul>
+            </p>
+            <p><b>Event Center</b></p>
+            <p>
+                <ul id="ul_o4t_lyh_f2b">
+                    <li>Added support for the following events:<p>
+                            <ul id="ul_spm_qyh_f2b">
+                                <li>VoIP Peer Trunk Re-registered</li>
+                                <li>VoIP Register Trunk Re-registered</li>
+                                <li>GSM Registration Failure</li>
+                                <li>API Authentication Lockout</li>
+                                <li>Linkus Client has been Locked</li>
+                                <li>Network Drive Lost Connection</li>
+                            </ul>
+                        </p></li>
+                    <li>Optimized the Notification Template.</li>
+                </ul>
+            </p>
+            <p><b>Firewall</b></p>
+            <p>
+                <ul id="ul_cbq_wzh_f2b">
+                    <li>Optimized <uicontrol>Drop All</uicontrol> setting:<p>
+                            <ul id="ul_lxp_xzh_f2b">
+                                <li>After enabling <uicontrol>Drop All</uicontrol>, the system will
+                                    prompt you to add  a firewall rule to accept DNS address.</li>
+                                <li>After enabling <uicontrol>Drop All</uicontrol>, the system will
+                                    automatically add two firewall rules to allow the PBX to get new
+                                    version of PBX firmware and Applications.</li>
+                            </ul>
+                        </p></li>
+                </ul>
+            </p>
+            <p><b>Operation Log</b></p>
+            <p>
+                <ul id="ul_qpg_j13_f2b">
+                    <li>The operation of "Data Processing Agreement" will be recorded in operation
+                        logs.</li>
+                </ul>
+            </p>
+            <p><b>Static Route</b></p>
+            <p>
+                <ul id="ul_ohd_t13_f2b">
+                    <li>Optimized the web interface of Static Route settings.</li>
+                </ul>
+            </p>
+            <p><b>Prompt</b></p>
+            <p>
+                <ul id="ul_ydd_z13_f2b">
+                    <li>Optimized the Chinese prompt of  Voicemail  menu.</li>
+                </ul>
+            </p>
+            <p><b>CDR</b></p>
+            <p>
+                <ul id="ul_sy4_xsr_g2b">
+                    <li>Added support for displaying billing <uicontrol>Account</uicontrol> in the
+                        CDR logs.</li>
+                </ul>
+            </p>
+        </section>
+    </body>
+</topic>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="openvpn-connect-client-device-to-pbx">
+    <title>Connect a client device to <ph keyref="product_name"/> via OpenVPN</title>
+    <shortdesc>If you have set up your <ph keyref="product_name"/> OpenVPN server, and have prepared
+        openVPN Certificate&amp;Key and connection files for each client, you can set up your
+        clients and connect them to <ph keyref="product_name"/> via OpenVPN.</shortdesc>
+    <body>
+        <p>This topic shows you how to access <ph keyref="product_name"/> on the following
+                clients:<ul id="ul_fcr_czb_33b">
+                <li>Windows PC</li>
+                <li>iOS device</li>
+                <li>Android device</li>
+                <li>Yealink IP phone</li>
+                <li><ph keyref="product_name"/></li>
+            </ul></p>
+    </body>
+</topic>

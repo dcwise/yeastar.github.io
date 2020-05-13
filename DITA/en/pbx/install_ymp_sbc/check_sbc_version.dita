@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="reference_jyk_1bg_y2b">
+    <title>Check SBC Version</title>
+    <shortdesc>Log in SBC server via SSH and check the SBC version.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/08/27"/>
+            <!--Carol-->
+            <revised modified="2018/08/27"/>
+        </critdates>
+    </prolog>
+    <refbody>
+        <section id="section_grx_cbg_y2b">
+            <p>Type the following command to check SBC version.</p>
+            <p>
+                <codeblock>cat /root/yssbc/version</codeblock>
+            </p>
+        </section>
+    </refbody>
+</reference>

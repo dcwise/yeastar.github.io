@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_q2q_2bp_rdb">
+    <title>Step6. Create a VPC Route</title>
+    <shortdesc>Create a route in the VPC that will send YMP data to the Internet through the SBC
+        instance.</shortdesc>
+    <taskbody>
+        <steps id="steps_ebc_kbp_rdb">
+            <step>
+                <cmd>Go to the <xref
+                        href="https://console.cloud.google.com//networking/networks/list"
+                        format="html" scope="external">VPC networks page</xref> in the Google Cloud
+                    Platform Console. </cmd>
+            </step>
+            <step>
+                <cmd>Edit your VPC network.</cmd>
+            </step>
+            <step>
+                <cmd>On the VPC edit page, click <menucascade>
+                        <uicontrol>Routes</uicontrol>
+                        <uicontrol>Add Route</uicontrol>
+                    </menucascade>.</cmd>
+            </step>
+            <step>
+                <cmd>On the route edit page, set the route settings.</cmd>
+                <substeps id="substeps_fbc_kbp_rdb">
+                    <substep>
+                        <cmd>Set a <uicontrol>Name</uicontrol> for the route.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Set the <uicontrol>Destination IP range</uicontrol> to
+                                <codeph>0.0.0.0/0</codeph>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Set the <uicontrol>Priority</uicontrol> to <codeph>800</codeph>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Set the <uicontrol>Instance tags</uicontrol> as the tag that is set on
+                            the YMP instance.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Set <uicontrol>Next hop</uicontrol> to <codeph>Specify an
+                                instance</codeph> and set <uicontrol>Next hop instance</uicontrol>
+                            to the SBC instance.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Click <uicontrol>Create</uicontrol>.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

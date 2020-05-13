@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE troubleshooting PUBLIC "-//OASIS//DTD DITA 1.3 Troubleshooting//EN" "troubleshooting.dtd">
+<troubleshooting id="trouble_uyx_m2m_ngb">
+    <title>Troubleshooting</title>
+    <shortdesc><ph keyref="product_name"/>Ethernet Capture Tool, <ph product="s-series">Port Monitor
+            Tool、</ph>IP Ping and Traceroute can be used to debug and capture packets.</shortdesc>
+</troubleshooting>

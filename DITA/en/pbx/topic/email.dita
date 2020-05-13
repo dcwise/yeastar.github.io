@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_ls5_r3k_xdb">
+    <title>Email</title>
+    <shortdesc>The system email can be used to reset password, send voicemail to email, send alert
+        event emails, <ph product="s-series">send SMS to Email, send Email to SMS, </ph>and send fax
+        to email. To make these features work, you need to set up the PBX system email.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/05/23"/>
+            <!--Carol-->
+            <revised modified="2018/05/23"/>
+            <!--Carol-->
+            <revised modified="2018/09/20"/>
+            <!--Carol-->
+            <revised modified="2018/10/18"/>
+            <!--Carol-->
+            <revised modified="2018/10/31"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <section id="section_b2s_clm_xdb">
+            <title>Set up System Email</title>
+            <p>
+                <ol id="ol_rsk_1g5_mfb">
+                    <li>Go to <menucascade>
+                            <uicontrol>Settings</uicontrol>
+                            <uicontrol>System</uicontrol>
+                            <uicontrol>Email</uicontrol>
+                        </menucascade> to set up the system email. <p><image
+                                href="../Images/admin/email_settings.png" id="image_hvk_rlm_xdb"
+                            /></p><p>
+                            <ul id="ul_rw1_slm_xdb">
+                                <li><uicontrol>Sender Email Address</uicontrol>: Enter an available
+                                    email address. </li>
+                                <li><uicontrol>Email Address or Username</uicontrol>: If the email
+                                    server supports for User Name, enter user name. If not,enter the
+                                    email address. </li>
+                                <li><uicontrol>Password</uicontrol>: Enter the login password of the
+                                    email address. </li>
+                                <li><uicontrol>Outgoing Mail Server (SMTP)</uicontrol>: Enter the
+                                    outgoing mail server and port according to the email server. </li>
+                                <li><uicontrol>Incoming Mail Server (POP3)</uicontrol>: Enter the
+                                    incoming mail server and port according to the email server. </li>
+                                <li><uicontrol>Enable TLS</uicontrol>: Enable or disable TLS during
+                                    transferring/submitting your Email to another SMTP server.<p>
+                                        <note>For Gmail or Exchange server, you need to enable
+                                            TLS.</note>
+                                    </p></li>
+                                <li><uicontrol>STARTTLS</uicontrol>: If you enable TLS, the STARTTLS
+                                    is enabled by default . If the mail server doesn't support
+                                    STARTTLS, do not select this option. </li>
+                            </ul>
+                        </p></li>
+                    <li>Click <uicontrol>Test</uicontrol> to check if the email works.</li>
+                    <li>Click <uicontrol>Save</uicontrol> to save the email settings.</li>
+                </ol>
+            </p>
+        </section>
+    </conbody>
+</concept>

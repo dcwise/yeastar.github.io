@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_dxk_x4k_jdb">
+  <title>Version 30.1.0.13</title>
+  <abstract>Released Date: September 7, 2016</abstract>
+  <prolog>
+    <critdates>
+      <!--Carol-->
+      <revised modified="2018/06/20"/>
+    </critdates>
+  </prolog>
+  <body>
+    <section id="section_nyk_p4g_jdb">
+      <title>New Feature</title>
+      <p><image href="../Images/horizon.png" id="image_mvn_31w_pdb"/></p>
+      <p>
+        <ul id="ul_dkb_2wk_jdb">
+          <li>Added support for “Auto Provisioning” App version 1.2.1. The new version added support
+            for the following phones:<ul id="ul_ekb_2wk_jdb">
+              <li>Cisco SPA301, SPA303, SPA501G, SPA502G, SPA504G, SPA508G, SPA509G, SPA512G,
+                SPA514G, SPA525G2, CP7821</li>
+              <li>Polycom VVX101, VVX201, VVX300, VVX310, VVX400, VVX500, VVX600, VVX601, VVX1500,
+                IP321, IP331, IP335, IP450, IP550, IP560, IP670</li>
+              <li>Htek UC902, UC903, UC923</li>
+            </ul></li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_cmm_x4g_jdb">
+      <title>Fixed Bug</title>
+      <p><image href="../Images/horizon.png" id="image_vrv_31w_pdb"/></p>
+      <p>
+        <ul id="ul_fwl_fwk_jdb">
+          <li>Fixed SIM800 issue: PBX could not identify a new SIM800 module.</li>
+          <li>Fixed G729 Codec issue: making a call with G729 codec would cause latency.</li>
+        </ul>
+      </p>
+    </section>
+  </body>
+</topic>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="upgrade-yeastar-click-to-call">
+    <title>Upgrade Yeastar Click to Call</title>
+    <shortdesc>Yeastar Click to Call will be updated automatically if there's a new version. </shortdesc>
+    <body>
+        <p>The Google Chrome Browser periodically checks new versions of installed extensions and
+            update the extensions
+            <?oxy_comment_start author="carol" timestamp="20191210T161926+0800" comment="改为active voice 风格的描述
+automatically
+
+"?>without
+            user intervention.<?oxy_comment_end?></p>
+        <p>After Yeastar Click to Call is updated with newly added permissions, when you click a
+            phone number and select Linkus to dial out for the first time, system will prompt you
+            all permissions that are granted to Yeastar Click to Call and require authorization from
+            you.</p>
+    </body>
+</topic>

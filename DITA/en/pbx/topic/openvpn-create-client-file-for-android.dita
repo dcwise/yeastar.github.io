@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="openvpn-create-client-file-for-Android-client">
+    <title>Create a Client File for Android Client</title>
+    <body>
+        <p>You can create a client file with <filepath>.ovpn</filepath> extension with a text editor
+            (e.g. notepad++), or <xref href="http://help.yeastar.com/download/support/client.ovpn"
+                format="html" scope="external">download a <filepath>client.ovpn</filepath> sample
+                file</xref>.</p>
+        <p>
+            <note>The line beginning with “;” is considered to disable the corresponding
+                option.</note>
+            <ol id="ol_ywz_33n_h3b">
+                <li>Open the <filepath>client.ovpn</filepath> file with a text editor.</li>
+                <li>Edit the following options according to the VPN server settings on your PBX.<p>
+                        <note>The client and server must use the same settings.</note>
+                    </p><ol id="ol_vyl_q3n_h3b">
+                        <li>Specify the hostname/IP and port of VPN server.<p>In this example, we
+                                have forwarded the VPN server 10.8.0.1 1194 to 110.80.36.162
+                                7086.</p><codeblock>remote 110.80.36.162 7086</codeblock></li>
+                        <li>Set the protocol to UDP or TCP.<p>In this example, UDP is enabled, and
+                                TCP is disabled.</p><codeblock>proto udp
+;proto tcp</codeblock></li>
+                        <li>Set the device mode to TUN. <codeblock>dev tun</codeblock></li>
+                        <li>Set the cryptographic cipher. <p>
+                                <table frame="all" rowsep="1" colsep="1" id="table_jgf_ymy_k3b">
+                                    <title/>
+                                    <tgroup cols="2" align="center">
+                                        <colspec colname="c2" colnum="1" colwidth="1*"/>
+                                        <colspec colname="c1" colnum="2" colwidth="1*"/>
+                                        <thead>
+                                            <row>
+                                                <entry>Cryptographic cipher on server</entry>
+                                                <entry>Cryptographic cipher on client</entry>
+                                            </row>
+                                        </thead>
+                                        <tbody>
+                                            <row>
+                                                <entry>BlowFish</entry>
+                                                <entry>cipher BF-CBC</entry>
+                                            </row>
+                                            <row>
+                                                <entry>AES-128</entry>
+                                                <entry>cipher AES-128-CBC</entry>
+                                            </row>
+                                            <row>
+                                                <entry>AES-256</entry>
+                                                <entry>cipher AES-256-CBC</entry>
+                                            </row>
+                                            <row>
+                                                <entry>Triple-DES</entry>
+                                                <entry>cipher DES-EDE3-CBC</entry>
+                                            </row>
+                                        </tbody>
+                                    </tgroup>
+                                </table>
+                            </p><p>In this example, AES-256 is set on server, then enable
+                                AES-256-CBC.</p><codeblock>;cipher BF-CBC
+;cipher AES-128-CBC
+cipher AES-256-CBC
+;cipher DES-EDE3-CBC</codeblock></li>
+                        <li>If <uicontrol>Compression</uicontrol> is enabled on server, you need to
+                            enable compression on the VPN
+                            client.<codeblock>comp-lzo</codeblock></li>
+                        <li>If <xref
+                                href="openvpn-username-password-authentication.dita#openvpn-create-account-password-for-each-client"
+                                >Username/Password Authentication</xref> is used on server, you need
+                            to specify the <filepath>passfile</filepath>
+                            file.<codeblock>auth-user-pass passfile</codeblock></li>
+                        <li>If <uicontrol>SSL/TLS</uicontrol> and a <filepath>ta.key</filepath> is
+                            used on the server, you need to specify the TLS Authentication &amp; TA
+                            Key.<codeblock>tls-auth ta.key 1</codeblock></li>
+                        <li>Specify the CA certificate file used on
+                            server.<codeblock>ca ca.crt</codeblock></li>
+                    </ol></li>
+                <li>Specify the Android client certificate and key file.<p>In this example,
+                        Android.crt and Android.key is
+                    specified.</p><codeblock>cert Android.crt
+key Android.key</codeblock></li>
+                <li>Edit other options according to your
+                    need.<codeblock>persist-key
+persist-tun
+verb 3
+resolv-retry infinite
+remote-cert-tls server
+nobind
+;dev-node MyTap
+;remote-random
+;http-proxy-retry
+;http-proxy [proxy server] [proxy port #]
+;mute-replay-warnings
+;mute 20</codeblock></li>
+                <li>Save the client file.<p>You can  rename <filepath>client.ovpn</filepath> to
+                        identify, such as: <filepath>Android.ovpn</filepath>.</p></li>
+            </ol>
+        </p>
+    </body>
+</topic>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="openvpn-prepare-client.ovpn-file-for-windsows-client">
+    <title>Prepare Client File for <ph keyref="product_name"/></title>
+    <shortdesc>You can create a client file with <filepath>.ovpn</filepath> extension with a text
+        editor (e.g. notepad++). If you have installed OpenVPN on your Windows PC, you can find a
+            <filepath>client.ovpn</filepath> sample file from the
+            <filepath>%ProgramFiles%\OpenVPN\sample-config</filepath> (e.g.
+        D:\OpenVPN\sample-config).</shortdesc>
+    <body>
+        <p>
+            <note>The line beginning with “;” is considered to disable the corresponding
+                option.</note>
+            <ol id="ol_ywz_33n_h3b">
+                <li>Open the <filepath>client.ovpn</filepath> file with a text editor.</li>
+                <li>Edit the following options according to the VPN server settings on your PBX.<p>
+                        <note>The client and server must use the same settings.</note>
+                    </p><ol id="ol_vyl_q3n_h3b">
+                        <li>Specify the hostname/IP and port of VPN server.<p>In this example, we
+                                have forwarded the VPN server 10.8.0.1 1194 to 110.80.36.162
+                                7086.</p><codeblock>remote 110.80.36.162 7086</codeblock></li>
+                        <li>Set the protocol to UDP or TCP.<p>In this example, UDP is enabled, and
+                                TCP is disabled.</p><codeblock>proto udp
+;proto tcp</codeblock></li>
+                        <li>Set the device mode to TAP or TUN. <p>In this example, TAP is enabled,
+                                and TUN is disabled.</p><codeblock>dev tap
+;dev tun</codeblock></li>
+                        <li>Set the cryptographic cipher. <p><codeph>cipher BF-CBC</codeph>,
+                                    <codeph>cipher AES-128-CBC</codeph>, <codeph>cipher
+                                    AES-256-CBC</codeph> and <codeph>cipher DES-EDE3-CBC</codeph>
+                                corresponds to <codeph>BlowFish</codeph>, <codeph>AES-128</codeph>,
+                                    <codeph>AES-256</codeph> and <codeph>Triple-DES</codeph> on
+                                server.</p><p>In this example, AES-256-CBC/AES-256 is
+                            selected.</p><codeblock>;cipher BF-CBC
+;cipher AES-128-CBC
+cipher AES-256-CBC
+;cipher DES-EDE3-CBC</codeblock></li>
+                        <li>If <uicontrol>Compression</uicontrol> is enabled on server, you need to
+                            enable compression on the VPN
+                            client.<codeblock>comp-lzo</codeblock></li>
+                        <li>If <uicontrol>CA Cert + Client Cert + Account &amp; Password</uicontrol>
+                            or <uicontrol>CA Cert + Account &amp; Password</uicontrol> verification
+                            mode is set on server, you need to specify the
+                                <filepath>passfile</filepath>
+                            file.<codeblock>auth-user-pass passfile</codeblock></li>
+                        <li>If <uicontrol>SSL/TLS</uicontrol> and a <filepath>ta.key</filepath> is
+                            used on the server, you need to specify the TLS Authentication &amp; TA
+                            Key.<codeblock>tls-auth ta.key 1</codeblock></li>
+                        <li>Specify the CA certificate file used on
+                            server.<codeblock>ca ca.crt</codeblock></li>
+                    </ol></li>
+                <li>Specify the Windows client certificate and key file.<p>For example, Windows.crt
+                        and
+                    Windows.key.</p><codeblock>cert Windows.crt
+key Windows.key</codeblock></li>
+                <li>Edit other options according to your
+                    need.<codeblock>persist-key
+persist-tun
+verb 3
+resolv-retry infinite
+remote-cert-tls server
+nobind
+;dev-node MyTap
+;remote-random
+;http-proxy-retry
+;http-proxy [proxy server] [proxy port #]
+;mute-replay-warnings
+;mute 20</codeblock></li>
+                <li>Save the client file, rename <filepath>client.ovpn</filepath> to identify, such
+                    as: Windows.ovpn.</li>
+            </ol>
+        </p>
+    </body>
+</topic>

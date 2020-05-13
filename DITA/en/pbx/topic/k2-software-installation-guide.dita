@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="k2-software-installation-guide">
+    <title>K2 IPPBX
+        <?oxy_comment_start author="carol" timestamp="20190624T131757+0800" comment="System
+"?>Software<?oxy_comment_end?>
+        Installation Guide</title>
+    <shortdesc><?oxy_comment_start author="carol" timestamp="20190624T131856+0800" comment="这个描述跟标题完全一样的。删掉"?>Yeastar
+        K2 IPPBX software installation guide.<?oxy_comment_end?></shortdesc>
+    <body>
+        <section id="section_shl_dsd_23b">
+            <title>About this guide</title>
+            <?oxy_comment_start author="carol" timestamp="20190624T132132+0800" comment="This guide describes how to install Yeastar K2 IPPBX system in your own physical machine or virtual machine.In this guide, we also provide procedures of activating and upgrading the K2 system."?>
+            <p> This guide shows you how to install, trial, activate and update K2 IPPBX
+                system.<?oxy_comment_end?></p>
+        </section>
+        <section id="section_cgg_yfz_b3b">
+            <title>Audience</title>
+            <p><?oxy_comment_start author="carol" timestamp="20190624T132808+0800" comment="指明是什么用户
+This guide is for the person who only buys Yeastar K2 IPPBX software, and wants to install the K2 IPPBX in his/her own machine."?>This
+                guide is for the person who wants to install the Yeastar K2 IPPBX
+                system.<?oxy_comment_end?></p>
+        </section>
+        <section id="section_tl4_4sd_23b">
+            <?oxy_comment_start author="carol" timestamp="20190624T140649+0800" comment="这一段移动到“Install Yeastar K2 IPPBX”"?>
+            <title>Installation methods</title>
+            <p>You have multiple choices to install the Yeastar K2 IPPBX Software:</p>
+            <p>
+                <ul id="ul_upc_b1y_b3b">
+                    <li><?oxy_comment_start author="carol" timestamp="20190624T141249+0800" comment="这边下面做一个说明：
+Before installing K2 system, you need to write K2 image in a USB. 
+然后链接到 Write K2 image in a USB 那一篇文章"?>Install
+                        the Yeastar K2 IPPBX Software with a USB flash
+                        drive.<?oxy_comment_end?></li>
+                    <li>Install the Yeastar K2 IPPBX Software on a virtual machine.</li>
+                    <li>Burn the Yeastar K2 disc image (ISO file) into a DVD or CD, and install the
+                        Linux-based operation system on your PC.</li><?oxy_comment_end?>
+                </ul>
+            </p>
+        </section>
+    </body>
+</topic>

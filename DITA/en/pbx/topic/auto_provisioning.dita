@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="app-autop">
+ <title>Auto Provisioning</title>
+ <shortdesc>Auto Provisioning App helps you set up your IP phones<ph product="s-series"> and Yeastar
+   TA VoIP gateways</ph> in bulk.</shortdesc>
+ <conbody>
+  <p>
+   <div>
+    <p>Using auto provisioning, you can instruct phone<ph product="s-series"> or Yeastar
+      gateway</ph> to retrieve its configuration from Yeastar PBX. Once you provision your phones<ph
+      product="s-series"> or gateways</ph>, the phones<ph product="s-series"> or gateways</ph> will
+     automatically configure themselves correctly. In this way, you can manage your phones<ph
+      product="s-series"> or gateways</ph> centrally without having to configure your phones one by
+     one.</p>
+   </div>
+  </p>
+  <section id="section_rsf_51x_kdb" product="s-series">
+   <title>Auto Provisioning Method</title>
+   <p>Yeastar S-Series VoIP PBX supports 2 provisioning methods:</p>
+   <ul id="ul_urk_v1x_kdb">
+    <li>PnP (Plug and Play) – apply to Yeastar gateways and IP phones that support PnP feature.</li>
+    <li>DHCP – Yeastar gateways and all supported IP phones could use this method. This method is
+     typically for legacy phones (from a previous PBX installation, e.g. Cisco or Polycom) can be
+     provisioned via DHCP method only.</li>
+   </ul>
+  </section>
+  <section id="section_jgp_gcx_kdb" product="s-series">
+   <title>PnP Method</title>
+   <p><image href="../Images/admin/autop_pnp.png" width="700" id="image_qbj_3bx_kdb"/></p>
+   <p>
+    <ol id="ol_tqm_lbx_kdb">
+     <li>Plug the phone/gateway into the same network with the PBX.</li>
+     <li>Make sure that the phone/gateway's PnP feature is enabled. </li>
+     <li>Configure the phone/gateway on the <uicontrol>Auto Provisioning</uicontrol> page.</li>
+     <li>Click <uicontrol>Save</uicontrol> and reboot the phone/gateway.</li>
+     <li>The phone/gateway will send a multicast message across the LAN when boots up.</li>
+     <li>The PBX will send a provisioning URL to the phone.</li>
+     <li>The phone download configuration file from the URL, resolve and apply the settings.</li>
+    </ol>
+   </p>
+  </section>
+  <section id="section_sb3_3cx_kdb" product="s-series">
+   <title>DHCP Method</title>
+   <p>If your phone does not support plug and play, you can use DHCP mode to do auto provisioning. </p>
+   <p>
+    <note>For cisco, Polycom phones, you should provision the phones by DHCP mode.</note>
+   </p>
+   <p>
+    <image href="../Images/admin/autop_dhcp.png" width="700" id="image_krq_pbx_kdb"/></p>
+   <p>
+    <ol>
+     <li>Disable DHCP server in your local network.</li>
+     <li>Enable <uicontrol>DHCP Server</uicontrol> in Yeastar S-Series PBX (<menucascade>
+       <uicontrol>Settings</uicontrol>
+       <uicontrol>System</uicontrol>
+       <uicontrol>Security</uicontrol>
+       <uicontrol>Service</uicontrol>
+      </menucascade>).<p>Make sure that the PBX is the only DHCP server in your local
+      network.</p></li>
+     <li>Set the phone network mode as "DHCP".</li>
+     <li>Configure the phone on the <uicontrol>Auto Provisioning</uicontrol> page.</li>
+     <li>Click <uicontrol>Save</uicontrol> and reboot the phone.</li>
+     <li>The PBX will assign an IP and send a provisioning URL to the phone.</li>
+     <li>The phone download configuration file from the URL, resolve and apply the settings.</li>
+    </ol>
+   </p>
+  </section>
+ </conbody>
+</concept>

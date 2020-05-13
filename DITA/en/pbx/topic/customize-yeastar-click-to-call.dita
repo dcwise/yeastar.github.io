@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="customize-yeastar-click-to-call">
+    <title>Customize Yeastar Click to
+        <?oxy_comment_start author="carol" timestamp="20191210T155923+0800" comment="这篇文章改为task topic"?>Call<?oxy_comment_end?></title>
+    <shortdesc><?oxy_comment_start author="carol" timestamp="20191210T153419+0800" comment="这句话包含两个点：extension options &amp; Linkus call settings。
+你没有指明call settings 是什么，混为一谈，看到后面才知道是什么。
+
+You can configure the Yeastar Click to Call extension to meet your needs, such as disable call icon display, change the identification rules of phone numbers, and block the extension on some specific websites.
+
+
+"?>Customize
+        Yeastar Click to Call
+        <?oxy_insert_start author="carol" timestamp="20191210T151037+0800"?>extension
+        <?oxy_insert_end?>to meet your needs, such as call icon display, length of phone number to
+        be detected, and call setting.<?oxy_comment_end?></shortdesc>
+    <body>
+        <ul id="ul_pzm_qht_xjb">
+            <li><?oxy_comment_start author="carol" timestamp="20191210T160004+0800" comment="这些描述过于冗余了。
+只要简单介绍设置项就好了"?><b>Call
+                    icon display </b><p>You can decide whether to display a call icon beside the
+                    detected phone number. By default, <uicontrol>Call Icon Display</uicontrol> is
+                    enabled. </p><p>
+                    <ol id="ol_yhn_31v_xjb">
+                        <li>Open Google Chrome Browser.</li>
+                        <li>On the right of address bar (URL field), click <menucascade>
+                                <uicontrol><image href="../Images/admin/yeastar.png" width="20"
+                                        id="image_nc5_sbv_xjb"/></uicontrol>
+                                <uicontrol>Options</uicontrol>
+                            </menucascade>.</li>
+                        <li>Under <uicontrol>Basic</uicontrol> tab, enable <uicontrol>Call Icon
+                                Display</uicontrol>. </li>
+                        <li>Click <uicontrol>Save</uicontrol>.<p><image
+                                    href="../Images/admin/call-icon-display.png" width="15"
+                                    id="image_cc1_k1v_xjb"/> will display right beside the detected
+                                phone number. </p></li>
+                    </ol>
+                </p></li>
+            <li><b>Phone number detection</b><ul id="ul_zc5_1lt_xjb">
+                    <li>Phone Number Length (2 to 20)<p>You can decide the valid length of phone
+                            numbers to be detected. By default, the minimum length of phone number
+                            to be detected is 7, and the maximum is 15. </p><p>
+                            <ol id="ol_wbt_jcv_xjb">
+                                <li>Open Google Chrome Browser.</li>
+                                <li>On the right of address bar (URL field), click <menucascade>
+                                        <uicontrol><image href="../Images/admin/yeastar.png"
+                                                width="20" id="image_p51_kcv_xjb"/></uicontrol>
+                                        <uicontrol>Options</uicontrol>
+                                    </menucascade>.</li>
+                                <li>Under <uicontrol>Basic</uicontrol> tab, go to <uicontrol>Phone
+                                        Number Length (2 to 20)</uicontrol>.</li>
+                                <li>In the <uicontrol>Minimum</uicontrol> field, enter the minimum
+                                    length of phone number to be detected.</li>
+                                <li>In the <uicontrol>Maximum</uicontrol> field, enter the maximum
+                                    length of phone number to be detected.</li>
+                                <li>Click <uicontrol>Save</uicontrol>.<p>If the length of a phone
+                                        number matches the valid range, the phone number will be
+                                        highlighted with an underline.</p></li>
+                            </ol>
+                        </p></li>
+                    <li>Website Blacklist<p>If you don't want Yeastar Click to Call to detect phone
+                            numbers on a specific web page or a CRM, you can add a domain (website
+                            URL) to the blacklist, and Yeastar Click to Call will not work on the
+                            blacklisted page.</p><p>
+                            <ol id="ol_scq_ldv_xjb">
+                                <li>Open Google Chrome Browser.</li>
+                                <li>On the right of address bar (URL field), click <menucascade>
+                                        <uicontrol><image href="../Images/admin/yeastar.png"
+                                                width="20" id="image_qqd_mdv_xjb"/></uicontrol>
+                                        <uicontrol>Options</uicontrol>
+                                    </menucascade>.</li>
+                                <li>Under <uicontrol>Website Blacklist</uicontrol> tab, click
+                                        <uicontrol>+Add</uicontrol>.</li>
+                                <li>Enter the domain (website URL).</li>
+                                <li importance="optional">To add more domains (website URLs), click
+                                        <uicontrol>+Add</uicontrol>.</li>
+                                <li>Click <uicontrol>Save</uicontrol>.<p>Yeastar Click to Call
+                                        identifies all phone numbers on web pages or CRMs except the
+                                        domain (website URL) defined in
+                                        blacklist.<?oxy_comment_end?></p></li>
+                            </ol>
+                        </p></li>
+                </ul></li>
+        </ul>
+        <ul id="ul_ftm_glt_xjb">
+            <li><?oxy_comment_start author="carol" timestamp="20191210T154427+0800" comment="不要与click to call 混为一谈，
+建议创建FAQ， 用提问的方式，解决客户的疑问。
+“使用Click to Call，可以先编辑号码，再呼出吗？”
+可以。
+xxxx"?><b>Call
+                    Settings</b><p>By default, Linkus places the call immediately when you click the
+                    phone number and select Linkus as the calling method. However, if you want to
+                    edit the phone number before dialing out, you can configure <uicontrol>Dial out
+                        immediately</uicontrol> feature on Linkus.</p><p>
+                    <ol id="ol_d2b_wlt_xjb">
+                        <li>Log in Linkus.</li>
+                        <li>Go to <menucascade>
+                                <uicontrol><image id="image_uch_q2v_xjb"
+                                        href="../Images/admin/linkus-settings.png" width="20"
+                                    /></uicontrol>
+                                <uicontrol>Settings</uicontrol>
+                                <uicontrol>Advanced</uicontrol>
+                                <uicontrol>Call</uicontrol>
+                                <uicontrol>Dial out immediately</uicontrol>
+                            </menucascade>.</li>
+                        <li>Unselect the checkbox of <uicontrol>Dial out immediately</uicontrol>. In
+                            this case, when you click a phone number and select Linkus as the
+                            calling method, the phone number will be automatically pasted on the
+                            Linkus Dialpad. You can edit the phone number, and manually click <image
+                                id="image_tqp_wmt_xjb" href="../Images/admin/linkus-dial.png"
+                                width="150"/> to confirm dialing.<note>The setting of
+                                    <uicontrol>Dial out immediately</uicontrol> will be applied to
+                                Yeastar Click to Call Extension and Select &amp; Dial with Hotkey
+                                feature simultaneously.<?oxy_comment_end?></note></li>
+                    </ol>
+                </p></li>
+        </ul>
+    </body>
+</topic>

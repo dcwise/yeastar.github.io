@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_fjj_vhm_vcb">
+  <title>Inbound Route Examples</title>
+  <shortdesc>This topic provides sample configurations that will help you understand DID setting and
+    Caller ID setting of inbound routes.</shortdesc>
+  <body>
+    <p>
+      <note>The following examples ignore <xref href="time_condition.dita#concept_f3m_qyd_2db">time
+          condition</xref>, you can set time condition according to your needs.</note>
+    </p>
+    <section id="section_gfb_2jm_vcb">
+      <title>Inbound route without limit</title>
+      <p>Any calls to the selected trunk will be routed to the inbound route destination. You can
+        set an inbound route as follows:</p>
+      <ul id="ul_u1g_tsm_vcb">
+        <li><b>Name</b>: Set a name to help you identify it.</li>
+        <li><b>Member Trunks</b>: Select desired trunk(s).</li>
+        <li><b>Destination</b>: Set the destination.<p>Leave all other fields blank.</p></li>
+      </ul>
+    </section>
+    <section id="section_e31_fkm_vcb">
+      <title>Inbound route based on a DID number</title>
+      <p>If a trunk has multiple DID numbers, you can add multiple inbound routes that based on
+        different DID numbers. When users dial different DID numbers, they will be routed to
+        different destinations.</p>
+      <p>The following example shows an inbound route based on DID number 5503301.</p>
+      <ul id="ul_kll_wpm_vcb">
+        <li><b>Name</b>: Set a name to help you identify it. For DID routes, you can set the name as
+          the DID number, which helps you identify the route.</li>
+        <li><b>DID Pattern</b>: 5503301</li>
+        <li><b>Member Trunks</b>: Select the trunk that has the DID number.</li>
+        <li><b>Destination</b>: Set the destination.<p>Leave all other fields blank.</p></li>
+      </ul>
+    </section>
+    <section id="section_dmf_nlm_vcb">
+      <title>Inbound route based on consecutive DID numbers</title>
+      <p>If a trunk has multiple consecutive DID numbers, you can quickly set the DID number range
+        in an inbound route to route calls to different destinations based on the DID numbers.</p>
+      <p>The following example shows an inbound route based on DID range 5503301-5503305, which will
+        route calls to extension 1001-1005.</p>
+      <ul id="ul_xvr_xpm_vcb">
+        <li><b>Name</b>: Set a name to help you identify it. </li>
+        <li><b>DID Pattern</b>: 5503301-5503305</li>
+        <li><b>Member Trunk</b>: Select the trunk that has the DID numbers.</li>
+        <li><b>Destination</b>: Select <uicontrol>Extension Range</uicontrol>, and enter the
+          extension range 1001-1005.<p>Leave all other fields blank.</p></li>
+      </ul>
+    </section>
+    <section id="section_yck_qsm_vcb"><title>Inbound route based on Caller ID</title>By default, PBX
+      routes inbound calls without limit. If you set <uicontrol>Caller ID Pattern</uicontrol>, PBX
+      will route calls only when the users' caller ID numbers match the Caller ID Pattern.<p>In the
+        following example, the inbound route will route caller ID numbers that start with digit 1 to
+        the destination. For example, number 532352584 that doesn't start with digit 1 can not call
+        in the system through this inbound route.</p><p>
+        <ul>
+          <li>
+            <p><b>Name</b>: Set a name to help you identify it. </p>
+          </li>
+          <li>
+            <p><b>Caller ID Pattern</b>: <i>1.</i></p>
+          </li>
+          <li>
+            <p><b>Member Trunks</b>: Select desired trunk(s).</p>
+          </li>
+          <li>
+            <p><b>Destination</b>: Select a destination.</p>
+            <p>Leave all other fields blank.</p>
+          </li>
+        </ul>
+      </p></section>
+    <section id="section_zgv_xb4_d2b">
+      <title>Inbound route based on Caller ID and DID numbers</title>
+      <p>If you set both <uicontrol>DID pattern</uicontrol> and <uicontrol>Caller ID
+          pattern</uicontrol> for an inbound route, PBX will check if the DID numbers and the user's
+        caller ID number match the DID pattern and Caller ID pattern. Only the matched incoming
+        calls can be routed to the pre-configured destination.</p>
+      <p>In the following example, when users dial 5503301 with phone number starting with digit 1,
+        the inbound call will be routed to the destination.</p>
+      <p>
+        <ul id="ul_q2v_xb4_d2b">
+          <li>
+            <p>
+              <b>Name</b>: Set a name to help you identify it. </p>
+          </li>
+          <li>
+            <p><b>Caller ID Pattern</b>: <i>1.</i></p>
+          </li>
+          <li><b>DID Pattern</b>: 5503301</li>
+          <li>
+            <p><b>Member Trunk</b>: Select desired trunk(s).</p>
+          </li>
+          <li>
+            <p><b>Destination</b>: Select a destination.</p>
+            <p>Leave all other fields blank.</p>
+          </li>
+        </ul>
+      </p>
+    </section>
+  </body>
+</topic>

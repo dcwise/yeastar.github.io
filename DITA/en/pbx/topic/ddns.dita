@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_o34_11x_ydb">
+    <title>DDNS Overview</title>
+    <shortdesc>Dynamic DNS (DDNS) is a method of updating a Domain Name System (DNS) to point to a
+        changing IP address on the Internet.</shortdesc>
+    <conbody>
+        <section id="section_kwt_3mm_ngb">
+            <title>When do you need a DDNS?</title>
+            <p>If your ISP assigns dynamic IP addresses to you, the remote extensions, or other
+                remote devices can not keep connected to your PBX.</p>
+            <p>To ensure the successful remote connection with your PBX, you need to set up dynamic
+                DNS service. Dynamic DNS keeps track of the dynamic IP address, so the remote
+                devices can access the PBX even the IP address is changing from time to time.</p>
+        </section>
+        <section id="section_abf_bnm_ngb">
+            <title>Supported DDNS providers</title>
+            <p>You can set up DDNS on your router or <ph keyref="product_name"/>. <ph
+                    keyref="product_name"/> supports the following DDNS providers: </p>
+            <ul id="ul_e2v_cjc_zdb">
+                <li>
+                    <p>dyndns.org</p>
+                </li>
+                <li>
+                    <p>freedns.afraid.org</p>
+                </li>
+                <li>
+                    <p>www.no-ip.com</p>
+                </li>
+                <li>
+                    <p>www.zoneedit.com</p>
+                </li>
+                <li>
+                    <p>www.oray.com (For Chinese users)</p>
+                </li>
+                <li>
+                    <p>3322.org (For Chinese users)</p>
+                </li>
+            </ul>
+        </section>
+    </conbody>
+</concept>
+<?oxy_options track_changes="on"?>

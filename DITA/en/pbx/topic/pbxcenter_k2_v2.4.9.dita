@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_npm_4hr_zfb">
+    <title>Version 2.4.9</title>
+    <abstract>Released Date: December 5, 2018</abstract>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/12/03"/>
+            <!--Carol-->
+            <revised modified="2018/12/03"/>
+        </critdates>
+    </prolog>
+    <body>
+        <section id="section_t12_5hr_zfb">
+            <title>New Feature</title>
+            <p><image href="../Images/horizon.png" id="image_hxp_2xp_pdb"/></p>
+            <p>
+                <div>
+                    <ul id="ul_idl_ttp_pdb">
+                        <li>Added Configuration Wizard.<p>The Configuration Wizard helps an
+                                administrator to quickly set up a phone system for his/her
+                                company.</p></li>
+                    </ul>
+                </div>
+            </p>
+        </section>
+        <section id="section_u12_5hr_zfb">
+            <title>Optimization</title>
+            <p><image href="../Images/horizon.png" id="image_k3b_bzq_zfb"/></p>
+        </section>
+        <p><b>Security</b></p>
+        <p>
+            <ul>
+                <li>Optimized Extension Registration Password and User Password.<p>A strong password
+                        is required by default. The administrator can enable <menucascade>
+                            <uicontrol>Allow Weak Password</uicontrol>
+                        </menucascade> on <menucascade>
+                            <uicontrol>Settings</uicontrol>
+                            <uicontrol>System</uicontrol>
+                            <uicontrol>Security</uicontrol>
+                        </menucascade> page. </p></li>
+            </ul>
+        </p>
+        <p><b>Extension</b></p>
+        <p>
+            <ul id="ul_atf_hbs_zfb">
+                <li>Added support for configuring overlapped Extension ranges (<menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol>PBX</uicontrol>
+                        <uicontrol>General</uicontrol>
+                        <uicontrol>Preferences</uicontrol>
+                        <uicontrol>Extension Preferences</uicontrol>
+                    </menucascade>).</li>
+                <li>Optimized Extension setup: PBX will allow you to create an extension number that
+                    is not in the User Extension range.</li>
+                <li>Fixed Extension Group issue: Creating an extension would fail if the extension
+                    number was used as an Extension Group name.</li>
+            </ul>
+        </p>
+        <p><b>SIP Trunk</b></p>
+        <p>
+            <ul id="ul_wvz_kbs_zfb">
+                <li>Optimized the web configuration page of ITSP template.</li>
+                <li>Optimized ITSP template of Germany LAN IP Voice.</li>
+                <li>Fixed the issue that the PBX NAT settings could not take effect if the SIP trunk
+                    TCP or TLS was enabled.</li>
+                <li>Fixed the issue that custom configuration file could not take effect if blank
+                    spaces were included in the SIP trunk name.</li>
+            </ul>
+        </p>
+        <p><b>Call Features</b></p>
+        <p>
+            <ul id="ul_u5d_pbs_zfb">
+                <li>Optimized Call Pickup: Users can see the incoming caller ID before they pick up
+                    the call.</li>
+                <li>Optimized Call Pickup: If an extension's incoming call is picked up by other
+                    person, the extension's phone will not display any information of "missed
+                    call".</li>
+                <li>Fixed the Call Forwarding issue: The system would hang up if a call was
+                    forwarded to a queue.</li>
+                <li>Fixed the BLF monitoring issue on Extension: The BLF LED could not properly
+                    indicate the monitored extension's status if the extension had multiple calls at
+                    the same time.</li>
+                <li>Fixed the BLF monitoring issue on Extension: The BLF LED status was incorrect
+                    when the monitored extension was not registered.</li>
+                <li>Fixed the BLF monitoring issue on Static Agent: The BLF LED status was incorrect
+                    if the agent's <b>Caller ID Name</b>was not the extension number.</li>
+            </ul>
+        </p>
+        <p>
+            <ul id="ul_wzl_g2r_zfb">
+                <li>Fixed Queue issue: If password was set on a queue, the dynamic agents might not
+                    receive incoming calls.</li>
+            </ul>
+        </p>
+        <p><b>Import Function</b></p>
+        <p>
+            <ul id="ul_j2c_n1r_zfb">
+                <li>Optimized the Import function for Extensions, Trunks, Inbound Routes, Outbound
+                    Routes, Firewall Rules.</li>
+            </ul>
+        </p>
+        <p><b>CDR</b></p>
+        <p><ul id="ul_zjt_t1r_zfb">
+                <li>Fixed the issue that when users were invited by Conference Panel, the CDR was
+                    incorrect.</li>
+            </ul><b>Compatibility</b></p>
+        <p>
+            <ul id="ul_rqf_vbs_zfb">
+                <li>Fixed the compatibility issue with Asternic: The Asternic Control Panel
+                    displayed incorrect status.</li>
+                <li>Added support for synchronizing DND settings on PBX and Yealink IP phones.</li>
+                <li>Optimized the compatibility with video door phone: Added support for checking
+                    the video before answering a call.</li>
+            </ul>
+        </p>
+    </body>
+</topic>

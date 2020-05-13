@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_elk_dzc_2db">
+    <title>Distinguish Inbound Calls by DNIS Name</title>
+    <shortdesc><?oxy_comment_start author="Becky" timestamp="20191018T132927+0800" comment="is used to distinguish which trunk is dialed by the caller. For example, a company has multiple trunks, and each trunk has its function. In this case, you can assign one or more DID numbers and DNIS names to a trunk, so that users can notice the intention of the incoming call.
+上一次提交写的" flag="done"?>DNIS
+        (Dialed Number Identification Service) is used to identify where the incoming call is from.
+        You can set different DNIS names for different trunks or set different DID numbers and DNIS
+        names for a trunk. When external users make outbound calls to PBX, extension users can
+        identify incoming call by DNIS name.<?oxy_comment_end?></shortdesc>
+    <taskbody>
+        <steps id="steps_tn5_55d_2db">
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol>PBX</uicontrol>
+                        <uicontrol>Trunks</uicontrol>
+                    </menucascade>, click <image href="../Images/ui_icons/edit.png"
+                        id="image_rv5_31b_fjb" width="20"/> beside the trunk that you want to
+                    edit.</cmd>
+            </step>
+            <step product="k2 s-series">
+                <cmd>On the trunk edit page, click <uicontrol>Advanced</uicontrol> tab.</cmd>
+            </step>
+            <step product="k2 s-series">
+                <cmd>In the <uicontrol>Other Settings</uicontrol> section, select the checkbox of
+                        <uicontrol>Enable DNIS</uicontrol>, and set the <uicontrol>DNIS
+                        Name</uicontrol>.</cmd>
+                <info><image href="../Images/admin/dnis.png" width="650" id="image_mxn_hwd_2db"
+                        product="k2 s-series"/></info>
+            </step>
+            <step product="cloudpbx">
+                <cmd>On the <uicontrol>Basic</uicontrol> page, enter the trunk DID number, and set
+                    the <uicontrol>DNIS Name</uicontrol> for the DID number.</cmd>
+                <info>
+                    <note>For VoIP Peer Trunk, click <uicontrol>Advanced</uicontrol> tab to find the
+                        DID settings.</note>
+                </info>
+                <info><image href="../Images/admin/dnis-settings-cloudpbx.png" width="650"
+                        id="image_ifd_5k1_ffb"/></info>
+            </step>
+            <step>
+                <cmd importance="optional">If the trunk has another DID number, click <image
+                        href="../Images/ui_icons/add.png" width="20" id="image_uwr_hxd_2db"/> to add
+                    a DID number and set a <uicontrol>DNIS name</uicontrol>.</cmd>
+                <info>
+                    <p>For example, a VoIP trunk has 3 DID numbers. 5503301 for Support, 5503302 for
+                        Sales, and 5503303 for Marketing. When external users dial a DID number,
+                        extension users can notice the intention by DNIS name displayed on an IP
+                        phone.</p>
+                </info>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</cmd>
+            </step>
+        </steps>
+        <result id="result_b23_gtk_q2b">Make a call to the trunk of the PBX, the user who receives
+            the call will see the incoming caller ID and the DNIS name of the trunk. <p><image
+                    href="../Images/admin/dnis_sales.png" id="image_sf4_wtk_q2b"/></p></result>
+    </taskbody>
+</task>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_rhw_2kf_5gb">
+    <title>Version 1.8.37</title>
+    <abstract>Released Date: February 19, 2019</abstract>
+    <body>
+        <section>
+            <title>Optimization</title>
+            <p><image href="../Images/horizon.png" id="image_xcc_4wb_kfb"/></p>
+            <p><b>Call Recording</b></p>
+            <p>
+                <ul id="ul_vg4_3mw_tgb">
+                    <li>Added a digital signature in each auto recording file and one-touch
+                        recording file.<p>The digital signature ensures a recording has not been
+                            altered in any way. </p></li>
+                    <li>Added support for recording calls with consent: When external users call in
+                        the PBX, they have options choose weather the calls will be recorded or not. <p>
+                            <note>You can configure IVR to achieve this feature. For more details,
+                                refer to our guide.</note>
+                        </p></li>
+                </ul>
+            </p>
+            <p><b>Extension</b></p>
+            <p>
+                <ul id="ul_fdh_ycc_5gb">
+                    <li>Fixed Voicemail Password issue: After editing an extension, the extension's
+                        voicemail password would be changed automatically.</li>
+                </ul>
+            </p>
+            <p><b>Trunk</b>
+            </p>
+            <p>
+                <ul id="ul_vzh_s1d_5gb">
+                    <li>Optimized the ITSP templates of SIP Peer Trunk.</li>
+                </ul>
+            </p>
+            <p>
+                <ul id="ul_ehb_1zg_d2b">
+                    <li>Fixed SIP Peer Trunk issue:  If making outbound calls through a SIP peer
+                        trunk, the DOD number was displayed incorrectly.</li>
+                    <li>Fixed SIP trunk issue: SIP trunk configurations would be lost after
+                        rebooting the PBX.</li>
+                    <li>Fixed DOD issue: If  DOD numbers were bound to an extension group, the DOD
+                        numbers were displayed incorrectly when making outbound calls.</li>
+                </ul>
+            </p>
+            <p><b>Call Control</b></p>
+            <p>
+                <ul id="ul_r4x_chc_5gb">
+                    <li>Fixed Inbound Route issue: The PBX could not correctly match inbound calls
+                        with DID numbers that were set on multiple inbound routes.</li>
+                    <li>Fixed Inbound Route issue: If  Time Condition was enabled, the inbound
+                            <uicontrol>Destination</uicontrol> would be changed to
+                            <uicontrol>Hangup</uicontrol>automatically after editing the Inbound
+                        Route.</li>
+                </ul>
+            </p>
+            <p><b>Call Feature</b></p>
+            <p>
+                <ul id="ul_hmr_jwk_5gb">
+                    <li>Optimized BLF feature of <uicontrol>Queue</uicontrol>: A queue agent can set
+                        a BLF key (<codeph>*75<varname>｛queue_number｝</varname></codeph>) to achieve
+                        both Status Monitoring and Status Switching.<p>
+                            <note>In the earlier version, a queue agent had to set two BLF keys. One
+                                BLF key
+                                        (<codeph>*75<varname>｛extension_number｝</varname><varname>{queue_number}</varname></codeph>)
+                                for Status Monitoring and the other BLF key
+                                        (<codeph>*75<varname>｛queue_number｝</varname></codeph>) for
+                                Status Switching. </note>
+                        </p></li>
+                    <li>Optimized <uicontrol>Call Parking</uicontrol> feature: Retrieving a parked
+                        call occupies one call channel.<p>
+                            <note>In the earlier version,  rectrieving a parked call occupied two
+                                call channels.</note>
+                        </p></li>
+                    <li>Fixed <uicontrol>Voicemail</uicontrol> issue: If <uicontrol>Voicemail to
+                            Email</uicontrol> feature was enabled on an extension, the associated
+                        user could not receive voiecmail messages on Linkus.</li>
+                    <li>Fixed <uicontrol>DISA</uicontrol> issue: When a user dialed numbers after
+                        the secondary dial tone, the PBX used an incorrect trunk to send the
+                        call.</li>
+                    <li>Fixed the compatibility issue with Yealink phones: The BLF key status could
+                        not change.</li>
+                </ul>
+            </p>
+            <p><b>Voice Prompt</b></p>
+            <p>
+                <ul id="ul_nwg_fwc_5gb">
+                    <li>Optimized <uicontrol>Custom Prompts</uicontrol>: The maximum file size is
+                        limited to 8 MB.</li>
+                    <li>Updated system prompts.</li>
+                </ul>
+            </p>
+            <p><b>CDR</b></p>
+            <p>
+                <ul id="ul_yks_3gc_5gb">
+                    <li>Fixed several CDR issues.</li>
+                </ul>
+            </p>
+            <p><b>PBX Monitor</b></p>
+            <p>
+                <ul id="ul_xsn_44k_5gb">
+                    <li>Fixed Extension Status issue: The extension status was displayed incorrectly
+                        if the extension was registered on Linkus.</li>
+                </ul>
+            </p>
+        </section>
+    </body>
+</topic>

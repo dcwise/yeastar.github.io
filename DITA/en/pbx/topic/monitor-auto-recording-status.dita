@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_ehm_4by_gfb">
+    <title>Monitor Auto Recording Status</title>
+    <shortdesc>When you pause and resume the Auto Recording during a call, you may need to know if
+        the call recording state is switched successfully or not. You can set a BLF key on your IP
+        phone to monitor the auto recording status of your current call.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/09/27"/>
+            <!--Carol-->
+            <revised modified="2018/09/27"/>
+            <!--Carol-->
+            <revised modified="2018/11/06"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <context>
+            <p>This topic is based on the Yealink T41S version 66.84.0.10.</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Log in the phone web interface, go to <menucascade>
+                        <uicontrol>Dsskey</uicontrol>
+                        <uicontrol>Line Key</uicontrol>
+                    </menucascade>.</cmd>
+            </step>
+            <step>
+                <cmd>Set a BLF key to monitor your own extension.</cmd>
+                <info>In this example, your extension number is 1000, and the extension 1000 is
+                    registered on the phone Line 1.</info>
+                <info><image href="../Images/admin/monitor_call_recording.png"
+                        id="image_nnr_q2y_gfb" width="650"/></info>
+                <info>
+                    <ul id="ul_slj_s2y_gfb">
+                        <li><uicontrol>Type</uicontrol>: Set to <uicontrol>BLF</uicontrol>.</li>
+                        <li><uicontrol>Value</uicontrol>: The BLF key format is
+                                    <codeph>*00<varname>{extension_number}</varname></codeph>.<p>In
+                                this example, set to <i>*001000</i>.</p></li>
+                        <li><uicontrol>Label</uicontrol>: Optional. The label will be displayed on
+                            the phone screen.</li>
+                        <li><uicontrol>Line</uicontrol>: Choose the Line where your extension number
+                            is registered.</li>
+                    </ul>
+                </info>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Confirm</uicontrol>.</cmd>
+            </step>
+        </steps>
+        <result id="result_fhx_kfy_gfb">When the monitored extension is being recorded, the BLF LED
+            will turn red. <p>When the monitored extension is not in a call or the <xref
+                    href="pause_resume_call_recording.dita#task_ovn_qjt_gfb">Call Recording is
+                    paused</xref>, the BLF LED will turn green.</p></result>
+    </taskbody>
+    <related-links>
+        <link href="pause_resume_call_recording.dita#task_ovn_qjt_gfb"/>
+    </related-links>
+</task>

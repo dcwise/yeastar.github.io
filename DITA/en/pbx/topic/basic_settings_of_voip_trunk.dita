@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_mx3_33t_2fb">
+    <title>Basic Settings of VoIP Trunk</title>
+    <shortdesc>To set up a VoIP trunk, you need to configure the basic settings of the trunk,
+        including Name, Protocol, Trunk Type, Transport, etc.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/09/19"/>
+            <!--Carol-->
+            <revised modified="2018/09/19"/>
+            <!--Carol-->
+            <revised modified="2018/09/20"/>
+        </critdates>
+    </prolog>
+    <body>
+        <section id="section_dhk_53t_2fb">
+            <p>Go to <menucascade>
+                    <uicontrol>Settings</uicontrol>
+                    <uicontrol>PBX</uicontrol>
+                    <uicontrol>Trunks</uicontrol>
+                </menucascade>, edit your VoIP trunk, click <uicontrol>Basic</uicontrol> to edit the
+                basic settings.</p>
+            <p>
+                <note>For different type of trunk, the parameters on the
+                        <uicontrol>Basic</uicontrol> page may be different.</note>
+            </p>
+            <p>
+                <table frame="all" rowsep="1" colsep="1" id="table_gvd_hf2_2fb">
+                    <title>Description of Basic Settings on VoIP Trunk</title>
+                    <tgroup cols="2">
+                        <colspec colname="c1" colnum="1" colwidth="1*"/>
+                        <colspec colname="c2" colnum="2" colwidth="2.02*"/>
+                        <tbody>
+                            <row>
+                                <entry>Name</entry>
+                                <entry>Set a name for the trunk.</entry>
+                            </row>
+                            <row>
+                                <entry>Trunk Status</entry>
+                                <entry>Enable or disable the trunk. <p>If the trunk is disable, it
+                                        cannot be used to make outbound calls and cannot receive
+                                        inbound calls.</p></entry>
+                            </row>
+                            <row>
+                                <entry>Protocol</entry>
+                                <entry>Select the trunk protocol.<p>
+                                        <ul id="ul_s2z_vkt_2fb">
+                                            <li>SIP</li>
+                                        </ul>
+                                        <ul id="ul_fvg_wkt_2fb">
+                                            <li product="s-series">IAX</li>
+                                        </ul>
+                                    </p></entry>
+                            </row>
+                            <row>
+                                <entry>Trunk Type</entry>
+                                <entry>Select the trunk type.<p>
+                                        <ul id="ul_ibf_zkt_2fb">
+                                            <li><xref
+                                                  href="voip_register_trunk.dita#task_ns5_p22_2cb"
+                                                  >Register Trunk</xref></li>
+                                            <li><xref
+                                                  href="voip_peer_trunk.dita#concept_vcc_nkj_dfb"
+                                                  >Peer Trunk</xref></li>
+                                            <li><xref
+                                                  href="voip_account_trunk.dita#concept_xnr_vkj_dfb"
+                                                  >Account Trunk</xref></li>
+                                        </ul>
+                                    </p></entry>
+                            </row>
+                            <row product="s-series">
+                                <entry>Template</entry>
+                                <entry/>
+                            </row>
+                            <row product="cloudpbx">
+                                <entry>Select Country</entry>
+                                <entry/>
+                            </row>
+                            <row>
+                                <entry>Transport</entry>
+                                <entry/>
+                            </row>
+                            <row>
+                                <entry>Hostname/IP:Port</entry>
+                                <entry/>
+                            </row>
+                            <row>
+                                <entry>Domain</entry>
+                                <entry/>
+                            </row>
+                            <row>
+                                <entry>Username</entry>
+                                <entry/>
+                            </row>
+                            <row>
+                                <entry>Password</entry>
+                                <entry/>
+                            </row>
+                            <row>
+                                <entry>Authentication Name</entry>
+                                <entry/>
+                            </row>
+                            <row>
+                                <entry>From User</entry>
+                                <entry/>
+                            </row>
+                            <row>
+                                <entry>Caller ID Number</entry>
+                                <entry/>
+                            </row>
+                            <row>
+                                <entry>Caller ID Name</entry>
+                                <entry/>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+    </body>
+</topic>

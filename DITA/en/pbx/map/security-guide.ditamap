@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>Security Guide</title>
+    <topicref href="../topic/security-guide.dita" product="cloudpbx s-series">
+        <topicref href="../topic/pbx_service_security.dita"/>
+        <topicref href="../topic/network_security.dita" product="s-series"/>
+        <topicref href="../topic/web_access_security.dita"/>
+        <topicref href="../topic/extension_security.dita"/>
+        <topicref href="../topic/trunk_security.dita">
+            <topicref href="../topic/international_call_limit.dita"/>
+        </topicref>
+        <topicref href="../topic/firewall.dita" product="s-series">
+            <topicref href="../topic/examples_of_firewall_rules.dita"/>
+        </topicref>
+        <topicref href="../topic/ip_auto_defense.dita" product="s-series"/>
+        <topicref href="../topic/contingency_plan.dita"/>
+    </topicref>
+    <keydef keys="product_name" product="s-series">
+        <topicmeta>
+            <keywords>
+                <keyword>Yeastar S-Series VoIP PBX</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="product_name" product="cloudpbx">
+        <topicmeta>
+            <keywords>
+                <keyword>Yeastar Cloud PBX</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+</map>

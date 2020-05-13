@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_olv_s3b_pdb">
+    <title>Integrations</title>
+    <shortdesc>Interconnect Yeastar Cloud PBX with other devices or applications.</shortdesc>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/07/27"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <p></p>
+    </conbody>
+</concept>

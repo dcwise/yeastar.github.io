@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_thk_gjm_ldb">
+    <title>Restore a Backup File</title>
+    <shortdesc>After restore a backup file, the current configurations on your PBX will be
+        OVERWRITTEN with the backup data.</shortdesc>
+    <taskbody>
+        <context>
+            <p>
+                <note>
+                    <ul id="ul_mj5_v3r_d3b">
+                        <li>You cannot restore a backup file that is downloaded from a different PBX
+                            model.</li>
+                    </ul>
+                    <ul id="ul_mkq_qqm_ldb">
+                        <li>If a backup file is created from a newer version of PBX, you cannot
+                            restore this backup file. For example, restore a backup file
+                            (v30.7.0.35) to PBX (v30.6.0.16) would not work.</li>
+                        <li>You can restore a backup file that is created from a older version of
+                            PBX. For example, restore a backup file (v30.6.0.16) to PBX(v30.7.0.35)
+                            would work.</li>
+                    </ul>
+                </note>
+            </p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Maintenance</uicontrol>
+                        <uicontrol>Backup and Restore</uicontrol>
+                    </menucascade>.</cmd>
+            </step>
+            <step>
+                <cmd>Choose a backup file, click <image href="../Images/ui_icons/restore.png"
+                        width="20" id="image_a3f_2rm_ldb"/>.</cmd>
+                <stepresult>A pop-up window will appear at the bottom-right of the web
+                    page.</stepresult>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Yes</uicontrol> to reboot the PBX.</cmd>
+                <stepresult>The PBX starts to restore data from the backup file.</stepresult>
+            </step>
+        </steps>
+    </taskbody>
+</task>

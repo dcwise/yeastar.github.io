@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_wnw_rtv_tcb">
+    <title>Leave a Voicemail Message Directly</title>
+    <taskbody>
+        <context>Extension users can dial feature code on their phones to leave voicemail messages
+            directly. The default feature code is
+                    <codeph>**</codeph>.<p><b><i><u>Example:</u></i></b> Extension user 1000 wants
+                to leave a voicemail message to extension user 2000. The extension user 1000 needs
+                to operate as below:</p></context>
+        <steps>
+            <step>
+                <cmd>Dial **2000 on the phone.</cmd>
+            </step>
+            <step>
+                <cmd>Record the message.</cmd>
+            </step>
+            <step>
+                <cmd>Hang up or press # key to send the message.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

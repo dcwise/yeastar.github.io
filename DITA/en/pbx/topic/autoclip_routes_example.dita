@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_wsw_kbw_rdb">
+    <title>AutoCLIP Configuration Example</title>
+    <shortdesc>This topic gives an AutoCLIP configuration example to help you understand the how to
+        configure AutoCLIP on <ph keyref="product_name"/> and how the AutoCLIP redirects calls to
+        the original extension.</shortdesc>
+    <conbody>
+        <p>
+            <ol id="ol_kgs_qbw_rdb">
+                <li>Enable AutoCLIP for all SIP trunks.</li>
+                <li>Set the AutoCLIP Route as below.<p><image
+                            href="../Images/admin/autoclip_example.png" width="650"
+                            id="image_v4c_dcw_rdb"/></p></li>
+                <li>Test the AutoCLIP and click <uicontrol>View AutoCLIP List</uicontrol> to check
+                    the AutoCLIP records.<p>
+                        <ol id="ol_scx_hcw_rdb">
+                            <li>Extension user 1000 makes a call to number 15880262368, the called
+                                party doesn't answer the call.</li>
+                            <li>The PBX will keep the record in the AutoCLIP List as below.<p><image
+                                        href="../Images/admin/autoclip_list.png"
+                                        id="image_zl3_xcw_rdb" width="650"/></p></li>
+                            <li>User 15880262358 calls back to the PBX, but the incoming caller ID
+                                shows +8615880262358.</li>
+                            <li>As the <uicontrol>Digits Match</uicontrol> is set to
+                                    <codeph>11</codeph>, the call will match against the AutoCLIP
+                                records, and the call will be forwarded directly to extension user
+                                1000.</li>
+                            <li>As the <uicontrol>Delete Used Records</uicontrol> is enabled, the
+                                record will be deleted automatically in AutoCLIP List.</li>
+                            <li>Next time, when user 15880262358 calls in the PBX, no AutoCLIP route
+                                will be matched, the call will go to the PBX's inbound route
+                                destination.</li>
+                        </ol>
+                    </p><p>
+                        <note> When multiple extension users make a call to the same external
+                            number, only the last extension that had made the call will be matched
+                            against the external number in AutoCLIP list. So when the external user
+                            calls back, the call will be routed to the extension that had made the
+                            call at last.</note>
+                    </p></li>
+            </ol>
+        </p>
+    </conbody>
+</concept>

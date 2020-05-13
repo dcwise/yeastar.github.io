@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_mg2_yls_scb">
+  <?oxy_comment_start author="Becky" timestamp="20190904T174247+0800" comment="原文：Call Monitoring Overview
+①跟着界面用call monitor，相关的都改了，没有再标注" id="vgq_xvg_1jb" flag="done"?>
+  <?oxy_comment_start author="carol" timestamp="20190910T113736+0800" comment="还是写call monitoring， 作为名词，
+" parentID="vgq_xvg_1jb" flag="done" mid="1"?>
+  <title>Call Monitoring Overview</title><?oxy_comment_end?><?oxy_comment_end mid="1"?>
+  <shortdesc>Call Monitoring allows authorized users to monitor another extension user's call in
+    real time. The supervisor can dial "feature code" + "extension number" to monitor the extension
+    user's call.</shortdesc>
+  <conbody>
+    <p>Go to <menucascade>
+        <uicontrol>Settings</uicontrol>
+        <uicontrol>PBX</uicontrol>
+        <uicontrol>General</uicontrol>
+      </menucascade>, click <uicontrol>Feature Code</uicontrol> tab.</p>
+    <p>In the <uicontrol>Call Monitor</uicontrol> section, you can enable or disable monitor modes,
+      and modify corresponding feature codes.</p>
+    <p>
+      <ph keyref="product_name"/> supports the following monitor modes:</p>
+    <p>
+      <ul id="ul_dqm_hms_scb">
+        <li><uicontrol>Listen</uicontrol> (Default code: *90)<p>Listen mode allows supervisor to
+            listen to a call in real
+            time.</p><?oxy_comment_start author="Becky" timestamp="20190904T174903+0800" comment="补充" flag="done"?><p>The
+            supervisor can not talk with the monitored extension users. </p><?oxy_comment_end?></li>
+        <li><uicontrol>Whisper</uicontrol> (Default code:
+            *91)<?oxy_comment_start author="Becky" timestamp="20190904T175257+0800" comment="原文：Whisper mode allows supervisor to speak/coach his staff to help them handle a call.
+①三个模式只有这个模式列举了场景" flag="done"?><p>Whisper
+            mode allows supervisor to listen to a call in real time, and talk with the monitored
+            extension user privately.</p><?oxy_comment_end?><p>The other party can not hear the
+            supervisor's voice.</p></li>
+        <li><uicontrol>Barge-in</uicontrol> (Default code:
+            *92)<?oxy_comment_start author="Becky" timestamp="20190904T175707+0800" comment="原文：Barge-in mode allows the supervisor to join a call.
+①和上文保持一致，具体些可听可发言" flag="done"?><p>Barge-in
+            mode allows the supervisor to listen to a call in real time and talk with both
+            parties.</p><?oxy_comment_end?></li>
+      </ul>
+    </p>
+  </conbody>
+</concept>

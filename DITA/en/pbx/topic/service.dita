@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_a3k_523_ffb">
+    <title>Service</title>
+    <shortdesc>All the PBX service statuses and ports are displayed on the security Service page. </shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/09/21"/>
+            <!--Carol-->
+            <revised modified="2018/09/21"/>
+            <!--Carol-->
+            <revised modified="2018/10/17"/>
+        </critdates>
+    </prolog>
+    <body>
+        <p> Go to <menucascade>
+                <uicontrol>Settings</uicontrol>
+                <uicontrol>System</uicontrol>
+                <uicontrol>Security</uicontrol>
+                <uicontrol>Service</uicontrol>
+            </menucascade> to configure the service settings.</p>
+        <p>
+            <table frame="all" rowsep="1" colsep="1" id="table_mqg_df3_ffb">
+                <tgroup cols="2">
+                    <colspec colname="c1" colnum="1" colwidth="1*"/>
+                    <colspec colname="c2" colnum="2" colwidth="2.14*"/>
+                    <thead>
+                        <row>
+                            <entry align="left">Option</entry>
+                            <entry align="left">Description</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row>
+                            <entry>Auto Logout Time (min)</entry>
+                            <entry>After the set time of inactivity, the session will automatically
+                                log out. The default time is 15 minutes.</entry>
+                        </row>
+                        <row product="s-series">
+                            <entry>Web Login Mode</entry>
+                            <entry>Users can log in the web interface with extension number, email
+                                address or both.<p>
+                                    <ul id="ul_ncj_pg3_ffb">
+                                        <li><uicontrol>Extension</uicontrol>: Use an extension
+                                            number as the username to log in.</li>
+                                        <li><uicontrol>Email</uicontrol>: Use an email address as
+                                            the username to log in. The email address is associated
+                                            with extension number.</li>
+                                    </ul>
+                                </p><p>
+                                    <note>
+                                        <ul id="ul_tnl_35v_43b">
+                                            <li>Users are not allowed to log in web interface if
+                                                neither <uicontrol>Extension</uicontrol> nor
+                                                  <uicontrol>Email</uicontrol> is checked.</li>
+                                            <li>The super administrator can always log in the web
+                                                interface by the username "admin".</li>
+                                        </ul>
+                                    </note>
+                                </p></entry>
+                        </row>
+                        <row product="s-series">
+                            <entry id="waek_password">Allow Weak Password</entry>
+                            <entry>By default, strong passwords are required for Extension
+                                Registration Password and Extension User Password.<p>If weak
+                                    password is enabled, the PBX will allow a weaker password to be
+                                    configured.</p><p>
+                                    <note>Reconsider before you enable Weak Password. A weak
+                                        password will make your PBX system easily being attacked by
+                                        brute force methods.</note>
+                                </p></entry>
+                        </row>
+                        <row product="s-series">
+                            <entry>Protocol</entry>
+                            <entry>Select the web protocol. The default web protocol is
+                                HTTPS.</entry>
+                        </row>
+                        <row product="s-series">
+                            <entry>Port</entry>
+                            <entry>Select the web port. The default port is 8088.<note>The port 8090
+                                    is reserved port which can't be assigned.</note></entry>
+                        </row>
+                        <row product="s-series">
+                            <entry>Redirect from port 80</entry>
+                            <entry>If the option is enabled, when you access the PBX using HTTP with
+                                port 80, it will be redirected to HTTPS with port 8088.</entry>
+                        </row>
+                        <row product="s-series">
+                            <entry>Certificate</entry>
+                            <entry>Select a certificate for HTTPS. The default is
+                                    <uicontrol>None</uicontrol>.</entry>
+                        </row>
+                        <row product="s-series">
+                            <entry>Enable SSH</entry>
+                            <entry>SSH port is used to access the PBX underlying configurations to
+                                debug the system. The default SSH port is 8022.<p>
+                                    <note>Disable SSH port if you don't need to debug the
+                                        system.</note>
+                                </p></entry>
+                        </row>
+                        <row product="s-series">
+                            <entry>Enable FTP</entry>
+                            <entry>With FTP service, you can connect to PBX via web browser. The
+                                default FTP port is 21.</entry>
+                        </row>
+                        <row product="s-series">
+                            <entry>Enable TFTP</entry>
+                            <entry>Whether to enable TFTP or not.</entry>
+                        </row>
+                        <row product="s-series">
+                            <entry>IAX Port</entry>
+                            <entry>The IAX port. The default IAX port is 4569.</entry>
+                        </row>
+                        <row>
+                            <entry>SIP UDP Port</entry>
+                            <entry>SIP registration port. The default SIP UDP port is 5060.</entry>
+                        </row>
+                        <row>
+                            <entry>Enable SIP TCP</entry>
+                            <entry>Whether to enable SIP TCP or not. The default port is
+                                5060.</entry>
+                        </row>
+                        <row>
+                            <entry>Enable SIP TLS</entry>
+                            <entry>Whether to enable SIP TLS or not. The default port is
+                                5061.</entry>
+                        </row>
+                        <row product="s-series">
+                            <entry namest="c1" nameend="c2">DHCP Server</entry>
+                        </row>
+                        <row product="s-series">
+                            <entry>Enable DHCP Server</entry>
+                            <entry>
+                                <p>If the option is enabled, PBX will act as a DHCP server. This
+                                    feature is used when you do phone provisioning through DHCP
+                                    mode.</p>
+                            </entry>
+                        </row>
+                        <row product="s-series">
+                            <entry>Gateway</entry>
+                            <entry>Enter the gateway IP address.</entry>
+                        </row>
+                        <row product="s-series">
+                            <entry>Subnet Mask</entry>
+                            <entry>Enter the subnet mask. The format is XXX.XXX.XXX.XXX.</entry>
+                        </row>
+                        <row product="s-series">
+                            <entry>Preferred DNS Server</entry>
+                            <entry>Enter the preferred DNS server. The format is
+                                XXX.XXX.XXX.XXX.</entry>
+                        </row>
+                        <row product="s-series">
+                            <entry>Alternate DNS Server</entry>
+                            <entry>Enter the alternate DNS server. The format is
+                                XXX.XXX.XXX.XXX.</entry>
+                        </row>
+                        <row product="s-series">
+                            <entry>DHCP Address Range</entry>
+                            <entry>Set the IP address that the DHCP server can assign to network
+                                devices. Start IP address is on the left and end IP on the
+                                right.</entry>
+                        </row>
+                        <row product="s-series">
+                            <entry>TFTP Server</entry>
+                            <entry>This option is for Phone Provisioning feature. IP phones can get
+                                configuration file from this address. <ul id="ul_u2f_kdl_n3b">
+                                    <li>For Grandstream, Panasonic and Avantec phones, enter the
+                                        PBX’s IP address. The format is XXX.XXX.XXX.XXX. For
+                                        example, enter <i>192.168.5.150</i>.</li>
+                                    <li>For other IP phones, remember to specify the protocol. The
+                                        format is tftp://XXX.XXX.XXX.XXX. For example, enter
+                                            <i>tftp://192.168.5.150</i>.</li>
+                                </ul><i/></entry>
+                        </row>
+                        <row product="s-series">
+                            <entry>NTP Server</entry>
+                            <entry> The PBX can be a NTP server. By default, it is the PBX’s IP
+                                address.</entry>
+                        </row>
+                        <row product="s-series">
+                            <entry namest="c1" nameend="c2">AMI<p>The Asterisk Manager Interface
+                                    (AMI) is a system monitoring and management interface provided
+                                    by Asterisk. The 3rd party software can work with the PBX by AMI
+                                    interface. The default port for AMI interface is
+                                5038.</p></entry>
+                        </row>
+                        <row product="s-series">
+                            <entry>Enable AMI</entry>
+                            <entry>Whether to enable AMI interface or not.</entry>
+                        </row>
+                        <row product="s-series">
+                            <entry>Username</entry>
+                            <entry>Specify a name for the AMI user.</entry>
+                        </row>
+                        <row product="s-series">
+                            <entry>Password</entry>
+                            <entry>Specify a password for the user to connect to AMI.</entry>
+                        </row>
+                        <row product="s-series">
+                            <entry>Permitted IP/Subnet Mask</entry>
+                            <entry>Configure permitted IP address and subnet mask that would be
+                                allowed to authenticate as the AMI user. If you do not set this
+                                option, all IP addresses will be denied.</entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+        </p>
+    </body>
+</topic>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_tvr_p3k_l2b">
+    <title>PBX Center</title>
+    <shortdesc>Release notes for PBX Center application on Yeastar K2 IPPBX.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <author type="contributor">Yeastar</author>
+        <critdates>
+            <created date="2018/07/12"/>
+            <!--Carol-->
+            <revised modified="2018/07/12"/>
+            <!--Yeastar-->
+            <revised modified="2018/08/28"/>
+        </critdates>
+    </prolog>
+    <conbody/>
+</concept>

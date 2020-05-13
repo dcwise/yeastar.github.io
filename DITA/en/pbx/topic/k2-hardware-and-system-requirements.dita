@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="k2-hardware-and-system-requirements">
+    <title>Hardware and System Requirements</title>
+    <shortdesc>This topic provides the hardware system requirements, the tested and supported
+        Virtual Machine (VM) Platforms for installing Yeastar K2 IPPBX system.</shortdesc>
+    <body>
+        <section id="section_uql_j2y_b3b">
+            <title>Hardware Requirements</title>
+            <p>System performance depends on the following key factors:<ul id="ul_un4_m2y_b3b">
+                    <li>How many concurrent calls will the system handle</li>
+                    <li>Which codecs are used to make calls</li>
+                    <li>If call recording is used.</li>
+                </ul></p>
+            <p>Based on the factors, your system hardware should meet the minimal requirements:</p>
+            <p>
+                <table frame="all" rowsep="1" colsep="1" id="table_evj_dll_g3b">
+                    <title/>
+                    <tgroup cols="3">
+                        <colspec colname="c1" colnum="1" colwidth="1*"/>
+                        <colspec colname="newCol2" colnum="2" colwidth="1.06*"/>
+                        <colspec colname="newCol3" colnum="3" colwidth="1.19*"/>
+                        <thead>
+                            <row>
+                                <entry>Hardware</entry>
+                                <entry>200 Concurrent Calls</entry>
+                                <entry>500 Concurrent Calls</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>Recommended Server</entry>
+                                <entry namest="newCol2" nameend="newCol3" align="center"
+                                    valign="middle">Dell EMC PowerEdge R240</entry>
+                            </row>
+                            <row>
+                                <entry>CPU</entry>
+                                <entry>
+                                    <p>Intel(R) Xeon(R) CPU E-2124</p>
+                                    <ul id="ul_kxh_1b1_fjb">
+                                        <li>Cores: 4</li>
+                                        <li>Threads: 4</li>
+                                        <li>CPU Frequency: 3.4GHz</li>
+                                    </ul>
+                                </entry>
+                                <entry>
+                                    <p>Intel(R) Xeon(R) CPU E-2144G</p>
+                                    <ul id="ul_hn5_rmm_2jb">
+                                        <li>Cores: 4</li>
+                                        <li>Threads: 8</li>
+                                        <li>CPU Frequency: 3.6GHz</li>
+                                    </ul>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>RAM</entry>
+                                <entry>8 GB</entry>
+                                <entry>8 GB</entry>
+                            </row>
+                            <row>
+                                <entry>Hard Disk (Call Recording Disabled)</entry>
+                                <entry>50 GB</entry>
+                                <entry>50 GB</entry>
+                            </row>
+                            <row>
+                                <entry>Hard Disk (Call Recording Enabled)</entry>
+                                <entry>1 TB</entry>
+                                <entry>1 TB</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+        <section id="section_gx3_4b1_fjb">
+            <title>Supported Virtual machine (VM) Platforms</title>
+            <p>The tested and supported VM platforms:<ul id="ul_nx3_4b1_fjb">
+                    <li>VMware 12.0 or later</li>
+                    <li>Hyper-v-6.3.9600.16384 or later</li>
+                    <li>KVM 2.5.0 or later</li>
+                    <li>ESXi 6.0 or later</li>
+                </ul></p>
+        </section>
+        
+    </body>
+</topic>

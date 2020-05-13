@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_z1w_c4y_scb">
+    <title>Synchronize Phone Time with the PBX</title>
+    <shortdesc>You can synchronize the users' phone time with the PBX via Auto Provisioning
+        function. You can also manually set the phone's NTP server as your PBX's time; the phone
+        time will be synchronized to your PBX.</shortdesc>
+    <taskbody>
+        <context>
+            <p>
+                <note> Only the phone that were registered to the PBX via auto provisioning can auto
+                    provision the phone time.</note>
+            </p>
+        </context>
+        <steps id="steps_sk4_hhm_tcb">
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Auto Provisioning</uicontrol>
+                        <uicontrol>Device List</uicontrol>
+                    </menucascade>, select the desired phone(s) and edit.</cmd>
+            </step>
+            <step>
+                <cmd>On the configuration page, click <uicontrol>Preferences</uicontrol> tab.</cmd>
+            </step>
+            <step>
+                <cmd>Set the <uicontrol>Primary NTP Server</uicontrol> as <ph product="cloudpbx">the
+                        domain</ph><ph product="s-series">IP address</ph> of your PBX.</cmd>
+                <info product="cloudpbx"><image href="../Images/admin/autop_ntp_server.png"
+                        width="650" id="image_zsy_djm_tcb"/></info>
+                <info product="s-series"><image href="../Images/admin/autop_sync_pbx_time_s.png"
+                        width="650" id="image_yks_k5x_ldb"/></info>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol>.</cmd>
+                <stepresult><p>The following dialog box appears.</p><image
+                        href="../Images/admin/autop_reboot.png" id="image_qqk_y5z_scb"
+                    /></stepresult>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Yes</uicontrol> to reboot the phone(s) and synchronize the
+                    phone time with the PBX.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

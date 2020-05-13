@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v34_1pk_jdb">
+  <title>Version 30.1.0.7</title>
+  <abstract>Released Date: August 23, 2016</abstract>
+  <prolog>
+    <critdates>
+      <!--Carol-->
+      <revised modified="2018/06/20"/>
+    </critdates>
+  </prolog>
+  <body>
+    <section id="section_nyk_p4g_jdb">
+      <title>New Feature</title>
+      <p><image href="../Images/horizon.png" id="image_tfq_l1w_pdb"/></p>
+      <p>
+        <ul id="ul_eln_pwk_jdb">
+          <li>Added new App Conference Panel.</li>
+          <li>Added SLA feature.</li>
+          <li>Added new network mode “Single”.</li>
+          <li>Added Notifications on taskbar.</li>
+          <li>Added web alert when the PBX power is off or the PBX is off-line.</li>
+          <li>Added SIP “Jitter Buffer” settings.</li>
+          <li>Added support for importing and exporting extensions.</li>
+          <li>Added support for the following Tone Regions: Turkey, Korea, Serbia, Panama.</li>
+          <li>Added support for Spanish Web User Interface language.</li>
+          <li>Added conference status on PBX Monitor panel.</li>
+          <li>Added “Echo Cancellation” setting on GSM/3G trunk and FXO trunk.</li>
+          <li>Added support for registering SIP trunk with random SIP port.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_gzb_54g_jdb">
+      <title>Optimization</title>
+      <p><image href="../Images/horizon.png" id="image_oxv_l1w_pdb"/></p>
+      <ul id="ul_cnp_qwk_jdb">
+        <li>If you do not change login password and set up an email, the system will remind you to
+          do the configuration every time you log in.</li>
+        <li>Administrator account (admin) Password has an 8-63 character limit; the password must
+          contain uppercase letters, lowercase letters and numbers.</li>
+        <li>Extension account Password has a 6-63 character limit; the following characters are not
+          allowed: <div>
+            <p>&amp; ; " ' \ &lt; > | , </p>
+          </div></li>
+      </ul>
+      <ul id="ul_dnp_qwk_jdb">
+        <li>Your S-Series PBX’s system prompts would be updated to the newest version automatically
+          after firmware upgrade.</li>
+        <li>If you change the system service port (like FTP, HTTP, SSH etc.), the system will remind
+          you to reconfigure the firewall settings.</li>
+        <li>AutoCLIP routing could match incoming numbers with area codes and special character
+          “+”.</li>
+        <li>Added “SMS to Email” and “Email to SMS” failure records in Event Log.</li>
+        <li>For Logs Auto Cleanup, the “Logs Preservation Duration” setting is for system logs, the
+          “Max Number of Logs” setting is for operation logs.</li>
+        <li>The callback list will display each callback’s detailed destination.</li>
+        <li>Limit the Network Drive number: <ul id="ul_enp_qwk_jdb">
+            <li>S20 Maximum Network Drive: 2</li>
+            <li>S50 Maximum Network Drive: 2</li>
+            <li>S100 Maximum Network Drive: 4</li>
+            <li>S300 Maximum Network Drive: 4</li>
+          </ul></li>
+        <li>The system will log you off from the web if you do not do any operation on the S-Series
+          PBX web GUI in half an hour.</li>
+        <li>Added CPU temperature information in system logs.</li>
+      </ul>
+    </section>
+    <section id="section_cmm_x4g_jdb">
+      <title>Fixed Bug</title>
+      <p><image href="../Images/horizon.png" id="image_wnl_m1w_pdb"/></p>
+      <p>
+        <ul id="ul_lgx_swk_jdb">
+          <li>Fixed the DNS SRV Lookup issue: if the DNS SRV analysis result was a domain, a VoIP
+            trunk registered using the domain would not work.</li>
+          <li>Fixed VoIP Trunk issue: if entering an IP address in the “Hostname/IP” field and
+            entering a domain in the “Domain” field, the trunk could not be registered.</li>
+          <li>Fixed the queue ring strategy issue: if a queue agent has registered his own extension
+            number on multiple phones, incoming calls could only reach one of the agent’s
+            phones.</li>
+          <li>Fixed the compatibility issue with VoIP provider netelip.</li>
+          <li>Fixed the issue that sending email to SMS would fail if the content exceeded the
+            length limit.</li>
+          <li>Fixed the issue that the system would automatically make outbound calls through FXO
+            trunks.</li>
+          <li>Fixed the Event Center issue: WAN port failure was not recorded in the event
+            logs.</li>
+          <li>Fixed the dual mode network issue: if one Ethernet port used VLAN, the other Ethernet
+            port could not work properly.</li>
+          <li>Fixed the IE11 compatibility issue: users could not play recording files on PBX web
+            GUI.</li>
+          <li>Fixed the Holiday issue: the holiday worked based on Time Zone GMT +0.</li>
+          <li>Fixed the E1 trunk issue: the call quality was bad when using the E1 trunk.</li>
+          <li>Fixed the Event Center issue: the event center repeatedly recorded SIP trunk
+            registration failure.</li>
+          <li>Fixed the Call Log issue: if you configured DOD numbers on a SIP trunk, and made
+            outbound calls through the SIP trunk, the “Call From” value would be wrong in call
+            logs.</li>
+        </ul>
+      </p>
+    </section>
+  </body>
+</topic>

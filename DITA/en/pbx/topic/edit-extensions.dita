@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_h44_hr4_y3b">
+    <title>Edit Extensions</title>
+    <shortdesc>After creating extensions, you may need to change extension settings. You can edit an
+        extension, or edit extensions in bulk.</shortdesc>
+    <body>
+        <section id="section_mty_v31_1jb">
+            <title>Edit an Extension</title>
+            <p>
+                <ol id="ol_rfb_2j1_1jb">
+                    <li>Log in PBX web interface, go to <menucascade>
+                            <uicontrol>Settings</uicontrol>
+                            <uicontrol>PBX</uicontrol>
+                            <uicontrol>Extensions</uicontrol>
+                        </menucascade>.</li>
+                    <li>On <uicontrol>Extensions</uicontrol> page, click <image
+                            id="image_l5q_hj1_1jb" href="../Images/ui_icons/edit.png" width="20"/>
+                        beside the extension that you want to edit.</li>
+                    <li>Change extension settings according to your needs.</li>
+                    <li>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_fgl_w31_1jb">
+            <title>Bulk Edit Extensions</title>
+            <p>
+                <ol id="ol_f1t_lj1_1jb">
+                    <li>Log in PBX web interface, go to <menucascade>
+                            <uicontrol>Settings</uicontrol>
+                            <uicontrol>PBX</uicontrol>
+                            <uicontrol>Extensions</uicontrol>
+                        </menucascade>. </li>
+                    <li>On <uicontrol>Extensions</uicontrol> tab, select the checkbox of desired
+                        extensions, and click <uicontrol>Edit</uicontrol>.</li>
+                    <li>Change extension settings according to your needs.</li>
+                    <li>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</li>
+                </ol>
+            </p>
+        </section>
+    </body>
+</topic>

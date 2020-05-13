@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="sbc-release-notes-en">
+    <title>Release Notes for SBC</title>
+    <body>
+        <section id="section_hsq_dfv_jlb">
+            <title>Version 1.6.13</title>
+            <p>Date: April 17, 2020</p>
+            <p>
+                <ul id="ul_rxb_lfv_jlb">
+                    <li>Fixed the compatibility issue with VoIP Innovation: Users would hear no
+                        audio for a few seconds when they made inbound calls to the trunk number of
+                        VoIP Innovation.</li>
+                    <li>Fixed the issue that SBC could not redirect Re-INVITE packets to the correct
+                        PBX instance, which caused the call to be disconnected automatically.</li>
+                    <li>Fixed the issue that SBC responded 200OK with incorrect SDP details , which
+                        caused no audio after receiving SIP Re-INVITE packets.</li>
+                    <li>Fixed the issue that SBC sent INVITE packets with different SDP ports to the
+                        same ITSP, which caused one-way audio issue.</li>
+                    <li>Fixed the issue that the LDAP Server App on the PBX could not work.</li>
+                    <li>Fixed the Interconnection issue with Yeastar S-Series VoIP PBX: Calling from
+                        Cloud PBX through one of S-Series VoIP PBX's trunk, the call could not be
+                        disconnected automatically on the callee's side after the caller hung
+                        up.</li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_rdj_5s3_fkb">
+            <title>Version 1.6.11</title>
+            <p>Date: December 30, 2019</p>
+            <p>
+                <ul id="ul_pbs_xs3_fkb">
+                    <li>Fixed the compatibility issue with TLS protocol: Registering extensions by
+                        TLS protocol would cause high CPU usage.</li>
+                    <li>Fixed the compatibility issue with Gigaset N510 IP phone: Gigaset N510 IP
+                        phone could not disconnect calls because the phone could not recognize the
+                        BYE packet sent by SBC.</li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_nmp_5b4_1kb">
+            <title>Version 1.6.6</title>
+            <p>Date: December 13, 2019</p>
+            <p>
+                <ul id="ul_c3x_vb4_1kb">
+                    <li>Added support for monitoring the following events and sending notification
+                        emails if the relevant threshold is reached.<p>
+                            <ul id="ul_g2q_5h4_1kb">
+                                <li>System CPU Overload</li>
+                                <li>System Memory Overload</li>
+                                <li>Running out of System Storage Space</li>
+                                <li>Network Throughput Alert</li>
+                                <li>Media Data Transmission Error</li>
+                                <li>Fail2ban: An IP address has been banned</li>
+                                <li>Dynamic Defense</li>
+                            </ul>
+                        </p></li>
+                    <li>Added support for adding two SIP trunks that have the same ITSP domain and
+                        different DID numbers on the PBX.</li>
+                    <li>Fixed the issue that all the extensions and trunks would lose connections
+                        after rebooting the SBC server.</li>
+                    <li>Fixed the issue that the call was not disconnected on the caller's side
+                        because SBC sent an incorrect BYE packet.</li>
+                    <li>Fixed the issue that there was no sound after the call was established for
+                        30 seconds because SBC sent an incorrect 200OK packet.</li>
+                    <li>Fixed the issue that the call would be disconnected automatically if the
+                        ITSP sent a RE-INVITE packet during the call.</li>
+                    <li>Fixed the issue that there was no sound after an inbound call was
+                        established for 3 seconds.</li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_an4_kwb_p3b">
+            <title>Version 1.5.21</title>
+            <p>Date: August 15, 2019<ul id="ul_gky_nwb_p3b">
+                    <li>Added support for matching inbound routes by different DID numbers of a Peer
+                            Trunk.<note>Required PBX version: 81.9.0.14 or later.</note></li>
+                    <li>Added support for LDAP Server.<note>Required PBX version: 81.9.0.14 or
+                            later.</note></li>
+                </ul></p>
+        </section>
+        <section id="section_edj_zwb_p3b">
+            <title>Version 1.5.15 </title>
+            <p>Date: June 12, 2019<ul id="ul_zv4_bxb_p3b">
+                    <li>
+                        <p>Auto packet-capture function is enabled on SBC by
+                            default.<?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?></p><?oxy_custom_end?>
+                    </li>
+                    <li>Increased the SBC log level so that more debug and trace information can be
+                        logged.</li>
+                    <li>Optimized the system.</li>
+                </ul></p>
+        </section>
+        <section>
+            <title>Version 1.5.5</title>
+            <p>Date: January 11, 2019<ul id="ul_wkg_txb_p3b">
+                    <li>Fixed the call issue: There would be no audio after a call was answered for
+                        2 to 3 seconds.</li>
+                </ul></p>
+        </section>
+        <section id="section_bkv_gyb_p3b">
+            <title>Version 1.5.2</title>
+            <p>Date: December 26, 2018<ul id="ul_fcd_jyb_p3b">
+                    <li>Optimized the mechanism of RTP ports release, which avoids call errors on
+                        PBX.</li>
+                </ul></p>
+        </section>
+        <section>
+            <title>Version 1.5.0</title>
+            <p>Date: December 18, 2018<ul id="ul_tkw_nyb_p3b">
+                    <li>Added support for displaying SBC version on YMP.<note>Required YMP version:
+                            82.8.0.4 or later.</note></li>
+                    <li>Fixed the call issue on Fanvil phones: If TCP/TLS protocol was used on
+                        Fanvil phones, the calls on Fanvil phones would be abnormal.</li>
+                    <li>Fixed the call issue on Vtech ET365 phone: If TCP protocol was used on Vtech
+                        ET365 phone, the calls on Vtech ET365 phone could not be disconnected.</li>
+                    <li>Fixed the issue on Linkus mobile clients: There would be no audio during the
+                        call if you switched the network type between WiFi and 4G on your mobile. </li>
+                    <li>
+                        <p>Fixed the Call Pickup issue: If a member of pickup group picked up an
+                            incoming call, other members still received "missed call" information on
+                            their phones.</p>
+                    </li>
+                </ul></p>
+        </section>
+        <section id="section_tkk_nlc_p3b">
+            <title>Version 1.4.13</title>
+            <p>Date: November 28, 2018<ul id="ul_a3w_qlc_p3b">
+                    <li>Fixed the compatibility issue of UK ITSP (VoIP Unlimited): The call could
+                        not be disconnected on the caller's side after the callee hung up.</li>
+                </ul></p>
+        </section>
+    </body>
+</topic>

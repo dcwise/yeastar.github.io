@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_fgg_byg_1db">
+  <title>CDR and One Touch Recordings</title>
+  <shortdesc>By default, extension users can check and download their own CDR (Call Detail Record)
+    and One-touch Recording files.</shortdesc>
+  <prolog>
+    <critdates>
+      <!--Carol-->
+      <revised modified="2018/05/22"/>
+      <!--Carol-->
+      <revised modified="2018/05/23"/>
+      <!--Carol-->
+      <revised modified="2018/08/22"/>
+      <!--Carol-->
+      <revised modified="2018/09/06"/>
+    </critdates>
+  </prolog>
+  <body>
+    <p>
+      <note>You can check your CDR and recordings on both Linkus client and on the Extension User
+        Portal.</note>
+    </p>
+    <section id="section_q1f_tmn_1db">
+      <title>Searching Criteria</title>
+      <p>You can search CDR and recordings by the following criteria:<ul id="ul_ez1_cbh_1db">
+          <li><uicontrol>Time</uicontrol>: Set the start date and the end date to filter the call
+            logs that are in the date duration.</li>
+          <li><uicontrol>Call From</uicontrol>: The number or the name of the caller.</li>
+          <li><uicontrol>Call To</uicontrol>: The number or the name of the callee.</li>
+          <li><uicontrol>Call Duration</uicontrol>: The time between the call started and the call
+            ended. Enter a value to filter the call logs that have call duration equal or greater
+            than this value.</li>
+          <li><uicontrol>Talk Duration</uicontrol>: The time between the call answered and the call
+            ended. Enter a value to filter the call logs that have talk duration equal or greater
+            than this value.</li>
+          <li><uicontrol>Status</uicontrol>: Call status, including "answered", "no answered",
+            "busy", "failed", and "has voicemail".</li>
+          <li><uicontrol>Communication Type</uicontrol>: Communication type, including "internal",
+            "inbound", "outbound", "callback", "PBX warning call", "transfer", and "multisite
+            interconnect".</li>
+          <li><uicontrol>Include Recording Files</uicontrol>: Check the option if you want to filter
+            the calls that had been recorded.</li>
+        </ul></p>
+    </section>
+  </body>
+</topic>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_hjq_d5w_rdb">
+    <title>Set an IVR Prompt</title>
+    <shortdesc>When users call in the PBX IVR, the users would operate following by the IVR prompt.
+        The PBX system has one default IVR prompt, you can change the IVR prompt to your audio
+        file.</shortdesc>
+    <taskbody>
+        <steps id="steps_ck4_qvw_rdb">
+            <step>
+                <cmd>Upload a custom prompt or record a custom prompt on the PBX web
+                    interface.</cmd>
+            </step>
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol>PBX</uicontrol>
+                        <uicontrol>Call Features</uicontrol>
+                        <uicontrol>IVR</uicontrol>
+                    </menucascade>, edit your IVR.</cmd>
+            </step>
+            <step>
+                <cmd>Select the <uicontrol>Prompt</uicontrol> to your custom prompt.</cmd>
+            </step>
+            <step>
+                <cmd>Set the <uicontrol>Prompt Repeat Count</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+    <related-links>
+        <link href="upload_a_custom_prompt.dita#task_knt_5fk_5cb"/>
+        <link href="record_a_custom_prompt.dita#task_xp4_tgk_5cb"/>
+        <link href="convert_audio_files_via_online_tool.dita#task_vkr_31k_5cb"/>
+        <link href="convert_audio_files_via_wavepad.dita#task_oq5_t1k_5cb"/>
+    </related-links>
+</task>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_wf3_tvm_tdb">
+    <title>Speed Dial</title>
+    <shortdesc>Sometimes you may just need to call someone quickly without having to look up his/her
+        phone number. You can by simply define a shortcut number. You can use Speed Dial  feature to
+        place a call by pressing a reduced number of keys.</shortdesc>
+    <conbody>
+        <section id="section_osb_34n_tdb">
+            <title>Add a Speed Dial Number</title>
+            <p>
+                <ol>
+                    <li>Go to <menucascade>
+                            <uicontrol>Settings</uicontrol>
+                            <uicontrol>PBX</uicontrol>
+                            <uicontrol>Call Features</uicontrol>
+                            <uicontrol>Speed Dial</uicontrol>
+                        </menucascade>, click <uicontrol>Add</uicontrol>.</li>
+                    <li>On the configuration page, configure the Speed Dial.<p>
+                            <ul id="ul_jbm_m4n_tdb">
+                                <li><uicontrol>Speed Dial Code</uicontrol>: Speed dialing
+                                    number.</li>
+                                <li><uicontrol>Phone Number</uicontrol>: The phone number that you
+                                    want to call.<p>
+                                        <note>You need to add the outbound dial prefix before the
+                                            phone number if you want to call an external
+                                            number.</note>
+                                    </p></li>
+                            </ul>
+                        </p></li>
+                    <li>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_ltm_54n_tdb"><title>Speed Dial Example</title><p>Assume that you have
+                an outbound route set as below, and you will dial speed number 111 to reach an
+                external number 15990234988 through the route.</p><p><image
+                    href="../Images/admin/outbound_pattern9strip1.png" id="image_u5l_1pn_tdb"
+            /></p>You need to set the Speed Dial as below:<p><image
+                    href="../Images/admin/speed_dial_example.png" id="image_mc2_fpn_tdb"
+                /></p><p>Dial *99111 on your phone to call the number 15990234988. *99 is the
+                default feature code for speed dial.</p></section>
+    </conbody>
+</concept>

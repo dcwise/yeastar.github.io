@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="software-installation">
+    <title>System Installation Guide</title>
+    <shortdesc/>
+    <body>
+        <section id="section_shl_dsd_23b">
+            <title>About this guide</title>
+            <p>This guide describes how to install Yeastar K2 IPPBX system in your own physical
+                machine or virtual machine. In this guide, we also provide procedures of  K2 system
+                activation and expansion.</p>
+        </section>
+        <section id="section_cgg_yfz_b3b">
+            <title>Audience</title>
+            <p>This guide is for the person who only buys Yeastar K2 IPPBX software, and wants to
+                install the K2 IPPBX system in his/her own machine.</p>
+        </section>
+    </body>
+</topic>

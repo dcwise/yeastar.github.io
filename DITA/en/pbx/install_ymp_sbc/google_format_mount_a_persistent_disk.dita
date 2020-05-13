@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_bbs_z1f_hfb">
+    <title>2) Format &amp; Mount a Persistent Disk</title>
+    <shortdesc>The new persistent disk starts with no data or file system. You must format the disk
+        after you attach it to YMP instance.</shortdesc>
+    <taskbody>
+        <context id="context_ysn_xcf_hfb"/>
+        <steps id="steps_zsn_xcf_hfb">
+            <step>
+                <cmd>Log in YMP server via SSH.</cmd>
+            </step>
+            <step>
+                <cmd>Run <codeph>sudo -i</codeph> to get administrator privileges.</cmd>
+            </step>
+            <step>
+                <cmd>Run the <codeph>lsblk</codeph> command to view the data disk that is attached
+                    to your instance and find the disk that you want to format and mount.</cmd>
+                <info>
+                    <codeblock>root@XXXXXXX:~# lsblk
+NAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+sda      8:0    0   10G  0 disk 
+└─sda1   8:1    0   10G  0 part /
+sdb      8:16   0  500G  0 disk </codeblock>
+                </info>
+                <info>The output removes the <codeph>/dev/</codeph> prefix from full device
+                    paths.</info>
+                <info>In this example, <codeph>/dev/sda1</codeph> is mounted as the system disk, and
+                        <codeph>/dev/sdb</codeph> is attached, bu has not been mounted yet.</info>
+            </step>
+            <step>
+                <cmd>Create a single-partition data disk and execute the following commands in
+                    sequence:</cmd>
+                <substeps id="substeps_atn_xcf_hfb">
+                    <substep>
+                        <cmd>Run <codeph>fdisk [DISK_NAME]</codeph> to partition the data
+                            disk.</cmd>
+                        <info>
+                            <p>[DISK_NAME] is the data disk name, for example,
+                                    <codeph>/dev/sdb</codeph>.</p>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Enter <codeph>n</codeph> and press the <uicontrol>Enter</uicontrol> key
+                            to create a new partition.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Enter <codeph>p</codeph> and press the <uicontrol>Enter</uicontrol> key
+                            to select the primary partition.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Enter the partition number. Press the <uicontrol>Enter</uicontrol> key
+                            to use the default value.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Enter the first available sector number. Press the
+                                <uicontrol>Enter</uicontrol> key to use the default value.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Enter a number for the last sector. Press the
+                                <uicontrol>Enter</uicontrol> key to use the default value.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Run <codeph>wq</codeph> and press the <uicontrol>Enter</uicontrol>
+                            key.</cmd>
+                    </substep>
+                </substeps>
+                <info>
+                    <codeblock>root@XXXXXXX:~# fdisk /dev/sdb
+Welcome to fdisk (util-linux 2.27.1).
+Changes will remain in memory only, until you decide to write them.
+Be careful before using the write command.
+Device does not contain a recognized partition table.
+Created a new DOS disklabel with disk identifier 0x778c4b4c.
+Command (m for help): n
+Partition type
+   p   primary (0 primary, 0 extended, 4 free)
+   e   extended (container for logical partitions)
+Select (default p): p
+Partition number (1-4, default 1): 
+First sector (2048-1048575999, default 2048): 
+Last sector, +sectors or +size{K,M,G,T,P} (2048-1048575999, default 1048575999): 
+Created a new partition 1 of type 'Linux' and of size 500 GiB.
+Command (m for help): wq
+The partition table has been altered.
+Calling ioctl() to re-read partition table.
+Syncing disks.</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Run the <codeph>fdisk -l</codeph> command to view the new partition. If the
+                    following information appears, the new partition /<filepath>dev/sdb1</filepath>
+                    is created.</cmd>
+                <info>
+                    <codeblock>root@XXXXXXX:~# fdisk -l
+Disk /dev/sda: 10 GiB, 10737418240 bytes, 20971520 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 4096 bytes
+I/O size (minimum/optimal): 4096 bytes / 4096 bytes
+Disklabel type: dos
+Disk identifier: 0x55bca5c1
+Device     Boot Start      End  Sectors Size Id Type
+/dev/sda1  *     2048 20971486 20969439  10G 83 Linux
+Disk /dev/sdb: 500 GiB, 536870912000 bytes, 1048576000 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 4096 bytes
+I/O size (minimum/optimal): 4096 bytes / 4096 bytes
+Disklabel type: dos
+Disk identifier: 0x778c4b4c
+Device     Boot Start        End    Sectors  Size Id Type
+/dev/sdb1        2048 1048575999 1048573952  500G 83 Linux</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Run the command <codeph>mkfs.ext4 /dev/sdb1</codeph> to create a file system on
+                    the new partition. </cmd>
+            </step>
+            <step>
+                <cmd>Run the command <codeph>cp /etc/fstab /etc/fstab.bak</codeph> to back up the
+                    data disk.</cmd>
+            </step>
+            <step>
+                <cmd>Run the command <codeph>echo /dev/sdb1 /mnt/autorecording ext4 defaults,nofail
+                        0 0 >> /etc/fstab</codeph> to write new partition information to
+                        <filepath>/etc/fstab</filepath>.</cmd>
+            </step>
+            <step>
+                <cmd>View the new partition information in <filepath>/etc/fstab</filepath>: Run the
+                    command <codeph>cat /etc/fstab</codeph>.</cmd>
+                <info>
+                    <codeblock>root@XXXXXXX:~# cat /etc/fstab
+LABEL=cloudimg-rootfs	/	 ext4	defaults	0 0
+/dev/sdb1 /mnt ext4 defaults 0 0</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Create a folder <filepath>autorecording</filepath> under
+                        <filepath>/mnt</filepath>: Run the command <codeph>mkdir -p
+                        /mnt/autorecording</codeph>.</cmd>
+            </step>
+            <step>
+                <cmd>Mount the file system: Run the command <codeph>mount /dev/sdb1
+                        /mnt/autorecording</codeph>.</cmd>
+            </step>
+            <step>
+                <cmd>To view disk space and usage: Run the command <codeph>df -h</codeph>.</cmd>
+                <info>
+                    <p> If the new file system information appears in the returned results, the
+                        mount operation is successful and you can use the new file system.</p>
+                </info>
+                <info>
+                    <codeblock>root@XXXXXXX:~# df -h
+Filesystem      Size  Used Avail Use% Mounted on
+udev            986M     0  986M   0% /dev
+tmpfs           200M  3.1M  197M   2% /run
+/dev/sda1       9.7G  2.0G  7.7G  21% /
+tmpfs           997M     0  997M   0% /dev/shm
+tmpfs           5.0M     0  5.0M   0% /run/lock
+tmpfs           997M     0  997M   0% /sys/fs/cgroup
+tmpfs           200M     0  200M   0% /run/user/1002
+/dev/sdb1       493G   70M  467G   1% /mnt/autorecording</codeblock>
+                </info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

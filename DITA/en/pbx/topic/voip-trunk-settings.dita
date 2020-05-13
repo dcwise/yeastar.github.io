@@ -1,0 +1,662 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_pyd_f3t_2fb">
+    <title>VoIP Trunk Settings</title>
+    <shortdesc>When you configure a VoIP trunk, you may need to configure some of the advanced
+        settings. This reference describes all the settings on a VoIP trunk.</shortdesc>
+    <body>
+        <section id="section_e51_wqq_53b">
+            <title>Basic Settings</title>
+            <p>Navigation path: <menucascade>
+                    <uicontrol>Settings</uicontrol>
+                    <uicontrol> PBX</uicontrol>
+                    <uicontrol> Trunks</uicontrol>
+                </menucascade>, edit a trunk on the <uicontrol>Basic</uicontrol> tab.</p>
+            <p>
+                <table frame="all" rowsep="1" colsep="1" id="table_kg1_drq_53b">
+                    <tgroup cols="2" align="left">
+                        <colspec colname="c1" colnum="1" colwidth="1*"/>
+                        <colspec colname="c2" colnum="2" colwidth="3.07*"/>
+                        <thead>
+                            <row>
+                                <entry>Settings</entry>
+                                <entry>Description</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>Name</entry>
+                                <entry>Give this trunk a name to help you identify it.</entry>
+                            </row>
+                            <row>
+                                <entry>Trunk Status</entry>
+                                <entry>Enable or disable the trunk.</entry>
+                            </row>
+                            <row>
+                                <entry>Select Country</entry>
+                                <entry>Select the country that the VoIP provider operates
+                                    in.</entry>
+                            </row>
+                            <row>
+                                <entry>Trunk Type</entry>
+                                <entry>Select a trunk type.</entry>
+                            </row>
+                            <row product="k2 s-series">
+                                <entry>Protocol</entry>
+                                <entry>Select the protocol that is provided by the VoIP
+                                    provider.</entry>
+                            </row>
+                            <row>
+                                <entry>Transport</entry>
+                                <entry>Select the transport that is provided by the VoIP
+                                    provider.</entry>
+                            </row>
+                            <row>
+                                <entry>Hostname/IP</entry>
+                                <entry>Enter the IP address or the domain of the VoIP
+                                    provider.</entry>
+                            </row>
+                            <row>
+                                <entry>Domain</entry>
+                                <entry>Enter the IP address or the domain of the VoIP
+                                    provider.</entry>
+                            </row>
+                            <row>
+                                <entry>Username</entry>
+                                <entry>Enter the username to register to the VoIP provider.</entry>
+                            </row>
+                            <row>
+                                <entry>Authentication Name</entry>
+                                <entry>Enter the authentication name to register to the VoIP
+                                    provider.</entry>
+                            </row>
+                            <row>
+                                <entry>Password</entry>
+                                <entry>Enter the password that is associated with the
+                                    username.</entry>
+                            </row>
+                            <row>
+                                <entry>From User</entry>
+                                <entry>
+                                    <p>Enter a name. All the outgoing calls from this trunk will use
+                                        this name in From header of the SIP invite package.</p>
+                                </entry>
+                            </row>
+                            <row product="cloudpbx">
+                                <entry>DID Number</entry>
+                                <entry>Direct Inward Dialing number, can be used to distinguish
+                                    incoming calls.</entry>
+                            </row>
+                            <row product="cloudpbx">
+                                <entry>DNIS Name</entry>
+                                <entry>Dialed Number Identification Service is a telephony service
+                                    used to identify which number was dialed.<p>Bind a DNIS name for
+                                        a DID number, when users call the DID number, the DNIS name
+                                        will be displayed on ringing phone.</p></entry>
+                            </row>
+                            <row>
+                                <entry>Caller ID Number</entry>
+                                <entry><p>If you set the caller ID number, when users make outbound
+                                        calls through this trunk, the called party will see this
+                                        caller ID number instead of the calling party's
+                                    number.</p>This feature requires support from the VoIP provider. </entry>
+                            </row>
+                            <row>
+                                <entry>Caller ID Name</entry>
+                                <entry>If you set the caller ID name, when users make outbound calls
+                                    through this trunk, the called party will see this caller ID
+                                    name instead of the calling party's name.<p>This feature
+                                        requires support from the VoIP provider. </p></entry>
+                            </row>
+                            <row>
+                                <entry>Enable Outbound Proxy</entry>
+                                <entry>Set the outbound proxy if the VoIP provider needs.</entry>
+                            </row>
+                            <row>
+                                <entry>Enable SLA</entry>
+                                <entry>After enabling <xref href="sla.dita#concept_anq_5dw_rdb"
+                                        >SLA</xref>, users can share this trunk to make outbound
+                                    calls and receive inbound calls by BLF keys on their phones. In
+                                    this way, Inbound Route settings and Outbound Route settings for
+                                    the trunk is invalid.</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+        <section id="section_akq_sqs_53b">
+            <title>Advanced Settings</title>
+            <p>The advanced settings of VoIP trunk requires professional knowledge of SIP protocol.
+                Incorrect configurations may cause calling issues. It is wise to leave the default
+                settings provided on the VoIP trunk page. However, for a few fields, you need to
+                change them to suit your situation. </p>
+            <p>Navigation path: <menucascade>
+                    <uicontrol>Settings</uicontrol>
+                    <uicontrol> PBX</uicontrol>
+                    <uicontrol> Trunks</uicontrol>
+                </menucascade>, edit a trunk on the <uicontrol>Advanced</uicontrol> tab. </p>
+            <p>
+                <dl>
+                    <dlentry>
+                        <dt>VoIP Settings</dt>
+                        <dd>
+                            <p>
+                                <table frame="all" rowsep="1" colsep="1" id="table_kgr_vj3_kfb">
+                                    <tgroup cols="2">
+                                        <colspec colname="c1" colnum="1" colwidth="1*"/>
+                                        <colspec colname="c2" colnum="2" colwidth="3.27*"/>
+                                        <thead>
+                                            <row>
+                                                <entry>Settings</entry>
+                                                <entry>Description</entry>
+                                            </row>
+                                        </thead>
+                                        <tbody>
+                                            <row>
+                                                <entry>Qualify</entry>
+                                                <entry id="qualify">Enable this option to send SIP
+                                                  OPTION packet to SIP device to check if the device
+                                                  is up.</entry>
+                                            </row>
+                                            <row>
+                                                <entry>DTMF Mode</entry>
+                                                <entry id="DTMF">Set the default mode for sending
+                                                  DTMF tones.<p>
+                                                  <ul id="ul_zc4_bh2_2fb">
+                                                  <li><uicontrol>RFC4733 (RFC2833)</uicontrol>: DTMF
+                                                  will be carried in the RTP stream in different RTP
+                                                  packets than the audio signal.</li>
+                                                  <li><uicontrol>Info</uicontrol>: DTMF will be
+                                                  carried in the SIP info messages.</li>
+                                                  <li><uicontrol>Inband</uicontrol>: DTMF will be
+                                                  carried in the audio signal.</li>
+                                                  <li><uicontrol>Auto</uicontrol>: The PBX will
+                                                  detect if the device supports RFC4733(RFC2833)
+                                                  DTMF. If RFC4733(RFC2833) is supported, PBX will
+                                                  choose RFC4733(RFC2833), or the PBX will choose
+                                                  Inband.</li>
+                                                  </ul>
+                                                  </p></entry>
+                                            </row>
+                                            <row>
+                                                <entry>Enable SRTP</entry>
+                                                <entry id="SRTP">Enable or disable SRTP (encrypted
+                                                  RTP) for the trunk.</entry>
+                                            </row>
+                                            <row>
+                                                <entry>Send Privacy ID</entry>
+                                                <entry>Whether to send the Privacy ID in SIP header
+                                                  or not.</entry>
+                                            </row>
+                                            <row>
+                                                <entry>T.38 Support</entry>
+                                                <entry id="t.38">Enable or disable T.38 fax for this
+                                                  trunk. Enabling T.38 will add the performance
+                                                  cost. <p>We suggest that you disable
+                                                  T.38.</p></entry>
+                                            </row>
+                                            <row>
+                                                <entry>User Phone</entry>
+                                                <entry>Whether to add the parameter
+                                                  <codeph>user=phone</codeph> in the SIP INVITE packet.<p>
+                                                  <note>Enable this option if the SIP provider
+                                                  requires.</note>
+                                                  </p></entry>
+                                            </row>
+                                        </tbody>
+                                    </tgroup>
+                                </table>
+                            </p>
+                        </dd>
+                    </dlentry>
+                </dl>
+                <dl>
+                    <dlentry product="k2 s-series">
+                        <dt>DID Settings</dt>
+                        <dd>
+                            <table frame="all" rowsep="1" colsep="1" id="table_ilp_srs_53b">
+                                <tgroup cols="2" align="left">
+                                    <colspec colname="c1" colnum="1" colwidth="1*"/>
+                                    <colspec colname="c2" colnum="2" colwidth="3.27*"/>
+                                    <thead>
+                                        <row>
+                                            <entry>Settings</entry>
+                                            <entry>Description</entry>
+                                        </row>
+                                    </thead>
+                                    <tbody>
+                                        <row>
+                                            <entry>DID Number</entry>
+                                            <entry>Direct Inward Dialing number, can be used to
+                                                distinguish incoming calls.<note>For Register Trunk,
+                                                  if the trunk DID number is different from the
+                                                  trunk authentication name, you need to enter the
+                                                  DID number.</note></entry>
+                                        </row>
+                                        <row>
+                                            <entry>DNIS Name</entry>
+                                            <entry>Dialed Number Identification Service is a
+                                                telephony service used to identify which number was
+                                                  dialed.<p>Bind a DNIS name for a DID number, when
+                                                  users call the DID number, the DNIS name will be
+                                                  displayed on ringing phone.</p></entry>
+                                        </row>
+                                    </tbody>
+                                </tgroup>
+                            </table>
+                        </dd>
+                    </dlentry>
+                </dl>
+                <dl>
+                    <dlentry>
+                        <dt>Inbound Parameters</dt>
+                        <dd>
+                            <table id="table_x1p_nss_53b">
+                                <tgroup cols="2">
+                                    <colspec colname="c1" colnum="1" colwidth="1*" colsep="1"
+                                        rowsep="1"/>
+                                    <colspec colname="c2" colnum="2" colwidth="3.61*" colsep="1"
+                                        rowsep="1"/>
+                                    <thead>
+                                        <row>
+                                            <entry>Settings</entry>
+                                            <entry>Description</entry>
+                                        </row>
+                                    </thead>
+                                    <tbody>
+                                        <row>
+                                            <entry>Get DID From</entry>
+                                            <entry>Decide from which header field will the trunk
+                                                retrieve DID header. <p>
+                                                  <ul id="ul_pjb_r4s_nhb">
+                                                  <li><b>[Follow System]</b><p>The trunk will follow
+                                                  the <xref
+                                                  href="sip_settings.dita#concept_j4g_lww_d2b/global-get-did"
+                                                  >global Get DID From</xref> setting.</p></li>
+                                                  <li><uicontrol>TO</uicontrol></li>
+                                                  <li><uicontrol>INVITE</uicontrol></li>
+                                                  <li><uicontrol>Remote-Party-ID</uicontrol><p>
+                                                  <note>If this option is selected, but the SIP
+                                                  provider doesn't support Remote Party ID, the PBX
+                                                  will retrieve DID from INVITE header.</note>
+                                                  </p></li>
+                                                  <li><uicontrol>P Asserted
+                                                  Identify</uicontrol></li>
+                                                  <li><uicontrol>Diversion</uicontrol></li>
+                                                  <li><uicontrol>P-Called-Party-ID</uicontrol></li>
+                                                  <li><uicontrol>P-Preferred-Identity</uicontrol></li>
+                                                  </ul>
+                                                </p></entry>
+                                        </row>
+                                        <row>
+                                            <entry>Get Caller ID From</entry>
+                                            <entry>Decide from which header field will the trunk
+                                                retrieve Caller ID header.<p>
+                                                  <ul id="ul_cc3_fss_53b">
+                                                  <li><b>[Follow System]</b><p>The trunk will follow
+                                                  the <xref
+                                                  href="sip_settings.dita#concept_j4g_lww_d2b/global-get-caller-id"
+                                                  >global Get Caller ID From</xref>
+                                                  setting.</p></li>
+                                                  <li><uicontrol>From</uicontrol></li>
+                                                  <li><uicontrol>Contact</uicontrol></li>
+                                                  <li><uicontrol>Remote-Party-ID</uicontrol></li>
+                                                  <li><uicontrol>P Asserted
+                                                  Identify</uicontrol></li>
+                                                  </ul>
+                                                </p></entry>
+                                        </row>
+                                    </tbody>
+                                </tgroup>
+                            </table>
+                        </dd>
+                    </dlentry>
+                    <dlentry>
+                        <dt>Outbound Parameters</dt>
+                        <dd>
+                            <p>Configure SIP parameters for outbound calls.</p>
+                            <p>
+                                <ul id="ul_ypp_tj3_kfb">
+                                    <li><uicontrol>Default</uicontrol>: The same as the value in
+                                        "From".</li>
+                                    <li><uicontrol>Trunk Username</uicontrol>: The username you
+                                        configured for the trunk.</li>
+                                    <li><uicontrol>Extension Number</uicontrol>: The extension
+                                        number.</li>
+                                    <li><uicontrol>DOD Number</uicontrol>: The DOD number that you
+                                        configured to associate with the extension. If the extension
+                                        doesn't have an associated DOD number, the <uicontrol>Caller
+                                            ID Number</uicontrol> of the trunk will be taken
+                                        instead.</li>
+                                    <li><uicontrol>From User</uicontrol>: The <uicontrol>From
+                                            User</uicontrol> value that you configured for the
+                                        trunk.</li>
+                                    <li><uicontrol>None</uicontrol>: Do not send the parameter with
+                                        the SIP INVITE packet.</li>
+                                </ul>
+                            </p>
+                        </dd>
+                        <dd>
+                            <table frame="all" rowsep="1" colsep="1" id="table_yyl_jk3_kfb">
+                                <tgroup cols="2">
+                                    <colspec colname="c1" colnum="1" colwidth="1*"/>
+                                    <colspec colname="c2" colnum="2" colwidth="3.01*"/>
+                                    <thead>
+                                        <row>
+                                            <entry>Settings</entry>
+                                            <entry>Description</entry>
+                                        </row>
+                                    </thead>
+                                    <tbody>
+                                        <row>
+                                            <entry>Remote Party ID</entry>
+                                            <entry>Select which <uicontrol>Remote Party
+                                                  ID</uicontrol> value should be contained in the
+                                                SIP INVITE headers when making an outbound
+                                                call.</entry>
+                                        </row>
+                                        <row>
+                                            <entry>P Asserted Identify</entry>
+                                            <entry>Select which <uicontrol>P Asserted
+                                                  Identify</uicontrol> value should be contained in
+                                                the SIP INVITE headers when making an outbound
+                                                call.</entry>
+                                        </row>
+                                        <row>
+                                            <entry>Diversion</entry>
+                                            <entry>Select which <uicontrol>Diversion</uicontrol>
+                                                value should be contained in the SIP INVITE headers
+                                                when making an outbound call.</entry>
+                                        </row>
+                                        <row>
+                                            <entry>P-Preferred-Identity</entry>
+                                            <entry>Select which
+                                                  <uicontrol>P-Preferred-Identity</uicontrol> value
+                                                should be contained in the SIP INVITE headers when
+                                                making an outbound call.</entry>
+                                        </row>
+                                    </tbody>
+                                </tgroup>
+                            </table>
+                        </dd>
+                    </dlentry>
+                </dl>
+                <dl>
+                    <dlentry>
+                        <dt>Transfer Parameters</dt>
+                        <dd>
+                            <p>Configure the SIP parameters for transferred calls.</p>
+                            <p>
+                                <ul id="ul_zpp_tj3_kfb">
+                                    <li><uicontrol>Default</uicontrol>: The same as the value in
+                                        "From".</li>
+                                    <li><uicontrol>Trunk Username</uicontrol>: The username you
+                                        configured for the trunk.</li>
+                                    <li><uicontrol>Extension Number</uicontrol>: The extension
+                                        number.</li>
+                                    <li><uicontrol>DOD Number</uicontrol>: The DOD number that you
+                                        configured to associate with the extension. If the extension
+                                        doesn't have an associated DOD number, the <uicontrol>Caller
+                                            ID Number</uicontrol> of the trunk will be taken
+                                        instead.</li>
+                                    <li><uicontrol>The Originator Caller ID</uicontrol>: The Caller
+                                        ID Number of the first caller in cases that the call is
+                                        transferred.</li>
+                                    <li><uicontrol>From User</uicontrol>: The <uicontrol>From
+                                            User</uicontrol> value that you configured for the
+                                        trunk.</li>
+                                    <li><uicontrol>None</uicontrol>: Do not send Remote Party ID
+                                        with the SIP INVITE packet.</li>
+                                </ul>
+                            </p>
+                        </dd>
+                        <dd>
+                            <table id="table_y1p_nss_53b">
+                                <tgroup cols="2" align="center">
+                                    <colspec colname="c1" colnum="1" colwidth="1*" colsep="1"
+                                        rowsep="1"/>
+                                    <colspec colname="c2" colnum="2" colwidth="3.26*" rowsep="1"
+                                        colsep="1"/>
+                                    <thead>
+                                        <row>
+                                            <entry>Settings</entry>
+                                            <entry>Description</entry>
+                                        </row>
+                                    </thead>
+                                    <tbody>
+                                        <row>
+                                            <entry align="left" valign="middle">From</entry>
+                                            <entry align="left" valign="middle">Select which
+                                                  <uicontrol>From</uicontrol> value should be
+                                                contained in the SIP INVITE headers when the call is
+                                                transferred.</entry>
+                                        </row>
+                                        <row>
+                                            <entry align="left" valign="middle">Diversion</entry>
+                                            <entry align="left" valign="middle">Select which
+                                                  <uicontrol>Diversion</uicontrol>value should be
+                                                contained in the SIP INVITE headers when the call is
+                                                transferred.</entry>
+                                        </row>
+                                        <row>
+                                            <entry align="left" valign="middle">Remote Party
+                                                ID</entry>
+                                            <entry align="left" valign="middle">Select which
+                                                  <uicontrol>Remote Party ID</uicontrol> value
+                                                should be contained in the SIP INVITE headers when
+                                                the call is transferred.</entry>
+                                        </row>
+                                        <row>
+                                            <entry align="left" valign="middle">P Asserted
+                                                Identify</entry>
+                                            <entry align="left" valign="middle">Select which
+                                                  <uicontrol>P Asserted Identify</uicontrol> value
+                                                should be contained in the SIP INVITE headers when
+                                                the call is transferred.</entry>
+                                        </row>
+                                        <row>
+                                            <entry align="left" valign="middle"
+                                                >P-Preferred-Identity</entry>
+                                            <entry align="left" valign="middle">Select which
+                                                  <uicontrol>P-Preferred-Identity</uicontrol> value
+                                                should be contained in the SIP INVITE headers when
+                                                the call is transferred.</entry>
+                                        </row>
+                                    </tbody>
+                                </tgroup>
+                            </table>
+                        </dd>
+                    </dlentry>
+                </dl>
+                <dl>
+                    <dlentry>
+                        <dt>Other Settings</dt>
+                        <dd>
+                            <table frame="all" rowsep="1" colsep="1" id="table_h41_pk3_kfb">
+                                <tgroup cols="2">
+                                    <colspec colname="c1" colnum="1" colwidth="1*"/>
+                                    <colspec colname="c2" colnum="2" colwidth="3.54*"/>
+                                    <thead>
+                                        <row>
+                                            <entry>Settings</entry>
+                                            <entry>Description</entry>
+                                        </row>
+                                    </thead>
+                                    <tbody>
+                                        <row>
+                                            <entry>Maximum Channels</entry>
+                                            <entry>Set the maximum number of concurrent calls on the trunk.<p>
+                                                  <note>The value <codeph>0</codeph> means
+                                                  unlimited.</note>
+                                                </p></entry>
+                                        </row>
+                                        <row>
+                                            <entry>Realm</entry>
+                                            <entry>
+                                                <p>SIP Realms, also known as domains within SIP
+                                                  networks.</p>
+                                                <p>Realm is a component within SIP that is used to
+                                                  authenticate users within the SIP registration
+                                                  process.</p>
+                                                <p>
+                                                  <note>By default, the Realm setting is
+                                                  unnecessary. Contact your service provider if you
+                                                  want to configure Realm.</note>
+                                                </p>
+                                            </entry>
+                                        </row>
+                                        <row>
+                                            <entry>Inband Progress </entry>
+                                            <entry>This Inband Progress setting applies to the
+                                                extensions which make calls through this trunk.<p>
+                                                  <note>To configure global Inband Progress setting,
+                                                  you need to contact Yeastar support to configure a
+                                                  custom config file.</note>
+                                                </p><p>
+                                                  <ul id="ul_npv_13b_mjb">
+                                                  <li>Check this option: PBX will send a 183 Session
+                                                  Progress to the extension when told to indicate
+                                                  ringing and will immediately start sending ringing
+                                                  as audio.</li>
+                                                  <li>Uncheck this option: PBX will send a 180
+                                                  Ringing to the extension when told to indicate
+                                                  ringing and will NOT send it as audio.</li>
+                                                  </ul>
+                                                </p></entry>
+                                        </row>
+                                    </tbody>
+                                </tgroup>
+                            </table>
+                        </dd>
+                    </dlentry>
+                </dl>
+            </p>
+        </section>
+        <section id="section_mmj_5qs_53b">
+            <title>Codec Settings</title>
+            <p>Each new created VoIP trunk has a default preferred codec list. However, the default
+                codec list may not match the codecs supported by your VoIP provider. In order to
+                maximize the quality of calls and the amount of bandwidth used for calls, you’ll
+                want to choose and configure your preferred codec list to match the settings that
+                your VoIP provider supports. </p>
+            <p><ph keyref="product_name"/> supports the following codecs:</p>
+            <p>
+                <table frame="all" rowsep="1" colsep="1" id="table_ekq_vys_53b">
+                    <tgroup cols="2" align="left">
+                        <colspec colname="c1" colnum="1" colwidth="1*"/>
+                        <colspec colname="c2" colnum="2" colwidth="1.16*"/>
+                        <thead>
+                            <row>
+                                <entry>Disabled by default</entry>
+                                <entry>Enabled by default</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row valign="middle">
+                                <entry>GSM, G722, G726, ADPCM, H261, H263, H263P, H264, MPEG4,
+                                        iLBC<?oxy_comment_start author="Sunmy" timestamp="20200325T134507+0800" comment="13.B 加入k2， cloud 支持"?><ph
+                                        product="k2 cloudpbx">, opus</ph><?oxy_comment_end?></entry>
+                                <entry>G729, G711 a-law, G711 u-law</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+            <p>Navigation path: <menucascade>
+                    <uicontrol>Settings</uicontrol>
+                    <uicontrol> PBX</uicontrol>
+                    <uicontrol> Trunks</uicontrol>
+                </menucascade>, edit a trunk on the <uicontrol>Codec</uicontrol> tab. </p>
+        
+        <p>
+            <dl>
+                <dlentry>
+                    <dt>Select Codec</dt>
+                    <dd>In the <uicontrol>Available</uicontrol> box, double click a codec, the
+                            selected codec will appear in the <uicontrol>Selected</uicontrol>
+                                    box.<p><image href="../Images/admin/select_codecs.png"
+                                    id="image_mww_cgk_2fb" width="500"/></p></dd>
+                </dlentry>
+                <dlentry>
+                    <dt>Set the Codec Priority</dt>
+                    <dd>In the <b>Selected</b> box, click a codec, and click <image
+                            href="../Images/ui_icons/to_top.png" id="image_nbs_vb2_2fb"/>
+                        <image href="../Images/ui_icons/to_down.png" id="image_zzm_wb2_2fb"/>
+                        <image href="../Images/ui_icons/to_up.png" id="image_lpl_yb2_2fb"/>
+                        <image href="../Images/ui_icons/to_bottom.png" id="image_lrh_xb2_2fb"/> to
+                        change the priority.</dd>
+                    <dd><image href="../Images/admin/codec_priority.png" id="image_gqv_mgk_2fb"
+                                width="500"/></dd>
+                </dlentry>
+            </dl>
+        </p>
+        </section>
+        <section id="adapt-caller-ID">
+            <title>Adapt Caller ID</title>
+            <p>The incoming caller ID that matches the adaptation pattern will be adapted, so that
+                you can press the call record directly on your phone call back a number. </p>
+            <p>For more information, see <xref href="adapt_caller_id.dita"/>.</p>
+            <p>Navigation path: <menucascade>
+                    <uicontrol>Settings</uicontrol>
+                    <uicontrol> PBX</uicontrol>
+                    <uicontrol> Trunks</uicontrol>
+                </menucascade>, edit a trunk on the <uicontrol>Adapt Caller ID</uicontrol> tab. </p>
+            <p>
+                <table frame="all" rowsep="1" colsep="1" id="table_bz2_1ws_53b">
+                    <tgroup cols="2" align="left">
+                        <colspec colname="c1" colnum="1" colwidth="1*"/>
+                        <colspec colname="c2" colnum="2" colwidth="4.87*"/>
+                        <thead>
+                            <row>
+                                <entry>Settings</entry>
+                                <entry>Description</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>Patterns</entry>
+                                <entry>The following characters have special meanings:<ul
+                                        id="ul_qtz_2ws_53b">
+                                        <li>X matches the numbers 0- 9;</li>
+                                        <li>Z matches the numbers 1-9;</li>
+                                        <li>N matches the numbers 2- 9;</li>
+                                        <li>
+                                            <p>[12345-9] matches the numbers in the bracket (in this
+                                                example, 1, 2, 3, 4,5, 6, 7, 8,</p>
+                                            <p>9);</p>
+                                        </li>
+                                        <li>
+                                            <p>Wildcard matches one or more numbers. E.g. "9011."
+                                                matches anything starting with 9011 (excluding 9011
+                                                itself);</p>
+                                        </li>
+                                        <li>
+                                            <p>Wildcard "!" matches none or more than one numbers.
+                                                E.g. "9011T matches anything starting with 9011
+                                                (including 9011 itself);</p>
+                                        </li>
+                                    </ul></entry>
+                            </row>
+                            <row>
+                                <entry>Strip</entry>
+                                <entry>Strip allows you to specify the number of digits that will be
+                                    stripped from the front of the Caller ID before the call is
+                                    displayed. For example, if the incoming Caller ID is
+                                    05929999999, but you need to dial number 5929999999 to call
+                                    back, one digit should be stripped.</entry>
+                            </row>
+                            <row>
+                                <entry>Prepend</entry>
+                                <entry>These digits will be prepended to the Caller ID before the
+                                    call is displayed. For example, if the incoming caller ID is
+                                    5929999999, but you need to dial digit 0 before the number to
+                                    call back, 0 should be prepended.</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+    </body>
+</topic>

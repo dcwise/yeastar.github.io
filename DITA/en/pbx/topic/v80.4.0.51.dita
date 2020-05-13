@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_mw5_prr_whb">
+    <title>Version 80.4.0.51</title>
+    <abstract>Released Date: June 5, 2019</abstract>
+    <body>
+        <section id="section_fws_2p4_4hb">
+            <title>BUG FIXES</title>
+            <p><image href="../Images/horizon.png" id="image_xcc_4wb_kfb"/></p>
+            <p>
+                <ul id="ul_x5p_ktr_whb">
+                    <li>
+                        <p>Fixed the issue that the SIP trunk advanced settings would be lost after
+                            upgrading the PBX.</p>
+                    </li>
+                    <li>
+                        <p>Fixed the <uicontrol>Allow Mode for SIP Forking</uicontrol> issue: If
+                                <uicontrol>Allow Mode for SIP Forking</uicontrol> setting was
+                            enabled, a system hang would occur when a ring group member performed a
+                            blind transfer to another user.</p>
+                    </li>
+                    <li>Fixed the <uicontrol>Backup and Restore</uicontrol> issue: The SIP trunk
+                            <uicontrol>Outbound Parameters</uicontrol> settings would be lost after
+                        restoring configurations from a backup file.</li>
+                </ul>
+            </p>
+        </section>
+    </body>
+</topic>

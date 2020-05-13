@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_u3y_xs4_rdb">
+    <title>Step3. Create an External IP Address</title>
+    <shortdesc>A static external IP address is an external IP address that is reserved for your
+        project until you decide to release it. Create an external IP on Google Cloud, then <xref
+            href="google_create_sbc_instance.dita#task_amz_kvn_rdb">assign the IP to SBC
+            instance</xref>, so that the SBC can can communicate with the Internet.</shortdesc>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Go to the <xref
+                        href="https://console.cloud.google.com/networking/addresses/add"
+                        format="html" scope="external">Reserve a static address page</xref> in the
+                    GCP Console.</cmd>
+            </step>
+            <step>
+                <cmd>Set a name for the new address.</cmd>
+            </step>
+            <step>
+                <cmd>Specify whether this is an <codeph>IPv4</codeph> or <codeph>IPv6</codeph>
+                    address. <codeph>IPv6</codeph> addresses can only be global and can only be used
+                    with global HTTP(S), SSL proxy, and TCP proxy load balancers.</cmd>
+            </step>
+            <step>
+                <cmd>Set the <uicontrol>Type</uicontrol> as <codeph>Regional</codeph>.</cmd>
+            </step>
+            <step>
+                <cmd>Set the <uicontrol>Region</uicontrol> as same region of your VPC network.</cmd>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Reserve</uicontrol>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

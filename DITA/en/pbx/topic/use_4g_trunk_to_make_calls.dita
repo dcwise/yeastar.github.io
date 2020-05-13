@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_lyt_h5g_tdb">
+    <title>Use 4G Trunk to Make Calls</title>
+    <shortdesc>You can set 4G trunk to make audio calls only, and don't use the 4G cellular
+        data.</shortdesc>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Check if your 4G module is installed in the correct slot:</cmd>
+                <choices>
+                    <choice>S412: T_Slot3 or T_Slot4</choice>
+                    <choice>S20: any slot</choice>
+                    <choice>S50: any slot</choice>
+                    <choice>S100: any slot</choice>
+                    <choice>S300: any slot</choice>
+                </choices>
+            </step>
+            <step>
+                <cmd>Log in the PBX web interface, go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol>PBX</uicontrol>
+                        <uicontrol>Trunks</uicontrol>
+                    </menucascade>, edit your 4G trunk.</cmd>
+                <info><image href="../Images/admin/4g_trunk_voice_only.png" width="650"
+                        id="image_wlt_55g_tdb"/></info>
+                <choices>
+                    <choice><uicontrol>Mode</uicontrol>: Choose <codeph>Voice
+                        Only</codeph>.</choice>
+                    <choice><uicontrol>Network Type</uicontrol>: Choose the network type according
+                        to the network environment of the PBX.<p>
+                            <note>We recommend Automatic mode. The PBX will use 4G network as a
+                                preferred network to make a call. If the 4G network is bad, PBX will
+                                use 3G or 2G.</note>
+                        </p></choice>
+                    <choice><uicontrol>VoLTE</uicontrol>: Check the option if you want to make VoLTE calls.<p>
+                            <note>VoLTE is supported by the service provider, and VoLTE only works
+                                in 4G network, you need to set the<b> Network Type</b> to
+                                    <uicontrol>Automatic</uicontrol> or <uicontrol>LTE
+                                    Only</uicontrol>.</note>
+                        </p></choice>
+                </choices>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol>, reboot the PBX to take effect.</cmd>
+            </step>
+            <step>
+                <cmd>Go to <uicontrol>PBX Monitor</uicontrol>, check the trunk status.</cmd>
+                <info>If the trunk is idle, and the inbound and outbound settings are configured for
+                    the trunk, users can make and receive calls through 4G trunk.</info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

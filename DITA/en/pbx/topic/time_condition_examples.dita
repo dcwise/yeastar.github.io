@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_yzk_f42_2db">
+  <title>Time Condition Examples</title>
+  <shortdesc>In this topic, we offer you configuration examples of Time Conditions to help you
+    understand how to set office hours, non-office hours, holidays and apply these Time Conditions
+    to inbound routes and outbound routes.</shortdesc>
+  <body>
+    <section id="section_jcl_tbn_2jb">
+      <title>Office hours &amp; non-office hours example</title>
+      <p>Assume that your office hours are Monday - Friday from 9:00 to 18:00, and the lunch break
+        starts from 12:00 to 13:00.</p>
+      <p>According to your office hours, you can set two Time Conditions as follows..</p>
+      <p>
+        <ul id="ul_pln_f3n_2jb">
+          <li><b>Office hours</b><p><image id="image_upn_ygn_2jb"
+                href="../Images/admin/office-hours.png" width="650"/></p></li>
+          <li><b>Lunch break</b><p><image id="image_fxj_ghn_2jb"
+                href="../Images/admin/lunch-break.png" width="650"/></p></li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_ytb_n3n_2jb">
+      <title>Holiday examples</title>
+      <p><ph keyref="product_name"/> supports 3 types of holidays.</p>
+      <p>
+        <ul id="ul_ub5_y3n_2jb">
+          <li><b>Set a Holiday by Date</b><p>If date of a holiday varies every year, you can set a
+              holiday by date.</p><p>For example, Chinese Spring Festival falls on February
+              15th-21st. You can set the holiday as follows.</p><p><image
+                href="../Images/admin/holiday_example2.png" id="image_ix4_mr2_2db"/></p></li>
+        </ul>
+      </p>
+      <ul id="ul_bvl_jkn_2jb">
+        <li><b>Set a Holiday by Month</b><p>If a holiday always falls on the same date, you can set
+            a holiday by month.</p><p>For example, Christmas falls on December 25th every year. You
+            can set the holiday as follows.</p><p><image href="../Images/admin/holiday_example1.png"
+              id="image_g2z_fln_2jb"/></p></li>
+      </ul>
+      <ul id="ul_tv5_gln_2jb">
+        <li><b>Set a Holiday by Week</b><p>If a holiday always falls on the same week, you can set a
+            holiday by week.</p><p>For example, Thanksgiving Day falls on the 4th week of November.
+            You can set the holiday as follows.</p><p><image
+              href="../Images/admin/holiday_example3.png" width="650" id="image_vc4_zln_2jb"
+          /></p></li>
+      </ul>
+    </section>
+    <section id="section_i2z_zln_2jb"><title>Route inbound calls based on Time
+        Conditions</title><p>On Inbound Route page, enable <uicontrol>Enable Time
+          Condition</uicontrol>, click <image id="image_lq4_bnn_2jb"
+          href="../Images/ui_icons/add.png" width="20"/> to add Time Conditions, and set
+        corresponding destinations.</p>For example, the following table is a schedule of Time
+      Conditions for a company.<p>
+        <table frame="all" id="table_k1v_4nn_2jb">
+          <tgroup cols="2">
+            <colspec colname="c1" colnum="1" colwidth="1*" colsep="1" rowsep="1"/>
+            <colspec colname="c2" colnum="2" colwidth="1*" colsep="1" rowsep="1"/>
+            <thead>
+              <row>
+                <entry>Time Condition</entry>
+                <entry>Destination</entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry>Office hours</entry>
+                <entry>IVR</entry>
+              </row>
+              <row>
+                <entry>Lunch break</entry>
+                <entry>Extension 1000</entry>
+              </row>
+              <row>
+                <entry>Holiday</entry>
+                <entry>Holiday IVR</entry>
+              </row>
+              <row>
+                <entry>Other time</entry>
+                <entry>Voicemail</entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+      </p><note>All holidays will be integrated into one <uicontrol>Holiday</uicontrol>, you don't
+        have to select holidays one by one from <uicontrol>Time Condition</uicontrol> on inbound
+        routes.</note><p>You can set Time Conditions as follows.</p><p><image id="image_tly_2qn_2jb"
+          href="../Images/admin/time-condition-in-inbound-route.png" width="650"/></p></section>
+    <section id="section_gx5_pqn_2jb">
+      <title>Restrict when to make outbound calls</title>
+      <p>On Outbound Routes page, select Time Condition, which means that only in this time period
+        can extension users make outbound calls via this outbound route.</p>
+      <p><image id="image_fc2_1rn_2jb" href="../Images/admin/time-conditions-on-outbound-route.png"
+          width="650"/></p>
+    </section>
+  </body>
+</topic>

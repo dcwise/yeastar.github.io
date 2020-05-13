@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>References</title>
+    <topicref href="../topic/references.dita" product="cloudpbx s-series k2">
+        <topicmeta>
+            <data name="wh-menu">
+                <data name="hide" value="yes"/>
+            </data>
+        </topicmeta>
+        <topicref href="../topic/parameter_descriptions_of_import_files.dita">
+            <topicref href="../references/import_parameters_extensions.dita"/>
+            <topicref href="../references/import_parameters_trunks.dita"/>
+            <topicref href="../references/import_parameters_inbound_routes.dita"/>
+            <topicref href="../references/import_parameters_outbound_routes.dita"/>
+            <topicref href="../references/import_parameters_firewall_rules.dita"
+                product="k2 s-series"/>
+            <topicref href="../references/import_parameters_blacklist_whitelist.dita"/>
+            <topicref href="../references/import_parameters_speed_dial.dita"/>
+            <topicref href="../references/import_parameters_auto_provisioning.dita"
+                product="k2 s-series"/>
+            <topicref href="../references/import_parameters_hotel.dita" product="s-series"/>
+            <topicref href="../references/import_parameters_billing.dita" product="s-series"/>
+            <topicref href="../references/import_parameters_ldap.dita"/>
+            <topicref href="../references/import-parameters-contacts.dita"/>
+        </topicref>
+    </topicref>
+</map>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_bpv_qj3_ygb">
+    <title>Step8. Set up Data Disk for Call Recording</title>
+    <shortdesc>The recording files that are made on customers' PBXs will be stored on your YMP
+        server, you need to create a data disk on the YMP Virtual Machine (VM).</shortdesc>
+    <body>
+        <p>
+            <note>The recording files are encrypted and only the PBX users can play the recording
+                files.</note>
+        </p>
+    </body>
+</topic>

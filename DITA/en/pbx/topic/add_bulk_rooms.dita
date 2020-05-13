@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_qtz_mqt_c2b">
+    <title>Add Bulk Rooms</title>
+    <shortdesc>Add bulk rooms to help you improve the work efficiency.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/06/11"/>
+            <!--Carol-->
+            <revised modified="2018/06/11"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Hotel</uicontrol>
+                        <uicontrol>Room Management</uicontrol>
+                        <uicontrol>Room Setup</uicontrol>
+                    </menucascade> , click <uicontrol>Bulk Add</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Set the bulk rooms.</cmd>
+                <info><image href="../Images/admin/hotel_add_bulk_rooms.png" id="image_wvj_m5t_c2b"
+                    /></info>
+                <choices>
+                    <choice><uicontrol>Create Amount</uicontrol>: Set how many rooms to
+                        add.</choice>
+                    <choice><uicontrol>Rooms Starting From</uicontrol>: This setting is for the room
+                        name. <p>You can set room name as “Room” +”Extension Number”, the room
+                            number will then increase following the extension number. </p><p>For
+                            example, add 3 rooms in batch, and the <b>Room Starting From</b> as
+                            “Room + 1000”, the room names for the 3 rooms will be “Room1000”,
+                            “Room1001”, and “Room1002”.</p></choice>
+                    <choice><uicontrol>Extensions Starting From</uicontrol>: Set the extension for
+                        the rooms.</choice>
+                    <choice><uicontrol>Room Type</uicontrol>: Choose the room type for the bulk
+                        rooms.</choice>
+                </choices>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

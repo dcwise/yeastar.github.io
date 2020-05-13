@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_mqd_ccc_wdb">
+    <title>Fax</title>
+    <shortdesc><ph keyref="product_name"/> supports Fax over IP. You can send or receive a fax via a
+        physical fax machine or receive a fax over the network.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/05/18"/>
+            <!--Carol-->
+            <revised modified="2018/05/18"/>
+            <!--Carol-->
+            <revised modified="2018/05/22"/>
+            <!--Carol-->
+            <revised modified="2018/05/28"/>
+            <!--Carol-->
+            <revised modified="2018/06/14"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <section id="section_e11_5bd_xdb"><title>What is T.38 Fax over IP?</title><p>T.38 is a
+                protocol for sending faxes over a voice over IP (VoIP) network or the Internet in
+                real time.</p>T.38 protocol defines the transport of data (a fax) between PSTN fax
+            terminals through a fax gateway, between two Internet-aware fax terminals, or from a
+            PSTN fax terminal through a fax gateway to an Internet-aware fax terminal. A T.38 stream
+            is sometimes referred to as Fax over IP (FoIP).<p>PSTN fax terminals traditionally use
+                the T.30 protocol to send analog data. To exchange analog fax data with a PSTN
+                terminal over the Internet, the T.38 protocol first converts analog data into
+                digital data. The protocol then converts the data back to analog on the receiving
+                end if the receiver is a PSTN fax terminal.</p><p><image
+                    href="../Images/admin/T.38%20Diagram.jpg" id="image_nbd_zcd_xdb" width="650"
+                /></p></section>
+        <section id="section_gpc_q4w_ydb">
+            <title>T.38 Fax Settings</title>
+            <p>If the Fax over IP doesn't work, you can go to <menucascade>
+                    <uicontrol>Settings</uicontrol>
+                    <uicontrol>PBX</uicontrol>
+                    <uicontrol>General</uicontrol>
+                    <uicontrol>SIP</uicontrol>
+                    <uicontrol>T.38</uicontrol>
+                </menucascade> to change the T.38 settings.</p>
+            <p><image href="../Images/admin/t.38_fax_settings.png" id="image_xh3_w4w_ydb"/></p>
+            <ul id="ul_f33_x4w_ydb">
+                <li><b>No Re-invite SDP Add T.38 Attribute</b><p>If this option is enabled, no T.38
+                        attributes will be added in re-invite SDP packet.</p></li>
+            </ul>
+            <ul id="ul_g33_x4w_ydb">
+                <li><b>Error Correction</b><p>Error Correction Mode (ECM) for the Fax.</p></li>
+            </ul>
+            <ul id="ul_h33_x4w_ydb">
+                <li><b>T.38 Max BitRate</b><p>T38 Max Bit Rate.</p></li>
+            </ul>
+        </section>
+    </conbody>
+</concept>

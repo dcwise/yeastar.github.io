@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_vxc_3gn_jdb">
+  <title>VPN Server</title>
+  <shortdesc>Release notes for VPN Server on Yeastar Yeastar K2 IPPBX.</shortdesc>
+  <body>
+    <section id="section_prx_g4w_clb">
+      <title>Version </title>
+      <p><ph conref="v30.13.0.30.dita#v30.13.0.b/date"/></p>
+      <p>
+        <ul id="ul_f5z_1sh_jlb">
+          <li>Fixed the issue of <uicontrol>Static Routes</uicontrol>: After the PBX or the
+              <uicontrol>VPN Server</uicontrol> restarted, the manually added static routes of
+            OpenVPN would be lost.</li>
+        </ul>
+      </p>
+    </section>
+  </body>
+</topic>

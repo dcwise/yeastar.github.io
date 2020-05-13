@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_jfq_qdw_ydb">
+    <title>Monitor Physical Port</title>
+    <shortdesc>If there is a problem on the FXO port, FXS port or GSM channel, you can use the Port
+        Monitor Tool to monitor the port, and download the packet to analyze it.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/05/28"/>
+            <!--Carol-->
+            <revised modified="2018/05/28"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Maintenance</uicontrol>
+                        <uicontrol>Troubleshooting</uicontrol>
+                        <uicontrol>Port Monitor Tool</uicontrol>
+                    </menucascade>.</cmd>
+                <info><image href="../Images/admin/port_monitor.png" id="image_mqd_qdw_ydb"/></info>
+            </step>
+            <step>
+                <cmd>Choose the <uicontrol>Port</uicontrol> that has a problem.</cmd>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Start</uicontrol>.</cmd>
+                <info>The PBX will start to monitor the port. During this time, you should duplicate
+                    the problem of the port.</info>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Stop</uicontrol> to stop capturing packets.</cmd>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Download</uicontrol> to download the file. </cmd>
+                <info>
+                    <p>Decompress the <codeph>.tar</codeph> file and use
+                            <filepath>Audition</filepath> software to open the <codeph>.raw</codeph>
+                        file and analyze it.</p>
+                </info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

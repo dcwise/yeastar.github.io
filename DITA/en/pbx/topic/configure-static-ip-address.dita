@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="configure-static-ip-address">
+    <title>Configure Static IP Address</title>
+    <shortdesc>This topic describes how to assign a static IP address to the LAN network interface
+        when the PBX is in Single network mode.</shortdesc>
+    <body>
+        <p>
+            <ol id="ol_vt3_tvv_cjb">
+                <li>Go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol> Systems</uicontrol>
+                        <uicontrol> Network</uicontrol>
+                        <uicontrol>Basic Settings</uicontrol>
+                    </menucascade>.</li>
+                <li>In the <uicontrol>Hostname</uicontrol> field, enter a host name.</li>
+                <li>In the <uicontrol>Mode</uicontrol> field, select <uicontrol>Single</uicontrol>
+                    mode.</li>
+                <li>Select <uicontrol>Static IP Address</uicontrol> and enter the network
+                    information as follows.<note>Consult your network administrator to get the
+                        network information.</note><p><image
+                            href="../Images/admin/static_ip_address.png" id="image_hgb_2tw_ydb"
+                            width="650"/></p><p>
+                        <ul>
+                            <li><uicontrol>IP Address</uicontrol>: Enter the IP address that is
+                                assigned to the PBX. </li>
+                            <li><uicontrol>Subnet Mask</uicontrol>: Enter the subnet mask.</li>
+                            <li><uicontrol>Gateway</uicontrol>: Enter the gateway address.</li>
+                            <li><uicontrol>Preferred DNS Server</uicontrol>: Enter the IP address of
+                                preferred DNS server.</li>
+                            <li><uicontrol>Alternative DNS Server</uicontrol>: Optional. Enter the
+                                IP address of alternative DNS server.</li>
+                            <li><uicontrol>IP Address 2</uicontrol>: Optional. Enter a second IP
+                                address for the PBX.<note>According to your network environment, you
+                                    may need to set another IP address to allow users in different
+                                    IP segment to access the PBX.</note></li>
+                            <li><uicontrol>Subnet Mask 2</uicontrol>: Optional. Enter another subnet
+                                mask for the second IP address.</li>
+                        </ul>
+                    </p></li>
+                <li>Click <uicontrol>Save</uicontrol> and reboot the PBX to take effect.</li>
+            </ol>
+        </p>
+    </body>
+</topic>

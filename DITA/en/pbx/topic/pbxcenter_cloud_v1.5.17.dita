@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_kkn_th4_m2b">
+    <title>Version 1.5.17</title>
+    <abstract>Released Date: July 26, 2018</abstract>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/07/16"/>
+            <!--Carol-->
+            <revised modified="2018/07/16"/>
+            <!--Carol-->
+            <revised modified="2018/07/17"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <section id="section_ivx_vh4_m2b">
+            <title>New Feature</title>
+            <p><image href="../Images/horizon.png" id="image_pry_dyv_pdb"/></p>
+            <p>
+                <ul id="ul_rw1_yh4_m2b">
+                    <li>Added support for Linkus Windows desktop.</li>
+                    <li>Added support for Chat feature on Linkus.</li>
+                    <li>Added support for Presence feature on Linkus.</li>
+                </ul>
+            </p>
+        </section>
+        <section>
+            <title>Optimization</title>
+            <p><image href="../Images/horizon.png" id="image_zgh_t3v_m2b"/></p>
+            <p>
+                <ul id="ul_u4b_v3v_m2b">
+                    <li>Fixed the compatibility issue with the following ITSP providers:<ul
+                            id="ul_osp_bjv_m2b">
+                            <li>Bandwidth</li>
+                            <li>nexVortex</li>
+                            <li>Twillio</li>
+                            <li>Sip.us</li>
+                            <li>SIPTRUNK</li>
+                        </ul></li>
+                </ul>
+            </p>
+        </section>
+    </conbody>
+</concept>

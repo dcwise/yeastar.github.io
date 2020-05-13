@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_kpx_1fh_tdb">
+    <title>Send SMS to Email</title>
+    <shortdesc>SMS to Email is a feature that allows users to receive SMS in their email inboxes.
+        The SMS sent to the PBX GSM/3G/4G ports will be received first by the system and then
+        forwarded to the users' email inboxes. </shortdesc>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2019/01/22"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <prereq id="prereq_fsl_h3h_tdb">
+            <p>To make SMS to Email work, you need to do the followings:<ul id="ul_qln_h3h_tdb">
+                    <li>
+                        <p>Install GSM/3G/4G module and SIM card on the PBX.</p>
+                    </li>
+                    <li>
+                        <p>Check the trunk status and make sure that the GSM/3G/4G trunk is
+                            ready.</p>
+                    </li>
+                    <li>Make sure the Email setting on the PBX is working.</li>
+                </ul></p>
+        </prereq>
+        <context id="context_yff_ngh_tdb">
+            <note>Only plain-text SMS messages can be sent to the Email.</note>
+        </context>
+        <steps>
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol>PBX</uicontrol>
+                        <uicontrol>Call Features</uicontrol>
+                        <uicontrol>SMS</uicontrol>
+                        <uicontrol>Enable SMS to Email</uicontrol>
+                    </menucascade>, edit your GSM/3G/4G trunk.</cmd>
+                <info>
+                    <note>If no trunk on this page, check if you have <xref
+                            href="install_gsm_3g_4g.dita#task_txk_5pg_tdb">installed GSM/3G/4G
+                            module</xref> on the PBX.</note>
+                </info>
+            </step>
+            <step>
+                <cmd>On the SMS to Email configuration page, click <image
+                        href="../Images/ui_icons/add.png" width="20" id="image_af5_qgh_tdb"/> to add
+                    email address.</cmd>
+                <info>
+                    <p>The SMS messages will be sent to the added email addresses.</p>
+                </info>
+            </step>
+            <step>
+                <cmd>Select extension account and the bound email address.</cmd>
+                <info><image href="../Images/admin/edit_sms_to_email.png" id="image_oqv_jhh_tdb"
+                        width="650"/></info>
+            </step>
+            <step>
+                <cmd importance="optional">Click <image href="../Images/ui_icons/add.png" width="20"
+                        id="image_zjc_lhh_tdb"/> to add another email address.</cmd>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</cmd>
+            </step>
+        </steps>
+        <result id="result_obj_qhh_tdb">When users send SMS to the GSM/3G/4G trunk number, the PBX
+            will deliver the SMS messages to the selected email addresses.</result>
+    </taskbody>
+</task>

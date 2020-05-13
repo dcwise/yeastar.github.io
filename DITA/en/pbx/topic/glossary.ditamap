@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>Glossary</title>
+    <glossref href="pbx-glossary.dita" keys="testglossary"/>
+    <glossref href="pbx-glossary.dita#id_syl_p53_y3b" keys="seabirds"/>
+    <glossref href="pbx-glossary.dita#id_g5w_q53_y3b" keys="landbirds"/>
+    <glossref href="pbx-glossary.dita#id_fdy_r53_y3b" keys="flybirds"/>
+    <glossref href="pbx-glossary.dita" keys="testglossary"/>
+    <glossref href="pbx-glossary.dita" keys="pbx"/>
+    <glossref href="pbx-glossary.dita" keys="gateway"/>
+    <glossref href="pbx-glossary.dita" keys="sn"/>
+</map>

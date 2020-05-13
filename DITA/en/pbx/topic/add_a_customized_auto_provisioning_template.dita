@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_hdh_rmy_scb">
+    <title>Add a Custom Auto Provisioning Template</title>
+    <titlealts>
+        <searchtitle>custom template</searchtitle>
+    </titlealts>
+    <shortdesc>You can configure a customized auto provisioning template and apply it to your
+        phones. In the customized auto provisioning template, you can set global settings for your
+        phones.</shortdesc>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/10/23"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <context> For example, if all your phones use Chinese user interface, you can set the
+                <uicontrol>Language</uicontrol> as <uicontrol>Chinese</uicontrol> in the template. </context>
+        <steps id="steps_byz_kyy_scb">
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Auto Provisioning</uicontrol>
+                        <uicontrol>Template</uicontrol>
+                        <uicontrol>Custom Template</uicontrol>
+                    </menucascade>, click <uicontrol>Add</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Set a name for the template.</cmd>
+            </step>
+            <step>
+                <cmd>Set the template settings according to your needs.</cmd>
+                <info><image href="../Images/admin/add_custom_template.png" width="650"
+                        id="image_zpq_jzy_scb"/></info>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol>. </cmd>
+            </step>
+        </steps>
+        <result id="result_ckq_t4m_tcb">When you are configuring auto provisioning devices, you can
+            select the customized template.<p><image
+                    href="../Images/admin/select_custom_template.png" width="650"
+                    id="image_ojj_g1z_scb"/></p></result>
+    </taskbody>
+</task>

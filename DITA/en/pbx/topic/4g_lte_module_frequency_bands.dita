@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="reference_a5q_jpg_tdb">
+    <title>GSM/3G/4G Module Frequency Bands</title>
+    <shortdesc>The operating regions/carriers and frequency bands for Yeastar GSM/3G/4G
+        modules.</shortdesc>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/06/11"/>
+        </critdates>
+    </prolog>
+    <refbody>
+        <section id="section_mxh_jgs_w3b"><title>4G Module Frequency Bands</title>Before you buy a
+            SIM card, check the supported operators and LTE Band in the following table.<table
+                id="table_ywc_4pg_tdb">
+                <tgroup cols="4">
+                    <colspec colnum="1" colname="col1" colsep="1" rowsep="1" colwidth="1*"/>
+                    <colspec colnum="2" colname="col2" colsep="1" rowsep="1" colwidth="1*"/>
+                    <colspec colnum="3" colname="col3" rowsep="1" colsep="1" colwidth="1*"/>
+                    <colspec colnum="4" colname="col4" rowsep="1" colsep="1" colwidth="1*"/>
+                    <thead>
+                        <row>
+                            <entry>4G Module</entry>
+                            <entry>Country/Region</entry>
+                            <entry>Operator</entry>
+                            <entry>LTE Band Support</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row>
+                            <entry morerows="10" valign="middle"><ph id="OLE_LINK25">4G LTE
+                                    Module-E</ph></entry>
+                            <entry>China Hong Kong</entry>
+                            <entry>/</entry>
+                            <entry>B3, B38</entry>
+                        </row>
+                        <row>
+                            <entry>Thailand</entry>
+                            <entry>
+                                <p>True Move</p>
+                                <p>DTAC</p>
+                            </entry>
+                            <entry>
+                                <p>B1</p>
+                                <p>B1</p>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>South Korea</entry>
+                            <entry>
+                                <p>SKT</p>
+                                <p>KT</p>
+                                <p>LGU+</p>
+                            </entry>
+                            <entry>
+                                <p>B3, B5</p>
+                                <p>B3, B8</p>
+                                <p>B5, B7</p>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>Other Asia Regions</entry>
+                            <entry>/</entry>
+                            <entry>/</entry>
+                        </row>
+                        <row>
+                            <entry>Italy</entry>
+                            <entry>
+                                <p>TIM, VF</p>
+                                <p>H3G</p>
+                            </entry>
+                            <entry>
+                                <p>B3, B7, B20</p>
+                                <p>B3, B7, B20, B38</p>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>UK</entry>
+                            <entry>/</entry>
+                            <entry>B3</entry>
+                        </row>
+                        <row>
+                            <entry>Spain</entry>
+                            <entry>Telefonica, VF</entry>
+                            <entry>B3, B7</entry>
+                        </row>
+                        <row>
+                            <entry>France</entry>
+                            <entry>/</entry>
+                            <entry>B3, B7, B20</entry>
+                        </row>
+                        <row>
+                            <entry>Russia</entry>
+                            <entry>
+                                <p>VimpelCom</p>
+                                <p>MTS, MegaFon</p>
+                                <p>Rostelcom</p>
+                                <p>Vainakh Telecom</p>
+                            </entry>
+                            <entry>
+                                <p>B7, B20</p>
+                                <p>B7, B20, B38</p>
+                                <p>B40</p>
+                                <p>B40</p>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>Other Europe Regions</entry>
+                            <entry>/</entry>
+                            <entry>B1, B3, B7, B8, B20</entry>
+                        </row>
+                        <row>
+                            <entry>South Africa</entry>
+                            <entry>
+                                <p>MTN</p>
+                                <p>Neo Tel</p>
+                                <p>Telekom/8ta</p>
+                                <p>Vodacom</p>
+                            </entry>
+                            <entry>
+                                <p>B3</p>
+                                <p>B3</p>
+                                <p>B40</p>
+                                <p>B3</p>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry morerows="1" valign="middle">4G LTE Module-A</entry>
+                            <entry>USA</entry>
+                            <entry>
+                                <p>AT&amp;T</p>
+                                <p>Verizon</p>
+                                <p>T-Mobile</p>
+                                <p>Sprint</p>
+                            </entry>
+                            <entry>
+                                <p>B2, B4, B5, B12, B17</p>
+                                <p>B2, B4, B13</p>
+                                <p>B2, B4. B12</p>
+                                <p>B25, B26. B41</p>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>Canada</entry>
+                            <entry>
+                                <p>Rogers</p>
+                                <p>Bell</p>
+                                <p>Telus</p>
+                            </entry>
+                            <entry>
+                                <p>B2, B4, B5, B7, B12, B17</p>
+                                <p>B4, B7</p>
+                                <p>B4</p>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry morerows="3" valign="middle">4G LTE Module-AU</entry>
+                            <entry>China Taiwan</entry>
+                            <entry>
+                                <p>APT</p>
+                                <p>Chunghwa Telecom</p>
+                                <p>FarEas Tone</p>
+                                <p>Taiwan Mobile</p>
+                                <p>TSTAR</p>
+                            </entry>
+                            <entry>
+                                <p>B3, B8, B28</p>
+                                <p>B3, B7, B8</p>
+                                <p>B3, B6, B28</p>
+                                <p>B3, B28</p>
+                                <p>B7, B8</p>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>Australia</entry>
+                            <entry>
+                                <p>Telstra</p>
+                                <p>Optus</p>
+                                <p>Vodafone</p>
+                                <p>TPG</p>
+                                <p>NBN &amp; Co</p>
+                            </entry>
+                            <entry>
+                                <p>B3, B7, B28</p>
+                                <p>B3, B7, B28, B40</p>
+                                <p>B1, B3, B5, B28</p>
+                                <p>B7</p>
+                                <p>B3, B40</p>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>New Zealand</entry>
+                            <entry>
+                                <p>2degress</p>
+                                <p>Spark</p>
+                                <p>Vodafone</p>
+                            </entry>
+                            <entry>
+                                <p>B3</p>
+                                <p>B3, B7, B28</p>
+                                <p>B3, B7, B28</p>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>Argentina</entry>
+                            <entry>
+                                <p>Claro AR</p>
+                                <p>Nextel AR</p>
+                                <p>Telecom Personal</p>
+                                <p>Movistar AR</p>
+                            </entry>
+                            <entry>B4</entry>
+                        </row>
+                        <row>
+                            <entry morerows="3" valign="middle">4G LTE Module-AU</entry>
+                            <entry>Brazil</entry>
+                            <entry>
+                                <p>Claro, Oi, Vivo</p>
+                                <p>Tim</p>
+                                <p>Nextel</p>
+                                <p>On Telecom</p>
+                                <p>SKY Brazil</p>
+                            </entry>
+                            <entry>
+                                <p>B7</p>
+                                <p>B3, B7</p>
+                                <p>B3</p>
+                                <p>B38</p>
+                                <p>B38</p>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>Chile</entry>
+                            <entry>Claro, Entel, Movistar</entry>
+                            <entry>B7</entry>
+                        </row>
+                        <row>
+                            <entry>Mexico</entry>
+                            <entry>Telcel, Movistar, Nextel</entry>
+                            <entry>B2, B4</entry>
+                        </row>
+                        <row>
+                            <entry>Other South America Regions</entry>
+                            <entry>/</entry>
+                            <entry>B2, B3, B4, B7, B13, B17, B28, B38</entry>
+                        </row>
+                        <row>
+                            <entry valign="middle">4G LTE Module-J</entry>
+                            <entry>Japan</entry>
+                            <entry>
+                                <p>NTT DoCoMo</p>
+                                <p>Softbank</p>
+                                <p>KDDI</p>
+                            </entry>
+                            <entry>
+                                <p>B1, B3, B19, B21</p>
+                                <p>B1, B3, B8, B41</p>
+                                <p>B1, B11, B18, B26, B28</p>
+                                <p>B41</p>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry valign="middle">4G LTE Module-CE</entry>
+                            <entry>China</entry>
+                            <entry>
+                                <p>CMCC</p>
+                                <p>Unicom</p>
+                                <p>Telecom</p>
+                            </entry>
+                            <entry>
+                                <p>B38, B39, B40, B41</p>
+                                <p>B1, B3</p>
+                                <p>B1, B3</p>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry valign="middle">4G LTE Module-CE</entry>
+                            <entry>India</entry>
+                            <entry>
+                                <p>Aircel</p>
+                                <p>Bharti Airtel</p>
+                            </entry>
+                            <entry>
+                                <p>B3, B40</p>
+                                <p>B3, B40</p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table></section>
+        <section id="section_izy_lgs_w3b"><title>2G/3G Module Frequency Bands</title>Before you buy
+            a SIM card, check the supported operators and GSM/WCDMA frequency in the following table.<p>
+                <note>2G GSM network has been shut down in some countries and more and more
+                    operators plan to phase out GSM network. It's wise to check with your local
+                    operator for GSM support and sunset plan.</note>
+            </p></section>
+        <table frame="all" rowsep="1" colsep="1" id="table_bwx_tsw_w3b">
+            <tgroup cols="4" align="left">
+                <colspec colname="c1" colnum="1" colwidth="1*" rowsep="1" colsep="1"/>
+                <colspec colname="c2" colnum="2" colwidth="1*" rowsep="1" colsep="1"/>
+                <colspec colname="c3" colnum="3" colwidth="1*" rowsep="1" colsep="1"/>
+                <colspec colname="c4" colnum="4" colwidth="1*" rowsep="1" colsep="1"/>
+                <thead>
+                    <row>
+                        <entry>Module</entry>
+                        <entry>Country/Region</entry>
+                        <entry>Operator</entry>
+                        <entry>Frequency</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry valign="middle">GSM Module</entry>
+                        <entry>All GSM supported countries and regions</entry>
+                        <entry>All GSM supported operators</entry>
+                        <entry>850/900/1800/1900 MHz</entry>
+                    </row>
+                    <row>
+                        <entry morerows="3" valign="middle">WCDMA Module-A</entry>
+                        <entry>USA</entry>
+                        <entry>AT&amp;T</entry>
+                        <entry>850/1900MHZ</entry>
+                    </row>
+                    <row>
+                        <entry>Canada</entry>
+                        <entry>Rogers<p>Bell</p><p>Telcus</p></entry>
+                        <entry>850/1900MHz</entry>
+                    </row>
+                    <row>
+                        <entry>Mexico</entry>
+                        <entry>Telcel</entry>
+                        <entry>850/1900MHz</entry>
+                    </row>
+                    <row>
+                        <entry>Most of the South America Countries</entry>
+                        <entry>/</entry>
+                        <entry>850/1900MHz or 1900MHz only</entry>
+                    </row>
+                    <row>
+                        <entry morerows="12" valign="middle">WCDMA-Module-E</entry>
+                        <entry>China</entry>
+                        <entry>Unicom</entry>
+                        <entry>2100MHz</entry>
+                    </row>
+                    <row>
+                        <entry>China Taiwan</entry>
+                        <entry>Chunghwa Telecom<p>Taiwan Mobile</p><p>FETnet</p><p>TSTAR</p></entry>
+                        <entry>2100MHz</entry>
+                    </row>
+                    <row>
+                        <entry>China HongKong</entry>
+                        <entry>/</entry>
+                        <entry>2100MHz</entry>
+                    </row>
+                    <row>
+                        <entry>Thailand</entry>
+                        <entry>AIS</entry>
+                        <entry>900/2100MHz</entry>
+                    </row>
+                    <row>
+                        <entry>South Korea</entry>
+                        <entry>SKT<p>KT</p></entry>
+                        <entry>2100MHz</entry>
+                    </row>
+                    <row>
+                        <entry>Japan</entry>
+                        <entry>Softbank</entry>
+                        <entry>900/1500/2100MHz</entry>
+                    </row>
+                    <row>
+                        <entry>Most of the Asia Countries</entry>
+                        <entry>/</entry>
+                        <entry>2100MHz or 900/2100MHz</entry>
+                    </row>
+                    <row>
+                        <entry>Ukraine</entry>
+                        <entry>/</entry>
+                        <entry>2100MHz</entry>
+                    </row>
+                    <row>
+                        <entry>Russia</entry>
+                        <entry>/</entry>
+                        <entry>900/2100MHz</entry>
+                    </row>
+                    <row>
+                        <entry>Most of the Europe Countries</entry>
+                        <entry>/</entry>
+                        <entry>2100MHz or 900/2100MHz</entry>
+                    </row>
+                    <row>
+                        <entry>Brazil</entry>
+                        <entry>Nextel</entry>
+                        <entry>2100MHz</entry>
+                    </row>
+                    <row>
+                        <entry>South Africa</entry>
+                        <entry>Wodacom<p>MTN</p></entry>
+                        <entry>2100MHz</entry>
+                    </row>
+                    <row>
+                        <entry>Australia</entry>
+                        <entry>Vodafone<p>Optus</p></entry>
+                        <entry>900/2100MHz</entry>
+                    </row>
+                    <row>
+                        <entry morerows="4" valign="middle">WCDMA Module-T</entry>
+                        <entry>Thailand</entry>
+                        <entry>True Move<p>DTAC</p></entry>
+                        <entry>850/2100MHz</entry>
+                    </row>
+                    <row>
+                        <entry morerows="2">Brazil</entry>
+                        <entry>Claro<p>Teleming</p><p>Vivo</p></entry>
+                        <entry>850/1900/2100MHz</entry>
+                    </row>
+                    <row>
+                        <entry>TIM</entry>
+                        <entry>850/2100MHz</entry>
+                    </row>
+                    <row>
+                        <entry>Nextel</entry>
+                        <entry>2100MHz</entry>
+                    </row>
+                    <row>
+                        <entry>Australia</entry>
+                        <entry>Telstra</entry>
+                        <entry>850/2100 MHz</entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </refbody>
+</reference>

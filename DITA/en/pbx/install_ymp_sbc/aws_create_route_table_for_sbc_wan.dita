@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_tgq_xxv_kcb">
+    <title>3) Create Route Table for SBC WAN</title>
+    <shortdesc>Create a route table for the SBC WAN (eth0), this rule will route the SBC WAN to the
+        Internet Gateway.</shortdesc>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/06/21"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <steps id="steps_uhk_3yv_kcb">
+            <step>
+                <cmd>In the navigation pane, select <b>Route Tables</b>, then click <b>Create Route
+                        Table</b>.</cmd>
+            </step>
+            <step>
+                <cmd>Set the <uicontrol>Name tag</uicontrol>, for example,
+                    <codeph>SBC-WAN</codeph>.</cmd>
+            </step>
+            <step>
+                <cmd>Select the <uicontrol>VPC</uicontrol> which is for the SBC and YMP.</cmd>
+                <info><image href="../Images/SBC/aws_route_table_sbc_wan.png" id="image_bp3_m2w_kcb"
+                        width="650"/></info>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Yes, Create</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>On the <uicontrol>Route Tables</uicontrol> page, edit the new created route
+                    table.</cmd>
+                <substeps id="substeps_gvj_yhw_kcb">
+                    <substep>
+                        <cmd>Select the target route table. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Click <uicontrol>Routes</uicontrol> tab, and click
+                                <uicontrol>Edit</uicontrol>.</cmd>
+                        <info><image href="../Images/SBC/aws_edit_rroute_table_wan.png"
+                                id="image_b2d_zhw_kcb" width="500"/></info>
+                    </substep>
+                    <substep>
+                        <cmd>Click <uicontrol>Add another route</uicontrol>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Enter <uicontrol>Destination</uicontrol> as <codeph>0.0.0.0/0</codeph>,
+                            and select <uicontrol>Target</uicontrol> to the internet gateway.</cmd>
+                        <info><image href="../Images/SBC/aws_add_internet_gateway_route.png"
+                                id="image_q15_43w_kcb" width="500"/></info>
+                    </substep>
+                    <substep>
+                        <cmd>Click <uicontrol>Save</uicontrol>.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Associate subnet to the route.</cmd>
+                <substeps>
+                    <substep>
+                        <cmd>Click <uicontrol>Subnet Associations</uicontrol> tab, then click
+                                <uicontrol>Edit</uicontrol>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Select the SBC WAN subnet.</cmd>
+                        <info><image href="../Images/SBC/aws_subnet_association_wan.png"
+                                id="image_xjw_14w_kcb"/></info>
+                    </substep>
+                    <substep>
+                        <cmd>Click <uicontrol>Save</uicontrol>.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

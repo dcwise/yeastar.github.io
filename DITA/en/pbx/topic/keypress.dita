@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+  PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topicID">
+   <title>Keypress</title>
+   <body>
+      <p>This event is used report key pressed in the IVRs.</p>
+      <p>When a call reaches IVR, and the IVR’s keypress event is
+triggered, the PBX will send the event to the application
+server.</p>
+      <p>
+         <b>Report sample:</b>
+      </p>
+      <p>
+{“action”:“DTMF”,“callid”:“1495705009.315”,“outbound”:{“from”:“1002”,“to”:“41000”,“trunk”:“SIP-142”,“outboundid”:“1495705009.316”},“info”:“#”}</p>
+      <p>
+         <b>Report parameters descriptions:</b>
+      </p>
+      <table>
+         <tgroup cols="4">
+            <thead>
+               <row>
+                  <entry>
+                     <b>Parameter Name</b>
+                  </entry>
+                  <entry>
+                     <b>Type</b>
+                  </entry>
+                  <entry>
+                     <b>Description</b>
+                  </entry>
+                  <entry>
+                     <b>Sample</b>
+                  </entry>
+               </row>
+            </thead>
+            <tbody>
+               <row>
+                  <entry>
+                     <b>&lt;action&gt;</b>
+                  </entry>
+                  <entry>String</entry>
+                  <entry>Keypress</entry>
+                  <entry>DTMF</entry>
+               </row>
+               <row>
+                  <entry>
+                     <b>&lt;callid&gt;</b>
+                  </entry>
+                  <entry>String</entry>
+                  <entry>A unique identifier of the call</entry>
+                  <entry>1495707950.331</entry>
+               </row>
+               <row>
+                  <entry>
+                     <b>&lt;inbound|outbound&gt;</b>
+                  </entry>
+                  <entry>Object</entry>
+                  <entry>Inbound call/outbound call</entry>
+                  <entry>N/A</entry>
+               </row>
+               <row>
+                  <entry>
+                     <b>&lt;trunk&gt;</b>
+                  </entry>
+                  <entry>String</entry>
+                  <entry>The trunk name</entry>
+                  <entry>SIP-142</entry>
+               </row>
+               <row>
+                  <entry>
+                     <b>&lt;inboundid&gt;</b>
+                  </entry>
+                  <entry>String</entry>
+                  <entry>Inbound ID</entry>
+                  <entry>1495705009.315</entry>
+               </row>
+               <row>
+                  <entry>
+                     <b>&lt;from&gt;</b>
+                  </entry>
+                  <entry>String</entry>
+                  <entry>The caller’s number</entry>
+                  <entry>1002</entry>
+               </row>
+               <row>
+                  <entry>
+                     <b>&lt;to&gt;</b>
+                  </entry>
+                  <entry>String</entry>
+                  <entry>The callee’ number</entry>
+                  <entry>41000</entry>
+               </row>
+               <row>
+                  <entry>
+                     <b>&lt;info&gt;</b>
+                  </entry>
+                  <entry>String</entry>
+                  <entry>Keypress</entry>
+                  <entry>#</entry>
+               </row>
+            </tbody>
+         </tgroup>
+      </table>
+   </body>
+</topic>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_pdk_l3n_1db">
+    <title>Fuzzy Search CDR and One Touch Recording</title>
+    <shortdesc>By default, you need to enter an exact and complete phone number in the relevant
+        searching criteria, or you cannot get the search result.  If you cannot remember the exact
+        number or the name, you can use Fuzzy Search feature.</shortdesc>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/09/06"/>
+            <!--Carol-->
+            <revised modified="2018/09/11"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <context> </context>
+        <steps>
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Me</uicontrol>
+                        <uicontrol>CDR &amp; One Touch Recording</uicontrol>
+                    </menucascade>.</cmd>
+            </step>
+            <step>
+                <cmd>Set the <uicontrol>Time</uicontrol> to filter the call logs during the date
+                    duration.</cmd>
+            </step>
+            <step>
+                <cmd>Enter a desired number or letters in <uicontrol>Call From</uicontrol> field or
+                        <uicontrol>Call To</uicontrol> field.</cmd>
+            </step>
+            <step>
+                <cmd>Check <uicontrol>Number Fuzzy Search</uicontrol>.</cmd>
+                <info><image href="../Images/user/fuzzy_search.png" width="650"
+                        id="image_d4h_ykn_1db"/></info>
+            </step>
+            <step>
+                <cmd importance="optional">Set other searching criteria.</cmd>
+            </step>
+            <step>
+                <cmd>Click  <uicontrol>Search</uicontrol>.</cmd>
+                <info>The call logs that match the fuzzy searching will display.</info>
+                <info><image href="../Images/user/fuzzy_search_result.png" width="650"
+                        id="image_tlv_pmn_1db"/></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

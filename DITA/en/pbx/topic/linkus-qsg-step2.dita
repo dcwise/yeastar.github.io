@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="task_oml_5pz_ghb">
+    <title>Step2. Enable Linkus Client for Users</title>
+    <shortdesc>After setting up the Linkus Server, you need to enable Linkus Client for extension
+        users to allow them log in Linkus client.</shortdesc>
+    <body>
+        <section id="enable-linkus-client">
+            <title>Enable Linkus Client for users</title>
+            <p>
+                <ol>
+                    <li> Log in the PBX web interface, go to <menucascade>
+                            <uicontrol>Linkus</uicontrol>
+                            <uicontrol product="k2 s-series">Linkus Client Settings</uicontrol>
+                        </menucascade>.</li>
+                    <li>To enable Linkus Client for all users, do the followings:<p>
+                            <note type="tip">PBX only supports selecting all the extensions for the
+                                current page. You can set a larger <uicontrol>Displaying</uicontrol>
+                                value to display more extensions on one page.</note>
+                        </p><p>
+                            <ol id="ol_rfj_z23_hhb">
+                                <li>In the right-bottom corner, set a larger
+                                        <uicontrol>Displaying</uicontrol> value.</li>
+                                <li>Select the checkbox for all the extensions.</li>
+                                <li>Click <uicontrol>Enable</uicontrol>.</li>
+                                <li>In the dialog box, click <uicontrol>Yes</uicontrol> to
+                                    confirm.</li>
+                                <li importance="optional">If you have more extensions in the next
+                                    page, go to next page, and repeat step <b>a</b> - <b>d</b>.
+                                </li>
+                            </ol>
+                        </p><p>
+                            <image href="../Images/admin/enable_linkus_service.png" width="650"
+                                id="image_wpz_chm_2fb" product="k2 s-series"/></p><p>
+                            <image href="../Images/admin/enable-linkus-clients-all-users-cloud.png"
+                                width="650" id="image_xtg_jrq_ngb" product="cloudpbx"/>
+                        </p></li>
+                    <li>To enable Linkus Client for a specific user, do the followings:<p>
+                            <ol id="ol_szg_qf3_hhb">
+                                <li>Search the user by extension number or name.</li>
+                                <li>Switch the Linkus Client status for the user.<p>If the Linkus
+                                        Client is enabled for the user, the status shows <image
+                                            href="../Images/ui_icons/disabled.png" width="20"
+                                            id="image_rkv_5f3_hhb"/>.</p></li>
+                            </ol>
+                        </p></li>
+                </ol>
+            </p>
+        </section>
+    </body>
+</topic>

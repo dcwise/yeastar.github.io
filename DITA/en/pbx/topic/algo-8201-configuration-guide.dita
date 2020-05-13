@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_gjk_ghd_fhb">
+    <title>Register Algo 8201 SIP Intercom with <ph keyref="product_name"/></title>
+    <shortdesc>This guide describes the configuration steps required for Algo 8201 SIP Intercom to
+        interoperate with <ph keyref="product_name"/>. </shortdesc>
+   
+        <body>
+            <p>Below is a guideline of how to register an extension on Algo 8201 SIP Intercom. You
+            may need to configure the other settings of the Algo 8201 SIP Intercom depending on your
+            VoIP solution.</p>
+            <section id="section_cxx_rhd_fhb">
+                <title>Network Topology</title>
+            <p>The following diagram shows how the testing network is configured for reference.</p>
+            <p><image href="../Images/admin/algo-8201-topology.png" id="image_s2h_tyg_fhb"
+                    width="650"/></p>
+            </section>
+            <section id="section_exx_rhd_fhb">
+                <title>Yeastar S300 configuration</title>
+                <p>Add a SIP extension on Yeastar S300, and provide the extension details in Algo
+                8201 web page.</p>
+                <p>
+                    <ol id="ol_fxx_rhd_fhb">
+                        <li>Log in Yeastar S300 web interface, go to <menucascade>
+                                <uicontrol>Settings</uicontrol>
+                                <uicontrol>PBX</uicontrol>
+                                <uicontrol>Extensions</uicontrol>
+                            </menucascade>.</li>
+                        <li>Add an extension, this extension will be registered as the Algo Ring extension.<p>
+                                <ol id="ol_gxx_rhd_fhb">
+                                    <li>Click <uicontrol>Add</uicontrol>.</li>
+                                    <li>Leave the default settings or change the General settings
+                                        according to your needs.</li>
+                                    <li>Click <uicontrol>Save</uicontrol> and
+                                        <uicontrol>Apply</uicontrol>.<p><image
+                                            href="../Images/admin/add-algo-8201-intercom-extension.png"
+                                            width="650" id="image_hxx_rhd_fhb"/></p></li>
+                                </ol>
+                            </p></li>
+                    </ol>
+                </p>
+            </section>
+            <section id="section_kxx_rhd_fhb">
+                <title>Algo 8201 SIP Intercom configuration</title>
+                <p>
+                    <ol id="ol_lxx_rhd_fhb">
+                        <li>Access the Algo 8201 web interface, enter the password, and click
+                            <uicontrol>Login</uicontrol>.<p>The default password is
+                        <i>algo</i>.</p></li>
+                        <li>Go to <uicontrol>Basic Settings</uicontrol>, enter the following
+                                settings:<p><image href="../Images/admin/register-algo-8201.png"
+                                width="650" id="image_mxx_rhd_fhb"/></p><p>
+                            <ul id="ul_nxx_rhd_fhb">
+                                <li><uicontrol>SIP Domain (Proxy Server)</uicontrol>: Enter the IP
+                                    address of <ph keyref="product_name"/>.</li>
+                                <li>
+                                    <p><uicontrol>SIP Extension</uicontrol>: Enter the extension
+                                        number.</p>
+                                </li>
+                                <li>
+                                    <p><uicontrol>Authentication ID</uicontrol>: Enter the
+                                        extension's <uicontrol>Registration Name</uicontrol>.</p>
+                                </li>
+                                <li>
+                                    <p><uicontrol>Authentication Password</uicontrol>: Enter the
+                                        extension's <uicontrol>Registration
+                                        Password</uicontrol>.</p>
+                                </li>
+                                <li><uicontrol>Extension to Dial</uicontrol>: Enter an extension of
+                                        <ph keyref="product_name"/>. When a visitor presses the blue
+                                    call button on Algo 8201, the extension will be dialed.</li>
+                            </ul>
+                        </p></li>
+                        <li>Click <uicontrol>Save</uicontrol>.</li>
+                        <li>Go to <menucascade>
+                            <uicontrol>Status</uicontrol>
+                        </menucascade> to check the registration status.<p>If the extension is
+                            registered successfully, the status will display
+                                "Successful".</p><p><image
+                                href="../Images/admin/algo-8201-status.png" id="image_qxx_rhd_fhb"
+                                width="650"/></p><p><b>Result:</b></p><p>
+                            <ul id="ul_rxx_rhd_fhb">
+                                <li>When a visitor presses the blue call button on the Algo 8201 SIP
+                                    Intercom, the extension 1004 will ring.</li>
+                            </ul>
+                        </p></li>
+                    </ol>
+                </p>
+            </section>
+        </body>
+    </topic>
+

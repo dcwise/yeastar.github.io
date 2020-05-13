@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_ssx_13b_wdb">
+    <title>Operations on Conference Panel</title>
+    <shortdesc>During the conference, you can manage the conference on the Conference
+        Panel.</shortdesc>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/05/18"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <p><image href="../Images/ui_icons/invite.png" id="image_nzk_1kb_wdb"/> : click this icon to
+            invite an individual contact.</p>
+        <p><image href="../Images/ui_icons/kick.png" id="image_mbm_bkb_wdb"/>: click this icon to
+            kick the contact from the current conference.</p>
+        <p><image href="../Images/ui_icons/mute.png" id="image_plj_ckb_wdb"/>: click this icon to
+            mute the contact.</p>
+        <p><image href="../Images/ui_icons/unmute.png" id="image_stb_dkb_wdb"/>: click this icon to
+            unmute the contact.</p>
+        <p><image href="../Images/ui_icons/delete.png" id="image_lrg_jkb_wdb"/>: click this icon to
+            delete the contact from the conference.</p>
+    </conbody>
+</concept>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="phone">
+  <title>Compatible SIP Endpoints</title>
+  <shortdesc>Yeastar have tested multiple IP phones, soft phones, intercom devices, and door phones
+    with <ph keyref="product_name"/>. Refer to the phone registration guides to register your phone
+    to <ph keyref="product_name"/>.</shortdesc>
+</topic>

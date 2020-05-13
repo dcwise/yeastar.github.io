@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_xgy_3kp_32b">
+    <title>Set up 2-Way Intercom</title>
+    <shortdesc>2-way intercom is used to make a multi-party conference. The called parties will
+        automatically answer the call  into speakerphone mode and join the conference.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/07/02"/>
+            <!--Carol-->
+            <revised modified="2018/07/02"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <context>
+            <p>
+                <note>Intercom allows all users in the group to talk and be heard by all.</note>
+            </p>
+        </context>
+        <steps id="steps_mzs_flp_32b">
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol>PBX</uicontrol>
+                        <uicontrol>Call Features</uicontrol>
+                        <uicontrol>Paging/Intercom</uicontrol>
+                    </menucascade>, click <uicontrol>Add</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Set a 2-Way intercom group.</cmd>
+                <info><image href="../Images/admin/2-way_intercom.png" width="650"
+                        id="image_nzs_flp_32b"/></info>
+                <choices id="choices_ozs_flp_32b">
+                    <choice><uicontrol>Number</uicontrol>: Use the default or specify an number for
+                        the intercom group.</choice>
+                    <choice><uicontrol>Name</uicontrol>: Enter a name for the intercom
+                        group.</choice>
+                    <choice><uicontrol>Type</uicontrol>: Choose <codeph>2-Way
+                        Intercom</codeph>.</choice>
+                    <choice><uicontrol>Dial * to Answer</uicontrol>: If this option is checked, the
+                        intercom group members can dial <codeph>*</codeph> to talk to the intercom
+                        initiator. <note>When a member dials <codeph>*</codeph>, the group
+                            announcement will terminate, and the member who dials <codeph>*</codeph>
+                            can have a private call with the intercom initiator.</note></choice>
+                    <choice><uicontrol>Member</uicontrol>: Choose the group members to the
+                            <uicontrol>Selected</uicontrol> box.</choice>
+                </choices>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</cmd>
+            </step>
+        </steps>
+        <result id="result_pzs_flp_32b">When you dial the intercom group number, the members in the
+            group will automatically join the conference by speakerphone mode.</result>
+    </taskbody>
+</task>

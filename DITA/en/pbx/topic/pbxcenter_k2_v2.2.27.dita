@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_bx1_gpn_y2b">
+    <title>Version 2.2.27</title>
+    <abstract>Released Date: July 13, 2018</abstract>
+    <prolog>
+        <author type="creator">Yeastar</author>
+        <author type="contributor">Yeastar</author>
+        <critdates>
+            <created date="2018/08/28"/>
+            <!--Yeastar-->
+            <revised modified="2018/08/28"/>
+            <!--Carol-->
+            <revised modified="2018/08/28"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <section id="section_mbk_lrn_y2b">
+            <title>Optimization</title>
+            <p>
+                <ul>
+                    <li>Optimized the extension status on Linkus client.</li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_l4d_mrn_y2b">
+            <title>Fixed Bug</title>
+            <p>
+                <ul id="ul_nwr_4rn_y2b">
+                    <li>Fixed the Linkus iOS push issue.</li>
+                </ul>
+            </p>
+        </section>
+    </conbody>
+</concept>

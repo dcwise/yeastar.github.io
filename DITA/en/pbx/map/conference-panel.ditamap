@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>Conference Panel</title>
+    <topicref href="../topic/conference_panel.dita">
+        <topicref href="../topic/conference-panel-conference-contacts.dita"/>
+        <topicref href="../topic/conference-panel-conference-lists.dita"/>
+        <topicref href="../topic/dial-in-conferencing.dita"/>
+        <topicref href="../topic/dial-out-conferencing.dita"/>
+        <topicref href="../topic/conference-panel-conference-in-process.dita"/>
+    </topicref>
+</map>

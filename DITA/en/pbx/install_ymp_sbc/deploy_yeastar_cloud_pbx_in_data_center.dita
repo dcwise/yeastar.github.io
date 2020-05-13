@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_twd_y53_3cb">
+  <title>Deploy Yeastar Cloud PBX in Data Center</title>
+  <shortdesc>Before you start to deploy Yeastar Cloud PBX in a data center, you need to know the
+    general prerequisites for YMP server and SBC server.</shortdesc>
+  <prolog>
+    <critdates>
+      <!--Carol-->
+      <revised modified="2018/07/04"/>
+      <!--Carol-->
+      <revised modified="2018/07/13"/>
+      <!--Carol-->
+      <revised modified="2018/09/17"/>
+      <!--Carol-->
+      <revised modified="2018/09/28"/>
+      <!--Carol-->
+      <revised modified="2018/09/30"/>
+    </critdates>
+  </prolog>
+  <body>
+    <section id="section_wp5_5sf_j2b">
+      <title>Supported VM Platform</title>
+      <p>The YMP server and SBC server can be virtualized on a VM platform that will eliminate the
+        cost of separate hardware. The tested and supported VM platforms are:</p>
+      <ul id="ul_ar3_ddg_j2b">
+        <li>
+          <p>Microsoft Hyper-v</p>
+        </li>
+        <li>KVM</li>
+        <li>VMware</li>
+      </ul>
+      <p>
+        <note>Bochs is not supported.</note>
+      </p>
+    </section>
+    <section id="section_hcx_npr_ndb">
+      <title>Requirements for SBC Server and YMP Server</title>
+    </section>
+    <p>
+      <ul id="ul_tsx_c1q_3cb">
+        <li>Do NOT install other service in the SBC server or YMP server, or you need to uninstall
+          the services or reinstall the system.</li>
+        <li>Forward all the ports (1-65535) on the SBC server.</li>
+        <li>The SBC server has two Ethernet interfaces.</li>
+      </ul>
+    </p>
+    <p>
+      <ul id="ul_egn_3vx_3cb">
+        <li>Each YMP server has one Ethernet interface eth0.</li>
+      </ul>
+    </p>
+    <p>
+      <ul>
+        <li>SBC WAN (eth0) can receive data from the Internet and send data to the Internet.</li>
+        <li>SBC LAN (eth1) and YMP LAN (eth0) are in the same subnet.</li>
+        <li>SBC acts as a gateway. The YMP will initiate outbound connections to the Internet
+          through the SBC gateway. </li>
+      </ul>
+    </p>
+    <p>Below is an example of deploying YMP &amp; SBC in data center.</p>
+    <p><image href="../Images/SBC/datacenter-en.png" id="image_ik5_b5x_3cb" width="650"/></p>
+  </body>
+</topic>

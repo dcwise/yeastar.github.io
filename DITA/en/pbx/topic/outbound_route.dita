@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_a3l_4gt_tcb">
+ <title>Outbound Route Overview</title>
+ <shortdesc><?oxy_comment_start author="Becky" timestamp="20190927T143428+0800" comment="An outbound route works like a traffic cop giving directions to road users to use a predefined route to reach a predefined destination." id="ots_ymv_fjb" flag="done"?>An
+  outbound route is used to tell the PBX which extension users are allowed to make outbound calls
+  and which trunk <?oxy_comment_end?>to use for the outbound calls.</shortdesc>
+ <conbody>
+  <section id="section_dsr_h45_tcb">
+   <title>How does an outbound route work?</title>
+   <p>Every time user dials a number, PBX will do the following in strict order: </p>
+   <p>
+    <ol id="ol_bzm_pdr_kjb">
+     <li>Examine the number user dialed.</li>
+     <li>Compare the dialed number with the pattern that you have defined in route 1.<ul
+       id="ul_tsh_x15_ljb">
+       <li>If it matches, PBX will route the call out using the associated trunk.</li>
+       <li>If it does not match, PBX will match the number with the pattern that you have defined in
+        route 2, and so on
+        <?oxy_comment_start author="carol" timestamp="20191021T145503+0800" comment="这边同步中文的排版改一下。" flag="done"?>.
+        <?oxy_comment_end?></li>
+      </ul></li>
+    </ol>
+   </p>
+  </section>
+ </conbody>
+</concept>

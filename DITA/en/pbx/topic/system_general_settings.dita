@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_htb_p4w_d2b">
+    <title>System General Settings</title>
+    <shortdesc>The system general settings can be applied globally to  <ph keyref="product_name"
+        /></shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/06/15"/>
+            <!--Carol-->
+            <revised modified="2018/06/15"/>
+        </critdates>
+    </prolog>
+    <conbody/>
+</concept>

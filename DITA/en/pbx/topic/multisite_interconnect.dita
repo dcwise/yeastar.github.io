@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_ic5_n5x_ldb">
+    <title>Multisite Interconnect</title>
+    <shortdesc>You can connect multi-site <ph keyref="product_name"/> easily by Multisite
+        Interconnect feature.</shortdesc>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/06/14"/>
+            <!--Carol-->
+            <revised modified="2018/09/25"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <p> After connecting different branch PBXs to the headquarter PBX, you can achieve:</p>
+        <ul id="ul_l1h_byx_ldb">
+            <li>Making internal calls between each branch and the headquarter.</li>
+            <li>Making internal calls between each two branches.</li>
+        </ul>
+        <section id="section_cyg_zqy_ldb">
+            <title>Video Tutorial</title>
+            <p><xref href="https://www.youtube.com/watch?v=u-alCvzaXOk" format="html"
+                    scope="external"><image href="../Images/admin/multisite_interconnect_video.png"
+                        id="image_ukr_4by_ldb" width="500"/></xref></p>
+        </section>
+        <section id="section_jxf_gyx_ldb">
+            <title>Compatibility</title>
+            <p><ph keyref="product_name"/> version 30.6 or later.</p>
+        </section>
+        <section id="section_nxs_dyx_ldb">
+            <title>Main Steps to Interconnect <ph keyref="product_name"/></title>
+            <ol id="ol_w1z_dyx_ldb">
+                <li>Plan and Assign Extensions</li>
+                <li>Forward Ports for Headquarter PBX</li>
+                <li>Set up the Headquarter PBX</li>
+                <li>Connect BranchA PBX and Headquarter PBX</li>
+                <li>Connect BranchB PBX and Headquarter PBX</li>
+            </ol>
+        </section>
+    </conbody>
+</concept>

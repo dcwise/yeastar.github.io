@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_wp2_1tl_ldb">
+    <title>Reboot the PBX</title>
+    <shortdesc>Reboot the PBX immediately on the PBX web interface or schedule auto reboot to keep
+        the system running smoothly.</shortdesc>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/10/23"/>
+        </critdates>
+    </prolog>
+    <body>
+        <section id="section_p5q_ycg_4fb">
+            <p>
+                <note>When the PBX is rebooting, all the on-going calls will be terminated. </note>
+            </p>
+        </section>
+        <section id="section_skw_wcg_4fb">
+            <title>Reboot the PBX Immediately</title>
+            <p>
+                <ol id="ol_nrr_zcg_4fb">
+                    <li>Go to <menucascade>
+                            <uicontrol>Maintenance</uicontrol>
+                            <uicontrol>Reboot</uicontrol>
+                        </menucascade>, click <uicontrol>Reboot</uicontrol>.</li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_s5t_1dg_4fb">
+            <title>Schedule Auto Reboot </title>
+            <p>
+                <ol id="ol_h3k_ddg_4fb">
+                    <li>Go to <menucascade>
+                            <uicontrol>Maintenance</uicontrol>
+                            <uicontrol>Reboot</uicontrol>
+                        </menucascade>, check the option <uicontrol>Enable Auto
+                                Reboot</uicontrol>.<p><image href="../Images/admin/auto_reboot.png"
+                                id="image_e1f_d5m_ldb"/></p></li>
+                    <li>Set the frequency and time of auto reboot.</li>
+                    <li>Click <uicontrol>Save</uicontrol>.</li>
+                </ol>
+            </p>
+        </section>
+    </body>
+</topic>

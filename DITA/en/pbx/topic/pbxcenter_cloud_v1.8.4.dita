@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_a3h_cqv_1gb">
+    <title>Version 1.8.4</title>
+    <abstract>Released Date: December 13, 2018</abstract>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/12/07"/>
+            <!--Carol-->
+            <revised modified="2018/12/07"/>
+            <!--Carol-->
+            <revised modified="2018/12/10"/>
+            <!--Carol-->
+            <revised modified="2018/12/11"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <section id="section_hvx_4qv_1gb">
+            <title>Optimization</title>
+            <p><b>Extension</b></p>
+            <p>
+                <ul id="ul_lm4_tq3_kfb">
+                    <li>Added support for configuring overlapped Extension ranges (<menucascade>
+                            <uicontrol>Settings</uicontrol>
+                            <uicontrol>PBX</uicontrol>
+                            <uicontrol>General</uicontrol>
+                            <uicontrol>Preferences</uicontrol>
+                            <uicontrol>Extension Preferences</uicontrol>
+                        </menucascade>).</li>
+                    <li>Optimized Extension setup: PBX will allow you to create an extension number
+                        that is not in the User Extension range.</li>
+                    <li>Fixed Extension Group issue: Creating an extension would fail if the
+                        extension number was used as an Extension Group name.</li>
+                    <li>Fixed the issue that <uicontrol>Max Call Duration</uicontrol> setting could
+                        not take effect.</li>
+                </ul>
+            </p>
+            <p><b>SIP Trunk</b></p>
+            <p>
+                <ul id="ul_mwc_tt3_kfb">
+                    <li>Fixed the issue that if blank spaces were included in the SIP trunk name, no
+                        inbound calls would reach the SIP trunk.</li>
+                    <li>Added support for entering special character <codeph>@</codeph> in the
+                            <uicontrol>Authentication Name</uicontrol> field.</li>
+                    <li>Fixed the WebRTC Trunk issue: The WebRTC trunk could not work if the trunk
+                        number was the same with an extension number.</li>
+                </ul>
+            </p>
+            <p><b>Call Features</b></p>
+            <p>
+                <ul id="ul_qfh_dy3_kfb">
+                    <li>Optimized Call Pickup: <xref
+                            href="pick_up_an_extension_call_by_blf.dita#task_egh_qgn_4fb/notify_caller_id"
+                            >Users can see the incoming caller ID before they pick up the
+                            call</xref>.</li>
+                    <li>Optimized Call Pickup: If an extension's incoming call is picked up by other
+                        person, the extension's phone will not display any information of "missed
+                        call".</li>
+                    <li>Fixed the Call Forwarding issue: The system would hang up if a call was
+                        forwarded to a queue.</li>
+                    <li>Fixed the BLF monitoring issue on Extension: The BLF LED could not properly
+                        indicate the monitored extension's status if the extension had multiple
+                        calls at the same time.</li>
+                    <li>Fixed the BLF monitoring issue on Extension: The BLF LED status was
+                        incorrect when the monitored extension was not registered. </li>
+                    <li>Fixed the BLF monitoring issue on Static Agent: The BLF LED status was
+                        incorrect if the agent's <uicontrol>Caller ID Name</uicontrol> was not the
+                        extension number.</li>
+                    <li>Fixed the issue that if password was set on a queue, the dynamic agents
+                        might not receive incoming calls.</li>
+                </ul>
+            </p>
+            <p><b>Call Control</b></p>
+            <p>
+                <ul id="ul_wyw_v4v_1gb">
+                    <li>Fixed the issue that the PBX would route inbound calls to incorrect
+                        destinations if multiple Account Trunk existed on the PBX.</li>
+                </ul>
+            </p>
+            <p><b>Import Function</b></p>
+            <p>
+                <ul id="ul_yt5_px3_kfb">
+                    <li>Optimized the Import function for <xref
+                            href="../references/import_parameters_extensions.dita#reference_pq4_yzh_mfb"
+                            >Extensions</xref>, <xref
+                            href="../references/import_parameters_trunks.dita#reference_g3l_3f3_mfb"
+                            >Trunks</xref>, <xref
+                            href="../references/import_parameters_inbound_routes.dita#reference_zrm_gj3_mfb"
+                            >Inbound Routes</xref>, and <xref
+                            href="../references/import_parameters_outbound_routes.dita#reference_b4g_lj3_mfb"
+                            >Outbound Routes</xref>.</li>
+                </ul>
+            </p>
+        </section>
+    </conbody>
+</concept>

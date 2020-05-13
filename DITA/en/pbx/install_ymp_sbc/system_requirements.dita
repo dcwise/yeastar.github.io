@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_cdg_d25_lcb">
+  <title>System Requirements</title>
+  <shortdesc>To deploy Yeastar Cloud PBX, you need to prepare two servers, one for Yeastar SBC, the
+    other one for YMP.</shortdesc>
+</topic>

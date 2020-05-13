@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_b3f_hnq_5cb">
+    <title>Steps to Auto Provision Phones</title>
+    <taskbody>
+        <context>
+            <note type="important" id="reset"> For the first time to auto provision your phones on
+                the PBX, you need to <b>RESET</b> all your phones before auto provisioning, or auto
+                provisioning may not work.</note>
+        </context>
+        <steps id="steps_wyj_knq_5cb">
+            <step>
+                <cmd>Check your phones' basic information, including phone manufacturer, MAC
+                    address, phone model.</cmd>
+            </step>
+            <step>
+                <cmd>On the PBX <uicontrol>Auto Provisioning</uicontrol> page, add devices and set
+                    your phones' manufacturer, MAC address, model.</cmd>
+                <info><image href="../Images/admin/autop_phone_info.png" width="650"
+                        id="image_z3y_mkx_kdb"/></info>
+            </step>
+            <step>
+                <cmd>Set the phone lines.</cmd>
+                <info><image href="../Images/admin/autop_set_phone_line.png" width="650"
+                        id="image_bxb_vjx_kdb"/></info>
+            </step>
+            <step>
+                <cmd>Set the phones' language and time.</cmd>
+                <info><image href="../Images/admin/autop_preference.png" width="650"
+                        id="image_ykc_1kx_kdb"/></info>
+            </step>
+            <step importance="optional">
+                <cmd>Set other phone settings.</cmd>
+            </step>
+            <step>
+                <cmd>Save the settings and REBOOT your phones.</cmd>
+                <info>
+                    <note> After auto provisioned successfully, each time when your phones reboot,
+                        they will get and apply configurations (phonebook, language, time, etc.)
+                        from the PBX. </note>
+                </info>
+            </step>
+            <step>
+                <cmd>When the phones restart, phone users will see an authentication page on their
+                    phones. Users need to enter the user name and password to get and apply
+                    configurations from the PBX.</cmd>
+                <info>
+                    <ul>
+                        <li><b>User Name</b>: The extension number that is assigned to the
+                            phone.</li>
+                        <li><b>Password</b>: The voicemail access PIN of the extension.</li>
+                    </ul>
+                </info>
+            </step>
+        </steps>
+    </taskbody>
+    <related-links>
+        <link href="auto_provision_phone_lines.dita#task_bfh_pny_scb" product="cloudpbx"/>
+        <link href="auto_provision_phonebook.dita#task_os5_5ny_scb"/>
+        <link href="synchronize_phone_time_with_the_pbx.dita#task_z1w_c4y_scb"/>
+    </related-links>
+</task>

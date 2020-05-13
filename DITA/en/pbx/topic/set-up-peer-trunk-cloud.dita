@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="set-up-domain-peer-trunk">
+    <title>Create a VoIP Peer Trunk - General</title>
+    <shortdesc>If your VoIP provider is not included in the supported VoIP provider list, and the
+        ITSP only provides an IP address or domain for your purchased VoIP account, you can set up a
+        Peer Trunk on the <ph keyref="product_name"/>.</shortdesc>
+    <body>
+        <ol id="ol_exg_bw1_t3b">
+            <li>Go to <menucascade>
+                    <uicontrol>Settings</uicontrol>
+                    <uicontrol> PBX</uicontrol>
+                    <uicontrol> Trunks</uicontrol>
+                </menucascade>, click <uicontrol>Add</uicontrol>.</li>
+            <li>In the <uicontrol>Name</uicontrol> field, enter a trunk name.</li>
+            <li>In the <uicontrol>Select Country</uicontrol> drop-down list, select
+                    <uicontrol>General</uicontrol>.</li>
+            <li>In the <uicontrol>Trunk Type</uicontrol> drop-down list, select a type of Peer
+                    trunk.<note>If you don't know which type to select, contact Yeastar
+                    support.</note><table frame="all" rowsep="1" colsep="1" id="table_v3g_kyz_53b">
+                    <tgroup cols="2" align="left">
+                        <?oxy_attributes colwidth="&lt;change type=&quot;modified&quot; oldValue=&quot;1*&quot; author=&quot;carol&quot; timestamp=&quot;20190902T143156+0800&quot; /&gt;"?>
+                        <colspec colname="c1" colnum="1" colwidth="1*"/>
+                        <?oxy_attributes colwidth="&lt;change type=&quot;modified&quot; oldValue=&quot;4.45*&quot; author=&quot;carol&quot; timestamp=&quot;20190902T143156+0800&quot; /&gt;"?>
+                        <colspec colname="c2" colnum="2" colwidth="3.58*"/>
+                        <thead>
+                            <row>
+                                <entry align="center" valign="middle"><b>Peer Trunk Type</b></entry>
+                                <entry align="center" valign="middle"><b>Description</b></entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>DID-based</entry>
+                                <entry>If the VoIP provider routes incoming calls and outgoing calls
+                                    based on the DID number, select DID-based VoIP trunk.</entry>
+                            </row>
+                            <row>
+                                <entry>Port-based</entry>
+                                <entry>If the VoIP provider routes incoming calls and outgoing calls
+                                    based on the SIP registration port, select Port-based VoIP
+                                        trunk.<note>If this type is selected, a specific SIP
+                                        registration port will be assigned to the PBX. In this way,
+                                        the VoIP provide can correctly route the
+                                    calls.</note></entry>
+                            </row>
+                            <row>
+                                <entry>Domain-based</entry>
+                                <entry>If the VoIP provider routes incoming calls and outgoing calls
+                                    based on the PBX domain name, select Domain-based VoIP
+                                    trunk.</entry>
+                            </row>
+                            <row>
+                                <entry>Private Network</entry>
+                                <entry>If the PBX and the VoIP provider are in the same private
+                                    network, select Private-Network based VoIP trunk.</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table></li>
+            <li>Enter the trunk information that is provided by the VoIP provider.<p>
+                    <ul id="ol_rqf_ryz_53b">
+                        <li><uicontrol>Hostname/IP</uicontrol>: Enter the IP address or the domain
+                            of the VoIP provider.</li>
+                        <li><uicontrol>Domain</uicontrol>: Enter the IP address or the domain of the
+                            VoIP provider.</li>
+                    </ul>
+                </p></li>
+            <li
+                conref="set-up-voip-trunk-by-templates.dita#set-up-voip-trunk-by-templates/voip-settings-step"/>
+            <li>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.<p
+                    conref="set-up-voip-trunk-by-templates.dita#set-up-voip-trunk-by-templates/check-trunk-status"
+                /></li>
+        </ol>
+    </body>
+    <related-links>
+        <link href="add_outbound_route.dita#task_az3_dht_tcb"/>
+        <link href="add_an_inbound_route.dita#task_v43_nfr_5cb"/>
+        <link href="set_up_dod_numbers_on_voip_trunks.dita#task_rrh_vgf_2fb"/>
+    </related-links>
+</topic>

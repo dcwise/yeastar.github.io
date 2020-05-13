@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>Compatible SIP Endpoints</title>
+    <keydef keys="product_name" product="cloudpbx">
+        <topicmeta>
+            <keywords>
+                <keyword>Yeastar Cloud PBX</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="product_name" product="s-series">
+        <topicmeta>
+            <keywords>
+                <keyword>Yeastar S-Series VoIP PBX</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="product_name" product="k2">
+        <topicmeta>
+            <keywords>
+                <keyword>Yeastar K2 IPPBX</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <topicref href="../topic/compatible-sip-endpoints.dita">
+        <topicmeta>
+            <shortdesc>Configuration guides of tested IP phones, soft phones, door phones, audio
+                alerter devices, and intercom devices.</shortdesc>
+        </topicmeta>
+        <topichead navtitle="Akuvox" product="s-series">
+            <topicref href="../sip-endpoints/provision-akuvox-phones-with-yeastar-pbx.dita"/>
+            <topicref href="../sip-endpoints/how-to-factory-reset-akuvox-phones.dita"/>
+        </topichead>
+        <topichead navtitle="Algo 8180G2 Audio Alert" product="s-series">
+            <topicref href="../topic/algo-8180-test-report.dita"/>
+            <topicref href="../topic/algo-8180-configuration-guide.dita" product="s-series"/>
+        </topichead>
+        <topichead navtitle="Algo 8201 SIP Intercom" product="s-series">
+            <topicref href="../topic/algo-8201-test-report.dita"/>
+            <topicref href="../topic/algo-8201-configuration-guide.dita" product="s-series"/>
+        </topichead>
+        <topichead navtitle="ALCATEL Phone">
+            <topicref href="../topic/register_alcatel.dita"/>
+        </topichead>
+        <topichead navtitle="Cisco">
+            <topicref href="../topic/register_cisco.dita"/>
+            <topicref href="../sip-endpoints/provision-cisco-phones-with-yeastar-pbx.dita"
+                product="s-series"/>
+            <topicref href="../sip-endpoints/how-to-factory-reset-cisco-phones.dita"
+                product="s-series"/>
+        </topichead>
+        <topichead navtitle="Escene" product="s-series">
+            <topicref href="../sip-endpoints/provision-escene-phones-with-yeastar-phones.dita"/>
+            <topicref href="../sip-endpoints/how-to-factory-reset-escene-phones.dita"/>
+        </topichead>
+        <topichead navtitle="Fanvil">
+            <topicref href="../topic/register_fanvil.dita"/>
+            <topicref href="../sip-endpoints/provision-fanvil-phones-with-yeastar-pbx.dita"
+                product="s-series"/>
+            <topicref href="../sip-endpoints/how-to-factory-reset-fanvil-phones.dita"
+                product="s-series"/>
+        </topichead>
+        <topichead navtitle="Gigaset" product="s-series">
+            <topicref href="../sip-endpoints/provision-gigaset-n670-n870-ip-pro.dita"/>
+            <topicref href="../sip-endpoints/provision-gigaset-maxwell-with-yeastar-pbx.dita"/>
+            <topicref href="../sip-endpoints/how-to-factory-reset-gigaset-maxwell.dita"/>
+        </topichead>
+        <topichead navtitle="Grandstream">
+            <topicref href="../topic/register_grandstream.dita"/>
+            <topicref href="../sip-endpoints/provision_grandstream_phones_with_yeastar_pbx.dita"
+                product="s-series"/>
+            <topicref href="../sip-endpoints/how-to-factory-reset-grandstream-phones.dita"
+                product="s-series"/>
+        </topichead>
+        <topichead navtitle="Hikvision" product="s-series">
+            <mapref href="Hikvision-Configuration-Notes.ditamap" format="ditamap"/>
+        </topichead>
+        <topichead navtitle="Htek">
+            <topicref href="../topic/register_htek.dita"/>
+            <topicref href="../sip-endpoints/provision-htek-phones-with-yeastar-pbx.dita"
+                product="s-series"/>
+            <topicref href="../sip-endpoints/how-to-configure-htek-remote-phone-books.dita"
+                product="s-series"/>
+            <topicref href="../sip-endpoints/how-to-factory-reset-htek-phones.dita"
+                product="s-series"/>
+        </topichead>
+        <topichead navtitle="MicroSIP">
+            <topicref href="../topic/register_microsip.dita"/>
+        </topichead>
+        <topichead navtitle="Mitel">
+            <topicref href="../topic/register_mitel.dita"/>
+            <topicref href="../sip-endpoints/provision-mitel-phones-with-yeastar-pbx.dita"
+                product="s-series"/>
+            <topicref href="../sip-endpoints/how-to-factory-reset-mitel-phones.dita"
+                product="s-series"/>
+        </topichead>
+        <topichead navtitle="Panasonic">
+            <topicref href="../topic/register_panasonic.dita"/>
+            <topicref href="../sip-endpoints/provision-panasonic-phones-with-yeastar-pbx.dita"
+                product="s-series"/>
+            <topicref href="../sip-endpoints/how-to-factory-reset-panasonic-phones.dita"
+                product="s-series"/>
+        </topichead>
+        <topichead navtitle="Polycom">
+            <topicref href="../topic/register_polycom.dita"/>
+            <topicref href="../sip-endpoints/provision-polycom-phones-with-yeastar-pbx.dita"
+                product="s-series"/>
+            <topicref href="../sip-endpoints/how-to-factory-reset-polycom-phones.dita"
+                product="s-series"/>
+        </topichead>
+        <topichead navtitle="Snom">
+            <topicref href="../topic/register_snom.dita"/>
+            <topicref href="../sip-endpoints/provision-snom-phones-with-yeastar-pbx.dita"
+                product="s-series"/>
+            <topicref href="../sip-endpoints/how-to-factory-reset-snom-phones.dita"
+                product="s-series"/>
+        </topichead>
+        <topichead navtitle="Univois" product="s-series">
+            <topicref href="../sip-endpoints/provision-univois-phones-with-yeastar-pbx.dita"/>
+            <topicref href="../sip-endpoints/how-to-factory-reset-univois-phones.dita"/>
+        </topichead>
+        <topichead navtitle="Vtech">
+            <topicref href="../topic/register_vtech.dita"/>
+            <topicref href="../sip-endpoints/provision-vtech-phones-with-yeastar-pbx.dita"
+                product="s-series"/>
+            <topicref href="../sip-endpoints/how-to-factory-reset-vtech-phones.dita"
+                product="s-series"/>
+        </topichead>
+        <topichead navtitle="X-Lite">
+            <topicref href="../topic/register_xlite.dita"/>
+        </topichead>
+        <topichead navtitle="Yealink">
+            <topicref href="../topic/register_yealink.dita"/>
+            <topicref href="../sip-endpoints/provision-yealink-phones-with-yeastar-pbx.dita"
+                product="s-series"/>
+            <topicref href="../topic/auto-provisioning-template.dita" product="s-series"/>
+            <topicref href="../sip-endpoints/how-to-configure-Yealink-remote-phone-books.dita"
+                product="s-series"/>
+            <topicref href="../sip-endpoints/how-to-factory-reset-yealink-phones.dita"
+                product="s-series"/>
+        </topichead>
+        <topichead navtitle="Zoiper">
+            <topicref href="../topic/register_zoiper.dita"/>
+        </topichead>
+    </topicref>
+</map>

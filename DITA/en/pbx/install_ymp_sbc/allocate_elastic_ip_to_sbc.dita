@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_u5z_zhq_d2b">
+    <title>1) Allocate Elastic IP to SBC WAN</title>
+    <shortdesc>Allocate one Elastic IP address to SBC WAN (eth0).</shortdesc>
+    <taskbody>
+        <context id="context_i54_p2t_hfb">The following diagram represents the architecture of your
+            VPC after you've completed this step.<p><image
+                    href="../Images/SBC/aws_allocate_eip_diagram.png" id="image_igr_q2t_hfb"
+                    height="450"/></p></context>
+        <steps id="steps_eff_5zv_kcb">
+            <step>
+                <cmd>Open the Amazon EC2 console at <xref href="https://console.aws.amazon.com/ec2/"
+                        format="html" scope="external"
+                    >https://console.aws.amazon.com/ec2/</xref>.</cmd>
+            </step>
+            <step>
+                <cmd>In the navigation pane, select <b>Elastic IPs</b>, click <b>Allocate new
+                        address</b>. </cmd>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Allocate</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>On the <uicontrol>Elastic IPs</uicontrol> page, right click the new elastic IP
+                    address, choose <uicontrol>Associate address</uicontrol>.</cmd>
+                <info><image href="../Images/SBC/aws_associate_address.png" id="image_qtj_fv4_f2b"
+                        width="650"/></info>
+            </step>
+            <step>
+                <cmd>On the <uicontrol>Associate address</uicontrol> page, associate the elastic IP
+                    address to SBC eth0 interface.</cmd>
+                <info><image href="../Images/SBC/aws_asscociate_address_settings.png" width="650"
+                        id="image_vgd_lz4_f2b"/></info>
+                <choices>
+                    <choice><uicontrol>Resource type</uicontrol>: Select <uicontrol>Network
+                            interface</uicontrol>.</choice>
+                    <choice><uicontrol>Network interface</uicontrol>: Choose the SBC eth0
+                        interface.</choice>
+                    <choice><uicontrol>Private IP</uicontrol>: Choose the IP address of SBC eth0
+                        interface.</choice>
+                </choices>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Associate</uicontrol>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

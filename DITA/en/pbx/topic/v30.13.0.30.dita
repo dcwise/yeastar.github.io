@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="v30.13.0.b">
+    <title>Version 30.13.0.30</title>
+    <abstract id="rn-13.b-date"><ph id="date">Release Date: May 7, 2020</ph></abstract>
+    <body id="13.b">
+        <section id="rn-13.b-new-features">
+            <title>New features</title>
+            <p>
+                <dl>
+                    <dlentry>
+                        <dt>Yeastar CTI</dt>
+                        <dd>
+                            <p>
+                                <ul>
+                                    <li id="linkus-CTI"><ph product="s-series">Yeastar S50, S100, and S300 supported
+                                            </ph><ph product="k2 cloudpbx">Supported</ph> Linkus CTI
+                                            feature.<p>The Linkus user can control the desk phone on
+                                                <uicontrol>Linkus Desktop Client</uicontrol> to
+                                            handle a voice call.</p></li>
+                                </ul>
+                            </p>
+                        </dd>
+                    </dlentry>
+                </dl>
+                <dl>
+                    <dlentry>
+                        <dt>Busy Camp-on</dt>
+                        <dd>
+                            <p>
+                                <ul id="ul_tfh_wfw_clb">
+                                    <li>Supported <uicontrol>Busy Camp-on</uicontrol>
+                                            feature.<p>When the callee's phone is busy or there is
+                                            no answer, the caller can dial the Busy Camp-on code +
+                                            extension (*79+1000), the PBX camps on the called party,
+                                            informs the caller as soon as the callee's phone becomes
+                                            available, and re-establishes the call to save the
+                                            caller's waiting time.<note><uicontrol>Busy
+                                                  Camp-on</uicontrol> is only applicable for the
+                                                call between extensions.</note></p></li>
+                                </ul>
+                            </p>
+                        </dd>
+                    </dlentry>
+                    <dlentry>
+                        <dt>Fax in PDF</dt>
+                        <dd>
+                            <ul id="ul_rgf_zzb_dlb">
+                                <li>With <uicontrol>Fax to Email</uicontrol> enabled, the PBX would
+                                    send FAX files in PDF format to user's email.</li>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                </dl>
+                <dl product="k2 cloudpbx">
+                    <dlentry>
+                        <dt>Opus codec</dt>
+                        <dd>
+                            <ul id="ul_r24_zzb_dlb">
+                                <li>Added support for Opus codec.</li>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                </dl>
+            </p>
+        </section>
+        <section id="rn-13.b-improvements">
+            <title>Improvements and bug fixes</title>
+            <p>
+                <dl product="k2">
+                    <dlentry>
+                        <dt>System Security/Stability</dt>
+                        <dd>
+                            <ul id="ul_pgp_f1x_1lb">
+                                <li>Fixed the issue of <uicontrol>User Permission</uicontrol>: The
+                                        <uicontrol>Granting Privilege</uicontrol> page would be
+                                    stuck when choosing an extension to grant privilege.</li>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                </dl>
+                <dl>
+                    <dlentry>
+                        <dt>Extensions</dt>
+                        <dd>
+                            <ul id="ul_hhx_f1x_1lb">
+                                <li product="s-series k2">Added support for extensions to enable
+                                    both <uicontrol>Linkus Client</uicontrol> and
+                                        <uicontrol>Mobility Extension</uicontrol> feature.</li>
+                                <li>Optimized the Voicemail name: The name of the voicemail received
+                                    via email consists of caller ID, caller name and file ID.</li>
+                                <li product="s-series">Fixed the issue of
+                                        <uicontrol>Extension</uicontrol> page: When editing an
+                                    extension on the Presence page,the <uicontrol>Call
+                                        Forwarding</uicontrol> options displayed incorrectly, and
+                                    caused the configuration failure.</li>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                    <dlentry>
+                        <dt>Contacts</dt>
+                        <dd>
+                            <ul id="autop-contacts">
+                                <li>Linkus Desktop Client supports <uicontrol>Contacts</uicontrol>
+                                        feature.<ul id="ul_rcj_3wj_plb">
+                                        <li>Linkus Windows Desktop: 1.10.3 or later.</li>
+                                        <li>Linkus macOS Desktop: 1.10.3 or later.</li>
+                                    </ul></li>
+                                <li>
+                                    <?oxy_comment_start author="carol" timestamp="20200324T101158+0800" comment="Contacts" flag="done"?>
+                                    <p><ph product="s-series">Yeastar S50, S100, and S300
+                                            supported</ph><ph product="cloudpbx k2">Supported</ph>
+                                        to add PBX <uicontrol>Contacts</uicontrol> to Yealink phones
+                                        by auto provisioning.</p>
+                                    <p>The supported Yealink phones:</p>
+                                    <p>
+                                        <ul id="ul_vt1_svv_clb">
+                                            <li>SIP-T19P_E2, SIP-T21P_E2, SIP-T23P, SIP-T23G,
+                                                SIP-T27G, SIP-T29G.</li>
+                                            <li>SIP-T40P, SIP-T40G, SIP-T41S, SIP-T41P, SIP-T41U,
+                                                SIP-T42S, SIP-T42G, SIP-T42U, SIP-T43U, SIP-T46S,
+                                                SIP-T46G, SIP-T46U, SIP-T48S, SIP-T48G,
+                                                SIP-T48U.</li>
+                                            <li id="yealink-contacts">SIP-T52S, SIP-T54S, SIP-T53,
+                                                SIP-T53W, SIP-T54W, SIP-T56A, SIP-T57W,
+                                                SIP-T58A.</li>
+                                        </ul>
+                                    </p>
+                                    <note>
+                                        <ul id="ul_y5z_5vv_clb">
+                                            <li>For <uicontrol>Company Contacts</uicontrol>: The
+                                                phone supports up to 1000 contacts.</li>
+                                            <li>For <uicontrol>Personal Contacts</uicontrol>: If
+                                                multiple accounts are registered on the phone, the
+                                                personal contact of the first account is
+                                                automatically configured by default.</li>
+                                        </ul>
+                                    </note><?oxy_comment_end?>
+                                </li>
+                            </ul>
+                            <ul id="contacts">
+                                <li>Optimized the <uicontrol>Contacts</uicontrol> setting: The
+                                        <uicontrol>Last Name</uicontrol> field is not required when
+                                    adding a contact.</li>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                    <dlentry>
+                        <dt>Trunks</dt>
+                        <dd>
+                            <ul id="ul_l3b_g1x_1lb">
+                                <li product="k2">Optimized the <uicontrol>DID</uicontrol>
+                                    setting：Each trunk supports up to 64 DID numbers.</li>
+                                <li>Fixed the <uicontrol>Fax</uicontrol> issue: The Fax transmission
+                                    would be failed when <uicontrol>T.38</uicontrol> was enabled for
+                                    the trunk.</li>
+                                <li>Fixed the issue of importing trunks: If the
+                                        <uicontrol>Authentication Name</uicontrol> in trunk file
+                                    contained @ character, the trunk import would fail.</li>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                </dl>
+                <dl>
+                    <dlentry>
+                        <dt>SIP Relevant</dt>
+                        <dd>
+                            <ul id="ul_vys_ccx_1lb">
+                                <li><ph product="s-series">For Yeastar S50, S100, and S300,
+                                        added</ph><ph product="k2 cloudpbx">Added</ph> support for
+                                        <uicontrol>uaCSTA</uicontrol> feature (<menucascade>
+                                        <uicontrol>PBX</uicontrol>
+                                        <uicontrol> General</uicontrol>
+                                        <uicontrol> SIP</uicontrol>
+                                        <uicontrol> Advanced</uicontrol>
+                                        <uicontrol> SIP</uicontrol>
+                                        <uicontrol> Enable uaCSTA connection</uicontrol>
+                                    </menucascade>).<p>If the user wants to control the desk phone
+                                        on <uicontrol>Linkus Desktop Client</uicontrol> by
+                                            <uicontrol>uaCSTA</uicontrol>, you need to enable
+                                        uaCSTA.</p></li>
+                                <li product="s-series k2">Fixed the issue of call transfer: There
+                                    was no sound after the inbound call was transferred twice.</li>
+                                <li><ph product="s-series">For Yeastar S50, S100, and S300,
+                                        removed</ph><ph product="k2 cloudpbx">Removed</ph> the
+                                        <uicontrol>DND Status Synchronization</uicontrol> option. (<menucascade>
+                                        <uicontrol>PBX</uicontrol>
+                                        <uicontrol> General</uicontrol>
+                                        <uicontrol> SIP</uicontrol>
+                                        <uicontrol> Advanced</uicontrol>
+                                    </menucascade>)</li>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                </dl>
+                <dl product="s-series k2">
+                    <dlentry>
+                        <dt>Multisite Interconnect</dt>
+                        <dd>
+                            <ul id="ul_e3k_g1x_1lb">
+                                <li product="s-series">Fixed the compatibility issue between
+                                        <uicontrol>Multisite Interconnect</uicontrol> and
+                                        <uicontrol>Call Park</uicontrol>: When <uicontrol>Multiple
+                                        Interconnect</uicontrol> was enabled, the PBX did not
+                                    forward the parked inbound call to the specified destination
+                                    after the parking timeout.</li>
+                                <li>Fixed the compatibility issue between <uicontrol>Multisite
+                                        Interconnect</uicontrol> and <uicontrol>Call
+                                        Transfer</uicontrol>: When using <uicontrol>Multisite
+                                        Interconnect</uicontrol> feature, the external call could
+                                    not be blindly transferred. </li>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                </dl>
+                <dl>
+                    <dlentry>
+                        <dt>Call Routes</dt>
+                        <dd>
+                            <ul id="ul_kzy_g1x_1lb">
+                                <li>
+                                    <p>Added support for assigning an external number as the
+                                            <uicontrol>Destination</uicontrol> of the inbound
+                                        route.</p>
+                                    <p>The inbound call to the trunk can be forwarded to the
+                                        external number directly.</p>
+                                </li>
+                                <li>Fixed the issue of <uicontrol>Inbound Routes</uicontrol>: For an
+                                    inbound route, if the number of assigned time conditions was
+                                    more than 9, the <uicontrol>Feature Code</uicontrol> would be
+                                    duplicated.</li>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                </dl>
+                <dl>
+                    <dlentry>
+                        <dt>Call Features</dt>
+                        <dd>
+                            <ul id="ul_pz4_h1x_1lb">
+                                <li>Added support for assigning an external number as the
+                                    destination of IVR <uicontrol>Key Press</uicontrol>.</li>
+                                <li>Fixed the ring strategy issue for <uicontrol>Queue</uicontrol>
+                                    and <uicontrol>Ring Group</uicontrol>: When the agents set
+                                        <uicontrol>Call Forwarding</uicontrol> rule to
+                                        <uicontrol>Always</uicontrol> for their extensions, the
+                                    phone would ring when receiving calls from
+                                        <uicontrol>Queue</uicontrol> or <uicontrol>Ring
+                                        Group</uicontrol> .</li>
+                                <li>Fixed the compatibility issue between
+                                        <uicontrol>Queue</uicontrol> and <uicontrol>Call
+                                        Park</uicontrol>: When the queue agents parked an inbound
+                                    call, and did not retrieve the call before parking timeout, the
+                                    PBX would forward the call to the caller.</li>
+                                <li>Fixed the <uicontrol>Queue</uicontrol> issue: On
+                                        <uicontrol>Caller Experience Settings</uicontrol> page, set
+                                    the Event key to <uicontrol>None</uicontrol>. Saved the
+                                    configuration and re-entered the <uicontrol>Caller Experience
+                                        Settings</uicontrol> page, the <uicontrol>Key
+                                        Destination</uicontrol> option was still displayed.</li>
+                                <li><?oxy_comment_start author="carol" timestamp="20200324T100857+0800" comment="Call features" flag="done"?>Fixed
+                                    the issue of status-monitoring on queue agents: If the extension
+                                        <uicontrol>Caller ID</uicontrol> was different from
+                                        <uicontrol>Extension</uicontrol>, the BLF could not monitor
+                                    the status of queue agents.<?oxy_comment_end?></li>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                </dl>
+                <dl>
+                    <dlentry>
+                        <dt>Call Recording</dt>
+                        <dd>
+                            <ul id="ul_tsz_2cx_1lb">
+                                <li>
+                                    <p>Optimized the <uicontrol>Recording</uicontrol> feature: </p>
+                                    <p>Paused recording by dialling the <uicontrol>Auto Recording
+                                            Switch</uicontrol> code *00 during a call, the call
+                                        would not be recorded after transferring or retrieving the
+                                        parked. To resume the recording, dial the <uicontrol>Auto
+                                            Recording Switch</uicontrol> code *00 again.</p>
+                                </li>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                </dl>
+                <dl>
+                    <dlentry>
+                        <dt>User Permission</dt>
+                        <dd>
+                            <ul id="ul_zt1_gcx_1lb">
+                                <li>
+                                    <p>Fixed the issue of <uicontrol>CDR Permission</uicontrol>: </p>
+                                    <p>If assigning a user the management permission of an extension
+                                        group's CDR, the user could not view the call records of
+                                        group members.</p>
+                                </li>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                </dl>
+                <dl>
+                    <dlentry>
+                        <dt>Date &amp; Time</dt>
+                        <dd>
+                            <ul id="ul_cz2_gcx_1lb">
+                                <li>Fixed the issue of <uicontrol>NTP Server</uicontrol>: After
+                                    configuring the <uicontrol>NTP Server</uicontrol>, the PBX sent
+                                    NTP request to other NTP servers.</li>
+                                <li>Fixed the issue of <uicontrol>Time Zone</uicontrol> settings:
+                                    When the <uicontrol>Daylight Saving Time</uicontrol> was set to
+                                        <uicontrol>Automatic</uicontrol>, the Time
+                                        <uicontrol>Zone</uicontrol> setting would be incorrect.</li>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                </dl>
+                <dl product="cloudpbx">
+                    <dlentry>
+                        <dt>Storage</dt>
+                        <dd>
+                            <ul id="ul_xyh_hcx_1lb">
+                                <li>Fixed the issue that the recording files was not cleaned up
+                                    automatically.</li>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                </dl>
+                <dl product="s-series k2">
+                    <dlentry>
+                        <dt>SNMP</dt>
+                        <dd>
+                            <ul id="ul_xvy_hcx_1lb">
+                                <li>Optimized the OID MIB: The type of OID
+                                        <uicontrol>concurrentCall.0</uicontrol> was changed to
+                                        <uicontrol>Integer</uicontrol>.</li>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                </dl>
+                <dl>
+                    <dlentry>
+                        <dt>CDR and Recording</dt>
+                        <dd>
+                            <ul id="ul_yrk_3cx_1lb">
+                                <li product="k2">Added support for storing up to 9.99 million call
+                                        records.<note>When storing a large number of call records,
+                                        we recommend you to query call records on the standby PBX.
+                                    </note></li>
+                                <li>Fixed the CDR issue: Only one call record was generated when the
+                                    ring group agent blindly transferred an inbound call.</li>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                </dl>
+                <dl product="k2">
+                    <dlentry>
+                        <dt>Maintenance</dt>
+                        <dd>
+                            <ul id="ul_mj4_4bw_clb">
+                                <li>When the system starts up, you can select <uicontrol>web admin
+                                        reset</uicontrol> to reset the web login password, enable
+                                    SSH and reset the SSH password.</li>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                </dl>
+                <dl>
+                    <dlentry>
+                        <dt>API</dt>
+                        <dd>
+                            <ul id="API">
+                                <li>Added support for API 2.0 interface.</li>
+                                <li product="s-series">Fixed the CDR issue: The outbound call made
+                                    via IVR did not generate a call record.</li>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                </dl>
+                <dl>
+                    <dlentry>
+                        <dt>Auto Provisioning</dt>
+                        <dd>
+                            <ul id="autop">
+                                <?oxy_comment_start author="carol" timestamp="20200324T100657+0800" comment="顺序
+
+新增
+优化
+bug" flag="done"?>
+                                <li>
+                                    <p>Added support for automatically enabling
+                                            <uicontrol>uaCSTA</uicontrol> feature by auto
+                                        provisioning the following phones:<ul id="ul_ghl_gyb_flb">
+                                            <li>Yealink: SIP-T46S, SIP-T54W, SIP-T40P, SIP-T27G,
+                                                SIP-T40G, SIP-T54S,SIP-T46G, SIP-T53, SIP-T52S,
+                                                SIP-T23G, SIP-T53W, SIP-T41U, SIP-T42S,SIP-T57W,
+                                                SIP-T48S, SIP-T42G, SIP-T42U, SIP-VP59, SIP-T23P,
+                                                SIP-T43U,SIP-T46U, SIP-T58, SIP-T48G, SIP-T21PE2,
+                                                SIP-T56A, SIP-T29G, SIP-T41P,SIP-T48U and
+                                                SIP-T41S.</li>
+                                            <li product="cloudpbx">Fanvil: X1, X1P, X2P, X2C, X3S,
+                                                X3SP, X3G, X4, X4G, X5S and X6.</li>
+                                            <li product="s-series k2">X1/ X1P, X1S/ X1SP, X1SG, X2P,
+                                                X2C, X3S/ X3SP/ X3G, X3SG, X3U, X4/ X4G, X4U, X4SG,
+                                                X5U, X5S, X6, X6U, X7, X7A, X7C, X210 and
+                                                X210i.</li>
+                                        </ul></p>
+                                </li>
+                                <li>Added support for Yealink SIP-T42U.</li>
+                                <li product="k2">
+                                    <p>Added support for Gigaset N670 IP PRO and N870 IP PRO.</p>
+                                </li>
+                                <li product="k2">
+                                    <p>Added support for Tiptel phones: 3310, 3320, 3330, and
+                                        3340.</p>
+                                </li>
+                                <li product="s-series k2">Added support for Tiptel phones: 3310,
+                                    3320, 3330 and 3340.</li>
+                                <li>For Yealink phones: The configurable number of the
+                                        <uicontrol>Remote Phone Book</uicontrol> is changed to
+                                    three.</li>
+                                <li product="cloudpbx">Optimized settings of Fanvil phones ( X4 and
+                                    X4G): Add the <uicontrol>Local Phone Book</uicontrol> setting in
+                                        <uicontrol>Features</uicontrol> tab.</li><?oxy_comment_end?>
+                                <li product="s-series" id="italian-language">Updated Italian user
+                                    interface.</li>
+                                <li product="k2">
+                                    <p>Fixed Fanvil X7 issue: Auto provisioning for Side Keys didn't
+                                        take effect.</p>
+                                </li>
+                                <li product="k2">
+                                    <p>Fixed Fanvil X210 issue: Auto provision for the 92th Function
+                                        Key didn't take effect. </p>
+                                </li>
+                                <li product="k2">
+                                    <p>Fixed the Custom Template issue: The Fanvil X1, X1S, and X1SG
+                                        options were not available when configuring the custom
+                                        template.</p>
+                                </li>
+                                <li product="k2">
+                                    <p>Fixed Grandstream （2135, 2170）issue: Auto provision for
+                                        Account Label didn't take effect.</p>
+                                </li>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                </dl>
+                <dl product="s-series">
+                    <dlentry>
+                        <dt id="VPN">VPN Server</dt>
+                        <dd>
+                            <ul id="ul_bwr_lmf_jlb">
+                                <li>Fixed the issue of <uicontrol>Static Routes</uicontrol>: After
+                                    the PBX or the <uicontrol>VPN Server</uicontrol> restarted, the
+                                    manually added static routes of OpenVPN would be lost.</li>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                </dl>
+            </p>
+            <dl product="s-series k2">
+                <dlentry>
+                    <dt>Hotel</dt>
+                    <dd>
+                        <ul>
+                            <li>Fixed the issue of <uicontrol>Extension</uicontrol> display: When
+                                the extension user with administrator privileges managed a hotel
+                                room, the assignable <uicontrol>Extension</uicontrol> was displayed
+                                incorrectly, and the room cannot be checked in.</li>
+                            <li product="s-series">Updated Italian user interface.</li>
+                        </ul>
+                    </dd>
+                </dlentry>
+            </dl>
+        </section>
+        <dl>
+            <dlentry>
+                <dt>Linkus Server</dt>
+                <dd>
+                    <p>
+                        <ul id="ul_alj_fpv_hlb">
+                            <li product="s-series">Updated Italian user interface.</li>
+                            <li>Fixed the issue of the push notification for Linkus calls: With
+                                    <uicontrol>Presence</uicontrol> set to <uicontrol>Do Not
+                                    Disturb</uicontrol>, members in a Ring Group could still receive
+                                incoming calls.</li>
+                            <li>Fixed the display issue of extensions: On Linkus Mobile client, not
+                                all registered extensions were displayed on
+                                    <uicontrol>Extension</uicontrol> list.</li>
+                            <li>Fixed the issue that members in a queue didn't receive notifications
+                                when there are incoming calls.</li>
+                        </ul>
+                    </p>
+                </dd>
+            </dlentry>
+        </dl>
+        <dl product="s-series">
+            <dlentry>
+                <dt>Conference Panel</dt>
+                <dd>
+                    <ul>
+                        <li>Updated Italian user interface.</li>
+                    </ul>
+                </dd>
+            </dlentry>
+        </dl>
+        <dl product="s-series">
+            <dlentry>
+                <dt>char utile h+ Integration</dt>
+                <dd>
+                    <ul>
+                        <li>Updated Italian user interface.</li>
+                    </ul>
+                </dd>
+            </dlentry>
+        </dl>
+        <dl product="s-series">
+            <dlentry>
+                <dt>Billing</dt>
+                <dd>
+                    <ul>
+                        <li>Updated Italian user interface.</li>
+                    </ul>
+                </dd>
+            </dlentry>
+        </dl>
+        <dl product="cloudpbx s-series">
+            <dlentry>
+                <dt>Zoho Integration</dt>
+                <dd>
+                    <ul>
+                        <li>Improved functional stability.</li>
+                    </ul>
+                </dd>
+            </dlentry>
+        </dl>
+    </body>
+</topic>

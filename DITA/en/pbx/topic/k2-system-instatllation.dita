@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="k2-system-instatllation">
+    <title>K2 System Installation</title>
+    <body>
+        <p>You have
+            <?oxy_delete author="carol" timestamp="20190927T101050+0800" content="multiple choices"?><?oxy_insert_start author="carol" timestamp="20190927T101050+0800"?>two
+            methods<?oxy_insert_end?> to install the Yeastar K2 IPPBX system:</p>
+        <p>
+            <ul id="ul_upc_b1y_b3b">
+                <li>Install the Yeastar K2 system on a physical machine.<p>Before installing K2
+                        system, you need to write K2 image in a USB. </p></li>
+                <li>Install the Yeastar K2 system on a virtual machine.</li>
+            </ul>
+        </p>
+    </body>
+</topic>
+<?oxy_options track_changes="on"?>

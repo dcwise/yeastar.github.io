@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_p3b_1p4_4hb">
+    <title>Version 30.10.0.67</title>
+    <abstract>Released Date: May 14, 2019</abstract>
+    <body>
+        <section id="section_fws_2p4_4hb">
+            <title>NEW FEATURES</title>
+            <p><image href="../Images/horizon.png" id="image_xcc_4wb_kfb"/></p>
+            <p>
+                <dl>
+                    <dlentry id="30.10.0.B-new-features">
+                        <dt>Voicemail Sharing</dt>
+                        <dd>
+                            <p>In the new version, you have two options to manage voicemail messages
+                                centrally and efficiently:</p>
+                            <ul id="ul_bwq_lp4_4hb">
+                                <li><xref
+                                        href="manage-voicemail-messages-centrally.dita#topic_um5_q11_4hb/monitor-voicemail-status"
+                                        >Subscribe BLF keys on a phone to monitor multiple
+                                        extensions’ voicemail status</xref>.</li>
+                                <li><xref
+                                        href="manage-voicemail-messages-centrally.dita#topic_um5_q11_4hb/receive-voicemail-from-a-mailbox"
+                                        >Receive multiple extensions’ voicemail messages from one
+                                        mailbox.</xref></li>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                </dl>
+            </p>
+        </section>
+        <section id="section_zrw_jvt_4hb">
+            <title>OPTIMIZATION</title>
+            <p><image href="../Images/horizon.png" id="image_lhk_kvt_4hb"/><dl>
+                    <dlentry>
+                        <dt>Stability &amp; Security</dt>
+                        <dd>
+                            <ul id="ul_ulv_zyt_4hb">
+                                <li>Improved the system stability: The system might hang after
+                                    changing and applying configurations on web interface.</li>
+                                <li>Optimized the system startup process to ensure that a large
+                                    number of SIP extension can be registered.</li>
+                            </ul>
+                        </dd>
+                        <dd>
+                            <ul id="ul_ok3_1zt_4hb">
+                                <li>Improved the stability of Hot Standby. </li>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                </dl></p>
+            <dl>
+                <dlentry>
+                    <dt>Recording &amp; Storage</dt>
+                    <dd>
+                        <ul>
+                            <li>Fixed the issue that the recording contents would be lost.</li>
+                            <li>Fixed the recording issue: When recording files were stored in a
+                                network disk, certain recording files could not be played if the
+                                network disk was deleted and recreated. </li>
+                            <li>Fixed the storage issue: Format external storage devices would
+                                fail.</li>
+                        </ul>
+                    </dd>
+                </dlentry>
+            </dl>
+            <dl>
+                <dlentry>
+                    <dt>System Logs</dt>
+                    <dd>
+                        <ul>
+                            <li>The system will automatically trace API relevant logs and generate a
+                                    <filepath>apisrv.log</filepath> file which is contained in the
+                                compressed system log file.</li>
+                            <li>Optimized <uicontrol>Logs AutoCleanup</uicontrol> setting: The
+                                default setting of <uicontrol>Max Size of Total Logs</uicontrol> is
+                                10MB.</li>
+                        </ul>
+                    </dd>
+                </dlentry>
+            </dl>
+            <dl>
+                <dlentry>
+                    <dt>SIP Relevant</dt>
+                    <dd>
+                        <ul id="ul_ehn_gwt_4hb">
+                            <li>Optimized SIP trunk: Added supported for getting DID from
+                                    <uicontrol>P-Called-Party-ID</uicontrol> header.</li>
+                            <li>Added global <uicontrol>Inband Progress</uicontrol> setting (<menucascade>
+                                    <uicontrol>PBX</uicontrol>
+                                    <uicontrol>General</uicontrol>
+                                    <uicontrol>SIP</uicontrol>
+                                    <uicontrol>Advanced</uicontrol>
+                                </menucascade>).<p>
+                                    <ul id="ul_zkg_2zt_4hb">
+                                        <li><b>Enable Inband Progress:</b> PBX will send a 183
+                                            Session Progress to the extension when told to indicate
+                                            ringing and will immediately start sending ringing as
+                                            audio.</li>
+                                        <li><b>Disable Inband Progress:</b> PBX will send a 180
+                                            Ringing to the extension when told to indicate ringing
+                                            and will NOT send it as audio.</li>
+                                    </ul>
+                                </p></li>
+                            <li>Optimized 180 Ringing response messages to INVITE packet: The
+                                Contact header contains information of username and SIP server.<p>In
+                                    the earlier version, the Contact header of 180 message only
+                                    contains information of SIP server.</p></li>
+                        </ul>
+                        <ul id="ul_fhn_gwt_4hb">
+                            <li>Optimized <uicontrol>All Busy Mode for SIP Forking</uicontrol>: PBX
+                                will send “486 Busy” to the caller to indicate that the callee is
+                                    busy.<p>In the earlier version, PBX would sent “603 Decline” to
+                                    the caller. </p></li>
+                        </ul>
+                        <ul id="ul_ghn_gwt_4hb">
+                            <li>Fixed <uicontrol>All Busy Mode for SIP Forking</uicontrol> issue:
+                                The <uicontrol>All Busy Mode for SIP Forking</uicontrol> setting
+                                didn’t take effect on ring group members.</li>
+                            <li>Fixed the call transfer issue: When <uicontrol>All Busy Mode for SIP
+                                    Forking</uicontrol> was enabled, the call could not be
+                                transferred to an extension whose call was picked up by other
+                                user.</li>
+                            <li>Optimized <uicontrol>DND Status Synchronization</uicontrol> setting:
+                                    <uicontrol>DND Status Synchronization</uicontrol> is disabled by
+                                factory default settings</li>
+                            <li>Fixed the SIP issue: If the <uicontrol>Send Remote Party
+                                    ID</uicontrol> setting and <uicontrol>Send P Asserted
+                                    Identity</uicontrol> setting were enabled, SIP calls would be
+                                disconnected automatically.</li>
+                            <li>Fixed the SIP issue: The inbound call from SIP trunk to an extension
+                                might fail.</li>
+                            <li>Fixed the SIP issue: During a call, no sound would be heard from the
+                                ITSP because PBX sent a RTP(CN) packet to the ITSP.</li>
+                        </ul>
+                    </dd>
+                </dlentry>
+            </dl>
+            <dl>
+                <dlentry>
+                    <dt>Extensions</dt>
+                    <dd>
+                        <ul>
+                            <li>Fixed the extension issue: User Agents settings would be incorrect
+                                after edition and apply.</li>
+                        </ul>
+                    </dd>
+                </dlentry>
+            </dl>
+            <dl>
+                <dlentry>
+                    <dt>Trunks</dt>
+                    <dd>
+                        <ul>
+                            <li>The maximum length of <uicontrol>DOD Name</uicontrol> is limited to
+                                31 characters. <p>In the earlier version, the maximum length of DOD
+                                    Name was 15 characters.</p></li>
+                        </ul>
+                    </dd>
+                </dlentry>
+            </dl>
+            <dl>
+                <dlentry>
+                    <dt>Feature Codes</dt>
+                    <dd>
+                        <ul>
+                            <li>Fixed the issue that dialing *071 to disable <uicontrol>Forward All
+                                    Calls</uicontrol> could not take effect.</li>
+                            <li>Fixed the issue that disabling feature codes on web interface would
+                                fail.</li>
+                        </ul>
+                    </dd>
+                </dlentry>
+            </dl>
+            <p>
+                <dl>
+                    <dlentry>
+                        <dt>Web Interface</dt>
+                        <dd>
+                            <ul>
+                                <li>Updated Russian and Italian web interface.</li>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                </dl>
+            </p>
+            <dl>
+                <dlentry>
+                    <dt>CDR</dt>
+                    <dd>
+                        <ul>
+                            <li>Fixed CDR issue: The callee’s caller ID name wasn’t displayed in CDR
+                                if the callee’s extension was unregistered.</li>
+                        </ul>
+                    </dd>
+                </dlentry>
+            </dl>
+        </section>
+        <dl>
+            <dlentry>
+                <dt>API</dt>
+                <dd>
+                    <ul id="api-s-30.10.0.67">
+                        <li>Improved the API stability.</li>
+                        <li>Fixed the CDR download issue: A “504 gateway timeout” error occurred
+                            when requesting to download a CDR file.</li>
+                        <li>Fixed the CDR issue: If Control Inbound Call Destination was enabled,
+                            the Caller ID was incorrect when the inbound call was made through a
+                            VoIP Account trunk. </li>
+                        <li>Fixed the CDR issue: The call duration was incorrect.</li>
+                    </ul>
+                </dd>
+            </dlentry>
+            <dlentry>
+                <dt>Auto Provisioning</dt>
+                <dd>
+                    <ul id="ul_ipj_4zt_4hb">
+                        <li>Updated Russian and Italian web interface.</li>
+                        <li>Optimized Auto Provisioning template: Blank spaces are allowed in the
+                                <uicontrol>Name</uicontrol> filed.</li>
+                        <li>Optimized the compatibility of Auto Provisioning and Hot Standby: To
+                            ensure that IP phones remain registered, the auto provisioning
+                            configurations are updated automatically according to the Hot Standby
+                            configurations.</li>
+                        <li>Optimized DSS Key Settings of Fanvil X6: Special character &amp; is
+                            allowed in the URL <uicontrol>Value</uicontrol> field.</li>
+                        <li>Optimized Auto Provisioning template: A template error would occur if
+                            the special character &amp; was contained in the customized
+                            parameters.</li>
+                        <li>Fixed the Yealink Auto Provisioning: The phone web page could not be
+                            accessed if the special character ! was contained in the Admin
+                            Password.</li>
+                    </ul>
+                </dd>
+            </dlentry>
+            <dlentry>
+                <dt>Other Apps</dt>
+                <dt>QueueMetrics Integration, VPN Server, LDAP Server, Hotel, Conference Panel</dt>
+                <dd>
+                    <p>
+                        <ul id="ul_cgw_qzt_4hb">
+                            <li>Updated Russian and Italian web interface.</li>
+                        </ul>
+                    </p>
+                </dd>
+            </dlentry>
+        </dl>
+    </body>
+</topic>

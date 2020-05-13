@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="zoho-integration-preparations">
+    <title>Preparations</title>
+    <shortdesc>Before integrating Zoho
+        <?oxy_comment_start author="carol" timestamp="20191125T090607+0800" comment="语法错误applications" flag="done"?>application<?oxy_comment_end?>s
+        and <ph keyref="product_name"/>, you need to
+        <?oxy_comment_start author="carol" timestamp="20191125T090546+0800" comment="语法错误 forward" flag="done"?>forward<?oxy_comment_end?>
+        the web access port of the PBX according to your network environment and install HTTPS
+        certificates to secure your network.</shortdesc>
+    <body>
+        <section id="section_mbb_5p5_sjb">
+            <title>Port forwarding</title>
+            <p>Zoho communicates with <ph keyref="product_name"/> via the following designated
+                ports. You must forward the  web access port of your PBX to one of the following
+                external ports.</p>
+            <p>
+                <dl>
+                    <dlentry>
+                        <dt>Supported external
+                            <?oxy_comment_start author="carol" timestamp="20191125T091704+0800" comment="使用dl dd 元素改一下文本排版，
+提炼标题，有助于用户清晰阅读" flag="done"?>ports<?oxy_comment_end?></dt>
+                        <dd>
+                            <ul>
+                                <li>HTTPS 8040</li>
+                                <li>HTTP 8040</li>
+                                <li>HTTP 80</li>
+                                <li>HTTPS 443</li>
+                            </ul>
+                        </dd>
+                        <dd>
+                            <note><?oxy_comment_start author="carol" timestamp="20191125T091921+0800" comment="这一句位置移动了一下，放在端口列表下面比较合适。" flag="done"?>We
+                                recommend that you use HTTPS 8040 for secure communication, and
+                                    <xref href="#zoho-prepare/https-set" format="dita">upload HTTPS
+                                    certificate</xref> to the PBX.<?oxy_comment_end?></note>
+                            <note type="important">After you forward the port, please set the
+                                password of web interface with high security to prevent from
+                                attacking.</note>
+                        </dd>
+                    </dlentry>
+                </dl>
+                <dl>
+                    <dlentry>
+                        <dt>Port forwarding example</dt>
+                        <dd>The following figure gives a port forwarding example: Forward the
+                            internal port HTTPS 443 to external port HTTPS 8040. </dd>
+                        <dd>In this way, Zoho communicates with <ph keyref="product_name"/> via
+                            HTTPS 8040.</dd>
+                        <dd><image href="../Images/zoho/zoho-port-forwarding-en.png" width="650"
+                                id="image_hfh_35c_5jb"/><note>Zoho uses appcenter.yeastar.com to
+                                interact with <ph keyref="product_name"/>. If the PBX is behind the
+                                firewall, add <filepath>appcenter.yeastar.com</filepath> to the
+                                firewall whitelist.</note></dd>
+                    </dlentry>
+                </dl>
+            </p>
+        </section>
+        <section id="https-set">
+            <title>HTTPS Certificate configuration</title>
+            <?oxy_comment_start author="carol" timestamp="20191125T095019+0800" comment="重新理了一下逻辑。
+
+1. 使用HTTPS 协议一定要上传 HTTPS证书。
+2. 要跟zoho 认证，一定要购买官方证书。" flag="done"?>
+            <p>If your PBX uses HTTPS protocol, you need to upload the HTTPS certificates and keys
+                to your PBX. </p>
+            <p>
+                <note>The HTTPS certificates and keys should be bought from an official
+                    organization, or the certifications would not be authenticated by Zoho.
+                    <?oxy_comment_end?></note>
+            </p>
+            <p>
+                <ol id="ol_e1q_xvw_rjb">
+                    <li>Confirm the PBX domain, and purchase the HTTPS certificate.</li>
+                    <li>Make a certificate in <filepath>pem</filepath> format.<ol
+                            id="ol_t3x_q4p_tjb">
+                            <li>Create a new text file with a <filepath>.pem</filepath> extension.
+                                for example, <filepath>https.pem</filepath>.</li>
+                            <?oxy_comment_start author="carol" timestamp="20191125T095608+0800" comment="语法问题：
+certificate and key file=== certificate file and key file 是两个文件。
+
+copy to text file ===== paste to text file
+
+content 应该加s
+
+描述问题：应该指明粘贴的顺序。
+ 
+ " flag="done"?>
+                            <li>Copy and paste the certificate<?oxy_comment_end?> contents and key
+                                contents to the <filepath>https.pem</filepath> file.<p><image
+                                        href="../Images/zoho/zoho-pem.png" width="500"
+                                        id="image_vlc_kqp_tjb"/></p></li>
+                        </ol></li>
+                    <li>Install the HTTPS certificate on your PBX.<ol id="ol_tg2_gww_rjb">
+                            <li>Log in the
+                                <?oxy_comment_start author="carol" timestamp="20191125T100037+0800" comment="指明位置" flag="done"?>PBX<?oxy_comment_end?>
+                                web interface, go to <menucascade>
+                                    <uicontrol>Settings</uicontrol>
+                                    <uicontrol> System</uicontrol>
+                                    <uicontrol> Security</uicontrol>
+                                    <uicontrol> Certificate</uicontrol>
+                                </menucascade>.</li>
+                            <li>Click <uicontrol>Upload</uicontrol>.</li>
+                            <li>In the <uicontrol>Type</uicontrol> drop-down list, select
+                                    <uicontrol>PBX Certificate</uicontrol>.</li>
+                            <li>Click <uicontrol>Browser</uicontrol> to select the
+                                    <filepath>pem</filepath> certificate you made, and click
+                                    <uicontrol>Upload</uicontrol>.<p><image
+                                        href="../Images/zoho/zoho-upload-cer.png"
+                                        id="image_kr1_syw_rjb"/></p></li>
+                            <li>Go to <menucascade>
+                                    <uicontrol>Settings</uicontrol>
+                                    <uicontrol> System</uicontrol>
+                                    <uicontrol> Security</uicontrol>
+                                    <uicontrol> Service</uicontrol>
+                                </menucascade>.</li>
+                            <li>In the <uicontrol>Protocol</uicontrol> drop-down list, select
+                                    <uicontrol>HTTPS</uicontrol>.</li>
+                            <li>In the <uicontrol>Certificate</uicontrol> drop-down list, select the
+                                uploaded
+                                        certificate.<p><?oxy_comment_start author="carol" timestamp="20191125T100155+0800" comment="这个截图跟上面的拓扑图不一致。
+
+建议全文统一使用8088 或者 443。全文的描述和例子应该一致。" flag="done"?><image
+                                        href="../Images/zoho/zoho-https-cer.png" width="650"
+                                        id="image_h1d_3yw_rjb"/><?oxy_comment_end?></p></li>
+                            <li>Click <uicontrol>Save</uicontrol>.</li>
+                        </ol></li>
+                </ol>
+            </p>
+        </section>
+    </body>
+</topic>

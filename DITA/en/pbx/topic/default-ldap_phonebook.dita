@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_ts4_5l1_mdb">
+    <title>LDAP Phonebook</title>
+    <shortdesc/>
+    <conbody>
+        <p>The LDAP server has a default LDAP phonebook with <b>PBX DN</b>
+            <ph product="s-series">“ou=pbx,dc=pbx,dc=com”</ph><ph product="cloudpbx">,<ph> based on
+                    the domain name of <ph keyref="product_name"/></ph></ph>, which is synchronized
+            with the extensions on the <ph keyref="product_name"/>.</p>
+        <p>Click <image href="../Images/ui_icons/edit.png" width="20" id="image_z5g_1zg_mdb"/> to
+            view the phonebook “pbx”. </p>
+        <p>
+            <note>
+                <p>You cannot add or delete the contacts in the default phone book directly. Go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol>PBX</uicontrol>
+                        <uicontrol>Extensions</uicontrol>
+                    </menucascade> to configure extensions, the phone book will be automatically
+                    updated. </p>
+            </note>
+        </p>
+        <p><image href="../Images/admin/default_ldap_phonebook.png" id="image_ht5_2zg_mdb"
+                width="650"/></p>
+    </conbody>
+</concept>

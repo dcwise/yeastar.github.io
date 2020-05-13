@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_mxs_lwc_5db">
+    <title>Step2. Set  Windows PC as OpenVPN Client</title>
+    <shortdesc>Set your PC as an OpenVPN client, and access the PBX via VPN network.</shortdesc>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Copy certificates and keys to <filepath>config</filepath> folder.</cmd>
+                <info>
+                    <p>Find the certificates and keys in <filepath>easy-rsa/keys</filepath> folder,
+                        copy them to <filepath>%OpenVPN installation directory%\config</filepath>
+                        folder. </p>
+                    <ul id="ul_azx_vwc_5db">
+                        <li><filepath>ca.crt</filepath></li>
+                        <li><filepath>ta.key</filepath>
+                        </li>
+                        <li>The certificate for the windows VPN client. <p>For example, if you named
+                                the certificate as "windows", the file should be
+                                    <filepath>windows.crt</filepath>.</p></li>
+                        <li>The key for the windows VPN client. <p>For example, if you named the key
+                                as "windows", the file should be
+                                <filepath>windows.key</filepath>.</p></li>
+                    </ul>
+                </info>
+            </step>
+            <step>
+                <cmd>Edit OpenVPN client configuration file for the windows PC.</cmd>
+                <info>Go to <filepath>%OpenVPN installation directory%\sample-config</filepath>
+                    folder, double click the file<filepath>client.ovpn</filepath>, edit the file
+                    according to the VPN server settings on the PBX.<p>
+                        <note>Comments are preceded with <codeph>#</codeph> or <codeph>,</codeph> in
+                            the configuration file.</note>
+                    </p></info>
+                <info><image href="../Images/admin/vpn_server_windows1.png" id="image_cql_cyc_5db"
+                    /></info>
+                <info><image href="../Images/admin/vpn_server_windows2.png" id="image_ozc_dyc_5db"
+                    /></info>
+            </step>
+            <step>
+                <cmd>Copy <filepath>client.ovpn</filepath> file to the <filepath>config</filepath>
+                    folder.</cmd>
+                <info>You should get the following files in the <filepath>config</filepath>
+                    folder.</info>
+                <info><image href="../Images/admin/vpn_server_windows3.png" id="image_gky_jzc_5db"
+                    /></info>
+            </step>
+            <step>
+                <cmd>Connect to the OpenVPN server.</cmd>
+                <substeps>
+                    <substep>
+                        <cmd>Right click the OpenVPN GUI <image
+                                href="../Images/admin/openvpn_gui.png" width="30"
+                                id="image_pky_qzc_5db"/> on the desktop, run as administrator.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Find the OpenVPN GUI in the bottom right corner, right click the icon,
+                            and click <uicontrol>Connect</uicontrol>.</cmd>
+                        <info><image href="../Images/admin/vpn_server_windows4.png"
+                                id="image_dnw_5zc_5db"/></info>
+                    </substep>
+                    <substep>
+                        <cmd>If the client is connected to the PBX server, you will see the status
+                            shows as below.</cmd>
+                        <info><image href="../Images/admin/vpn_server_windows5.png"
+                                id="image_pz5_zzc_5db"/></info>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Type the VPN server IP address of the PBX in your web browser, and access the
+                    PBX via the VPN network.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

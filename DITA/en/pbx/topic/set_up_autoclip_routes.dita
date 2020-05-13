@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_lfd_qyv_rdb">
+    <title>Configure AutoCLIP to Route Inbound Calls to Original Extensions</title>
+    <shortdesc>With AutoCLIP feature on <ph keyref="product_name"/>, the PBX can route inbound calls
+        from customers to original extensions users who placed the calls. This intelligent call
+        matching feature can greatly improve work efficiency and customer satisfaction.</shortdesc>
+    <taskbody>
+        <context>
+            <p>
+                <note>
+                    <ul id="ul_dcd_xqh_wfb">
+                        <li>Enable caller ID feature for the trunk that you want to configure
+                            AutoCLIP routes, or the PBX can not distinguish the caller ID and
+                            perform AutoCLIP.</li>
+                        <li>If many extension users make outbound calls to the same external user,
+                            PBX will only match the last extension user that placed the call when
+                            the external user calls back.</li>
+                    </ul>
+                </note>
+            </p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol>PBX</uicontrol>
+                        <uicontrol>Call Control</uicontrol>
+                        <uicontrol>AutoCLIP Routes</uicontrol>
+                    </menucascade>.</cmd>
+            </step>
+            <step>
+                <cmd>In the <uicontrol>Member Trunks</uicontrol> field, select the trunk(s) from
+                        <uicontrol>Available</uicontrol> box to the <uicontrol>Selected</uicontrol>
+                    box.</cmd>
+                <info><image href="../Images/admin/autoclip_trunk.png" id="image_cnn_11w_rdb"
+                        width="650"/></info>
+            </step>
+            <step>
+                <cmd>Configure the AutoCLIP settings according to your needs.</cmd>
+                <info><image href="../Images/admin/set_autoclip.png" id="image_fkm_g1w_rdb"/></info>
+                <info>
+                    <ul id="ul_nq4_w1q_fjb">
+                        <li><uicontrol>Delete Used Records</uicontrol>: Select this option, PBX will
+                            perform AutoCLIP as follows:<ol id="ol_wd2_dcq_fjb">
+                                <li>When receiving an external call from customer A, the PBX will
+                                    search the record from AutoCLIP list, and redirect the call to
+                                    the original extension user that placed the call.</li>
+                                <li>PBX will delete the AutoCLIP record.</li>
+                                <li>When receiving an external call from customer A again, PBX will
+                                    always route the call to the destination specified by the
+                                    inbound route instead of searching the record from AutoCLIP
+                                    list.</li>
+                                <li>If extension users of PBX make outbound calls to customer A
+                                    again, PBX will generate AutoCLIP record again.<note>To restrict
+                                        PBX from routing all inbound calls from a certain customer
+                                        to the same extension user, select <uicontrol>Delete Used
+                                            Records</uicontrol>.</note></li>
+                            </ol></li>
+                        <li><uicontrol>Record Keep Time</uicontrol>: Set how long records can be
+                            kept in AutoCLIP list. If keep time of a certain record over the value,
+                            PBX will automatically delete the record.</li>
+                        <li><uicontrol>Only Keep Missed Call Records</uicontrol>: Select this
+                            option. Only unconnected outbound calls (missed calls on the called
+                            party) will be recorded in AutoCLIP list.<p>
+                                <note product="k2 s-series">If you enable AutoCLIP feature on a PSTN
+                                    trunk, the PBX will always keep record of all calls when
+                                    extension users make outbound calls through the PSTN
+                                    trunk.</note>
+                            </p></li>
+                        <li><uicontrol>Digit Match</uicontrol>:
+                            <?oxy_comment_start author="Becky" timestamp="20190929T155937+0800" comment="Define how many digits from the last digit of the incoming caller ID will be used to match the AutoCLIP record. Adjust the setting if the incoming caller ID has a prefix +, 0 or others. " flag="done"?>The
+                            default value is 7, which means if the digit of caller ID is less than
+                            or equal to 7, the PBX will match the whole phone number with all phone
+                            numbers in AutoCLIP list. If the digit of caller ID over 7, the PBX will
+                            match the last 7 digits of phone number with all phone numbers in
+                            AutoCLIP list.<?oxy_comment_end?><p><b>Example</b>:</p><p>
+                                <ol id="ol_ovh_r3q_fjb">
+                                    <li>Extension user 2000 makes an outbound call to customer
+                                        15880270666, and an AutoCLIP record is generated.</li>
+                                    <li>When the customer calls in the PBX, the caller ID displays
+                                        +8615880270666, where +86 stands for country code. To make
+                                        sure the PBX can exactly match the phone number in AutoCLIP
+                                        list, you should set <uicontrol>Digit Match</uicontrol> to
+                                            <i>11</i>.</li>
+                                    <li>If the last 11 digits of +8615880270666 exactly match the
+                                        phone number in AutoCLIP list, the PBX will route the call
+                                        to extension 2000.</li>
+                                </ol>
+                            </p></li>
+                        <li><uicontrol>Match Outgoing Trunk</uicontrol>:
+                            <?oxy_comment_start author="Becky" timestamp="20190930T112206+0800" comment="Only the call back to PBX through the same trunk will be matched against the AutoCLIP list. " flag="done"?>Select
+                            this option. The PBX will route the call to the original extension only
+                            when the trunk number dialed by external users matches the trunk that
+                            used to place the call earlier.
+                                <?oxy_comment_end?><p><b>Example</b>:</p><p>Extension user (1000)
+                                uses trunk1 to call external user (15880273600). PBX will route the
+                                call to extension (1000) only when the external user (15880273600)
+                                calls the phone number of trunk1.</p></li>
+                    </ul>
+                </info>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Test AutoCLIP routes.</cmd>
+                <info>
+                    <p>Extension user uses the trunk with AutoCLIP feature to call external users
+                        out.</p>
+                </info>
+            </step>
+        </steps>
+        <result id="result_j3d_rkq_fjb">PBX generates an AutoCLIP record when extension user uses
+            the trunk with AutoCLIP feature to call external users out. On the <uicontrol>AutoCLIP
+                Routes</uicontrol> page, click <uicontrol>View AutoCLIP List</uicontrol> to view
+            AutoCLIP record.</result>
+    </taskbody>
+</task>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_yf4_ngs_lcb">
+    <title>Step3. Create a SSH Key Pair</title>
+    <shortdesc/>
+    <taskbody>
+        <context/>
+        <steps id="steps_yst_pgs_lcb">
+            <step>
+                <cmd>Log on to the <xref href="https://ecs.console.aliyun.com/#/home" format="html"
+                        scope="external">ECS console</xref>.</cmd>
+            </step>
+            <step>
+                <cmd>In the left-side navigation pane, choose <b>Networks &amp; Security</b> >
+                        <b>Key Pairs</b>.</cmd>
+            </step>
+            <step>
+                <cmd>On the <b>Key Pairs</b> page, select a region, and click <b>Create Key
+                    Pair</b>.</cmd>
+            </step>
+            <step>
+                <cmd>On the <b>Create Key Pair</b> page, enter a name for the key pair, and select
+                        <b>Automatically Create a Key Pair</b> for the <b>Creation Type</b>.</cmd>
+            </step>
+            <step>
+                <cmd>Click <b>OK</b> to create a key pair.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

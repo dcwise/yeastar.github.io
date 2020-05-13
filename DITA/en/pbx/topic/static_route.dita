@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_nqd_zww_ydb">
+    <title>Static Route Overview</title>
+    <shortdesc><ph keyref="product_name"/> automatically adds system route entries to the routing
+        table after you configure IP addresses on the PBX network interface. If you set the PBX
+        network mode to Dual, you need to add a static route to override the default route entries,
+        routing the packets from specific IP address to the specified destination.</shortdesc>
+    <conbody>
+        <p><object width="450" height="250" data="https://www.youtube.com/embed/1ivmarTyQaA"
+                outputclass="iframe">
+                <param name="allowfullscreen"/>
+            </object></p>
+        <section id="section_gzj_3b3_mgb">
+            <title>Static Route example</title>
+            <p>Static Route is typically used for <xref
+                    href="dedicated-sip-trunking.dita#topic_nwk_vrh_mgb">dedicated SIP trunking on
+                        <ph keyref="product_name"/></xref>.</p>
+        </section>
+    </conbody>
+</concept>
+<?oxy_options track_changes="on"?>

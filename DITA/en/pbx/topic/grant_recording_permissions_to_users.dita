@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_qc5_cms_gfb">
+    <title>Grant Recording Permissions to Users</title>
+    <shortdesc>By default, only the super administrator has permission to manage the call recording
+        files. The super administrator can grant recording permission to extension users and allow
+        the users to play, download, and delete recording files.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/09/26"/>
+            <!--Carol-->
+            <revised modified="2018/09/26"/>
+            <!--Carol-->
+            <revised modified="2018/09/27"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol>System</uicontrol>
+                        <uicontrol>User Permission</uicontrol>
+                    </menucascade>, click <uicontrol>Add</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>In the <uicontrol>User</uicontrol> drop-down list, select a user whom you want
+                    to grand permissions to. </cmd>
+            </step>
+            <step>
+                <cmd>Set <uicontrol>Set Privilege As</uicontrol>.</cmd>
+                <info>
+                    <ul id="ul_pwl_hgt_gfb">
+                        <li><uicontrol>Custom</uicontrol>: All permissions are disabled by
+                            default.</li>
+                        <li><uicontrol>Administrator</uicontrol>: All permissions are enabled by
+                            default.</li>
+                    </ul>
+                </info>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>CDR and Recordings</uicontrol> tab, and grant
+                        <uicontrol>Recording Permission</uicontrol> to the user.</cmd>
+                <info><image href="../Images/admin/grant_recording_permission.png"
+                        id="image_wjr_xxs_gfb" width="650"/></info>
+            </step>
+            <step>
+                <cmd>Set which extensions' recording files are allowed to play, download or
+                    delete.</cmd>
+                <info>
+                    <ul id="ul_xjy_hht_gfb">
+                        <li><uicontrol>All Extension</uicontrol>: The user can manage all the
+                            extensions' recording files.</li>
+                        <li><uicontrol>Selected Extensions</uicontrol>: The user can manage only the
+                            selected extensions' recording files.</li>
+                    </ul>
+                </info>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol>.</cmd>
+                <stepresult>When the user log in the PBX User Portal, he/she will have permission to
+                    manage recording files.<p><image
+                            href="../Images/admin/cdr_and_recordings_user_portal.png" width="650"
+                            id="image_jhg_d3t_gfb"/></p></stepresult>
+            </step>
+        </steps>
+    </taskbody>
+</task>

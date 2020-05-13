@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_mdd_db5_vdb">
+    <title>Set up QueueMetrics On-Premise</title>
+    <shortdesc>Before you start to integrate the QueueMetrics to your PBX, you need to install
+        QueueMetrics, edit the system parameters on QueueMetrics, and edit QueueMetrics
+        users.</shortdesc>
+    <conbody>
+        <section id="section_ick_sb5_vdb">
+            <title>Install QueueMetrics</title>
+            <p>Refer to <xref href="http://manuals.loway.ch/QM_UserManual-chunked/ch02.html"
+                    format="html" scope="external">Installation Guide of QueueMetrics</xref> to
+                install QueueMetrics on your server.</p>
+            <p>
+                <note>The time zone, date and time of your QueueMetrics server should be the same
+                    with the PBX.</note>
+            </p>
+        </section>
+        <section id="section_swt_dc5_vdb"><title>Edit System Parameters on QueueMetrics</title>Edit
+            the system parameters on QueueMetrics to make QueueMetrics work with your PBX.<p>
+                <ol id="ol_szy_gc5_vdb">
+                    <li>Log QueueMetrics web interface, click <menucascade>
+                            <uicontrol>Administrator Tools</uicontrol>
+                            <uicontrol>Edit system parameters</uicontrol>
+                        </menucascade>. </li>
+                    <li>Change the following parameters:<p>
+                            <codeblock>callfile.dir=tcp:admin:password@127.0.0.1
+default.queue_log_file=sql:P001
+callfile.customdial.channel=PJSIP/$EM</codeblock>
+                        </p></li>
+                    <li>Add the parameter:<p>
+                            <codeblock>default.webloaderpbx=true</codeblock>
+                        </p></li>
+                    <li>Delete the following parameters:<p>
+                            <codeblock>Platform.pbx=DIRECTAMI
+Platform.directami.agent=Agent/${num}
+Platform.directami.extension=SIP/${num}
+Platform.directami.transfer=${num}@from-internal
+Platform.directami.outbound.enabled=true
+Platform.directami.localext=SIP/${num}
+Platform.directami.verbose=false</codeblock>
+                        </p></li>
+                    <li>Click <uicontrol>Save</uicontrol>.</li>
+                </ol>
+            </p></section>
+        <section id="section_usz_zc5_vdb">
+            <title>Edit QueueMetrics Users</title>
+            <p>
+                <ol id="ol_gzm_bd5_vdb">
+                    <li>Log QueueMetrics web interface, click <menucascade>
+                            <uicontrol>Settings</uicontrol>
+                            <uicontrol>Users</uicontrol>
+                        </menucascade>. </li>
+                    <li>Enable the user <codeph>robot</codeph>.<p><image
+                                href="../Images/admin/enable_robot.png" id="image_fhx_gd5_vdb"
+                        /></p></li>
+                    <li>Create a <codeph>WQLOADER</codeph> type of user.<p>
+                            <note>You need use this username and password to connect to your
+                                PBX.</note>
+                        </p><p><image href="../Images/admin/create_wqloader.png"
+                                id="image_qjy_nd5_vdb"/></p><p>
+                            <ul id="ul_m3c_pd5_vdb">
+                                <li><uicontrol>Login</uicontrol>: Set a username according to your
+                                    preference.</li>
+                                <li><uicontrol>Password</uicontrol>: Set a password.</li>
+                                <li><uicontrol>Confirm Password</uicontrol>: Type the password again
+                                    to confirm.</li>
+                                <li><uicontrol>Enabled</uicontrol>: Select
+                                    <codeph>Yes</codeph>.</li>
+                                <li><uicontrol>Class</uicontrol>: Select
+                                    <codeph>WQLOADER</codeph>.</li>
+                            </ul>
+                        </p></li>
+                </ol>
+            </p>
+        </section>
+    </conbody>
+</concept>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title/>
+    <topicmeta>
+        <author type="contributor">Carol</author>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/05/21"/>
+            <!--Carol-->
+            <revised modified="2018/06/20"/>
+            <!--Carol-->
+            <revised modified="2018/06/26"/>
+            <!--Carol-->
+            <revised modified="2018/06/27"/>
+            <!--Carol-->
+            <revised modified="2018/07/16"/>
+            <!--Carol-->
+            <revised modified="2018/07/17"/>
+            <!--Carol-->
+            <revised modified="2018/09/14"/>
+            <!--Carol-->
+            <revised modified="2018/10/18"/>
+            <!--Carol-->
+            <revised modified="2018/12/07"/>
+            <!--Carol-->
+            <revised modified="2018/12/10"/>
+            <!--Carol-->
+            <revised modified="2018/12/13"/>
+            <!--Carol-->
+            <revised modified="2018/12/18"/>
+            <!--Carol-->
+            <revised modified="2018/12/20"/>
+        </critdates>
+    </topicmeta>
+    <topicref href="../topic/ymp_release_notes.dita"/>
+    <topichead navtitle="PBX">
+        <topicref href="../topic/v81.13.0.30.dita"/>
+        <topicref href="../topic/v81.13.0.15.dita"/>
+        <topicref href="../topic/v81.12.0.6.dita"/>
+        <topicref href="../topic/v81.9.0.43.dita"/>
+        <topicref href="../topic/v81.9.0.19.dita"/>
+        <topicref href="../topic/v81.9.0.14.dita"/>
+        <topicref href="../topic/v81.8.0.112.dita"/>
+        <topicref href="../topic/v81.8.0.93.dita"/>
+        <topicref href="../topic/v81.8.0.85.dita"/>
+        <topicref href="../topic/v81.8.0.42.dita"/>
+        <topicref href="../topic/v81.8.0.7.dita"/>
+        <topicref href="../topic/v81.8.0.4.dita"/>
+        <topicref href="../topic/v81.7.0.15.dita"/>
+        <topicref href="../topic/v81.6.0.3.dita"/>
+        <topicref href="../topic/v81.5.0.7.dita"/>
+        <topicref href="../topic/v81.4.0.14.dita"/>
+        <topicref href="../topic/v81.4.0.10.dita"/>
+        <topicref href="../topic/v81.4.0.8.dita"/>
+        <topicref href="../topic/v81.3.0.12.dita"/>
+        <topicref href="../topic/v81.2.0.8.dita"/>
+    </topichead>
+    <topichead navtitle="Apps">
+        <topicref href="../topic/release_auto_provision_cloud.dita"/>
+        <topicref href="../topic/release_linkus_server_cloud.dita"/>
+        <topicref href="../topic/release_conference_panel_cloud.dita"/>
+        <topicref href="../topic/release_ldap_cloud.dita"/>
+        <topicref href="../topic/release-zoho-cloud.dita"/>
+    </topichead>
+</map>

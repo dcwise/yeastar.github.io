@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_yg5_1rn_2fb">
+    <title>LCS (Linkus Cloud Service)</title>
+    <shortdesc/>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/09/18"/>
+            <!--Carol-->
+            <revised modified="2018/09/18"/>
+            <!--Carol-->
+            <revised modified="2018/09/19"/>
+            <!--Carol-->
+            <revised modified="2018/11/01"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <section id="section_jt2_3sn_2fb">
+            <title>Key Benefits </title>
+            <p>
+                <ul id="ul_chz_4sn_2fb">
+                    <li>Effortless Linkus server setup</li>
+                    <li>No port forwarding is required</li>
+                    <li>Eliminate network vulnerability</li>
+                    <li>Solve NAT issues</li>
+                    <li>Support Linkus Chat</li>
+                </ul>
+            </p>
+        </section>
+    </conbody>
+</concept>

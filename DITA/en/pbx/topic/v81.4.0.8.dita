@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_hh1_slj_3db">
+  <title>Version 81.4.0.8</title>
+  <abstract>Released Date: April 19, 2018</abstract>
+  <prolog>
+    <critdates>
+      <!--Carol-->
+      <revised modified="2018/06/20"/>
+    </critdates>
+  </prolog>
+  <body>
+    <section id="section_xqb_3yv_pdb"><title>New Feature</title><p><image
+          href="../Images/horizon.png" id="image_pry_dyv_pdb"/></p><b>Remote
+        Management</b><div>Manage multiple Yeastar Cloud PBXs on Yeastar Remote Management
+        Platform.</div><p><b>API Interface</b><div>Added support for integrating with the PBX via
+          API interface.</div></p><p><b>Upgrade Firmware</b><div>
+          <div>Added support for upgrading firmware on the PBX web interface.</div>
+        </div></p></section>
+    <section id="section_nkj_kyv_pdb">
+      <title>Optimization</title>
+      <p><image href="../Images/horizon.png" id="image_ifk_lyv_pdb"/></p>
+      <p><b>PBX Security</b><div>
+          <ul id="ul_h22_1qd_jdb">
+            <li>Improved the PBX security.</li>
+          </ul>
+        </div><b>SIP Settings</b><div>
+          <ul id="ul_mnq_lqd_jdb">
+            <li>Added the following settings on the SIP trunk page.<div>
+                <ul id="ul_sqn_mqd_jdb">
+                  <li>Diversion</li>
+                  <li>P Asserted Identify</li>
+                  <li>Remote Party ID</li>
+                  <li>Inband Process</li>
+                  <li>DID</li>
+                  <li>Enable/Disable <uicontrol>user=phone</uicontrol></li>
+                </ul>
+              </div></li>
+            <li>Added SIP advanced settings.<div>
+                <ul id="ul_cyj_4qd_jdb">
+                  <li>Early Media</li>
+                  <li>Maxptime</li>
+                </ul>
+              </div></li>
+          </ul>
+        </div><b>Extension Settings</b><div>
+          <ul id="ul_gq3_vmd_jdb">
+            <li>Increased the range of Extension Users to 0~59999.</li>
+            <li>Supported 30 Extension Groups.</li>
+          </ul>
+        </div><b>Auto Provision</b><div>
+          <ul id="ul_mzj_bqd_jdb">
+            <li>Supported Yealink phones that have MAC addresses that start with 805ec0.</li>
+          </ul>
+        </div><b>Logs</b><div>
+          <ul id="ul_lqv_xnd_jdb">
+            <li>Optimized event logs.</li>
+            <li>The PBX can store event logs and operation logs for a maximum of 15 days.</li>
+          </ul>
+        </div><b>Email Settings</b><div>
+          <ul id="ul_zt2_14d_jdb">
+            <li>Compatible with Ali Cloud SMTP.</li>
+            <li>Optimized TLS setting.</li>
+            <li>Fixed the issue that sending more than 50 emails in bulk would fail.</li>
+          </ul>
+        </div><b>Time Condition</b><div>
+          <ul id="ul_yk1_cqd_jdb">
+            <li>Extension users can dial feature code to switch the inbound route destination to
+                <uicontrol>Other Time</uicontrol> destination.</li>
+          </ul>
+        </div><b>Ring Group &amp; Queue</b><div>
+          <ul id="ul_mzz_g4d_jdb">
+            <li><uicontrol>Ring in Use</uicontrol> of a Queue is disabled by default.</li>
+            <li>Optimized the Periodic Announcements of a Queue.</li>
+            <li>If an extension is registered on multiple phones, when the extension is busy, the
+              PBX would not call other phones that registered the same extension.</li>
+          </ul>
+        </div><b>CDR</b><div>
+          <ul id="ul_y2s_cqd_jdb">
+            <li>Supported displaying DID numbers in CDR.</li>
+          </ul>
+        </div><b>Prompt</b><div>
+          <ul id="ul_rhg_dqd_jdb">
+            <li>Optimized Voice prompts.</li>
+          </ul>
+        </div><b>Seize Trunk by BLF Key</b><div>
+          <ul id="ul_pgt_dqd_jdb">
+            <li>If an extension user has no permission to use a trunk, the administrator can limit
+              the user to seize the trunk by BLF to call out.</li>
+          </ul>
+        </div><b>Web Interface</b><div>
+          <ul id="ul_e4m_q4d_jdb">
+            <li>Optimized the web interface.</li>
+            <li>Optimized the template of <uicontrol>Welcome Email</uicontrol>.</li>
+          </ul>
+        </div></p>
+    </section>
+    <section id="section_j3l_myv_pdb">
+      <title>Fixed Bug</title>
+      <p><image href="../Images/horizon.png" id="image_pft_4yv_pdb"/></p>
+      <p><b>Interconnection Issues</b><div>
+          <ul id="ul_gtj_nyv_pdb">
+            <li>The interconnection between two Yeastar Cloud PBXs would fail if TCP protocol was
+              used.</li>
+            <li>If the S-Series VoIP PBX and Yeastar Cloud PBX were connected by "Account Trunk",
+              the call between the two devices would fail.</li>
+            <li>Fixed the interconnection issue: if S-Series VoIP PBX used Cloud PBX's extension to
+              register a SIP trunk, the call between the two PBXs would fail.</li>
+            <li>Fixed the compatibility issue with Yeastar TA gateway.</li>
+          </ul>
+        </div><b>Prompt</b><div>
+          <ul id="ul_htj_nyv_pdb">
+            <li>Fixed the issue that recording custom prompt on the PBX web interface would
+              fail.</li>
+            <li>Fixed the voicemail prompt issue: the PBX didn’t play the customized prompt.</li>
+          </ul>
+        </div><b>Extension</b><div>
+          <ul id="ul_itj_nyv_pdb">
+            <li>Fixed the issue that the call of a TCP/TLS extension could not be disconnected
+              properly.</li>
+          </ul>
+        </div><b>Trunk</b><div>
+          <ul id="ul_jtj_nyv_pdb">
+            <li>Fixed the issue that if two Yeastar Cloud PBX registered a VoIP trunk from the same
+              provider, the PBX could not identify inbound calls correctly.</li>
+            <li> Fixed the issue that the SIP trunk could not work if the transport protocol was
+              changed. </li>
+          </ul>
+        </div><b>Calls</b><div>
+          <ul id="ul_ktj_nyv_pdb">
+            <li>Fixed the issue that video call could not work.</li>
+            <li>Fixed the DID matching issue on Inbound Route: if multiple inbound routes have the
+              same DID number(s), the PBX could not route inbound calls properly. </li>
+            <li>Fixed the Call Forward issue: the PBX could not forward calls to an external number. </li>
+            <li>Fixed the identification issue of feature code.</li>
+          </ul>
+        </div><b>CDR</b><div>
+          <ul id="ul_ltj_nyv_pdb">
+            <li>Fixed the issue that the extension users failed to download CDR files on Web.</li>
+            <li>Fixed CDR issue: when an external call reached a queue, the CDR of this call was
+              incorrect.</li>
+          </ul>
+        </div><b>Conference</b><div>
+          <ul id="ul_mtj_nyv_pdb">
+            <li>Fixed the issue that inviting external members by your phone would fail if a
+              password was set on the outbound route.</li>
+          </ul>
+        </div></p>
+    </section>
+  </body>
+</topic>

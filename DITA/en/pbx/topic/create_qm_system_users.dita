@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_w4d_s31_wdb">
+    <title>Create QueueMetrics System Users</title>
+    <shortdesc>QueueMetrics provides Agent’s page, that is, a specialized page from which agents can
+        log on, log off, go to pause, see processed calls and do other activities as
+        well.</shortdesc>
+    <taskbody>
+        <context>To enable the system users, you need to create a log-on for each agent that matches
+            exactly the agent code you used in the agent definition, so e.g. for extension 5001 you
+            would use Agent/5001.</context>
+        <steps>
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Home</uicontrol>
+                        <uicontrol>Edit QueueMetrics settings</uicontrol>
+                        <uicontrol>Administer users</uicontrol>
+                    </menucascade>, click <uicontrol>Create New</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Configure the <uicontrol>User Detail</uicontrol> and click
+                        <uicontrol>Save</uicontrol>.</cmd>
+                <info><image href="../Images/admin/qm_system_user_detail.jpg" id="image_zn2_mj1_wdb"
+                        width="500"/></info>
+                <info>
+                    <ul id="ul_jds_nj1_wdb">
+                        <li><uicontrol>Login</uicontrol>: The format is <codeph>Agent/{extension
+                                number}</codeph>. For example, <codeph>Agent/5001</codeph>.</li>
+                        <li><uicontrol>Password</uicontrol>: Set a password for the user.</li>
+                        <li><uicontrol>Real name</uicontrol>: Enter the agent's name.</li>
+                        <li><uicontrol>Enabled</uicontrol>: Choose <codeph>Yes</codeph>.</li>
+                        <li><uicontrol>Class</uicontrol>: Choose <codeph>AGENTS</codeph>.</li>
+                    </ul>
+                </info>
+            </step>
+            <step>
+                <cmd>To check if your changes have been successful, try to log in with the system
+                    user.</cmd>
+                <info><image href="../Images/admin/qm_system_user_login.png" id="image_i5q_fk1_wdb"
+                        width="450"/></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="manage-the-static-routes">
+    <title>Manage the Static Routes</title>
+    <shortdesc>After you add static routes on the <ph keyref="product_name"/>, you can edit or
+        delete them.</shortdesc>
+    <body>
+        <section id="section_obg_3vy_djb">
+            <title>Edit a static route</title>
+            <p>
+                <ol id="ol_glv_2wy_djb">
+                    <li>Go to <menucascade>
+                            <uicontrol>Settings</uicontrol>
+                            <uicontrol>System</uicontrol>
+                            <uicontrol>Network</uicontrol>
+                            <uicontrol>Static Routes</uicontrol>
+                            <uicontrol>Static Routes</uicontrol>
+                        </menucascade>.</li>
+                    <li>Click <image id="image_l5q_hj1_1jb" href="../Images/ui_icons/edit.png"
+                            width="20"/> beside the static route that you want to edit.</li>
+                    <li id="edit-voip-settings-step">Edit the static route settings.</li>
+                    <li>Click <uicontrol>Save</uicontrol>.</li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_j4k_5wy_djb">
+            <title>Delete a static route</title>
+            <p>
+                <ol id="ol_cwv_vwy_djb">
+                    <li>Go to <menucascade>
+                            <uicontrol>Settings</uicontrol>
+                            <uicontrol>System</uicontrol>
+                            <uicontrol>Network</uicontrol>
+                            <uicontrol>Static Routes</uicontrol>
+                            <uicontrol>Static Routes</uicontrol>
+                        </menucascade>.</li>
+                    <li>Click <image href="../Images/ui_icons/delete.png" width="20"
+                            id="image_xgc_ppl_53b"/> beside the static route that you want to
+                        delete.</li>
+                    <li>Click <uicontrol>Yes</uicontrol> to confirm the deletion.</li>
+                </ol>
+            </p>
+        </section>
+    </body>
+</topic>
+<?oxy_options track_changes="on"?>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_bnp_bm5_c2b">
+    <title>Billing Logs</title>
+    <shortdesc>Go to <uicontrol>CDR and Recording</uicontrol> to check the billing logs.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/06/11"/>
+            <!--Carol-->
+            <revised modified="2018/06/12"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <p>
+            <image href="../Images/admin/billing_logs.png" width="650" id="image_dp5_55z_c2b"/></p>
+        <p>Click <image href="../Images/ui_icons/cdr-set.png" width="20" id="image_k2y_z5z_c2b"/>
+            and select <uicontrol>Cost</uicontrol> option, the cost for each call will be
+            displayed.</p>
+        <p><image href="../Images/admin/billing_cdr_cost.png" id="image_ewp_2vz_c2b"/></p>
+        <section conref="cdr_and_recordings.dita#topic_fgg_byg_1db/cdr_description"
+            id="section_pc1_mvz_c2b"/>
+    </conbody>
+</concept>

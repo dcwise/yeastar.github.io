@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="task_cjr_lp5_c2b">
+    <title>Set Extension Billing</title>
+    <shortdesc>Set the billing settings for the extensions.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/06/11"/>
+            <!--Carol-->
+            <revised modified="2018/06/11"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <section id="section_wd2_sq5_c2b">
+            <p>
+                <ol id="ol_g3t_tq5_c2b">
+                    <li/>
+                </ol>
+            </p>
+        </section>
+        <section>
+            <p/></section>
+    </conbody>
+</concept>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_cn3_vwb_b2b">
+    <title>Expansion Board</title>
+    <shortdesc>Yeastar S100 and S300 are expandable.</shortdesc>
+    <conbody>
+        <p>
+            <ul id="ul_jjp_zwb_b2b">
+                <li>S100 supports up to 2 EX08/EX30 Expansion Boards; supports 1 D30 Module.</li>
+                <li>S300 supports up to 3 EX08/EX30 Expansion Boards; supports up to 2 D30
+                    Modules.</li>
+            </ul>
+        </p>
+        <section id="section_a4q_1xb_b2b"><title>EX08 Expansion Board</title><p>EX08 board supports
+                up to 4 modules (8 RJ11 ports).</p><image href="../Images/admin/ex08.png"
+                id="image_m2d_gxb_b2b"/><p><b>Optional modules on EX08 board</b></p><ul
+                id="ul_zyc_kxb_b2b">
+                <li>O2 Module</li>
+                <li>S2 Module</li>
+                <li>SO Module</li>
+                <li>B2 Module</li>
+                <li>GSM/3G/4G Module</li>
+            </ul></section>
+        <section id="section_hxt_lxb_b2b">
+            <title>EX30 Expansion Board</title>
+            <p>EX30 board supports 1 E1/T1 port.</p>
+            <p><image href="../Images/admin/ex30.png" id="image_z3s_nxb_b2b"/></p>
+        </section>
+        <section id="section_ayy_nxb_b2b">
+            <title>D30 Module</title>
+            <p>D30 is a DSP module, used to expand the capacity of PBX. With a D30 module added, the
+                extensions increase 100 and concurrent calls increase 30 additionally.</p>
+            <p><image href="../Images/admin/d30.png" id="image_kzl_pxb_b2b"/></p>
+        </section>
+    </conbody>
+</concept>
+<?oxy_options track_changes="on"?>

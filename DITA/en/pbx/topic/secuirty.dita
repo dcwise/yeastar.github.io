@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_u21_hyh_ffb">
+    <title>Security</title>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/09/21"/>
+            <!--Carol-->
+            <revised modified="2018/09/21"/>
+        </critdates>
+    </prolog>
+    <body>
+        <p product="s-series"> VoIP attack, although not an everyday
+            occurrence<?oxy_insert_start author="Becky" timestamp="20190726T143507+0800"?>,
+            it<?oxy_insert_end?><?oxy_delete author="Becky" timestamp="20190726T143505+0800" content=" "?>does
+            exist. When using VoIP, system security is undoubtedly one of the issues we care about
+            most. With appropriate configuration, and some basic safety habits, we can improve the
+            security of the telephone system. Moreover, the powerful built-in firewall function in
+                <ph keyref="product_name"/> is adequate to enable the system to run safely and
+            st<?oxy_insert_start author="Becky" timestamp="20190726T143718+0800"?>eadily<?oxy_insert_end?><?oxy_delete author="Becky" timestamp="20190726T143716+0800" content="able"?>.
+            We strongly recommend that you configure firewall and other security options to prevent
+            the attack fraud and the system failure or calls loss. </p>
+    </body>
+</topic>
+<?oxy_options track_changes="on"?>

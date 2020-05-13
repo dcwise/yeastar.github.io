@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="cdr-database">
+    <title>CDR Parameters in Database</title>
+    <shortdesc>Descriptions for CDR parameters in the database of PBX.</shortdesc>
+    <body>
+        <section>
+            <title>Description of CDR Parameters</title>
+        </section>
+        <p>
+            <table frame="all" rowsep="1" colsep="1" id="table_v4x_3tb_1hb">
+                <tgroup cols="2">
+                    <colspec colname="c1" colnum="1" colwidth="1*"/>
+                    <colspec colname="c2" colnum="2" colwidth="1.75*"/>
+                    <thead>
+                        <row>
+                            <entry>Parameters</entry>
+                            <entry>Descriptions</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row>
+                            <entry>id</entry>
+                            <entry>No special meaning, all ids are 0.</entry>
+                        </row>
+                        <row>
+                            <entry>datetime</entry>
+                            <entry>Date and time</entry>
+                        </row>
+                        <row>
+                            <entry>clid</entry>
+                            <entry>Caller Name&lt;Extension></entry>
+                        </row>
+                        <row>
+                            <entry>src</entry>
+                            <entry>Caller Number </entry>
+                        </row>
+                        <row>
+                            <entry>dst</entry>
+                            <entry>Called Number</entry>
+                        </row>
+                        <row>
+                            <entry>dcontext</entry>
+                            <entry>Dial plan</entry>
+                        </row>
+                        <row>
+                            <entry>srctrunk</entry>
+                            <entry>Source trunk</entry>
+                        </row>
+                        <row>
+                            <entry>dstrunk</entry>
+                            <entry>Destination trunk</entry>
+                        </row>
+                        <row>
+                            <entry>lastapp</entry>
+                            <entry>The last operation of the extension</entry>
+                        </row>
+                        <row>
+                            <entry>lastdata</entry>
+                            <entry>System internal flag</entry>
+                        </row>
+                        <row>
+                            <entry>duration</entry>
+                            <entry>Talk duration (calculates from the beginning of the call)</entry>
+                        </row>
+                        <row>
+                            <entry>billable</entry>
+                            <entry>Billing duration</entry>
+                        </row>
+                        <row>
+                            <entry>disposition</entry>
+                            <entry>Answered status of the call</entry>
+                        </row>
+                        <row>
+                            <entry>amaflags</entry>
+                            <entry>System internal flag</entry>
+                        </row>
+                        <row>
+                            <entry>calltype</entry>
+                            <entry>Call type:<p>
+                                    <ul id="ul_zbw_vvb_1hb">
+                                        <li>Internal </li>
+                                        <li>Inbound </li>
+                                        <li>Outbound </li>
+                                        <li>Transfer</li>
+                                    </ul>
+                                </p></entry>
+                        </row>
+                        <row>
+                            <entry>accountcode</entry>
+                            <entry>Billing password</entry>
+                        </row>
+                        <row>
+                            <entry>uniqueid</entry>
+                            <entry>CDR unique identifier</entry>
+                        </row>
+                        <row>
+                            <entry>recordfile</entry>
+                            <entry>Recordings name</entry>
+                        </row>
+                        <row>
+                            <entry>recordpath</entry>
+                            <entry>Recordings path (with file name)</entry>
+                        </row>
+                        <row>
+                            <entry>monitorfile</entry>
+                            <entry>Name of One Touch Recordings</entry>
+                        </row>
+                        <row>
+                            <entry>monitorpath</entry>
+                            <entry>Path of One Touch Recordings (with file name)</entry>
+                        </row>
+                        <row>
+                            <entry>dstmonitorfile</entry>
+                            <entry>Name of One Touch Recordings for callee</entry>
+                        </row>
+                        <row>
+                            <entry>dstmonitorpath</entry>
+                            <entry>Path of One Touch Recordings for callee</entry>
+                        </row>
+                        <row>
+                            <entry>extfield1</entry>
+                            <entry>Caller name</entry>
+                        </row>
+                        <row>
+                            <entry>extfield2</entry>
+                            <entry>Callee name</entry>
+                        </row>
+                        <row>
+                            <entry>extfield3</entry>
+                            <entry>The displayed DOD number when the caller makes an outbound
+                                call.</entry>
+                        </row>
+                        <row>
+                            <entry>extfield4</entry>
+                            <entry>IP address of the phone</entry>
+                        </row>
+                        <row>
+                            <entry>extfield5</entry>
+                            <entry>The phone number displayed (without patterns of outbound routes)
+                                when the caller makes an outbound call.</entry>
+                        </row>
+                        <row>
+                            <entry>payaccount</entry>
+                            <entry>The account which will be charged.</entry>
+                        </row>
+                        <row>
+                            <entry>usercost</entry>
+                            <entry>Call cost that the extension should afford.</entry>
+                        </row>
+                        <row>
+                            <entry>didnumber</entry>
+                            <entry>DID number that the caller dials.</entry>
+                        </row>
+                        <row>
+                            <entry>transbilling</entry>
+                            <entry>System internal flag</entry>
+                        </row>
+                        <row>
+                            <entry>payexten</entry>
+                            <entry>The extension which will be charged.</entry>
+                        </row>
+                        <row>
+                            <entry>srcchanurl</entry>
+                            <entry>System internal flag</entry>
+                        </row>
+                        <row>
+                            <entry>dstchanurl</entry>
+                            <entry>System internal flag</entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+        </p>
+    </body>
+</topic>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_ndv_t1v_kcb">
+    <title>Step2. Configure the VPC</title>
+    <shortdesc>After you've created the VPC, you need to configure the VPC settings.</shortdesc>
+</task>

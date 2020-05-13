@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_ijr_yly_ldb">
+    <title>Interconnect Multiple S-Series VoIP PBXs</title>
+    <shortdesc>In this section, we introduce how to interconnect 3 Yeastar S-Series VoIP PBXs. The 3
+        PBXs are located in different places. You can connect more Yeastar S-Series IPPBXs in the
+        same way.</shortdesc>
+    <conbody>
+        <p>After interconnecting the 3 PBXs:</p>
+        <p>
+            <ul>
+                <li>Users in Branch A and Branch B can make internal calls.</li>
+                <li>Users in Branch A and the Headquarter can make internal calls.</li>
+                <li>Users in Branch B and the Headquarter can make internal calls.</li>
+            </ul>
+        </p>
+        <p><image href="../Images/admin/interconnect_3_s-series.png" id="image_rww_lmy_ldb"/></p>
+    </conbody>
+</concept>

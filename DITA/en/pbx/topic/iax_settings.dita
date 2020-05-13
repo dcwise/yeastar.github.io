@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_ij5_mww_d2b">
+    <title>IAX Settings</title>
+    <shortdesc>The IAX configurations require professional knowledge of IAX protocol, incorrect
+        configuration may cause calling issues on the IAX extensions and IAX trunks.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/06/15"/>
+            <!--Carol-->
+            <revised modified="2018/09/20"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <section id="section_lmx_2rb_ffb">
+            <title>IAX General Settings</title>
+            <p>
+                <table frame="all" rowsep="1" colsep="1" id="table_zxp_3rb_ffb">
+                    <tgroup cols="2">
+                        <colspec colname="c1" colnum="1" colwidth="1*"/>
+                        <colspec colname="c2" colnum="2" colwidth="1.15*"/>
+                        <thead>
+                            <row>
+                                <entry align="left">Option</entry>
+                                <entry align="left">Description</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>UDP Port</entry>
+                                <entry>IAX registration port.</entry>
+                            </row>
+                            <row>
+                                <entry>Bandwidth</entry>
+                                <entry>Control which codecs to be used based on bandwidth.</entry>
+                            </row>
+                            <row>
+                                <entry>Maximum Registration/Subscription Time</entry>
+                                <entry>Maximum duration (in seconds) of an IAX registration.</entry>
+                            </row>
+                            <row>
+                                <entry>Minimum Registration/Subscription Time</entry>
+                                <entry>Minimum duration (in seconds) of an IAX registration.</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+        <section>
+            <title>IAX Codec</title>
+            <p>A codec is a compression or decompression algorithm that used in the transmission of
+                voice packets over a network or the Internet. </p>
+            <p><ph keyref="product_name"/> supports G711 a-law, u-law, GSM, H261, H263, H263P, H264,
+                SPEEX, G722, G726, ADPCM, G729A, MPEG4 and iLBC.</p>
+            <p>
+                <note>
+                    <ul id="ul_y3x_tbx_d2b">
+                        <li>You need to choose at least one same code on the PBX and on your phones,
+                            or there may be a problem of the call.</li>
+                        <li>If you want to make video calls, you need to select H261, H263, H263P,
+                            H264 or MPEG4 codec on the PBX and on your phones.</li>
+                    </ul>
+                </note>
+            </p>
+        </section>
+    </conbody>
+</concept>

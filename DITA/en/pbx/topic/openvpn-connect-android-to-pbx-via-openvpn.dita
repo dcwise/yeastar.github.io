@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="Connect-Android-Phone-to-pbx-via-OpenVPN">
+    <title>Connect Android Phone to <ph keyref="product_name"/> via OpenVPN</title>
+    <body>
+        <p><xref href="https://play.google.com/store/apps/details?id=de.blinkt.openvpn&amp;hl=en"
+                format="html" scope="external">OpenVPN for Android</xref> is an open source client
+            compatible with all versions of Android 4.x or later. Before connecting your Android
+            phone to <ph keyref="product_name"/>, you need to install the OpenVPN on your phone.</p>
+        <p>
+            <note>Make sure that the <uicontrol>TUN</uicontrol> device mode is used on VPN
+                server.</note>
+            <ol id="ol_arl_qxj_33b">
+                <li>Put the following files to your Android phone.<p>
+                        <table id="table_efx_45k_33b" colsep="1" rowsep="1">
+                            <title>Files for Android client</title>
+                            <tgroup cols="2" align="center">
+                                <colspec colname="c1" colnum="1" colwidth="176px"/>
+                                <colspec colname="c2" colnum="2" colwidth="462px"/>
+                                <thead>
+                                    <row valign="middle">
+                                        <entry>File</entry>
+                                        <entry>Note</entry>
+                                    </row>
+                                </thead>
+                                <tbody>
+                                    <row valign="middle">
+                                        <entry colsep="1" rowsep="1"
+                                            ><filepath>ca.crt</filepath></entry>
+                                        <entry>Root Certificate Authority</entry>
+                                    </row>
+                                    <row valign="middle">
+                                        <entry><filepath>Android.crt</filepath></entry>
+                                        <entry>a certificate file for Android client</entry>
+                                    </row>
+                                    <row valign="middle">
+                                        <entry><filepath>Android.key</filepath></entry>
+                                        <entry>a key file for Android client</entry>
+                                    </row>
+                                    <row valign="middle">
+                                        <entry><filepath>Android.ovpn</filepath></entry>
+                                        <entry>an OpenVPN connection file</entry>
+                                    </row>
+                                    <row valign="middle">
+                                        <entry><filepath>passfile</filepath></entry>
+                                        <entry>Required for <xref
+                                                href="openvpn-username-password-authentication.dita#openvpn-create-account-password-for-each-client"
+                                                >OpenVPN username/password
+                                            authentication</xref></entry>
+                                    </row>
+                                    <row valign="middle">
+                                        <entry><filepath>ta.key</filepath></entry>
+                                        <entry align="left">Required for client when
+                                                <uicontrol>SSL/TLS</uicontrol> is enabled on the
+                                            OpenVPN server</entry>
+                                    </row>
+                                </tbody>
+                            </tgroup>
+                        </table>
+                    </p></li>
+                <li>Open the OpenVPN app on your Android phone.</li>
+                <li>Tap the icon <image href="../Images/admin/openvpn-android-import-icon.png"
+                        id="image_ytn_yzk_33b" width="20"/> and navigate to the folder location
+                    where you copied the files.</li>
+                <li>Tap the OpenVPN connection file end with <codeph>.ovpn</codeph>, and then tap
+                        <image href="../Images/admin/openvpn-android-file-confirm.png"
+                        id="image_zl4_jbl_33b" width="20"/> to confirm the imported files.<p><image
+                            href="../Images/admin/openvpn-android-app.png" id="image_r2b_vxp_33b"
+                            width="200"/><image
+                            href="../Images/admin/openvpn-android-import-file.png"
+                            id="image_hn1_h1l_33b" width="200"/><image
+                            href="../Images/admin/openvpn-android-file.png" id="image_qv3_lbl_33b"
+                            width="200"/></p></li>
+                <li>Tap the server name <uicontrol>Android</uicontrol>, and tap
+                        <uicontrol>OK</uicontrol> to accept the connection.<p>The OpenVPN log shows
+                        you the connection process.</p><p><image
+                            href="../Images/admin/openvpn-android-connect.png"
+                            id="image_gct_tbl_33b" width="200"/><image
+                            href="../Images/admin/openvpn-android-accept-connect.png" width="200"
+                            id="image_mgh_y2h_j3b"/><image
+                            href="../Images/admin/openvpn-android-log.png" id="image_ek4_q2l_33b"
+                            width="200"/></p>If the client is connected to the PBX server, you can
+                    see the status shown as below.<p><image
+                            href="../Images/admin/openvpn-android-connect-success.png"
+                            id="image_f5g_bfl_33b" width="200"/></p></li>
+            </ol>
+        </p>
+    </body>
+</topic>

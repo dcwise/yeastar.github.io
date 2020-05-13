@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_r4n_j4q_ldb">
+    <title>Send Extension Information</title>
+    <shortdesc>After finishing the extension configurations, you can send the extension information
+        to the extension users' emails. The extension users can get their extension registration
+        information, Linkus login information, PBX login information in the email.</shortdesc>
+  
+        <taskbody>
+            <steps id="steps_akd_44q_ldb">
+            <step>
+                <?oxy_comment_start author="Becky" timestamp="20190909T163847+0800" comment="之前所有步骤都是有序列表，稍微调了下" flag="done"?>
+                <cmd>Log in PBX web interface, go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol>PBX</uicontrol>
+                        <uicontrol>Extensions</uicontrol>
+                    </menucascade>, click <uicontrol>Welcome Email</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Select the extensions that you want to send Welcome Email to.</cmd>
+                <info>
+                    <ul id="ul_wpc_ybb_1jb">
+                        <li>To send emails to all extensions, select <uicontrol>All
+                                Extensions</uicontrol>.</li>
+                        <li>To send emails to specific extensions, follow the instruction.<p>
+                                <ol id="ol_a33_1cb_1jb">
+                                    <li>Select <uicontrol>Selected Extensions</uicontrol>.</li>
+                                    <li>Select the desired extensions from
+                                            <uicontrol>Available</uicontrol> box to
+                                            <uicontrol>Selected</uicontrol> box.<p><image
+                                                href="../Images/admin/welcome_email_selected.png"
+                                                width="650" id="image_bkd_44q_ldb"/></p></li>
+                                </ol>
+                            </p></li>
+                    </ul>
+                </info>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Send</uicontrol>.</cmd>
+            </step><?oxy_comment_end?>
+        </steps>
+        </taskbody>
+        <related-links>
+        <link href="edit-welcome-email-template.dita#task_fpd_q4q_ldb"/>
+    </related-links>
+    
+</task>

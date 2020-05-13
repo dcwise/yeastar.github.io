@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_wsz_nmm_4fb">
+    <title>Group Call Pickup</title>
+    <shortdesc>If extension users are in the same pickup group, they can dial the Group Call Pickup
+        feature code (default *4) to pick up the group member's incoming call.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/10/24"/>
+            <!--Carol-->
+            <revised modified="2018/10/24"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <section id="section_umh_3nm_4fb">
+            <title>Group Call Pickup Feature Code</title>
+            <p>The default Group Pickup feature code is *4. </p>
+            <p>You can change the code on <menucascade>
+                    <uicontrol>Settings</uicontrol>
+                    <uicontrol>PBX</uicontrol>
+                    <uicontrol>General</uicontrol>
+                    <uicontrol>Feature Code</uicontrol>
+                    <uicontrol>Call Pickup</uicontrol>
+                </menucascade>.</p>
+        </section>
+    </conbody>
+</concept>

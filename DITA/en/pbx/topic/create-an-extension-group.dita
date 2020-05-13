@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_fgj_5ds_scb">
+    <title>Create an Extension Group</title>
+    <shortdesc>You can assign and categorize extensions in different groups. Extension groups
+        simplify the configuration process.</shortdesc>
+    <taskbody>
+        <steps id="steps_ecx_33s_scb">
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol>PBX</uicontrol>
+                        <uicontrol>Extensions</uicontrol>
+                        <uicontrol>Extension Group</uicontrol>
+                    </menucascade>, click <uicontrol>Add</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Set the <uicontrol>Name</uicontrol> to help you identify the group.</cmd>
+            </step>
+            <step>
+                <cmd>In the
+                        <?oxy_comment_start author="Sunmy" timestamp="20190904T161115+0800" comment="表达一致性，改" flag="done"?><uicontrol>Available</uicontrol>
+                    box, select the extensions to the <uicontrol>Selected</uicontrol> box.</cmd><?oxy_comment_end?>
+                <info><image href="../Images/admin/add_extension_group.png" width="650"
+                        id="image_qh5_hjs_scb"/></info>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol> and
+                    <uicontrol>Apply</uicontrol><?oxy_comment_start author="Sunmy" timestamp="20190904T160313+0800" comment="将结果移动 到manage 章节
+You can use the extension groups when you configuring the outbound routes, ring groups, queues, etc." flag="done"?>.</cmd><?oxy_comment_end?>
+            </step>
+        </steps>
+    </taskbody>
+</task>

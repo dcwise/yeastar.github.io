@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="topic_gxy_trk_bfb">
+    <title>Configure Your Presence Settings</title>
+    <shortdesc>You can log in the Extension User Portal to configure the call forwarding settings
+        and ring strategy for your presence status.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/09/07"/>
+            <!--Carol-->
+            <revised modified="2018/09/07"/>
+            <!--Carol-->
+            <revised modified="2018/09/11"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <steps id="steps_sl4_53l_cfb">
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Me</uicontrol>
+                        <uicontrol>Presence</uicontrol>
+                    </menucascade>, select the <uicontrol>Presence</uicontrol> that you want to
+                    configure.</cmd>
+            </step>
+            <step>
+                <cmd importance="optional">In the <uicontrol>Presence Information</uicontrol> field,
+                    enter your information for the presence status.</cmd>
+                <info>The information will be displayed on Linkus client.</info>
+            </step>
+            <step>
+                <cmd>Configure the <uicontrol>Transfer Destination</uicontrol> (Call Forwarding)
+                    settings.</cmd>
+                <substeps id="substeps_zrg_pjl_cfb">
+                    <substep>
+                        <cmd>Select the forwarding conditions:</cmd>
+                        <info>
+                            <ul id="ul_knj_qjl_cfb">
+                                <li><uicontrol>Always</uicontrol>: All the calls will be forwarded
+                                    regardless of your state.</li>
+                                <li><uicontrol>No Answer</uicontrol>: Calls will be forwarded to if
+                                    you don't answer the call.</li>
+                                <li><uicontrol>When Busy</uicontrol>: Calls will be forwarded when
+                                    you are busy in a call.</li>
+                            </ul>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Select a destination for the selected forwarding condition.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step importance="optional">
+                <cmd>If you are using Linkus client, set the <uicontrol>Ring Strategy</uicontrol>
+                    for your IP phone, Linkus mobile client, and Linkus PC client. </cmd>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

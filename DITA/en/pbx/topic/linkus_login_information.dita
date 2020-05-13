@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_xbc_qlr_2fb">
+    <title>Linkus Login Information</title>
+    <shortdesc>Users can log in Linkus by themselves after they receive the Linkus emails. You can
+        also provide the detailed Linkus login information to them.</shortdesc>
+    <body>
+        <section id="section_lmy_kxr_2fb" product="k2 s-series">
+            <title>Linkus Server with LCS</title>
+            <p>The LCS recognizes your PBX by the SN (Serial Number), you need to enter the PBX
+                Serial Number on the Linkus Login page.</p>
+            <p>
+                <ol id="ol_ckv_v1s_2fb">
+                    <li>Log in the PBX web interface, go to <menucascade>
+                            <uicontrol>Resource</uicontrol>
+                            <uicontrol>Information</uicontrol>
+                        </menucascade> to find the Serial Number.</li>
+                    <li>Open your Linkus Client, enter the login information, and click
+                            <uicontrol>Login</uicontrol>.<p>
+                            <ul id="ul_mfk_cbs_2fb">
+                                <li><uicontrol>Username</uicontrol>: According to the <xref
+                                        href="linkus-login-mode.dita#task_f2z_fdn_2fb">Login
+                                        Mode</xref> settings, enter the extension number or the
+                                    email address that is associated with the extension.</li>
+                                <li><uicontrol>Password</uicontrol>: Enter the extension's User
+                                    Password.</li>
+                                <li><uicontrol>SN/Domain</uicontrol>: Enter the PBX Serial Number.<p>
+                                        <note>If the <uicontrol>SN/Domain</uicontrol> field is
+                                            uneditable, click <uicontrol>Custom Settings</uicontrol>
+                                            and unselect the option <uicontrol>Enable Custom
+                                                Settings</uicontrol>.</note>
+                                    </p></li>
+                            </ul>
+                        </p><p>
+                            <fig id="fig_myr_dql_ngb">
+                                <title>Linkus Destop Login</title>
+                                <image href="../Images/admin/linkus-login-info-desktop.png"
+                                    placement="inline" id="image_nyr_dql_ngb" height="400"/>
+                                <p>
+                                    <fig id="fig_kd2_3rl_ngb">
+                                        <title>Linkus Mobile Login</title>
+                                        <image href="../Images/admin/linkus-login-info-mobile.png"
+                                            id="image_ld2_3rl_ngb" height="400"/>
+                                    </fig>
+                                </p>
+                            </fig>
+                        </p></li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_nlx_mxr_2fb" product="k2 s-series">
+            <title>Linkus Server without LCS</title>
+            <p>If you set up your Linkus server without LCS, you need to enter the login information
+                according to the PBX's network environment.</p>
+            <p>
+                <ol>
+                    <li>On the Linkus login page, click <uicontrol>Custom Settings</uicontrol>.</li>
+                    <li>On the <uicontrol>Custom Settings</uicontrol> page, enter your Linkus server
+                        information, click <uicontrol>Save</uicontrol>.<p>
+                            <ul id="ul_alb_vms_2fb">
+                                <li><uicontrol>Enable Custom Settings</uicontrol>: Check this
+                                    option.</li>
+                                <li><uicontrol>Local IP Address: Local Port</uicontrol>: Enter the
+                                    local IP address of the PBX and the Linkus local port.</li>
+                                <li><uicontrol>Remote IP Address: Remote Port</uicontrol>: Enter the
+                                    public IP address or domain of the PBX and the Linkus external
+                                    port.</li>
+                            </ul>
+                        </p><p>
+                            <note>If you set both <uicontrol>Local IP Address</uicontrol> and
+                                    <uicontrol>Remote IP Address</uicontrol>, Linkus will detect
+                                your mobile network or PC network, and choose a relevant IP to log
+                                in.</note>
+                        </p><p>
+                            <fig id="fig_tvy_kjm_ngb">
+                                <title>Custom settings of Linkus desktop client</title>
+                                <image href="../Images/admin/linkus-custom-settings-desktop.png"
+                                    id="image_uvy_kjm_ngb" height="400"/>
+                            </fig>
+                            <fig id="fig_lzx_qjm_ngb">
+                                <title>Custom settings of Linkus mobile client</title>
+                                <image href="../Images/admin/linkus-custom-settings-mobile.png"
+                                    height="400" id="image_mzx_qjm_ngb"/>
+                            </fig>
+                        </p></li>
+                    <li>Back to the Linkus login page, enter the username and password, click
+                            <uicontrol>Login</uicontrol>.<p>
+                            <ul id="ul_ndq_b3n_hhb">
+                                <li><uicontrol>Username</uicontrol>: According to the <xref
+                                        href="linkus-login-mode.dita#task_f2z_fdn_2fb">Login
+                                        Mode</xref> settings, enter the extension number or the
+                                    email address that is associated with the extension.</li>
+                                <li><uicontrol>Password</uicontrol>: Enter the extension user
+                                    password.</li>
+                            </ul>
+                        </p></li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_u1p_lpn_hhb" product="cloudpbx">
+            <title>Linkus login information</title>
+            <p>
+                <ol id="ol_s2m_z5n_hhb">
+                    <li>On the Linkus login page, enter the following information, and click
+                            <uicontrol>Login</uicontrol>.<p>
+                            <ul id="ul_szc_wvf_hhb">
+                                <li><uicontrol>Username</uicontrol>: Enter the email address that is
+                                    associated with the extension.</li>
+                                <li><uicontrol>Password</uicontrol>: Enter the extension
+                                        <uicontrol>User Password</uicontrol>.</li>
+                                <li><uicontrol>SN/Domain</uicontrol>: Enter the PBX domain.<p>
+                                        <note>If the <uicontrol>SN/Domain</uicontrol> field is
+                                            uneditable, click <uicontrol>Custom Settings</uicontrol>
+                                            and unselect the option <uicontrol>Enable Custom
+                                                Settings</uicontrol>.</note>
+                                    </p></li>
+                            </ul>
+                        </p><p>
+                            <fig id="fig_hf3_pvf_hhb">
+                                <title>Linkus Desktop Login</title>
+                                <p>
+                                    <image href="../Images/admin/linkus-desktop-login-cloud.png"
+                                        id="image_png_kyf_hhb" height="400"/></p>
+                            </fig>
+                            <fig id="fig_kf3_pvf_hhb">
+                                <title>Linkus Mobile Login</title>
+                            </fig>
+                        </p><p>
+                            <fig id="fig_mxy_pxf_hhb">
+                                <image href="../Images/admin/linkus-mobile-login-cloud.png"
+                                    id="image_bjr_qxf_hhb"/>
+                            </fig>
+                        </p></li>
+                </ol>
+            </p>
+        </section>
+    </body>
+    <related-links>
+        <link href="set_up_linkus_server_with_LCS.dita#topic_hhl_wxl_2fb" product="k2 s-series"/>
+        <link href="set_up_linkus_server_without_lcs.dita#concept_ddz_tny_5db" product="k2 s-series"/>
+        <link href="set_up_linkus_server.dita" product="cloudpbx"/>
+    </related-links>
+</topic>

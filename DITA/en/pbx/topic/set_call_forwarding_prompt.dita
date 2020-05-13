@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_dg2_spq_5cb">
+    <title>Set Call Forwarding Prompt</title>
+    <shortdesc>By default, when the PBX is forwarding an incoming call to another number, the PBX
+        will play the call forwarding prompt "please hold when I try to locate the person you are
+        calling", and then play the MoH music when the caller is waiting. You can disable the call
+        forwarding prompt and change the MoH music to a normal ring tone. In this way, the caller
+        will not realize that the call is forwarded.</shortdesc>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol>PBX</uicontrol>
+                        <uicontrol>Voice Prompts</uicontrol>
+                        <uicontrol>Prompt Preference</uicontrol>
+                    </menucascade>.</cmd>
+            </step>
+            <step>
+                <?oxy_comment_start author="Sunmy" timestamp="20190904T170100+0800" comment="表达一致，改" flag="done"?>
+                <cmd>Unselect the checkbox of <?oxy_comment_end?><uicontrol>Play Call Forwarding
+                        Prompt</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd><?oxy_comment_start author="Sunmy" timestamp="20190904T170251+0800" comment="表达一致，改" flag="done"?>In
+                    the <uicontrol>Music on Hold for Call Forwarding</uicontrol> drop-down list,
+                    select <uicontrol>Ringing Tone</uicontrol>.</cmd><?oxy_comment_end?>
+                <info><image href="../Images/admin/call_forwarding_prompt.png"
+                        id="image_sft_bsq_5cb"/></info>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

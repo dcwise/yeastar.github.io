@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="k2-write-k2-image-in-a-usb">
+    <title>Write Yeastar K2 Image in a USB</title>
+    <shortdesc>If you choose to install Yeastar K2 IPPBX system on a physical machine, you need to
+        write K2 image in the USB in advance. The instructions below introduces how to write K2
+        image in a USB via UltraISO.</shortdesc>
+    <body>
+        <p>
+            <ol id="ol_fcd_r5y_b3b">
+                <li>Format your USB with FAT32.</li>
+                <li>Open the K2 image file via UltraISO.<p><image
+                            href="../Images/admin/k2-open-k2-image-file-USB.jpg"
+                            id="image_y3g_z5y_b3b" width="650"/></p></li>
+                <li>Click <menucascade>
+                        <uicontrol>Bootable</uicontrol>
+                        <uicontrol>Write Disk Image</uicontrol>
+                    </menucascade>.<p><image href="../Images/admin/k2-write-image-USB.jpg"
+                            id="image_b4m_hvy_b3b" width="650"/></p></li>
+                <li>Choose your USB drive as <uicontrol>Disk Drive</uicontrol>, and choose the K2
+                    image file, then click <uicontrol>Write</uicontrol>.<p><image
+                            href="../Images/admin/k2-choose-file-write-USB.jpg"
+                            id="image_ybl_pvy_b3b" width="500"/></p></li>
+                <li>Click <uicontrol>Yes</uicontrol> to start writing image.<p><image
+                            href="../Images/admin/k2-start-writing-image-USB.jpg"
+                            id="image_sln_yvy_b3b" width="300"/></p></li>
+                <li>After the process of writing image is completed, you can check your USB
+                        drive.<p>The USB should contain the files as the following figure
+                            shows.</p><p><image href="../Images/admin/k2-check-USB.jpg"
+                            id="image_kbg_jwy_b3b" width="650"/></p></li>
+            </ol>
+        </p>
+        <p><b>What's Next:</b></p>
+        <p><xref href="install-k2-on-vmware.dita"/></p>
+    </body>
+</topic>

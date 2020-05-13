@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_yn4_bq1_ydb">
+    <title>Add Notification Contacts</title>
+    <shortdesc>You can set the PBX to send notifications when specific events or errors occur,
+        notifying you via email<ph product="s-series">,
+            <?oxy_insert_start author="Becky" timestamp="20190801T161954+0800"?>extensions,
+            <?oxy_insert_end?>SMS, or mobile devices</ph>.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/05/25"/>
+            <!--Carol-->
+            <revised modified="2018/05/25"/>
+            <!--Carol-->
+            <revised modified="2018/10/23"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol>Event Center</uicontrol>
+                        <uicontrol>Notification Contacts</uicontrol>
+                    </menucascade>, click <uicontrol>Add</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>On the configuration page, choose a contact and set the notification
+                    method.</cmd>
+                <info><image href="../Images/admin/add_notification_contacts.png"
+                        id="image_g3d_pq1_ydb" product="s-series"/></info>
+                <info><image href="../Images/admin/add_notification_contacts_cloud.png"
+                        id="image_csb_1jg_4fb" product="cloudpbx"/></info>
+                <choices id="choices_bxl_sq1_ydb">
+                    <choice><uicontrol>Choose Contact</uicontrol>: Choose an extension user or
+                        choose <uicontrol>Custom</uicontrol> to add an external contact.</choice>
+                    <choice><uicontrol>Notification Method</uicontrol>: Select how to notify the
+                        contact when the event occurs.<p>
+                            <ul id="ul_umr_1r1_ydb">
+                                <li><uicontrol>Email</uicontrol>: The PBX will send notifications to
+                                    the email address of the contact.</li>
+                                <li product="s-series"><uicontrol>SMS</uicontrol>: The PBX will send
+                                    SMS messages to the mobile number of the contact when the event
+                                    occurs.</li>
+                                <?oxy_attributes product="&lt;change type=&quot;removed&quot; oldValue=&quot;s-series&quot; author=&quot;Becky&quot; timestamp=&quot;20190801T162833+0800&quot; /&gt;"?>
+                                <li><uicontrol>Call Extension</uicontrol>: The PBX will call the
+                                    extension number of the contact when the event occurs.</li>
+                                <?oxy_attributes product="&lt;change type=&quot;removed&quot; oldValue=&quot;s-series&quot; author=&quot;Becky&quot; timestamp=&quot;20190801T162837+0800&quot; /&gt;"?>
+                                <li><uicontrol>Call Mobile</uicontrol>: The PBX will call the mobile
+                                    number of the contact when the event occurs.</li>
+                            </ul>
+                        </p></choice>
+                    <choice><uicontrol>Email</uicontrol>: If you choose <uicontrol>Notification
+                            Mode</uicontrol> to <uicontrol>Email</uicontrol>, you need to set the
+                        email address of the contact.</choice>
+                    <choice product="s-series"><uicontrol>Mobile Number</uicontrol>: If you choose
+                            <uicontrol>Notification Mode</uicontrol> to <uicontrol>SMS</uicontrol>
+                        or <uicontrol>Call Mobile</uicontrol>, you need to set the mobile number of
+                        the contact and set the <uicontrol>Prefix</uicontrol> according to the <xref
+                            href="dial_patterns_of_outbound_route.dita#concept_y3j_ns1_ydb">outbound
+                            route pattern</xref> on the PBX.</choice>
+                </choices>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>
+<?oxy_options track_changes="on"?>

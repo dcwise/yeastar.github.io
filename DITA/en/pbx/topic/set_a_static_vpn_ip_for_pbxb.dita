@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_tyk_g2x_5db">
+    <title>Step5. Set a Static VPN IP for PBX B</title>
+    <shortdesc>By default, the OpenVPN server assigns a dynamic IP address for the OpenVPN clients.
+        You can set a static VPN IP address for the VPN clients.</shortdesc>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Double click your VPN client certificate, check the <codeph>CN</codeph> of the
+                    client.</cmd>
+                <info><image href="../Images/admin/vpn_server_client_certificate.png"
+                        id="image_wc2_ygy_5db"/></info>
+            </step>
+            <step>
+                <cmd>Log in the PBX A web interface, go to <menucascade>
+                        <uicontrol>VPN Server</uicontrol>
+                        <uicontrol>Static IP</uicontrol>
+                    </menucascade>, click <uicontrol>Add</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>On the configuration page, enter the VPN client's <codeph>CN</codeph> and
+                    assign an IP address for the client.</cmd>
+                <info>
+                    <p>
+                        <note>The IP address should in the address pool of the VPN server.</note>
+                    </p>
+                </info>
+                <info><image href="../Images/admin/openvpn-staic-ip-client.png" id="image_tm3_thy_5db"
+                    /></info>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

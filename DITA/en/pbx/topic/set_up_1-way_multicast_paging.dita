@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_x4m_xlp_32b">
+    <title>Set up 1-Way Multicast Paging</title>
+    <shortdesc>Multicast Paging allows you to easily and quickly broadcast instant audio
+        announcements to phone users who are listening to the same multicast IP address of the
+        PBX.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/07/02"/>
+            <!--Carol-->
+            <revised modified="2018/07/02"/>
+            <!--Carol-->
+            <revised modified="2018/07/07"/>
+            <!--Carol-->
+            <revised modified="2018/07/24"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <context>
+            <p>When you make a Multicast Paging, the PBX sends Real-time Transport Protocol (RTP)
+                streams to the IP phones without involving SIP signaling. The phones that will
+                receive the RTP streams don't need to register SIP extensions.</p>
+            <note>
+                <ul id="ul_ljk_nmp_32b">
+                    <li>The IP phone that will receive 1-way multicast paging should support
+                        Multicast Paging feature.</li>
+                    <li>The Multicast Paging is one-way audio call.</li>
+                </ul>
+            </note>
+        </context>
+        <steps id="steps_mzs_flp_32b">
+            <step>
+                <cmd>Set a 1-way Multicast Paging on the PBX.</cmd>
+                <substeps id="substeps_kxg_kwq_32b">
+                    <substep>
+                        <cmd>Go to <menucascade>
+                                <uicontrol>Settings</uicontrol>
+                                <uicontrol>PBX</uicontrol>
+                                <uicontrol>Call Features</uicontrol>
+                                <uicontrol>Paging/Intercom</uicontrol>
+                            </menucascade>, click <uicontrol>Add</uicontrol>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Set a 1-Way multicast paging.</cmd>
+                        <info><image href="../Images/admin/1-way_multicast_paging.png" width="650"
+                                id="image_nzs_flp_32b"/></info>
+                        <info>
+                            <ul id="ul_ht3_qwq_32b">
+                                <li><uicontrol>Number</uicontrol>: Use the default or specify an
+                                    number for the paging group.</li>
+                                <li><uicontrol>Name</uicontrol>: Enter a name for the paging
+                                    group.</li>
+                                <li><uicontrol>Type</uicontrol>: Choose <codeph>1-Way Multicast
+                                        Paging</codeph>.</li>
+                                <li><uicontrol>IP of Multicast Channel</uicontrol>: Enter the
+                                    multicast IP address and port (e.g. 224.255.255.255:1000).<p>
+                                        <note>The range of multicast IP address is 224.0.0.0 -
+                                            239.255.255.255.</note>
+                                    </p></li>
+                            </ul>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Click <uicontrol>Save</uicontrol> and
+                            <uicontrol>Apply</uicontrol>.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Set Multicast Paging on each of your IP phone.</cmd>
+                <info>In the following, we take Yealink T27G as an example.</info>
+                <substeps>
+                    <substep>
+                        <cmd>Log in the phone web interface, go to <menucascade>
+                                <uicontrol>Directory</uicontrol>
+                                <uicontrol>Multicast IP</uicontrol>
+                            </menucascade>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>In the <uicontrol>Multicast Listening</uicontrol> section, enter the
+                            same multicast IP address and port of the PBX.</cmd>
+                        <info><image href="../Images/admin/yealink_multicast_paging.png" width="650"
+                                id="image_pdv_b4b_k2b"/></info>
+                    </substep>
+                    <substep>
+                        <cmd>Click <uicontrol>Confirm</uicontrol>.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+        <result id="result_pzs_flp_32b">When you dial the paging group number, the members in the
+            group will automatically answer the call into speakerphone mode.<p>
+                <note>If the multicast paging doesn't work, check the following:<ul
+                        id="ul_v5n_yxq_32b">
+                        <li>Multicast IP address and port are in the correct range.</li>
+                        <li>If the PBX and IP phones are in different IP segments (e.g. PBX is in
+                                <codeph>192.168.5.X</codeph> IP segment, IP phones are in
+                                <codeph>192.168.3.X</codeph> IP segment), check if your router
+                            supports IP Multicast in different IP segments.</li>
+                    </ul></note>
+            </p></result>
+    </taskbody>
+</task>

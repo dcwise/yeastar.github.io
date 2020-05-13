@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="install-s50">
+    <title>Install Yeastar S50</title>
+    <conbody>
+        <section id="section_et5_vzb_b2b">
+            <title>Install Telephony Module</title>
+            <p>Yeastar S50 supports up to 4 modules. The optional modules are as below:</p>
+            <table id="table_lbw_xzb_b2b">
+                <tgroup cols="4">
+                    <colspec colnum="1" colname="col1" colsep="1" rowsep="1"/>
+                    <colspec colnum="2" colname="col2" colsep="1" rowsep="1"/>
+                    <colspec colnum="3" colname="col3" colsep="1" rowsep="1"/>
+                    <colspec colnum="4" colname="col4" colsep="1" rowsep="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <ul id="ul_mbw_xzb_b2b">
+                                    <li>S2 Module</li>
+                                </ul>
+                            </entry>
+                            <entry>
+                                <ul id="ul_nbw_xzb_b2b">
+                                    <li>O2 Module</li>
+                                </ul>
+                            </entry>
+                            <entry>
+                                <ul id="ul_obw_xzb_b2b">
+                                    <li>B2 Module</li>
+                                </ul>
+                            </entry>
+                            <entry>
+                                <ul id="ul_pbw_xzb_b2b">
+                                    <li>SO Module</li>
+                                </ul>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <ul id="ul_qbw_xzb_b2b">
+                                    <li>GSM Module</li>
+                                </ul>
+                            </entry>
+                            <entry>
+                                <ul id="ul_rbw_xzb_b2b">
+                                    <li>3G Module</li>
+                                </ul>
+                            </entry>
+                            <entry>
+                                <ul>
+                                    <li>4G Module</li>
+                                </ul>
+                            </entry>
+                            <entry> </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <note>Before installing the module, check if the module is clean and intact.</note>
+            <ol id="ol_xj1_b1c_b2b">
+                <li>Loosen the screws at the bottom of the device and remove the upper
+                            cover.<p><image href="../Images/admin/install_s50_1.png"
+                            id="image_wmq_41c_b2b" width="500"/>
+                    </p></li>
+                <li>Insert the module to the Module Slot.<p><image
+                            href="../Images/admin/install_s50_2.png" id="image_swy_cbc_b2b"
+                            width="600"/></p></li>
+                <li>Follow the instructions to insert a SIM card on the GSM/3G/4G module. <note>Skip
+                        this step if no GSM/3G/4G module is installed.</note><p><image
+                            href="../Images/admin/install_s50_3.png" id="image_pwr_hbc_b2b"
+                            width="600"/></p></li>
+                <li>Close the cover and fix the screws.<p><image
+                            href="../Images/admin/install_s50_4.png" width="500"
+                            id="image_vdz_lbc_b2b"/></p></li>
+                <li>Rotate the antenna into the Antenna Socket. Skip this step if no GSM/3G/4G
+                    module installed.<p><image href="../Images/admin/install_s50_5.png"
+                            id="image_zzk_4bc_b2b" width="300"/></p></li>
+            </ol>
+        </section>
+   
+
+            <section id="section_glm_tbc_b2b">
+                <title>Desktop Installation</title>
+                <p>
+                    <note type="caution">
+                        <p>
+                            <ul id="ul_vfc_wbc_b2b">
+                                <li>Set 5~10cm gaps around the device for air circulation.</li>
+                                <li>Avoid any heavy thing placed on the device.</li>
+                            </ul>
+                        </p>
+                    </note>
+                </p>
+            <p>
+                <ol>
+                    <li>Place the PBX on a steady platform.</li>
+                    <li>Remove the adhesive backing paper from the rubber feet.</li>
+                    <li>Turn over the device and attach the supplied rubber feet to the recessed
+                        areas on the bottom at each corner of the device.<p><image
+                                href="../Images/admin/install_s50_6.png" id="image_iwp_bcc_b2b"
+                            /></p></li>
+                </ol>
+            </p>
+            </section>
+        <section id="section_zyt_x2c_b2b">
+            <title>Rack Installation</title>
+            <p>
+                <note type="caution">
+                    <p>
+                        <ul id="ul_em5_z2c_b2b">
+                            <li>Be careful not to drop any components. Dropping components may
+                                damage them or cause an injury.</li>
+                            <li>Only use the 19-inch rack mounting kits (attached bracket and
+                                fittings) included with the PBX.</li>
+                        </ul>
+                    </p>
+                </note>
+            </p>
+            <p>
+                <ol>
+                    <li>Fix the brackets to the left and right sides of the PBX with 4
+                                screws.<p><image href="../Images/admin/rack_installation.png"
+                                id="image_kf3_cfc_b2b"/></p></li>
+                    <li>Place the PBX in the 19-inch rack and fix both brackets to the rack with the
+                        rack’s proprietary mounting equipment.<p><image
+                                href="../Images/admin/rack_installation2.png" id="image_tym_dfc_b2b"
+                            /></p></li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_wpk_2fc_b2b">
+            <title>Ground Connection</title>
+            <p>
+                <note type="caution">
+                    <p>
+                        <ul id="ul_svb_gfc_b2b">
+                            <li>Proper grounding (connection to ground) is very important to reduce
+                                the risk of electrocution to the user or protect the PBX from the
+                                bad effects of external noise in the case of a lightning
+                                strike.</li>
+                            <li>A permanent connection between ground and the ground terminal of the
+                                PBX must be made.</li>
+                        </ul>
+                    </p>
+                </note>
+            </p>
+            <p>
+                <ol id="ol_rst_hfc_b2b">
+                    <li>Tighten the provided screw stud into the Grounding port on PBX.</li>
+                    <li>Insert an 18AWG grounding wire (user supplied).</li>
+                    <li>Tighten the provided screw nut.</li>
+                    <li>Attach the grounding wire to the grounding terminal.<p><image
+                                href="../Images/admin/grounding_connection.png"
+                                id="image_ww3_lfc_b2b" width="650"/></p></li>
+                </ol>
+            </p>
+        </section>
+        </conbody>
+    </concept>
+
+<?oxy_options track_changes="on"?>

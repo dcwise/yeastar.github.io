@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="reference_frv_hk3_mfb">
+    <title>Import Parameters - Billing Rate</title>
+    <shortdesc>Descriptions for the Billing Rate parameters that you can import to <ph
+            keyref="product_name"/>.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/10/16"/>
+            <!--Carol-->
+            <revised modified="2018/10/16"/>
+            <!--Carol-->
+            <revised modified="2018/10/17"/>
+        </critdates>
+    </prolog>
+    <refbody>
+        <section id="section_gkz_1n3_mfb">
+            <p>
+                <table id="table_pws_bn3_mfb">
+                    <tgroup cols="4">
+                        <colspec colnum="1" colname="col1" colsep="1" rowsep="1" colwidth="1.27*"/>
+                        <colspec colnum="2" colname="col2" rowsep="1" colsep="1" colwidth="1.18*"/>
+                        <colspec colnum="3" colname="col3" rowsep="1" colsep="1" colwidth="1*"/>
+                        <colspec colnum="4" colname="col6" colsep="1" rowsep="1" colwidth="3.13*"/>
+                        <thead>
+                            <row>
+                                <entry>Parameter</entry>
+                                <entry>Description</entry>
+                                <entry>Importance</entry>
+                                <entry>Restriction</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>Match Pattern</entry>
+                                <entry>N/A</entry>
+                                <entry>Optional</entry>
+                                <entry>Only the following characters are allowed: <p>Numbers and
+                                            <codeph>X</codeph>
+                                        <codeph>x</codeph>
+                                        <codeph>Z</codeph>
+                                        <codeph>z</codeph>
+                                        <codeph>N</codeph>
+                                        <codeph>n</codeph>
+                                        <codeph>W</codeph>
+                                        <codeph>w</codeph>
+                                        <codeph>.</codeph>
+                                        <codeph>!</codeph>
+                                        <codeph>[</codeph>
+                                        <codeph>]</codeph>
+                                    </p></entry>
+                            </row>
+                            <row>
+                                <entry>Number Length</entry>
+                                <entry>N/A</entry>
+                                <entry>Optional</entry>
+                                <entry>
+                                    <ul id="ul_rbk_rwn_mfb">
+                                        <li>Only numeric are allowed. </li>
+                                        <li>The maximum length is 2.</li>
+                                    </ul>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>From</entry>
+                                <entry>N/A</entry>
+                                <entry>Required</entry>
+                                <entry>Must match time format HH:MM:SS, e.g.00:00:00</entry>
+                            </row>
+                            <row>
+                                <entry>To</entry>
+                                <entry>N/A</entry>
+                                <entry>Required</entry>
+                                <entry>Must match time format HH:MM:SS, e.g.23:59:59</entry>
+                            </row>
+                            <row>
+                                <entry>Days of Week</entry>
+                                <entry>N/A</entry>
+                                <entry>Required</entry>
+                                <entry>Enter Week Days. <ul id="ul_ntq_ywn_mfb">
+                                        <li><codeph>0</codeph>: Sunday</li>
+                                        <li><codeph>1</codeph>: Monday</li>
+                                        <li><codeph>2</codeph>: Tuesday</li>
+                                        <li><codeph>3</codeph>: Wednesday</li>
+                                        <li><codeph>4</codeph>: Thursday</li>
+                                        <li><codeph>5</codeph>: Friday</li>
+                                        <li><codeph>6</codeph>: Saturday</li>
+                                    </ul>For example, enter <codeph>120</codeph>, means billing
+                                    rules applied to Monday, Tuesday, and Sunday.</entry>
+                            </row>
+                            <row>
+                                <entry>Rate</entry>
+                                <entry>N/A</entry>
+                                <entry>Required</entry>
+                                <entry>
+                                    <ul id="ul_gzq_fxn_mfb">
+                                        <li>Only numbers and <codeph>.</codeph> are allowed. </li>
+                                        <li>The maximum length is 15.</li>
+                                    </ul>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>Billable Unit(s)</entry>
+                                <entry>N/A</entry>
+                                <entry>Required</entry>
+                                <entry>
+                                    <ul id="ul_mnl_gxn_mfb">
+                                        <li>Only numbers are allowed. </li>
+                                        <li>The maximum length is 3.</li>
+                                    </ul>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>Initial Cost</entry>
+                                <entry>N/A</entry>
+                                <entry>Required</entry>
+                                <entry>
+                                    <ul>
+                                        <li>Only numbers and <codeph>.</codeph> are allowed. </li>
+                                        <li>The maximum length is 15.</li>
+                                    </ul>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>Initial Time(s)</entry>
+                                <entry>N/A</entry>
+                                <entry>Required</entry>
+                                <entry>
+                                    <ul id="ul_tl5_3xn_mfb">
+                                        <li>Only numbers are allowed. </li>
+                                        <li>The maximum length is 3.</li>
+                                    </ul>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>Member Extensions</entry>
+                                <entry>The extensions will be billed by this rate.</entry>
+                                <entry>Required. <p>At least an extension or an account should be
+                                        entered.</p></entry>
+                                <entry>Enter Extension number.<p>For multiple extensions, enter
+                                        extension numbers and use <codeph>-</codeph> as separator,
+                                        e.g. <codeph>1000-1001-1002</codeph>.</p><note>If the
+                                        extension you enter is not existing in PBX, the extension
+                                        will be skipped.</note></entry>
+                            </row>
+                            <row>
+                                <entry>Member Accounts</entry>
+                                <entry>The accounts will be billed by this rate.</entry>
+                                <entry>Required.<p>At least an extension or an account should be
+                                        entered.</p>
+                                </entry>
+                                <entry>Enter Account number.<p>For multiple accounts, enter account
+                                        numbers and use <codeph>-</codeph> as separator, e.g.
+                                            <codeph>1111-2222-3333</codeph>.</p><p>
+                                        <note>If the account you enter is not existing in PBX, the
+                                            account will be skipped.</note>
+                                    </p></entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+    </refbody>
+</reference>

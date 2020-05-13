@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_td4_3h3_pdb">
+    <title>Version 1.3.9</title>
+    <abstract>Released Date: January 25, 2018</abstract>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/06/20"/>
+        </critdates>
+    </prolog>
+    <body>
+        <section>
+            <title>Optimization</title>
+            <p><image href="../Images/horizon.png" id="image_pry_dyv_pdb"/></p>
+            <p>
+                <ul>
+                    <li>Extended the expiration time for the login password reset link to 24
+                        hours.</li>
+                    <li>Optimized VoIP Register trunk: if the DID number of the trunk is different
+                        from the registered number, the administrator needs to set the trunk “phone
+                        number” (VoIP Trunk > Advanced > Other Settings > phone number).</li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_sf5_tkd_jdb">
+            <title>Fixed Bug</title>
+            <p><image href="../Images/horizon.png" id="image_mjg_b1x_pdb"/></p>
+            <ul id="ul_dsk_4h3_pdb">
+                <li>Fixed VoIP Peer Trunk: the trunk with TCP protocol could not work properly.
+                </li>
+            </ul>
+        </section>
+    </body>
+</topic>

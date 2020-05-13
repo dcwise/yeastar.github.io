@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="task_dmp_yjm_ggb">
+    <title>Handle Calls in Zoho CRM</title>
+    <shortdesc>After integrating Yeastar Cloud PBX and Zoho CRM, you are empowered with features
+        like click to call, inbound call pop-ups, outbound call pop-ups, and call journal in the
+        Zoho CRM.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/12/27"/>
+            <!--Carol-->
+            <revised modified="2018/12/28"/>
+        </critdates>
+    </prolog>
+    <body>
+        <p>
+            <note>Make sure that the associated extension of Zoho user is registered on IP phone or
+                soft phone, or you could not receive or make calls in Zoho CRM.</note>
+        </p>
+        <section id="section_xmb_32t_ggb">
+            <title>Handle incoming calls</title>
+            <p>When you receive an incoming call from a CRM contact, the associated extension rings
+                and a Business Card of the contact pops up on the Zoho CRM web page.</p>
+            <p>You can quickly view the contact information and handles the call on your phone.</p>
+            <p><image href="../Images/admin/zoho-card-view.png" id="image_rd1_gft_ggb" width="350"
+                /></p>
+        </section>
+        <section id="section_xrs_pft_ggb">
+            <title>Click to call</title>
+            <p>You can quickly call your CRM contacts by clicking Phone button in the CRM.</p>
+            <p>
+                <ol id="ol_dn2_wrt_ggb">
+                    <li>Click the desired record.</li>
+                    <li>On the <uicontrol>Record's Details</uicontrol> page, click the Phone icon
+                        beside the phone number.<p>The associated extension will ring
+                                first.</p><p><image href="../Images/admin/zoho-click-to-call.png"
+                                id="image_s1k_trt_ggb"/></p></li>
+                    <li>Pick up your phone to answer the call, then the PBX will call the CRM
+                            contact.<p>After the call is established, the Business Card of the
+                            contact pops up on the Zoho CRM web page.</p></li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_zt5_zrt_ggb">
+            <title>Follow-up Activity</title>
+            <p>At the end of every call, you can do any or all of the following activities from the
+                    <b>Call Ended</b> window in Zoho CRM. These would automatically be associated to
+                the respective record.</p>
+            <p><image href="../Images/admin/zoho-call-end.png" width="300" id="image_exj_gst_ggb"
+                /></p>
+            <p>
+                <ul id="ul_ujh_kst_ggb">
+                    <li>Add a follow-up call.<p><image
+                                href="../Images/admin/zoho-add-a-follow-up-call.png"
+                                id="image_zk3_pst_ggb"/></p></li>
+                    <li>Add a follow-up task.<p><image
+                                href="../Images/admin/zoho-add-a-follow-up-task.png"
+                                id="image_dyk_rst_ggb"/></p></li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_f4p_sst_ggb">
+            <title>View Call logs</title>
+            <p>Calls made, received, missed and unanswered in Zoho CRM via Yeastar Cloud PBX are
+                automatically logged in the <b>Activities</b>module.</p>
+            <p><image href="../Images/admin/zoho-view-call-logs.png" id="image_fwh_wst_ggb"
+                    width="600"/>
+            </p>
+        </section>
+    </body>
+</topic>

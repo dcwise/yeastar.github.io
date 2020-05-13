@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_qwh_5ng_tdb">
+    <title>E1/T1 Trunk Introduction</title>
+    <shortdesc>E1/T1 is known as Primary Rate Interface (PRI), is an Integrated Services Digital
+        Network (ISDN) access method, which enables traditional phone lines to carry voice, data and
+        video traffic, among others.</shortdesc>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/05/28"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <p>
+            <note>Yeastar S100 and S300 supports PRI E1/T1/J1 trunk. To extend E1/T1/J1 trunk, you
+                need to install EX30 expansion board on S100/S300. One EX30 expansion board provides
+                1 E1/T1/J1 port.</note>
+        </p>
+        <p>The PRI consists of B channels at 64 kbit/s each and D channel at 64 kbit/s each. The B
+            channels are used for voice or user data, and the D channel is used for any combination
+            of data, control/signalling, and X.25 packet networking.</p>
+        <p>According to the number of B-channels and D-channels, there are three types of PRI
+            interface: E1, T1 and J1.</p>
+        <?oxy_attributes colsep="&lt;change type=&quot;removed&quot; oldValue=&quot;1&quot; author=&quot;Sunmy&quot; timestamp=&quot;20191023T150610+0800&quot; /&gt;" rowsep="&lt;change type=&quot;removed&quot; oldValue=&quot;1&quot; author=&quot;Sunmy&quot; timestamp=&quot;20191023T150610+0800&quot; /&gt;"?>
+        <table id="table_lq4_1bs_w3b">
+            <title>The difference between E1, T1, and J1</title>
+            <tgroup cols="2">
+                <?oxy_attributes colsep="&lt;change type=&quot;inserted&quot; author=&quot;Sunmy&quot; timestamp=&quot;20191023T150601+0800&quot; /&gt;" rowsep="&lt;change type=&quot;inserted&quot; author=&quot;Sunmy&quot; timestamp=&quot;20191023T150602+0800&quot; /&gt;"?>
+                <colspec colname="c1" colnum="1" colwidth="1*" colsep="1" rowsep="1"/>
+                <?oxy_attributes colsep="&lt;change type=&quot;inserted&quot; author=&quot;Sunmy&quot; timestamp=&quot;20191023T150601+0800&quot; /&gt;" rowsep="&lt;change type=&quot;inserted&quot; author=&quot;Sunmy&quot; timestamp=&quot;20191023T150602+0800&quot; /&gt;"?>
+                <colspec colname="c2" colnum="2" colwidth="3.21*" colsep="1" rowsep="1"/>
+                <thead>
+                    <row>
+                        <entry>PRIs Type</entry>
+                        <entry>Description</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry align="center" valign="middle">E1</entry>
+                        <entry>
+                            <p>Contains 30 B-channels and 2 D-channel and used in Europe, China and
+                                most of the Asia countries.</p>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry align="center" valign="middle">T1</entry>
+                        <entry>Contains 23 B-channels and one D-channel and used in the USA, Canada
+                            and Hong Kong. </entry>
+                    </row>
+                    <row>
+                        <entry align="center" valign="middle">J1</entry>
+                        <entry>It is almost the same as T1 but used in Japan with some slight
+                            modifications, this is the Japanese standard for PRI.</entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </conbody>
+</concept>
+<?oxy_options track_changes="on"?>

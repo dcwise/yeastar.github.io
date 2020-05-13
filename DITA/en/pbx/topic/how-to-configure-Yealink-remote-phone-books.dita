@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="how_to_set_remote_phone_books">
+    <title>How to Configure Yealink Remote Phone Books</title>
+    <shortdesc>You can configure a corporate directory with Yealink remote phone book. Then the
+        users can access the remote phone book and dial a contact number directly on their phone.
+        This guide provides instructions on how to configure a remote phone book with <ph
+            keyref="product_name"/>. </shortdesc>
+    <body>
+        <p>The details in this guide takes Yealink SIP-T46S running firmware 66.84.0.10 as an
+            example.</p>
+        <section id="section_yg2_qts_xhb">
+            <title>Step 1. Prepare an Yealink remote phone book file</title>
+            <note>Yealink remote phone book file supports only ASCII and UTF-8 encoding. You can
+                edit it by UltraEdit or Windows Notepad.</note>
+            <p>
+                <ol id="ol_zjg_bps_xhb">
+                    <li>Get the remote phone book file template from <xref
+                            href="http://support.yealink.com/documentFront/forwardToDocumentFrontDisplayPage"
+                            format="html" scope="external">Yealink support</xref>.</li>
+                    <li>Customize the remote phone book file. <p>The following is an example of an
+                            XML phone
+                        book.</p><codeblock outputclass="language-xml">&lt;<varname>Yeastar</varname>IPPhoneDirectory>
+    &lt;DirectoryEntry>
+    &lt;Name><varname>Lily</varname>&lt;/Name>
+    &lt;Telephone label="Mobile Number"><varname>12345654626</varname>&lt;/Telephone>
+    &lt;/DirectoryEntry>
+
+    &lt;DirectoryEntry>
+    &lt;Name><varname>Jim</varname>&lt;/Name>
+    &lt;Telephone label="Office Number"><varname>654321</varname>&lt;/Telephone>
+    &lt;Telephone label="Mobile Number"><varname>37799801@192.168.9.144</varname>&lt;/Telephone>
+    &lt;Telephone label="Other Number"><varname>8608</varname>&lt;/Telephone>
+    &lt;/DirectoryEntry>
+&lt;/YeastarIPPhoneDirectory></codeblock></li>
+                    <li> Save the file as an XML file (for example, Yeastar.xml). </li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_t3y_21t_xhb">
+            <title>Step 2. Configure remote phone book on Yeastar PBX</title>
+            <p>
+                <ol id="ol_xpt_dzs_xhb">
+                    <li>Set the PBX as a TFTP server and upload XML phone book file to the TFTP
+                        server. <ol id="ol_z44_xpt_xhb">
+                            <li>Go to <menucascade>
+                                    <uicontrol>Settings</uicontrol>
+                                    <uicontrol> System</uicontrol>
+                                    <uicontrol> Security</uicontrol>
+                                    <uicontrol> Service</uicontrol>
+                                </menucascade>, check the option <uicontrol>TFTP</uicontrol>, click
+                                    <uicontrol>Save</uicontrol> and
+                                    <uicontrol>Apply</uicontrol>.<p>The PBX is set up as a TFTP
+                                    server.</p><p><image href="../Images/enable-tftp.png"
+                                        id="image_xxh_q1t_xhb" width="650"/></p></li>
+                            <li>Go to <menucascade>
+                                    <uicontrol>Auto Provisioning</uicontrol>
+                                    <uicontrol> Upload Files</uicontrol>
+                                </menucascade>, click <b>Upload a File</b>, choose the XML file
+                                (Yeastar.xml) to upload.<p><image
+                                        href="../Images/autop-upload-remote-phone-book.png"
+                                        width="400" id="image_bpd_2ct_xhb"/></p></li>
+                        </ol></li>
+                    <li>Configure remote phone book for the phone.<ol id="ol_ofr_gqt_xhb">
+                            <li>Go to <menucascade>
+                                    <uicontrol>Auto Provisioning</uicontrol>
+                                    <uicontrol> Device List</uicontrol>
+                                </menucascade>, find your phone, click <image
+                                    href="../Images/ui_icons/edit.png" id="image_ryv_yqt_xhb"
+                                    width="20"/> to edit the configurations. </li>
+                            <li>Click <b>Features</b> tab, enter the phone book URL, and phone book name.<p>
+                                    <note type="tip">The phone book access URL is
+                                            tftp://<varname>pbx_ip</varname>/upload/autopfile/<varname>file_name</varname>,
+                                        for example,
+                                            tftp://<varname>192.168.6.36</varname>/upload/autopfile/<varname>Yeastar.xml</varname>.</note>
+                                </p><p><image id="image_dx5_mst_xhb"
+                                        href="../Images/autop-yealink-config-remote-phone-book.png"
+                                        width="500"/></p></li>
+                            <li>Click <uicontrol>Save</uicontrol>.<p>A pop-up dialog prompts you
+                                    whether to reboot the phone immediately.</p></li>
+                            <li>Click <uicontrol>Yes</uicontrol>.<p>The phone applies the changes
+                                    and downloads the phone book.</p><p>
+                                    <note>If the phone does not reboot automatically, reboot the
+                                        phone manually to make the configurations take
+                                        effect.</note>
+                                </p></li>
+                        </ol></li>
+                </ol>
+            </p>
+        </section>
+        <section>
+            <title>Step 3. Use remote phone book on Yealink phone</title>
+            <ol id="ol_zh2_m15_xhb">
+                <li>On the Yealink phone, press <menucascade>
+                        <uicontrol>Menu</uicontrol>
+                        <uicontrol> Directory</uicontrol>
+                        <uicontrol> Remote Phone Book</uicontrol>
+                    </menucascade>.</li>
+                <li>Select the desired remote phone book.<p><image
+                            href="../Images/autop-yealink-remote-phone-book-group.jpg"
+                            id="image_djj_pz5_xhb" width="300" align="center"/></p></li>
+                <li>Press the <b>Enter</b> soft key to load the corporate directory. <p>The phone
+                        then connects to the remote phone book and proceeds to load it. </p><p>The
+                        contacts in the remote phone book are displayed on the LCD
+                            screen.</p><p><image
+                            href="../Images/autop-yealink-remote-phone-book-contact.jpg" width="300"
+                            id="image_c54_kz5_xhb" align="center"/></p></li>
+            </ol>
+        </section>
+    </body>
+</topic>

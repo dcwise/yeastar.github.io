@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_s5h_l4k_scb">
+    <title>Extension Overview</title>
+    <shortdesc id="test">An extension is a short internal number. Extensions allow users to make and
+        receive calls. You can assign extensions to every employee in your
+        organization<?oxy_comment_start author="carol" timestamp="20190916T145907+0800" comment="更正一下之前的说法。
+short description 直接介绍extension 是什么。
+然后再加两个section：
+Extension types
+Extension format
+The default extension format is 4-digit model. 
+You can change the extension format and range on xxxxxxxx.
+Yeastar XXX supports 1-digt to 7-digit extension format.
+
+" flag="done"?>.
+        <?oxy_comment_end?></shortdesc>
+    <body>
+        <section id="section_q4q_dvy_z3b">
+            <title>Extension
+                <?oxy_comment_start author="carol" timestamp="20190916T161438+0800" comment="注意不同产品的差异" flag="done"?>types<?oxy_comment_end?></title>
+            <p><ph keyref="product_name"/> supports 3 types of extension:</p>
+            <p><b>SIP Extension</b></p>
+            <p>A SIP extension is based on SIP protocol.</p>
+            <p>To use a SIP extension, you need to enter the extension credentials on an IP phone or
+                a softphone. After the extension is registered on a phone, you can make and receive
+                calls<?oxy_comment_start author="carol" timestamp="20190916T162425+0800" comment="A SIP extension is based on SIP protocol.
+To use a SIP extension, you need to enter the extension credentials on an IP phone or softphone. After the phone is registered on a phone, you can make and receive calls.
+" flag="done"?>.<?oxy_comment_end?></p>
+            <p product="s-series,k2"><b>IAX Extension</b></p>
+            <?oxy_comment_start author="carol" timestamp="20190916T162444+0800" comment="描述同SIP extension" flag="done"?>
+            <p product="s-series,k2">An IAX extension is based on IAX
+                protocol.<?oxy_comment_end?></p>
+            <p product="k2 s-series">To use an IAX extension, you need to enter the extension
+                credentials on an IP phone or a softphone. After the extension is registered on a
+                phone, you can make and receive calls.</p>
+            <p><b product="s-series">FXS Extension</b></p>
+            <p product="s-series">An FXS extension is associated with an analog phone or a fax
+                machine. To use an FXS extension, you need to connect an analog phone or a fax
+                machine to the FXS port of the PBX, and assign an extension number to the analog
+                phone or fax
+                machine<?oxy_comment_start author="carol" timestamp="20190916T162755+0800" comment="An FXS extension is associated with an analog phone. To use an FXS extension, you need to connect an analog phone or an fax machine to the FXS port of the PBX, and assign an extension number to the phone or fax machine." flag="done"?>.<?oxy_comment_end?></p>
+        </section>
+        <section id="section_dp5_zbf_cjb">
+            <title>Extension format</title>
+            <p><ph keyref="product_name"/> supports 1-digit to 7-digit extension format. The default
+                extension format is 4-digit number. </p>
+            <p>Before you create extensions, you can go to <menucascade>
+                    <uicontrol>Settings</uicontrol>
+                    <uicontrol>PBX</uicontrol>
+                    <uicontrol>General</uicontrol>
+                    <uicontrol>Preferences</uicontrol>
+                    <uicontrol>Extension Preferences</uicontrol>
+                    <uicontrol>User Extension</uicontrol>
+                </menucascade> to change the extension format and range.</p>
+        </section>
+    </body>
+</topic>

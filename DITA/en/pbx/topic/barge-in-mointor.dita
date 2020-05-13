@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topicID"><title>Barge-in Monitor
+{#barge-in-monitor}</title><body><p>Through this interface, an extension can barge in another
+extension’s call. As a result, all the three parties can talk
+to each other.</p><p><b>Operations</b></p><ol><li>Extension A is idle, extension B is in a call (query extension
+list to get the extension status);</li><li>Make extension A barge in extension B’s call;</li><li>If the operation is successful, extension A will auto answer
+and barge in the extension B’s conversation.</li></ol><p>Note: some IP phone models or softphones may not support auto
+answer. In this case, IP phones or softphones will ring first, and
+users need to pick up the call manually to start monitoring.</p><p><b>Conditions</b></p><ol><li>The monitor extension’s monitor mode should be Extensive
+or Barge-in;</li><li>The monitored extension should allow being monitored;</li><li>The call monitor only happens to extensions registered on the
+same PBX.</li></ol><p><b>Request method:</b> POST</p><p><b>Request address:</b></p><p><xref href="https://192.168.5.150:8088/api/v1.0.0/extension/barge?token=7d20390952e15eb72b0a1df7172de65c" format="html" scope="external">https://192.168.5.150:8088/api/</xref>{version}<xref href="https://192.168.5.150:8088/api/v1.0.0/extension/barge?token=7d20390952e15eb72b0a1df7172de65c" format="html" scope="external">/extension/barge?token=7d20390952e15eb72b0a1df7172de65c</xref></p><p><b>Request sample:</b></p><p>{“bargein”:
+“1005”,“bargedext”: “1002”}</p><p><b>Request parameters descriptions:</b></p><table><tgroup cols="4"><thead><row><entry><b>Parameter Name</b></entry><entry><b>Type</b></entry><entry><b>Description</b></entry><entry><b>Sample</b></entry></row></thead><tbody><row><entry><b>&lt;bargein&gt;</b></entry><entry>Int</entry><entry>The monitor</entry><entry>1000</entry></row><row><entry><b>&lt;bargedext&gt;</b></entry><entry>Int</entry><entry>The monitored extension</entry><entry>1002</entry></row></tbody></tgroup></table><p><b>Response sample:</b></p><p>{“status”:“Success”}</p><p><b>Response parameters descriptions:</b></p><table><tgroup cols="4"><thead><row><entry><b>Parameter Name</b></entry><entry><b>Type</b></entry><entry><b>Description</b></entry><entry><b>Sample</b></entry></row></thead><tbody><row><entry><b>&lt;status&gt;</b></entry><entry>String</entry><entry>Result</entry><entry>Success or Failed</entry></row></tbody></tgroup></table><p><b>Possible error code:</b> 10004, 10007, 10010,
+10008, 10006, 10009, 30001</p></body></topic><topic><title>{#make-an-internal-call}</title><body/></topic>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="busy-camp-on">
+    <title>Busy Camp-on</title>
+    <shortdesc>Busy Camp-on is busy-call handling method. When the callee's phone is busy or there
+        is no answer, the caller can camps the call on PBX, the PBX informs the caller as soon as
+        the callee's phone becomes available, and re-establishes the call to saves the caller's
+        waiting time.</shortdesc>
+    <body>
+        <section id="section_kmf_bt3_dlb">
+            <title>Prerequisite</title>
+            <p>The Busy Camp-on feature is only applicable for the call between extensions.</p>
+        </section>
+        <section id="section_emm_k2d_dlb">
+            <title>Sample Application</title>
+            <p>John and Tom are not in the same office, John uses extension 1000, and Tom uses
+                extension 1001.<ol id="ol_yk3_g53_dlb">
+                    <li>John calls Tom.</li>
+                    <li>Tom is busy in a call or cannot answer the incoming call; John hangs up,
+                        stops waiting for answering.</li>
+                    <li>John dials “*791001” to camp the call on.<note>To cancel camping, dial
+                            "*0791001". </note></li>
+                    <li>Once Tom hangs up and the extension becomes available, the PBX will call
+                        John.</li>
+                    <li>When John answers the call from PBX, the PBX will recall Tom.</li>
+                    <li>Tom answers the call the call from PBX. The call will be established between
+                        John and Tom.</li>
+                </ol></p>
+        </section>
+        <section id="section_np5_mcd_dlb"><title>Busy Camp-on code</title>Log in the PBX web
+            interface, go to <menucascade>
+                <uicontrol>Settings</uicontrol>
+                <uicontrol> PBX</uicontrol>
+                <uicontrol> General</uicontrol>
+                <uicontrol> Feature Code</uicontrol>
+            </menucascade>, you can view or change the busy camp-on code.<p>The default busy camp-on
+                code:</p><p>
+                <ul id="ul_evg_jy3_dlb">
+                    <li><uicontrol>Enable Busy Camp-on code</uicontrol>: *79</li>
+                    <li><uicontrol>Disable Busy Camp-on code</uicontrol>: *079</li>
+                </ul>
+            </p></section>
+    </body>
+</topic>

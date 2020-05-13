@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_pnw_2qh_mgb">
+    <title>Add a Static Route</title>
+    <shortdesc>If you set the network mode of <ph keyref="product_name"/> to Dual, you need to add a
+        static route to override the default route entries, routing the traffic from specific IP
+        address to the specified destination.</shortdesc>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol>System</uicontrol>
+                        <uicontrol>Network</uicontrol>
+                        <uicontrol>Static Routes</uicontrol>
+                        <uicontrol>Static Routes</uicontrol>
+                    </menucascade>, click <uicontrol>Add</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>In the pop-up dialog box, configure the route entry according to the following
+                    information.</cmd>
+                <info>
+                    <ul id="ul_oyj_hty_djb">
+                        <li><uicontrol>Destination</uicontrol>: Enter the destination IP address or
+                            IP subnet for the PBX to reach using the static route.</li>
+                        <li><uicontrol>Subnet Mask</uicontrol>: Enter the subnet mask for the
+                            destination address.</li>
+                        <li><uicontrol>Gateway</uicontrol>: Enter the gateway address. The PBX will
+                            reach the destination address through this gateway.</li>
+                        <li><uicontrol>Metric</uicontrol>: Optional. <p>Routing metric is used to
+                                determine whether one route should be chosen over another.</p></li>
+                        <li>
+                            <p><uicontrol>Interface</uicontrol>: Select the network interface.</p>
+                            <p>The PBX will reach the destination address using the static route
+                                through the selected network interface.</p>
+                        </li>
+                    </ul>
+                </info>
+            </step>
+            <step>
+                <cmd> Click <b>Save</b> and <uicontrol>Apply</uicontrol>.</cmd>
+            </step>
+        </steps>
+        <result id="result_fh3_3zh_mgb">The static route is added to the routing table. Go to <menucascade>
+                <uicontrol>Settings</uicontrol>
+                <uicontrol>System</uicontrol>
+                <uicontrol>Network</uicontrol>
+                <uicontrol>Static Routes</uicontrol>
+                <uicontrol>Routing Table</uicontrol>
+            </menucascade> to check the routing table.</result>
+    </taskbody>
+</task>
+<?oxy_options track_changes="on"?>

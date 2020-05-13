@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_b4w_14l_xdb">
+    <title>User Management</title>
+    <shortdesc>You can manage the extension users' permission and set the login mode for the
+        users.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/05/23"/>
+            <!--Carol-->
+            <revised modified="2018/05/23"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <p></p>
+    </conbody>
+</concept>

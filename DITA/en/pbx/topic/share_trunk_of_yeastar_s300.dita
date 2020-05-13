@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_uj4_kfq_p2b">
+    <title>Step3. Share Trunk of Yeastar S300</title>
+    <shortdesc>Share a trunk of Yeastar S300, the users of Yeastar Cloud PBX can make outbound calls
+        and receive inbound calls through the shared trunk.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/07/27"/>
+            <!--Carol-->
+            <revised modified="2018/07/27"/>
+            <!--Carol-->
+            <revised modified="2018/07/30"/>
+            <!--Carol-->
+            <revised modified="2018/07/31"/>
+        </critdates>
+    </prolog>
+    <body>
+        <p>In our scenario, Yeastar S300 has an FXO trunk, the number of the FXO trunk is 5503301. </p>
+        <p>We will describe how to share the FXO trunk to the Yeastar Cloud PBX users.</p>
+        <section id="section_u1m_dfn_q2b">
+            <title>Make outbound calls from Cloud PBX through S300‘s trunk</title>
+            <ol id="ol_wkh_yfn_q2b">
+                <li>On Yeastar S300, create an outbound for the shared FXO trunk.<p>
+                        <ol id="ol_tgp_lqr_q2b">
+                            <li>Go to <menucascade>
+                                    <uicontrol>Settings</uicontrol>
+                                    <uicontrol>PBX</uicontrol>
+                                    <uicontrol>Call Control</uicontrol>
+                                    <uicontrol>Outbound Routes</uicontrol>
+                                </menucascade>, click <uicontrol>Add</uicontrol>.</li>
+                            <li>Configure the outbound route.<p><image
+                                        href="../Images/integration/cloud+s-series_outbound_pstnout.png"
+                                        width="650" id="image_udj_lgq_p2b"/></p><p>
+                                    <ul>
+                                        <li><uicontrol>Name</uicontrol>: Set a name to help you
+                                            identify it.</li>
+                                        <li><uicontrol>Dial Patterns</uicontrol>: Set the dial
+                                            patterns according to your needs. <p>In our scenario,
+                                                set <uicontrol>Patterns</uicontrol> to
+                                                  <codeph>9.</codeph>, set
+                                                  <uicontrol>Strip</uicontrol> to
+                                                <codeph>1</codeph>; users should dial prefix 9
+                                                before the target number. For example, to call
+                                                number 123456, you should dial 9123456.</p></li>
+                                        <li><uicontrol>Member Trunks</uicontrol>: Select the FXO
+                                            trunk.</li>
+                                    </ul>
+                                </p></li>
+                            <li>Click <uicontrol>Save</uicontrol> and
+                                <uicontrol>Apply</uicontrol>.</li>
+                        </ol>
+                    </p></li>
+                <li>On Yeastar S300, create an inbound route to allow users from Yeastar Cloud PBX
+                    make outbound calls through the shared trunk. <p>
+                        <ol id="ol_o5v_brr_q2b">
+                            <li>Go to <menucascade>
+                                    <uicontrol>Settings</uicontrol>
+                                    <uicontrol>PBX</uicontrol>
+                                    <uicontrol>Call Control</uicontrol>
+                                    <uicontrol>Inbound Routes</uicontrol>
+                                </menucascade>, click <uicontrol>Add</uicontrol>.</li>
+                            <li>Configure the inbound route.<p><image
+                                        href="../Images/integration/cloud+s-series_inbound_share_fxo.png"
+                                        width="650" id="image_jsq_1kq_p2b"/></p><p>
+                                    <ul id="ul_ipc_frr_q2b">
+                                        <li><uicontrol>Name</uicontrol>: Set a name to help you
+                                            identify it.</li>
+                                        <li><uicontrol>DID Pattern</uicontrol>: Set to the same
+                                            pattern of the FXO trunk's outbound route.</li>
+                                        <li><uicontrol>Member Trunks</uicontrol>: Select the trunk
+                                            that is registered to Yeastar Cloud PBX.</li>
+                                        <li><uicontrol>Destination</uicontrol>: Set to
+                                                <uicontrol>Outbound Route</uicontrol>, and chose the
+                                            outbound route for the FXO trunk.</li>
+                                    </ul>
+                                </p></li>
+                            <li>Click <uicontrol>Save</uicontrol> and
+                                <uicontrol>Apply</uicontrol>.</li>
+                        </ol>
+                    </p></li>
+                <li>On Yeastar Cloud PBX, create an outbound route to allow users make outbound
+                    calls through the shared trunk.<p>
+                        <ol id="ol_mtp_3rr_q2b">
+                            <li>Go to <menucascade>
+                                    <uicontrol>Settings</uicontrol>
+                                    <uicontrol>PBX</uicontrol>
+                                    <uicontrol>Call Control</uicontrol>
+                                    <uicontrol>Outbound Routes</uicontrol>
+                                </menucascade>, click <uicontrol>Add</uicontrol>.</li>
+                            <li>Configure the outbound route.<p><image
+                                        href="../Images/integration/cloud+s-series_outbound_shared_pstn_outx.png"
+                                        width="650" id="image_h4d_1mq_p2b"/></p><p>
+                                    <ul>
+                                        <li><uicontrol>Name</uicontrol>: Set a name to help you
+                                            identify it.</li>
+                                        <li><uicontrol>Dial Patterns</uicontrol>: Set
+                                                <uicontrol>Patterns</uicontrol> to the same pattern
+                                            of the FXO trunk's outbound route.</li>
+                                        <li><uicontrol>Member Trunks</uicontrol>: Select the Account
+                                            Trunk that is created for Yeastar S300.</li>
+                                        <li><uicontrol>Member Extensions</uicontrol>: Select the
+                                            extensions that are allowed to make outbound calls
+                                            through the shared trunk.</li>
+                                    </ul>
+                                </p></li>
+                            <li>Click <uicontrol>Save</uicontrol> and
+                                <uicontrol>Apply</uicontrol>.</li>
+                        </ol>
+                    </p></li>
+                <li>Test an outbound call from Yeastar Cloud PBX. <p>For example, to call number
+                        1588035242, you need to dial 91588035242.</p></li>
+            </ol>
+        </section>
+        <section id="section_adr_qrr_q2b">
+            <title>Receive Inbound Calls at Cloud PBX through S300’s trunk</title>
+            <p>
+                <ol id="ol_i5r_yrr_q2b">
+                    <li>On Yeastar S300, create an inbound route for the shared FXO trunk.<p>
+                            <ol>
+                                <li>Go to <menucascade>
+                                        <uicontrol>Settings</uicontrol>
+                                        <uicontrol>PBX</uicontrol>
+                                        <uicontrol>Call Control</uicontrol>
+                                        <uicontrol>Inbound Routes</uicontrol>
+                                    </menucascade>, click <uicontrol>Add</uicontrol>.</li>
+                                <li>Configure the inbound route.<p><image
+                                            href="../Images/integration/cloud+s-series_inbound_pstnin.png"
+                                            width="650" id="image_ukk_lsr_q2b"/></p><p>
+                                        <ul id="ul_yss_msr_q2b">
+                                            <li><uicontrol>Name</uicontrol>: Set a name to help you
+                                                identify it.</li>
+                                            <li><uicontrol>Member Trunks</uicontrol>: Select the
+                                                shared FXO trunk.</li>
+                                            <li><uicontrol>Destination</uicontrol>: Set to
+                                                  <uicontrol>IVR</uicontrol>.</li>
+                                        </ul>
+                                    </p></li>
+                                <li>Click <uicontrol>Save</uicontrol> and
+                                        <uicontrol>Apply</uicontrol>.</li>
+                            </ol>
+                        </p></li>
+                    <li>On Yeastar S300, set the IVR to allow external callers to dial Cloud PBX's
+                        extension numbers.<p>
+                            <ol id="ol_l4f_dtr_q2b">
+                                <li>Go to <menucascade>
+                                        <uicontrol>Settings</uicontrol>
+                                        <uicontrol>PBX</uicontrol>
+                                        <uicontrol>Call Features</uicontrol>
+                                        <uicontrol>IVR</uicontrol>
+                                    </menucascade>, edit the IVR that is selected in the inbound
+                                    route for the shared trunk.</li>
+                                <li>Check the options <uicontrol>Dial Extensions</uicontrol> and
+                                        <uicontrol>Dial Outbound Routes</uicontrol>.</li>
+                                <li>Choose the outbound route that allows external callers to dial
+                                    Cloud PBX's extension numbers.<p><image
+                                            href="../Images/integration/cloud+s300_ivr_settings.png"
+                                            width="700" id="image_xbf_twr_q2b"/></p></li>
+                                <li>Click <uicontrol>Save</uicontrol> and
+                                        <uicontrol>Apply</uicontrol>.</li>
+                            </ol>
+                        </p></li>
+                    <li>Make a call to the shared FXO trunk, you can hear the IVR prompt, and dial
+                        not only the extension number of S300, but also the extension number of the
+                        Cloud PBX.</li>
+                </ol>
+            </p>
+        </section>
+    </body>
+</topic>

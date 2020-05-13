@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="forward-incoming-calls-to-an-external-number-with-IVR">
+    <title>Forward Incoming Calls to an External Number with IVR</title>
+    <shortdesc>Set the IVR Keypress destination to an external number to route calls from IVR to an
+        external
+        number<?oxy_comment_start author="carol" timestamp="20200402T163822+0800" comment="一般不要在short description里面直接提到配置
+
+建议
+Yeastar XXX allows callers to press a key and connect the call to an external number directly. This topic describes how to achieve this by configure an IVR." flag="done" id="hcy_4kr_flb"?><?oxy_comment_start author="Sunmy" timestamp="20200402T173930+0800" comment="为了保持风格一致遵循 Dial by Name 的规则来写，然后又不知道哪些是应该遵循，哪些不应该遵循，甚是迷茫" parentID="hcy_4kr_flb" flag="done" mid="1"?>.<?oxy_comment_end mid="1"?><?oxy_comment_end?></shortdesc>
+    <body>
+        <section id="section_ndp_jrk_flb">
+            <title><?oxy_comment_start author="carol" timestamp="20200402T162330+0800" comment="适当断句、
+合理排版，适当加小标题" flag="done"?>Scenarios<?oxy_comment_end?></title>
+            <p><?oxy_comment_start author="Sunmy" timestamp="20200402T153856+0800" comment="基于需求场景的理解
+病人呼入-&gt;PBX-&gt;听到IVR提示-&gt;输入key press event-&gt;到answering system （answering system是个外部号码）--理解这个外部号码类似外包 24 小时服务系统，所以会是一个外部号码；--唯一的区别仅仅只是内部和外部的区别。
+
+觉得不是建议的那种场景，把呼入 answering system 的电话都转到医生的手机，IVR 类似热线，病人呼入都想直接找医生吧，不想在各种语音菜单里面绕来绕去，估计会把医生的电话打爆。
+
+另一种场景是办公室话机转 IVR-&gt;转个人手机。听起来感觉有点扯淡。直接用 call forward 不就可以了。----不然就是根据需求定义的，使用ivr 转 手机 达到节省extension的目的" id="wgv_n1r_flb" flag="done"?><?oxy_comment_start author="carol" timestamp="20200402T162301+0800" comment="医生场景： 对，你说得没错。
+
+IVR 转个人手机，这个需求很多的，基于用户是基于什么具体的场景，这个就得跟技术支持沟通一下
+
+" parentID="wgv_n1r_flb" flag="done" mid="4"?>Forward
+                Incoming Calls to an External Number with IVR is typical and important for 24x7
+                services, such as Doctor Answering Services and IT Support Services.</p>
+            <p>
+                <dl>
+                    <dlentry>
+                        <dt>For Doctor Answering Services</dt>
+                        <dd>When a patient calls in an hospital IVR, the patient can press a key to
+                            reach the external Doctor Answering Service to schedule an appointment
+                            or ask health questions and medical questions.</dd>
+                    </dlentry>
+                </dl>
+                <dl>
+                    <dlentry>
+                        <dt>For IT Support Services</dt>
+                        <dd>When your customers call in your office IVR after hours, you can give
+                            them an option to connect to an emergency support line. This emergency
+                            support line can be a Maintenance Engineer's mobile phone number.</dd>
+                    </dlentry>
+                </dl>
+            </p><?oxy_comment_end?><?oxy_comment_end mid="4"?>
+        </section>
+        <section id="section_uqc_krk_flb">
+            <title>Before you begin</title>
+            <p>Update your IVR prompt that would instruct callers to press a key to the external
+                number.</p>
+            <p>To update your IVR prompt, you can <xref href="upload_a_custom_prompt.dita">upload
+                    custom prompt</xref> or <xref href="record_a_custom_prompt.dita">record custom
+                    prompt</xref>.</p>
+        </section>
+        <section id="section_xr4_krk_flb">
+            <title>Procedures</title>
+            <p>
+                <ol id="ol_ej4_4z4_flb">
+                    <li>Log in PBX web interface, go to <menucascade>
+                            <uicontrol>Settings</uicontrol>
+                            <uicontrol> PBX</uicontrol>
+                            <uicontrol> Call Features</uicontrol>
+                            <uicontrol> IVR</uicontrol>
+                        </menucascade>, edit your IVR.</li>
+                    <li>In the <uicontrol>Basic</uicontrol> tab, select the updated IVR prompt.</li>
+                    <li>In <uicontrol>Key Press Event</uicontrol> tab, select a key to set keypress
+                        destination to <uicontrol>External Number</uicontrol>.</li>
+                    <li importance="optional">In the <uicontrol>Prefix</uicontrol> field, enter
+                            <xref
+                            href="dial_patterns_of_outbound_route.dita#concept_y3j_ns1_ydb/section_u5r_h51_ydb"
+                            >prefix of outbound route</xref> so that PBX can successfully route
+                        incoming calls to external number.<ul id="ul_ph4_g1b_hlb">
+                            <li>If the <uicontrol>Strip</uicontrol> of outbound route is not set,
+                                you don't have to set the <uicontrol>Prefix</uicontrol>.</li>
+                            <li>If the <uicontrol>Strip</uicontrol> of outbound route is set, you
+                                need to set the <uicontrol>Prefix</uicontrol> according to the
+                                    <uicontrol>Patterns</uicontrol> of outbound route.</li>
+                        </ul></li>
+                    <li>Enter the external number, such as a Doctor Answering Service number or a
+                        mobile phone number.<p><image
+                                href="../../../en/pbx/Images/admin/ivr-to-external-number.png"
+                                width="650" id="image_jcq_tsw_flb"
+                        /></p><?oxy_comment_start author="carol" timestamp="20200402T164957+0800" comment="没有提到prefix" flag="done"?></li><?oxy_comment_end?>
+                    <li>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</li>
+                </ol>
+            </p>
+        </section>
+    </body>
+</topic>
+
+

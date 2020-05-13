@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_evh_l1p_p2b">
+    <title>Step2. Intercommunication between Yeastar Cloud PBX and S300</title>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/07/27"/>
+            <!--Carol-->
+            <revised modified="2018/07/27"/>
+            <!--Carol-->
+            <revised modified="2018/08/13"/>
+        </critdates>
+    </prolog>
+    <body>
+        <section id="section_ffw_hkp_p2b">
+            <title>Make Internal Calls from Yeastar Cloud PBX to S300</title>
+            <p>
+                <ol id="ol_ntq_jkp_p2b">
+                    <li>On Yeastar Cloud PBX, create an outbound route to allow users call to S300.<p>
+                            <ol id="ol_i55_tkp_p2b">
+                                <li>Go to <menucascade>
+                                        <uicontrol>Settings</uicontrol>
+                                        <uicontrol>PBX</uicontrol>
+                                        <uicontrol>Call Control</uicontrol>
+                                        <uicontrol>Outbound Route</uicontrol>
+                                    </menucascade>, click <uicontrol>Add</uicontrol>.</li>
+                                <li>Configure the outbound route.<p><image
+                                            href="../Images/integration/cloud+s-series_outbound_to_s300.png"
+                                            id="image_s4k_zvp_p2b" width="650"/></p><p>
+                                        <ul id="ul_etc_2wp_p2b">
+                                            <li><uicontrol>Name</uicontrol>: Set a name to help you
+                                                identify it.</li>
+                                            <li><uicontrol>Dial Patterns</uicontrol>: Set
+                                                  <uicontrol>Patterns</uicontrol> to the extension
+                                                format of Yeastar S300. <p>In this scenario, set to
+                                                  <codeph>1XXX</codeph>.</p></li>
+                                            <li><uicontrol>Member Trunks</uicontrol>: Select the
+                                                Account Trunk that is created for Yeastar S300.</li>
+                                            <li><uicontrol>Member Extensions</uicontrol>: Select all
+                                                the extensions to allow the users call to Yeastar
+                                                S300.</li>
+                                        </ul>
+                                    </p></li>
+                                <li>Click <uicontrol>Save</uicontrol> and
+                                        <uicontrol>Apply</uicontrol>.</li>
+                            </ol>
+                        </p></li>
+                    <li>On Yeastar S300, create an inbound route to receive incoming calls from
+                        Yeastar Cloud PBX.<p>
+                            <ol id="ol_phw_2yp_p2b">
+                                <li>Go to <menucascade>
+                                        <uicontrol>Settings</uicontrol>
+                                        <uicontrol>PBX</uicontrol>
+                                        <uicontrol>Call Control</uicontrol>
+                                        <uicontrol>Inbound Route</uicontrol>
+                                    </menucascade>, click <uicontrol>Add</uicontrol>.</li>
+                                <li>Configure the inbound route.<p><image
+                                            href="../Images/integration/cloud+s-series_inbound_from_cloudpbx.png"
+                                            width="650" id="image_sm3_2zp_p2b"/></p><p>
+                                        <ul id="ul_t3j_jzp_p2b">
+                                            <li><uicontrol>Name</uicontrol>: Set a name to help you
+                                                identify it.</li>
+                                            <li><uicontrol>DID Pattern</uicontrol>: Enter the
+                                                extension range of the Yeastar S300.<p>In this
+                                                  scenario, set to
+                                                <codeph>1000-1200</codeph>.</p></li>
+                                            <li><uicontrol>Member Trunks</uicontrol>: Choose the
+                                                Register trunk that is registered to Yeastar Cloud
+                                                PBX.</li>
+                                            <li><uicontrol>Destination</uicontrol>: Choose
+                                                  <uicontrol>Extension Range</uicontrol>, and enter
+                                                the extension range of Yeastar S300. <p>In this
+                                                  scenario, set to
+                                                <codeph>1000-1200</codeph>.</p></li>
+                                        </ul>
+                                    </p></li>
+                                <li>Click <uicontrol>Save</uicontrol> and
+                                        <uicontrol>Apply</uicontrol>.</li>
+                            </ol>
+                        </p></li>
+                    <li>Make a call to test.<p>For example, Extension user 2000 dial 1000, the
+                            extension 1000 will ring.</p></li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_dp5_p1q_p2b">
+            <title>Make Internal Calls From S300 to Yeastar Cloud PBX</title>
+            <p>
+                <ol>
+                    <li>On Yeastar S300, create an outbound route to allow users call to Yeastar
+                        Cloud PBX.<p>
+                            <ol id="ol_fwh_s1q_p2b">
+                                <li>Go to <menucascade>
+                                        <uicontrol>Settings</uicontrol>
+                                        <uicontrol>PBX</uicontrol>
+                                        <uicontrol>Call Control</uicontrol>
+                                        <uicontrol>Outbound Route</uicontrol>
+                                    </menucascade>, click <uicontrol>Add</uicontrol>.</li>
+                                <li>Configure the outbound route.<p><image
+                                            href="../Images/integration/cloud+s-series_outbound_to_cloudpbx.png"
+                                            width="650" id="image_gwh_s1q_p2b"/></p><p>
+                                        <ul id="ul_hwh_s1q_p2b">
+                                            <li><uicontrol>Name</uicontrol>: Set a name to help you
+                                                identify it.</li>
+                                            <li><uicontrol>Dial Patterns</uicontrol>: Set
+                                                  <uicontrol>Patterns</uicontrol> to the extension
+                                                format of Yeastar Cloud PBX. <p>In this scenario,
+                                                  set to <codeph>2XXX</codeph>.</p></li>
+                                            <li><uicontrol>Member Trunks</uicontrol>: Select the
+                                                Register Trunk that is registered to Yeastar Cloud
+                                                PBX.</li>
+                                            <li><uicontrol>Member Extensions</uicontrol>: Select all
+                                                the extensions to allow the users call to Yeastar
+                                                Cloud PBX.</li>
+                                        </ul>
+                                    </p></li>
+                                <li>Click <uicontrol>Save</uicontrol> and
+                                        <uicontrol>Apply</uicontrol>.</li>
+                            </ol>
+                        </p></li>
+                    <li>On Yeastar Cloud PBX, create an inbound route to receive incoming calls from
+                        Yeastar S300.<p>
+                            <ol id="ol_iwh_s1q_p2b">
+                                <li>Go to <menucascade>
+                                        <uicontrol>Settings</uicontrol>
+                                        <uicontrol>PBX</uicontrol>
+                                        <uicontrol>Call Control</uicontrol>
+                                        <uicontrol>Inbound Route</uicontrol>
+                                    </menucascade>, click <uicontrol>Add</uicontrol>.</li>
+                                <li>Configure the inbound route.<p><image
+                                            href="../Images/integration/cloud+s-series_inbound_from_s3001.png"
+                                            width="650" id="image_jwh_s1q_p2b"/></p><p>
+                                        <ul id="ul_kwh_s1q_p2b">
+                                            <li><uicontrol>Name</uicontrol>: Set a name to help you
+                                                identify it.</li>
+                                            <li><uicontrol>DID Pattern</uicontrol>: Enter the
+                                                extension range of the Yeastar Cloud PBX.<p>In this
+                                                  scenario, set to
+                                                <codeph>2000-2050</codeph>.</p></li>
+                                            <li><uicontrol>Member Trunks</uicontrol>: Choose the
+                                                Account Trunk that is created for S300.</li>
+                                            <li><uicontrol>Destination</uicontrol>: Choose
+                                                  <uicontrol>Extension Range</uicontrol>, and enter
+                                                the extension range of Yeastar Cloud PBX.<p>In this
+                                                  scenario, set to
+                                                <codeph>2000-2050</codeph>.</p></li>
+                                        </ul>
+                                    </p></li>
+                                <li>Click <uicontrol>Save</uicontrol> and
+                                        <uicontrol>Apply</uicontrol>.</li>
+                            </ol>
+                        </p></li>
+                    <li>Make a call to test.<p>For example, Extension user 1000 dial 2000, the
+                            extension 2000 will ring.</p></li>
+                </ol>
+            </p>
+        </section>
+    </body>
+</topic>

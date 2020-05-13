@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_uzz_4r1_skb">
+    <title>Contacts FAQ</title>
+    <body>
+        <p>
+            <ul id="ul_ftl_ppg_skb">
+                <li><xref href="#topic_uzz_4r1_skb/section_il3_tr1_skb" format="dita"/></li>
+                <li><xref href="#topic_uzz_4r1_skb/section_bfy_2x1_skb" format="dita"/></li>
+                <li><xref href="#topic_uzz_4r1_skb/section_epk_1y1_skb" format="dita"/></li>
+                <li><xref href="#topic_uzz_4r1_skb/section_osj_5ng_skb" format="dita"/></li>
+                <li><xref href="#topic_uzz_4r1_skb/section_mxc_r5c_5kb" format="dita">How do
+                        extension users view or manage Company Contacts on PBX web page?</xref></li>
+                <li><xref href="#topic_uzz_4r1_skb/section_avm_1rd_wkb" format="dita"/></li>
+                <li><xref href="#topic_uzz_4r1_skb/section_m5b_hwd_wkb" format="dita"/></li>
+                <li><xref href="#topic_uzz_4r1_skb/ip-phone-contacts" format="dita">Does IP phone
+                        support Contacts feature?</xref></li>
+                <li><xref href="#topic_uzz_4r1_skb/section_wq4_cwb_hlb" format="dita">Why can't I
+                        see company contacts on IP phone?</xref></li>
+            </ul>
+        </p>
+        <section id="section_il3_tr1_skb">
+            <title>Cannot import my contacts</title>
+            <p>
+                <ol id="ol_ux2_klg_skb">
+                    <li>Check if the contacts limit is reached. See <xref
+                            href="contacts-overview.dita#contacts-overview/contacts-limits"/>.</li>
+                    <li>Check if the imported file meets the format requirements: CSV file encoded
+                        in UTF-8 without BOM.</li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_bfy_2x1_skb">
+            <title>Can I set a Contacts sub-administrator?</title>
+            <p>Yes.</p>
+            <p>The PBX administrator can go to <menucascade>
+                    <uicontrol>Settings</uicontrol>
+                    <uicontrol>Permission</uicontrol>
+                </menucascade> to grant <uicontrol>Contacts</uicontrol> permission for the desired
+                user.</p>
+            <p>If the <uicontrol>Contacts</uicontrol> permission is assigned to an user, the user
+                can do the following operations:</p>
+            <p>
+                <ul id="ul_gph_vx1_skb">
+                    <li>Manage Company Contacts</li>
+                    <li>Configure Caller ID Match of Contacts</li>
+                    <li>Assign Company Contacts permissions to users</li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_epk_1y1_skb"><title>Will my personal contacts be lost if I uninstall
+                Linkus client?</title>The personal contacts won't be lost.<p>After you create the
+                personal contacts, the contacts is stored in PBX.</p></section>
+        <section id="section_osj_5ng_skb">
+            <title>Can the administrator or other users see my personal contacts?</title>
+            <p>No. Personal contacts are visible to the owner.</p>
+        </section>
+        <section id="section_mxc_r5c_5kb">
+            <title>How do extension users view or manage Company Contacts on PBX web page?</title>
+            <p>
+                <ol>
+                    <li>Contact administrator to check if you are allowed to view or manage Company
+                        Contacts.</li>
+                    <li>Log in PBX web interface using extension email <ph product="k2 s-series">or
+                            extension number </ph>and password.<ul id="ul_lk4_cwc_5kb">
+                            <li><uicontrol>Username</uicontrol>: Enter extension email<ph
+                                    product="k2 s-series"> or extension number</ph>.</li>
+                            <li><uicontrol>Password</uicontrol>: Enter the User Password of
+                                extension.</li>
+                        </ul></li>
+                    <li>Go to <menucascade>
+                            <uicontrol>Contacts</uicontrol>
+                            <uicontrol>Company Contacts</uicontrol>
+                        </menucascade>.</li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_avm_1rd_wkb">
+            <title> Will contacts information be saved when I backup the PBX? </title>
+            <p>Yes.</p>
+            <p>Contacts information is stored on PBX, so it will be automatically saved when you
+                back up the PBX.</p>
+        </section>
+        <section id="section_m5b_hwd_wkb">
+            <title>Can I expand the capacity of Company Contacts?</title>
+            <p>No. </p>
+            <p>Company Contacts is stored on PBX system disk, so you can not expand the capacity by
+                adding extra storage device.</p>
+        </section>
+        <section id="ip-phone-contacts">
+            <title>Does IP phone support Contacts feature?</title>
+            <p>By now, only the <xref
+                    href="query-and-use-contacts-on-ip-phone.dita#query-and-use-contacts-on-ip-phone/ul_pj3_ygf_jlb"
+                    >compatible Yealink IP phones</xref> support Contacts feature.</p>
+            <p>For more information, refer to <xref href="query-and-use-contacts-on-ip-phone.dita"
+                    >Query and Use Contacts on IP phone</xref>.</p>
+        </section>
+        <section id="section_wq4_cwb_hlb">
+            <title>Why can't I see company contacts on IP phone?</title>
+            <p>
+                <ul>
+                    <li>Contact administrator to check if you are allowed to view company
+                        contacts.</li>
+                    <li>If administrator changes your permission of viewing company contacts,
+                        administrator should go to <uicontrol>Auto Provisioning</uicontrol>App to
+                            <xref
+                            href="query-and-use-contacts-on-ip-phone.dita#query-and-use-contacts-on-ip-phone/update-phone-settings"
+                            >update IP phone settings</xref>, or the permission change will not take
+                        effect.</li>
+                </ul>
+            </p>
+        </section>
+    </body>
+</topic>

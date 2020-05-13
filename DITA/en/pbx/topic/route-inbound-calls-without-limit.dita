@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_fsl_q2d_djb">
+    <title>Route Inbound Calls without Limit</title>
+    <shortdesc>This topic describes how to configure inbound route on <ph keyref="product_name"/> to
+        route inbound calls without limit of DID numbers and Caller IDs.</shortdesc>
+    <body>
+        <p>Any user call in the selected trunk will be routed to the inbound route destination.</p>
+        <ul id="ul_u1g_tsm_vcb">
+            <li><b>Name</b>: Set a name according to your preference.</li>
+            <li><b>Member Trunk</b>: Choose desired trunk(s).</li>
+            <li><b>Destination</b>: Set the destination.<p>Leave all other fields blank.</p></li>
+        </ul>
+    </body>
+</topic>

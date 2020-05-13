@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="SNMP">
+    <title>SNMP Overview</title>
+    <shortdesc><ph keyref="product_name"/> support SNMP (Simple Network Management Protocol). The
+        SNMP protocol allows the network administrator to query PBX information anytime, anywhere,
+        and monitor PBX devices in real time.</shortdesc>
+    <body>
+        <section id="section_v2r_mlf_qkb" product="s-series">
+            <title>PBX requirements</title>
+            <p>The SNMP feature is supported on the following PBX models:<ul id="ul_mlv_nlf_qkb">
+                <li>Yeastar S100 VoIP PBX</li>
+                <li>Yeastar S300 VoIP PBX</li>
+            </ul></p>
+        </section>
+        <section id="section_yfb_1gw_jkb">
+            <title>What is SNMP？</title>
+            <p>SNMP (Simple Network Management Protocol) is a standard network management protocol
+                that is widely used on TCP/IP networks. The administrator can manage various network
+                devices by a central computer, regardless of the differences in device
+                types,vendors, and physical networks. SNMP improves administrators' work efficiency,
+                and reduces management costs.</p>
+        </section>
+        <section id="section_ab5_t3f_qkb"><title>SNMP
+            components</title><?oxy_comment_start author="carol" timestamp="20200207T102351+0800" comment="这个段落有点长，可以另外加一个section
+SNMP components" flag="done"?>The<?oxy_comment_end?>
+            SNMP architecture  consists of 4 key components: <ul id="ul_txm_w1j_pkb">
+                <li><b>NMS (Network Management System)</b>: The NMS is a manager on a network that
+                    uses SNMP to monitor and control network devices.</li>
+                <li><b>Agent</b>: The agent is a process running on a managed device. The agent
+                    maintains data on the managed device, responds to request packets from the NMS,
+                    and returns management data to the NMS.</li>
+                <li><b>Management object</b>: A management object is an object to be managed on a
+                    network device. For example, management objects may include a hardware component
+                    (such as an interface board) and parameters configured for the hardware or
+                    software (such as a route selection protocol).</li>
+                <li><b>MIB (Management Information Base)</b>: MIB defines the attributes of the
+                    managed device, including the name, status, access rights, and data type of
+                    management objects.</li>
+            </ul>Each managed device contains an agent process, MIB, and multiple management
+            objects. The NMS interacts with the agent on a managed device. When receiving a command
+            from the NMS, the agent performs operations on the MIB in the managed device.<p><image
+                    href="../Images/admin/snmp-model.png" id="image_sgr_kjk_kkb" width="650"
+            /></p></section>
+        <section id="section_qv5_5hw_jkb">
+            <title>SNMP versions</title>
+            <p>The following table shows the supported SNMP versions and details:</p>
+            <p>
+                <table frame="all" rowsep="1" colsep="1" id="table_usq_py1_kkb">
+                    <tgroup cols="5">
+                        <colspec colname="c1" colnum="1" colwidth="1*"/>
+                        <colspec colname="newCol2" colnum="2" colwidth="1.06*"/>
+                        <colspec colname="c3" colnum="3" colwidth="1.71*"/>
+                        <colspec colname="c2" colnum="4" colwidth="1.02*"/>
+                        <colspec colname="c4" colnum="5" colwidth="5.89*"/>
+                        <thead>
+                            <row>
+                                <entry>Version</entry>
+                                <entry>Secure </entry>
+                                <entry>Authenticate</entry>
+                                <entry>Security</entry>
+                                <entry>Description</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry align="center" valign="middle">SNMPv1</entry>
+                                <entry align="center" valign="middle">no</entry>
+                                <entry align="center" valign="middle">community</entry>
+                                <entry align="center" valign="middle">no</entry>
+                                <entry>Applicable to small networks with simple networking and low
+                                    security requirements or small networks with good security and
+                                    stability, such as campus networks and small enterprise
+                                    networks.</entry>
+                            </row>
+                            <row>
+                                <entry align="center" valign="middle">SNMPv2c</entry>
+                                <entry align="center" valign="middle">no</entry>
+                                <entry align="center" valign="middle">community</entry>
+                                <entry align="center" valign="middle">no</entry>
+                                <entry>
+                                    <p>Applicable to medium and large networks with low security
+                                        requirements or with good security (for example, VPN) but on
+                                        which services are so busy that traffic congestion may
+                                        occur.</p>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry align="center" valign="middle" morerows="2">SNMPv3</entry>
+                                <entry align="center" valign="middle">no</entry>
+                                <entry align="center" valign="middle">user name</entry>
+                                <entry align="center" valign="middle">no</entry>
+                                <entry morerows="2" align="left" valign="middle">Applicable to
+                                    networks of various scales, especially networks that have strict
+                                    security requirements and can be managed only by authorized
+                                    network administrators. For example, SNMPv3 can be used if data
+                                    between the NMS and managed device needs to be transmitted over
+                                    a public network.</entry>
+                            </row>
+                            <row>
+                                <entry align="center" valign="middle">Auth</entry>
+                                <entry align="center" valign="middle">HMAC-MD5</entry>
+                                <entry align="center" valign="middle">no</entry>
+                            </row>
+                            <row>
+                                <entry align="center" valign="middle">Auth+Priv</entry>
+                                <entry align="center" valign="middle">HMAC-MD5</entry>
+                                <entry align="center" valign="middle">CBC-DES</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+        <note>A lack of authentication capabilities in SNMPv1 and SNMPv2c results in vulnerability
+            to security threats, so SNMPv3 is recommended.</note>
+        <section id="section_ot4_nfk_pkb">
+            <title>Basic operations of SNMP</title>
+            <p>SNMP defines the following types of operations:<ul id="ul_hlz_mgk_pkb">
+                    <li><b>Get</b>: NMS retrieves variables from the managed device.</li>
+                    <li><b>Set</b>: NMS sets variables or perform an action on managed device.</li>
+                    <li><b>Trap</b>: Managed device notifies the NMS of a fault or event
+                        occurring.</li>
+                </ul><note>The Yeastar PBX only supports Get operation.</note></p>
+        </section>
+        <section id="section_hwk_ffb_kkb">
+            <title>How to query PBX information</title>
+            <p>The following figure shows how to query PBX information:<ol id="ol_kty_hzx_pkb">
+                    <li>The NMS sends a GetRequest packet to the Agent on PBX to query the
+                        variables: <varname>sTotalCalls</varname>,
+                        <varname>sinternalCalls</varname>, etc. </li>
+                    <li>The Agent queries the variables information (<varname>sTotalCalls</varname>,
+                            <varname>sinternalCalls</varname>, etc.) from the MIB.</li>
+                    <li>The Agent sends a Response packet to the NMS.</li>
+                </ol></p>
+            <p><image href="../Images/admin/snmp-query-request.png" id="image_hx3_1nb_kkb"
+                    width="650"/></p>
+        </section>
+    </body>
+</topic>

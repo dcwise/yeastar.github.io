@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="pstn-trunk-settings">
+    <title> PSTN Trunk Settings</title>
+    <shortdesc>When you configure a PSTN trunk, you may need to configure some of the advanced
+        settings. This reference describes all the settings on a PSTN trunk.</shortdesc>
+    <body>
+        <section id="section_zqn_y3h_4fb">
+            <title>Basic Settings</title>
+            <p>Navigation path: <menucascade>
+                    <uicontrol>Settings</uicontrol>
+                    <uicontrol> PBX</uicontrol>
+                    <uicontrol> Trunks</uicontrol>
+                </menucascade>, edit a trunk on the <uicontrol>Basic</uicontrol> tab.</p>
+            <table frame="all" id="table_abw_1jh_4fb">
+                <tgroup cols="2">
+                    <colspec colname="c1" colnum="1" colwidth="1*" rowsep="1" colsep="1"/>
+                    <colspec colname="c2" colnum="2" colwidth="3.88*" rowsep="1" colsep="1"/>
+                    <thead>
+                        <row>
+                            <entry>Settings</entry>
+                            <entry>Description</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row>
+                            <entry>Name</entry>
+                            <entry>Give this trunk a name to help you identify it.</entry>
+                        </row>
+                        <row>
+                            <entry>RX Volume</entry>
+                            <entry>Set the receiving volume of the FXO port.</entry>
+                        </row>
+                        <row>
+                            <entry>TX Volume</entry>
+                            <entry>Set the transmitting volume of the FXO port.</entry>
+                        </row>
+                        <row>
+                            <entry>Enable SLA</entry>
+                            <entry>After enabling <xref href="sla.dita#concept_anq_5dw_rdb"
+                                    >SLA</xref>, users can share this trunk to make outbound calls
+                                and receive inbound calls by BLF keys on their phones. In this way,
+                                Inbound Route settings and Outbound Route settings for the trunk is
+                                invalid.</entry>
+                        </row>
+                        <row>
+                            <entry>Allow Barge</entry>
+                            <entry>Whether or not other stations are allowed to join a call which is
+                                in progress on this trunk by pressing the same line button.</entry>
+                        </row>
+                        <row>
+                            <entry>Hold Access</entry>
+                            <entry>The hold option specifies hold permissions for this trunk.<ul
+                                    id="ul_djp_y12_x3b">
+                                    <li><uicontrol>Open</uicontrol>: any station can place this
+                                        trunk on hold and other station is allowed to resume the
+                                        call on hold.</li>
+                                    <li><uicontrol>Private</uicontrol>: only the station that has
+                                        placed the trunk on hold is allowed to resume the call.</li>
+                                </ul></entry>
+                        </row>
+                        <row>
+                            <entry>Failover Destination</entry>
+                            <entry>Route the call if no one answer this call.</entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+        </section>
+        <section id="section_w1q_wrm_tdb">
+            <title>Hangup Detection Settings</title>
+            <p>Hangup Detection settings help the PBX to detect if a call is hung up. If you find
+                the PSTN call could not be disconnected, adjust the <uicontrol>Hangup
+                    Detection</uicontrol> settings.</p>
+            <p>Navigation path: <menucascade>
+                    <uicontrol>Settings</uicontrol>
+                    <uicontrol> PBX</uicontrol>
+                    <uicontrol> Trunks</uicontrol>
+                </menucascade>, edit a trunk on the <uicontrol>Advanced</uicontrol> tab. </p>
+            <p>
+                <table frame="all" rowsep="1" colsep="1" id="table_b2q_wbb_d3b">
+                    <tgroup cols="2">
+                        <colspec colname="c1" colnum="1" colwidth="1*"/>
+                        <colspec colname="c2" colnum="2" colwidth="3.43*"/>
+                        <thead>
+                            <row>
+                                <entry>Settings</entry>
+                                <entry>Description</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>Hangup Detection Method</entry>
+                                <entry>
+                                    <p>Choose the Hangup Detection Type:</p>
+                                    <ul id="ul_sms_ybb_d3b">
+                                        <li>
+                                            <p><uicontrol>Busy Tone (Default)</uicontrol>: The call
+                                                will be disconnected if a busy tone is detected by
+                                                the <ph keyref="product_name"/>.</p>
+                                        </li>
+                                        <li>
+                                            <p><uicontrol>Polarity Reversal</uicontrol>: The call
+                                                will be disconnected if a polarity reversal is
+                                                detected by the <ph keyref="product_name"/>.</p>
+                                        </li>
+                                        <li>
+                                            <p><uicontrol>Loop Current Disconnect</uicontrol>: When
+                                                the remote side of PSTN trunk disconnects the call
+                                                and creates a loop current, <ph
+                                                  keyref="product_name"> will detect the loop
+                                                  current and disconnect the call.</ph></p>
+                                        </li>
+                                    </ul>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>Busy Count</entry>
+                                <entry>Specify how many busy tones to wait for before
+                                        disconnecting.<p>The default is 4. It is better to set it to
+                                        6 or 8.</p><p>
+                                        <note>PBX may fail to detect the busy tone if the value of
+                                                <uicontrol>Busy Count</uicontrol> is too
+                                            high.</note>
+                                    </p></entry>
+                            </row>
+                            <row>
+                                <entry>Busy Pattern</entry>
+                                <entry>Set the cadence of your busy signal if <uicontrol>Hangup
+                                        Detection Method</uicontrol> is set to <uicontrol>Busy Tone
+                                        (Default)</uicontrol>. In most countries, the cadence of
+                                    your busy signal is set to 500ms on and 500ms off.<ul
+                                        id="ul_txc_xf2_x3b">
+                                        <li>
+                                            <p>If you choose <uicontrol>None</uicontrol>, the PBX
+                                                will accept any regular sound-silence pattern that
+                                                repeats <uicontrol>Busy Count</uicontrol> times as a
+                                                busy signal.</p>
+                                        </li>
+                                        <li>
+                                            <p>If you choose a busy pattern, the system will further
+                                                check the length of the tone and silence, which will
+                                                further reduce the chance of a false positive
+                                                disconnection.</p>
+                                        </li>
+                                    </ul><p>The format is {Sound},{Silence}. e.g. 500,500 means
+                                        500ms on, 500ms off.</p></entry>
+                            </row>
+                            <row>
+                                <entry>Busy Interval</entry>
+                                <entry>The busy detection interval.</entry>
+                            </row>
+                            <row>
+                                <entry>Frequency Detection</entry>
+                                <entry>Used for Frequency Detection (Enable detecting the busy
+                                    signal frequency or not).</entry>
+                            </row>
+                            <row>
+                                <entry>Busy Frequency</entry>
+                                <entry>If the Frequency Detection is enabled, you need to specify
+                                    the local frequency.</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+        <section id="section_qnq_gsm_tdb">
+            <title>Answer Detect Type Settings</title>
+            <p>Navigation path: <menucascade>
+                    <uicontrol>Settings</uicontrol>
+                    <uicontrol> PBX</uicontrol>
+                    <uicontrol> Trunks</uicontrol>
+                </menucascade>, edit a trunk on the <uicontrol>Advanced</uicontrol> tab.</p>
+            <p>
+                <table frame="all" rowsep="1" colsep="1" id="table_ucb_3h2_x3b">
+                    <tgroup cols="2" align="left">
+                        <colspec colname="c1" colnum="1" colwidth="1*"/>
+                        <colspec colname="c2" colnum="2" colwidth="2.47*"/>
+                        <thead>
+                            <row>
+                                <entry>Settings</entry>
+                                <entry>Description</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>Answer Detection Method</entry>
+                                <entry>Answer Detection will help the system to accurately bill your
+                                        calls.<ul id="ul_kv4_vh2_x3b">
+                                        <li>
+                                            <p><uicontrol>Default</uicontrol>: PBX will start to
+                                                charge once you grab the PSTN trunk to call out,
+                                                whether the call is answered or not.</p>
+                                        </li>
+                                        <li>
+                                            <p><uicontrol>Polarity Detection</uicontrol>: If the
+                                                PSTN trunk supports polarity, you can choose
+                                                  <uicontrol>Polarity Detection</uicontrol>. When
+                                                the callee answers the call, the provider will send
+                                                a polarity signal, and then the system starts to
+                                                bill.</p>
+                                        </li>
+                                    </ul></entry>
+                            </row>
+                            <row>
+                                <entry>DID Number</entry>
+                                <entry>If you wish the inbound call through this trunk to be
+                                    redirected via outbound route, please fill in the destination
+                                    number to be called.</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+        <section id="section_kzn_4tm_tdb">
+            <title>Caller ID Settings</title>
+            <p>Caller ID Settings will help the system to detect Caller ID. If an incoming PSTN call
+                does not display Caller ID, you need to confirm with your service provider if the
+                line has enabled Caller ID feature. If this line does support Caller ID, configure
+                these settings to solve this problem.</p>
+            <p>Navigation path: <menucascade>
+                    <uicontrol>Settings</uicontrol>
+                    <uicontrol> PBX</uicontrol>
+                    <uicontrol> Trunks</uicontrol>
+                </menucascade>, edit a trunk on the <uicontrol>Advanced</uicontrol> tab. </p>
+            <p>
+                <table frame="all" rowsep="1" colsep="1" id="table_pk5_ymy_53b">
+                    <tgroup cols="2" align="left">
+                        <colspec colname="c1" colnum="1" colwidth="161px"/>
+                        <colspec colname="c2" colnum="2" colwidth="447px"/>
+                        <thead>
+                            <row>
+                                <entry>Settings</entry>
+                                <entry>Description</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>Caller ID Detection</entry>
+                                <entry>Enable/Disable the Caller ID detection.</entry>
+                            </row>
+                            <row>
+                                <entry>Caller ID Start</entry>
+                                <entry>
+                                    <p>This option allows you to define the start of a Caller ID
+                                        signal.</p>
+                                    <ul id="ul_ifc_bny_53b">
+                                        <li>
+                                            <p>Ring: start when a ring is received (Caller ID
+                                                Signaling: Bell_USA, DTMF).</p>
+                                        </li>
+                                        <li>
+                                            <p>Polarity: start when a polarity reversal is started
+                                                (Caller ID Signaling: V23_UK, V23_JP, DTMF).</p>
+                                        </li>
+                                        <li>
+                                            <p>Before Ring: start before a ring is received (Caller
+                                                ID Signaling: DTMF).</p>
+                                        </li>
+                                    </ul>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>Caller ID Signaling</entry>
+                                <entry>
+                                    <p>This option defines the type of Caller ID signaling to use.
+                                        It can be set to one of the following:</p>
+                                    <ul id="ul_zbs_bny_53b">
+                                        <li>
+                                            <p>Bell: bell202 as used in the United States</p>
+                                        </li>
+                                        <li>
+                                            <p>v23_UK: suitable in the UK</p>
+                                        </li>
+                                        <li>
+                                            <p>v23_Japan: suitable in Japan</p>
+                                        </li>
+                                    </ul>
+                                </entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+        <section id="section_jnz_wtm_tdb">
+            <title>Other Settings</title>
+            <p>Navigation path: <menucascade>
+                    <uicontrol>Settings</uicontrol>
+                    <uicontrol> PBX</uicontrol>
+                    <uicontrol> Trunks</uicontrol>
+                </menucascade>, edit a trunk on the <uicontrol>Advanced</uicontrol> tab. </p>
+            <p>
+                <table frame="all" rowsep="1" colsep="1" id="table_jnm_r42_x3b">
+                    <tgroup cols="2" align="left">
+                        <colspec colname="c1" colnum="1" colwidth="1*"/>
+                        <colspec colname="c2" colnum="2" colwidth="2.76*"/>
+                        <thead>
+                            <row>
+                                <entry>Settings</entry>
+                                <entry>Description</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>Ring Detect Timeout (ms)</entry>
+                                <entry>FXO (FXS signalled) devices must have a timeout to determine
+                                    if there was a hangup before the line was answered. Rang from
+                                    1000 to 8000. Default: 8000. </entry>
+                            </row>
+                            <row>
+                                <entry>Echo Cancellation</entry>
+                                <entry>Enable or disable echo cancellation.</entry>
+                            </row>
+                            <row>
+                                <entry>Release Trunk</entry>
+                                <entry>Release the trunk, and hang up all the calls on this
+                                    trunk.</entry>
+                            </row>
+                            <row id="DNIS">
+                                <entry>DNIS<p>DNIS Name</p></entry>
+                                <entry>DNIS (Dialed Number Identification Service) is a telephone
+                                    service that identifies for the receiver of a call the number
+                                    that the caller dialed. If you want to use the feature, enable
+                                    it and fill in the DNIS name.</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+        <section conref="voip-trunk-settings.dita#topic_pyd_f3t_2fb/adapt-caller-ID"
+            id="section_xlz_n2y_53b"/>
+    </body>
+</topic>

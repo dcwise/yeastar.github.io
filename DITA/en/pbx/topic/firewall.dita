@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_pwc_jjq_zdb">
+    <title>Firewall Rules</title>
+    <shortdesc><ph id="OLE_LINK31">We strongly recommend you to enable and configure firewall on the
+            PBX to prevent the attack fraud or calls loss.</ph></shortdesc>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/05/31"/>
+            <!--Carol-->
+            <revised modified="2018/06/01"/>
+            <!--Carol-->
+            <revised modified="2018/06/05"/>
+            <!--Carol-->
+            <revised modified="2018/06/14"/>
+            <!--Carol-->
+            <revised modified="2018/09/21"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <section id="section_j43_2lq_zdb">
+            <title>Enable Firewall on the PBX</title>
+            <p>Go to <menucascade>
+                    <uicontrol>Settings</uicontrol>
+                    <uicontrol>System</uicontrol>
+                    <uicontrol>Security</uicontrol>
+                    <uicontrol>Firewall Rule</uicontrol>
+                </menucascade>, check the option <uicontrol>Enable Firewall</uicontrol>.</p>
+            <p>If firewall is enabled, the page will show "Firewall is running", and the firewall
+                rules will work to protect your PBX.</p>
+            <p><image href="../Images/admin/enable_firewall.png" id="image_mxv_xmq_zdb" width="650"
+                /></p>
+        </section>
+        <section id="section_vrw_1nq_zdb">
+            <title>Firewall Rules</title>
+            <p>Firewall rules are pre-configured rules to control and filter traffic that are sent
+                to the PBX. You can create firewall rules to filter specific source IP address or
+                domain name, ports, MAC address.</p>
+            <p>Go to <menucascade>
+                    <uicontrol>Settings</uicontrol>
+                    <uicontrol>System</uicontrol>
+                    <uicontrol>Security</uicontrol>
+                    <uicontrol>Firewall Rules</uicontrol>
+                </menucascade> to configure the firewall rules.</p>
+            <p><image href="../Images/admin/add_firewall_rule.png" id="image_h25_n4q_zdb"
+                    width="650"/></p>
+            <p>
+                <ul id="ul_n4c_p4q_zdb">
+                    <li><uicontrol>Name</uicontrol>: Set a name to identify the firewall rule.</li>
+                    <li><uicontrol>Description</uicontrol>: Optional. Description for this firewall
+                        rule.</li>
+                    <li><uicontrol>Action</uicontrol>: Choose the action for the firewall rule.<p>
+                            <ul id="ul_bps_qpq_zdb">
+                                <li><uicontrol>Accept</uicontrol></li>
+                            </ul>
+                        </p><ul id="ul_umb_ppq_zdb">
+                            <li><uicontrol>Ignore</uicontrol></li>
+                            <li><uicontrol>Reject</uicontrol></li>
+                        </ul></li>
+                    <li><uicontrol>Protocol</uicontrol>: Choose the protocol that is applied to the rule.<p>
+                            <ul id="ul_kz2_tpq_zdb">
+                                <li><uicontrol>UDP</uicontrol></li>
+                                <li><uicontrol>TCP</uicontrol></li>
+                                <li><uicontrol>BOTH</uicontrol>: Both TCP and UDP</li>
+                            </ul>
+                        </p></li>
+                    <li><uicontrol>MAC Address</uicontrol>: Optional. The MAC address that is
+                        applied to the rule.<p>The format of Mac address is
+                                <codeph>XX:XX:XX:XX:XX:XX</codeph>.</p></li>
+                    <li><uicontrol>Type</uicontrol>: Choose the network type of the source
+                        traffic.</li>
+                    <li><uicontrol>Source IP Address/Subnet Mask</uicontrol>: The IP address and
+                        subnet of the source traffic.</li>
+                    <li><uicontrol>Domain Name</uicontrol>: The domain name of the source
+                        traffic.</li>
+                    <li><uicontrol>Port</uicontrol>: The port of the source traffic.</li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_j14_2tq_zdb">
+            <title>Additional Firewall Settings</title>
+            <p>The PBX provides additional firewall settings to enhance the system security.</p>
+            <p><image href="../Images/admin/firewall_settings.png" id="image_jc3_ltq_zdb"
+                    width="650"/></p>
+            <ul id="ul_whd_mtq_zdb">
+                <li><uicontrol>Disable Ping</uicontrol>: The PBX will disable Ping response (ICMP
+                    echo).</li>
+                <li><uicontrol>Drop All</uicontrol>: The PBX will drop all the packets and
+                    connections from other hosts except the accepted/trusted IP address/domain that
+                    is defined in the firewall rules.<p>
+                        <note>To avoid that you cannot access the PBX:<p>
+                                <ul id="ul_vmj_bxq_zdb">
+                                    <li>Add at least one firewall rule to accept web access or SSH
+                                        access.</li>
+                                    <li>Create a backup on the PBX before you enable <uicontrol>Drop
+                                            All</uicontrol>.</li>
+                                </ul>
+                            </p></note>
+                    </p></li>
+            </ul>
+        </section>
+    </conbody>
+</concept>

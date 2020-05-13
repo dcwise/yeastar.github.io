@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_g1z_krt_c2b">
+    <title>Room Settings</title>
+    <shortdesc>Set the room phones and room status.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/06/11"/>
+            <!--Carol-->
+            <revised modified="2018/06/11"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <p>Go to <menucascade>
+                <uicontrol>Hotel</uicontrol>
+                <uicontrol>Settings</uicontrol>
+                <uicontrol>General</uicontrol>
+                <uicontrol>Room Settings</uicontrol>
+            </menucascade> to configure the room settings.</p>
+        <p><image href="../Images/admin/hotel_room_settings.png" id="image_jl3_2vt_c2b"/></p>
+        <p>
+            <ul id="ul_j4z_fvt_c2b">
+                <li><uicontrol>Locked When Check-out</uicontrol>:
+                    <?oxy_comment_start author="Becky" timestamp="20191128T111427+0800" comment="同步中文改"?>After
+                    guests check out, room phones will be locked automatically, and can not be used
+                    to make outbound calls or internal calls between hotel rooms.</li><?oxy_comment_end?>
+                <li><uicontrol>Calling Between Rooms</uicontrol>: The Hotel guests in different
+                    rooms could call each other using the room phones.</li>
+                <li><uicontrol>Room Must Be Clean</uicontrol>: The room status must be clean, or you
+                    cannot check in the guest with this room.</li>
+                <li><uicontrol>Display Room Name</uicontrol>: If the RoomA guest makes calls to
+                    RoomB guest using the room phone, the room name will be displayed as caller
+                    ID.</li>
+                <li><uicontrol>Default Check-out Time</uicontrol>: Set the default check-out time.
+                </li>
+            </ul>
+        </p>
+    </conbody>
+</concept>

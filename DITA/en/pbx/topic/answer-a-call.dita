@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+  PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topicID">
+   <title>Answer a
+Call</title>
+   <body>
+      <p>The PBX will send a report to the application server when an
+extension answers a call.</p>
+      <p>Answering call (the called party) and call answered (the calling
+party) coexist. In the report, the calling party’s number
+will appear first.</p>
+      <p>
+         <b>Report sample:</b>
+      </p>
+      <p>
+{“action”:“ANSWER”,“callid”:“1495706238.328”,“ext”:{“extid”:“1000”},“ext”:{“extid”:“1002”}}</p>
+      <p>
+         <b>Report parameters descriptions:</b>
+      </p>
+      <table>
+         <tgroup cols="4">
+            <thead>
+               <row>
+                  <entry>
+                     <b>Parameter Name</b>
+                  </entry>
+                  <entry>
+                     <b>Type</b>
+                  </entry>
+                  <entry>
+                     <b>Description</b>
+                  </entry>
+                  <entry>
+                     <b>Sample</b>
+                  </entry>
+               </row>
+            </thead>
+            <tbody>
+               <row>
+                  <entry>
+                     <b>&lt;action&gt;</b>
+                  </entry>
+                  <entry>String</entry>
+                  <entry>Status</entry>
+                  <entry>ANSWER</entry>
+               </row>
+               <row>
+                  <entry>
+                     <b>[extid]</b>
+                  </entry>
+                  <entry>String</entry>
+                  <entry>The extension number (callee)</entry>
+                  <entry>1002</entry>
+               </row>
+               <row>
+                  <entry>
+                     <b>&lt;inboundid|outboundid&gt;</b>
+                  </entry>
+                  <entry>String</entry>
+                  <entry>The inbound ID / outbound ID</entry>
+                  <entry>1495771030.366</entry>
+               </row>
+               <row>
+                  <entry>
+                     <b>[from]</b>
+                  </entry>
+                  <entry>String</entry>
+                  <entry>The caller’s number</entry>
+                  <entry>1806354000</entry>
+               </row>
+               <row>
+                  <entry>
+                     <b>[to]</b>
+                  </entry>
+                  <entry>String</entry>
+                  <entry>The callee’s number</entry>
+                  <entry>1237456</entry>
+               </row>
+               <row>
+                  <entry>
+                     <b>[callid]</b>
+                  </entry>
+                  <entry>String</entry>
+                  <entry>A unique identifier of the call</entry>
+                  <entry>1495771030.365</entry>
+               </row>
+            </tbody>
+         </tgroup>
+      </table>
+   </body>
+</topic>

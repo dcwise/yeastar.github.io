@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="import-parameters-contacts">
+    <title>Import Parameters - Contacts</title>
+    <shortdesc>Descriptions for the Contacts parameters that you can import to <ph
+            keyref="product_name"/>.</shortdesc>
+    <refbody>
+        <section id="section_xr4_mv4_mfb">
+            <p>
+                <note><uicontrol>First Name</uicontrol> and <uicontrol>Last Name</uicontrol> are
+                    required and at least one of the following numbers is required.<p>
+                        <ul id="ul_z5g_hf2_5kb">
+                            <li><uicontrol>Business Number</uicontrol></li>
+                            <li><uicontrol>Business Number 2</uicontrol></li>
+                            <li><uicontrol>Mobile</uicontrol></li>
+                            <li><uicontrol>Mobile 2</uicontrol></li>
+                            <li><uicontrol>Phone</uicontrol></li>
+                            <li><uicontrol>Home</uicontrol></li>
+                            <li><uicontrol>Home 2</uicontrol></li>
+                        </ul>
+                    </p></note>
+            </p>
+        </section>
+        <table frame="all" id="table_xxj_b4r_rkb">
+            <tgroup cols="3" align="left">
+                <colspec colname="c1" colnum="1" colwidth="1.29*" colsep="1" rowsep="1"/>
+                <colspec colname="c3" colnum="2" colwidth="1*" colsep="1" rowsep="1"/>
+                <colspec colname="c4" colnum="3" colwidth="3.96*" colsep="1" rowsep="1"/>
+                <thead>
+                    <row>
+                        <entry>Parameter</entry>
+                        <entry>Importance</entry>
+                        <entry>Restriction</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>First Name</entry>
+                        <entry>Required</entry>
+                        <entry>The maximum length is 255.</entry>
+                    </row>
+                    <row>
+                        <entry>Last Name</entry>
+                        <entry>Required</entry>
+                        <entry>The maximum length is 255.</entry>
+                    </row>
+                    <row>
+                        <entry>Email</entry>
+                        <entry>Optional</entry>
+                        <entry>Must be email address format. <p>The maximum length is
+                            255.</p></entry>
+                    </row>
+                    <row>
+                        <entry>Company</entry>
+                        <entry>Optional</entry>
+                        <entry>
+                            <p>The maximum length is 255.</p>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>Business Number</entry>
+                        <entry>Optional</entry>
+                        <entry>Only numbers, space, and the following characters are allowed:
+                                <codeph>(</codeph>
+                            <codeph>)</codeph>
+                            <codeph>.</codeph>
+                            <codeph>-</codeph>
+                            <codeph>+</codeph>.<p>The maximum length is 31.</p></entry>
+                    </row>
+                    <row>
+                        <entry>Business Number 2</entry>
+                        <entry>Optional</entry>
+                        <entry>Only numbers, space, and the following characters are allowed:
+                                <codeph>(</codeph>
+                            <codeph>)</codeph>
+                            <codeph>.</codeph>
+                            <codeph>-</codeph>
+                            <codeph>+</codeph>.<p>The maximum length is 31.</p></entry>
+                    </row>
+                    <row>
+                        <entry>Business Fax</entry>
+                        <entry>Optional</entry>
+                        <entry>Only numbers and the following characters are allowed:
+                                <codeph>(</codeph>
+                            <codeph>)</codeph>
+                            <codeph>.</codeph>
+                            <codeph>-</codeph>
+                            <codeph>+</codeph>.</entry>
+                    </row>
+                    <row>
+                        <entry>Mobile</entry>
+                        <entry>Optional</entry>
+                        <entry>Only numbers, space, and the following characters are allowed:
+                                <codeph>(</codeph>
+                            <codeph>)</codeph>
+                            <codeph>.</codeph>
+                            <codeph>-</codeph>
+                            <codeph>+</codeph>.<p>The maximum length is 31.</p></entry>
+                    </row>
+                    <row>
+                        <entry>Mobile 2</entry>
+                        <entry>Optional</entry>
+                        <entry>Only numbers, space, and the following characters are allowed:
+                                <codeph>(</codeph>
+                            <codeph>)</codeph>
+                            <codeph>.</codeph>
+                            <codeph>-</codeph>
+                            <codeph>+</codeph>.<p>The maximum length is 31.</p></entry>
+                    </row>
+                    <row>
+                        <entry>Phone</entry>
+                        <entry>Optional</entry>
+                        <entry>Only numbers, space, and the following characters are allowed:
+                                <codeph>(</codeph>
+                            <codeph>)</codeph>
+                            <codeph>.</codeph>
+                            <codeph>-</codeph>
+                            <codeph>+</codeph>.<p>The maximum length is 31.</p></entry>
+                    </row>
+                    <row>
+                        <entry>Home</entry>
+                        <entry>Optional</entry>
+                        <entry>Only numbers, space, and the following characters are allowed:
+                                <codeph>(</codeph>
+                            <codeph>)</codeph>
+                            <codeph>.</codeph>
+                            <codeph>-</codeph>
+                            <codeph>+</codeph>.<p>The maximum length is 31.</p></entry>
+                    </row>
+                    <row>
+                        <entry>Home 2</entry>
+                        <entry>Optional</entry>
+                        <entry>Only numbers, space, and the following characters are allowed:
+                                <codeph>(</codeph>
+                            <codeph>)</codeph>
+                            <codeph>.</codeph>
+                            <codeph>-</codeph>
+                            <codeph>+</codeph>.<p>The maximum length is 31.</p></entry>
+                    </row>
+                    <row>
+                        <entry>Home Fax</entry>
+                        <entry>Optional</entry>
+                        <entry>Only numbers and the following characters are allowed:
+                                <codeph>(</codeph>
+                            <codeph>)</codeph>
+                            <codeph>.</codeph>
+                            <codeph>-</codeph>
+                            <codeph>+</codeph>.</entry>
+                    </row>
+                    <row>
+                        <entry>Other</entry>
+                        <entry>Optional</entry>
+                        <entry>The maximum length is 1024.</entry>
+                    </row>
+                    <row>
+                        <entry>ZIP Code</entry>
+                        <entry>Optional</entry>
+                        <entry>The maximum length is 255.</entry>
+                    </row>
+                    <row>
+                        <entry>Street</entry>
+                        <entry>Optional</entry>
+                        <entry>The maximum length is 255.</entry>
+                    </row>
+                    <row>
+                        <entry>City</entry>
+                        <entry>Optional</entry>
+                        <entry>The maximum length is 255.</entry>
+                    </row>
+                    <row>
+                        <entry>State</entry>
+                        <entry>Optional</entry>
+                        <entry>The maximum length is 255.</entry>
+                    </row>
+                    <row>
+                        <entry>Country</entry>
+                        <entry>Optional</entry>
+                        <entry>The maximum length is 255.</entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </refbody>
+</reference>

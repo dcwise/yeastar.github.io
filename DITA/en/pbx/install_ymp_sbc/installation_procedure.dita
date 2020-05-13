@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_wrd_xr3_3cb">
+  <title>Installation Procedure</title>
+  <body>
+    <p>Yeastar provides installation service of the SBC and YMP. You need to read this guide
+      (deployment guide), deploy your server and network, then provide the requested information to
+      us.</p>
+    <p><image href="../Images/SBC/install_procedure.png" id="image_cx1_3s3_3cb" width="650"/></p>
+  </body>
+</topic>

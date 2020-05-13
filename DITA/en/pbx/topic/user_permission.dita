@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_ojf_43k_xdb">
+    <title>User Permission</title>
+    <shortdesc>By default, the extension users can log in the system and check their own settings
+        and CDR. You can set different permission to the users according to their roles and
+        duty.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/05/23"/>
+            <!--Carol-->
+            <revised modified="2018/05/23"/>
+            <!--Carol-->
+            <revised modified="2018/07/02"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <image href="../Images/admin/user_permission.png" id="image_r51_43l_xdb" width="500"
+            product="s-series"/>
+        <section id="section_vxn_hll_xdb"><title>User Types on the PBX</title><b>Super Admin
+                </b><p>Super Admin has the highest privilege. The super administrator can access all
+                pages on S-Series Web and make all the configurations on the system.</p><p>
+                <ul id="ul_ysd_btk_xdb">
+                    <li>Username: <codeph>admin</codeph></li>
+                </ul>
+            </p><p><b>Administrator or Custom User</b></p>Administrator or Custom User is created by
+            the Super Admin. The Super Admin sets the privileges for those users according to their
+            roles and duty. <p>
+                <ul id="ul_h3y_ykl_xdb">
+                    <li>Username: The extension number or the email address of the extension
+                        user.</li>
+                </ul>
+            </p><p>
+                <note>
+                    <ul id="ul_cbh_4ll_xdb">
+                        <li><uicontrol>Administrator</uicontrol> and <uicontrol>Custom
+                                User</uicontrol> can have the same permission. The different between
+                            the two role type:<p>
+                                <ul id="ul_qp2_qll_xdb">
+                                    <li><b>Administrator</b>: All permissions are enabled by
+                                        default.</li>
+                                    <li><b>Custom User</b>: No permission is enabled by
+                                        default.</li>
+                                </ul>
+                            </p></li>
+                    </ul>
+                    <p>
+                        <ul id="ul_xb2_4kl_xdb">
+                            <li><b>Administrator</b> and <uicontrol>Custom User</uicontrol> do not
+                                have permission to configure <uicontrol>User
+                                Permission</uicontrol>.</li>
+                        </ul>
+                    </p>
+                </note>
+            </p></section>
+    </conbody>
+</concept>

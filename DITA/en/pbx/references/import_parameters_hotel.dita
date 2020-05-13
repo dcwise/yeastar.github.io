@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="reference_ynh_fk3_mfb">
+    <title>Import Parameters - Hotel Customers</title>
+    <shortdesc>Descriptions for the Hotel Customers parameters that you can import to <ph
+            keyref="product_name"/>.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/10/16"/>
+            <!--Carol-->
+            <revised modified="2018/10/16"/>
+            <!--Carol-->
+            <revised modified="2018/10/17"/>
+        </critdates>
+    </prolog>
+    <refbody>
+        <section id="section_qtg_1n3_mfb">
+            <p>
+                <table id="table_nmk_1n3_mfb">
+                    <tgroup cols="4">
+                        <colspec colnum="1" colname="col1" colsep="1" rowsep="1" colwidth="1.22*"/>
+                        <colspec colnum="2" colname="col3" colsep="1" rowsep="1" colwidth="1*"/>
+                        <colspec colnum="3" colname="col6" colsep="1" rowsep="1" colwidth="3.32*"/>
+                        <colspec colname="col5" colnum="4" colwidth="1.06*" colsep="1" rowsep="1"/>
+                        <thead>
+                            <row>
+                                <entry>Parameter</entry>
+                                <entry>Importance</entry>
+                                <entry>Restriction</entry>
+                                <entry>Default Value</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>First Name</entry>
+                                <entry>Required</entry>
+                                <entry>
+                                    <ul id="ul_ek5_zvn_mfb">
+                                        <li>The following characters are NOT
+                                                  allowed:<p><codeph>&amp;</codeph>
+                                                <codeph>"</codeph>
+                                                <codeph>'</codeph>
+                                                <codeph>\</codeph>
+                                                <codeph>&lt;</codeph>
+                                                <codeph>></codeph>
+                                                <codeph>`</codeph>
+                                                <codeph>|</codeph></p></li>
+                                        <li>The maximum length is 31.</li>
+                                    </ul>
+                                </entry>
+                                <entry>N/A</entry>
+                            </row>
+                            <row>
+                                <entry>Last Name</entry>
+                                <entry>Required</entry>
+                                <entry>
+                                    <ul id="ul_ojj_bwn_mfb">
+                                        <li>The following characters are NOT
+                                                  allowed:<p><codeph>&amp;</codeph>
+                                                <codeph>"</codeph>
+                                                <codeph>'</codeph>
+                                                <codeph>\</codeph>
+                                                <codeph>&lt;</codeph>
+                                                <codeph>></codeph>
+                                                <codeph>`</codeph>
+                                                <codeph>|</codeph>
+                                            </p></li>
+                                        <li>The maximum length is 31.</li>
+                                    </ul>
+                                </entry>
+                                <entry>N/A</entry>
+                            </row>
+                            <row>
+                                <entry>Gender</entry>
+                                <entry>Required</entry>
+                                <entry>Permitted value: <p><codeph>male</codeph>
+                                        <codeph>female</codeph></p></entry>
+                                <entry>male</entry>
+                            </row>
+                            <row>
+                                <entry>Certificate Type</entry>
+                                <entry>Required</entry>
+                                <entry>Permitted value: <p><codeph>idcard</codeph>
+                                        <codeph>passport</codeph>
+                                        <codeph>other</codeph></p></entry>
+                                <entry>idcard</entry>
+                            </row>
+                            <row>
+                                <entry>Certificate ID</entry>
+                                <entry>Optional</entry>
+                                <entry>
+                                    <ul id="ul_wbp_cwn_mfb">
+                                        <li>The following characters are NOT
+                                                  allowed:<p><codeph>&amp;</codeph>
+                                                <codeph>"</codeph>
+                                                <codeph>'</codeph>
+                                                <codeph>\</codeph>
+                                                <codeph>&lt;</codeph>
+                                                <codeph>></codeph>
+                                                <codeph>`</codeph>
+                                                <codeph>|</codeph></p></li>
+                                        <li>The maximum length is 63.</li>
+                                    </ul>
+                                </entry>
+                                <entry>N/A</entry>
+                            </row>
+                            <row>
+                                <entry>Mobile Phone</entry>
+                                <entry>Optional</entry>
+                                <entry>
+                                    <ul id="ul_c2k_kwn_mfb">
+                                        <li>Only numeric are allowed. </li>
+                                        <li>The maximum length is 31.</li>
+                                    </ul>
+                                </entry>
+                                <entry>N/A</entry>
+                            </row>
+                            <row>
+                                <entry>Email</entry>
+                                <entry>Optional</entry>
+                                <entry>
+                                    <ul id="ul_xfj_2wn_mfb">
+                                        <li>Must be email address format.</li>
+                                        <li>The following characters are NOT
+                                                  allowed:<p><codeph>#</codeph>
+                                                <codeph>;</codeph>
+                                                <codeph>,</codeph>
+                                                <codeph>[</codeph>
+                                                <codeph>]</codeph>
+                                                <codeph>=</codeph>
+                                                <codeph>&amp;</codeph>
+                                                <codeph>"</codeph>
+                                                <codeph>'</codeph>
+                                                <codeph>\</codeph>
+                                                <codeph>&lt;</codeph>
+                                                <codeph>></codeph>
+                                                <codeph>`</codeph>
+                                                <codeph>$</codeph>
+                                            </p></li>
+                                    </ul>
+                                </entry>
+                                <entry>N/A</entry>
+                            </row>
+                            <row>
+                                <entry>Phone</entry>
+                                <entry>Optional</entry>
+                                <entry>
+                                    <ul id="ul_jsd_kwn_mfb">
+                                        <li>Only numeric are allowed. </li>
+                                        <li>The maximum length is 31.</li>
+                                    </ul>
+                                </entry>
+                                <entry>N/A</entry>
+                            </row>
+                            <row>
+                                <entry>Fax</entry>
+                                <entry>Optional</entry>
+                                <entry>
+                                    <ul id="ul_mv4_lwn_mfb">
+                                        <li>Only numeric are allowed. </li>
+                                        <li>The maximum length is 63.</li>
+                                    </ul>
+                                </entry>
+                                <entry>N/A</entry>
+                            </row>
+                            <row>
+                                <entry>Country</entry>
+                                <entry>Optional</entry>
+                                <entry>
+                                    <p>
+                                        <ul>
+                                            <li>The following characters are NOT
+                                                  allowed:<p><codeph>&amp;</codeph>
+                                                  <codeph>"</codeph>
+                                                  <codeph>'</codeph>
+                                                  <codeph>\</codeph>
+                                                  <codeph>&lt;</codeph>
+                                                  <codeph>></codeph>
+                                                  <codeph>`</codeph>
+                                                  <codeph>|</codeph></p></li>
+                                            <li>The maximum length is 63.</li>
+                                        </ul>
+                                    </p>
+                                </entry>
+                                <entry>N/A</entry>
+                            </row>
+                            <row>
+                                <entry>City</entry>
+                                <entry>Optional</entry>
+                                <entry>
+                                    <ul>
+                                        <li>The following characters are NOT
+                                                  allowed:<p><codeph>&amp;</codeph>
+                                                <codeph>"</codeph>
+                                                <codeph>'</codeph>
+                                                <codeph>\</codeph>
+                                                <codeph>&lt;</codeph>
+                                                <codeph>></codeph>
+                                                <codeph>`</codeph>
+                                                <codeph>|</codeph></p></li>
+                                        <li>The maximum length is 63.</li>
+                                    </ul>
+                                </entry>
+                                <entry>N/A</entry>
+                            </row>
+                            <row>
+                                <entry>Address</entry>
+                                <entry>Optional</entry>
+                                <entry>
+                                    <ul>
+                                        <li>The following characters are NOT
+                                                  allowed:<p><codeph>&amp;</codeph>
+                                                <codeph>"</codeph>
+                                                <codeph>'</codeph>
+                                                <codeph>\</codeph>
+                                                <codeph>&lt;</codeph>
+                                                <codeph>></codeph>
+                                                <codeph>`</codeph>
+                                                <codeph>|</codeph></p></li>
+                                        <li>The maximum length is 1023.</li>
+                                    </ul>
+                                </entry>
+                                <entry>N/A</entry>
+                            </row>
+                            <row>
+                                <entry>Comments</entry>
+                                <entry>Optional</entry>
+                                <entry>
+                                    <ul>
+                                        <li>The following characters are NOT
+                                                  allowed:<p><codeph>&amp;</codeph>
+                                                <codeph>"</codeph>
+                                                <codeph>'</codeph>
+                                                <codeph>\</codeph>
+                                                <codeph>&lt;</codeph>
+                                                <codeph>></codeph>
+                                                <codeph>`</codeph>
+                                                <codeph>|</codeph></p></li>
+                                        <li>The maximum length is 1023.</li>
+                                    </ul>
+                                </entry>
+                                <entry>N/A</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+    </refbody>
+</reference>

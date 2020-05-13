@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_jpq_5d3_kcb">
+    <title>Step1. Create the VPC</title>
+    <shortdesc>Create one VPC that will contain SBC server and YMP server.</shortdesc>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/06/21"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <steps id="steps_g1l_b23_kcb">
+            <step>
+                <cmd>Log on the <xref href="https://vpc.console.aliyun.com/#/vpc/" format="html"
+                        scope="external">VPC console</xref>.</cmd>
+            </step>
+            <step>
+                <cmd>In the left-side navigation pane, click <uicontrol>VPC</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Choose the region where the VPC is located.</cmd>
+            </step>
+            <step>
+                <cmd>In the upper-right corner, click <uicontrol>Create VPC</uicontrol>. </cmd>
+            </step>
+            <step>
+                <cmd>Set the <uicontrol>VPC Name</uicontrol> and select the
+                        <uicontrol>CIDR</uicontrol>. We recommend the CIDR
+                        <codeph>10.0.0.0/8</codeph>.</cmd>
+                <info>
+                    <note type="restriction">The IP segments 172.19.0.0 and 172.17.0.0 are NOT
+                        allowed.</note>
+                </info>
+                <info><image href="../Images/SBC/ali_create_vpc.png" id="image_vxf_ttq_lcb"
+                        width="500"/></info>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Create VPC</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Next Step</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Set the VSwitch.</cmd>
+                <substeps>
+                    <substep>
+                        <cmd>Set the <uicontrol>Name</uicontrol>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Select an available <uicontrol>Zone</uicontrol>. The VPC is only
+                            available in the selected zone.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Set the <uicontrol>CIDR</uicontrol> as
+                            <codeph>10.0.0.0/24</codeph>.</cmd>
+                    </substep>
+                </substeps>
+                <info><image href="../Images/SBC/ali_create_vswitch.png" id="image_r1f_2vq_lcb"
+                        width="650"/></info>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Create VSwitch</uicontrol> and click
+                        <uicontrol>Done</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>On the <uicontrol>VPC</uicontrol> list page, click the VPC ID.</cmd>
+                <info><image href="../Images/SBC/ali_vpc_link.png" id="image_kmz_1ds_lcb"
+                        width="650"/></info>
+            </step>
+            <step>
+                <cmd>Click  <uicontrol>VRouters</uicontrol>, you will see the two auto generated
+                    routers for the VPC.</cmd>
+                <info><image href="../Images/SBC/ali_VPC_router.png" id="image_mxq_jds_lcb"/></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

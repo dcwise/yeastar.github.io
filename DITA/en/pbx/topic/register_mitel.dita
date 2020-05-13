@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_omw_qz3_zcb">
+    <title>Register Mitel Phone with <ph keyref="product_name"/></title>
+    <shortdesc>This guide is based on Mitel 6867i v4.1.0.148  and <ph keyref="product_name"/>
+        <ph product="cloudpbx">v81.8.0.7</ph><ph product="s-series">v30.8.0.14</ph>.</shortdesc>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2019/01/22"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <context>
+            <p conref="register_htek.dita#task_n3s_q1c_5cb/different_phone_web"/>
+        </context>
+        <steps id="steps_irz_v2j_zcb">
+            <step>
+                <cmd>Log in the web page of the phone.</cmd>
+                <choices>
+                    <choice><uicontrol>Username</uicontrol>: admin</choice>
+                    <choice><uicontrol>Password</uicontrol>: 22222</choice>
+                </choices>
+            </step>
+            <step>
+                <cmd>Go to <uicontrol>Advanced</uicontrol> section, choose a line to
+                    configure.</cmd>
+                <substeps id="substeps_ejt_rfj_zcb">
+                    <substep>
+                        <cmd>In the <uicontrol>Basic SIP Authentication Settings</uicontrol>, enter
+                            the extension information.</cmd>
+                        <info><image href="../Images/admin/register_mitel1.png"
+                                id="image_hlv_1gj_zcb"/></info>
+                        <info>
+                            <ul id="ul_axh_2gj_zcb">
+                                <li><uicontrol>Screen Name</uicontrol>: Set the name that you want
+                                    to display on the phone screen.</li>
+                                <li><uicontrol>Phone Number</uicontrol>: Fill in the extension
+                                    number.</li>
+                                <li><uicontrol>Caller ID</uicontrol>: Fill in the extension's
+                                        <uicontrol>Caller ID</uicontrol>.</li>
+                                <li><uicontrol>Authentication Name</uicontrol>: Fill in the
+                                    extension's <uicontrol>Registration Name</uicontrol>.</li>
+                                <li><uicontrol>Password</uicontrol>: Fill in the extension's
+                                        <uicontrol>Registration Password</uicontrol>.</li>
+                            </ul>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>In the <uicontrol>Basic SIP Network Settings</uicontrol>, enter the PBX
+                            information.</cmd>
+                        <info><image href="../Images/admin/register_mitel2.png"
+                                id="image_zq3_wgj_zcb"/></info>
+                        <info>
+                            <ul id="ul_i2p_bhj_zcb">
+                                <li><uicontrol>Proxy Server</uicontrol>: Fill in the domain<ph
+                                        product="s-series"> or IP address</ph> of your PBX.</li>
+                                <li><uicontrol>Proxy Port</uicontrol>: Fill in the same SIP port of
+                                    the PBX. The default SIP port on the PBX is 5060.</li>
+                                <li><uicontrol>Registrar Server</uicontrol>: Fill in the domain<ph
+                                        product="s-series"> or IP address</ph> of your PBX.</li>
+                                <li><uicontrol>Registrar Port</uicontrol>: Fill in the same SIP port
+                                    of the PBX. The default SIP port on the PBX is 5060.</li>
+                                <li><uicontrol>Registration Period</uicontrol>: Set the registration
+                                    period according to the settings on your PBX. The default range
+                                    of  SIP registration time on the PBX is 60-3600 seconds.</li>
+                            </ul>
+                        </info>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save Settings</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Advanced</uicontrol>
+                        <uicontrol>Global SIP</uicontrol>
+                    </menucascade>, set the RTP settings and codec preferences.</cmd>
+                <substeps id="substeps_o3l_ztj_zcb">
+                    <substep>
+                        <cmd>In the <uicontrol>RTP Settings</uicontrol> section, configure the RTP
+                            according to the settings on your PBX.</cmd>
+                        <info><image href="../Images/admin/register_mitel3.png"
+                                id="image_b5d_w3j_zcb"/></info>
+                        <info>
+                            <ul id="ul_pyv_bjj_zcb">
+                                <li><uicontrol>Force RFC2833 Out-of-Band DTMF</uicontrol>:
+                                    Enabled</li>
+                                <li><uicontrol>DTMF Method</uicontrol>: RTP</li>
+                                <li><uicontrol>RTP Encryption</uicontrol>: If you don't enable SRTP
+                                    for the extension, choose <uicontrol>SRTP
+                                    Disabled</uicontrol>.</li>
+                            </ul>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>In the <uicontrol>Codec Preference List</uicontrol> section, set the
+                            codec preferences according your PBX settings.</cmd>
+                        <info>
+                            <note>G729 and iLBC are the default enabled codecs on the PBX, you
+                                should enable the G729 codec or the iLBC codec on your phone.</note>
+                        </info>
+                        <info><image href="../Images/admin/register_mitel4.png"
+                                id="image_mlc_1kj_zcb"/></info>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save Settings</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Reboot the phone to make the configuration take effect.</cmd>
+                <info>You can check the extension status via <menucascade>
+                        <uicontrol>Status</uicontrol>
+                        <uicontrol>System Information</uicontrol>
+                    </menucascade>. If the extension is registered, the status shows
+                    "Registered".</info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

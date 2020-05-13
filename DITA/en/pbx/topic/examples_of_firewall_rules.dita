@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_krz_myx_zdb">
+    <?oxy_comment_start author="Becky" timestamp="20191209T135436+0800" comment="本篇同步中文改，审整篇"?>
+    <title>Examples of Firewall Rules</title><?oxy_comment_end?>
+    <shortdesc>In this topic, we provide configuration examples of firewall rules under different
+        scenarios. We recommend you to configure firewall rules according to the network environment
+        of your PBX.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/06/01"/>
+            <!--Carol-->
+            <revised modified="2018/06/01"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <p>Log in PBX, go to <menucascade>
+                <uicontrol>Settings</uicontrol>
+                <uicontrol>System</uicontrol>
+                <uicontrol>Security</uicontrol>
+                <uicontrol>Firewall Rules</uicontrol>
+            </menucascade>, and configure firewall rules as follows.<ul id="ul_f24_wgl_zjb">
+                <li>Add a trusted IP address to whitelist, or PBX may blacklist the IP address as it
+                    frequently sends packets.</li>
+                <li>Add an untrusted IP address to blacklist, preventing the IP address from
+                    accessing to PBX.</li>
+            </ul></p>
+        <section id="section_ljw_wyx_zdb">
+            <title>Accept access of local network</title>
+            <p>If PBX often blacklists local phones which are under the same network segment, you
+                can configure a firewall rule to allow all IP addresses under the same network
+                segment to access to the PBX.</p>
+            <p id="firewall_rule_example">For example, the range of local IP address is
+                    <i>192.168.5.1-192.168.5.254</i>. You can set a firewall rule as
+                    follows.<note>The subnet mask <i>255.255.255.0</i> indicates that all IP
+                    addresses under the same network segment are allowed to access to the
+                    PBX.</note></p>
+            <p><image href="../Images/admin/firewall_rule_accept_local.png" id="image_yhn_3zx_zdb"
+                    width="500"/></p>
+        </section>
+        <section id="section_pcg_4zx_zdb">
+            <title>Accept remote extensions and remote web access</title>
+            <p>If you want to remotely access to PBX web page or register extensions, you can add
+                the public IP address to the whitelist, or PBX may blacklist the public IP address
+                as it frequently sends packets.</p>
+            <p>For example, the trusted public IP address is <i>1.2.3.4</i>. Set the firewall rule
+                as follows.</p>
+            <p>
+                <note>
+                    <ul id="ul_dlw_wtl_zjb">
+                        <li>The subnet mask <i>255.255.255.0</i> indicates that all IP addresses
+                            under the same network segment are allowed to access to the PBX.</li>
+                        <li>If the remote place doesn't have a static public IP address, you can set
+                            a firewall rule for the trusted domain name.</li>
+                    </ul>
+                </note>
+            </p>
+            <p><image href="../Images/admin/firewall_rule_allow_remote.png" id="image_abl_41y_zdb"
+                    width="500"/></p>
+        </section>
+        <section id="section_gfs_ncy_zdb">
+            <title>Accept traffic of VoIP Provider</title>
+            <p>Accept the traffic of SIP registration port and RTP media ports from the VoIP
+                provider.</p>
+            <p>For example, the IP address of the VoIP provider is <i>2.2.2.2</i>; port of SIP
+                registration is <i>5630</i>; the range of RTP ports is <i>10000-12000</i>. You need
+                to set two firewall rules for the VoIP provider.</p>
+            <ul id="ul_as5_2wy_zdb">
+                <li><b>Accept traffic of the SIP registration port</b><p><image
+                            href="../Images/admin/firewall_rule_accept_sip.png" width="500"
+                            id="image_ldc_xwy_zdb"/></p></li>
+                <li><b>Accept traffic of the RTP ports</b><p><image
+                            href="../Images/admin/firewall_rule_accept_rtp.png" width="500"
+                            id="image_yx4_fxy_zdb"/></p></li>
+            </ul>
+        </section>
+        <section>
+            <title>Accept traffic of NTP, SMTP, POP, STUN</title>
+            <p>We recommend you to accept traffic of NTP, SMTP, POP, STUN, and keep the default
+                    <xref href="ip_auto_defense.dita#topic_fmp_yzh_ffb">auto defense
+                rules</xref>.</p>
+            <p>For example, the IP address of the NTP server is <i>3.3.3.3</i>. Set the firewall
+                rule as the following figure.</p>
+            <p><image href="../Images/admin/firewall_rule_accept_ntp.png" width="500"
+                    id="image_igb_j1z_zdb"/></p>
+        </section>
+        <section id="section_m55_hxy_zdb">
+            <title>Block untrusted web access</title>
+            <p>After you have added firewall rules to <xref
+                    href="#concept_krz_myx_zdb/section_ljw_wyx_zdb" format="dita">accept access of
+                    local network</xref> and <xref href="#concept_krz_myx_zdb/section_pcg_4zx_zdb"
+                    format="dita">remote web access</xref>, you can add a firewall rule to block
+                untrusted web access.</p>
+            <p>
+                <note>Many attacks are caused by web access. We recommend you to block the untrusted
+                    web access.</note>
+            </p>
+            <p>For example, the IP address is <i>0.0.0.0</i>; subnet mask is <i>0.0.0.0</i>; the
+                port of web access is <i>8088</i>, which indicate that PBX denies all web
+                access.</p>
+            <p><image href="../Images/admin/firewall_rule_block_web.png" id="image_as2_hyy_zdb"
+                    width="500"/></p>
+        </section>
+        <section id="section_mgs_r5l_zjb"><title>Allow trusted web access with Drop All
+                enabled</title>If <uicontrol>Drop All</uicontrol> is enabled, PBX will block web
+            access that does not comply with the preconfigured rules. You can add trusted IP
+            addresses to the whitelist to accept the web access.<p><note>Enable <uicontrol>Drop
+                        All</uicontrol> with caution, or Web, SSH feature may fail to work.</note>If
+                PBX is mapped to public network, and only local IP and the specified WAN IP can
+                access to the PBX, you need to configure firewall rules as follows.</p><p>
+                <ol>
+                    <li>Enable <uicontrol>Drop All</uicontrol>.</li>
+                    <li>Add a firewall rule to <xref href="#concept_krz_myx_zdb/section_ljw_wyx_zdb"
+                            format="dita">accept access of local network</xref>.</li>
+                    <li>Add a firewall rule to allow the specified WAN IP to access to the
+                            PBX.<p>For example, the IP address of VoIP provider is <i>8.8.8.8</i>;
+                            port of SIP registration is <i>5060</i>, you should configure a firewall
+                            rule to allow the traffic of SIP registration port from VoIP provider as
+                            follows.</p><p><image id="image_wct_x5l_zjb"
+                                href="../Images/admin/public-network-access-sip5060.png" width="650"
+                            /></p><p>The following ports are in common use, you should configure
+                            ports according to the actual scenario.</p><p>
+                            <table frame="all" id="table_r34_gh5_43b">
+                                <tgroup cols="3">
+                                    <colspec colname="c1" colnum="1" colwidth="1*" colsep="1"
+                                        rowsep="1"/>
+                                    <colspec colname="c2" colnum="2" colwidth="1*" colsep="1"
+                                        rowsep="1"/>
+                                    <colspec colname="c3" colnum="3" colwidth="1*" colsep="1"
+                                        rowsep="1"/>
+                                    <thead>
+                                        <row>
+                                            <entry>Description</entry>
+                                            <entry>Port</entry>
+                                            <entry>Protocol</entry>
+                                        </row>
+                                    </thead>
+                                    <tbody>
+                                        <row>
+                                            <entry>
+                                                <p>SIP port </p>
+                                            </entry>
+                                            <entry>
+                                                <p>5060</p>
+                                            </entry>
+                                            <entry>
+                                                <p>UDP &amp; TCP</p>
+                                            </entry>
+                                        </row>
+                                        <row>
+                                            <entry>
+                                                <p>Web access port </p>
+                                            </entry>
+                                            <entry>
+                                                <p>80/8088</p>
+                                            </entry>
+                                            <entry>
+                                                <p>TCP</p>
+                                            </entry>
+                                        </row>
+                                        <row>
+                                            <entry>
+                                                <p>SSH port</p>
+                                            </entry>
+                                            <entry>
+                                                <p>8022</p>
+                                            </entry>
+                                            <entry>
+                                                <p>TCP</p>
+                                            </entry>
+                                        </row>
+                                        <row>
+                                            <entry>
+                                                <p>RTP port</p>
+                                            </entry>
+                                            <entry>
+                                                <p>10000-12000</p>
+                                            </entry>
+                                            <entry>
+                                                <p>UDP</p>
+                                            </entry>
+                                        </row>
+                                        <row>
+                                            <entry>
+                                                <p>Linkus port</p>
+                                            </entry>
+                                            <entry>
+                                                <p>8111</p>
+                                            </entry>
+                                            <entry>
+                                                <p>UDP &amp; TCP</p>
+                                            </entry>
+                                        </row>
+                                    </tbody>
+                                </tgroup>
+                            </table>
+                        </p></li>
+                </ol>
+            </p></section>
+    </conbody>
+</concept>

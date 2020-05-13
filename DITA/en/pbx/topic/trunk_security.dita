@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_t3d_kgl_zdb">
+    <title>Trunk Security</title>
+    <shortdesc>Secure the trunks on the PBX.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/05/30"/>
+            <!--Carol-->
+            <revised modified="2018/05/30"/>
+            <!--Carol-->
+            <revised modified="2018/06/14"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <p>To prevent unauthorized international calls and long-distance calls through the PBX
+            trunks, you need to take steps to protect your trunks on the PBX.</p>
+        <section id="section_crk_dll_zdb">
+            <title>Outbound Route Permission</title>
+            <p>When you are setting up outbound routes on your PBX, you need to consider outbound
+                route permission for different users.</p>
+            <p>We suggest you to set up different outbound routes for different trunks, and assign
+                outbound route permission to the users.</p>
+            <p>For example, you can set up outbound routes as below:</p>
+            <p>
+                <ul id="ul_r4s_2nl_zdb">
+                    <li><b>Outbound route for local calls</b><p>Select the trunk that is least-cost
+                            for local calls, and set the outbound route permission for all the
+                            users.</p></li>
+                </ul>
+            </p>
+            <p>
+                <ul id="ul_lqb_pnl_zdb">
+                    <li><b>Outbound route for long-distance calls</b><p>Select the trunk that is
+                            least-cost for national calls, and set the outbound route permission for
+                            all the sales and managers.</p></li>
+                </ul>
+            </p>
+            <p>
+                <ul id="ul_b4n_wnl_zdb">
+                    <li><b>Outbound route for international calls</b><p>Select the trunk that is
+                            least-cost for international calls, and set the outbound route
+                            permission for the international sales who need to make international
+                            calls.</p></li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_bll_24l_zdb" product="cloudpbx">
+            <title>Disable Guest Calls</title>
+            <p>Go to <menucascade>
+                    <uicontrol>Settings</uicontrol>
+                    <uicontrol>PBX</uicontrol>
+                    <uicontrol>General</uicontrol>
+                    <uicontrol>SIP</uicontrol>
+                    <uicontrol>Advanced</uicontrol>
+                </menucascade>, uncheck the option <uicontrol>Allow Guest</uicontrol>.</p>
+            <p>If <uicontrol>Allow Guest</uicontrol> is checked, the PBX will allow
+                unknown/anonymous incoming calls. </p>
+            <note type="important">
+                <ul id="ul_nzy_k5l_zdb">
+                    <li>The unknown calls may be charged to the bill of your trunks. </li>
+                    <li>Do NOT enable <uicontrol>Allow Guest</uicontrol> optionally.</li>
+                    <li>If the number is not known, don’t call back.</li>
+                </ul>
+            </note>
+            <p><image href="../Images/admin/disable_guest_call.png" id="image_hqx_csl_zdb"
+                    width="650"/></p>
+        </section>
+        <section id="section_vry_x5l_zdb">
+            <title>Outbound Restriction</title>
+            <p><ph keyref="product_name"/> has a default rule to limit users to make maximum 5
+                outbound calls in 1 minute. You can add an Outbound Restriction rule to define how
+                many outbound calls the extension users can make during a period of time.</p>
+            <p>If a user makes outbound calls over the limit, the extension will be locked and has
+                permission to make internal calls only.</p>
+            <p><image href="../Images/admin/blocked_extension.png" id="image_wgb_wyl_zdb"
+                    width="650"/></p>
+            <p>Go to <menucascade>
+                    <uicontrol>Settings</uicontrol>
+                    <uicontrol>PBX</uicontrol>
+                    <uicontrol>Call Control</uicontrol>
+                    <uicontrol>Outbound Restriction</uicontrol>
+                </menucascade> to edit the rule or add a rule.</p>
+            <p><image href="../Images/admin/add_outbound_restriction.png" id="image_lwm_pl5_tcb"
+                    width="650"/></p>
+        </section>
+    </conbody>
+</concept>

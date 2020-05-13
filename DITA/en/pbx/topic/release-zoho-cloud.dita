@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="release-zoho-cloud">
+    <title>Zoho Integration</title>
+    <shortdesc>Release notes for Zoho Integration on <ph keyref="product_name"/>.</shortdesc>
+    <body>
+        <section id="section_g1k_2rv_hlb">
+            <title>Version 1.1.5</title>
+            <p><ph conref="v30.13.0.30.dita#v30.13.0.b/date"/></p>
+            <ul id="ul_a3g_4fh_jlb">
+                <li>Improved functional stability.</li>
+            </ul>
+        </section>
+       
+    </body>
+</topic>

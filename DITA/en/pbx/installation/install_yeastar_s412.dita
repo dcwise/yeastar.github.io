@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_rwh_5zb_b2b">
+    <title>Install Yeastar S412</title>
+    <conbody>
+        <section id="section_et5_vzb_b2b">
+            <title>Install Telephony Module</title>
+            <p>Yeastar S412 is designed with 8 fixed on-board FXS ports and 4 reserved slots. You
+                can insert different modules into the 4 reserved slots according to your needs.
+                Yeastar S412 supports installing up to 4 modules.</p>
+            <p> The optional modules are as below:</p>
+            <table id="table_lbw_xzb_b2b">
+                <tgroup cols="3">
+                    <colspec colnum="1" colname="col1" colsep="1" rowsep="1"/>
+                    <colspec colnum="2" colname="col2" colsep="1" rowsep="1"/>
+                    <colspec colnum="3" colname="col3" colsep="1" rowsep="1"/>
+                    <tbody>
+                        <row>
+                            <entry>
+                                <ul id="ul_mbw_xzb_b2b">
+                                    <li>S2 Module</li>
+                                </ul>
+                            </entry>
+                            <entry>
+                                <ul id="ul_nbw_xzb_b2b">
+                                    <li>O2 Module</li>
+                                </ul>
+                            </entry>
+                            <entry>
+                                <ul id="ul_obw_xzb_b2b">
+                                    <li>B2 Module</li>
+                                </ul>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>
+                                <ul id="ul_qbw_xzb_b2b">
+                                    <li>GSM Module</li>
+                                </ul>
+                            </entry>
+                            <entry>
+                                <ul id="ul_rbw_xzb_b2b">
+                                    <li>3G Module</li>
+                                </ul>
+                            </entry>
+                            <entry>
+                                <ul id="ul_pyj_b2c_b2b">
+                                    <li>4G Module</li>
+                                </ul>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <note>Before installing the module, check if the module is clean and intact.</note>
+            <ol id="ol_xj1_b1c_b2b">
+                <li>Loosen the screws at the bottom of the device and remove the upper
+                            cover.<p><image href="../Images/admin/install_s412_1.png"
+                            id="image_wmq_41c_b2b" width="400"/>
+                    </p></li>
+                <li>Insert the module to the Module Slot.<p>
+                        <ul id="ul_tjr_yrs_c2b">
+                            <li>T_Slot1: For S2 module only.</li>
+                            <li>T_Slot2: For S2 module only.</li>
+                            <li>T_Slot3: For all kinds of modules except S2 module.</li>
+                            <li>T_Slot4: For O2 module, B2 module, GSM module, and 3G module.</li>
+                        </ul>
+                    </p><p><image href="../Images/admin/install_s412_2.png" id="image_swy_cbc_b2b"
+                            width="450"/></p></li>
+                <li importance="optional">Follow the instructions to insert a SIM card on the
+                    GSM/3G/4G module. <note>Skip this step if no GSM/3G/4G module is
+                        installed.</note><p><image href="../Images/admin/install_s412_3.png"
+                            id="image_pwr_hbc_b2b" width="650"/></p></li>
+                <li>Close the cover and fix the screws.<p><image
+                            href="../Images/admin/install_s412_4.png" width="400"
+                            id="image_vdz_lbc_b2b"/></p></li>
+                <li importance="optional">Rotate the antenna into the Antenna Socket. <p>
+                        <note>Skip this step if no GSM/3G/4G module installed.</note>
+                    </p><p><image href="../Images/admin/install_s412_5.png" id="image_zzk_4bc_b2b"
+                            width="500"/></p></li>
+            </ol>
+        </section>
+        <section id="section_glm_tbc_b2b">
+            <title>Desktop Installation</title>
+            <p>
+                <note type="caution">
+                    <p>
+                        <ul id="ul_vfc_wbc_b2b">
+                            <li>Set 5~10cm gaps around the device for air circulation.</li>
+                            <li>Avoid any heavy thing placed on the device.</li>
+                        </ul>
+                    </p>
+                </note>
+            </p>
+            <p>
+                <ol id="ol_igt_xbc_b2b">
+                    <li>Place the PBX on a steady platform.</li>
+                    <li>Remove the adhesive backing paper from the rubber feet.</li>
+                    <li>Turn over the device and attach the supplied rubber feet to the recessed
+                        areas on the bottom at each corner of the device.<p><image
+                                href="../Images/admin/install_s412_6.png" id="image_iwp_bcc_b2b"
+                                width="450"/></p></li>
+                </ol>
+            </p>
+        </section>
+    </conbody>
+</concept>

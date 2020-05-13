@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_ivx_j1s_lcb">
+    <title>3) Bind an EIP address to SBC Instance</title>
+    <shortdesc>Bind an IP for the SBC instance, so that the SBC can can communicate with the
+        Internet.</shortdesc>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/06/21"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <steps id="steps_vfy_41s_lcb">
+            <step>
+                <cmd>Log on to the <xref
+                        href="https://ip.console.aliyun.com/?spm=5176.2020520106.1002.d10ip.4d7b7d4dqH9pBH#/eip/"
+                        format="html" scope="external">EIP console</xref>.</cmd>
+            </step>
+            <step>
+                <cmd>Choose the region to the same region as the VPC.</cmd>
+            </step>
+            <step>
+                <cmd>Click <b>Bind</b> in the <b>Actions</b> column of the target EIP address.</cmd>
+                <info><image href="../Images/SBC/ali_bind_eip.png" id="image_lck_kvq_ndb"
+                        width="650"/></info>
+            </step>
+            <step>
+                <cmd>In the <b>Bind</b> dialog box, follow these steps:</cmd>
+                <substeps id="substeps_xrb_1wq_ndb">
+                    <substep>
+                        <cmd>Set <uicontrol>Instance type</uicontrol> to <b>ECS Instance</b>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Set <uicontrol>ECS instance</uicontrol> to the SBC ECS instance.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Click <uicontrol>OK</uicontrol>.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+  PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topicID">
+   <title>Queues</title>
+   <body>
+      <p>Through this interface, developers could query one or more
+queues and configure an individual queue.</p>
+      <section>
+         <title>{#configure-an-individual-queue}</title>
+      </section>
+   </body>
+</topic>

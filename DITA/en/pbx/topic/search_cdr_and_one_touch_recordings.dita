@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_csr_ppg_1db">
+    <title>Search CDR and One Touch Recording</title>
+    <shortdesc>Log in Extension User Portal to search your CDR and one touch recordings.</shortdesc>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/08/22"/>
+            <!--Carol-->
+            <revised modified="2018/09/06"/>
+            <!--Carol-->
+            <revised modified="2018/09/11"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <steps id="steps_kkc_hrg_1db">
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Me</uicontrol>
+                        <uicontrol>CDR &amp; One Touch Recording</uicontrol>
+                    </menucascade>.</cmd>
+            </step>
+            <step>
+                <cmd>Set the <uicontrol>Time</uicontrol> to filter the call logs during the date
+                    duration.</cmd>
+            </step>
+            <step>
+                <cmd>If you want to search recording files, check the option <uicontrol>Include
+                        Recording Files</uicontrol>.</cmd>
+                <info><image href="../Images/user/search_call_log.png" width="650"
+                        id="image_qv5_2cr_bdb"/></info>
+            </step>
+            <step>
+                <cmd importance="optional">Set other searching criteria.</cmd>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Search</uicontrol>.</cmd>
+                <info>The filtered call logs will be displayed.</info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

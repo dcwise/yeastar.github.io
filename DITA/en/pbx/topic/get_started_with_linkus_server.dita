@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_xyn_5lr_2fb">
+    <title>Get Started with Linkus Server</title>
+    <shortdesc>Three steps to set up your Linkus server and allow users to log in Linkus by
+        themselves.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/09/19"/>
+            <!--Carol-->
+            <revised modified="2018/09/19"/>
+            <!--Carol-->
+            <revised modified="2018/11/01"/>
+            <!--Carol-->
+            <revised modified="2018/12/29"/>
+        </critdates>
+    </prolog>
+    <body>
+        <section id="section_ubd_nb1_hgb">
+            <title>Linkus Server Quick Start </title>
+            <p/>
+        </section>
+        <p>
+            <ol id="getting_started_with_linkus_server">
+                <li>Enable and set up Linkus server.<p>
+                        <ul id="ul_fsb_ntt_2fb">
+                            <li><xref href="set_up_linkus_server_with_LCS.dita#topic_hhl_wxl_2fb"
+                                /></li>
+                            <li><xref
+                                    href="set_up_linkus_server_without_lcs.dita#concept_ddz_tny_5db"
+                                /></li>
+                        </ul>
+                    </p></li>
+                <li>Allow users to log in Linkus, <xref
+                        href="enable_linkus_services_for_users.dita#task_xkx_s12_2cb">Enable Linkus
+                        service for users</xref></li>
+                <li><xref href="send_linkus_emails_to_users.dita#task_ns5_p22_2cb">Send Linkus
+                        emails to users</xref>. <p>Users can log in Linkus quickly by scaning QR
+                        code or copying links that are contained in the emails.</p><p><image
+                            href="../Images/admin/linkus-quick-start.png" width="700"
+                            id="image_om4_bb1_hgb"/></p><p><b>Video: Linkus Quick Start Guide
+                        </b></p><p><object data="https://www.youtube.com/watch?v=nhrmAIX9gp8"
+                            outputclass="iframe"/></p></li>
+            </ol>
+        </p>
+    </body>
+</topic>

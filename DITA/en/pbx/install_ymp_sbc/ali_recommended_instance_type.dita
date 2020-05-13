@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="reference_lhw_2zq_ndb">
+    <title>Recommended Instance Type - Alibaba Cloud</title>
+    <shortdesc>Read the recommended instance type and decide which instance type to choose. </shortdesc>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/08/24"/>
+        </critdates>
+    </prolog>
+    <refbody>
+        <section id="section_ow3_y3r_ndb">
+            <title>Recommended Instance - Alibaba Cloud</title>
+            <p>
+                <table frame="all" rowsep="1" colsep="1" id="table_hkb_2yk_x2b">
+                    <tgroup cols="4">
+                        <colspec colname="c1" colnum="1" colwidth="1.31*"/>
+                        <colspec colname="c3" colnum="2" colwidth="1.52*"/>
+                        <colspec colname="newCol4" colnum="3" colwidth="1.07*"/>
+                        <colspec colname="newCol5" colnum="4" colwidth="1*"/>
+                        <tbody>
+                            <row>
+                                <entry><uicontrol>Server Type</uicontrol></entry>
+                                <entry><uicontrol>Instance Type</uicontrol></entry>
+                                <entry><b>Storage </b><p><b>(System Disk)</b></p></entry>
+                                <entry><b>Storage </b><p><b>(Data Disk)</b></p></entry>
+                            </row>
+                            <row>
+                                <entry>SBC</entry>
+                                <entry>ecs.snlne.xlarge 4 vCPU 8 GB</entry>
+                                <entry>40 GB</entry>
+                                <entry>N/A</entry>
+                            </row>
+                            <row>
+                                <entry>YMP (50 CC) </entry>
+                                <entry>ecs.sn1ne.large 2 vCPU 4 GB</entry>
+                                <entry>50 GB</entry>
+                                <entry>Extensive</entry>
+                            </row>
+                            <row>
+                                <entry>YMP (100 CC)</entry>
+                                <entry>ecs.sn1ne.xlarge 4vCPU 8 GB</entry>
+                                <entry>100 GB</entry>
+                                <entry>Extensive</entry>
+                            </row>
+                            <row>
+                                <entry>YMP (200 CC-300 CC)</entry>
+                                <entry>ecs.sn1ne.2xlarge 8 vCPU 16 GB</entry>
+                                <entry>200 GB </entry>
+                                <entry>Extensive</entry>
+                            </row>
+                            <row>
+                                <entry>YMP (400 CC-500 CC)</entry>
+                                <entry>ecs.sn1ne.4xlarge 16vCPU 32 GB</entry>
+                                <entry>400GB</entry>
+                                <entry>Extensive</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+    </refbody>
+</reference>

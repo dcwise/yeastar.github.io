@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_xdp_t2n_4fb">
+    <title>Pick up A Group Member's Call by BLF</title>
+    <shortdesc>You can set a BLF key for Group Call Pickup on your IP phone. When your group
+        member's phone is ringing, you can press the BLF key to quickly pick up the
+        call.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/10/24"/>
+            <!--Carol-->
+            <revised modified="2018/10/24"/>
+            <!--Carol-->
+            <revised modified="2018/11/06"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <context>
+            <p>We take Yealink T27G v69.82.0.20 as an example below.</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Log in the phone web interface, go to <uicontrol>Dsskey</uicontrol> page.</cmd>
+            </step>
+            <step>
+                <cmd>Set the BLF key as below. </cmd>
+                <info><image href="../Images/user/blf_group_pickup.png" id="image_sbn_gyq_bdb"
+                    /></info>
+                <info>
+                    <ul>
+                        <li><uicontrol>Type</uicontrol>: BLF</li>
+                        <li><uicontrol>Value</uicontrol>: Enter the feature code of group pickup.
+                            The default code is *4.</li>
+                        <li><uicontrol>Label</uicontrol>: Set a label that you want to display on
+                            the phone screen.</li>
+                        <li><uicontrol>Line</uicontrol>: Choose the line where your extension is
+                            registered on.</li>
+                    </ul>
+                </info>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Confirm</uicontrol>.</cmd>
+                <stepresult>If your configuration is correct, the BLF LED will turn
+                    green.</stepresult>
+            </step>
+        </steps>
+    </taskbody>
+</task>

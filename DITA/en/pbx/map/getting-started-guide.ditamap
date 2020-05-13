@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>Getting Started Guide</title>
+    <topicmeta>
+        <author type="contributor">Carol</author>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/05/25"/>
+            <!--Carol-->
+            <revised modified="2018/06/01"/>
+            <!--Carol-->
+            <revised modified="2018/06/14"/>
+            <!--Carol-->
+            <revised modified="2018/08/17"/>
+            <!--Carol-->
+            <revised modified="2018/09/14"/>
+            <!--Carol-->
+            <revised modified="2018/09/19"/>
+            <!--Carol-->
+            <revised modified="2018/11/01"/>
+            <!--Carol-->
+            <revised modified="2018/12/13"/>
+            <!--Carol-->
+            <revised modified="2018/12/18"/>
+            <!--Carol-->
+            <revised modified="2018/12/29"/>
+        </critdates>
+    </topicmeta>
+    <topicref href="../topic/getting-started-guide.dita" product="cloudpbx s-series">
+        <topicmeta>
+            <shortdesc> A quick start guide for the administrator who is new to <ph
+                    product="cloudpbx">Yeastar cloud PBX</ph><ph product="s-series">Yeastar S-Series
+                    VoIP PBX</ph>. </shortdesc>
+        </topicmeta>
+        <topicref href="../topic/initial_system_setup.dita">
+            <topicref href="../topic/set_date%26time.dita"/>
+            <topicref href="../topic/change_the_system_prompt.dita"/>
+            <topicref href="../topic/add_trusted_ip_addresses_into_whitelist.dita"
+                product="cloudpbx"/>
+        </topicref>
+        <topicref href="../topic/set_up_extensions.dita">
+            <topicref href="../topic/change-extension-range.dita"/>
+            <topicref href="../topic/bulk-create-extensions.dita"/>
+        </topicref>
+        <topicref href="../topic/set_up_your_phone.dita"/>
+        <topicref href="../topic/set_up_voip_trunks.dita">
+            <topicref href="../topic/set_up_a_voip_peer_trunk.dita"/>
+            <topicref href="../topic/set_up_a_voip_register_trunk.dita"/>
+        </topicref>
+        <topicref href="../topic/receive_inbound_calls.dita"/>
+        <topicref href="../topic/make_outbound_calls.dita"/>
+    </topicref>
+    <keydef keys="product_name" product="s-series">
+        <topicmeta>
+            <keywords>
+                <keyword>Yeastar S-Series VoIP PBX</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="product_name" product="cloudpbx">
+        <topicmeta>
+            <keywords>
+                <keyword>Yeastar Cloud PBX</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+</map>

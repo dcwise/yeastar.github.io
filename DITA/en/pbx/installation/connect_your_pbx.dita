@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_mt2_s3c_b2b">
+    <title>Connect Your PBX </title>
+    <shortdesc>Connect your PBX to the local network, and connect telephony lines to the
+        PBX.</shortdesc>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Connect your PBX to the network.</cmd>
+                <info>
+                    <p>Connect one end of an Ethernet cable to the LAN port of your PBX, and the
+                        other end to any port of your company’s LAN switch/router.</p>
+                </info>
+            </step>
+            <step>
+                <cmd>Power on your PBX.</cmd>
+                <info>
+                    <p>Plug the provided power cord or power adapter into the power inlet of the
+                        PBX, and the other end to a standard electrical wall socket. </p>
+                    <p>Wait for the system to boot up till the SYSTEM LED starts to blink.</p>
+                </info>
+            </step>
+            <step>
+                <cmd>Connect your PBX to the telephony lines.</cmd>
+                <info>
+                    <note>Connect BRI/PSTN/analog phone/fax machine to the corresponding port based
+                        on the color of port indicator.</note>
+                </info>
+                <info>
+                    <simpletable frame="all" relcolwidth="1.0* 3.42*" id="simpletable_cpw_jjc_b2b">
+                        <strow>
+                            <stentry><b>RJ11 Port</b></stentry>
+                            <stentry><b>Operation</b></stentry>
+                        </strow>
+                        <strow>
+                            <stentry>FXS</stentry>
+                            <stentry>
+                                <p>Connect one end of a RJ11 phone cable to the port. Connect the
+                                    other end to the analog phone or fax machine. </p>
+                            </stentry>
+                        </strow>
+                        <strow>
+                            <stentry>FXO</stentry>
+                            <stentry>
+                                <p>Connect an RJ11 cable to the FXO port. Connect the other end to a
+                                    PSTN line.</p>
+                            </stentry>
+                        </strow>
+                        <strow>
+                            <stentry>BRI</stentry>
+                            <stentry>
+                                <p>Connect one end of the cable provided by the ISDN BRI provider to
+                                    the BRI port. Connect the other end to the equipment of ISDN
+                                    provider.</p>
+                            </stentry>
+                        </strow>
+                        <strow>
+                            <stentry><b>E1/T1/J1 Port</b></stentry>
+                            <stentry><b>Operation</b></stentry>
+                        </strow>
+                        <strow>
+                            <stentry>E1/T1/J1</stentry>
+                            <stentry>
+                                <p>For S100 and S300</p>
+                                <ul id="ul_gmd_qts_c2b">
+                                    <li>Connect one end of the E1 cable to the E1/T1 port. Connect
+                                        the other end to the E1 Provider’s equipment.</li>
+                                </ul>
+                            </stentry>
+                        </strow>
+                    </simpletable>
+                </info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

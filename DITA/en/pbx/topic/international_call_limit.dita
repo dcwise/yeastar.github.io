@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_fn2_2dq_zdb">
+    <title>International Call Limit</title>
+    <shortdesc>To prevent toll fraud, you need to pay particular attention to the trunk that is used
+        to make international calls.</shortdesc>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/05/31"/>
+            <!--Carol-->
+            <revised modified="2018/06/01"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <section id="section_wvg_5dq_zdb">
+            <title>Limit Call Credit</title>
+            <p>Before you set up the trunk on your PBX, ask the trunk provider to limit the credit
+                of international calls.</p>
+            <p>If you don't need to make international calls, ask the provider to disable
+                international call service on the trunk. </p>
+        </section>
+        <section id="section_lfb_32q_zdb">
+            <title>Set Password for the International Outbound Calls</title>
+            <p>Set a single PIN for the outbound route that allows international calls, when the
+                users dial international numbers, the PBX will ask the users to enter a PIN. </p>
+            <p>
+                <note>You can also set a PIN list for the outbound route, and assign different PIN
+                    numbers to the users who have permission to make international calls.</note>
+            </p>
+            <p>
+                <ul id="ul_etx_2fq_zdb">
+                    <li>If the PIN is correct, the PBX will call the international number.</li>
+                    <li>If the PIN is incorrect, the PBX will drop the call.</li>
+                </ul>
+            </p>
+            <p><image href="../Images/admin/outbound_route_password.png" id="image_kh3_5fq_zdb"
+                    width="650"/></p>
+        </section>
+        <section id="section_cy5_bgq_zdb">
+            <title>Disable International Calls on the PBX</title>
+            <p>If the trunk provider cannot disable international calls for the trunk, you can add
+                an invalid outbound route on the PBX to disable international calls.</p>
+            <p>
+                <ol id="ol_qlv_ngq_zdb">
+                    <li>Create an invalid SIP trunk like the following figure.<p><image
+                                href="../Images/admin/invalid_sip_trunk.png" width="650"
+                                id="image_e2h_5gq_zdb"/></p></li>
+                    <li>Create an outbound route for the invalid SIP trunk.<p>
+                            <ul id="ul_zhz_shq_zdb">
+                                <li>Set <uicontrol>Patterns</uicontrol> to <codeph>00.</codeph></li>
+                                <li>Select the invalid SIP trunk</li>
+                                <li>Select all the extensions</li>
+                            </ul>
+                        </p><p><image href="../Images/admin/invalid_outbound_route.png" width="650"
+                                id="image_dxs_2hq_zdb"/></p></li>
+                    <li>Place the invalid outbound route to the top.<p><image
+                                href="../Images/admin/top_invalid_outbound_route.png" width="650"
+                                id="image_rmk_33q_zdb"/></p></li>
+                </ol>
+            </p>
+        </section>
+    </conbody>
+</concept>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_bnm_tkt_c2b">
+    <title>Hotel Staff Settings</title>
+    <shortdesc>Set the hotel receptionist's phone, permission, and the settings of  hotel
+        cleaners.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/06/11"/>
+            <!--Carol-->
+            <revised modified="2018/06/11"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <section id="section_nt5_2xs_c2b">
+            <title>Hotel Receptionist Settings</title>
+            <p>
+                <ol id="ol_org_gxs_c2b">
+                    <li><b>Set the reception desk phone number.</b><p>Go to <menucascade>
+                                <uicontrol>Hotel</uicontrol>
+                                <uicontrol>Settings</uicontrol>
+                                <uicontrol>General</uicontrol>
+                                <uicontrol>Feature Code</uicontrol>
+                            </menucascade>, choose the extension number of the reception desk phone.
+                            Users could always call the receptionist phone number from room phone
+                            whether the room is checked in or not.</p><p><image
+                                href="../Images/admin/hotel_reception_phone.png"
+                                id="image_hlf_lxs_c2b" width="650"/></p></li>
+                    <li><b>Add Hotel management permission for the receptionist.</b><p>
+                            <ol id="ol_s4t_ljt_c2b">
+                                <li>Log in the PBX web interface by <codeph>admin</codeph> account,
+                                    go to <menucascade>
+                                        <uicontrol>Settings</uicontrol>
+                                        <uicontrol>System</uicontrol>
+                                        <uicontrol>User Permission</uicontrol>
+                                    </menucascade>, click <uicontrol>Add</uicontrol> to add
+                                    permission for the receptionist.
+                                            <p><?oxy_comment_start author="Becky" timestamp="20191128T114548+0800" comment="改图"?><image
+                                            href="../Images/admin/hotel_reception_permission.png"
+                                            id="image_dtg_sjt_c2b" width="650"
+                                        /><?oxy_comment_end?></p></li>
+                                <li>Set the <b>User</b> to the extension number of the
+                                    receptionist.</li>
+                                <li>Select <b>Set Privilege As</b> to <b>Custom</b>.</li>
+                                <?oxy_comment_start author="Becky" timestamp="20191128T105839+0800" comment="新增"?>
+                                <li>Click <uicontrol>Settings</uicontrol> tab, enable
+                                        <uicontrol>Extensions</uicontrol>.<?oxy_comment_end?></li>
+                                <li>Click <b>Application</b> tab, enable <b>Hotel</b>.</li>
+                                <li>Click <b>Save</b> and <b>Apply</b>.</li>
+                            </ol>
+                        </p></li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_xl5_vjt_c2b">
+            <title>Hotel Cleaner Settings</title>
+            <p>The hotel cleaner can dial the relevant feature codes on the room phone to change the
+                room status and record the mini bar consumption situation.</p>
+            <p>
+                <note>
+                    <ul id="ul_y1l_xjt_c2b">
+                        <li>The hotel cleaners should confirm the mini bar consumption before the
+                            guests check out.</li>
+                        <li>The room status is unclean; the room will be blocked for the guest.</li>
+                    </ul>
+                </note>
+            </p>
+            <p>Go to <menucascade>
+                    <uicontrol>Hotel</uicontrol>
+                    <uicontrol>Settings</uicontrol>
+                    <uicontrol>General</uicontrol>
+                    <uicontrol>Feature Code</uicontrol>
+                </menucascade> to check and edit the default feature codes for hotel cleaners.</p>
+            <ul id="ul_rjj_1kt_c2b">
+                <li><b>Room Clean (#03)</b><p>Dial #03 on the room phone to change the room status
+                        to “Clean”.</p></li>
+                <li><b>Room Unclean (#04)</b><p>Dial #04 on the room phone to change the room status
+                        to
+                        “<?oxy_comment_start author="Becky" timestamp="20191127T112245+0800" comment="改"?>Unclean<?oxy_comment_end?>”.
+                    </p></li>
+                <li><b>Add Mini Bar Items (#01)</b><p>Dial #01 and the mini bar item ID. For
+                        example, dial #0111222 to indicate that the guest purchased 2 pieces of item
+                        No.1 and 3 pieces of item No.2.</p></li>
+                <li><b>Delete Mini Bar Items (#02)</b><p>If the cleaner made a wrong record of the
+                        mini bar consumption, he/she can dial #02 to delete the mini bar items. For
+                        example, dial #0212 to indicate that on the basis of the previous purchase,
+                        subtract 1 piece of item No.1 and 1 piece of item No.2.</p></li>
+            </ul>
+        </section>
+    </conbody>
+</concept>

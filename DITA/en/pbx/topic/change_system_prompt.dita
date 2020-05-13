@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_vfy_gsc_5cb">
+    <title>Change System Prompt</title>
+    <shortdesc>Yeastar have stored all the supported system prompts online. You can check the
+        supported system prompts on the PBX web page, and download an online system prompt file,
+        then change to the desired system prompt.</shortdesc>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/06/14"/>
+            <!--Carol-->
+            <revised modified="2018/10/30"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <steps id="steps_ffd_ltc_5cb">
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol>PBX</uicontrol>
+                        <uicontrol>Voice Prompts</uicontrol>
+                        <uicontrol>System Prompt</uicontrol>
+                    </menucascade>.</cmd>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Download Online Prompt</uicontrol>.</cmd>
+                <info><image href="../Images/admin/download_online_prompt.png"
+                        id="image_mtz_b5c_5cb" width="650"/></info>
+            </step>
+            <step>
+                <cmd>On the <uicontrol>Download Online Prompt</uicontrol> page, select your desired
+                    system prompt, click <image href="../Images/ui_icons/cloud-download.png"
+                        width="20" id="image_egj_j5c_5cb"/> to download the file.</cmd>
+                <info>After the file is downloaded, you can see the system prompt in
+                        <uicontrol>Prompt List</uicontrol>.</info>
+                <info><image href="../Images/admin/online_prompts.png" width="650"
+                        id="image_zgx_m5c_5cb"/></info>
+            </step>
+            <step>
+                <cmd>Set the downloaded system prompt as the default system prompt.</cmd>
+                <info><image href="../Images/admin/set_default_system_prompt.png" width="650"
+                        id="image_jkr_bsc_5cb"/></info>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

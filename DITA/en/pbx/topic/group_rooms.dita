@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_cyw_dxt_c2b">
+    <title>Group Rooms</title>
+    <shortdesc>After checking in the guests, you can group the guest’s rooms if they are a team
+        group or tour group.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/06/11"/>
+            <!--Carol-->
+            <revised modified="2018/06/11"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Hotel</uicontrol>
+                        <uicontrol>Room Operations</uicontrol>
+                        <uicontrol>Room Group</uicontrol>
+                    </menucascade>, click <uicontrol>Add</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Set a name for the group.</cmd>
+            </step>
+            <step>
+                <cmd>Select the rooms for the guests.</cmd>
+                <info><image href="../Images/admin/hotel_room_group.png" width="650"
+                        id="image_khz_f25_c2b"/></info>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol>.</cmd>
+            </step>
+        </steps>
+        <result id="result_mr5_yd5_c2b">You can see the group information on the <b>Room List</b>
+                    page.<p><image href="../Images/admin/hotel_group.png" id="image_bz2_b25_c2b"
+                    width="650"/></p></result>
+    </taskbody>
+</task>

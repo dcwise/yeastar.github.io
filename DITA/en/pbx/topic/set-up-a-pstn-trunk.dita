@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="set-up-a-pstn-trunk">
+    <title>Create a PSTN Trunk</title>
+    <shortdesc>To create a PSTN trunk in the PBX, you need to install the O2 module or SO
+        module.</shortdesc>
+    <body>
+        <ol id="ol_khl_41y_53b">
+            <li>Install O2 module or SO module.<ol id="ol_wyq_kty_w3b">
+                    <li>Power off the PBX.</li>
+                    <li>Open the upper case of the PBX. </li>
+                    <li>Place the O2 module or SO module above the main board, slowly insert each
+                        pin into right slot.</li>
+                </ol></li>
+            <li>Use a RJ11 phone line to connect the FXO port of PBX and the PSTN provider's FXS
+                port.</li>
+            <li>Log in the PBX web interface, go to <menucascade>
+                    <uicontrol>PBX Monitor</uicontrol>
+                    <uicontrol>Trunks</uicontrol>
+                </menucascade> to check the trunk status.<p>If the trunk status shows <image
+                        href="../Images/ui_icons/ok.png" id="image_kgb_mxz_2fb" width="20"/>, the
+                    trunk is ready for use. For more information on trunk status, see <xref
+                        href="pbx_monitor.dita#concept_gl3_wt2_xdb/FXO-status">PSTN/FXO Trunk
+                        Status</xref>.</p></li>
+            <li>Go to <menucascade>
+                    <uicontrol>Settings</uicontrol>
+                    <uicontrol> PBX</uicontrol>
+                    <uicontrol> Trunks</uicontrol>
+                </menucascade>, configure the basic settings of the PSTN trunk.<p>
+                    <ul id="ul_myl_v1z_w3b">
+                        <li><uicontrol>Name</uicontrol>: Give this trunk a name to help you identify
+                            it.</li>
+                        <li><uicontrol>RX Volume</uicontrol>: Set the receiving volume of the FXO
+                            port.</li>
+                        <li><uicontrol>TX Volume</uicontrol>: Set the transmitting volume of the FXO
+                            port.</li>
+                    </ul>
+                </p><p><image href="../Images/admin/set-up-PSTN-trunk.png" width="600"
+                        id="image_uwp_tdy_53b"/></p></li>
+            <li importance="optional">Configure other <xref
+                    href="pstn-trunk-settings.dita#pstn-trunk-settings">PSTN trunk settings</xref>
+                as your need.</li>
+            <li>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</li>
+        </ol>
+    </body>
+</topic>

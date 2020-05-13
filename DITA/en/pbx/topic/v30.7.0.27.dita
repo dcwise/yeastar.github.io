@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_gqb_v4k_ldb">
+    <title>Version 30.7.0.27</title>
+    <abstract>Released Date: April 12, 2018</abstract>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/06/20"/>
+            <!--Carol-->
+            <revised modified="2018/06/27"/>
+        </critdates>
+    </prolog>
+    <body>
+        <section id="section_nyk_p4g_jdb">
+            <title>Optimization</title>
+            <p><image href="../Images/horizon.png" id="image_aj3_vyv_pdb"/></p>
+            <p><b>PBX Stability</b><div>Improved the stability of the PBX. </div></p>
+            <p><b>ITSP Template</b><div>Added the following ITSP templates on VoIP Trunk.</div><div>
+                    <ul id="ul_mcd_czv_pdb">
+                        <li>Germany — Telekom/Deutschland LAN IP Voice</li>
+                        <li>Germany — Telekom/Deutschland LAN SIP-Trunk</li>
+                    </ul>
+                    <p><b>SSH Security</b><div>
+                            <ul id="ul_vk2_hbg_h2b">
+                                <li>Improved the security of SSH access.</li>
+                            </ul>
+                        </div></p>
+                    <p><b>System Logs</b><div>
+                            <ul id="ul_ykx_gbg_h2b">
+                                <li>Optimized the system logs.</li>
+                            </ul>
+                        </div></p>
+                </div></p>
+            <p id="api_1.0.2"><b>API Interface</b><div>
+                    <ul id="s_api_1.0.2">
+                        <li>Supported for adding an authenticated IP address to get auto recording
+                            files from the PBX.</li>
+                    </ul>
+                </div></p>
+            <p><b>Help Documents</b></p>
+            <p>
+                <ul id="ul_dns_hbg_h2b">
+                    <li>Deleted the Help App, and added a Help button on the task bar; you can click
+                        the button to view the online documents.</li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_krc_wsk_ldb">
+            <title>Fixed Bug</title>
+            <p><image href="../Images/horizon.png" id="image_gxd_dzv_pdb"/></p>
+            <p>
+                <ul>
+                    <li>Fixed the Password setting on SIP Trunk: the password would not take effect
+                        if the password length exceeded 63 characters.</li>
+                    <li>Fixed the video quality issue with Yealink video phones</li>
+                </ul>
+            </p>
+        </section>
+    </body>
+</topic>

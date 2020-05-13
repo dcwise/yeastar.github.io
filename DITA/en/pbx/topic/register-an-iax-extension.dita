@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_i2v_4r4_y3b">
+    <title>Register an IAX Extension</title>
+    <?oxy_comment_start author="carol" timestamp="20190910T180108+0800" comment="同步Register a SIP extension 的简短描述" flag="done"?>
+    <shortdesc>To make calls and receive calls from an IAX extension, you need to register the IAX
+        extension on an IP phone or soft phone.<?oxy_comment_end?></shortdesc>
+    <body>
+        <note>Only few phones support IAX protocol, we recommend that you use SIP
+            extensions<?oxy_comment_start author="carol" timestamp="20190910T180322+0800" comment="建议换个说法。
+Only few phones support IAX protocol, we recommend that you use SIP extensions." flag="done"?>.<?oxy_comment_end?></note>
+        <p>In this topic, we take Zoiper softphone for example to introduce how to register an IAX
+            extension.</p>
+        <p><b>1.Gather information of extension registration</b></p>
+        <p>For most IAX phones, the following items are needed for the IAX phone to register with
+                <ph keyref="product_name"/>.</p>
+        <p>
+            <ul id="ul_qy1_rd1_1jb">
+                <?oxy_comment_start author="Becky" timestamp="20190911T093524+0800" comment="调整和register a SIP extension格式一致" flag="done"?>
+                <li>IP address of PBX (e.g.<i>192.168.5.30</i>)</li>
+                <li>Extension information<ul id="ul_nd2_vmn_1jb">
+                        <li>Extension (e.g.<i>1000</i>)</li>
+                        <li>Registration Password (e.g. <i>Yeastar6041</i>)</li>
+                        <li>Caller ID (e.g.<i>1000</i>)</li>
+                        <li>Caller ID name (e.g.<i>Ann</i>)</li><?oxy_comment_end?>
+                    </ul></li>
+            </ul>
+        </p>
+        <p><b>2.Register the extension on Zoiper</b></p>
+        <p><ol>
+                <li>Run Zoiper.exe, go to <menucascade>
+                        <uicontrol><image id="image_syk_5gx_1jb"
+                                href="../Images/admin/zoiper-setting.PNG" width="20"/></uicontrol>
+                        <uicontrol>IAX accounts</uicontrol>
+                        <uicontrol>Add new IAX account</uicontrol>
+                    </menucascade>.</li>
+                <li>In the <uicontrol>Add new IAX account</uicontrol> window, enter the extension
+                    number <i>1000</i>, and click <uicontrol>OK</uicontrol>.</li>
+                <li>In the <uicontrol>IAX account options</uicontrol>, enter the required items as
+                        follows.<ul id="ul_z5b_wx1_1jb">
+                        <li><uicontrol>Server Hostname/IP</uicontrol>: <i>192.168.5.30</i></li>
+                        <li><uicontrol>Username</uicontrol>: <i>1000</i></li>
+                        <li><uicontrol>Password</uicontrol>: <i>Yeastar6041</i></li>
+                        <li><uicontrol>Caller ID Name</uicontrol>: <i>Ann</i></li>
+                        <li><uicontrol>Caller ID Number</uicontrol>: <i>1000</i></li>
+                    </ul></li>
+                <li>Click <uicontrol>OK</uicontrol> and <uicontrol>Apply</uicontrol>.</li>
+            </ol><b>3.Confirm registration status</b></p>
+        <p>You can do one of the followings to check if the extension is registered..</p>
+        <p>
+            <ul id="ul_khd_s21_1jb">
+                <li>On the phone web interface, check if the status indicates that the extension is
+                        registered.<p>In this example, the account will display "1000 (Registered)
+                        (IAX)".</p></li>
+                <li>Log in PBX web interface, go to <menucascade>
+                        <uicontrol>PBX Monitor</uicontrol>
+                        <uicontrol>Extensions</uicontrol>
+                    </menucascade> to check if the status shows <image id="image_stp_hf1_1jb"
+                        href="../Images/admin/registered.png" width="20"/>.</li>
+            </ul>
+        </p>
+    </body>
+</topic>

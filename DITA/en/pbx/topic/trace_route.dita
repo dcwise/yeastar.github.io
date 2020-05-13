@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_a1y_sjw_ydb">
+    <title>Traceroute</title>
+    <shortdesc>Traceroute is a common diagnostic tool for displaying the route (path) and measuring
+        transit delays of packets across a network.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/05/28"/>
+            <!--Carol-->
+            <revised modified="2018/05/28"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Maintenance</uicontrol>
+                        <uicontrol>Troubleshooting</uicontrol>
+                        <uicontrol>Traceroute</uicontrol>
+                    </menucascade>.</cmd>
+                <info><image href="../Images/admin/traceroute.png" id="image_hqn_flw_ydb"/></info>
+            </step>
+            <step>
+                <cmd>In the <uicontrol>Host</uicontrol> field, enter the target domain name or IP
+                    address.</cmd>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Start</uicontrol> and check the result.</cmd>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Stop</uicontrol> to stop traceroute.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

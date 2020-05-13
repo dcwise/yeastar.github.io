@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_rnx_53p_tgb">
+    <title>Version 30.10.0.59</title>
+    <abstract>Released Date: March 25, 2019</abstract>
+    <body>
+        <section>
+            <title>Optimization</title>
+            <p><image href="../Images/horizon.png" id="image_xcc_4wb_kfb"/></p>
+            <p><b>System Stability</b>:</p>
+            <p>
+                <ul>
+                    <li>Fixed a few issues to improve the system stability.</li>
+                </ul>
+            </p>
+            <p><b>Configuration Wizard</b></p>
+            <p>
+                <ul id="ul_kng_qlw_tgb">
+                    <li>New web GUI and embedded video in the Configuration Wizard to help new users
+                        quickly get started with the PBX.</li>
+                </ul>
+            </p>
+            <p><b>Call Recording</b></p>
+            <p>
+                <ul id="ul_vg4_3mw_tgb">
+                    <li>Added a digital signature in each auto recording file and one-touch
+                        recording file.<p>The digital signature ensures a recording has not been
+                            altered in any way. </p></li>
+                    <li>Added support for recording calls with consent: When external users call in
+                        the PBX, they have options choose weather the calls will be recorded or not. <p>
+                            <note>You can configure IVR to achieve this feature. For more details,
+                                refer to our guide.</note>
+                        </p></li>
+                </ul>
+            </p>
+            <p><b>Extension</b></p>
+            <p>
+                <ul id="ul_fdh_ycc_5gb">
+                    <li>Fixed Voicemail Password issue: After editing an extension, the extension's
+                        voicemail password would be changed automatically.</li>
+                    <li>Fixed FXS extension issue: There was no sound during the call that made
+                        through an FXS extension.</li>
+                    <li>Fixed the issue that <uicontrol>Max Call Duration</uicontrol> setting could
+                        not take effect.</li>
+                </ul>
+            </p>
+            <p><b>Trunk</b>
+            </p>
+            <p>
+                <ul id="ul_vzh_s1d_5gb">
+                    <li>Fixed SIP trunk issue: The configurations of ITSP templates were
+                        incorrect.</li>
+                </ul>
+            </p>
+            <p>
+                <ul id="ul_ehb_1zg_d2b">
+                    <li>Fixed SIP Peer Trunk issue:  If making outbound calls through a SIP peer
+                        trunk, the DOD number was displayed incorrectly.</li>
+                    <li>Fixed SIP trunk issue: SIP trunk configurations would be lost after
+                        rebooting the PBX.</li>
+                    <li>Fixed DOD issue: If  DOD numbers were bound to an extension group, the DOD
+                        numbers were displayed incorrectly when making outbound calls.</li>
+                    <li>BRI trunk: Changed incorrect setting <uicontrol>undefined</uicontrol> on the
+                            <uicontrol>Advanced</uicontrol> page to <uicontrol>Ignore Remote Hold
+                            Indications</uicontrol>.</li>
+                </ul>
+            </p>
+            <p><b>Call Control</b></p>
+            <p>
+                <ul id="ul_r4x_chc_5gb">
+                    <li>Fixed Inbound Route issue: The PBX could not correctly match inbound calls
+                        with DID numbers that were set on multiple inbound routes.</li>
+                </ul>
+            </p>
+            <p><b>Call Feature</b></p>
+            <p>
+                <ul id="ul_fl5_ylw_tgb">
+                    <li>Optimized BLF feature of <uicontrol>Queue</uicontrol>: A queue agent can set
+                        a BLF key (<codeph>*75<varname>｛queue_number｝</varname></codeph>) to achieve
+                        both Status Monitoring and Status Switching.<p>
+                            <note>In the earlier version, a queue agent had to set two BLF keys. One
+                                BLF key
+                                        (<codeph>*75<varname>｛extension_number｝</varname><varname>{queue_number}</varname></codeph>)
+                                for Status Monitoring and the other BLF key
+                                        (<codeph>*75<varname>｛queue_number｝</varname></codeph>) for
+                                Status Switching. </note>
+                        </p></li>
+                    <li>Optimized <uicontrol>Call Parking</uicontrol> feature: Retrieving a parked
+                        call occupies one call channel.<p>
+                            <note>In the earlier version,  rectrieving a parked call occupied two
+                                call channels.</note>
+                        </p></li>
+                    <li>Fixed <uicontrol>Voicemail</uicontrol> issue:  The function of
+                            <uicontrol>Operator Breakout from Voicemail</uicontrol> didn't
+                        work.</li>
+                    <li>Fixed <uicontrol>Voicemail</uicontrol> issue: If <uicontrol>Voicemail to
+                            Email</uicontrol> feature was enabled on an extension, the associated
+                        user could not receive voicemail messages on Linkus.</li>
+                    <li>Fixed <uicontrol>Emergency Number</uicontrol> issue: If a PSTN trunk was
+                        being used, PBX would not disconnect the current call and send emergency
+                        calls through the PSTN trunk.</li>
+                    <li>Fixed <uicontrol>DISA</uicontrol> issue: When a user dialed numbers after
+                        the secondary dial tone, the PBX used an incorrect trunk to send the
+                        call.</li>
+                    <li>Fixed the compatibility issue with Yealink phones: The BLF key status could
+                        not change.</li>
+                    <li>Fixed <uicontrol>Queue</uicontrol> issue: If password was set on a queue,
+                        the dynamic agents might not receive incoming calls.</li>
+                </ul>
+            </p>
+            <p><b>Voice Prompt</b></p>
+            <p>
+                <ul id="ul_nwg_fwc_5gb">
+                    <li>Optimized <uicontrol>Custom Prompts</uicontrol>: The maximum file size is
+                        limited to 8 MB.</li>
+                </ul>
+            </p>
+            <p><b>CDR</b></p>
+            <p>
+                <ul id="ul_yks_3gc_5gb">
+                    <li>Fixed several CDR issues.</li>
+                </ul>
+            </p>
+            <p><b>PBX Monitor</b></p>
+            <p>
+                <ul id="ul_eb1_dvc_5gb">
+                    <li>Fixed Extension Status issue: The extension status was displayed incorrectly
+                        if the extension was registered on Linkus.</li>
+                </ul>
+            </p>
+            <p><b>API</b></p>
+            <p id="api-s-30.10.0.59">
+                <ul id="ul_ipd_llw_tgb">
+                    <li>Added API interfaces of Paging Group:<p>
+                            <ul id="ul_jg4_xlk_5gb">
+                                <li>Query Paging Group list</li>
+                                <li>Query a Paging Group settings</li>
+                                <li>Add a Paging Group</li>
+                                <li>Edit a Paging Group</li>
+                                <li>Delete a Paging Group</li>
+                            </ul>
+                        </p></li>
+                    <li>Added API interfaces of SIP trunk:<p>
+                            <ul id="ul_r2q_fmk_5gb">
+                                <li>Query a SIP trunk settings</li>
+                                <li>Add a SIP trunk</li>
+                                <li>Edit a SIP trunk</li>
+                                <li>Delete a SIP trunk</li>
+                            </ul>
+                        </p></li>
+                    <li>Added API interfaces of Outbound Route:<p>
+                            <ul id="ul_c3s_3mk_5gb">
+                                <li>Query an Outbound Route settings</li>
+                                <li>Add an Outbound Route</li>
+                                <li>Edit an Outbound Route</li>
+                                <li>Delete an Outbound Route</li>
+                            </ul>
+                        </p></li>
+                    <li>Added API interfaces of Inbound Route:<p>
+                            <ul id="ul_bgj_pmk_5gb">
+                                <li>Query an Inbound Route settings</li>
+                                <li>Add an Inbound Route</li>
+                                <li>Edit an Inbound Route</li>
+                                <li>Delete an Inbound Route</li>
+                            </ul>
+                        </p></li>
+                    <li>Added support for perform Call Transfer during an internal call or an
+                        external call.</li>
+                    <li>Added support for downloading CDR.</li>
+                    <li>Fixed the API stability issue: The API would fail to work after a certain
+                        time.</li>
+                    <li>Fixed the <uicontrol>login</uicontrol> API interface: Changing password
+                        didn't take effect.</li>
+                </ul>
+            </p>
+            <p><b>Become Yeastar Registered Partner</b></p>
+            <p>
+                <ul id="ul_ptn_tlw_tgb">
+                    <li>At the top-right corner of the PBX web page, click
+                            <uicontrol>Help</uicontrol> icon to become a Yeastar Partner.</li>
+                </ul>
+            </p>
+            <p><b>Email</b></p>
+            <p>
+                <ul id="ul_mvy_ddc_5gb">
+                    <li>Added support for unauthenticated email server: If the email server doesn't
+                        need password authorization, you can leave the
+                            <uicontrol>Password</uicontrol> field blank.</li>
+                </ul>
+            </p>
+            <p><b>Security Center</b>
+            </p>
+            <p>
+                <ul id="ul_bz2_prw_tgb">
+                    <li>Optimized <uicontrol>Firewall</uicontrol>: Added a default firewall rule
+                        (lcstunnel) to accept traffic from Linkus Cloud Service.</li>
+                    <li>Fixed <uicontrol>Blocked IP Address</uicontrol> issue: The
+                            <uicontrol>Blocked IP Address</uicontrol> page displayed a large number
+                        of records for the same IP addresses.</li>
+                    <li>Fixed SSH login issue: The regenerated SSH password was invalid.</li>
+                    <li>Fixed the <uicontrol>IP Auto Defense</uicontrol> issue: The system would not
+                        automatically delete the blocked API IP address from IP blacklist after a
+                        period of time.</li>
+                </ul>
+            </p>
+            <p><b>App</b></p>
+            <p>
+                <ul id="ul_v51_n1c_5gb">
+                    <li>Linkus App is pre-installed on a factory PBX.</li>
+                    <li>Optimized <uicontrol>Linkus</uicontrol> Send Email feature: You can choose
+                        to send Linkus emails by Yeastar server. By doing this, you don't have to
+                        set up Email on your PBX.<p>By choosing Yeastar server, you can send Linkus
+                            emails even though your PBX Email is not configured.</p></li>
+                    <li>Fixed <uicontrol>Queue Metrics Integration</uicontrol> issue: Outbound calls
+                        that were made from QueueMetrices would not be recorded.</li>
+                    <li>Fixed <uicontrol>Auto Provisioning</uicontrol> issue: If you configured the
+                        custom templates of Yealink phones, garbled characters would appear on the
+                        Custom Template page.</li>
+                    <li>Fixed <uicontrol>Auto Provisioning</uicontrol> issue: Auto provision Yeastar
+                        TA1600 V3, TA2400 V3, or TA3200 V3 could not work properly.</li>
+                </ul>
+            </p>
+            <p><uicontrol>Me</uicontrol></p>
+            <p>
+                <ul id="ul_p3j_gcd_5gb">
+                    <li>Fixed the issue that Linkus QR code would appear on
+                            <uicontrol>Me</uicontrol> page even the Linkus was not enabled.</li>
+                    <li>Fixed the issue that the <uicontrol>Me</uicontrol> web page failed to
+                        load.</li>
+                </ul>
+            </p>
+            <p><b>Remote Management</b></p>
+            <p>
+                <ul id="ul_dk4_thz_2hb">
+                    <li>Fixed the issue that <uicontrol>Remote Management</uicontrol> was lost from
+                        the web interface.</li>
+                </ul>
+            </p>
+        </section>
+    </body>
+</topic>

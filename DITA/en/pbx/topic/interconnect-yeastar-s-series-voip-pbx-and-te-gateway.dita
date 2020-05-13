@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_aqr_sv5_1fb">
+    <title>Interconnect Yeastar S-Series VoIP PBX and TE Gateway</title>
+    <shortdesc>Connect Yeastar S-Series VoIP PBX and Yeastar TE gateway to extend E1/T1
+        trunk.</shortdesc>
+    <body>
+        <p>In the following instruction, we tested with Yeastar S300 v30.10.0.28 and Yeastar TE100
+            v16.18.0.7, the two devices are in the same local network.</p>
+        <p>After connecting the Yeastar S300 and the Yeastar TE100, the Yeastar S300 users can
+            achieve the followings:</p>
+        <p>
+            <ul id="ul_whq_xv5_1fb">
+                <li>Make outbound calls through E1 trunk of TE100.</li>
+                <li>Receive inbound calls from E1 trunk of TE100.</li>
+            </ul>
+        </p>
+        <p><image href="../Images/integration/s300+te100.PNG" width="700" id="image_wj2_ghy_dgb"
+            /></p>
+        <section id="section_yhq_xv5_1fb">
+            <title>1. Connect Yeastar S300 and TE100</title>
+            <p>
+                <ol id="ol_zhq_xv5_1fb">
+                    <li>On the Yeastar S300, create a SIP Peer Trunk, connecting to TE100.<p>
+                            <ol id="ol_a3q_xv5_1fb">
+                                <li>Go to <menucascade>
+                                        <uicontrol>Settings</uicontrol>
+                                        <uicontrol>Trunks</uicontrol>
+                                    </menucascade>, click <uicontrol>Add</uicontrol>.</li>
+                                <li>Set the trunk as a Peer Trunk.<p><image
+                                            href="../Images/integration/s300+te100-peer-trunk-to-te100.png"
+                                            width="650" id="image_b3q_xv5_1fb"/></p><p>
+                                        <ul id="ul_c3q_xv5_1fb">
+                                            <li><uicontrol>Name</uicontrol>: Set a name to help you
+                                                identify it.</li>
+                                            <li><uicontrol>Trunk Status</uicontrol>: Select
+                                                  <uicontrol>Enabled</uicontrol>.</li>
+                                            <li><uicontrol>Select Country</uicontrol>: Select
+                                                  <uicontrol>General</uicontrol>.</li>
+                                            <li><uicontrol>Trunk Type</uicontrol>: Select
+                                                  <uicontrol>Peer Trunk</uicontrol>.</li>
+                                            <li><uicontrol>Protocol</uicontrol>: Select
+                                                  <uicontrol>SIP</uicontrol>.</li>
+                                            <li><uicontrol>Transport</uicontrol>: Select
+                                                  <uicontrol>UDP</uicontrol>.</li>
+                                            <li><uicontrol>Hostname/IP</uicontrol>: Enter the IP
+                                                address of TE100 and use the default SIP port
+                                                5060.</li>
+                                            <li><uicontrol>Domain</uicontrol>: Enter the IP address
+                                                of TE100.</li>
+                                            <li><uicontrol>Caller ID Number</uicontrol>: Leave it
+                                                blank.</li>
+                                            <li><uicontrol>Caller ID Name</uicontrol>: Leave it
+                                                blank.</li>
+                                        </ul>
+                                    </p></li>
+                                <li>Click <uicontrol>Save</uicontrol> and
+                                        <uicontrol>Apply</uicontrol>.</li>
+                                <li>Go to <menucascade>
+                                        <uicontrol>Status</uicontrol>
+                                        <uicontrol>System Status</uicontrol>
+                                        <uicontrol>Trunk Status</uicontrol>
+                                    </menucascade> to check the trunk status.<p>If the connection is
+                                        successful, the status will show <image
+                                            href="../Images/ui_icons/ok.png" width="20"
+                                            id="image_fy3_1t4_1gb"/>.</p><p><image
+                                            href="../Images/integration/s300+te100-s300-trunk-status.png"
+                                            width="650" id="image_ldq_ft4_1gb"/></p></li>
+                            </ol>
+                        </p></li>
+                    <li>On the TE100, create a SIP Peer Trunk, connecting to Yeastar S300.<p>
+                            <ol id="ol_d3q_xv5_1fb">
+                                <li>Go to <menucascade>
+                                        <uicontrol>Gateway</uicontrol>
+                                        <uicontrol>VoIP Settings</uicontrol>
+                                        <uicontrol>VoIP Trunk</uicontrol>
+                                    </menucascade>, click <uicontrol>Add VoIP
+                                    Trunk</uicontrol>.</li>
+                                <li>Configure the VoIP trunk.<p><image
+                                            href="../Images/integration/s300+te100-peer-trunk-to-s300.png"
+                                            id="image_e3q_xv5_1fb"/></p><p>
+                                        <ul id="ul_f3q_xv5_1fb">
+                                            <li><uicontrol>Trunk Type</uicontrol>: Select
+                                                  <uicontrol>Service Provider</uicontrol>.</li>
+                                            <li><uicontrol>Provider Name</uicontrol>: Set the trunk
+                                                name.</li>
+                                            <li><uicontrol>Hostname/IP</uicontrol>: Enter the IP
+                                                address of S300 and use the default SIP port
+                                                5060.</li>
+                                        </ul>
+                                    </p></li>
+                                <li>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply
+                                        Changes</uicontrol>.</li>
+                                <li>Go to <menucascade>
+                                        <uicontrol>Status</uicontrol>
+                                        <uicontrol>System Status</uicontrol>
+                                        <uicontrol>IP Trunk Status</uicontrol>
+                                    </menucascade> to check the trunk status.<p>If the connection is
+                                        successful, the status will show "OK".</p><p><image
+                                            href="../Images/integration/s300+te100-te100-trunk-status.png"
+                                            id="image_cry_d54_1gb" width="700"/></p></li>
+                            </ol>
+                        </p></li>
+                </ol>
+            </p>
+        </section>
+        <section><title>2. Receive Inbound Calls From E1 Trunk</title>Assume that you have applied
+            three DID numbers (5503301-5503303) from the E1 service provider. You can assign the DID
+            numbers to extension 1001-1003 respectively . When an outside user dials an DID number,
+            the user will reach the specific extension directly.<p>
+                <note>The DID configuration is optional. In our scenario, the DID numbers should be
+                    continuous DID numbers. For more information of DID routing, refer to <xref
+                        href="did_routing.dita#concept_wz1_lbd_sfb"/>.</note>
+            </p><p><image href="../Images/integration/s300+te100-e1-to-sip.PNG" width="700"
+                    id="image_kqp_2dz_dgb"/></p><p>
+                <ol id="ol_t3q_xv5_1fb">
+                    <li>On Yeastar S300, create an inbound route to accept incoming calls from TE100.<p>
+                            <ol id="ol_u3q_xv5_1fb">
+                                <li>Go to <menucascade>
+                                        <uicontrol>Settings</uicontrol>
+                                        <uicontrol>PBX</uicontrol>
+                                        <uicontrol>Call Control</uicontrol>
+                                        <uicontrol>Inbound Routes</uicontrol>
+                                    </menucascade>, click <uicontrol>Add</uicontrol>.</li>
+                                <li>Configure the inbound route.<p><image
+                                            href="../Images/integration/s300+te100-inbound-from-te100.png"
+                                            width="650" id="image_v3q_xv5_1fb"/></p><p>
+                                        <ul id="ul_w3q_xv5_1fb">
+                                            <li><uicontrol>Name</uicontrol>: Set the inbound route
+                                                name.</li>
+                                            <li><uicontrol>DID Pattern</uicontrol>: Enter the DID
+                                                range of E1 trunk,
+                                                <codeph>5503301-5503303</codeph>.</li>
+                                            <li><uicontrol>Member Trunks</uicontrol>: Select the SIP
+                                                trunk that is connected to TE100 to
+                                                  <uicontrol>Selected</uicontrol> box.</li>
+                                            <li><uicontrol>Destination</uicontrol>: Set to
+                                                  <uicontrol>Extension Range</uicontrol> and enter
+                                                the extension range <codeph>1001-1003</codeph>.</li>
+                                        </ul>
+                                    </p></li>
+                                <li>Click <uicontrol>Save</uicontrol> and
+                                        <uicontrol>Apply</uicontrol>.</li>
+                            </ol>
+                        </p></li>
+                    <li>On TE100, create a Route to forward incoming calls to the PBX.<p>
+                            <ol id="ol_x3q_xv5_1fb">
+                                <li>Go to <menucascade>
+                                        <uicontrol>Gateway</uicontrol>
+                                        <uicontrol>Route Settings</uicontrol>
+                                        <uicontrol>Route List</uicontrol>
+                                    </menucascade>, click <uicontrol>Add New Route</uicontrol>.</li>
+                                <li>Configure a "E1 to S300" Route.<p><image
+                                            href="../Images/integration/s300+te100-e1-to-s300-route.png"
+                                            id="image_uvk_rx4_1gb"/></p><p>
+                                        <ul id="ul_z3q_xv5_1fb">
+                                            <li><uicontrol>Simple Mode</uicontrol>: Select
+                                                  <uicontrol>Yes</uicontrol>.</li>
+                                            <li><uicontrol>Route Name</uicontrol>: Set the route
+                                                name to help you identify it.</li>
+                                            <li><uicontrol>Call Source</uicontrol>: Select the E1
+                                                trunk.</li>
+                                            <li><uicontrol>Call Destination</uicontrol>: Choose the
+                                                SIP trunk that is connected to the S300.</li>
+                                        </ul>
+                                    </p></li>
+                                <li>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply
+                                        Changes</uicontrol>.</li>
+                            </ol>
+                        </p></li>
+                    <li>Make a call to test.<p>For example, making a call to 5503301, the extension
+                            1001 will ring. </p></li>
+                </ol>
+            </p></section>
+        <section id="section_k3q_xv5_1fb">
+            <title>2. Make Outbound Calls Through E1 Trunk</title>
+            <p>
+                <ol id="ol_l3q_xv5_1fb">
+                    <li>On Yeastar S300, create an outbound route to allow users make outbound calls
+                        through TE100.<p>
+                            <ol id="ol_m3q_xv5_1fb">
+                                <li>Go to <menucascade>
+                                        <uicontrol>Settings</uicontrol>
+                                        <uicontrol>PBX</uicontrol>
+                                        <uicontrol>Call Control</uicontrol>
+                                        <uicontrol>Outbound Routes</uicontrol>
+                                    </menucascade>, click <uicontrol>Add</uicontrol>.</li>
+                                <li>Configure the outbound route.<p><image
+                                            href="../Images/integration/s300+te100-outbound-to-te100.png"
+                                            width="650" id="image_o1j_z54_1gb"/></p><p>
+                                        <ul id="ul_o3q_xv5_1fb">
+                                            <li><uicontrol>Name</uicontrol>: Set the outbound route
+                                                name.</li>
+                                            <li><uicontrol>Dial Patterns</uicontrol>: Set the dial
+                                                patterns according to your needs. <p>In our
+                                                  scenario, set <uicontrol>Patterns</uicontrol> to
+                                                  <codeph>X.</codeph>,  users can dial the target
+                                                  numbers directly as they normally do.</p></li>
+                                            <li><uicontrol>Member Trunks</uicontrol>: Select the SIP
+                                                trunk that is connected to TE100 to
+                                                  <uicontrol>Selected</uicontrol> box.</li>
+                                            <li><uicontrol>Member Extensions</uicontrol>: Select
+                                                extensions to <uicontrol>Selected</uicontrol> box.
+                                                The selected extensions can make outbound calls
+                                                through TE100.</li>
+                                        </ul>
+                                    </p></li>
+                                <li>Click <uicontrol>Save</uicontrol> and
+                                        <uicontrol>Apply</uicontrol>.</li>
+                            </ol>
+                        </p></li>
+                    <li importance="optional">Bind extension numbers with DOD numbers.<p>When the
+                            extension calls to an external number, the bound DOD number will be
+                            displayed on the called party. </p><p>
+                            <note>DOD is often used together with DID. In our scenario, we should
+                                bind extensions 1001-1003 with DOD numbers 5503301-5503303
+                                respectively.</note>
+                        </p><p>
+                            <ol id="ol_l3x_5nz_dgb">
+                                <li>On TE100, go to <menucascade>
+                                        <uicontrol>Gateway</uicontrol>
+                                        <uicontrol>Digital Trunk</uicontrol>
+                                        <uicontrol>E1/T1</uicontrol>
+                                    </menucascade>, edit E1 trunk.</li>
+                                <li>Bind the PBX extensions to DOD numbers.<p><image
+                                            href="../Images/integration/s300+te100-dod.png"
+                                            id="image_iyx_f4z_dgb" width="650"/></p></li>
+                                <li>Click <uicontrol>Save</uicontrol> and
+                                        <uicontrol>Apply</uicontrol>.</li>
+                            </ol>
+                        </p></li>
+                    <li>On TE100, create a Route to allow the PBX users make outbound calls through
+                        the E1 trunk.<p>
+                            <ol id="ol_p3q_xv5_1fb">
+                                <li>Go to <menucascade>
+                                        <uicontrol>Gateway</uicontrol>
+                                        <uicontrol>Route Settings</uicontrol>
+                                        <uicontrol>IP to Mobile</uicontrol>
+                                    </menucascade>, click <uicontrol>Add New Route</uicontrol>.</li>
+                                <li>Configure a "S300 to E1" Route.<p><image
+                                            href="../Images/integration/s300+te100-s300-to-e1.png"
+                                            id="image_z3b_dx4_1gb"/></p><p>
+                                        <ul id="ul_r3q_xv5_1fb">
+                                            <li><uicontrol>Simple Mode</uicontrol>: Select
+                                                  <uicontrol>Yes</uicontrol>.</li>
+                                            <li><uicontrol>Route Name</uicontrol>: Set the route
+                                                name.</li>
+                                            <li><uicontrol>Call Source</uicontrol>: Select the SIP
+                                                trunk that is connected to the S300.</li>
+                                            <li><uicontrol>Call Destination</uicontrol>: Select the
+                                                E1 trunk.</li>
+                                        </ul>
+                                    </p></li>
+                                <li>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply
+                                        Changes</uicontrol>.</li>
+                            </ol>
+                        </p></li>
+                    <li>Make a call to test.<p>For example, the PBX extension 1001 calls to
+                            1588035242, the user 1588035242 will ring.</p></li>
+                </ol>
+            </p>
+        </section>
+    </body>
+</topic>

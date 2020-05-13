@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_yj5_jrz_scb">
+    <title>Export Auto Provision Settings</title>
+    <shortdesc>After finish the auto provision configurations, you can export the auto provisioning
+        settings to a CSV file.</shortdesc>
+    <taskbody>
+        <context> The CSV file contains phone manufacturer, phone model, phone MAC address, assigned
+            extension number, voicemail access PIN for extension.</context>
+        <steps id="steps_jtm_yrz_scb">
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Auto Provisioning</uicontrol>
+                        <uicontrol>Device List</uicontrol>
+                    </menucascade>.</cmd>
+            </step>
+            <step>
+                <cmd>Select desired phones, click <uicontrol>Export</uicontrol>.</cmd>
+                <info><image href="../Images/admin/export_autop.png" id="image_vgg_fsz_scb"/></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

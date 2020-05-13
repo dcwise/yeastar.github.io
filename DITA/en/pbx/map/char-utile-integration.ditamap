@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>char utile h+ Integration</title>
+    <topicmeta>
+        <category>char utile h+ Integration</category>
+        <prodinfo>
+            <prodname>
+                <data><ph keyref="product_name"/></data>
+                <data>1.1.0</data>
+            </prodname>
+        </prodinfo>
+    </topicmeta>
+    <keydef keys="product_name" product="s-series">
+        <topicmeta>
+            <keywords>
+                <keyword>Yeastar S-Series VoIP PBX</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <topicref href="../topic/char-utile-integration.dita" product="s-series" print="yes">
+        <topicmeta>
+            <shortdesc>char utile h+ Integration App provides the solution to integrate <ph
+                    keyref="product_name"/> and char utile. </shortdesc>
+        </topicmeta>
+        <topicref href="../topic/configure_the_connection_with_char.dita"/>
+        <topicref href="../topic/configure_extensions_on_the_pbx.dita"/>
+        <topicref href="../topic/supported_features_with_char.dita"/>
+    </topicref>
+</map>

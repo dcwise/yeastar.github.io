@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_kw5_zpp_w3b">
+    <title>Version 81.9.0.19</title>
+    <abstract>Released Date: August 28, 2019</abstract>
+    <body>
+        <section id="section_ss5_sjb_p3b">
+            <title>BUG FIXES</title>
+            <p>
+                <ul id="ul_mrv_5qp_w3b">
+                    <li>Fixed the 403 Forbidden error on web page: If Limited Country Access was
+                        enabled, a 403 Forbidden error would occur on the PBX web page after you
+                        upgrading the PBX to version 81.9.0.14. </li>
+                    <li>Fixed the issue of <uicontrol>Recording Auto Cleanup</uicontrol>: The system
+                        might delete the recent recordings.</li>
+                </ul>
+            </p>
+        </section>
+    </body>
+</topic>

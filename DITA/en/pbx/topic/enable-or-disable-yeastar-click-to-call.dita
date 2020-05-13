@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="enable-or-disable-yeastar-click-to-call">
+    <?oxy_comment_start author="carol" timestamp="20191210T160809+0800" comment="不做永久跟暂时的区分。
+
+暂时enable/disable 在 customize 那边的设置项直接说明启用或禁用即可。"?>
+    <title>Enable/Disable Yeastar Click to Call<?oxy_comment_end?></title>
+    <shortdesc>By default, Yeastar Click to Call is enabled when you download the Extension from
+        Chrome Web Store. You can disable the Extension permanently or temporarily if you don't need
+        it.</shortdesc>
+    <body>
+        <section id="section_i3l_npt_xjb">
+            <title>Enable/Disable permanently</title>
+            <p>If you don't need Yeastar Click to Call any more, you can permanently disable the
+                Extension. Also, you can follow the operations below to enable Yeastar Click to Call
+                if you've disabled it permanently earlier.</p>
+            <p>
+                <ol id="ol_m3d_cqt_xjb">
+                    <li>Open Google Chrome Browser.</li>
+                    <li>In the address bar, enter <i>chrome://extensions/ </i>.</li>
+                    <li>On the Extension page, decide whether to permanently enable or disable
+                        Yeastar Click to Call.<ul id="ul_gym_ld1_yjb">
+                            <li>To permanently enable Yeastar Click to Call, click <image
+                                    href="../Images/admin/disable-click-to-call.png" width="20"
+                                    id="image_utc_4d1_yjb"/>. <p>The icon should be <image
+                                        href="../Images/admin/remove-click-to-call.png" width="20"
+                                        id="image_gyn_pd1_yjb"/> if the Extension is enabled
+                                    successfully.</p></li>
+                            <li>To permanently disable Yeastar Click to Call, click <image
+                                    href="../Images/admin/remove-click-to-call.png" width="20"
+                                    id="image_gvt_rd1_yjb"/>. <p>The icon should be <image
+                                        href="../Images/admin/disable-click-to-call.png" width="20"
+                                        id="image_wg3_sd1_yjb"/> if the Extension is disabled
+                                    successfully, and the Yeastar icon <image
+                                        href="../Images/admin/yeastar.png" width="20"
+                                        id="image_ujf_yj5_xjb"/> will not display right beside the
+                                    address bar (URL field) any more.</p></li>
+                        </ul><p><?oxy_comment_start author="Becky" timestamp="20191203T180049+0800" comment="图片待改"?><image
+                                id="image_amw_ypv_xjb"
+                                href="../Images/admin/permanently-disable-click-to-call.png"
+                                width="650"/><?oxy_comment_end?></p></li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_x1s_3rt_xjb">
+            <title>Disable temporarily</title>
+            <p>If you don't need Yeastar Click to Call temporarily, but you hope that you can enable
+                the Extension easily and quickly when you need it, you can temporarily disable the
+                Extension. </p>
+            <p>Also, you can follow the operations below to enable Yeastar Click to Call if you've
+                disabled it temporarily earlier. </p>
+            <p>
+                <ol id="ol_gt4_trt_xjb">
+                    <li>Open Google Chrome Browser.</li>
+                    <li>On the right of the address bar (URL field), go to <menucascade>
+                            <uicontrol><image href="../Images/admin/yeastar.png" width="20"
+                                    id="image_kwf_x21_yjb"/></uicontrol>
+                            <uicontrol>Options</uicontrol>
+                        </menucascade>. <p>The configuration window for Yeastar Click to Call pops
+                            up.</p></li>
+                    <li>Under <uicontrol>Basic</uicontrol> tab, decide whether to enable or
+                        temporarily disable Yeastar Click to Call.<ul id="ul_upy_hf1_yjb">
+                            <li>To enable Yeastar Click to Call, click <image
+                                    href="../Images/admin/disable-click-to-call.png" width="20"
+                                    id="image_jcj_kf1_yjb"/>. <p>The icon should be <image
+                                        href="../Images/admin/remove-click-to-call.png" width="20"
+                                        id="image_gnz_kf1_yjb"/> if the Extension is enabled
+                                    successfully.</p></li>
+                            <li>To temporarily disable Yeastar Click to Call, click <image
+                                    href="../Images/admin/remove-click-to-call.png" width="20"
+                                    id="image_hfb_z51_yjb"/>. <p>The icon should be <image
+                                        href="../Images/admin/disable-click-to-call.png" width="20"
+                                        id="image_aj3_4f1_yjb"/> if the Extension is disabled
+                                    successfully. The Yeastar icon <image
+                                        href="../Images/admin/yeastar.png" width="20"
+                                        id="image_bj3_4f1_yjb"/> still displays right beside the
+                                    address bar (URL field), but Yeastar Click to Call can not
+                                    work.</p></li>
+                        </ul></li>
+                    <li>Click <uicontrol>Save</uicontrol>.</li>
+                </ol>
+            </p>
+        </section>
+    </body>
+</topic>

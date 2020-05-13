@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="task_rwb_yxz_xgb">
+    <title>Step2. Set up a Security Group</title>
+    <shortdesc>A security group acts as a virtual firewall to control the traffic for its associated
+        Virtual Machines (VMs). You can filter network traffic to and from the YMP VMs and SBC VM in
+        a network security group.</shortdesc>
+    <body>
+        <section id="section_egy_sc1_ygb">
+            <title>Create a security group</title>
+            <p>
+                <ol id="ol_qw4_tc1_ygb">
+                    <li>Sign in to the <xref href="https://portal.azure.com/" format="html"
+                            scope="external">Azure portal</xref>.</li>
+                    <li>In the top-left corner of the portal, select <menucascade>
+                            <uicontrol>+ Create a resource</uicontrol>
+                            <uicontrol>Networking</uicontrol>
+                            <uicontrol>network security group</uicontrol>
+                        </menucascade>.</li>
+                    <li>In <uicontrol>create network security group</uicontrol>, enter the following
+                                information:<p><image href="../Images/SBC/azure-security-group.png"
+                                id="image_tjf_311_ygb"/></p><p>
+                            <table frame="all" rowsep="1" colsep="1" id="table_kxz_wc1_ygb">
+                                <tgroup cols="3">
+                                    <colspec colname="c1" colnum="1" colwidth="1*"/>
+                                    <colspec colname="c2" colnum="2" colwidth="1*"/>
+                                    <colspec colname="c3" colnum="3" colwidth="1*"/>
+                                    <thead>
+                                        <row>
+                                            <entry>Setting</entry>
+                                            <entry>Description</entry>
+                                            <entry>Example</entry>
+                                        </row>
+                                    </thead>
+                                    <tbody>
+                                        <row>
+                                            <entry>Name</entry>
+                                            <entry>Enter a name for the network security
+                                                group.</entry>
+                                            <entry>Enter <i>Yeastar-Security-Group</i></entry>
+                                        </row>
+                                        <row>
+                                            <entry>Subscription</entry>
+                                            <entry>Select a <xref
+                                                  href="https://docs.microsoft.com/en-us/azure/azure-glossary-cloud-terminology?toc=%2fazure%2fvirtual-network%2ftoc.json#subscription"
+                                                  format="html" scope="external"
+                                                >subscription</xref>. </entry>
+                                            <entry>-</entry>
+                                        </row>
+                                        <row>
+                                            <entry>Resource group</entry>
+                                            <entry>Select the same resource group as the <xref
+                                                  href="azure-create-the-virtual-network.dita#task_s3k_bqz_xgb"
+                                                  >virtual network</xref>.</entry>
+                                            <entry>Select
+                                                <uicontrol>Yeastar-Resource</uicontrol></entry>
+                                        </row>
+                                        <row>
+                                            <entry>Location</entry>
+                                            <entry>Select the same location as the <xref
+                                                  href="azure-create-the-virtual-network.dita#task_s3k_bqz_xgb"
+                                                  >virtual network</xref>.</entry>
+                                            <entry>Select <uicontrol>West US</uicontrol></entry>
+                                        </row>
+                                    </tbody>
+                                </tgroup>
+                            </table>
+                        </p></li>
+                    <li>Click <uicontrol>Create</uicontrol>.</li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_tc4_cd1_ygb"><title>Add security rules</title>Add an inbound security
+            rule to allow all inbound network traffic, and add an outbound security rule to allow
+            all outbound network traffic.<p>
+                <ol id="ol_fj2_2p1_ygb">
+                    <li>In the left navigation, click <uicontrol>Network security
+                        groups</uicontrol>.</li>
+                    <li>On the <uicontrol>Network security groups</uicontrol> page, click the
+                        security group that you created.</li>
+                    <li>Add an inbound security rule.<p>
+                            <ol id="ol_nlm_ws1_ygb">
+                                <li>In the security group, select <menucascade>
+                                        <uicontrol>Inbound security rules</uicontrol>
+                                        <uicontrol>Add</uicontrol>
+                                    </menucascade>.<p><image
+                                            href="../Images/SBC/azure-add-inbound-security-rule.png"
+                                            id="image_mw1_hq1_ygb" width="650"/></p></li>
+                                <li>On the <uicontrol>Add inbound security rule</uicontrol> page,
+                                    configure the following information:<p><image
+                                            href="../Images/SBC/azure-inbound-security-rule.png"
+                                            id="image_ssm_cr1_ygb"/></p><table frame="all"
+                                        rowsep="1" colsep="1" id="table_bzd_zs1_ygb">
+                                        <tgroup cols="2">
+                                            <colspec colname="c1" colnum="1" colwidth="1*"/>
+                                            <colspec colname="c2" colnum="2" colwidth="1*"/>
+                                            <thead>
+                                                <row>
+                                                  <entry>Setting</entry>
+                                                  <entry>Value</entry>
+                                                </row>
+                                            </thead>
+                                            <tbody>
+                                                <row>
+                                                  <entry>Source</entry>
+                                                  <entry>Select <uicontrol>Any</uicontrol></entry>
+                                                </row>
+                                                <row>
+                                                  <entry>Source port range</entry>
+                                                  <entry>Enter <i>*</i></entry>
+                                                </row>
+                                                <row>
+                                                  <entry>Destination</entry>
+                                                  <entry>Select <uicontrol>Any</uicontrol></entry>
+                                                </row>
+                                                <row>
+                                                  <entry>Destination port range</entry>
+                                                  <entry>Enter <i>*</i></entry>
+                                                </row>
+                                                <row>
+                                                  <entry>Name</entry>
+                                                  <entry>Enter a name for the rule. For example,
+                                                  <i>AllowAllInbound</i>.</entry>
+                                                </row>
+                                            </tbody>
+                                        </tgroup>
+                                    </table></li>
+                                <li>Leave the rest of the defaults and click <b>Add</b>.</li>
+                            </ol>
+                        </p></li>
+                    <li>Add an outbound security rule.<p>
+                            <ol id="ol_zxj_ft1_ygb">
+                                <li>In the security group, select <menucascade>
+                                        <uicontrol>Outbound security rules</uicontrol>
+                                        <uicontrol>Add</uicontrol>
+                                    </menucascade>.<p><image
+                                            href="../Images/SBC/azure-add-outbound-security-rule.png"
+                                            width="650" id="image_znc_4t1_ygb"/></p></li>
+                                <li>On the <uicontrol>Add outbound security rule</uicontrol> page,
+                                    configure the following information:<p><image
+                                            href="../Images/SBC/azure-outbound-security-rule.png"
+                                            id="image_dck_yt1_ygb"/></p><table frame="all"
+                                        rowsep="1" colsep="1" id="table_eck_yt1_ygb">
+                                        <tgroup cols="2">
+                                            <colspec colname="c1" colnum="1" colwidth="1*"/>
+                                            <colspec colname="c2" colnum="2" colwidth="1*"/>
+                                            <thead>
+                                                <row>
+                                                  <entry>Setting</entry>
+                                                  <entry>Value</entry>
+                                                </row>
+                                            </thead>
+                                            <tbody>
+                                                <row>
+                                                  <entry>Source</entry>
+                                                  <entry>Select <uicontrol>Any</uicontrol></entry>
+                                                </row>
+                                                <row>
+                                                  <entry>Source port range</entry>
+                                                  <entry>Enter <i>*</i></entry>
+                                                </row>
+                                                <row>
+                                                  <entry>Destination</entry>
+                                                  <entry>Select <uicontrol>Any</uicontrol></entry>
+                                                </row>
+                                                <row>
+                                                  <entry>Destination port range</entry>
+                                                  <entry>Enter <i>*</i></entry>
+                                                </row>
+                                                <row>
+                                                  <entry>Name</entry>
+                                                  <entry>Enter a name for the rule. For example,
+                                                  <i>AllowAllOutbound</i>.</entry>
+                                                </row>
+                                            </tbody>
+                                        </tgroup>
+                                    </table></li>
+                                <li>Leave the rest of the defaults and click <b>Add</b>.</li>
+                            </ol>
+                        </p></li>
+                </ol>
+            </p></section>
+    </body>
+</topic>

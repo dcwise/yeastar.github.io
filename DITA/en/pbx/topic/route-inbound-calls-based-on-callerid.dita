@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_rcf_t2d_djb">
+    <title>Route Inbound Calls Based on Caller ID</title>
+    <shortdesc>This topic describes what is Caller ID routing and how to configure inbound routes on
+            <ph keyref="product_name"/> to route inbound calls based on Caller ID.</shortdesc>
+    <body>
+        <section id="section_h4c_xwz_2jb">
+            <title>Caller ID routing</title>
+            <p>Caller ID (Caller Identification) is a telephone service that displays a caller's
+                phone number on the called party's phone device before the call is answered.</p>
+            <p>Caller ID routing allows users to accept or reject calls based on the caller's phone
+                number. Inbound calls which match the Caller ID pattern on PBX will be routed to the
+                pre-configured destination. For those unmatched, calls can not be established.</p>
+        </section>
+        <section id="section_cl2_t11_fjb">
+            <title>Scenarios</title>
+            <p>A company is dedicated to offering targeted service for different regions, the
+                company hopes that the Caller ID of inbound calls can be identified and the calls
+                can be routed to responsible employees. In this case, you can set Caller ID patterns
+                for inbound routes.</p>
+        </section>
+        <section id="section_hrm_yj1_fjb">
+            <title>Configuration Example</title>
+            <p>Company A assigns pre-sales business in France to Rose, and pre-sales business in
+                America to Mike. Refer to the following table and related configuration figures.</p>
+            <p>
+                <table frame="all" id="table_fcg_sk1_fjb">
+                    <tgroup cols="4">
+                        <colspec colname="c1" colnum="1" colwidth="1*" colsep="1" rowsep="1"/>
+                        <colspec colname="c2" colnum="2" colwidth="1*" colsep="1" rowsep="1"/>
+                        <colspec colname="c3" colnum="3" colwidth="1*" colsep="1" rowsep="1"/>
+                        <colspec colname="c4" colnum="4" colwidth="1*" colsep="1" rowsep="1"/>
+                        <thead>
+                            <row>
+                                <entry>Name</entry>
+                                <entry>Extension</entry>
+                                <entry>Responsible Country</entry>
+                                <entry>Area Code </entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>Rose</entry>
+                                <entry>1000</entry>
+                                <entry>France </entry>
+                                <entry>0033</entry>
+                            </row>
+                            <row>
+                                <entry>Mike</entry>
+                                <entry>2000</entry>
+                                <entry>America</entry>
+                                <entry>001</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+            <p><b>Configure Caller ID pattern for Rose</b></p>
+            <p><image href="../Images/admin/caller-id-pattern-france.png" id="image_kld_vm1_fjb"
+                    width="650"/></p>
+            <ul id="ul_wtp_dm4_fjb">
+                <li><b>Name</b>: Set a name to help you identify it.</li>
+                <li><b>Caller ID Pattern</b>: Enter the caller ID pattern <i>0033.</i>.</li>
+                <li><b>Member Trunks</b>: Select the trunk that is bound with the caller ID
+                    pattern.</li>
+                <li><b>Destination</b>: Select the desired destination. When a caller calls to the
+                    trunk with the caller ID starting with 0033, the call will be routed to
+                    extension 1000. </li>
+            </ul>
+            <p><b>Configure Caller ID pattern for Mike</b></p>
+            <p><image id="image_u3b_bn1_fjb" href="../Images/admin/caller-id-pattern-america.png"
+                    width="650"/></p>
+        </section>
+        <ul id="ul_t3l_xm4_fjb">
+            <li><b>Name</b>: Set a name to help you identify it.</li>
+            <li><b>Caller ID Pattern</b>: Enter the caller ID pattern <i>001.</i>.</li>
+            <li><b>Member Trunks</b>: Select the trunk that is bound with the caller ID
+                pattern.</li>
+            <li><b>Destination</b>: Select the desired destination. When a caller calls to the trunk
+                with the caller ID starting with 001, the call will be routed to extension
+                2000.</li>
+        </ul>
+    </body>
+</topic>

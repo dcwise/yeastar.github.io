@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_dvy_f45_vdb">
+    <title>Activate QueueMetrics On-Premise Integration</title>
+    <shortdesc>You can activate the QueueMetrics Integration App directly or activate it after you
+        try out the integration App and the QueueMetrics functions.</shortdesc>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Provide the following information to Yeastar to activate QueueMetrics
+                    Integration App and buy a license of QueueMetrics On-Premise.</cmd>
+                <info>
+                    <ul id="ul_cph_q21_wdb">
+                        <li>PBX SN (Serial Number)</li>
+                        <li>PBX MAC address</li>
+                        <li>PBX Model</li>
+                        <li>Your desired agent numbers on the QueueMetrics call center</li>
+                    </ul>
+                </info>
+            </step>
+            <step>
+                <cmd>Log in the PBX web interface, go to <uicontrol>App Center</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Choose QueueMetrics Integration App, click
+                    <uicontrol>License</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Enter your license, click <uicontrol>Activate</uicontrol>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

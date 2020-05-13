@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="view-yeastar-click-to-call-details">
+    <title>View Yeastar Click to Call
+        <?oxy_comment_start author="carol" timestamp="20191210T134256+0800" comment="这篇删掉，没用的信息"?>Details<?oxy_comment_end?></title>
+    <shortdesc>View Yeastar Click to Call details or configure Chrome-specific settings.</shortdesc>
+    <body>
+        <p>Follow one of the methods below to configure Chrome-specific settings, or view details
+            about Yeastar Click to Call, such as version, size, permissions and so on.</p>
+        <p>Open Google Chrome Browser, and choose one of the following methods:<ul
+                id="ul_eyq_rst_xjb">
+                <li>In the search bar, enter <i>chrome://extensions/</i>, and click
+                        <uicontrol>Details</uicontrol>.</li>
+                <li>On the right of search bar (URL field), go to <menucascade>
+                                                <uicontrol><image href="../Images/admin/yeastar.png"
+                                                  width="20" id="image_l2b_g31_yjb"/></uicontrol>
+                                                <uicontrol>Manage extensions</uicontrol>
+                                        </menucascade>.</li>
+            </ul></p>
+    </body>
+</topic>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_jjw_sg1_wdb">
+    <title>Create Queues on QueueMetrics</title>
+    <shortdesc>Create queues according to the queue settings on your PBX.</shortdesc>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Log in the QueueMetrics, click <uicontrol>Queues</uicontrol> tab at the top
+                    navigation.</cmd>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Create New</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Configure the <uicontrol>Queue Detail</uicontrol>.</cmd>
+                <info>
+                    <note>The format of <uicontrol>Queue</uicontrol> is <codeph>queue-xxx</codeph>.
+                        For example, if the queue number on the PBX is 6700, the Queue(s) should be
+                            <codeph>queue-6700</codeph>.</note>
+                </info>
+                <info><image href="../Images/admin/qm_queue_detail.png" width="500"
+                        id="image_hbm_th1_wdb"/></info>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Queues</uicontrol> tab at the top navigation to view the
+                    created queue.</cmd>
+            </step>
+            <step>
+                <cmd>On the <uicontrol>Queues Configuration</uicontrol> page, click <image
+                        href="../Images/admin/qm_assign_agent_icon.png" id="image_w1n_b31_wdb"/> to
+                    assign agents to the queue.</cmd>
+                <info><image href="../Images/admin/qm_assign_agent.png" width="650"
+                        id="image_mlg_l31_wdb"/></info>
+            </step>
+            <step>
+                <cmd>Select the agents, and click <uicontrol>Save</uicontrol>.</cmd>
+                <info><image href="../Images/admin/qm_agents_for_queue.png" id="image_uk5_q31_wdb"
+                    /></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

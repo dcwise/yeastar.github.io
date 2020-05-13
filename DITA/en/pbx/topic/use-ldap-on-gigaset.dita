@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="use-ldap-on-gigaset">
+    <title>LDAP Configurations on Gigaset DECT</title>
+    <shortdesc>In this example, we demonstrate how to configure LDAP phonebook on Gigaset N870 IP
+        PRO (version 2.26.0) and
+        <?oxy_comment_start author="Becky" timestamp="20200228T134234+0800" comment="这句改了下，之前是写apply phonebook to，好像不太对"?>give
+        a Gigaset Handset the access to LDAP phonebooks.<?oxy_comment_end?></shortdesc>
+    <body>
+        <section id="section_pgw_trb_wkb">
+            <title>Configure an LDAP phonebook</title>
+            <p>The following configurations are set according to default settings of <ph
+                    keyref="product_name"/> LDAP server. You can use the following settings as a
+                starting point and adjust the filter and display attributes according to your
+                    needs.<?oxy_comment_start author="Becky" timestamp="20200228T140003+0800" comment="新增"?><note>You
+                    can set up 10 corporate directories in LDAP format at most for Gigaset N870 IP
+                    PRO.</note><?oxy_comment_end?></p>
+        </section>
+        <p>
+            <ol>
+                <li>Log in Gigaset N870 IP PRO, and go to <menucascade>
+                        <uicontrol>SETTINGS</uicontrol>
+                        <uicontrol>Online Directories</uicontrol>
+                        <uicontrol>Corporate</uicontrol>
+                    </menucascade>, click <image
+                        href="../Images/sip-endpoints/gigaset/gigaset-edit.png" width="20"
+                        id="image_kw4_tvz_wkb"/> to edit an LDAP phonebook.</li>
+                <li>In the <uicontrol>Access to the LDAP data server</uicontrol> section, configure
+                    the following settings.<p>
+                        <table id="access-ldap-server" >
+                            <title/>
+                            <tgroup cols="3" align="left">
+                                <colspec colname="c1" colnum="1" colwidth="1.04*" colsep="1"
+                                    rowsep="1"/>
+                                <colspec colname="c2" colnum="2" colwidth="1.51*" colsep="1"
+                                    rowsep="1"/>
+                                <colspec colname="c3" colnum="3" colwidth="1*" colsep="1" rowsep="1"/>
+                                <thead>
+                                    <row>
+                                        <entry>Setting</entry>
+                                        <entry>Description</entry>
+                                        <entry>Example</entry>
+                                    </row>
+                                </thead>
+                                <tbody>
+                                    <row>
+                                        <entry>Directory name</entry>
+                                        <entry>Specify the phonebook name which will be displayed on
+                                            handsets.</entry>
+                                        <entry>Yeastar</entry>
+                                    </row>
+                                    <row>
+                                        <entry>Enable Directory</entry>
+                                        <entry>Enable this option to display the LDAP phonebook on
+                                            handsets.</entry>
+                                        <entry>Enabled</entry>
+                                    </row>
+                                    <row>
+                                        <entry>Server address</entry>
+                                        <entry>Enter the IP address of PBX.</entry>
+                                        <entry>192.168.6.11</entry>
+                                    </row>
+                                    <row>
+                                        <entry>Server port</entry>
+                                        <entry><?oxy_comment_start author="Becky" timestamp="20200227T132701+0800" comment="Gigaset手册：the port the LDAP server expects database requests"?>Enter
+                                            the port which is used to send and receive LDAP
+                                            requests.<?oxy_comment_end?> The default port is
+                                            389.</entry>
+                                        <entry>389</entry>
+                                    </row>
+                                    <row>
+                                        <entry>LDAP Search base (BaseDN)</entry>
+                                        <entry>Enter the Username of LDAP server.</entry>
+                                        <entry>dc=pbx,dc=com</entry>
+                                    </row>
+                                    <row>
+                                        <entry>Username</entry>
+                                        <entry>Enter the user name to log in the LDAP
+                                            server.</entry>
+                                        <entry>cn=admin,dc=pbx,dc=com</entry>
+                                    </row>
+                                    <row>
+                                        <entry>Password</entry>
+                                        <entry>Enter the password to log in the LDAP server.</entry>
+                                        <entry>password</entry>
+                                    </row>
+                                    <row>
+                                        <entry>Secure LDAP</entry>
+                                        <entry>By default, LDAP server is handled via an insecure
+                                            connection. You can encrypt traffic by enabling secure
+                                            LDAP. This is accomplished by installing a CA
+                                            certificate signed by the secure LDAP server onto the
+                                                system.<ul id="ul_e21_3nz_wkb">
+                                                <li><uicontrol>None</uicontrol></li>
+                                                <li><uicontrol>SSL/TLS</uicontrol></li>
+                                                <li><uicontrol><?oxy_comment_start author="Becky" timestamp="20200227T114134+0800" comment="写着可选，但是不可点击"?>STARTTLS<?oxy_comment_end?></uicontrol></li>
+                                            </ul></entry>
+                                        <entry>SSL/TLS</entry>
+                                    </row>
+                                </tbody>
+                            </tgroup>
+                        </table>
+                    </p></li>
+                <li>In the <uicontrol>Search in LDAP database</uicontrol> section, define search
+                    criteria (filters) to decide which entries can be searched in the LDAP database.<p>
+                        <note>Multiple attributes can be separated by commas.</note>
+                    </p><p>
+                        <table frame="all" id="table_kqk_jnz_wkb">
+                            <title/>
+                            <tgroup cols="2" align="left">
+                                <colspec colname="c1" colnum="1" colwidth="1*" colsep="1" rowsep="1"/>
+                                <colspec colname="c2" colnum="2" colwidth="1.87*" colsep="1"
+                                    rowsep="1"/>
+                                <thead>
+                                    <row>
+                                        <entry>Field of a directory entry</entry>
+                                        <entry>Attribute name in the LDAP database</entry>
+                                    </row>
+                                </thead>
+                                <tbody>
+                                    <row>
+                                        <entry>First name</entry>
+                                        <entry>givenName</entry>
+                                    </row>
+                                    <row>
+                                        <entry>Surname</entry>
+                                        <entry>sn, cn, displayName</entry>
+                                    </row>
+                                    <row>
+                                        <entry>Phone (home)</entry>
+                                        <entry>homePhone, telephoneNumber</entry>
+                                    </row>
+                                    <row>
+                                        <entry>Phone (office)</entry>
+                                        <entry>telephoneNumber</entry>
+                                    </row>
+                                    <row>
+                                        <entry>Phone (mobile)</entry>
+                                        <entry>mobile</entry>
+                                    </row>
+                                    <row>
+                                        <entry>E-mail</entry>
+                                        <entry>mail</entry>
+                                    </row>
+                                    <row>
+                                        <entry>Fax</entry>
+                                        <entry>facsimileTelephoneNumber</entry>
+                                    </row>
+                                    <row>
+                                        <entry>Company</entry>
+                                        <entry>company, o, ou</entry>
+                                    </row>
+                                    <row>
+                                        <entry>Street</entry>
+                                        <entry>street</entry>
+                                    </row>
+                                    <row>
+                                        <entry>City</entry>
+                                        <entry>I, postAddress</entry>
+                                    </row>
+                                    <row>
+                                        <entry>Zip </entry>
+                                        <entry>postCode</entry>
+                                    </row>
+                                    <row>
+                                        <entry>Country</entry>
+                                        <entry>friendlyCountryName, c</entry>
+                                    </row>
+                                    <row>
+                                        <entry>Additional attribute</entry>
+                                        <entry>user-defined</entry>
+                                    </row>
+                                    <row>
+                                        <entry>Additional attribute can be dialled</entry>
+                                        <entry>Enable this option when an additional attribute
+                                            (phone number) is defined.</entry>
+                                    </row>
+                                </tbody>
+                            </tgroup>
+                        </table>
+                    </p></li>
+                <li>In the <b>Configuration of directory items</b> section, specify display
+                    attributes of Gigaset LDAP, so that the directory entries can be displayed on handsets.<p>
+                        <table frame="all" id="table_pkv_lnz_wkb">
+                            <title/>
+                            <tgroup cols="3" align="left">
+                                <colspec colname="c1" colnum="1" colwidth="1*" colsep="1" rowsep="1"/>
+                                <colspec colname="c2" colnum="2" colwidth="1.45*" colsep="1"
+                                    rowsep="1"/>
+                                <colspec colname="c3" colnum="3" colwidth="1.21*" colsep="1"
+                                    rowsep="1"/>
+                                <thead>
+                                    <row>
+                                        <entry>Setting</entry>
+                                        <entry>Description</entry>
+                                        <entry>Example</entry>
+                                    </row>
+                                </thead>
+                                <tbody>
+                                    <row>
+                                        <entry>Enable list mode</entry>
+                                        <entry>Specify what should be initially displayed when users
+                                            open the LDAP phonebook.<ul id="ul_nnf_4nz_wkb">
+                                                <li>Enable: A list of all contact entries of the
+                                                  LDAP phonebook will be displayed.</li>
+                                                <li>Disable: An editor is opened first that allows
+                                                  users to select a specific search area within the
+                                                  LDAP database.</li>
+                                            </ul></entry>
+                                        <entry>Enabled</entry>
+                                    </row>
+                                    <row>
+                                        <entry>Name filter</entry>
+                                        <entry>
+                                            <p>Specify the name attributes for LDAP searching. </p>
+                                            <p>
+                                                <ul id="ul_wnf_4nz_wkb">
+                                                  <li>The <codeph>*</codeph> symbol in the filter
+                                                  stands for any character.</li>
+                                                  <li>The <codeph>%</codeph> symbol in the filter
+                                                  stands for the entering string used as the prefix
+                                                  of the filter condition.</li>
+                                                </ul>
+                                            </p>
+                                        </entry>
+                                        <entry>(|(cn=%)(sn=%))</entry>
+                                    </row>
+                                    <row>
+                                        <entry>Number filter</entry>
+                                        <entry>
+                                            <p>Specify the number attributes for LDAP searching. </p>
+                                            <p>
+                                                <ul id="ul_f4f_4nz_wkb">
+                                                  <li>The <codeph>*</codeph> symbol in the filter
+                                                  stands for any character.</li>
+                                                  <li>The <codeph>%</codeph> symbol in the filter
+                                                  stands for the entering string used as the prefix
+                                                  of the filter condition.</li>
+                                                </ul>
+                                            </p>
+                                        </entry>
+                                        <entry>(|(telephoneNumber=%)(mobile=%))</entry>
+                                    </row>
+                                    <row>
+                                        <entry>Additional filter #1 name</entry>
+                                        <entry>Specify an additional attribute for refine
+                                            search.</entry>
+                                        <entry>City</entry>
+                                    </row>
+                                    <row>
+                                        <entry>Additional filter #1 value</entry>
+                                        <entry>Specify an additional attribute value for refine
+                                            search.</entry>
+                                        <entry>(|(I=%))</entry>
+                                    </row>
+                                    <row>
+                                        <entry>Additional filter #2 name</entry>
+                                        <entry>Specify an additional attribute for refine
+                                            search.</entry>
+                                        <entry>Street</entry>
+                                    </row>
+                                    <row>
+                                        <entry>Additional filter #2 value</entry>
+                                        <entry>Specify an additional attribute value for refine
+                                            search.</entry>
+                                        <entry>(|(Street=%))</entry>
+                                    </row>
+                                    <row>
+                                        <entry>Display format</entry>
+                                        <entry>Format of LDAP results displayed on handsets.</entry>
+                                        <entry>%sn, %givenname</entry>
+                                    </row>
+                                    <row>
+                                        <entry>Max. number of search results</entry>
+                                        <entry>Specify the maximum number of search results to be
+                                            returned by the LDAP server.</entry>
+                                        <entry>50</entry>
+                                    </row>
+                                </tbody>
+                            </tgroup>
+                        </table>
+                    </p></li>
+            </ol>
+        </p>
+        <section id="section_qqb_qsb_wkb">
+            <?oxy_comment_start author="Becky" timestamp="20200228T140041+0800" comment="新增"?>
+            <title>Give a Gigaset handset access to LDAP phonebooks</title><?oxy_comment_end?>
+            <p>
+                <note>Before you get started, make sure your Gigaset handset is registered.</note>
+            </p>
+            <p>
+                <ol>
+                    <li>On Gigaset web page, go to <menucascade>
+                            <uicontrol>SETTINGS</uicontrol>
+                            <uicontrol>Mobile Devices</uicontrol>
+                            <uicontrol>Administration</uicontrol>
+                        </menucascade>.</li>
+                    <li>Select a registered handset which you want to give access to LDAP phonebook,
+                        and click <image href="../Images/sip-endpoints/gigaset/gigaset-edit.png"
+                            id="image_ism_q5b_wkb"/>.</li>
+                    <li>Go to <uicontrol>LDAP authentication</uicontrol> to configure as follows.<ul
+                            id="ul_gkf_rvb_wkb">
+                            <li><uicontrol>Select LDAP phonebook</uicontrol>: Select the LDAP
+                                phonebook which will be displayed on the handset.</li>
+                            <li><uicontrol>Show other LDAP servers</uicontrol>: Decide whether to
+                                display phonebooks from other LDAP servers.</li>
+                            <li><uicontrol>LDAP authorization type</uicontrol>: Select how the user
+                                authentication should be performed.<ul id="ul_df3_cwb_wkb">
+                                    <li><uicontrol>Global</uicontrol>: Credentials are set for all
+                                        handsets during the LDAP phonebook set-up.</li>
+                                    <li><uicontrol>User</uicontrol>: Individual credentials are
+                                        used. Enter credentials in <uicontrol>Username</uicontrol>
+                                        and <uicontrol>Password</uicontrol> field.</li>
+                                    <li><uicontrol>SIP</uicontrol>: The credentials for the user's
+                                        SIP account are used (Authentication name and Authentication
+                                        password).</li>
+                                </ul></li>
+                        </ul></li>
+                    <li>Click <uicontrol>Set</uicontrol>.</li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_zbk_sfw_vkb">
+            <title>Search LDAP contacts on Gigaset handsets</title>
+            <p>Enter the search criteria to search a contact from LDAP phonebook and call the
+                contact.</p>
+            <p>
+                <ol>
+                    <li>Press <image id="image_kls_kpz_wkb"
+                            href="../Images/sip-endpoints/gigaset/gigaset-directory-key%20(2).png"
+                            width="20"/> to enter LDAP phonebook.</li>
+                    <li>Go to <uicontrol>Options</uicontrol>, and decide the search method.<ul
+                            id="ul_arl_ypw_vkb">
+                            <li><uicontrol>Refine Search</uicontrol>: Search contacts from the last
+                                searching results, which indicates that the search criteria are
+                                transferred from the previous search and entered into the current
+                                corresponding fields.</li>
+                            <li><uicontrol>New Search</uicontrol>: Start a new search for a
+                                contact.</li>
+                        </ul><p><image id="image_x4l_kqw_vkb"
+                                href="../Images/sip-endpoints/gigaset/gigaset-ldap-search.png"
+                                width="200"/></p></li>
+                </ol>
+            </p>
+        </section>
+    </body>
+</topic>

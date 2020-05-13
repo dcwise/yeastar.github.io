@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_mnr_smw_d2b">
+    <title>Dynamic Agent</title>
+    <shortdesc>A dynamic agent can log in or log out a queue at any time.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/06/15"/>
+            <!--Carol-->
+            <revised modified="2018/06/15"/>
+            <!--Carol-->
+            <revised modified="2018/07/13"/>
+            <!--Carol-->
+            <revised modified="2018/07/30"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <section id="section_cpp_wmw_d2b">
+            <title>Set up Dynamic Agents</title>
+            <p/>
+        </section>
+        <section id="section_ldv_xnw_d2b"/>
+    </conbody>
+</concept>

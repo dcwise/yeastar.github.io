@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="guanliyuan">
+    <title> Admin Guide</title>
+    <shortdesc> Admin Guide for <ph keyref="product_name"/>. </shortdesc>
+    <body>
+        <section id="section_qcd_g2z_b3b">
+            <title>About this guide</title>
+            <p> In this guide, we describe every detail on the functionality and configuration of
+                the <ph keyref="product_name"/>. We begin by assuming that you are familiar with
+                networking and other IT disciplines. </p>
+            <p>
+                <dl>
+                    <dlentry product="s-series">
+                        <dt>Product covered</dt>
+                        <dd>
+                            <ul id="ul_fxl_r2z_b3b">
+                                <li>Yeastar S412 VoIP PBX</li>
+                                <li>Yeastar S20 VoIP PBX</li>
+                                <li>Yeastar S50 VoIP PBX</li>
+                                <li>Yeastar S100 VoIP PBX</li>
+                                <li>Yeastar S300 VoIP PBX</li>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                </dl>
+            </p>
+            <dl>
+                <dlentry product="k2">
+                    <dt>Product covered</dt>
+                    <dd>
+                        <ul id="ul_unr_sjz_b3b">
+                            <li>Yeastar K2 IPPBX</li>
+                            <li>Yeastar K2 Lite IPPBX</li>
+                        </ul>
+                    </dd>
+                </dlentry>
+            </dl>
+        </section>
+        <section id="section_mw4_32z_b3b">
+            <title>Audience</title>
+            <p>This guide is for administrators who need to prepare for, configure and operate <ph
+                    keyref="product_name"/>.</p>
+        </section>
+    </body>
+</topic>

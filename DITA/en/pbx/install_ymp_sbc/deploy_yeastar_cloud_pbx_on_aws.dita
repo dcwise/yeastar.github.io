@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_zws_gv3_3cb">
+  <title>Deploy Yeastar Cloud PBX on AWS</title>
+  <prolog>
+    <critdates>
+      <!--Carol-->
+      <revised modified="2018/06/14"/>
+    </critdates>
+  </prolog>
+  <body>
+    <p><b>Requirements</b></p>
+    <p>
+      <ul id="ul_lmn_5tx_lcb">
+        <li>The VPC has two subnets, WAN subnet and LAN subnet</li>
+        <li>SBC instance has two ethernet ports, eth0 in WAN subnet, eth1 in LAN subnet.</li>
+        <li>Each YMP instance has one ethernet port eth0, the YMP ethernet ports are in LAN
+          subnet.</li>
+        <li>SBC WAN (eth0) can receive data from the Internet and send data to the Internet.</li>
+        <li>SBC LAN (eth1) and YMP LAN (eth0) can  initiate outbound connections to the Internet but
+          prevent unsolicited inbound connections from the Internet.</li>
+      </ul>
+    </p>
+  </body>
+</topic>

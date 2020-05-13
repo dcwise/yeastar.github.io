@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_zv1_vwq_ldb">
+    <title>Upgrade Firmware by HTTP Method</title>
+    <shortdesc product="s-series">You can get the firmware download link from <xref
+            href="https://www.yeastar.com/firmware-download/" format="html" scope="external">Yeastar
+            Firmware Download center</xref>, and enter the link to the PBX web interface to upgrade
+        firmware.</shortdesc>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/09/25"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <context id="context_fkz_n2r_ldb">Make sure that the PBX could access the Internet, or the
+            upgrade will fail.</context>
+       
+        <steps>
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Maintenance</uicontrol>
+                        <uicontrol>Upgrade</uicontrol>
+                        <uicontrol>Manual Upgrade</uicontrol>
+                    </menucascade>.</cmd>
+                <info><image href="../Images/admin/upgrade_http.png" id="image_i1p_fzq_ldb"/></info>
+            </step>
+            <step>
+                <cmd importance="optional">If you want to reset the configuration to factory
+                    defaults, check the option <uicontrol>Reset Configuration to Factory
+                        Default</uicontrol>.</cmd>
+                <info>
+                    <note type="important">If you check this option, all your PBX configurations
+                        will be erased. We don't suggest you reset the PBX before upgrade
+                        firmware.</note>
+                </info>
+            </step>
+            <step>
+                <cmd>Set <uicontrol>Type</uicontrol> to <uicontrol>Download From HTTP
+                        Server</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Enter the firmware download link in the <uicontrol>HTTP URL</uicontrol>
+                    field.</cmd>
+                <info>
+                    <note>The URL should be a download link for a <codeph>.bin</codeph> file. <p
+                            product="s-series">For example, <codeph>
+                                http://www.yeastar.com/download/S_Series/30.7.0.27.bin</codeph>.</p></note>
+                </info>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Download</uicontrol>.</cmd>
+                <stepresult>The PBX will start downloading file from the HTTP server, and upgrading
+                    the firmware automatically.<p>
+                        <note
+                            conref="browse_a_local_file_to_upgrade.dita#task_vyl_3sq_ldb/upgrade_note"/>
+                    </p></stepresult>
+            </step>
+        </steps>
+    </taskbody>
+</task>

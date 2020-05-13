@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_p2f_ljv_1gb">
+    <title>Version 81.8.0.4</title>
+    <abstract>Released Date: December 13, 2018</abstract>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/12/07"/>
+            <!--Carol-->
+            <revised modified="2018/12/07"/>
+            <!--Carol-->
+            <revised modified="2018/12/11"/>
+            <!--Carol-->
+            <revised modified="2018/12/17"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <section id="section_hvh_rnv_1gb"><title>Optimization</title><p><image
+                    href="../Images/horizon.png" id="image_rnz_dlv_m2b"/></p><p><b>System
+                    Stability</b></p><p>
+                <ul id="ul_plm_4bj_kfb">
+                    <li>Fixed a few issues to improve the system stability.</li>
+                </ul>
+            </p><p><b>System Security</b></p><p>
+                <ul id="ul_xfd_vt3_kfb">
+                    <li>Improved Web security.</li>
+                </ul>
+            </p><p><b>Extension</b></p><p>
+                <ul id="ul_lm4_tq3_kfb">
+                    <li>Added support for configuring overlapped Extension ranges (<menucascade>
+                            <uicontrol>Settings</uicontrol>
+                            <uicontrol>PBX</uicontrol>
+                            <uicontrol>General</uicontrol>
+                            <uicontrol>Preferences</uicontrol>
+                            <uicontrol>Extension Preferences</uicontrol>
+                        </menucascade>).</li>
+                    <li>Optimized Extension setup: PBX will allow you to create an extension number
+                        that is not in the User Extension range.</li>
+                    <li>Fixed Extension Group issue: Creating an extension would fail if the
+                        extension number was used as an Extension Group name.</li>
+                    <li>Fixed the issue that <uicontrol>Max Call Duration</uicontrol> setting could
+                        not take effect.</li>
+                </ul>
+            </p><p><b>SIP Trunk</b></p><p>
+                <ul id="ul_mwc_tt3_kfb">
+                    <li>Fixed the issue that if blank spaces were included in a SIP trunk name, no
+                        inbound calls could reach the SIP trunk.</li>
+                    <li>Added support for entering special character <codeph>@</codeph> in the
+                            <uicontrol>Authentication Name</uicontrol> field.</li>
+                    <li>Fixed the WebRTC Trunk issue: The WebRTC trunk could not work if the trunk
+                        number was the same with an extension number.</li>
+                </ul>
+            </p><p><b>Call Features</b></p><p>
+                <ul id="ul_qfh_dy3_kfb">
+                    <li>Optimized Call Pickup: Users can see the incoming caller ID before they pick
+                        up the call.</li>
+                    <li>Optimized Call Pickup: If an extension's incoming call is picked up by other
+                        person, the extension's phone will not display any information of "missed
+                        call".</li>
+                    <li>Fixed the Call Forwarding issue: The system would hang up if a call was
+                        forwarded to a queue.</li>
+                    <li>Fixed the BLF monitoring issue on Extension: The BLF LED could not properly
+                        indicate the monitored extension's status if the extension had multiple
+                        calls at the same time.</li>
+                    <li>Fixed the BLF monitoring issue on Extension: The BLF LED status was
+                        incorrect when the monitored extension was not registered. </li>
+                    <li>Fixed the BLF monitoring issue on Static Agent: The BLF LED status was
+                        incorrect if the agent's <uicontrol>Caller ID Name</uicontrol> was not the
+                        extension number.</li>
+                    <li>Fixed the issue that if password was set on a queue, the dynamic agents
+                        might not receive incoming calls.</li>
+                </ul>
+            </p><p><b>Call Control</b></p><p>
+                <ul id="ul_wyw_v4v_1gb">
+                    <li>Fixed the issue that the PBX would route inbound calls to incorrect
+                        destinations if multiple Account Trunk existed on the PBX.</li>
+                </ul>
+            </p><p><b>Import Function</b></p><p>
+                <ul id="ul_yt5_px3_kfb">
+                    <li>Optimized the Import function for <xref
+                            href="../references/import_parameters_extensions.dita#reference_pq4_yzh_mfb"
+                            >Extensions</xref>, <xref
+                            href="../references/import_parameters_trunks.dita#reference_g3l_3f3_mfb"
+                            >Trunks</xref>, <xref
+                            href="../references/import_parameters_inbound_routes.dita#reference_zrm_gj3_mfb"
+                            >Inbound Routes</xref>, and <xref
+                            href="../references/import_parameters_outbound_routes.dita#reference_b4g_lj3_mfb"
+                            >Outbound Routes</xref>.</li>
+                </ul>
+            </p><b>API Interfaces</b><p id="api_1.1.0_cloud">
+                <ul id="ul_mfx_cp3_kfb">
+                    <li>The IP address that exceeds the allowed failed login attempts would be
+                        listed on the PBX <uicontrol>Block IP Address</uicontrol> page.<p>You can
+                            delete the trusted IP address from the blacklist.</p></li>
+                    <li>Added Transfer Inbound Calls interface.<p>Through this interface, inbound
+                            calls can be transferred to different destinations, like extension, IVR,
+                            queue, etc.</p></li>
+                    <li>Added Transfer Outbound Calls interface.<p>Through this interface, outbound
+                            calls can be transferred to different destinations, like extension, IVR,
+                            queue, etc.</p></li>
+                    <li>
+                        <p>Through this interface, PBX will do the following operations for the
+                            hotel extension:</p>
+                        <p>
+                            <ul id="ul_evl_4p3_kfb">
+                                <li>Empty the extension's voicemail box.</li>
+                                <li>Delete the extension's outbound route permissions. </li>
+                                <li>Delete the extension's alarms.</li>
+                                <li>Reset the extension's <uicontrol>Caller ID name</uicontrol>
+                                    setting.</li>
+                            </ul>
+                        </p>
+                    </li>
+                    <li>Optimized "Prompt Play End" report:<p>After an IVR prompt is played, PBX
+                            will send an API report to the 3rd-party application server.</p></li>
+                    <li>Optimized API reports: All the API reports include SN parameters.</li>
+                    <li>Added the following failure reasons in "Call Failure" report:<p>
+                            <ul id="ul_tmq_vnv_1gb">
+                                <li>404 NOT found</li>
+                                <li>480 Temporarily unavailable</li>
+                                <li>484 Address Incomplete</li>
+                                <li>486 Busy Here</li>
+                                <li>487 Request Terminated</li>
+                                <li>603 Declined</li>
+                            </ul>
+                        </p></li>
+                    <li>Fixed the issue that "Call an External Number via IVR" would not generate
+                        CDR.</li>
+                </ul>
+            </p><p><b>System Email</b></p><p>
+                <ul id="ul_rqn_zz3_kfb">
+                    <li>Added support for configuring Email User Name.</li>
+                </ul>
+            </p><p><b>Event Center</b></p><p>
+                <ul id="ul_zw5_cr3_kfb">
+                    <li>Added <uicontrol>System New Firmware Detection</uicontrol> event.<p>When the
+                            a new PBX firmware is detected, PBX will send the event notification.
+                            The event notification is disabled by default.</p></li>
+                    <li>Renamed the <uicontrol>Application Upgrade</uicontrol> to
+                            <uicontrol>Application New Version Detection</uicontrol>.<p>When a new
+                            Application is detected, PBX will send then event notification. The
+                            event notification is disabled by default.</p></li>
+                    <li>Added <uicontrol>Application Upgrade</uicontrol> event.<p>When a Application
+                            is upgraded, PBX will send the event notification. The event
+                            notification is disabled by default.</p></li>
+                </ul>
+            </p><p><b>System Log</b></p><p>
+                <ul id="ul_trt_2r3_kfb">
+                    <li>Added support for recording Linkus server logs.</li>
+                </ul>
+            </p><p><b>Operation Log</b></p><p>
+                <ul id="ul_k2f_k53_kfb">
+                    <li>The operations of checking extension's password would be recorded in
+                            <uicontrol>Operation Log</uicontrol>.<p>
+                            <note>These types of logs could not be deleted.</note>
+                        </p></li>
+                </ul>
+            </p></section>
+    </conbody>
+</concept>

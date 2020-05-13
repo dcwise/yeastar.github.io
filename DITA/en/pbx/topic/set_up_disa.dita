@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_bwc_ssf_qfb">
+    <title>Set up DISA</title>
+    <shortdesc>Add a DISA and set the Inbound Route destination to DISA.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/10/30"/>
+            <!--Carol-->
+            <revised modified="2018/10/30"/>
+            <!--Carol-->
+            <revised modified="2018/10/31"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Add a DISA.</cmd>
+                <substeps id="substeps_iny_ysf_qfb">
+                    <substep>
+                        <cmd>Go to <menucascade>
+                                <uicontrol>Settings</uicontrol>
+                                <uicontrol>PBX</uicontrol>
+                                <uicontrol>Call Features</uicontrol>
+                                <uicontrol>DISA</uicontrol>
+                            </menucascade>, click <uicontrol>Add</uicontrol>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>On the DISA configuration page, finish the DISA configurations.</cmd>
+                        <info><image href="../Images/admin/disa.png" id="image_tw4_rnn_tdb"
+                                width="650"/></info>
+                        <info>
+                            <ul>
+                                <li><uicontrol>Name</uicontrol>: Set the DISA name.</li>
+                                <li><uicontrol>Password</uicontrol>: Set password for the DISA.</li>
+                                <li><uicontrol>Response Timeout</uicontrol>: The maximum amount of
+                                    time it will wait before hanging up if the user has dialled an
+                                    incomplete or invalid number.</li>
+                                <li><uicontrol>Digit Timeout</uicontrol>: The maximum amount of time
+                                    permitted between digits.</li>
+                                <li><uicontrol>Member Outbound Routes</uicontrol>: Select the
+                                    outbound routes that can be accessed from the DISA.</li>
+                            </ul>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Click <uicontrol>Save</uicontrol> and
+                            <uicontrol>Apply</uicontrol>.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Set Inbound Route destination to DISA.</cmd>
+                <substeps id="substeps_uvp_ptf_qfb">
+                    <substep>
+                        <cmd>Go to <menucascade>
+                                <uicontrol>Settings</uicontrol>
+                                <uicontrol>PBX</uicontrol>
+                                <uicontrol>Call Control</uicontrol>
+                                <uicontrol>Inbound Route</uicontrol>
+                            </menucascade>, edit your inbound route.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Set the Inbound <uicontrol>Destination</uicontrol> to the DISA.</cmd>
+                        <info><image href="../Images/admin/inbound_route_disa.png"
+                                id="image_ngs_bnf_qfb" width="650"/></info>
+                    </substep>
+                    <substep>
+                        <cmd>Click <uicontrol>Save</uicontrol> and
+                            <uicontrol>Apply</uicontrol>.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Test DISA.</cmd>
+                <substeps id="substeps_b2k_nwf_qfb">
+                    <substep>
+                        <cmd>Make an inbound call to the PBX, you will get a dial tone after
+                            inputting a correct DISA pin code.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Dial the external number that you want to call.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

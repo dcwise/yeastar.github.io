@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_tbc_kqz_zcb">
+  <title>Mobility Extension</title>
+  <shortdesc>Yeastar Mobility Extension allows you to stay in contact with colleagues and clients
+    using either office phone or mobile phone with the same extension number. </shortdesc>
+  <body>
+    <section id="section_unp_clr_w3b">
+      <title>Scenarios</title>
+      <p>When you're out of office or on a business trip, the mobility extension allows your mobile
+        phone to have the same permissions as the office phone and frees you from missing any
+        business calls. With mobility extension feature, you can achieve the followings.</p>
+      <p>
+        <ul id="ul_i5v_fny_w3b">
+          <li>Place free calls to your colleagues.</li>
+          <li>Call external numbers using the trunks on the PBX.</li>
+          <li>Receive calls using your mobile phone wherever and whenever calls reach your extension
+            number.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_zt4_4lr_w3b">
+      <title>Configure Mobility Extension</title>
+      <p>
+        <ol>
+          <li>Log in the PBX web interface, go to <menucascade>
+              <uicontrol>Settings</uicontrol>
+              <uicontrol>Extensions</uicontrol>
+            </menucascade>, click <image id="image_srq_1wy_w3b" href="../Images/ui_icons/edit.png"
+              width="20"/> beside the extension that you want to edit.<p>
+              <note>If Linkus is enabled for the extension, this extension has no Mobility Extension
+                feature and the relevant settings are hidden automatically.</note>
+            </p></li>
+          <li>On <uicontrol>Edit Extension</uicontrol> page, click <uicontrol>Features</uicontrol>
+            tab.</li>
+          <li>In the <uicontrol>Mobility Extension</uicontrol> section, select the checkbox of
+              <uicontrol>Enable Mobility Extension</uicontrol>.</li>
+          <li>Set the mobile number and prefix.<p>
+              <ul id="ul_vlf_p2x_w3b">
+                <li><uicontrol>Set Mobile Number</uicontrol>: Enter your mobile number to associate
+                  your mobile number with extension number.</li>
+                <li><uicontrol>Prefix</uicontrol>: Optional. Enter <xref
+                    href="dial_patterns_of_outbound_route.dita#concept_y3j_ns1_ydb/section_u5r_h51_ydb"
+                    >prefix of outbound route</xref> so that PBX can successfully route incoming
+                  calls to your mobile phone.</li>
+              </ul>
+            </p></li>
+          <li importance="optional">Select the checkbox of <uicontrol>Ring
+              Simultaneously</uicontrol>.<p>When a call reaches your office phone, your mobile phone
+              will ring simultaneously.</p></li>
+          <li>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</li>
+        </ol>
+      </p>
+    </section>
+    <section id="section_qdp_jpx_w3b">
+      <title>Use Mobility Extension</title>
+      <p>After configuring mobility extension, you can use your mobile phone to call in the PBX as
+        follows.</p>
+      <p>
+        <ol>
+          <li>Dial a trunk number of the PBX.<p>You will hear a voice prompt asking you to dial a
+              phone number that you want to call.</p></li>
+          <li>Dial an extension number or an external number. <ul id="ul_iqp_xyf_x3b">
+              <li><b>Dial an extension number</b><p>The called party will see caller ID
+                    "<varname>mobile_number</varname>
+                &lt;<varname>extension_number</varname>>".</p></li>
+            </ul><p>
+              <ul id="ul_txq_zyf_x3b">
+                <li><b>Dial an external number</b><p>The called party will see caller ID
+                      "<varname>mobile_number</varname>". </p><note>
+                    <ul id="ul_vtf_whg_x3b">
+                      <li>Make sure the prefix of mobile number matches the dial patterns of
+                        outbound route.</li>
+                      <li>
+                        <p>Make sure at least two trunks are available on PBX. When you use your
+                          mobile phone to call in the PBX, the trunk which routes your incoming call
+                          to PBX will be occupied, PBX needs another trunk to call the external
+                          number out.</p>
+                      </li>
+                    </ul>
+                  </note></li>
+              </ul>
+            </p></li>
+        </ol>
+      </p>
+    </section>
+  </body>
+</topic>

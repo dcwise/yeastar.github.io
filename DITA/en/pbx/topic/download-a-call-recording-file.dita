@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+  PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topicID">
+   <title>Download a Call Recording
+File</title>
+   <body>
+      <p>Through this interface, call recording files of the S-Series
+VoIP PBX can be acquired.</p>
+      <p>How to:</p>
+      <p>Step1: fetch the name of the global recording file through the
+“recording” parameter in the CDR event</p>
+      <p>Step 2: get a random string consisting of numbers and
+characters, which is created by the system, by sending a request
+with the file name (as the request example below) to S-Series.</p>
+      <p>Step 3: combine the random string with other elements to form a
+specific download address.</p>
+      <p>
+**说明：**随机串的有效时长为30秒，并且每个随机串使用过一次则失效。</p>
+      <p>**Request method: **POST(HTTPS)</p>
+      <p>**Request address: **<xref href="https://192.168.5.150:8088/api/v1.0.1/recording/get_random?token=3efd4cd64e0d06e84a98230601428106"
+               format="html"
+               scope="external">https://192.168.5.150:8088/api/v1.0.1/recording/get_random?token=3efd4cd64e0d06e84a98230601428106</xref>
+      </p>
+      <p>
+         <b>Request sample:</b>
+      </p>
+      <p>
+{“recording”:“20170901181806-1504261084.7-1001-1003-Internal.wav”}</p>
+      <p>
+         <b>Request parameters descriptions:</b>
+      </p>
+      <table>
+         <tgroup cols="4">
+            <thead>
+               <row>
+                  <entry>Parameter Name</entry>
+                  <entry>Type</entry>
+                  <entry>Description</entry>
+                  <entry>Sample</entry>
+               </row>
+            </thead>
+            <tbody>
+               <row>
+                  <entry>&lt;recording&gt;</entry>
+                  <entry>string</entry>
+                  <entry>The name of the call recording file</entry>
+                  <entry>hello001</entry>
+               </row>
+            </tbody>
+         </tgroup>
+      </table>
+      <p>
+         <b>Response sample:</b>
+      </p>
+      <p>
+{“status”:“Success”,“recording”:“20170901181806-1504261084.7-1001-1003-Internal.wav”,“random”:“120732c546381fb020f17fba676b0ea0”}</p>
+      <p>
+         <b>Responseparameters:</b>
+      </p>
+      <table>
+         <tgroup cols="4">
+            <thead>
+               <row>
+                  <entry>Parameter Name</entry>
+                  <entry>Type</entry>
+                  <entry>Description</entry>
+                  <entry>Sample</entry>
+               </row>
+            </thead>
+            <tbody>
+               <row>
+                  <entry>&lt;status&gt;</entry>
+                  <entry>string</entry>
+                  <entry>Result</entry>
+                  <entry>Success or Failed</entry>
+               </row>
+               <row>
+                  <entry>&lt;recording&gt;</entry>
+                  <entry>string</entry>
+                  <entry>The name of the global recording file</entry>
+                  <entry>Hello001</entry>
+               </row>
+               <row>
+                  <entry>&lt;random&gt;</entry>
+                  <entry>string</entry>
+                  <entry>A random string created for call recording file
+download. It serves as a component of a specified request address
+for download.</entry>
+                  <entry/>
+               </row>
+            </tbody>
+         </tgroup>
+      </table>
+      <p>
+         <b>Download requestaddresssample(random string combination
+method):</b>
+      </p>
+      <p>
+         <xref href="https://192.168.5.150:8088/api/v1.0.1/recording/download?recording=20170724103619-1500860177.268-2000-2001-Internal.wav&amp;random=7e60c59d187783f06ccc03621c4ad736&amp;token=75c5891b32203d0615f9e3753a7cb779"
+               format="html"
+               scope="external">https://192.168.5.150:8088/api/v1.0.1/recording/download?recording=20170724103619-1500860177.268-2000-2001-Internal.wav&amp;random=7e60c59d187783f06ccc03621c4ad736&amp;token=75c5891b32203d0615f9e3753a7cb779</xref>
+      </p>
+   </body>
+</topic>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_zbg_v1c_5cb">
+    <title>Register Zoiper Soft Phone with <ph keyref="product_name"/></title>
+    <shortdesc>This guide is based on the Zoiper PC client v5.2.12  and <ph keyref="product_name"/>
+        <ph product="cloudpbx">v81.8.0.7</ph><ph product="s-series">v30.8.0.14</ph>.</shortdesc>
+    <taskbody>
+        <steps id="steps_p5p_cdc_5cb">
+            <step>
+                <cmd>Launch Zoiper PC client, enter the extension number and the extension's
+                        <uicontrol>Registration Password</uicontrol>, then click
+                        <uicontrol>Login</uicontrol>.</cmd>
+                <info><image href="../Images/admin/register_zoiper1.png" id="image_iq2_wdc_5cb"
+                        height="300"/></info>
+            </step>
+            <step>
+                <cmd>Enter the domain<ph product="s-series"> or IP address</ph> of your PBX, click
+                        <uicontrol>Next</uicontrol>.</cmd>
+                <info><image href="../Images/admin/register_zoiper2.png" id="image_fhy_wdn_ycb"
+                        height="300"/></info>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Skip</uicontrol>.</cmd>
+                <info><image href="../Images/admin/register_zoiper3.png" height="300"
+                        id="image_x2q_k2n_ycb"/></info>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Next</uicontrol>.</cmd>
+                <info><image href="../Images/admin/register_zoiper4.png" height="300"
+                        id="image_wh3_42n_ycb"/></info>
+            </step>
+            <step>
+                <cmd>Check the account status.</cmd>
+                <info>If the extension is registered, you can see the status shows as the following
+                            figure.<p><image href="../Images/admin/register_zoiper5.png"
+                            height="300" id="image_zfz_52n_ycb"/></p></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

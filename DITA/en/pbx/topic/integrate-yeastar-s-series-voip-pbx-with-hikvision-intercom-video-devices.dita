@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="integrate-yeastar-s-series-voip-pbx-with-hikvision-intercom-video-devices">
+    <title>Integrate <ph keyref="product_name"/> with Hikvision Intercom Video Devices</title>
+    <shortdesc>By integrating <ph keyref="product_name"/> with Hikvision Video Intercom Indoor &amp;
+        Door Station, you can establish video &amp; audio call between the Indoor Station and the
+        Door Station.</shortdesc>
+    <body>
+        <section id="section_efp_1xj_k3b" product="s-series"><title>Local Network (Tested
+                Environment)</title>In this guide, the Hikvision devices and Yeastar PBX are in the
+            same local network.<p>
+                <fig id="fig_ajc_pgm_l3b">
+                    <title>Local Network Topology</title>
+                    <image href="../Images/sip-endpoints/hikvision/hikvision-s-series-lan.png"
+                        width="750" id="image_bjc_pgm_l3b"/>
+                </fig>
+            </p><p>The following table shows the information of the tested environment.</p><p>
+                <table frame="all" id="table_jtw_gxj_k3b">
+                    <tgroup cols="3">
+                        <colspec colname="c1" colnum="1" colwidth="2.05*" colsep="1" rowsep="1"/>
+                        <colspec colname="c2" colnum="2" colwidth="1*" colsep="1" rowsep="1"/>
+                        <colspec colname="c3" colnum="3" colwidth="1.52*" colsep="1" rowsep="1"/>
+                        <thead>
+                            <row>
+                                <entry>Device</entry>
+                                <entry>Firmware Version</entry>
+                                <entry>IP Address</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row product="s-series">
+                                <entry>Yeastar S100</entry>
+                                <entry>30.10.0.67</entry>
+                                <entry>192.168.9.217</entry>
+                            </row>
+                            <row>
+                                <entry>Hikvision DS-KH6320 Indoor Station</entry>
+                                <entry>V2.0.2</entry>
+                                <entry>192.168.9.211</entry>
+                            </row>
+                            <row>
+                                <entry>Hikvision DS-KD8003 Door Station</entry>
+                                <entry>V2.1.0</entry>
+                                <entry>192.168.9.209</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p></section>
+        <section id="section_uyh_qxj_k3b" product="s-series">
+            <title>Public Network</title>
+            <p>If your PBX is not in the same network with Hikvision devices, you need to do port
+                forwarding on the router.<ul id="ul_j5m_vmw_k3b">
+                    <li>SIP registration port: Default UDP 5060</li>
+                    <li>RTP ports:  Default UDP 10000-12000 </li>
+                </ul></p>
+            <p>
+                <note>Hikvision devices and the iVMS 4200 client must in the same local
+                    network.</note>
+            </p>
+        </section>
+        <section id="section_yk2_s3m_l3b" product="cloudpbx">
+            <title>Tested Environment</title>
+            <p>The following diagram shows how the testing network is configured for reference.</p>
+            <p><image href="../Images/sip-endpoints/hikvision/hikvision-cloudpbx.png" width="750"
+                    id="image_pzl_bwm_l3b"/></p>
+            <p>The following table shows the information of the tested environment.</p>
+            <p>
+                <table frame="all" id="table_x2z_cwm_l3b">
+                    <tgroup cols="3">
+                        <colspec colname="c1" colnum="1" colwidth="2.05*" colsep="1" rowsep="1"/>
+                        <colspec colname="c2" colnum="2" colwidth="1*" colsep="1" rowsep="1"/>
+                        <colspec colname="c3" colnum="3" colwidth="1.52*" colsep="1" rowsep="1"/>
+                        <thead>
+                            <row>
+                                <entry>Device</entry>
+                                <entry>Firmware Version</entry>
+                                <entry>IP Address/Domain</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>Yeastar Cloud PBX</entry>
+                                <entry>81.8.0.85</entry>
+                                <entry>yeastar.cloudpbx.com</entry>
+                            </row>
+                            <row>
+                                <entry>Hikvision DS-KH6320 Indoor Station</entry>
+                                <entry>V2.0.2</entry>
+                                <entry>192.168.9.211</entry>
+                            </row>
+                            <row>
+                                <entry>Hikvision DS-KD8003 Door Station</entry>
+                                <entry>V2.1.0</entry>
+                                <entry>192.168.9.209</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+    </body>
+</topic>

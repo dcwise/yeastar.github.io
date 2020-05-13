@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_ytn_yds_l2b">
+    <title>Monitor Agent Status by BLF</title>
+    <shortdesc>In a call center scenario, a supervisor can set BLF keys to monitor if the agents are
+        in a specific queue. An agent can also set a BLF key to monitor his own status.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/07/13"/>
+            <!--Carol-->
+            <revised modified="2018/07/13"/>
+            <!--Carol-->
+            <revised modified="2018/07/24"/>
+            <!--Carol-->
+            <revised modified="2018/07/30"/>
+            <!--Carol-->
+            <revised modified="2018/10/24"/>
+            <!--Carol-->
+            <revised modified="2018/10/25"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <context>
+            <p>This topic is based on the Htek UC912 v2.0.4.4.33. </p>
+            <p>
+                <note>Monitoring agent status is supported in the firmware version 30.8.0.8 or
+                    later.</note>
+            </p>
+            <p>We will set a BLF key to monitor if the agent 1001 is in the queue 6700 or not. </p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Log in the phone web interface, go to <menucascade>
+                        <uicontrol>Function Keys</uicontrol>
+                        <uicontrol>Line Key</uicontrol>
+                    </menucascade>.</cmd>
+            </step>
+            <step>
+                <cmd>Set a BLF key to monitor extension 1001.</cmd>
+                <info><image href="../Images/admin/phone_monitor_agent_status.png"
+                        id="image_vrk_hgs_l2b"/></info>
+                <choices>
+                    <choice><uicontrol>Type</uicontrol>: Set to <uicontrol>BLF</uicontrol>.</choice>
+                    <choice><uicontrol>Value</uicontrol>: The BLF key format is
+                            <codeph>*75[EXT_NUM]*[QUEUE_NUM]</codeph>. In this example, set to
+                            <codeph>*751001*6700</codeph>.</choice>
+                    <choice><uicontrol>Account</uicontrol>: Select the account that has an extension
+                        registered to the PBX.</choice>
+                </choices>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>SaveSet</uicontrol>.</cmd>
+                <stepresult>Check the BLF LED status:<p>
+                        <note>Different brands of IP phone may have different LED
+                            indications.</note>
+                    </p><p>
+                        <ul id="ul_xws_zgs_l2b">
+                            <li><b>Green LED</b>: The agent 1001 is not in the queue 6700.</li>
+                            <li><b>Red LED</b>: The agent 1001 is in the queue 6700.</li>
+                            <li><b>BLF LED is off</b>: Check if your configurations are
+                                correct.</li>
+                        </ul>
+                    </p></stepresult>
+            </step>
+        </steps>
+    </taskbody>
+</task>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_ryp_zxy_ngb">
+    <title>Set up Dyn DDNS on <ph keyref="product_name"/></title>
+    <shortdesc>If your ISP doesn't provide a static IP address for you, you can create a Dyn Dynamic
+        DNS account, and set up DDNS on <ph keyref="product_name"/>.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2019/01/23"/>
+            <!--Carol-->
+            <revised modified="2019/01/23"/>
+        </critdates>
+    </prolog>
+    <body>
+        <section>
+            <title>Step 1. Create a Dyn account </title>
+            <p>
+                <ol id="ol_oxr_qpx_ngb">
+                    <li>Go to the <xref href="https://account.dyn.com/entrance/" format="html"
+                            scope="external">Dyn Sign Up page</xref>.</li>
+                    <li>On the new account form, set your account username, password and enter your
+                        email address.<p><image href="../Images/admin/create-dyn-account.png"
+                                id="image_kbq_bks_ngb" width="500"/></p></li>
+                    <li>Click <uicontrol>Create Account</uicontrol><p>Dyn will send a confirmation
+                            email to your email address.</p></li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_z3v_gqx_ngb"><title>Step 2. Confirm your Dyn account</title>Check your
+            email inbox and click the confirmation link.<p><image
+                    href="../Images/admin/dyn-ddns-confirmation.png" id="image_y42_pcz_ngb"
+            /></p></section>
+        <section id="section_zdn_lqx_ngb">
+            <title>Step 3. Set up No-IP DDNS on PBX</title>
+            <p>
+                <ol>
+                    <li> Log in the PBX web interface, go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol>System</uicontrol>
+                        <uicontrol>DDNS Settings</uicontrol>
+                    </menucascade>.</li>
+                    <li> Check the option <uicontrol>Enable DDNS</uicontrol>.</li>
+                    <li> Set <uicontrol>DDNS Server</uicontrol> to
+                        <uicontrol>www.no-ip.com</uicontrol>.</li>
+                    <li> Enter your No-IP account information and the fully qualified domain
+                        name.</li>
+                    <li> Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</li>
+                </ol>
+            </p>
+            <p><image href="../Images/admin/ddns-settings-no-ip.png" id="image_o24_qns_ngb"/></p>
+        </section>
+        <section id="section_tdh_pqx_ngb">
+            <title>Step 4. Set up Port Forwarding and NAT</title>
+        </section>
+        <p>If your PBX is behind a router, you need to <xref
+            href="port_forwarding.dita#concept_iff_ywc_zdb">set up Port Forwarding on the
+            router</xref> to allow external devices access to the PBX.</p>
+        <p>To ensure that the external traffic packets can be sent to the correct destination, you
+            need to set NAT on your PBX.</p>
+        <p>
+            <note type="important">To enhance the security of your PBX, we suggest you change the
+                default ports.</note>
+        </p>
+        <table frame="all" rowsep="1" colsep="1" id="table_x2j_drx_ngb">
+            <title>Common Ports on <ph keyref="product_name"/></title>
+            <tgroup cols="2">
+                <colspec colname="c1" colnum="1" colwidth="1*"/>
+                <colspec colname="c2" colnum="2" colwidth="1*"/>
+                <tbody>
+                    <row>
+                        <entry>Web</entry>
+                        <entry>8022</entry>
+                    </row>
+                    <row>
+                        <entry>SIP</entry>
+                        <entry>5060</entry>
+                    </row>
+                    <row>
+                        <entry>RTP </entry>
+                        <entry>10000-12000</entry>
+                    </row>
+                    <row>
+                        <entry>Linkus </entry>
+                        <entry>8111</entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+        <p>
+            <note type="tip">To verify that you have set up your router correctly, you can visit the
+                website at <xref href="http://www.portchecktool.com/" format="html" scope="external"
+                    >www.portchecktool.com</xref>.</note>
+        </p>
+        <section id="section_gfk_mrx_ngb">
+            <title>Step 5. Check the DDNS connection</title>
+            <p>To check the connection of an external device from the Internet, enter the domain
+                name and external port to access the PBX.</p>
+        </section>
+        <example><i><b>Example: Access PBX by DDNS</b></i><p>On a PC that is NOT in the PBX's
+            network, enter the domain name and external web port to access the PBX web
+            interface.</p><p><image href="../Images/admin/no-ip-ddns-web.png" width="450"
+                id="image_jg3_yvx_ngb"/></p></example>
+        <example><i><b>Example: Register remote extension by DDNS</b></i><p>On an IP phone that is
+            NOT in the PBX's network, enter the domain name and external SIP port to register
+            remote extension.</p><p><image
+                href="../Images/admin/no-ip-ddns-remote-extension.png" width="450"
+                id="image_exv_1yx_ngb"/></p></example>
+    </body>
+</topic>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_kgb_rb2_2jb">
+    <title>Outbound Restriction Overview</title>
+    <shortdesc>Outbound Restriction is used to limit how many outbound calls extension users can
+        make within specified time period.</shortdesc>
+    <conbody>
+        <section id="section_q2z_hrf_2jb">
+            <title>Scenarios</title>
+            <p><b>Avoid toll fraud</b></p>
+            <p>Most toll fraud is committed from the outside. Hackers may attack the system by
+                registering to extensions and making outbound calls frequently.</p>
+            <p>With the Outbound Restriction rules, if extension users make outbound calls over the
+                limited frequency, the extensions will be blocked and unable to make outbound calls.
+            </p>
+        </section>
+        <section id="section_xld_gtf_2jb">
+            <title>Default outbound restriction rule</title>
+            <p>The PBX has a default rule to limit users to make maximum 5 outbound calls in 1
+                minute. You can add another Outbound Restriction rule according to your needs.</p>
+            <p>
+                <note>We recommend that you keep the default Outbound Restriction rule.</note>
+            </p>
+            <p><image href="../Images/admin/default-outbound-restriction.png" width="600"
+                    id="image_kwx_x3l_2jb"/></p>
+        </section>
+        <section id="section_gwh_3jl_2jb">
+            <title>Cancel restriction of outbound calls</title>
+            <p>If a user makes outbound calls over the limit, the extension will be locked and
+                prohibited from making outbound calls. On <uicontrol>Extensions</uicontrol> list,
+                the extension status will display <image href="../Images/ui_icons/constraint.png"
+                    width="20" id="image_kxh_m5v_fjb"/>.</p>
+            <p>Double click the icon <image href="../Images/ui_icons/constraint.png" width="20"
+                    id="image_z2f_xjv_4fb"/>, the extension will be able to make outbound calls
+                again.</p>
+            <p><image href="../Images/admin/extension_restricted.png" id="image_w4k_pjv_4fb"/></p>
+        </section>
+    </conbody>
+</concept>

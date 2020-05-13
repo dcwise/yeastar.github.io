@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+  PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topicID">
+   <title>Call Report {#call-report}</title>
+   <body>
+      <section>
+         <title>Ringing
+{#ringing}</title>
+         <p>The PBX will send a report to the application server when an
+extension is ringing.</p>
+         <p>Ringing (the called party) and ring back (the calling party)
+coexist. Calls with external numbers and internal calls will both
+be reported. In the report, the party who triggers the call will
+appear first.</p>
+         <p>
+            <b>Report sample:</b>
+         </p>
+         <ol>
+            <li>
+               <b>An internal call between extensions:</b>
+            </li>
+         </ol>
+         <p>
+{“action”:“RING”,“callid”:“1495706238.328”,“ext”:{“extid”:“1000”},“ext”:{“extid”:“1002”}}</p>
+         <ol>
+            <li>
+               <b>An external call:</b>
+            </li>
+         </ol>
+         <p>
+{“action”:“RING”,“callid”:“1495771030.365”,“outbound”:{“from”:“1002”,“to”:“42003”,“trunk”:“sip-142”,“outboundid”:“1495771030.366”},“ext”:{“extid”:“1002”}}</p>
+      </section>
+      <section>
+         <title>Ring Back {#ring-back}</title>
+         <p>The PBX will send a report to the application server when the
+called party (extension/inbound call) rings back the calling
+party.</p>
+         <p>Ringing (the called party) and ring back (the calling party)
+coexist. Calls with external numbers and internal calls will both
+be reported. In the report, the party who triggers the call will
+appear first.</p>
+         <p>
+            <b>Report sample:</b>
+         </p>
+         <p>
+{“action”:“ALERT”,“callid”:“1495706238.328”,“ext”:{“extid”:“1002”}}</p>
+      </section>
+      <section>
+         <title>Answer a Call
+{#answer-a-call}</title>
+         <p>The PBX will send a report to the application server when an
+extension answers a call.</p>
+         <p>Answering call (the called party) and call answered (the calling
+party) coexist. In the report, the party who triggers the call will
+appear first.</p>
+         <p>
+            <b>Report sample:</b>
+         </p>
+         <p>
+{“action”:“RI”,“callid”:“1495706238.328”,“ext”:{“extid”:“1000”},“ext”:{“extid”:“1002”}}</p>
+      </section>
+      <section>
+         <title>Call Answered
+{#call-answered}</title>
+         <p>The PBX will send a report to the application server when the
+calling party’s call is answered.</p>
+         <p>Answering call (the called party) and call answered (the calling
+party) coexist. In the report, the party who triggers the call will
+appear first.</p>
+         <p>
+            <b>Report sample:</b>
+         </p>
+         <p>
+{“action”:“ANSWERED”,“callid”:“1495706238.328”,“ext”:{“extid”:“1002”},“ext”:{“extid”:“1000”}}</p>
+      </section>
+      <section>
+         <title>Call Released
+{#call-released}</title>
+         <p>The PBX will send a report to the application server when a call
+is released. In the report, the party who ends the call will appear
+first.</p>
+         <p>
+            <b>Report sample:</b>
+         </p>
+         <p>
+{“action”:“BYE”,“callid”:“1495706238.328”,“ext”:{“extid”:“1000”},“ext”:{“extid”:“1002”}}</p>
+      </section>
+      <section>
+         <title>Call Transfer
+{#call-transfer}</title>
+         <p>When there is a call transferred inside the PBX, the PBX will
+send a report to the application server.</p>
+         <p>The report only includes operations performed by the extensions,
+for example, dialing “_03” and “_3” feature
+codes, follow me settings, etc. Transfer controlled by API will not
+be reported.</p>
+         <p>
+            <b>Report sample:</b>
+         </p>
+         <p>
+{“action”:“Tranfer”,“callid”:“1494834266.75”,“inbound”:{“from”:“3009”,“to”:“2002”,“trunk”:“DIGIT1”,“inboundid”:“1494834266.75”}}</p>
+      </section>
+      <section>
+         <title>Call Failure
+{#call-failure}</title>
+         <p>Generally, call failure event will appear in the response
+message of the API request. In certain circumstances, the PBX will
+send the report.</p>
+         <p>Call failure is defined as calls that are failed to connect.</p>
+         <p>Failure of calls initiated manually and by the API will both be
+reported.</p>
+         <p>
+            <b>Report sample:</b>
+         </p>
+         <ol>
+            <li>
+               <b>Extension outbound call restriction:</b>
+            </li>
+         </ol>
+         <p>
+{“action”:“CallFailed”,“reason”:“NO
+Outbound
+Restriction”,“callid”:“1495420603.349”}</p>
+         <ol>
+            <li>
+               <b>DND enabled:</b>
+            </li>
+         </ol>
+         <p>
+{“action”:“CallFailed”,“reason”:“DND”,“callid”:“1495186077.229”,“ext”:{“extid”:“1005”}}</p>
+         <ol>
+            <li>
+               <b>No available trunks:</b>
+            </li>
+         </ol>
+         <p>
+{“action”:“CallFailed”,“reason”:“Line
+unreachable”,“callid”:“1495184155.216”,“ext”:{“extid”:“1002”}}</p>
+         <ol>
+            <li>
+               <b>Extension A dials extension B, extension B (call
+forwarding disabled) rejects the call:</b>
+            </li>
+         </ol>
+         <p>
+{“action”:“CallFailed”,“reason”:“User
+busy”,“callid”:“1495770583.355”}</p>
+      </section>
+      <section>
+         <title>Inbound Call
+Request {#inbound-call-request}</title>
+         <p>If the trunk’s API has Inbound Call Answering Control
+enabled, then whenever there’s a call to this trunk, the PBX
+will send an INVITE event to the application server.</p>
+         <p>
+            <b>Report sample:</b>
+         </p>
+         <p>
+{“action”:“Invite”,“callid”:“1495707950.331”,“inbound”:{“from”:“1000”,“to”:“1002”,“trunk”:“sip-142”,“inboundid”:“1495707950.331”}}</p>
+      </section>
+      <section>
+         <title>Inbound Call
+{#inbound-call}</title>
+         <p>If the trunk’s API has Inbound Call Answering Control
+enabled, then when the trunk answers call, the PBX will send an
+Incoming event to the application server.</p>
+         <p>
+            <b>Report sample:</b>
+         </p>
+         <p>
+{“action”:“Incoming”,“callid”:“1495707950.331”,“inbound”:{“from”:“1000”,“to”:“1002”,“trunk”:“sip-142”,“inboundid”:“1495707950.331”}}</p>
+      </section>
+      <section>
+         <title>Keypress {#keypress}</title>
+         <p>This event is used report key pressed in the IVRs.</p>
+         <p>When a call reaches IVR, and the IVR’s keypress event is
+triggered, the PBX will send the event to the application
+server.</p>
+         <p>
+            <b>Report sample:</b>
+         </p>
+         <p>
+{“action”:“DTMF”,“callid”:“1495705009.315”,“outbound”:{“from”:“1002”,“to”:“41000”,“trunk”:“SIP-142”,“outboundid”:“1495705009.316”},“info”:“#”}</p>
+      </section>
+      <section>
+         <title>CDR {#cdr}</title>
+         <p>CDR is raw data of all call activities; records of all calls
+from the beginning to the end will be kept.</p>
+         <p>When a call is released, the PBX will send a report to the
+application server in real time.</p>
+         <p>
+            <b>Report sample:</b>
+         </p>
+         <ol>
+            <li>
+               <b>Extension’s Internal Call:</b>
+            </li>
+         </ol>
+         <p>
+{“action”:“NewCdr”,“callid”:“1495779310.371”,“timestart”:“2017-05-25
+22:15:10”,“callfrom”:“1002”,“callto”:“1000”,“desttrunkname”:"",“callduraction”:“3”,“talkduraction”:“2”,“status”:“ANSWERED”,“type”:“Internal”}</p>
+         <ol>
+            <li>
+               <b>Extension Dials External Call:</b>
+            </li>
+         </ol>
+         <p>
+{“action”:“NewCdr”,“callid”:“1495779454.374”,“timestart”:“2017-05-25
+22:17:34”,“callfrom”:“1002”,“callto”:“41004”,“desttrunkname”:“sip-142”,“callduraction”:“4”,“talkduraction”:“4”,“status”:“ANSWERED”,“type”:“Outbound”}</p>
+         <ol>
+            <li>
+               <b>External Number Dials Extension:</b>
+            </li>
+         </ol>
+         <p>
+{“action”:“NewCdr”,“callid”:“1495779821.377”,“timestart”:“2017-05-25
+22:23:41”,“callfrom”:“1000”,“callto”:“1002”,“srctrunkname”:“sip-142”,“callduraction”:“18”,“talkduraction”:“9”,“status”:“ANSWERED”,“type”:“Inbound”}</p>
+         <p>
+            <b>Report parameters descriptions:</b>
+         </p>
+         <table>
+            <tgroup cols="4">
+               <thead>
+                  <row>
+                     <entry>
+                        <b>Parameter Name</b>
+                     </entry>
+                     <entry>
+                        <b>Type</b>
+                     </entry>
+                     <entry>
+                        <b>Description</b>
+                     </entry>
+                     <entry>
+                        <b>Sample</b>
+                     </entry>
+                  </row>
+               </thead>
+               <tbody>
+                  <row>
+                     <entry>
+                        <b>&lt;cdrid&gt;</b>
+                     </entry>
+                     <entry>String</entry>
+                     <entry>The CDR ID</entry>
+                     <entry>123456789</entry>
+                  </row>
+                  <row>
+                     <entry>
+                        <b>[callid]</b>
+                     </entry>
+                     <entry>String</entry>
+                     <entry>A unique identifier for the call</entry>
+                     <entry>2000</entry>
+                  </row>
+                  <row>
+                     <entry>
+                        <b>[timestart]</b>
+                     </entry>
+                     <entry>String</entry>
+                     <entry>The start time of the call</entry>
+                     <entry>2017-05-25 22:26:20</entry>
+                  </row>
+                  <row>
+                     <entry>
+                        <b>[callfrom]</b>
+                     </entry>
+                     <entry>String</entry>
+                     <entry>The caller’s number</entry>
+                     <entry>1000</entry>
+                  </row>
+                  <row>
+                     <entry>
+                        <b>[callto]</b>
+                     </entry>
+                     <entry>String</entry>
+                     <entry>The callee’s number</entry>
+                     <entry>18000000</entry>
+                  </row>
+                  <row>
+                     <entry>
+                        <b>[callduraction]</b>
+                     </entry>
+                     <entry>String</entry>
+                     <entry>The call duration</entry>
+                     <entry>12:10:10 AM</entry>
+                  </row>
+                  <row>
+                     <entry>
+                        <b>[talkduraction]</b>
+                     </entry>
+                     <entry>String</entry>
+                     <entry>The talk duration</entry>
+                     <entry>00:10:00</entry>
+                  </row>
+                  <row>
+                     <entry>
+                        <b>[srctrunkname]</b>
+                     </entry>
+                     <entry>String</entry>
+                     <entry>The name of the source trunk</entry>
+                     <entry>Sps129</entry>
+                  </row>
+                  <row>
+                     <entry>
+                        <b>[dstrunkname]</b>
+                     </entry>
+                     <entry>String</entry>
+                     <entry>The name of the destination trunk</entry>
+                     <entry>Sps128</entry>
+                  </row>
+                  <row>
+                     <entry>
+                        <b>[status]</b>
+                     </entry>
+                     <entry>String</entry>
+                     <entry>Call status</entry>
+                     <entry>ANSWERED</entry>
+                  </row>
+                  <row>
+                     <entry>
+                        <b>[type]</b>
+                     </entry>
+                     <entry>String</entry>
+                     <entry>The call type</entry>
+                     <entry>Inbound, Outbound, Internal,</entry>
+                  </row>
+                  <row>
+                     <entry>
+                        <b>[pincode]</b>
+                     </entry>
+                     <entry>Int</entry>
+                     <entry>The password</entry>
+                     <entry>122</entry>
+                  </row>
+                  <row>
+                     <entry>
+                        <b>[recording]</b>
+                     </entry>
+                     <entry>String</entry>
+                     <entry>The name of the global recording file</entry>
+                     <entry>hello001</entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </section>
+      <section>
+         <title>Acquire
+Global Recording files {#acquire-global-recording-files}</title>
+         <p>Through this interface, global recording files of a IPPBX can be
+acquired.</p>
+         <p>The acquisition method is as follows:</p>
+         <p>Step1: fetch the name of the global recording file through the
+“recording” parameter in the CDR event Step 2: get a
+random string consisting of numbers and characters, which is
+created by the system, by sending a request with the file name (as
+the request example below) to IPPBX</p>
+         <p>Step 3: combine the randon string with other elements to form a
+specific download request address</p>
+         <p>
+            <b>Request method:</b> POST (HTTPS)</p>
+         <p>
+            <b>Request address:</b>
+         </p>
+         <p>
+            <xref href="https://192.168.5.150:8088/api/v1.0.1/recording/get_random?token=3efd4cd64e0d06e84a98230601428106"
+                  format="html"
+                  scope="external">https://192.168.5.150:8088/api/v1.0.1/recording/get_random?token=3efd4cd64e0d06e84a98230601428106</xref>
+         </p>
+         <p>
+            <b>Request sample:</b>
+         </p>
+         <p>
+{“recording”:“20170901181806-1504261084.7-1001-1003-Internal.wav”}</p>
+         <p>
+            <b>Request parameters descriptions:</b>
+         </p>
+         <table>
+            <tgroup cols="4">
+               <thead>
+                  <row>
+                     <entry>
+                        <b>Parameter Name</b>
+                     </entry>
+                     <entry>
+                        <b>Type</b>
+                     </entry>
+                     <entry>
+                        <b>Description</b>
+                     </entry>
+                     <entry>
+                        <b>Sample</b>
+                     </entry>
+                  </row>
+               </thead>
+               <tbody>
+                  <row>
+                     <entry>
+                        <b>&lt;recording&gt;</b>
+                     </entry>
+                     <entry>String</entry>
+                     <entry>The name of the global recording file</entry>
+                     <entry>hello001</entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+         <p>
+            <b>Response sample:</b>
+         </p>
+         <p>
+{“status”:“Success”,“recording”:“20170901181806-1504261084.7-1001-1003-Internal.wav”,“random”:“120732c546381fb020f17fba676b0ea0”}</p>
+         <p>
+            <b>Response parameters:</b>
+         </p>
+         <table>
+            <tgroup cols="4">
+               <thead>
+                  <row>
+                     <entry>
+                        <b>Parameter Name</b>
+                     </entry>
+                     <entry>
+                        <b>Type</b>
+                     </entry>
+                     <entry>
+                        <b>Description</b>
+                     </entry>
+                     <entry>
+                        <b>Sample</b>
+                     </entry>
+                  </row>
+               </thead>
+               <tbody>
+                  <row>
+                     <entry>
+                        <b>&lt;Status&gt;</b>
+                     </entry>
+                     <entry>String</entry>
+                     <entry>Result</entry>
+                     <entry>Success or Failed</entry>
+                  </row>
+                  <row>
+                     <entry>
+                        <b>&lt;recording&gt;</b>
+                     </entry>
+                     <entry>String</entry>
+                     <entry>The name of the global recording file</entry>
+                     <entry>Hello001</entry>
+                  </row>
+                  <row>
+                     <entry>
+                        <b>&lt;random&gt;</b>
+                     </entry>
+                     <entry>String</entry>
+                     <entry>A random string created for global recording file download. It
+serves as a component of a specified request address for
+download.</entry>
+                     <entry/>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+         <p>
+            <b>Download request address sample ( random string
+combination method):</b>
+         </p>
+         <p>
+            <xref href="https://192.168.5.150:8088/api/v1.0.1/recording/download?recording=20170724103619-1500860177.268-2000-2001-Internal.wav&amp;random=7e60c59d187783f06ccc03621c4ad736&amp;token=75c5891b32203d0615f9e3753a7cb779"
+                  format="html"
+                  scope="external">https://192.168.5.150:8088/api/v1.0.1/recording/download?recording=20170724103619-1500860177.268-2000-2001-Internal.wav&amp;random=7e60c59d187783f06ccc03621c4ad736&amp;token=75c5891b32203d0615f9e3753a7cb779</xref>
+         </p>
+      </section>
+      <section>
+         <title>Prompt Play End
+{#prompt-play-end}</title>
+         <p>This is used to report the event when the prompt played to the
+extension and the external number ends.</p>
+         <p>
+            <b>Report sample:</b>
+         </p>
+         <p>
+{“action”:“PlayPromptEnd”,“callid”:“1495780325.384”,“ext”:{“extid”:“1002”},“prompt”:“111”}</p>
+      </section>
+      <section>
+         <title>Customer
+Satisfaction Survey Result Sending
+{#customer-satisfaction-survey-result-sending}</title>
+         <p>Once the DTMF data is collected from callers, API will send the
+customer satisfaction survey result to the client
+automatically.</p>
+         <p>
+            <b>Report sample:</b>
+         </p>
+         <p>
+            <b>Report parameters descriptions:</b>
+         </p>
+         <table>
+            <tgroup cols="4">
+               <thead>
+                  <row>
+                     <entry>
+                        <b>Parameter Name</b>
+                     </entry>
+                     <entry>
+                        <b>Type</b>
+                     </entry>
+                     <entry>
+                        <b>Description</b>
+                     </entry>
+                     <entry>
+                        <b>Sample</b>
+                     </entry>
+                  </row>
+               </thead>
+               <tbody>
+                  <row>
+                     <entry>
+                        <b>&lt;surveyresult&gt;</b>
+                     </entry>
+                     <entry>String</entry>
+                     <entry>The result of the customer satisfaction survey. ( the DTMF data
+collected from the caller)</entry>
+                     <entry>1</entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </section>
+   </body>
+</topic>

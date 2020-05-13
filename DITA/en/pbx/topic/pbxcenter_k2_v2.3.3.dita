@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_f34_lpn_y2b">
+    <title>Version 2.3.3</title>
+    <abstract>Released Date: August 29, 2018</abstract>
+    <prolog>
+        <author type="creator">Yeastar</author>
+        <author type="contributor">Yeastar</author>
+        <critdates>
+            <created date="2018/08/28"/>
+            <!--Yeastar-->
+            <revised modified="2018/08/28"/>
+            <!--Carol-->
+            <revised modified="2018/08/28"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <section id="section_jwd_kxn_y2b"><title>New Feature</title><image
+                href="../Images/horizon.png" id="image_g2b_lvk_l2b"/><ul id="ul_yhs_nxn_y2b">
+                <li>Added a new SIP trunk type “Account Trunk”.</li>
+                <li>Added support for answering an intercom/paging call.</li>
+                <li>Added support for importing configurations of SIP register trunks.</li>
+                <li>Added support for importing configurations of outbound routes and inbound
+                    routes.</li>
+                <li>Added support for configuring IAX jitter buffer on Web page.</li>
+                <li>Added a default rule of outbound restriction: an extension user can make a
+                    maximum of 5 calls in 1 minute.</li>
+                <li>Added FTP access permission to the voicemail files and one-touch recording files
+                    which are stored in PBX local flash.</li>
+                <li>Added support for 1-Way Multicast Paging.</li>
+            </ul><ul id="ul_w5g_4xn_y2b">
+                <li>Added support for monitoring status of dynamic agents.</li>
+            </ul><ul id="ul_n5k_5xn_y2b">
+                <li>Added email template for <b>Voicemail to Email</b> and <b>Fax to Email</b>.</li>
+            </ul></section>
+        <section id="section_btz_nwn_y2b"><title>Optimization</title><image
+                href="../Images/horizon.png" id="image_c45_bb4_y2b"/><p>
+                <ul>
+                    <li>Improved the stability of the PBX.</li>
+                </ul>
+                <ul id="ul_i4x_swn_y2b">
+                    <li><b>Recording function</b><ul id="ul_k4x_swn_y2b">
+                            <li>Extension users can dial feature code to pause or resume recordings
+                                during a call. </li>
+                            <li>Added support for monitoring the recording status of an extension on
+                                a BLF key.</li>
+                        </ul></li>
+                    <li><b>Queue</b><ul id="ul_jdq_jzn_y2b">
+                            <li>Optimized Queue function: by default, the PBX would not ring the
+                                agent who is busy in a call. </li>
+                            <li>Optimized the Periodic Announcements of a Queue.</li>
+                        </ul></li>
+                </ul>
+                <ul>
+                    <li><b>API Interface</b><ul id="ul_mqy_5dp_y2b">
+                            <li>Added API interface to query queue status and agent status.</li>
+                            <li>Added API interface to pause or resume an agent's service.</li>
+                            <li>Added support for configuring an extension's outbound route.</li>
+                            <li>Added support for querying an extension's outbound route.</li>
+                            <li>The CDR reports will show DID number and the agent's ring time.</li>
+                        </ul></li>
+                </ul>
+            </p><ul id="ul_gdw_byn_y2b">
+                <li>
+                    <p><b>Security</b></p>
+                    <ul id="ul_xcy_byn_y2b">
+                        <li>Improved the security of web login.</li>
+                        <li>Improved the security of SSH login.</li>
+                    </ul>
+                </li>
+                <li>
+                    <p><b>Extension</b></p>
+                    <ul id="ul_ycy_byn_y2b">
+                        <li>Deleted the Name setting, added Caller ID name setting. Generally, set
+                            Caller ID name to the user's name.</li>
+                        <li>Fixed the issue that All Busy Mode for SIP Forking setting didn't take
+                            effect if the extension had a DOD number.</li>
+                        <li>Fixed the compatibility issue with Vtech IP phone: TLS extension could
+                            not be registered.</li>
+                        <li>Supported 30 Extension Groups.</li>
+                        <li>Improved the security of the extension “User Password”.</li>
+                        <li>Increased the range of Extension Users to 0~59999.</li>
+                        <li>Optimized Bulk Editing function of extensions: bulk editing User Agent
+                            Registration Authorizations will not affect NAT and Register Remotely
+                            settings.</li>
+                    </ul>
+                </li>
+                <li>
+                    <p><b>SIP Trunk</b></p>
+                    <ul id="ul_zcy_byn_y2b">
+                        <li>Supports up to 64 characters.</li>
+                        <li>Administrator can set the value of Diversion.</li>
+                        <li>Added P Asserted Identify setting.</li>
+                        <li>Added Remote Party ID setting.</li>
+                        <li>Added Inband Progress setting.</li>
+                        <li>Added DID setting.</li>
+                        <li>Administrator can set whether to add “user=phone” in the SIP INVITE
+                            packet.</li>
+                        <li>Added SIP advanced settings:<ul id="ul_l4x_swn_y2b">
+                                <li>Early Media</li>
+                                <li>Maxptime</li>
+                            </ul></li>
+                        <li>Added Outbound Parameters to configure SIP parameters for outbound
+                                calls.<ul id="ul_ady_byn_y2b">
+                                <li>P Asserted Identify: Choose which "P Asserted Identify" value
+                                    should be contained in the SIP INVITE headers.</li>
+                                <li>Diversion: Choose which "Diversion" value should be contained in
+                                    the SIP INVITE headers.</li>
+                                <li>Remote Party ID: Choose which "Remote Party ID" value should be
+                                    contained in the SIP INVITE headers.</li>
+                            </ul></li>
+                        <li>Added Transfer Parameters to configure SIP parameters for transferred
+                                calls.<ul id="ul_bdy_byn_y2b">
+                                <li>From: Choose which "From" value should be contained in the SIP
+                                    INVITE headers.</li>
+                                <li>Diversion: Choose which "Diversion" value should be contained in
+                                    the SIP INVITE headers.</li>
+                                <li>Remote Party ID: Choose which "Remote Party ID" value should be
+                                    contained in the SIP INVITE headers.</li>
+                                <li>P Asserted Identify: Choose which "P Asserted Identify" value
+                                    should be contained in the SIP INVITE headers.</li>
+                            </ul></li>
+                    </ul>
+                </li>
+                <li>
+                    <p><b>Jitter Buffer</b></p>
+                    <ul id="ul_cdy_byn_y2b">
+                        <li>The path of Jitter Buffer settings are changed to Settings > PBX >
+                            General > Jitter Buffer.</li>
+                        <li>Added support for choosing which extensions and trunks to apply jitter
+                            buffer settings.</li>
+                        <li id="concept_w3s_hb3_f2b__s-pbxcenter-30.8">Added support for configuring
+                            the Adaptive Adjustment Size of jitter buffer.</li>
+                    </ul>
+                </li>
+                <li><b>Prompt</b><ul id="ul_jtf_314_y2b">
+                        <li>Optimized Voicemail prompts.</li>
+                        <li>Optimized Recording prompts.</li>
+                    </ul></li>
+                <li>
+                    <p><b>CDR</b></p>
+                    <ul id="ul_ddy_byn_y2b">
+                        <li>Added support for displaying billing Account in the CDR logs.</li>
+                        <li>Optimized CDR: supported displaying DID numbers in CDR.</li>
+                    </ul>
+                </li>
+            </ul><ul>
+                <li>Optimized Time Condition: extension users can dial feature code to switch the
+                    inbound route destination to “Other Time” destination. </li>
+                <li>Optimized the function of Seizing Trunk by BLF key: the administrator can set
+                    who can seize a trunk to call out.</li>
+                <li>Optimized Ring Group and Queue: if an extension is registered on multiple
+                    phones, when the extension is busy, the PBX would not call other phones that
+                    registered the same extension.</li>
+            </ul></section>
+        <section id="section_erp_pwn_y2b"><title>Fixed Bug</title><image
+                href="../Images/horizon.png" id="image_imb_cb4_y2b"/><ul id="ul_zcq_twn_y2b">
+                <li>Fixed the issue that video call could not work.</li>
+                <li>Fixed the compatibility issue with Yeastar TA FXS Gateway.</li>
+                <li>Fixed the SIP message issue: SIP message could not work on Fanvil phones.</li>
+                <li>Fixed the interconnection issue with another device: the interconnection would
+                    fail if you used S-Series IPPBX’s extension to register a SIP trunk on other
+                    device. </li>
+                <li>Fixed the issue that the SIP trunk could not work if the transport protocol was
+                    changed. </li>
+                <li>Fixed the DID matching issue on Inbound Route: if multiple inbound routes have
+                    the same DID number(s), the PBX could route inbound calls properly. </li>
+                <li>Fixed the Recording issue: the voice of the caller and callee might be
+                    overlapping.</li>
+                <li>Fixed conference issue: inviting external members by your phone would fail if a
+                    password was set on the outbound route. </li>
+                <li>Fixed the voicemail prompt issue: the PBX didn’t play the customized prompt. </li>
+                <li>Fixed CDR issue: when an external call reached a queue, the CDR of this call was
+                    incorrect.</li>
+                <li>Fixed the identification issue of feature code.</li>
+                <li>Fixed the video quality issue with Yealink video phones.</li>
+                <li>Fixed the SIP trunk issue: <ul id="ul_mkl_lxn_y2b">
+                        <li>The PBX might terminate a call that was made through a SIP trunk.</li>
+                        <li>If T.38 was enabled on the SIP trunk, Call Parking and Call Hold would
+                            not work for inbound calls through this SIP trunk.</li>
+                    </ul></li>
+            </ul></section>
+    </conbody>
+</concept>

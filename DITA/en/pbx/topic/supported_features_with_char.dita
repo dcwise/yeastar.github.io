@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="reference_pdm_5yz_c2b">
+    <title>Supported Features with char</title>
+    <shortdesc></shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/06/12"/>
+            <!--Carol-->
+            <revised modified="2018/06/12"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <p>Go to <menucascade>
+                <uicontrol>char utile h+ Integration</uicontrol>
+                <uicontrol>General</uicontrol>
+            </menucascade> page, you can see a list of feature codes. These feature codes are only
+            available for Room extension users. Users could dial the feature codes on their phones
+            in the Hotel room to initiate specific functions.</p>
+        <section id="section_yn4_xq1_d2b">
+            <title>Check in &amp; Check out</title>
+            <p>Room Extension features are controlled by the room status from char.</p>
+        </section>
+        <section id="section_tzv_yq1_d2b">
+            <title>Room Service</title>
+            <p>The hotel maid can dial *001 to confirm the room’s status, clean or dirty. The
+                default entry password is 123. </p>
+            <p>This password can be changed on char server.</p>
+        </section>
+        <section id="section_np4_1r1_d2b">
+            <title>Minibar Service</title>
+            <p>The hotel maid can dial *002 to confirm the consumption status of minibar. Following
+                by the prompt to dial digits. </p>
+            <p>The mini bar settings are configured on char server. For the detail, refer to char
+                user manual.</p>
+        </section>
+        <section id="section_p4b_fr1_d2b">
+            <title>Alarm Feature</title>
+            <p>The hotel customers can set, check, and delete alarms themselves.</p>
+            <ul id="ul_cqy_fr1_d2b">
+                <li><b>Set an Alarm</b><p>Dial <codeph>*95xxxx</codeph> to set an alarm. </p><p>For
+                        example, dial <codeph>*952000</codeph> to set an alarm at 20:00 (8 P.M.).
+                        When room phone will ring automatically at the alarm time. </p></li>
+                <li><b>Check Alarms</b><p>Dial <codeph>*98</codeph> to check alarms for the room
+                        extension.</p></li>
+                <li><b>Delete a Specific Alarm</b><p>Dial <codeph>*96xxxx</codeph> to delete an
+                        alarm. For example, dial *962000 to delete the alarm at 20:00.</p></li>
+                <li><b>Delete All Alarms</b><p>Dial <codeph>*97</codeph> to delete all the alarms
+                        for the room extension.</p></li>
+            </ul>
+        </section>
+        <section id="section_rhf_mr1_d2b">
+            <title>Wake up Call</title>
+            <p>The hotel guests can dial feature code on their room phones to set alarms themselves,
+                and the alarms will appear on <menucascade>
+                    <uicontrol>char utile h+ Integration</uicontrol>
+                    <uicontrol>Wake-up Call</uicontrol>
+                </menucascade> page.</p>
+            <p> You can check and edit the guest customized wake up calls on the <b>Wake-up Call</b>
+                page.</p>
+            <p><image href="../Images/admin/char_wake_up.png" width="650" id="image_ykz_tr1_d2b"
+                /></p>
+            <p>
+                <note>
+                    <p>
+                        <ul id="ul_mgc_wr1_d2b">
+                            <li>The Wake-up Call page only shows the guest customized wake-up calls,
+                                wake-up calls on PMS system will not be synchronized on the
+                                page.</li>
+                            <li>The hotel receptionist will add wake up calls on the PMS when
+                                checking in the guests.</li>
+                        </ul>
+                    </p>
+                </note>
+            </p>
+        </section>
+    </conbody>
+</concept>

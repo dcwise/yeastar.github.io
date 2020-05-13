@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="openvpn-connect-yealink-to-pbx-via-openvpn">
+    <title>Connect Yealink Phone to <ph keyref="product_name"/> via OpenVPN</title>
+    <body>
+        <ol>
+            <li>Put all the certifications and keys within the folder <filepath>keys</filepath>, and
+                zip the <filepath>keys</filepath> folder and other files to a
+                    <filepath>.tar</filepath> file using the software <b>7z</b>.<p>
+                    <table colsep="1" rowsep="1">
+                        <title>Files for Yealink phone</title>
+                        <tgroup cols="3" align="center">
+                            <colspec colname="newCol1" colnum="1" colwidth="1*"/>
+                            <colspec colname="c1" colnum="2" colwidth="1.88*"/>
+                            <colspec colname="c2" colnum="3" colwidth="5.87*"/>
+                            <thead>
+                                <row valign="middle">
+                                    <entry>Folder</entry>
+                                    <entry>File</entry>
+                                    <entry>Note</entry>
+                                </row>
+                            </thead>
+                            <tbody>
+                                <row valign="middle">
+                                    <entry morerows="3">keys</entry>
+                                    <entry><filepath>ca.crt</filepath></entry>
+                                    <entry>Root Certificate Authority</entry>
+                                </row>
+                                <row valign="middle">
+                                    <entry>
+                                        <filepath>Yealink.crt</filepath></entry>
+                                    <entry>a certificate file for Yealink IP phone client</entry>
+                                </row>
+                                <row valign="middle">
+                                    <entry><filepath>Yealink.key</filepath></entry>
+                                    <entry>a key file for Yealink IP phone client</entry>
+                                </row>
+                                <row>
+                                    <entry><filepath>ta.key</filepath></entry>
+                                    <entry>Required for client when <uicontrol>SSL/TLS</uicontrol>
+                                        is enabled on the OpenVPN server</entry>
+                                </row>
+                                <row valign="middle">
+                                    <entry>/</entry>
+                                    <entry>
+                                        <filepath>vpn.cnf</filepath></entry>
+                                    <entry>an OpenVPN connection file</entry>
+                                </row>
+                                <row valign="middle">
+                                    <entry>/</entry>
+                                    <entry><filepath>pwd</filepath></entry>
+                                    <entry align="left">Required for <xref
+                                            href="openvpn-username-password-authentication.dita#openvpn-create-account-password-for-each-client"
+                                            >OpenVPN username/password authentication</xref></entry>
+                                </row>
+                            </tbody>
+                        </tgroup>
+                    </table>
+                </p><p><image href="../Images/admin/openvpn-yealink-zip-files.png"
+                        id="image_ofs_nsr_33b" width="500"/></p><p>In this example, we name the
+                        <filepath>.tar</filepath> file as
+                        <filepath>Yealink.tar</filepath>.</p><p><image
+                        href="../Images/admin/openvpn-yealink-zip-tar.png" id="image_up3_1vr_33b"
+                        width="500"/></p></li>
+            <li>Log in the phone web interface, go to <menucascade>
+                    <uicontrol>Network</uicontrol>
+                    <uicontrol> Advanced</uicontrol>
+                    <uicontrol> VPN</uicontrol>
+                </menucascade>.</li>
+            <li>Upload the <filepath>Yealink.tar</filepath> file.<p><image
+                        href="../Images/admin/openvpn-yealink-tar-upload.png" id="image_k2d_mvr_33b"
+                        width="500"/></p><p>Yealink phone will reboot itself to apply changes. After
+                    phone rebooting, you can check the VPN connection status by checking a VPN icon
+                    shown on the Yealink LCD screen.</p></li>
+        </ol>
+    </body>
+</topic>

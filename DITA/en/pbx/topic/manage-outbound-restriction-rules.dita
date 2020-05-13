@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_v3w_4b2_2jb">
+    <title>Manage Outbound Restriction Rules</title>
+    <shortdesc>After you create restriction rules, you can edit or delete them.</shortdesc>
+    <body>
+        <section id="section_b5k_qpl_2jb">
+            <title>Edit an outbound restriction rule</title>
+            <p>
+                <ol>
+                    <li>Go to <menucascade>
+                            <uicontrol>Settings</uicontrol>
+                            <uicontrol>PBX</uicontrol>
+                            <uicontrol>Call Control</uicontrol>
+                            <uicontrol>Outbound Restriction</uicontrol>
+                        </menucascade>.</li>
+                    <li>Click <image id="image_bxm_225_2jb" href="../Images/ui_icons/edit.png"
+                            width="20"/> beside the outbound restriction rule that you want to
+                        edit.</li>
+                    <li>Edit the outbound restriction rule.</li>
+                    <li>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_lww_rpl_2jb">
+            <title>Delete an outbound restriction rule</title>
+            <p>
+                <ol>
+                    <li>Go to <menucascade>
+                            <uicontrol>Settings</uicontrol>
+                            <uicontrol>PBX</uicontrol>
+                            <uicontrol>Call Control</uicontrol>
+                            <uicontrol>Outbound Restriction</uicontrol>
+                        </menucascade>.</li>
+                    <li>Click <image id="image_l4r_q2c_fjb" href="../Images/ui_icons/delete.png"
+                            width="20"/> beside the outbound restriction rule that you want to
+                        delete.</li>
+                    <li>On the pop-up window, click <uicontrol>Yes</uicontrol> and
+                            <uicontrol>Apply</uicontrol>.</li>
+                </ol>
+            </p>
+        </section>
+    </body>
+</topic>

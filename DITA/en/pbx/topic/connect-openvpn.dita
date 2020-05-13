@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="connect-openvpn">
+    <title>Connect <ph keyref="product_name"/> to OpenVPN Server</title>
+    <shortdesc>You can connect <ph keyref="product_name"/> to the OpenVPN server by manual
+        configuration or OpenVPN files package.</shortdesc>
+    <body>
+        <p>
+            <ul id="ul_k5k_wvw_djb">
+                <li><uicontrol>Manual Configuration</uicontrol>: If your VPN provider provides you
+                    the with information of OpenVPN server settings, certification files and key
+                    files, you can manually configure the OpenVPN client on <ph
+                        keyref="product_name"/> and connect to OpenVPN Server.</li>
+                <li>
+                    <p><uicontrol>Upload OpenVPN Package</uicontrol>: If your VPN provider provides
+                        you with a connection file, certification files and key files, you can
+                        compress these files, upload the package to <ph keyref="product_name"/> and
+                        connect to OpenVPN Server. <note>
+                            <p>
+                                <ul id="ul_bl3_gkj_zdb">
+                                    <li>The name of OpenVPN connection file should be
+                                            <filepath>vpn.conf</filepath>.</li>
+                                    <li>You need to save the certification files and key files in
+                                        the root directory, and compress them into a
+                                            <filepath>.tar</filepath> package.<p><image
+                                                href="../Images/admin/vpn-package.png"
+                                                id="image_msy_1sy_k3b"/></p></li>
+                                    <li>
+                                        <p>The new option <codeph>remote-cert-tls server</codeph> is
+                                            not supported on the <ph keyref="product_name">S-Series
+                                                VoIP PBX</ph>, you need to change it to
+                                                <codeph>ns-cert-tls server</codeph>.</p>
+                                    </li>
+                                </ul>
+                            </p>
+                        </note></p>
+                </li>
+            </ul>
+        </p>
+        <section id="section_kkk_kgj_zdb">
+            <title>Manual Configuration on <ph keyref="product_name"/></title>
+            <p>
+                <ol id="ol_wvt_tgj_zdb">
+                    <li>Go to <menucascade>
+                            <uicontrol>Settings</uicontrol>
+                            <uicontrol>System</uicontrol>
+                            <uicontrol>Network</uicontrol>
+                            <uicontrol>OpenVPN</uicontrol>
+                        </menucascade>, select the checkbox of <uicontrol>Enable
+                        OpenVPN</uicontrol>.</li>
+                    <li>In the drop-down list of <uicontrol>Type</uicontrol>, select
+                            <uicontrol>Manual Configuration</uicontrol>.</li>
+                    <li>Set the OpenVPN client settings according to the OpenVPN server.<p><image
+                                href="../Images/admin/openvpn_client_settings.png"
+                                id="image_vxs_bhj_zdb" width="650"/></p><p>
+                            <ul id="ul_tdq_chj_zdb">
+                                <li><uicontrol>Server Address</uicontrol>: Enter the IP address of
+                                    the OpenVPN server.</li>
+                                <li><uicontrol>Server Port</uicontrol>: Enter the port of the
+                                    OpenVPN server.</li>
+                                <li><uicontrol>Protocol</uicontrol>: Select the same protocol as the
+                                    OpenVPN server.</li>
+                                <li><uicontrol>Device Mode</uicontrol>: Select the same mode as the
+                                    OpenVPN server.</li>
+                                <li><uicontrol>Username</uicontrol>: Optional. Enter the username to
+                                    access the VPN server. </li>
+                                <li><uicontrol>Password</uicontrol>: Optional. Enter the username to
+                                    access the VPN server. </li>
+                                <li><uicontrol>Encryption</uicontrol>: Select the same type as the
+                                    OpenVPN server.</li>
+                                <li><uicontrol>Compression</uicontrol>: Enable or disable
+                                    compression for data stream. The server and client should be the
+                                    same setting.</li>
+                                <li><uicontrol>Proxy Server</uicontrol>: If the PBX is connected
+                                    through an HTTP proxy to reach the OpenVPN server, enter the
+                                    proxy server.</li>
+                                <li><uicontrol>Proxy Port</uicontrol>: If the PBX is connected
+                                    through an HTTP proxy to reach the OpenVPN server, enter the
+                                    proxy port.</li>
+                            </ul>
+                        </p></li>
+                    <li>Upload certificates and keys.<p><image
+                        href="../Images/admin/openvpn_client_certificates.png"
+                        id="image_p4x_w3j_zdb"/></p><p>
+                            <ul id="ul_ldy_2jj_zdb">
+                                <li><uicontrol>CA Cert</uicontrol>: Upload a CA certificate.</li>
+                                <li><uicontrol>Cert</uicontrol>: Upload a Client certificate.</li>
+                                <li><uicontrol>Key</uicontrol>: Upload a Client key.</li>
+                                <li><uicontrol>TLS Authentication</uicontrol>: Enable or disable TLS
+                                    authentication.</li>
+                                <li><uicontrol>TA Key</uicontrol>: If you enable <uicontrol>TLS
+                                        Authentication</uicontrol>, upload a TA key.</li>
+                            </ul>
+                        </p></li>
+                    <li>Click <uicontrol>Save</uicontrol> and click the <image
+                            href="../Images/admin/resource-monitor-shortcut-icon.png" width="20"
+                            id="image_own_c1p_kjb"/> at the right-top corner to check the VPN client
+                                status.<p><image href="../Images/admin/vpn_client_status.png"
+                                id="image_uzz_wjj_zdb" width="300"/></p></li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_fwh_bkj_zdb">
+            <title>Upload OpenVPN Package</title>
+            <p>
+                <ol>
+                    <li>Go to <menucascade>
+                            <uicontrol>Settings</uicontrol>
+                            <uicontrol>System</uicontrol>
+                            <uicontrol>Network</uicontrol>
+                            <uicontrol>OpenVPN</uicontrol>
+                        </menucascade>, select the checkbox of <uicontrol>Enable
+                        OpenVPN</uicontrol>.</li>
+                    <li>In the drop-down list of <uicontrol>Type</uicontrol>, select
+                            <uicontrol>Upload OpenVPN Package</uicontrol>.</li>
+                    <li>Click <uicontrol>Browse</uicontrol>, select the OpenVPN package.<p><image
+                        href="../Images/admin/openvpn_client_upload_package.png"
+                        id="image_hfq_ykj_zdb"/></p></li>
+                    <li>Click <uicontrol>Save</uicontrol> and click the <image
+                            href="../Images/admin/resource-monitor-shortcut-icon.png"
+                            id="image_y4w_twz_3jb" width="20"/> at the right-top corner to check the
+                        VPN client status.<p><image href="../Images/admin/vpn_client_status.png"
+                                width="300" id="image_ntl_clj_zdb"/></p></li>
+                </ol>
+            </p>
+        </section>
+    </body>
+</topic>

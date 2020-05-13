@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_zrm_5rn_rdb">
+    <title>Step2. Create Firewall Rules</title>
+    <shortdesc>Create firewall rules for the VPC to allow the VPC access to instances.</shortdesc>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Go to the <xref
+                        href="https://console.cloud.google.com//networking/firewalls/list"
+                        format="html" scope="external">Firewall rules page</xref> in the Google
+                    Cloud Platform Console.</cmd>
+            </step>
+            <step>
+                <cmd>Set <uicontrol>Ingress</uicontrol> firewall rule for your VPC.</cmd>
+                <substeps>
+                    <substep>
+                        <cmd>Click <uicontrol>Create firewall rule</uicontrol>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Enter a <uicontrol>Name</uicontrol> for the firewall rule.</cmd>
+                        <info>The name must be unique for the project.</info>
+                    </substep>
+                    <substep>
+                        <cmd>Select the <uicontrol>Network</uicontrol> as your VPC network.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Specify the <uicontrol>Priority</uicontrol> of the rule.</cmd>
+                        <info>The lower the number, the higher the priority.</info>
+                    </substep>
+                    <substep>
+                        <cmd>Set the <uicontrol>Direction of traffic</uicontrol> to
+                                <codeph>Ingress</codeph>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Set the <uicontrol>Action on match</uicontrol> to
+                                <codeph>Allow</codeph>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Set the <uicontrol>Targets</uicontrol> to <codeph>All instances in the
+                                network</codeph>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Set <uicontrol>Source filter</uicontrol> to <codeph>IP ranges</codeph>
+                            and type <codeph>0.0.0.0/0</codeph> in the <b>Source IP ranges</b> field
+                            to define the source for incoming traffic from any network.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Set <uicontrol>Protocols and ports</uicontrol> to <codeph>Allow
+                                all</codeph>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Click <uicontrol>Create</uicontrol>.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Set <uicontrol>Egress</uicontrol> firewall rule for your VPC.</cmd>
+                <substeps id="substeps_kcy_p5n_rdb">
+                    <substep>
+                        <cmd>Click <uicontrol>Create firewall rule</uicontrol>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Enter a <uicontrol>Name</uicontrol> for the firewall rule.</cmd>
+                        <info>The name must be unique for the project.</info>
+                    </substep>
+                    <substep>
+                        <cmd>Select the <uicontrol>Network</uicontrol> as your VPC network.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Specify the <uicontrol>Priority</uicontrol> of the rule.</cmd>
+                        <info>The lower the number, the higher the priority.</info>
+                    </substep>
+                    <substep>
+                        <cmd>Set the <uicontrol>Direction of traffic</uicontrol> to
+                                <codeph>Egress</codeph>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Set the <uicontrol>Action on match</uicontrol> to
+                                <codeph>Allow</codeph>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Set the <uicontrol>Targets</uicontrol> to <codeph>All instances in the
+                                network</codeph>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Set <uicontrol>Destination filter</uicontrol> to <codeph>IP
+                                ranges</codeph> and type <codeph>0.0.0.0/0</codeph> in the
+                                <b>Destination IP ranges</b> field to define the destination for
+                            outgoing traffic to anywhere.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Set <uicontrol>Protocols and ports</uicontrol> to <codeph>Allow
+                                all</codeph>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Click <uicontrol>Create</uicontrol>.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_btx_d1f_xdb">
+    <title>Resource Monitor</title>
+    <shortdesc>Monitor the CPU usage, memory usage, disk utilization and network flow.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/05/22"/>
+            <!--Carol-->
+            <revised modified="2018/05/22"/>
+            <!--Carol-->
+            <revised modified="2018/10/23"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <p>You can go to <uicontrol>Resource Monitor</uicontrol> to check the information or click
+            the shortcut icon at the right-top corner.</p>
+        <p><image href="../Images/admin/resource_monitor_shortcut.png" id="image_tgt_q2f_xdb"
+                width="500"/></p>
+        <section id="section_atk_31f_xdb">
+            <title>Information</title>
+            <p>Check the basic information of the PBX.</p>
+            <p>
+                <ul id="ul_zn4_41f_xdb">
+                    <li>Product</li>
+                    <li>Serial Number</li>
+                    <li>Hardware Version</li>
+                    <li>Software Version</li>
+                    <li>System Time: The current time on the PBX.</li>
+                    <li>Uptime: The system up time since the last reboot.</li>
+                    <li>Extensions/Max Extensions: The number of added extensions/Maximum number of
+                        extensions allowed to be added</li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_n1w_j1f_xdb">
+            <title>Network</title>
+            <p>Check the status of local network, cellular network, and VPN network.</p>
+        </section>
+        <section id="section_ktl_k1f_xdb" product="s-series">
+            <title>Performance</title>
+            <p>Check the performance of CPU, Memory and local network.</p>
+        </section>
+        <section id="section_nrb_l1f_xdb">
+            <title>Storage Usage</title>
+            <p>Check the usage of local storage in the PBX. <ph product="s-series">If you set up an
+                    external storage, you can also check the storage usage on this page.</ph></p>
+        </section>
+        <section id="section_efq_tjg_4fb" product="cloudpbx">
+            <title>Recording Usage</title>
+        </section>
+    </conbody>
+</concept>

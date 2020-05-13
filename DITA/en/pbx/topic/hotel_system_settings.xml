@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_f5t_nvs_c2b">
+    <title>Hotel System Settings</title>
+    <shortdesc>Before you start using the Hotel App, you need to enable Hotel application and set
+        the hotel information, hotel staff settings, mini bar settings, call rate
+        settings.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/06/11"/>
+            <!--Carol-->
+            <revised modified="2018/06/11"/>
+        </critdates>
+    </prolog>
+    <conbody/>
+</concept>

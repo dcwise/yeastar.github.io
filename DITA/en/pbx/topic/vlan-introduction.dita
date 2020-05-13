@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="vlan-instroduction">
+    <title>VLAN Overview</title>
+    <shortdesc>This topic introduces what is VLAN and the advantages of VLAN.</shortdesc>
+    <body>
+        <section id="section_l5y_bbc_djb">
+            <title>What is VLAN?</title>
+            <p>VLAN allows you to segment out a physical network into virtual networks with
+                different subnets. For example, one network is used by one department and another
+                network is used by another department.</p>
+        </section>
+        <section id="section_sbs_t5w_ydb">
+            <title>Advantages</title>
+            <?oxy_comment_start author="carol" timestamp="20191009T160517+0800" comment="这段改一下，很多年以前技术写的，不规范。
+
+写VLAN 有什么优点。
+参考下面文档introduction 部分https://www.grandstream.com/sites/default/files/Resources/VLAN_Guide.pdf
+
+Increase performance: 
+Improve manageability: 
+Increase security options: 
+
+" flag="done"?>
+            <p>VLANs provide the following advantages:</p>
+            <ul id="ul_b1r_z5w_ydb">
+                <li>
+                    <p><b>Increase performance</b>: VLANs enable logical grouping of users that are
+                        physically dispersed on a network. Additionally, VLANs create broadcast
+                        domains which eliminate the need for expensive routers, reduces traffic and
+                        decrease overall network latency.</p>
+                </li>
+                <li>
+                    <p><b>Improve manageability</b>: VLANs make large networks more manageable by
+                        allowing centralized configuration of devices located in assorted
+                        locations.</p>
+                </li>
+                <li>
+                    <p><b>Enhance security</b>: The separation of traffic on a network prevents
+                        unauthorized users from listening to or receiving sensitive data, and this
+                        will reduce risks and protect sensitive data.</p><?oxy_comment_end?>
+                </li>
+            </ul>
+        </section>
+    </body>
+</topic>

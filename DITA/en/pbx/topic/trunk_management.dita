@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_tny_smg_tdb">
+    <title>Trunk Overview</title>
+    <shortdesc>Making and receiving calls between internal extensions is one thing, but if you want
+        to receive and make calls to the outside world, you need at least a trunk to the outside
+        world.</shortdesc>
+    <conbody/>
+</concept>

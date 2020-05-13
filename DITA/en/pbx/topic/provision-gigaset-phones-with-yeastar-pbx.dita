@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="provision-gigaset-phones-with-yeastar-pbx">
+    <title>Provision Gigaset Phones with <ph keyref="product_name"/></title>
+    <shortdesc>This guide provides instructions on how to provision Gigaset phones with <ph
+            keyref="product_name"/>. The details in this guide takes Gigaset Maxwell 3 running
+        firmware 2.22.7 as an example.</shortdesc>
+    <body>
+        <section id="section_bfm_rqw_13b">
+            <title>Supported phone models</title>
+            <p>
+                <ul
+                    conref="supported_ip_phone_manufactures_and_phone_models_s.dita#reference_kh5_ngd_kdb/ul_ml3_f5k_ldb"
+                    id="ul_k2d_tqw_13b">
+                    <li/>
+                </ul>
+            </p>
+        </section>
+        <section id="section_qbd_jrw_13b">
+            <title>Factory reset the phone</title>
+            <p>Before provisioning the phone, you must reset the phone to factory defaults in case
+                the device has residual settings of a previous configuration. To reset the phone,
+                see <xref
+                    href="how-to-factory-reset-gigaset-phones.dita#how-to-factory-reset-gigaset-phones"
+                />.</p>
+        </section>
+        <section id="section_m3y_jrw_13b">
+            <title>Provision the phone via Plug’n’Play (PnP)</title>
+            <p>
+                <ol id="ol_ezp_x5l_xhb">
+                    <li>Connect the phone to the same network of the <ph keyref="product_name"
+                            />.<p>Make sure that the phone and PBX are located in the same network
+                            segment, and do not connect the network via VPN. </p></li>
+                    <li>Check the phones' MAC address and phone model, usually you can find them at
+                        the back of phone.</li>
+                    <li>Log in <ph keyref="product_name"/> web interface, go to <uicontrol>Auto
+                            Provisioning</uicontrol> page, click <uicontrol>Scan</uicontrol> to scan
+                        phones in the local network. <p>All the detected phones appear on the
+                            page.</p></li>
+                    <li>Find the phone from <b>Device List</b>, and then click <image
+                            href="../Images/ui_icons/edit.png" width="20" id="image_ozd_wn3_yhb"
+                        />.</li>
+                    <li>Assign an extension for the phone.<p><image
+                                href="../Images/autop-gigaset-provision.png" width="650"
+                                id="image_uy3_zn3_yhb"/></p></li>
+                    <li>Click <uicontrol>Save</uicontrol>.<p>A pop-up dialog prompts you whether to
+                            reboot the phone immediately.</p></li>
+                    <li>Click <uicontrol>Yes</uicontrol>.<p>The IP phone reboots automatically to
+                            get and apply configurations from the PBX.</p></li>
+                </ol>
+            </p>
+            <note>
+                <ul id="ul_tzy_l2p_13b">
+                    <li>
+                        <p>If the IP phone doesn't reboot automatically, you need to reboot the
+                            phone manually to take effect.</p>
+                    </li>
+                    <li>
+                        <p>Each time the IP phone reboots, it always gets the configurations from
+                            the PBX. In this case, the personal settings on the phone may be lost
+                            after the phone reboots.</p>
+                    </li>
+                </ul>
+            </note>
+        </section>
+        <section id="section_wvd_lrw_13b">
+            <title>Extended phone configuration</title>
+            <p>In addition to provision phone lines, you can provision other phone settings to match
+                your needs.</p>
+            <note>Extended phone configurations vary on each phone model.</note>
+            <sectiondiv>
+                <ul id="ul_nfg_l1v_xhb">
+                    <li><uicontrol>Function Key Settings</uicontrol><p>You can assign various
+                            functions to Function keys. This allows you to quickly access features
+                            and to view the monitored status when the Function keys are assigned
+                            with particular features (for example, BLF).</p></li>
+                </ul>
+                <sectiondiv>
+                    <ul id="ul_igz_l1v_xhb">
+                        <li><uicontrol>Features</uicontrol><p>Enable or disable the phone features,
+                                such as Call Waiting, Voicemail, Transport Protocol, etc.</p></li>
+                    </ul>
+                </sectiondiv>
+            </sectiondiv>
+            <sectiondiv>
+                <ul id="ul_krq_m1v_xhb">
+                    <li><uicontrol>Preference</uicontrol><p>Configure the phone preference settings,
+                            such as Language, Time Zone, Admin Password, etc.</p></li>
+                </ul>
+                <sectiondiv>
+                    <ul id="ul_jhb_41v_xhb">
+                        <li><uicontrol>Codec</uicontrol><p>Select and configure the preferred codec
+                                list for the phone.</p><p>
+                                <note>At least one of the same codecs on the phone and the PBX is
+                                    required, or there will be no audio in the call.</note>
+                            </p></li>
+                    </ul>
+                </sectiondiv>
+            </sectiondiv>
+        </section>
+        <section id="section_kmm_mrw_13b">
+            <title>Auto provisioning template</title>
+            <p
+                conref="provision-yealink-phones-with-yeastar-pbx.dita#provision_yealink_phones_with_yeastar_pbx/Autop_template"/>
+        </section>
+    </body>
+</topic>

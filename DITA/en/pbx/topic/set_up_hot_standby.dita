@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_pfb_mjk_xdb">
+    <title>Set up Hot Standby</title>
+    <shortdesc>Set hot standby on primary PBX and secondary PBX.</shortdesc>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Verify the basic information of the two PBXs.</cmd>
+                <info>
+                    <p>Log in the PBX Web user interface, click <b>Resource Monitor</b> icon at the
+                        top-right corner to check PBX information. The two servers' model and
+                        software version MUST be the same.</p>
+                </info>
+                <info><image href="../Images/admin/hotstanby_pbx_info.png" id="image_lkc_fkk_xdb"
+                    /></info>
+            </step>
+            <step>
+                <cmd>Edit the PBX hostname to verify the two PBXs.</cmd>
+                <info>Go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol>System</uicontrol>
+                        <uicontrol>Network</uicontrol>
+                        <uicontrol>Basic Settings</uicontrol>
+                    </menucascade>, change the hostname for the two PBXs.</info>
+                <info>
+                    <note>
+                        <ul id="ul_zc4_3bl_qfb">
+                            <li>Hot standby only works for LAN port. If the network
+                                    <uicontrol>Mode</uicontrol> of the PBX is
+                                    <uicontrol>Dual</uicontrol>, set the default interface to LAN
+                                port.</li>
+                            <li>Hot standby doesn't work in VPN network.</li>
+                        </ul>
+                    </note>
+                </info>
+                <info><image href="../Images/admin/hotstanby_hostname.png" id="image_d1n_lkk_xdb"
+                    /></info>
+            </step>
+            <step>
+                <cmd>Set up hot standby service for the two PBXs.</cmd>
+                <info>Go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol>System</uicontrol>
+                        <uicontrol>Hot Standby</uicontrol>
+                    </menucascade> to configure hot standby settings.</info>
+                <substeps>
+                    <substep>
+                        <cmd>Set IPPBX1 as a primary server.</cmd>
+                        <info><image href="../Images/admin/hotstanby_primary_server.png" width="650"
+                                id="image_sxj_ykk_xdb"/></info>
+                        <info>
+                            <table frame="all" rowsep="1" colsep="1" id="table_sk5_n2l_qfb">
+                                <tgroup cols="2">
+                                    <colspec colname="c1" colnum="1" colwidth="1*"/>
+                                    <colspec colname="c2" colnum="2" colwidth="2.16*"/>
+                                    <thead>
+                                        <row>
+                                            <entry>Setting</entry>
+                                            <entry>Description</entry>
+                                        </row>
+                                    </thead>
+                                    <tbody>
+                                        <row>
+                                            <entry>Enable Hot Standby</entry>
+                                            <entry>Check this option.</entry>
+                                        </row>
+                                        <row>
+                                            <entry>Mode</entry>
+                                            <entry>Set to <uicontrol>Primary</uicontrol>.</entry>
+                                        </row>
+                                        <row id="hot-standby-secondary-server">
+                                            <entry namest="c1" nameend="c2"><uicontrol>Secondary
+                                                  Server Information</uicontrol></entry>
+                                        </row>
+                                        <row>
+                                            <entry>Secondary Server Hostname</entry>
+                                            <entry>Enter the hostname of the secondary
+                                                server.</entry>
+                                        </row>
+                                        <row>
+                                            <entry>Secondary Server IP Address</entry>
+                                            <entry>Enter the IP address of the secondary
+                                                server.</entry>
+                                        </row>
+                                        <row>
+                                            <entry>Access Code</entry>
+                                            <entry>Set an access code. The two PBX must have the
+                                                same access code to authenticate connection.</entry>
+                                        </row>
+                                        <row id="hot-standby-virtual-IP">
+                                            <entry namest="c1" nameend="c2"><uicontrol>Virtual IP
+                                                  Address</uicontrol></entry>
+                                        </row>
+                                        <row>
+                                            <entry>Virtual IP Address</entry>
+                                            <entry>Virtual IP address is a shared IP for the two
+                                                PBXs. The virtual IP always point to the on-site PBX.<p>
+                                                  <note>
+                                                  <ul id="ul_j5s_llv_c3b">
+                                                  <li>Set the same virtual IP address on the primary
+                                                  server and secondary server.</li>
+                                                  <li>You should use the virtual IP address as
+                                                  server IP address when registering extensions in
+                                                  the local network.</li>
+                                                  </ul>
+                                                  </note>
+                                                </p></entry>
+                                        </row>
+                                        <row>
+                                            <entry>Subnet Mask</entry>
+                                            <entry>Enter the subnet mask.</entry>
+                                        </row>
+                                        <row>
+                                            <entry>Network Connection Detection</entry>
+                                            <entry>We recommend that you enter the gateway address.
+                                                If all the nodes fail to be detected, it means that
+                                                the network connection of the PBX is abnormal. The
+                                                PBX would run as the Standby server after the
+                                                network recovery.</entry>
+                                        </row>
+                                        <row id="hot-standby-advanced">
+                                            <entry namest="c1" nameend="c2"
+                                                  ><uicontrol>Advanced</uicontrol><p>
+                                                  <note>Advanced settings only work when the server
+                                                  runs as a standby system.</note>
+                                                </p></entry>
+                                        </row>
+                                        <row>
+                                            <entry>Keep Alive</entry>
+                                            <entry>
+                                                <p>Defines the frequency to send Heartbeat
+                                                  Keep-alive packets. </p>
+                                                <p>The default setting is 2 seconds, which means
+                                                  that the standby server will send packets every 2
+                                                  seconds to detect if the primary server is alive
+                                                  or not.</p>
+                                            </entry>
+                                        </row>
+                                        <row>
+                                            <entry>Dead Time</entry>
+                                            <entry>
+                                                <p>Defines the maximum time interval before the
+                                                  primary server responses to the standby server. If
+                                                  after time's out, the standby server receives no
+                                                  response, it will take over automatically. </p>
+                                                <p>
+                                                  <note>Set the Dead Time longer than the server
+                                                  rebooting time, or the standby server will take
+                                                  over when the primary server is rebooting.</note>
+                                                </p>
+                                            </entry>
+                                        </row>
+                                        <row>
+                                            <entry>Disk Synchronization</entry>
+                                            <entry>
+                                                <p> If you have installed a hard disk, check this
+                                                  option and all data stored in the disk will be
+                                                  synchronized. </p>
+                                            </entry>
+                                        </row>
+                                    </tbody>
+                                </tgroup>
+                            </table>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Set IPPBX2 as a secondary server.</cmd>
+                        <info><image href="../Images/admin/hotstanby_secondary_server.png"
+                                width="650" id="image_otg_bnk_xdb"/></info>
+                        <info>
+                            <table frame="all" rowsep="1" colsep="1" id="table_ttk_dhl_qfb">
+                                <tgroup cols="2">
+                                    <colspec colname="c1" colnum="1" colwidth="1*"/>
+                                    <colspec colname="c2" colnum="2" colwidth="1.82*"/>
+                                    <thead>
+                                        <row>
+                                            <entry>Setting</entry>
+                                            <entry>Description</entry>
+                                        </row>
+                                    </thead>
+                                    <tbody>
+                                        <row>
+                                            <entry>Enable Hot Standby</entry>
+                                            <entry>Check this option.</entry>
+                                        </row>
+                                        <row>
+                                            <entry>Mode</entry>
+                                            <entry>Set to <uicontrol>Secondary</uicontrol>.</entry>
+                                        </row>
+                                        <row id="hot-standby-secondary-server-IPPBX2">
+                                            <entry namest="c1" nameend="c2"><uicontrol>Secondary
+                                                  Server Information</uicontrol></entry>
+                                        </row>
+                                        <row>
+                                            <entry>Secondary Server Hostname</entry>
+                                            <entry>Enter the hostname of the primary server.</entry>
+                                        </row>
+                                        <row>
+                                            <entry>Secondary Server IP Address</entry>
+                                            <entry>Enter the IP address of the primary
+                                                server.</entry>
+                                        </row>
+                                        <row>
+                                            <entry>Access Code</entry>
+                                            <entry>Set an access code. The two PBX must have the
+                                                same access code to authenticate connection.</entry>
+                                        </row>
+                                        <row id="hot-standby-virtual-IP-IPPBX2">
+                                            <entry namest="c1" nameend="c2"><uicontrol>Virtual IP
+                                                  Address</uicontrol></entry>
+                                        </row>
+                                        <row>
+                                            <entry>Virtual IP Address</entry>
+                                            <entry> Enter a vacant IP address. The extensions would
+                                                communicate with the server via the virtual IP
+                                                address. <p>
+                                                  <note>The primary server should set the same
+                                                  virtual IP address.</note>
+                                                </p></entry>
+                                        </row>
+                                        <row>
+                                            <entry>Subnet Mask</entry>
+                                            <entry>Enter the subnet mask.</entry>
+                                        </row>
+                                        <row>
+                                            <entry>Network Connection Detection</entry>
+                                            <entry>We recommend that you enter the gateway address.
+                                                If all the nodes fail to be detected, it means that
+                                                the network connection of the PBX is abnormal. The
+                                                PBX would run as the Standby server after the
+                                                network recovery.</entry>
+                                        </row>
+                                        <row id="hot-standby-advanced-IPPBX2">
+                                            <entry namest="c1" nameend="c2"
+                                                  ><uicontrol>Advanced</uicontrol><p>
+                                                  <note>Advanced settings only work when the server
+                                                  runs as a secondary server.</note>
+                                                </p></entry>
+                                        </row>
+                                        <row>
+                                            <entry>Keep Alive</entry>
+                                            <entry>
+                                                <p>Defines the frequency to send Heartbeat
+                                                  Keep-alive packets. </p>
+                                                <p>The default setting is 2 seconds, which means
+                                                  that the standby server will send packets every 2
+                                                  seconds to detect if the primary server is alive
+                                                  or not.</p>
+                                            </entry>
+                                        </row>
+                                        <row>
+                                            <entry>Dead Time</entry>
+                                            <entry>
+                                                <p>Defines the maximum time interval before the
+                                                  primary server responses to the standby server. If
+                                                  after time's out, the standby server receives no
+                                                  response, it will take over automatically. </p>
+                                                <p>
+                                                  <note>Set the Dead Time longer than the server
+                                                  rebooting time, or the standby server will take
+                                                  over when the primary server is rebooting.</note>
+                                                </p>
+                                            </entry>
+                                        </row>
+                                        <row>
+                                            <entry>Disk Synchronization</entry>
+                                            <entry>
+                                                <p> If you have installed a hard disk, check this
+                                                  option and all data stored in the disk will be
+                                                  synchronized. </p>
+                                            </entry>
+                                        </row>
+                                    </tbody>
+                                </tgroup>
+                            </table>
+                        </info>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Reboot the two PBXs to make hot standby take effect.</cmd>
+            </step>
+            <step>
+                <cmd>Test if  hot standby works.</cmd>
+                <info>
+                    <p>Create an extension in the primary server, save and apply the changes. </p>
+                    <p>If the hot standby configurations are correct, you can see the same extension
+                        is added automatically in the secondary server.</p>
+                    <p>
+                        <note>
+                            <ul id="ul_rv3_5nk_xdb">
+                                <li>The extension status and trunk status are invisible in the
+                                    secondary PBX.</li>
+                                <li>The password setting is also synchronized, so you need to log in
+                                    the secondary server using the same password with it on the
+                                    primary server. </li>
+                                <li>If you want to upgrade the PBX firmware, you MUST disable hot
+                                    standby feature first.</li>
+                            </ul>
+                        </note>
+                    </p>
+                </info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

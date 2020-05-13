@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_fbp_jqq_bdb">
+    <title>Attended Transfer</title>
+    <shortdesc>If you want to tell the new person about the caller's issue and give any background
+        information before transferring the call, you can choose attended transfer.</shortdesc>
+    <taskbody>
+        <context>
+            <p><b>Scenario</b>: You (B) are talking with A, then transfer the call to C.</p>
+        </context>
+        <steps id="steps_dhg_skp_bdb">
+            <step>
+                <cmd>During the call with person A, dial *3 on your phone.</cmd>
+                <info>You will hear the prompt "transfer" and the dial tone.</info>
+            </step>
+            <step>
+                <cmd>Dial C's number.</cmd>
+                <info>C's phone is ringing. After C answers the call, the call between you and C is
+                    established. In this time, the call between you and A is held.</info>
+            </step>
+            <step>
+                <cmd>Hang up your call, the call between A and C is established.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

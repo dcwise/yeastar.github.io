@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_p42_dwb_kfb">
+    <title>Version 30.10.0.9</title>
+    <abstract>Released Date: October 18, 2018</abstract>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/10/08"/>
+            <!--Carol-->
+            <revised modified="2018/10/08"/>
+            <!--Carol-->
+            <revised modified="2018/10/09"/>
+            <!--Carol-->
+            <revised modified="2018/10/10"/>
+            <!--Carol-->
+            <revised modified="2018/10/18"/>
+            <!--Carol-->
+            <revised modified="2018/10/22"/>
+            <!--Carol-->
+            <revised modified="2018/11/02"/>
+            <!--Carol-->
+            <revised modified="2018/12/19"/>
+        </critdates>
+    </prolog>
+    <body>
+        <section>
+            <title>New Feature</title>
+            <p><image href="../Images/horizon.png" id="image_hxp_2xp_pdb"/></p>
+            <p>
+                <ul id="ul_btz_l43_kfb">
+                    <li>Added Configuration Wizard.<p>The Configuration Wizard helps an
+                            administrator to quickly set up a phone system for his/her
+                        company.</p></li>
+                </ul>
+            </p>
+        </section>
+        <section><title>Optimization</title><p><image href="../Images/horizon.png"
+                    id="image_xcc_4wb_kfb"/></p><p><b>System Stability</b></p><p>
+                <ul id="ul_plm_4bj_kfb">
+                    <li>Fixed a few issues to improve the system stability.</li>
+                </ul>
+            </p><p><b>System Security</b></p><p>
+                <ul id="ul_xfd_vt3_kfb">
+                    <li>Improved Web security.</li>
+                    <li>Optimized Extension Registration Password and User Password.<p>A strong
+                            password is required by default. The administrator can enable
+                                <uicontrol>Allow Weak Password</uicontrol> on <menucascade>
+                                <uicontrol>Settings</uicontrol>
+                                <uicontrol>System</uicontrol>
+                                <uicontrol>Security</uicontrol>
+                            </menucascade> page.</p></li>
+                    <li>Optimized the Firewall <uicontrol>Reject</uicontrol> rule and
+                            <uicontrol>Drop</uicontrol> rule (previously known as
+                            <uicontrol>Ignore</uicontrol>).</li>
+                    <li>Optimized the message prompt of port conflicts.</li>
+                    <li>Fixed SSH login issue: SSH login would fail by using the auto-generated
+                        password.</li>
+                </ul>
+            </p><p><b>Extension</b></p><p>
+                <ul id="ul_lm4_tq3_kfb">
+                    <li>Added support for configuring overlapped Extension ranges (<menucascade>
+                            <uicontrol>Settings</uicontrol>
+                            <uicontrol>PBX</uicontrol>
+                            <uicontrol>General</uicontrol>
+                            <uicontrol>Preferences</uicontrol>
+                            <uicontrol>Extension Preferences</uicontrol>
+                        </menucascade>).</li>
+                    <li>Optimized Extension setup: PBX will allow you to create an extension number
+                        that is not in the User Extension range.</li>
+                    <li>Fixed Extension Group issue: Creating an extension would fail if the
+                        extension number was used as an Extension Group name.</li>
+                    <li>Fixed the FXS extension issue on S412: There would be no sound during a call
+                        if the call was made by an FXS extension.</li>
+                </ul>
+            </p><p><b>SIP Trunk</b></p><p>
+                <ul id="ul_mwc_tt3_kfb">
+                    <li>Optimized the web configuration page of ITSP template.</li>
+                    <li>Optimized ITSP template of Germany LAN IP Voice.</li>
+                    <li>Fixed the issue that the PBX NAT settings could not take effect if the SIP
+                        trunk TCP or TLS was enabled.</li>
+                    <li>Fixed the issue that custom configuration file could not take effect if
+                        blank spaces were included in the SIP trunk name.</li>
+                </ul>
+            </p><p><b>Call Features</b></p><p>
+                <ul id="ul_qfh_dy3_kfb">
+                    <li>Optimized Call Pickup: <xref
+                            href="pick_up_an_extension_call_by_blf.dita#task_egh_qgn_4fb/notify_caller_id"
+                            >Users can see the incoming caller ID before they pick up the
+                            call</xref>.</li>
+                    <li>Optimized Call Pickup: If an extension's incoming call is picked up by other
+                        person, the extension's phone will not display any information of "missed
+                        call".</li>
+                    <li>Fixed the Call Forwarding issue: The system would hang up if a call was
+                        forwarded to a queue.</li>
+                    <li>Fixed the BLF monitoring issue on Extension: The BLF LED could not properly
+                        indicate the monitored extension's status if the extension had multiple
+                        calls at the same time.</li>
+                    <li>Fixed the BLF monitoring issue on Extension: The BLF LED status was
+                        incorrect when the monitored extension was not registered. </li>
+                    <li>Fixed the BLF monitoring issue on Static Agent: The BLF LED status was
+                        incorrect if the agent's <uicontrol>Caller ID Name</uicontrol> was not the
+                        extension number.</li>
+                </ul>
+            </p><p><b>Import Function</b></p><p>
+                <ul id="ul_yt5_px3_kfb">
+                    <li>Optimized the Import function for <xref
+                            href="../references/import_parameters_extensions.dita#reference_pq4_yzh_mfb"
+                            >Extensions</xref>, <xref
+                            href="../references/import_parameters_trunks.dita#reference_g3l_3f3_mfb"
+                            >Trunks</xref>, <xref
+                            href="../references/import_parameters_inbound_routes.dita#reference_zrm_gj3_mfb"
+                            >Inbound Routes</xref>, <xref
+                            href="../references/import_parameters_outbound_routes.dita#reference_b4g_lj3_mfb"
+                            >Outbound Routes</xref>, <xref
+                            href="../references/import_parameters_firewall_rules.dita#reference_lhf_sj3_mfb"
+                            >Firewall Rules</xref>.</li>
+                </ul>
+            </p><p><b>Multisite Interconnect</b></p><p>
+                <ul id="ul_vxw_qw3_kfb">
+                    <li>Added support for configuring multiple Extension Format.</li>
+                    <li>Added support for displaying Branch name as Caller ID name in
+                        Headquarter.</li>
+                    <li>Optimized the incoming caller ID and CDR.</li>
+                    <li>Fixed the issue that inviting external users on Conference Panel could not
+                        work if Multisite Interconnect was enabled.</li>
+                </ul>
+            </p><p><b>CDR</b></p><p>
+                <ul id="ul_ff3_jhj_kfb">
+                    <li>Fixed the issue that when users were invited by Conference Panel, the CDR
+                        was incorrect.</li>
+                </ul>
+            </p><p><b>Compatibility</b></p><p>
+                <ul id="ul_hnb_3fj_kfb">
+                    <li>Fixed the compatibility issue with Asternic: The Asternic Control Panel
+                        displayed incorrect status.</li>
+                    <li>Added support for synchronizing DND settings on PBX and Yealink IP
+                        phones.</li>
+                    <li>Optimized the compatibility with video door phone: Added support for
+                        checking the video before answering a call.</li>
+                </ul>
+            </p><p><b>Remote Management</b></p><p>
+                <ul id="ul_hrr_lgj_kfb">
+                    <li>Fixed the issue that the devices on Remote Management Platform would be
+                        disconnected because PBX didn't resolve domains regularly.</li>
+                </ul>
+            </p><b>API Interfaces</b><p id="api_1.0.6_s">
+                <ul id="ul_mfx_cp3_kfb">
+                    <li>The IP address that exceeds the allowed failed login attempts would be
+                        listed on the PBX <uicontrol>Block IP Address</uicontrol> page.<p>You can
+                            delete the trusted IP address from the blacklist.</p></li>
+                    <li>Added Transfer Inbound Calls interface.<p>Through this interface, inbound
+                            calls can be transferred to different destinations, like extension, IVR,
+                            queue, etc.</p></li>
+                    <li>Added Transfer Outbound Calls interface.<p>Through this interface, outbound
+                            calls can be transferred to different destinations, like extension, IVR,
+                            queue, etc.</p></li>
+                    <li>Added Hotel Check Out interface.<p>Through this interface, PBX will do the
+                            following operations for the hotel extension:</p><p>
+                            <ul id="ul_evl_4p3_kfb">
+                                <li>Empty the extension's voicemail box.</li>
+                                <li>Delete the extension's outbound route permissions. </li>
+                                <li>Delete the extension's alarms.</li>
+                                <li>Reset the extension's <uicontrol>Caller ID name</uicontrol>
+                                    setting.</li>
+                            </ul>
+                        </p></li>
+                    <li>Optimized "Prompt Play End" report:<p>After an IVR prompt is played, PBX
+                            will send an API report to the 3rd-party application server.</p></li>
+                    <li>Optimized API reports: All the API reports include SN parameters.</li>
+                    <li>Added the following failure reasons in "Call Failure" report:<p>
+                            <ul>
+                                <li>404 NOT found</li>
+                                <li>480 Temporarily unavailable</li>
+                                <li>484 Address Incomplete</li>
+                                <li>486 Busy Here</li>
+                                <li>487 Request Terminated</li>
+                                <li>603 Declined</li>
+                            </ul>
+                        </p></li>
+                    <li>Fixed the issue that "Call an External Number via IVR" would not generate
+                        CDR.</li>
+                </ul>
+            </p><p><b>System Email</b></p><p>
+                <ul id="ul_rqn_zz3_kfb">
+                    <li>Added support for configuring <xref href="email.dita#concept_ls5_r3k_xdb"
+                            >Email User Name.</xref></li>
+                </ul>
+            </p><p><b>Event Center</b></p><p>
+                <ul id="ul_zw5_cr3_kfb">
+                    <li>Added <uicontrol>System New Firmware Detection</uicontrol> event.<p>When the
+                            a new PBX firmware is detected, PBX will send the event notification.
+                            The event notification is disabled by default.</p></li>
+                    <li>Renamed the <uicontrol>Application Upgrade</uicontrol> to
+                            <uicontrol>Application New Version Detection</uicontrol>.<p>When a new
+                            Application is detected, PBX will send then event notification. The
+                            event notification is disabled by default.</p></li>
+                    <li>Added <uicontrol>Application Upgrade</uicontrol> event.<p>When a Application
+                            is upgraded, PBX will send the event notification. The event
+                            notification is disabled by default.</p></li>
+                    <li>Added support for the events of Micro SD card failure, SD card failure, and
+                        USB driver failure.<p>The <uicontrol>Disk Failure</uicontrol> event is
+                            renamed to <uicontrol>Storage Failure</uicontrol>.</p></li>
+                    <li>Added <uicontrol>Storage Lost Connection</uicontrol> event.<p>When the hard
+                            disk, Micro SD card, SD card, or the USB driver lose connection to the
+                            PBX, the PBX will send the event notification.</p></li>
+                </ul>
+            </p><p><b>Data Processing Agreement</b></p><p>
+                <ul id="ul_ypz_nq3_kfb">
+                    <li>Added Chinese version of Data Processing Agreement.</li>
+                    <li>Added LCS (Linkus Cloud Service) description in the Data Processing
+                        Agreement.</li>
+                </ul>
+            </p><p><b>System Log</b></p><p>
+                <ul id="ul_trt_2r3_kfb">
+                    <li>Added support for recording Linkus server logs.</li>
+                </ul>
+            </p><p><b>Operation Log</b></p><p>
+                <ul id="ul_k2f_k53_kfb">
+                    <li>The operations of checking extension's password and enabling weak password
+                        would be recorded in <uicontrol>Operation Log</uicontrol>.<p>
+                            <note>These types of logs could not be deleted.</note>
+                        </p></li>
+                </ul>
+            </p><p><b>Upgrade</b></p><p>
+                <ul id="ul_df3_jhj_kfb">
+                    <li>If <uicontrol>Reset Configuration to Factory Default</uicontrol> is enabled,
+                        a verification code is required to avoid misoperation.</li>
+                </ul>
+            </p><p><b>Storage</b></p><p>
+                <ul id="ul_ef3_jhj_kfb">
+                    <li>Optimized <uicontrol>File Share</uicontrol> web configuration page.</li>
+                </ul>
+            </p></section>
+    </body>
+</topic>

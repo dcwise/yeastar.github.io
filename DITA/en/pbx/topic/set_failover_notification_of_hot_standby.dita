@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_hh5_14k_xdb">
+    <title>Set Failover Notification of Hot Standby</title>
+    <shortdesc>To keep informed of the hot standby status of the primary server and secondary
+        server, you need to set failover notification. If the on-site PBX is down, you can receive
+        failover notifications.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/05/23"/>
+            <!--Carol-->
+            <revised modified="2018/05/23"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol>Event Center</uicontrol>
+                        <uicontrol>Event Settings</uicontrol>
+                    </menucascade>, enable <uicontrol>Hot Standby Failover Action</uicontrol>. </cmd>
+                <info><image href="../Images/admin/hotstanby_event.png" id="image_jgj_crk_xdb"
+                        width="650"/></info>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Notification Contacts</uicontrol> tab, add contacts to receive
+                    the notifications. </cmd>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

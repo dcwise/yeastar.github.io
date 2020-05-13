@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_chs_rlh_pdb">
+    <title>YMP</title>
+    <shortdesc>Release notes for Yeastar Management Platform (YMP).</shortdesc>
+    <conbody>
+        <section id="section_zm4_1f3_rkb">
+            <title>Version 82.9.0.38</title>
+            <p>Released Date: February 12, 2020</p>
+            <p>
+                <ul id="ul_nxn_gf3_rkb">
+                    <li>Enhanced the monitoring of PBX's status and took automatic repair measures.<p>
+                            <ul id="ul_utz_mf3_rkb">
+                                <li>Added support for detecting the PBX's status and automatically
+                                    repairing abnormal PBXs.</li>
+                                <li>Added support for sending <uicontrol>PBX Crash</uicontrol>
+                                    alarms (<menucascade>
+                                        <uicontrol>Alarm</uicontrol>
+                                        <uicontrol>Alarm Settings</uicontrol>
+                                    </menucascade>).<p>If the YMP fails to repair a PBX, YMP will
+                                        send a <uicontrol>PBX Crash</uicontrol> alarm to the
+                                        notification contacts.</p></li>
+                            </ul>
+                        </p></li>
+                </ul>
+            </p>
+            <ul id="ul_kx2_tf3_rkb">
+                <li>Fixed the issue that upgrading PBX firmware on YMP web page might fail.</li>
+                <li>Fixed the CPU alarm issue: An incorrect CPU alarm would be sent when you were
+                    upgrading the YMP.</li>
+            </ul>
+        </section>
+        <section id="section_ujl_cvl_5jb">
+            <title>Version 82.9.0.27</title>
+            <p>Released Date: December 16, 2019<ul id="ul_c53_fvl_5jb">
+                    <li>Improved system stability.</li>
+                    <li>Optimized SMTP Email feature.<ul id="ul_ogw_nvl_5jb">
+                            <li>Optimized Email Test feature: Click <uicontrol>Test</uicontrol>, and
+                                YMP will send a test email to administrator's mailbox. If sending
+                                test email failed, detailed failure reasons would be displayed on
+                                the YMP web interface.</li>
+                            <li>Restricted the <uicontrol>Sender Email Address</uicontrol> field: No
+                                special characters are allowed.</li>
+                        </ul></li>
+                </ul><ul id="ul_gdv_nnj_bkb">
+                    <li>Optimized Alarm settings.<ul id="ul_df5_pnj_bkb">
+                            <li>The notification permissions for a contact is editable.<p>Go to<?oxy_comment_start author="carol" timestamp="20191216T090907+0800" comment="新增说明。" flag="done"?>
+                                    <menucascade>
+                                        <uicontrol>Alarm</uicontrol>
+                                        <uicontrol>Notification Contacts</uicontrol>
+                                    </menucascade>, you can edit the notification permissions for a
+                                    contact.<?oxy_comment_end?></p></li>
+                            <li>By default, alarm notifications for the following events are
+                                enabled, and the notification emails will be sent to the YMP administrator.<p>
+                                    <note> Do NOT turn off notifications for the following events
+                                        and pay attention to the notification emails so that you can
+                                        fix the issues to ensure that the YMP runs stably.</note>
+                                </p><ul id="ul_dnc_zyh_1kb">
+                                    <li>CPU Overload</li>
+                                    <li>Memory Overload</li>
+                                    <li>Disk I/O Overload</li>
+                                    <li>Storage Full</li>
+                                </ul></li>
+                        </ul></li>
+                </ul></p>
+            <ul id="ul_rsc_5vl_5jb">
+                <li>Optimized <uicontrol>Operation Log</uicontrol>.<ul id="ul_iby_5vl_5jb">
+                        <li>Added filters for <uicontrol>Source</uicontrol>:
+                                <uicontrol>All</uicontrol>, <uicontrol>Web</uicontrol>, and
+                                <uicontrol>API</uicontrol>.</li>
+                        <li>Added <b>Source</b> column in the downloaded operation_log.csv.</li>
+                    </ul></li>
+            </ul>
+            <ul id="ul_yfl_yvl_5jb">
+                <li>Fixed the issue of PBX upgrade: If PBX name contained Chinese characters, the
+                    PBX upgrade would fail.</li>
+                <li>Fixed the occasional boot failure of PBX. </li>
+                <li>Fixed the issue of <uicontrol>Dashboard</uicontrol>.<ul id="ul_czj_bwl_5jb">
+                        <li>The transmission rate of <uicontrol>Network</uicontrol> displayed
+                            incorrectly.</li>
+                        <li>The line graph of <uicontrol>Active Calls (Calls)</uicontrol>,
+                                <uicontrol>CPU</uicontrol>, and <uicontrol>Network</uicontrol>
+                            displayed incorrectly.</li>
+                    </ul></li>
+            </ul>
+            <ul id="ul_ej5_dwl_5jb">
+                <li>Fixed the display issue of PBX domain: PBX domain displayed incorrectly if
+                    Translation Extension was enabled on Google Chrome.</li>
+            </ul>
+        </section>
+        <section id="section_owg_d13_mjb">
+            <title>Version 82.9.0.19</title>
+            <p>Released Date: October 24, 2019</p>
+            <p>
+                <ul id="ul_ujc_g13_mjb">
+                    <li>Added Disk I/O Overload alarm.</li>
+                    <li>Improved the YMP system stability.</li>
+                    <li>Optimized Alarm settings: The alarm notifications of Memory Overload and
+                        Storage Full are enabled by default.</li>
+                    <li>Optimized the alarm mechanisms of PBX Active Calls Oversubscription, thus
+                        the system performance is improved.</li>
+                    <li>Fixed the issue of Network Dashboard: The received network data was not
+                        updated automatically on the Dashboard.</li>
+                    <li>Fixed the issue of YMP network: The PBXs might be unreachable as the YMP
+                        network went wrong.</li>
+                    <li>Fixed the issue of Notification Email: If the YMP system restored
+                        configurations from backup data, the notification emails failed to
+                        send.</li>
+                </ul>
+            </p>
+        </section>
+        <section>
+            <title>Version 82.9.0.10</title>
+            <p>Released Date: September 2, 2019</p>
+            <p>
+                <ul id="ul_lxv_cll_53b">
+                    <li>Improved the YMP system stability.</li>
+                    <li>Added PBX status "Starting".<p>When the PBX is booting, the PBX status shows
+                                <image href="../Images/ui_icons/starting.png" width="20"
+                                id="image_anr_1ml_53b"/> (Starting).</p></li>
+                </ul>
+                <ul id="ul_xqp_mml_53b">
+                    <li>Optimized <uicontrol>Operation Log</uicontrol>: Added support for recording
+                        logs of <uicontrol>Modify PBX Type</uicontrol>.</li>
+                    <li>Optimized <uicontrol>Operation Log</uicontrol>: Added
+                            <uicontrol>Source</uicontrol> information in each log, which indicates
+                        the operation is operated on the YMP web or via YMP API interface.</li>
+                    <li>Optimized  settings on <uicontrol>Operation Log</uicontrol> page: After
+                            <uicontrol>Log Type</uicontrol> is selected, only the relevant options
+                        are displayed in the drop-down list of
+                        <uicontrol>Operations</uicontrol>.</li>
+                    <li>Optimized <uicontrol>Create a User</uicontrol> page: Added support for
+                        entering <uicontrol>Company</uicontrol> information for a user.</li>
+                    <li>Optimized <uicontrol>User</uicontrol> list page: You can select
+                            <uicontrol>Company</uicontrol> field to be displayed in the
+                            <uicontrol>User</uicontrol> list.</li>
+                    <li>Optimized <uicontrol>PBX</uicontrol> list page: You can select
+                            <uicontrol>Creator</uicontrol> field to be displayed in the
+                            <uicontrol>PBX</uicontrol> list. </li>
+                    <li>Fixed the issue YMP auto backup: When bulk upgrading PBXs, the YMP auto
+                        backup would fail.</li>
+                    <li>Fixed the display issue on YMP web: The number of concurrent calls displayed
+                        on the web was incorrect.</li>
+                    <li>Fixed the issue of PBX upgrade: If you skipped a few released versions and
+                        upgraded PBX directly to the latest version, the PBX wouldn't work
+                        properly.</li>
+                    <li>Fixed the PBX deletion function: After deleting a PBX, an error message was
+                        displayed on the web page, however, the PBX was successfully deleted.</li>
+                    <li>Fixed the issue of PBX  status: After stopping a PBX on YMP web, the PBX
+                        status would be abnormal.</li>
+                </ul>
+            </p>
+        </section>
+        <section>
+            <title>Version 82.8.0.50</title>
+            <p>Released Date: June 27, 2019</p>
+            <p>
+                <ul id="ul_d25_ywl_q3b">
+                    <li>Added PBX Co-Branding feature<p>
+                            <ul id="ul_l2s_zwl_q3b">
+                                <li>Added support for co-branding Yeastar Cloud PBX by customizing
+                                    logo, product name, favicon (web icon), and email template.</li>
+                                <li>Added support for granding Co-branding privileges to YMP hosting
+                                    users.</li>
+                            </ul>
+                        </p><p>
+                            <note>
+                                <p>
+                                    <ul id="ul_kkd_tld_f3b">
+                                        <li>Please contact Yeastar before using Co-branding
+                                            feature.</li>
+                                        <li>PBX co-branding is supported on the PBX with firmware
+                                            version 81.8.0.112 or later.</li>
+                                        <li>Each time you change the co-branding setting on the YMP,
+                                            you need to reboot the PBX to take effect.</li>
+                                    </ul>
+                                </p>
+                            </note>
+                        </p></li>
+                    <li>Fixed the issue of Linkus Email: The login QR code could not be displayed if
+                        the email was sent to Gmail, Whitebox, and Outlook. <p>
+                            <note>Required PBX version: 81.9.0.14 or later.</note>
+                        </p></li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_ctw_vh5_jhb">
+            <title>Version 82.8.0.35</title>
+            <p>Released Date: April 12, 2019</p>
+            <p>
+                <ul id="ul_kkk_yh5_jhb">
+                    <li>Fixed the issue on YMP version 82.8.0.31: If the YMP hostname was changed,
+                        you could not log in the YMP web interface.</li>
+                </ul>
+            </p>
+        </section>
+        <section>
+            <title>Version 82.8.0.31</title>
+            <p>Released Date: April 1, 2019</p>
+            <p><foreign outputclass="html-embed"
+                    ><![CDATA[<span class="emphasize">  This version fixes several stability issues of the system. We strongly recommend that you upgrade your YMP to the new version. </span>]]></foreign></p>
+            <p>
+                <ul id="ul_e1d_www_fhb">
+                    <li>Improved YMP security.</li>
+                    <li>Improved YMP stability.</li>
+                    <li>Optimized YMP <uicontrol>Backup &amp; Restore</uicontrol> feature: When the
+                        current YMP server is down, you can restore the YMP backup data to a
+                        secondary server and the PBXs will run normally in 7 days.<p>
+                            <note>Please contact Yeastar to activate the secondary server within 7
+                                days.</note>
+                        </p></li>
+                    <li>The Linkus <uicontrol>Chat </uicontrol>feature and PBX
+                            <uicontrol>Upgrade</uicontrol> feature are enabled by default for a
+                        newly created PBX.</li>
+                    <li>Added support for downloading <uicontrol>Operation Logs</uicontrol>.</li>
+                    <li>Optimized PBX <uicontrol>Expiration Date</uicontrol> setting: Restrict date
+                        format to YYYY-MM-DD.</li>
+                    <li>Optimized PBX <uicontrol>Export</uicontrol> feature: The <uicontrol>PBX
+                            Type</uicontrol> is included in the exported PBX Basic Info.</li>
+                    <li>Fixed the issue that the newly created PBX might not be started.</li>
+                    <li>Fixed the issue that the statistics of PBX capacity were incorrect.</li>
+                    <li>Fixed the PBX issue: If Auto Reboot was configured on the PBX, the PBX might
+                        stop running.</li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_qp4_ddp_tgb">
+            <title>Version 82.8.0.22</title>
+            <p>Released Date: February 19, 2019</p>
+            <p>
+                <ul id="ul_wry_hdp_tgb">
+                    <li>Added support for API interfaces.<p>Log in to the YMP web interface, go to <menucascade>
+                                <uicontrol>System</uicontrol>
+                                <uicontrol>API</uicontrol>
+                            </menucascade> to enable API feature.</p></li>
+                    <li>Added support for configuring PBX type to <uicontrol>Trial</uicontrol> or
+                            <uicontrol>Commercial</uicontrol>.</li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_dvv_2ry_zfb">
+            <title>Version 82.8.0.4</title>
+            <p>Released Date: December 6, 2018</p>
+            <p>
+                <ul id="ul_apb_kry_zfb">
+                    <li>Improved the YMP system stability.</li>
+                    <li>Optimized <uicontrol>Customer</uicontrol> settings:<p>
+                            <ul id="ul_cqs_lry_zfb">
+                                <li>Removed "Reseller" and "End User" classification of customers.
+                                    You can manage all the customers on <menucascade>
+                                        <uicontrol>PBX</uicontrol>
+                                        <uicontrol>Customer</uicontrol>
+                                    </menucascade> page.</li>
+                                <li>Added support for configuring a same email address for multiple
+                                    customers.</li>
+                                <li>Added <uicontrol>External ID</uicontrol> setting.<p>You can
+                                        associate the YMP customers with your CRM system or other
+                                        systems.</p></li>
+                            </ul>
+                        </p></li>
+                    <li>Optimized <uicontrol>User</uicontrol> settings: Added support for searching
+                        the YMP user accounts.</li>
+                    <li>Fixed the issue that a web page error was displayed when resizing the
+                        PBX.</li>
+                    <li>Fixed the Backup and Restore issue: The PBX could not reload all
+                        configuration pages if you restored YMP configurations from an
+                        earlier-version backup.</li>
+                    <li>Optimized the email template of PBX information.</li>
+                    <li>Moved the SBC information to <menucascade>
+                            <uicontrol>System</uicontrol>
+                            <uicontrol>Information</uicontrol>
+                        </menucascade> page.</li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_ymj_f1j_gfb">
+            <title>Version 82.7.0.9</title>
+            <p>Released Date: October 25, 2018</p>
+            <p>
+                <ul id="ul_h5h_23j_gfb">
+                    <li>Improved the security of YMP web login.</li>
+                    <li>Added support for enabling or disabling PBX's Recording function and
+                        configuring PBX's Recording capacity.<p>Each PBX has 500-minute recording
+                            time for free. </p></li>
+                    <li>Optimized System Email settings: Added support for configuring Email User
+                        Name.</li>
+                    <li>Optimized PBX Export function: The status of Linkus Chat will be
+                        exported.</li>
+                    <li>Fixed the issue that the Turkish time zone was incorrect.</li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_fn1_jg4_m2b">
+            <title>Version 82.6.0.3</title>
+            <p>Released Date: July 26, 2018</p>
+            <p>
+                <ul id="ul_obs_kg4_m2b">
+                    <li>Added support for enabling or disabling Linkus Chat feature for PBX
+                        instances.</li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_r4m_hbh_f2b">
+            <title>Version 82.6.0.2</title>
+            <p>Released Date: June 29, 2018</p>
+            <p>
+                <ul id="ul_jhs_jbh_f2b">
+                    <li>Added support for using script to backup and restore.</li>
+                    <li>Added support for backing up and restoring auto recording files and
+                        voicemail files.</li>
+                    <li>Added support for selecting which files to back up.</li>
+                    <li>Added support for displaying the upgrade status of PBXs.</li>
+                    <li>Added support for setting auto upgrade of PBXs.</li>
+                    <li>Optimized the email template of PBX information.</li>
+                    <li>Added support for the operation log: Modifying the Alarm Threshold of active
+                        calls will be recorded in operation logs.</li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_amg_c44_pdb">
+            <title>Version 82.5.0.13</title>
+            <p>Released Date: May 2, 2018</p>
+            <p>
+                <ul id="ul_ijh_244_pdb">
+                    <li>
+                        <p>Added support for monitoring active calls of PBX instances, and setting
+                            alerts of PBX active calls. </p>
+                        <p>
+                            <note>PBX instance should be upgraded to version 81.4.0.10.</note>
+                        </p>
+                    </li>
+                    <li>
+                        <p>Added support for monitoring the total active calls of the YMP server,
+                            and setting alerts of YMP active calls.</p>
+                        <p>
+                            <note>PBX instance should be upgraded to version 81.4.0.10.</note>
+                        </p>
+                    </li>
+                    <li>Added support for modify the name of PBX instance.</li>
+                    <li>Fixed the bug that the SIP Server was wrong in the PBX information Email.<p>
+                            <note>If you had modified the default Email Template before, you need to
+                                change the variable name of SIP Server to
+                                    <codeph>${sipserver}</codeph> in your email template.</note>
+                        </p></li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_cmw_z22_qdb">
+            <title>Version 82.5.0.8</title>
+            <p>Released Date: April 10, 2018</p>
+            <p>
+                <ul id="ul_lvb_hf2_qdb">
+                    <li>Added support for upgrading firmware in PBX. </li>
+                    <li>Added support for exporting PBX information.</li>
+                    <li>Optimized system logs.</li>
+                    <li>Optimized web interface.</li>
+                    <li>Optimized the email template of Alarms.</li>
+                    <li>Optimized the Email Template of PBX information.</li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_iyw_tm3_pdb">
+            <title>Version 82.4.0.10</title>
+            <p>Released Date: February 8, 2018</p>
+            <p>
+                <ul id="ul_ud3_wm3_pdb">
+                    <li>Fixed the connection issue with SBC.</li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_efs_tl3_pdb">
+            <title>Version 82.4.0.9</title>
+            <p>Released Date: January 25, 2018</p>
+            <p>
+                <ul id="ul_yzn_pm3_pdb">
+                    <li>Different PBXs in the same YMP can be interconnected.</li>
+                    <li>PBX instance and YMP have the same domain level.</li>
+                    <li>Added support for protecting the system against outside intrusion.</li>
+                    <li>The resellers’ company information is editable.</li>
+                    <li>Optimized PBX search function: added PBX URL and email address search
+                        criteria.</li>
+                    <li>Extended the expiration time for the PBX password reset link to 24
+                        hours.</li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_uqx_pm3_pdb">
+            <title>Version 82.3.0.4</title>
+            <p>Released Date: November 30, 2017</p>
+            <p>
+                <ul id="ul_dz1_sm3_pdb">
+                    <li>Optimized Backup feature: the system has a backup schedule by default; the
+                        system will back up at 00:00 every day; a maximum of 60 backup files will be
+                        stored on the system.</li>
+                    <li>Optimized reconnection between YMP and YPS: after the YMP is disconnected
+                        with the YPS, users can log in YMP, and reconnect to YPS manually.</li>
+                    <li>Optimized Dynamic Defense: if an IP is blacklisted, all the ports of this IP
+                        will be blocked by the YMP.</li>
+                    <li>Optimized Blacklist: if the number of blacklisted IP addresses reaches 5000,
+                        the system will delete the IP addresses which are blacklisted for more than
+                        3 months.</li>
+                    <li>Optimized web interface: if cloud PBX uses initial user name and password,
+                        the option “Reset Admin Password” will be invalid. </li>
+                    <li>Optimized web interface: added identification for required fields.</li>
+                    <li>Fixed E-mail server issue: voicemail to E-mail could not work on cloud
+                        PBX.</li>
+                </ul>
+            </p>
+        </section>
+    </conbody>
+</concept>

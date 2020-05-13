@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_gpz_21h_1db">
+    <title>Download CDR and Recordings</title>
+    <shortdesc>You can download the searched CDR or recording files to your local PC.</shortdesc>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/05/23"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Go to <uicontrol>CDR &amp; One Touch Recording</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd><xref href="search_cdr_and_recordings.dita#task_csr_ppg_1db">Search the CDR and
+                        Recordings</xref>.</cmd>
+            </step>
+            <step>
+                <cmd>To download the searched CDR, click <uicontrol>Download CDR</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>To download the searched recording files, click <uicontrol>Download
+                        Recordings</uicontrol>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

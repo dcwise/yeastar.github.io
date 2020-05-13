@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_fyf_3qz_zdb">
+    <title>Contingency Plan</title>
+    <shortdesc>There is no absolute safety. Make a contingency plan for your PBX.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/06/01"/>
+            <!--Carol-->
+            <revised modified="2018/06/01"/>
+            <!--Carol-->
+            <revised modified="2018/06/05"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <p>
+            <?oxy_delete author="Becky" timestamp="20191209T101203+0800" content="If"?><?oxy_insert_start author="Becky" timestamp="20191209T101204+0800"?>In
+            case<?oxy_insert_end?> an attacker successfully forced your PBX to fail, you should have
+            a contingency plan for your PBX.</p>
+        <section id="section_g51_grz_zdb"><title>Event Center</title>To get informed of the events
+            that occur to your PBX, you need to configure <xref
+                href="../topic/event_center.dita#concept_jjr_xwr_xdb">Event Center</xref> on the
+            PBX. Enable event notifications and add contacts to receive the notifications by email
+            or phone number.</section>
+        <?oxy_attributes product="&lt;change type=&quot;modified&quot; oldValue=&quot;s-series&quot; author=&quot;Becky&quot; timestamp=&quot;20191209T101224+0800&quot; /&gt;"?>
+        <section id="section_ryq_jrz_zdb" product="k2 s-series">
+            <title>Hot Standby</title>
+            <p> Prepare two PBXs that are in the same model and firmware version, and set up <xref
+                    href="../topic/hot_standby.dita#concept_r3b_v3k_xdb">Hot Standby</xref>. When
+                the primary server cannot work, you can quickly replace the failed server to the
+                secondary server with the same configurations.</p>
+        </section>
+        <section id="section_swg_1sz_zdb">
+            <title>Schedule Auto Backup</title>
+            <p>Set <xref href="../topic/schedule_auto_backup.dita#task_jxh_wjm_ldb">auto
+                    backup</xref> on the PBX. If the PBX cannot work, you can reset the PBX, and
+                restore the PBX configurations from the backup file.</p>
+        </section>
+    </conbody>
+</concept>
+<?oxy_options track_changes="on"?>

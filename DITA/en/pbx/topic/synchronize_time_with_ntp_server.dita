@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_p4w_d3m_xdb">
+    <title>Synchronize PBX Time with NTP Server</title>
+    <shortdesc>If you synchronized the PBX time with an external NTP server, the PBX will adjust its
+        internal clock to a central network server. </shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/05/23"/>
+            <!--Carol-->
+            <revised modified="2018/05/23"/>
+            <!--Carol-->
+            <revised modified="2018/10/23"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <context id="context_pjd_bkm_xdb">
+            <note>Make sure that the PBX can access the Internet, or the PBX cannot synchronize its
+                time from the NTP server.</note>
+        </context>
+        <steps>
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol>System</uicontrol>
+                        <uicontrol>Date &amp; Time</uicontrol>
+                    </menucascade>.</cmd>
+            </step>
+            <step>
+                <cmd>Select your current and correct <uicontrol>Time Zone</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd importance="optional">Check the option <uicontrol>Daylight Save
+                        Time</uicontrol> if you need it in your place.</cmd>
+            </step>
+            <step>
+                <cmd>Select <uicontrol>Synchronize With NTP Server</uicontrol> and set the
+                        <uicontrol>NTP Server</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Reboot the PBX to take effect.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_aqr_sv5_1fb">
+    <title>Interconnect Yeastar Cloud PBX and TG Gateway</title>
+    <shortdesc>Connect Yeastar Cloud PBX and Yeastar TG gateway to extend GSM/3G/4G
+        trunks.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/09/05"/>
+            <!--Carol-->
+            <revised modified="2018/09/05"/>
+        </critdates>
+    </prolog>
+    <body>
+        <p>In the following instruction, we tested with Yeastar Cloud PBX version 81.6.0.3 and
+            Yeastar TG400 version 91.2.0.13.</p>
+        <p>After connecting the Yeastar Cloud PBX and the Yeastar TG gateway, the users of  Yeastar
+            Cloud PBX can achieve the followings:</p>
+        <p>
+            <ul id="ul_whq_xv5_1fb">
+                <li>Make outbound calls through GSM/3G/4G trunks of TG gateway</li>
+                <li>Receive inbound calls from GSM/3G/4G trunks of TG gateway</li>
+            </ul>
+        </p>
+        <p><image href="../Images/integration/cloud+tg.png" id="image_xhq_xv5_1fb" width="700"/></p>
+        <section id="section_yhq_xv5_1fb">
+            <title>1. Connect Yeastar Cloud PBX and TG400</title>
+            <p>
+                <ol id="ol_zhq_xv5_1fb">
+                    <li>On the Yeastar Cloud PBX, create an Account Trunk.<p>
+                            <ol id="ol_a3q_xv5_1fb">
+                                <li>Go to <menucascade>
+                                        <uicontrol>Settings</uicontrol>
+                                        <uicontrol>Trunks</uicontrol>
+                                    </menucascade>, click <uicontrol>Add</uicontrol>.</li>
+                                <li>Set the trunk as an Account Trunk.<p><image
+                                            href="../Images/integration/cloud+tg400_account_trunk.png"
+                                            width="650" id="image_b3q_xv5_1fb"/></p><p>
+                                        <ul id="ul_c3q_xv5_1fb">
+                                            <li><uicontrol>Name</uicontrol>: Set a name to help you
+                                                identify it.</li>
+                                            <li><uicontrol>Trunk Status</uicontrol>: Select
+                                                  <uicontrol>Enabled</uicontrol>.</li>
+                                            <li><uicontrol>Protocol</uicontrol>: Select
+                                                  <uicontrol>SIP</uicontrol>.</li>
+                                            <li><uicontrol>Trunk Type</uicontrol>: Select
+                                                  <uicontrol>Account Trunk</uicontrol>.</li>
+                                            <li><uicontrol>Transport</uicontrol>: Select
+                                                  <uicontrol>UDP</uicontrol>.</li>
+                                            <li><uicontrol>Username</uicontrol>: Use the default or
+                                                change the number.</li>
+                                            <li><uicontrol>Password</uicontrol>: Use the default or
+                                                change the password.</li>
+                                            <li><uicontrol>Authentication Name</uicontrol>: Set to
+                                                the same with <uicontrol>Username</uicontrol>.</li>
+                                        </ul>
+                                    </p></li>
+                                <li>Click <uicontrol>Save</uicontrol> and
+                                        <uicontrol>Apply</uicontrol>.</li>
+                            </ol>
+                        </p></li>
+                    <li>On the TG400, create a register-based VoIP trunk.<p>
+                            <ol id="ol_d3q_xv5_1fb">
+                                <li>Go to <menucascade>
+                                        <uicontrol>Gateway</uicontrol>
+                                        <uicontrol>VoIP Settings</uicontrol>
+                                        <uicontrol>VoIP Trunk</uicontrol>
+                                    </menucascade>, click <uicontrol>Add VoIP
+                                    Trunk</uicontrol>.</li>
+                                <li>Configure the VoIP trunk.<p><image
+                                            href="../Images/integration/cloud+tg400_register_trunk.png"
+                                            id="image_e3q_xv5_1fb"/></p><p>
+                                        <ul id="ul_f3q_xv5_1fb">
+                                            <li><uicontrol>Trunk Type</uicontrol>: Select
+                                                  <uicontrol>Register Trunk</uicontrol>.</li>
+                                            <li><uicontrol>Type</uicontrol>: Select
+                                                  <uicontrol>SIP</uicontrol>.</li>
+                                            <li><uicontrol>Provider Name</uicontrol>: Set the trunk
+                                                name.</li>
+                                            <li><uicontrol>Hostname/IP</uicontrol>: Enter the domain
+                                                or IP address of the PBX; Enter the SIP port.</li>
+                                            <li><uicontrol>Domain</uicontrol>: Enter the domain or
+                                                IP address of the PBX.</li>
+                                            <li><uicontrol>User Name</uicontrol>: Enter the
+                                                  <uicontrol>Username</uicontrol> of Account Trunk
+                                                that is created on the PBX.</li>
+                                            <li><uicontrol>Authorization Name</uicontrol>: Enter the
+                                                  <uicontrol>Authentication Name</uicontrol> of
+                                                Account Trunk that is created on the PBX.</li>
+                                            <li><uicontrol>Password</uicontrol>: Enter the
+                                                  <uicontrol>Password</uicontrol> of Account Trunk
+                                                that is created on the PBX.</li>
+                                        </ul>
+                                    </p></li>
+                                <li>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply
+                                        Changes</uicontrol>.</li>
+                            </ol>
+                        </p></li>
+                    <li>Check the connection status.<p>
+                            <ol id="ol_g3q_xv5_1fb">
+                                <li>On the TG400, go to <menucascade>
+                                        <uicontrol>Status</uicontrol>
+                                        <uicontrol>System Status</uicontrol>
+                                        <uicontrol>Trunk Status</uicontrol>
+                                    </menucascade> to check the trunk status.<p>If the connection is
+                                        successful, the status will show "Registered".</p><p><image
+                                            href="../Images/integration/cloud+tg400_voip_trunk_status.png"
+                                            width="700" id="image_h3q_xv5_1fb"/></p></li>
+                                <li>On the Yeastar Cloud PBX, go to <uicontrol>PBX
+                                        Monitor</uicontrol> to check the trunk status. <itemgroup>If
+                                        the connection is successful, the status will show <image
+                                            href="../Images/ui_icons/ok.png" width="20"
+                                            id="image_i3q_xv5_1fb"/>.</itemgroup><p><image
+                                            href="../Images/integration/cloud+tg400_account_trunk_status.png"
+                                            width="700" id="image_j3q_xv5_1fb"/></p></li>
+                            </ol>
+                        </p></li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_k3q_xv5_1fb">
+            <title>2. Make Outbound Calls Through GSM/3G/4G Trunks</title>
+            <p>
+                <ol id="ol_l3q_xv5_1fb">
+                    <li>On Yeastar Cloud PBX, create an outbound route to allow users make outbound
+                        calls through TG400.<p>
+                            <ol id="ol_m3q_xv5_1fb">
+                                <li>Go to <menucascade>
+                                        <uicontrol>Settings</uicontrol>
+                                        <uicontrol>PBX</uicontrol>
+                                        <uicontrol>Call Control</uicontrol>
+                                        <uicontrol>Outbound Routes</uicontrol>
+                                    </menucascade>, click <uicontrol>Add</uicontrol>.</li>
+                                <li>Configure the outbound route.<p><image
+                                            href="../Images/integration/cloud+tg400_outbound_route.png"
+                                            width="650" id="image_n3q_xv5_1fb"/></p><p>
+                                        <ul id="ul_o3q_xv5_1fb">
+                                            <li><uicontrol>Name</uicontrol>: Set the outbound route
+                                                name.</li>
+                                            <li><uicontrol>Dial Patterns</uicontrol>: Set the dial
+                                                patterns according to your needs. <p>In our
+                                                  scenario, set <uicontrol>Patterns</uicontrol> to
+                                                  <codeph>9.</codeph>, set
+                                                  <uicontrol>Strip</uicontrol> to
+                                                  <codeph>1</codeph>; users should dial prefix 9
+                                                  before the target number. For example, to call
+                                                  number 123456, you should dial 9123456.</p></li>
+                                            <li><uicontrol>Member Trunks</uicontrol>: Select the
+                                                trunk that is connected to TG400 to
+                                                  <uicontrol>Selected</uicontrol> box.</li>
+                                            <li><uicontrol>Member Extensions</uicontrol>: Select
+                                                extensions to <uicontrol>Selected</uicontrol> box.
+                                                The selected extensions can make outbound calls
+                                                through TG400.</li>
+                                        </ul>
+                                    </p></li>
+                                <li>Click <uicontrol>Save</uicontrol> and
+                                        <uicontrol>Apply</uicontrol>.</li>
+                            </ol>
+                        </p></li>
+                    <li>On TG400, set an “IP to Mobile” route to allow the PBX users make outbound
+                        calls through the GSM/3G/4G trunks.<p>
+                            <ol id="ol_p3q_xv5_1fb">
+                                <li>Go to <menucascade>
+                                        <uicontrol>Gateway</uicontrol>
+                                        <uicontrol>Route Settings</uicontrol>
+                                        <uicontrol>IP to Mobile</uicontrol>
+                                    </menucascade>,  click <uicontrol>Add IP to Mobile
+                                        Route</uicontrol>.</li>
+                                <li>Configure the "IP to Mobile" route.<p><image
+                                            href="../Images/integration/cloud+tg400_ip_to_mobile.png"
+                                            id="image_q3q_xv5_1fb"/></p><p>
+                                        <ul id="ul_r3q_xv5_1fb">
+                                            <li><uicontrol>Simple Mode</uicontrol>: Select
+                                                  <uicontrol>No</uicontrol>.</li>
+                                            <li><uicontrol>Route Name</uicontrol>: Set the route
+                                                name.</li>
+                                            <li><uicontrol>Call Source</uicontrol>: Select the trunk
+                                                that is connected to the PBX.</li>
+                                            <li><uicontrol>DID Number</uicontrol>: Set to
+                                                  <codeph>.</codeph> to allow users dial any
+                                                number.</li>
+                                            <li><uicontrol>Call Destination</uicontrol>: Select a
+                                                Mobile trunk or a Mobile trunk group. </li>
+                                        </ul>
+                                    </p></li>
+                                <li>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply
+                                        Changes</uicontrol>.</li>
+                            </ol>
+                        </p></li>
+                    <li>Make a call to test.<p>For example, the PBX extension 1000 dials
+                            91588035242, the user 1588035242 will ring.</p></li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_s3q_xv5_1fb">
+            <title>3. Receive Inbound Calls From GSM/3G/4G Trunks</title>
+            <p>
+                <ol id="ol_t3q_xv5_1fb">
+                    <li>On Yeastar Cloud PBX, create an inbound route to accept incoming calls from TG400.<p>
+                            <ol id="ol_u3q_xv5_1fb">
+                                <li>Go to <menucascade>
+                                        <uicontrol>Settings</uicontrol>
+                                        <uicontrol>PBX</uicontrol>
+                                        <uicontrol>Call Control</uicontrol>
+                                        <uicontrol>Inbound Routes</uicontrol>
+                                    </menucascade>, click <uicontrol>Add</uicontrol>.</li>
+                                <li>Configure the inbound route.<p><image
+                                            href="../Images/integration/cloud+tg400_inbound_route.png"
+                                            width="650" id="image_v3q_xv5_1fb"/></p><p>
+                                        <ul id="ul_w3q_xv5_1fb">
+                                            <li><uicontrol>Name</uicontrol>: Set the inbound route
+                                                name.</li>
+                                            <li><uicontrol>DID Pattern</uicontrol>: Set a DID
+                                                number. This DID number will be used to match the
+                                                incoming calls from TG400.</li>
+                                            <li><uicontrol>Member Trunks</uicontrol>: Select the
+                                                trunk that is connected to TG400 to
+                                                  <uicontrol>Selected</uicontrol> box.</li>
+                                            <li><uicontrol>Destination</uicontrol>: Set a
+                                                destination for the inbound route.<p>In our
+                                                  scenario, set the
+                                                  <uicontrol>Destination</uicontrol> to an IVR. The
+                                                  PBX will route incoming calls of TG400 to the
+                                                  IVR.</p></li>
+                                        </ul>
+                                    </p></li>
+                                <li>Click <uicontrol>Save</uicontrol> and
+                                        <uicontrol>Apply</uicontrol>.</li>
+                            </ol>
+                        </p></li>
+                    <li>On TG400, create a "Mobile to IP" route to route incoming calls to the PBX.<p>
+                            <ol id="ol_x3q_xv5_1fb">
+                                <li>Go to <menucascade>
+                                        <uicontrol>Gateway</uicontrol>
+                                        <uicontrol>Route Settings</uicontrol>
+                                        <uicontrol>Mobile to IP</uicontrol>
+                                    </menucascade>, click <uicontrol>Add Mobile to IP
+                                        Route</uicontrol>.</li>
+                                <li>Configure the "Mobile to IP" route.<p><image
+                                            href="../Images/integration/cloud+tg400_mobile_to_ip.png"
+                                            id="image_y3q_xv5_1fb"/></p><p>
+                                        <ul id="ul_z3q_xv5_1fb">
+                                            <li><uicontrol>Simple Mode</uicontrol>: Select
+                                                  <uicontrol>Yes</uicontrol>.</li>
+                                            <li><uicontrol>Route Name</uicontrol>: Set the route
+                                                name.</li>
+                                            <li><uicontrol>Call Source</uicontrol>: Select a Mobile
+                                                trunk or a Mobile trunk group.</li>
+                                            <li><uicontrol>Call Destination</uicontrol>: Choose the
+                                                trunk that is connected to the PBX.</li>
+                                            <li><uicontrol>Hotline</uicontrol>: Enter the DID number
+                                                that is set on the PBX's inbound route.</li>
+                                        </ul>
+                                    </p></li>
+                                <li>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply
+                                        Changes</uicontrol>.</li>
+                            </ol>
+                        </p></li>
+                    <li>Make a call to test.<p>For example, the GSM trunk number is 17283733; use
+                            your mobile phone to call  17283733, you will hear the PBX's IVR
+                            prompt.</p></li>
+                </ol>
+            </p>
+        </section>
+    </body>
+</topic>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="remote-management">
+  <title>Remote Management</title>
+  <shortdesc>Yeastar Remote Management provides an affordable, low maintenance solution for easily
+    deploying Yeastar VoIP PBX and VoIP gateways across multiple locations, reducing complexity and
+    providing deep visibility and control. </shortdesc>
+  <body>
+    <section id="section_qvg_hlb_3db">
+      <title>Compatibility</title>
+      <p>The following Yeastar products supports Remote Management feature:</p>
+      <p>
+        <ul id="ul_jrk_4zj_wgb">
+          <li>Yeastar Cloud PBX: 81.4.0.X or later</li>
+          <li>Yeastar S-Series VoIP PBX: 30.6.0.20 or later</li>
+          <li>Yeastar TA1600/TA2400/TA3200 V3</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_rxj_szj_wgb" product="cloudpbx k2 s-series">
+      <title>Remote Management Guide</title>
+      <p>How to manage Yeastar products on the Remote Management platform, refer to the <xref
+          href="https://help.yeastar.com/en/remote-management/" format="html" scope="external"
+          >Remote Management Guide</xref>.</p>
+    </section>
+    <section id="section_tyh_m4b_3db"><image href="../Images/remote_management.png" width="750"
+        id="image_wmd_r4b_3db"/></section>
+  </body>
+</topic>

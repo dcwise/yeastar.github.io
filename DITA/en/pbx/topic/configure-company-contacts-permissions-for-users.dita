@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="manage-company-contacts-permissions-for-contacts">
+    <title>Configure Company Contacts Permissions for Users</title>
+    <shortdesc>By default, only the PBX administrator can view and manage Company Contacts. To share
+        Company Contacts with your organization, you need to configure Company Contacts permissions
+        for the users in your organization.</shortdesc>
+    <body>
+        <section id="section_phx_d42_skb">
+            <title>Permissions</title>
+            <p>The PBX provides two permission levels: View and Manage.</p>
+            <p>
+                <dl>
+                    <dlentry id="view-company-contacts">
+                        <dt>View Company Contacts</dt>
+                        <dd>The authorized users only have permissions to view the contacts
+                            information of the Company Contacts.</dd>
+                        <dd><image href="../Images/admin/view-company-contacts.png"
+                                id="image_ff1_w2f_skb" width="600"/></dd>
+                    </dlentry>
+                </dl>
+                <dl>
+                    <dlentry id="manage-company-contacts">
+                        <dt>Manage Company Contacts</dt>
+                        <dd>The authorized users have permissions to view, edit, add, delete, import
+                            and export the contacts of the Company Contacts.</dd>
+                        <dd><image href="../Images/admin/manage-company-contacts.png" width="600"
+                                id="image_bt1_vlf_skb"/></dd>
+                    </dlentry>
+                </dl>
+            </p>
+        </section>
+        <section id="section_gsj_1nf_skb">
+            <title>Configure Company Contacts permissions for users</title>
+            <p>
+                <ol id="ol_irf_gnf_skb">
+                    <li>Go to <menucascade>
+                            <uicontrol>Contacts</uicontrol>
+                            <uicontrol>Settings</uicontrol>
+                        </menucascade>.</li>
+                    <li>To assign <xref
+                            href="#manage-company-contacts-permissions-for-contacts/view-company-contacts"
+                            format="dita">View</xref> permission to users, configure the section
+                            <uicontrol>View Company Contacts</uicontrol>.<p>Select the extensions
+                            from <uicontrol>Available</uicontrol> box to
+                                <uicontrol>Selected</uicontrol> box.</p></li>
+                    <li>To assign <xref
+                            href="#manage-company-contacts-permissions-for-contacts/manage-company-contacts"
+                            format="dita">Manage</xref> permission to users, configure the section
+                            <uicontrol>Manage Company Contacts</uicontrol>.<p>Select the extensions
+                            from <uicontrol>Available</uicontrol> box to
+                                <uicontrol>Selected</uicontrol> box.</p><p>
+                            <note>Assign the Manage permission carefully to appropriate users. If a
+                                user delete contacts accidentally, the contacts would be
+                                lost.</note>
+                        </p></li>
+                    <li>Click <uicontrol>Save</uicontrol>.</li>
+                </ol>
+            </p>
+        </section>
+    </body>
+</topic>

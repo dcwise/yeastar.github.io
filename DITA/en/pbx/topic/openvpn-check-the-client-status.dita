@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="view_the_connected_clients">
+    <title>Check the Client Status</title>
+    <shortdesc> You can check the connected clients and the virtual IP address assigned to the
+        clients.</shortdesc>
+    <body>
+        <p>
+            <ol id="ol_t22_kgc_33b">
+                <li>Log in the PBX web interface, go to <menucascade>
+                        <uicontrol>VPN Server</uicontrol>
+                        <uicontrol>Clients List</uicontrol>
+                    </menucascade>.<p><image
+                            href="../Images/admin/openvpn-view-connected-clients.jpg"
+                            id="image_xcg_gq2_33b" width="650"/></p></li>
+            </ol>
+        </p>
+    </body>
+</topic>

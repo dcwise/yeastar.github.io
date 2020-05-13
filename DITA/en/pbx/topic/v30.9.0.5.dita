@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="concept_r2s_5jt_q2b">
+    <title>Version 30.9.0.5</title>
+    <abstract>Released Date: August 9, 2018</abstract>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/07/31"/>
+            <!--Carol-->
+            <revised modified="2018/07/31"/>
+            <!--Carol-->
+            <revised modified="2018/08/01"/>
+        </critdates>
+    </prolog>
+    <body>
+        <section id="section_m51_zjt_q2b">
+            <title>New Feature</title>
+            <p><image href="../Images/horizon.png" id="image_aj3_vyv_pdb"/></p>
+            <p>
+                <ul id="ul_qwp_ckt_q2b">
+                    <li>Added support for Linkus Windows desktop.</li>
+                    <li>Added support for Presence feature on Linkus.</li>
+                </ul>
+            </p>
+        </section>
+    </body>
+</topic>

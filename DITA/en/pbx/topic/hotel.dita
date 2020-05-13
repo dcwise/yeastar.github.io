@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="app-hotel">
+    <title>Hotel </title>
+    <shortdesc><ph keyref="product_name"/> - Hotel App empowers the PBX users to intuitively manage
+        the booking and check-in and check-out of customers, check status of each room, offer
+        mini-bar service, and run personalized billing reports, and more daily operational tasks in
+        hotels and other hospitality environments.</shortdesc>
+    <conbody>
+        <p>
+            <note>If you uninstall the Hotel App, all of your hotel data will be erased.</note>
+        </p>
+        <section id="section_eqr_f5s_c2b">
+            <title>Hotel App Features</title>
+            <p>
+                <ul id="ul_bfl_g5s_c2b">
+                    <li>Room Management</li>
+                    <li>Guest Management</li>
+                    <li>Check In</li>
+                    <li>Check Out</li>
+                    <li>Booking Rooms</li>
+                    <li>Room Status</li>
+                    <li>Room Groups</li>
+                    <li>Wake-up Calls</li>
+                    <li>Mini Bar</li>
+                    <li>Set Call Rate </li>
+                    <li>Billing Report</li>
+                </ul>
+            </p>
+        </section>
+    </conbody>
+</concept>

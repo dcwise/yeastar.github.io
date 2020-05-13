@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="concept_tlc_5bt_l2b">
+    <title>Interconnect Yeastar Cloud PBX and S-Series VoIP PBX</title>
+    <shortdesc>Interconnect Yeastar Cloud PBX with Yeastar S-Series VoIP PBX to make free calls
+        between the two PBXs and share trunks.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/07/13"/>
+            <!--Carol-->
+            <revised modified="2018/07/13"/>
+            <!--Carol-->
+            <revised modified="2018/07/23"/>
+            <!--Carol-->
+            <revised modified="2018/07/26"/>
+            <!--Carol-->
+            <revised modified="2018/07/27"/>
+            <!--Carol-->
+            <revised modified="2018/07/31"/>
+            <!--Carol-->
+            <revised modified="2018/08/13"/>
+        </critdates>
+    </prolog>
+    <body>
+        <p>In this topic, we tested Yeastar Cloud PBX and Yeastar S300.</p>
+        <table frame="all" rowsep="1" colsep="1" id="table_sl4_5dc_d3b">
+            <title/>
+            <tgroup cols="2">
+                <colspec colname="c1" colnum="1" colwidth="1*"/>
+                <colspec colname="c2" colnum="2" colwidth="1*"/>
+                <thead>
+                    <row>
+                        <entry>Yeastar Cloud PBX</entry>
+                        <entry>Yeastar S300</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>Firmware: v81.5.0.7</entry>
+                        <entry>Firmware: v30.8.0.8</entry>
+                    </row>
+                    <row>
+                        <entry>Extension: 2000-2050</entry>
+                        <entry>Extension: 1000-1200</entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+        <p>
+            <note type="note">The two PBXs should not have the same extension number, or the calls
+                between the two PBXs will fail.</note>
+        </p>
+        <p><image href="../Images/integration/cloud+s300.png" id="image_vpk_gfr_p2b"/></p>
+    </body>
+</topic>

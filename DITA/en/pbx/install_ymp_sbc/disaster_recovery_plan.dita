@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_uzk_rtv_k2b">
+    <title>Yeastar Cloud PBX Disaster Recovery</title>
+    <shortdesc>Disaster recovery planning is critical for phone system. It protects your
+        organization against system failure and natural disaster, and helps you to prepare for
+        recovery from the worst. Yeastar provides several failover options to ensure that your
+        business processes can continue in an event of a system failure or a natural disaster. </shortdesc>
+    <conbody>
+        <section id="section_fch_p55_jhb">
+            <title>Yeastar failover options:</title>
+            <p>Yeastar provides the following disaster recovery options:</p>
+            <p>
+                <ul id="ul_jzv_q55_jhb">
+                    <li><xref href="local-backup-and-restore.dita"/></li>
+                    <li><xref href="snapshot-solution.dita"/></li>
+                    <li><xref href="external-backup-and-restore.dita"/></li>
+                </ul>
+            </p>
+            <p>
+                <table frame="all" rowsep="1" colsep="1" id="table_isn_bv5_jhb">
+                    <title>Comparisons of Yeastar failover options</title>
+                    <tgroup cols="4">
+                        <colspec colname="c1" colnum="1" colwidth="1.15*"/>
+                        <colspec colname="c3" colnum="2" colwidth="1*"/>
+                        <colspec colname="newCol4" colnum="3" colwidth="1.14*"/>
+                        <colspec colname="newCol5" colnum="4" colwidth="1.33*"/>
+                        <thead>
+                            <row>
+                                <entry>Failover Options</entry>
+                                <entry>Failover Mode</entry>
+                                <entry>Extra Costs</entry>
+                                <entry>Downtime</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>Local Backup &amp; Restore</entry>
+                                <entry>Manual failover</entry>
+                                <entry>No</entry>
+                                <entry>Human &amp; System Dependent </entry>
+                            </row>
+                            <row>
+                                <entry>Snapshot Solution</entry>
+                                <entry>Manual failover</entry>
+                                <entry>Need a secondary instance/ Virtual Machine</entry>
+                                <entry>Human &amp; System Dependent<p>Fast and generally in few
+                                        minutes</p></entry>
+                            </row>
+                            <row>
+                                <entry>External Backup &amp; Restore</entry>
+                                <entry>Manual failover (with Yeastar support)</entry>
+                                <entry>Need a secondary server.</entry>
+                                <entry>Human &amp; System Dependent<p>≥ 30 minutes</p></entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+    </conbody>
+</concept>

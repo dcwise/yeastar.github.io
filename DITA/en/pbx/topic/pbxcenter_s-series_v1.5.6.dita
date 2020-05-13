@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_n4x_2z3_pdb">
+    <title>Version 1.5.6</title>
+    <abstract>Released Date: March 30, 2017</abstract>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/06/20"/>
+        </critdates>
+    </prolog>
+    <body>
+        <section id="section_p3t_2bx_pdb">
+            <title>Optimization</title>
+            <p><image href="../Images/horizon.png" id="image_q3t_2bx_pdb"/></p>
+            <p>
+                <ul>
+                    <li>Changed all the default system music on hold files to the Asterisk version
+                        13 music on hold files. The music on hold files are authorized to use.</li>
+                    <li>Updated English, Chinese, Turkish, Spanish, and Hebrew system prompts.</li>
+                    <li>Optimized CDR and Recordings feature: the system will record the un-answered
+                        call if the queue agents didn’t answer the call. </li>
+                    <li>Optimized CDR and Recordings feature: the PBX administrator can delete and
+                        download call logs and recording files in batch.</li>
+                    <li>Optimized CDR and Recordings feature: if an extension has a DOD number, the
+                        call log will display the extension number and the DOD number.</li>
+                    <li>Optimized CDR and Recordings feature: users can click a column heading to
+                        sort the table in ascending or descending order.</li>
+                    <li>Optimized CDR and Recordings feature: users can choose an extension to play
+                        recording file on the web interface.</li>
+                    <li>Optimized Voicemail feature: if voicemails have been played or deleted on
+                        Web interface, the IP phone will synchronize the voicemail status.</li>
+                    <li>Optimized Voicemail feature: users can change the voicemail system’s “Busy
+                        Prompt” and “Unavailable Prompt” (Settings > PBX > General > Voicemail >
+                        Greeting Options). </li>
+                    <li>Optimized Voicemail feature: when users call in the PBX’s IVR, they can dial
+                        *02 to check voicemails. To achieve this function, you need to enable “Dial
+                        to Check Voicemail” on the IVR edit page.</li>
+                    <li>Optimized User Permission: allow users to delete auto recording files;
+                        separate reboot permission and reset permission.</li>
+                    <li>Optimized DOD Settings: users can import and export DOD numbers.</li>
+                    <li>Optimized SIP Caller ID feature: different SIP trunks can get Caller ID from
+                        different SIP fields. There is a global “Get Caller ID From” setting on “PBX
+                        > General > SIP > Advanced” page. You can set a different “Get Caller ID
+                        From” for a specific SIP trunk on the trunk edit page.</li>
+                    <li>Optimized SIP DID feature: added support for getting DID number from
+                        “Diversion” and “P-Asserted-Identify” (PBX > General > SIP > Advanced).</li>
+                    <li>Optimized SIP Outbound SIP Registrations Setting: the “Default
+                        Incoming/Outgoing Registration Time” is set to 1800 seconds.</li>
+                    <li>Optimized Call Transferring: “Send Diversion ID” (PBX > General > SIP >
+                        Advanced) will work for extension “Call Forwarding” and transfer feature
+                        codes (*03, *3). When an incoming call is forwarded or when using *03 or *3
+                        to transfer a call, the original caller’s number will be displayed.</li>
+                    <li>Optimized SLA feature: users can choose a failover destination for a SLA
+                        trunk.</li>
+                    <li>Optimized Event Center: added “Network Drive Lost Connection” notification
+                        setting.</li>
+                    <li>Optimized Static Route: users can choose adding static route to LAN gateway
+                        or WAN gateway.</li>
+                    <li>Optimized System Email Password Setting: the password setting is allowed to
+                        enter any special characters.</li>
+                    <li>Optimized Auto Cleanup settings: the default <ph id="OLE_LINK4">“Max Number
+                            of CDR” on S20/S50/S100 is 200000</ph>, the default “Max Number of CDR”
+                        on S300 is 50000. The default value of “CDR Preservation Duration”, “Files
+                        Preservation Duration” and “Recordings Preservation Duration” are set to 0,
+                        meaning no limit.</li>
+                    <li>Optimized Auto Cleanup feature: when the CDR reaches over 90% of the “Max
+                        number of CDR”, the system will send notification.</li>
+                    <li>Optimized SIP feature: support requests of MESSAGE SIP packet (PBX > General
+                        > SIP > Advanced).</li>
+                    <li>Optimized DID Settings: support DID numbers that start with digit 0 and
+                        support DID numbers that contain character “+”.</li>
+                    <li>Optimized FXO Settings: users can change the FXO trunk’s “DTMF Duration” and
+                        “DTMF Gap” (PBX > General).</li>
+                    <li>Optimized FXO Settings: users can manually release a FXO trunk on web
+                        interface (FXO Trunk > Advanced > Other Settings).</li>
+                    <li>Optimized FXO Hangup Detection feature: support hang up a call by “Loop
+                        Current Disconnect” method. This method is used when connecting the S-Series
+                        IPPBX to a traditional PBX, and the traditional PBX uses this method for
+                        signaling call termination.</li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_bsn_fbx_pdb">
+            <title>Fixed Bug</title>
+            <p><image href="../Images/horizon.png" id="image_csn_fbx_pdb"/></p>
+            <p>
+                <ul>
+                    <li>Fixed BLF LED status issue: the BLF LED would stay in Green status after
+                        rebooting S-Series IPPBX.PBX.</li>
+                    <li>Fixed Voicemail issue: the voicemails were not deleted automatically even
+                        the option “Delete Voicemail” was enabled.</li>
+                    <li>Fixed Emergency Call issue: when the PBX reached the max number of
+                        concurrent calls, emergency calls could not work.</li>
+                    <li>Fixed Time Condition issue: if time condition status was force changed by
+                        feature code, distinctive ring tones on inbound routes could not work.</li>
+                    <li>Fixed Time Condition issue: the IP phone BLF key could not correctly
+                        indicate the time condition status.</li>
+                    <li>Fixed the SMS issue: if an email contains Greek words, sending this email to
+                        SMS, the SMS contents would appear garbled words; Sending SMS to email also
+                        had this problem.</li>
+                    <li>Fixed Email to SMS issue: if the email contains Polish words, sending email
+                        to SMS would fail. </li>
+                    <li>Fixed compatibility issue with some VOIP ISP: making outbound calls with the
+                        VoIP trunk, the calls would be disconnected after 30 seconds.</li>
+                    <li>Fixed DID number matching issue on inbound route: the system could not match
+                        DID number correctly if there were multiple inbound routes configured with
+                        the same Peer-to-Peer SIP trunk and different DID numbers.</li>
+                    <li>Fixed Hot Standby issue: after enabling Hot Standby feature, the system’s
+                        default gateway would automatically be changed to LAN gateway. </li>
+                    <li>Fixed Hot Standby issue: configurations on the primary server and standby
+                        server could not be synchronized.</li>
+                    <li>Fixed Paging Group issue: if a user called the PBX’s FXO trunk, and the call
+                        reached a paging group, all the group members hung up the call, but call was
+                        still connected.</li>
+                    <li>Fixed the Auto Defense issue: if an IP was listed in blacklist due to SSH
+                        accessing failure, this IP would have no authority to access the PBX web
+                        interface.</li>
+                    <li>Fixed Voicemail issue: system would reserve the prompt “please leave a
+                        message after the tone”, even users had custom “Busy prompt” and
+                        “Unavailable prompt”. </li>
+                    <li>Fixed the Voicemail issue: the S-Series IPPBX would not send RTP packets
+                        when users were leaving voicemail messages, this would cause some ISP
+                        consider the PBX is not alive and disconnect the call. </li>
+                    <li>Fixed File Share issue: Win 10 users could not access the shared files;
+                        Window users need to change the PC LAN Manager authentication level, or they
+                        cannot access the shared files.</li>
+                    <li>Fixed the File Share issue: if the user first enabled file share feature
+                        then installed the external storage device, the file share feature would not
+                        work. </li>
+                    <li>Fixed the issue that if ring group member or queue agent’s extension was not
+                        registered, the extension and the mobility extension could not ring
+                        simultaneously. </li>
+                    <li>Fixed the Outbound route issue: the system could not correctly match
+                        outbound route if multiple outbound routes were configured with the same
+                        dial pattern.</li>
+                    <li>Fixed the User Permission issue: a user with permission to check and
+                        download CDR and recordings could not check and download his/her own CDR and
+                        recordings.</li>
+                    <li>Fixed CDR and Recordings issue: pickup calls were not recorded in the call
+                        log.</li>
+                    <li>Fixed CDR and Recordings issue: if the research result includes tens of
+                        thousands of records, downloading the research results would fail.</li>
+                    <li>Fixed NAT issue: if NAT method was set to a domain, and when the domain
+                        could not be resolved, the NAT page would be unreachable, debugging Asterisk
+                        also would fail.</li>
+                    <li>Fixed compatibility issue with some Analog phones: if a trunk had no Caller
+                        ID service, when users call in the trunk, and the call reached an analog
+                        phone, the phone might crash.</li>
+                    <li>Fixed the issue that extension IP Restriction feature could not work
+                        properly.</li>
+                    <li>Fixed the IAX issues: IAX trunk’s domain name could not automatically
+                        update; using IAX might cause memory leaks.</li>
+                </ul>
+            </p>
+        </section>
+    </body>
+</topic>

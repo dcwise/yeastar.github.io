@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_vzx_pvj_5cb">
+    <title>Change the MoH Playlist</title>
+    <shortdesc>To change the MoH playlist, you need to first add a MoH playlist and upload your
+        audio files to the PBX.</shortdesc>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/06/14"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <steps id="steps_qpc_xvj_5cb">
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol>PBX</uicontrol>
+                        <uicontrol>Voice Prompts</uicontrol>
+                        <uicontrol>Prompt Preference</uicontrol>
+                    </menucascade>.</cmd>
+            </step>
+            <step>
+                <cmd>Select a MoH playlist from the drop-down menu of  <uicontrol>Music On
+                        Hold</uicontrol>.</cmd>
+                <info><image href="../Images/admin/change_moh.png" id="image_lfp_fwj_5cb"/></info>
+            </step>
+        </steps>
+        <result id="result_ayr_mpq_5cb">The PBX will play the select MoH playlist when a user is
+            held in a call.</result>
+    </taskbody>
+    <related-links>
+        <link href="add_a_custom_moh_playlist.dita#task_j4t_1pj_5cb"/>
+    </related-links>
+</task>

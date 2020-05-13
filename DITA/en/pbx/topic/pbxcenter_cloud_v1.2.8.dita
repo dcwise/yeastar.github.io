@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_fsg_sh3_pdb">
+    <title>Version 1.2.8</title>
+    <abstract>Released Date: December 5, 2017</abstract>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/06/20"/>
+        </critdates>
+    </prolog>
+    <body>
+        <section id="section_mcr_nvd_jdb">
+            <title>New Feature</title>
+            <p><image href="../Images/horizon.png" id="image_pry_dyv_pdb"/></p>
+            <ul id="ul_kn5_xh3_pdb">
+                <li>Added Multisite Interconnect feature.</li>
+                <li>Added a new SIP trunk type “Account Trunk”.</li>
+                <li>Added templates of SIP trunk.</li>
+                <li>Added support for answering an intercom/paging call.</li>
+                <li>Added support for importing configurations of SIP register trunks.</li>
+                <li>Added support for importing configurations of outbound routes and inbound
+                    routes.</li>
+                <li>Added a default rule of outbound restriction: an extension user can make a
+                    maximum of 5 calls in 1 minute.</li>
+                <li>Added Caller ID name modification for SIP trunk DOD settings. Note that Global
+                    DOD has been removed, and “Caller ID Number” and “Caller ID Name” have been
+                    added on trunk edit page.</li>
+                <li>Added All Busy Mode for SIP Forking. When one SIP terminal registers one
+                    extension is called and is already in call, the other SIP terminals registered
+                    to the same extension will be marked as busy and can’t be called. Outgoing call
+                    will not be restricted.</li>
+                <li>Added support for DSS Key type – Call Park of Yealink phones. Call can be parked
+                    directly by pressing the Call Park key as well as monitoring and pressing to
+                    retrieve parked call.</li>
+                <li>Added support for counting the duration from “Queue receives call” to “Agent
+                    answers call”.</li>
+                <li>Added Local Loop trunk for IP address 127.0.0.1.</li>
+                <li>Added BLF monitoring support for Time Condition default feature code like
+                    *800.</li>
+                <li>Added CDR query condition for Caller ID name. There will have a separate column
+                    of Caller ID name in the CDR CSV file that you download.</li>
+            </ul>
+        </section>
+        <section id="section_jhy_yh3_pdb">
+            <title>Optimization</title>
+            <p><image href="../Images/horizon.png" id="image_btm_m1x_pdb"/></p>
+            <p>
+                <ul id="ul_yfh_b33_pdb">
+                    <li>Optimized the SIP qualify feature for Peer-Type SIP trunk. Some providers
+                        doesn’t support OPTION to be qualified which makes the trunk status
+                        “unknown” and calls can’t be made. Currently when Quality option is
+                        unchecked, it would show “unmonitored” on the PBX monitor page and calls are
+                        allowed to make.</li>
+                    <li>Optimized PAI and Remote Party ID would be disabled by default.</li>
+                    <li>Optimized SLA feature: the administrator can enable or disable the SLA
+                        prompt.</li>
+                    <li>Optimized blacklist feature: the administrator can restrict specific
+                        extension users from calling the blocked numbers.</li>
+                    <li>Optimized call forwarding: if an extension is unregistered, incoming calls
+                        to the extension will be forwarded to the “No answer” destination. </li>
+                    <li>Optimized CDR Auto Cleanup: when the CDR number reaches 90% of the Max
+                        Number of CDR, the system will send notification.</li>
+                    <li>Optimized Distinctive Ringtone setting: you can enter uppercase letters,
+                        lowercase letters, numbers, “-”, ”_” and “+”.</li>
+                    <li>Optimized Call log searching feature.</li>
+                    <li>Optimized SLA feature: Users: users can dial numbers start with “*” through
+                        an SLA trunk.</li>
+                    <li>Optimized voicemail prompts.</li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_mml_b33_pdb">
+            <title>Fixed Bug</title>
+            <p><image href="../Images/horizon.png" id="image_rcm_n1x_pdb"/></p>
+            <p>
+                <ul>
+                    <li>Fixed the one-way audio issue on TLS trunks.</li>
+                    <li>Fixed the issue that if “TLS Verify Server” was enabled, the TLS trunk would
+                        fail to register.</li>
+                    <li>Fixed SIP Interactive Connectivity Establishment (ICE) issue.</li>
+                    <li>Fixed the “More” button display issue on Notification menu: “More” button
+                        would still be clickable when there is no notification.</li>
+                    <li>Fixed the issue that voicemail couldn’t be found when Caller ID name
+                        including “&amp;” on the user Me page.</li>
+                    <li>Fixed the issue that users could still call into Queue when Join Empty and
+                        Leave When Empty is both checked. </li>
+                    <li>Fixed the issue that Ring Group members’ status would still show ringing
+                        when the call had been answered by Pick Up.</li>
+                    <li>Fixed no video problem caused by codec payload negotiation that video phone
+                        would include different payload. Note that currently the payload is fixed to
+                        99 for PBX.</li>
+                    <li>Fixed the issue that paging initiator would also be paged when he was in the
+                        paging group that he paged.</li>
+                    <li>Fixed the issue that DTMF on Polycom Phones did not take effect.</li>
+                    <li>Fixed the issue that after receiving a packet of cancelling Register from
+                        Panasonic, the Yeastar system would break down.</li>
+                    <li>Fixed voicemail prompt: if you set the inbound route to voicemail, you could
+                        not hear the prompt of “Ask Caller to Dial 5”. </li>
+                    <li>Fixed ring group issue: if a member of the ring group canceled “Always
+                        Forward” by dialing *071; the member still could not receive calls. </li>
+                    <li>Fixed voicemail feature: if “Ask Caller to Dial 5” was enabled, users could
+                        not dial 0 to exit voicemail.</li>
+                    <li>Fixed the issue that Adapt Caller ID could not work if the call reached a
+                        queue or a ring group.</li>
+                </ul>
+            </p>
+        </section>
+    </body>
+</topic>

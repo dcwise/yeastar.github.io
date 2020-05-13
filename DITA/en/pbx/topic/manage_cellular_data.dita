@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_onc_fdh_tdb">
+    <title>Manage Cellular Data</title>
+    <shortdesc>You can set plan for the cellular data on 4G trunk and monitor the cellular data
+        usage on the PBX.</shortdesc>
+    <taskbody>
+        <context id="context_lrv_wdh_tdb">
+            <p>Generally, the cellular data is paid by month. Below we give an example on how to
+                manage cellular data by month. </p>
+            <p>Assume that we have 2GB of cellular data allowance every month for the 4G card.</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol>System</uicontrol>
+                        <uicontrol>Network</uicontrol>
+                        <uicontrol>Cellular Network</uicontrol>
+                    </menucascade>, configure <uicontrol>Data Control</uicontrol> settings.</cmd>
+                <info><image href="../Images/admin/data_control.png" width="650"
+                        id="image_oyt_sdh_tdb"/></info>
+                <choices>
+                    <choice><uicontrol>Data Used</uicontrol>: This field shows total used data on
+                        the PBX, you can change it to an actual value. If you reset data monthly,
+                        then the <uicontrol>Data Used</uicontrol> shows monthly used data.</choice>
+                    <choice><uicontrol>Data Allowance</uicontrol>: Set to 2048 MB (2*1024).</choice>
+                    <choice><uicontrol>Automatically Cut Off</uicontrol>: If this option is enabled,
+                        when data usage exceeds 2GB, the PBX will disconnect cellular
+                        network.</choice>
+                    <choice><uicontrol>Reset Cycle Time</uicontrol>: Select <uicontrol>Every
+                            Month</uicontrol>, and set the time, the data will reset to zero at the
+                        time every month.</choice>
+                </choices>
+            </step>
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol>Event Center</uicontrol>
+                        <uicontrol>Event Center</uicontrol>
+                    </menucascade>, enable <uicontrol>About to Reach Data Allowance</uicontrol> and
+                    set the notification contact.</cmd>
+                <info>
+                    <p>When the data usage reaches 90% of the allowance data, the system will send
+                        notifications to the relevant contacts.</p>
+                </info>
+                <info><image href="../Images/admin/about_to_reach_data_allowance.png"
+                        id="image_lfj_v2h_tdb"/></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>
+<?oxy_options track_changes="on"?>

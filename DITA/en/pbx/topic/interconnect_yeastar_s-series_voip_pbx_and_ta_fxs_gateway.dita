@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="concept_mvm_43k_b2b">
+    <title>Interconnect Yeastar S-Series VoIP PBX and TA FXS Gateway</title>
+    
+    <shortdesc>Interconnect S-Series VoIP PBX and Yeastar TA FXS gateway to extend analog
+        phones.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/06/06"/>
+            <!--Carol-->
+            <revised modified="2018/06/06"/>
+            <!--Carol-->
+            <revised modified="2018/06/07"/>
+            <!--Carol-->
+            <revised modified="2018/06/08"/>
+            <!--Carol-->
+            <revised modified="2018/06/11"/>
+            <!--Carol-->
+            <revised modified="2018/07/27"/>
+            <!--Carol-->
+            <revised modified="2018/09/05"/>
+            <!--Carol-->
+            <revised modified="2018/12/06"/>
+        </critdates>
+    </prolog>
+    <body>
+        <p>In the topic, we tested with Yeastar S-Series VoIP PBX version 30.7.0.35 and Yeastar
+            TA3200 version 40.19.0.30.</p>
+        <p>After connecting the Yeastar S-Series VoIP PBX and the Yeastar TA FXS gateway, you can
+            achieve the followings:</p>
+        <p>
+            <ul id="ul_fgr_hjk_b2b">
+                <li>Make calls between the analog phones and the SIP extensions of  the PBX</li>
+                <li>Receive inbound calls on the analog phones</li>
+                <li>Use the PBX's trunk to make outbound calls from the analog phones</li>
+                <li>Make calls between analog phones</li>
+            </ul>
+        </p>
+        <p><image href="../Images/integration/ta_fxs+spbx.png" id="image_tym_jyz_b2b"/></p>
+        <section id="section_qhn_qjk_b2b"><title>1. Create an extension on the PBX</title>Log in the
+            PBX web interface, go to <menucascade>
+                <uicontrol>Settings</uicontrol>
+                <uicontrol>PBX</uicontrol>
+                <uicontrol>Extensions</uicontrol>
+            </menucascade>, create one extension. <p>You will use this extension to register on the
+                FXS port of TA3200 later.</p><p><image
+                    href="../Images/admin/integrate_ta3200_create_extension.png" width="650"
+                    id="image_gsj_rkk_b2b"/></p></section>
+        <section id="section_mf4_1qq_b2b">
+            <title>2. Configure a VoIP Server on TA3200</title>
+            <p>Log in the TA3200 web interface, go to <menucascade>
+                    <uicontrol>Gateway</uicontrol>
+                    <uicontrol>VoIP Settings</uicontrol>
+                    <uicontrol>VoIP Server Settings</uicontrol>
+                </menucascade>,  set a VoIP Server.</p>
+            <p><image href="../Images/admin/integrate_ta3200_voip_server_s.png" width="500"
+                    id="image_ewt_5yz_b2b"/></p>
+            <p>
+                <ul id="ul_btt_qrq_b2b">
+                    <li><uicontrol>Server Name</uicontrol>: Set a name to help you identify the VoIP
+                        server.</li>
+                    <li><uicontrol>Type</uicontrol>: Choose <codeph>SIP</codeph>.</li>
+                    <li><uicontrol>Transport</uicontrol>: Choose <codeph>UDP</codeph>.</li>
+                    <li><uicontrol>Hostname/IP</uicontrol>: Enter the IP address of your PBX and the
+                        SIP registration port.</li>
+                    <li><uicontrol>Domain</uicontrol>: Enter the IP address of your PBX.</li>
+                    <li><uicontrol>Register Mode</uicontrol>: Choose <codeph>Port
+                        Register</codeph>.</li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_ubk_jtq_b2b">
+            <title>3. Set a Dial Pattern Template on TA3200</title>
+            <p>Go to <menucascade>
+                    <uicontrol>Gateway</uicontrol>
+                    <uicontrol>VoIP Settings</uicontrol>
+                    <uicontrol>Dial Pattern Template</uicontrol>
+                </menucascade>, edit one template according to your needs. </p>
+            <p>The default dial pattern allows you to call any number.</p>
+            <p><image href="../Images/admin/integrate_ta3200_dial_pattern_template.png"
+                    id="image_bc2_25q_b2b" width="500"/></p>
+        </section>
+        <section id="section_vv1_1tq_b2b">
+            <title>4. Edit FXS port of TA3200</title>
+            <p>Go to <menucascade>
+                    <uicontrol>Gateway</uicontrol>
+                    <uicontrol>Port List</uicontrol>
+                    <uicontrol>Port List</uicontrol>
+                </menucascade>, register one FXS port as the SIP extension of the PBX.</p>
+            <p><image href="../Images/admin/integrate_ta3200_register_fxs_s.png" width="500"
+                    id="image_esg_bzz_b2b"/></p>
+            <p>
+                <ul id="ul_r33_q5q_b2b">
+                    <li><uicontrol>Caller ID Name</uicontrol>: Set a name to help you identify the
+                        FXS port.</li>
+                    <li><uicontrol>Caller ID Number</uicontrol>: Enter the SIP extension
+                        number.</li>
+                    <li><uicontrol>VoIP Server</uicontrol>: Choose the VoIP server that is for the
+                        PBX.</li>
+                    <li><uicontrol>User Name</uicontrol>: Enter the SIP extension number.</li>
+                    <li><uicontrol>Authentication Name</uicontrol>: Enter the registration name of
+                        the SIP extension.</li>
+                    <li><uicontrol>Password</uicontrol>: Enter the registration password of the SIP
+                        extension.</li>
+                    <li><uicontrol>Dial Pattern Template</uicontrol>:  Choose the dial pattern
+                        template that will be applied to the FXS port.</li>
+                    <li><uicontrol>DID Number</uicontrol>: Enter the SIP extension number.</li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_cfb_xvq_b2b">
+            <title>5. Check the status of the FXS port</title>
+            <p>Go to <menucascade>
+                    <uicontrol>Status</uicontrol>
+                    <uicontrol>System Status</uicontrol>
+                    <uicontrol>FXS Port Status</uicontrol>
+                </menucascade> to check the status of the FXS port.</p>
+            <p>If the <uicontrol>Status</uicontrol> shows "OK", the FXS port is registered as the
+                SIP extension of the PBX. </p>
+            <p>You can make internal calls between the analog phones and the extensions of the PBX
+                now.</p>
+            <p><image href="../Images/admin/integrate_ta3200_port_status.png" id="image_uzk_2wq_b2b"
+                    width="650"/></p>
+        </section>
+        <section id="section_fm1_byq_b2b">
+            <title>6. Set outbound call permission for the FXS port</title>
+            <p>To make outbound calls from the analog phone, you need to set call permission for the
+                SIP extension that is registered on the FXS port of TA3200.</p>
+            <p>
+                <note>To make outbound calls from the analog phone of TA3200, you need to follow by
+                    the dial pattern rule of TA3200 and dial pattern rule of the PBX.</note>
+            </p>
+            <p>
+                <ol id="ol_ibp_yyq_b2b">
+                    <li>Log in the PBX web interface, go to <menucascade>
+                            <uicontrol>Settings</uicontrol>
+                            <uicontrol>PBX</uicontrol>
+                            <uicontrol>Call Control</uicontrol>
+                            <uicontrol>Outbound Route</uicontrol>
+                        </menucascade>, edit your outbound route or add a new outbound route for the
+                        FXS port.</li>
+                    <li>Select the SIP extension that is registered on the FXS port to the
+                            <uicontrol>Selected</uicontrol> box.<p><image
+                                href="../Images/admin/integrate_ta3200_outbound_route.png"
+                                id="image_byk_szq_b2b" width="500"/></p></li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_q2h_5zq_b2b">
+            <title>7. Set inbound call permission for the FXS port</title>
+            <p>To receive inbound calls on the analog phone of TA3200, you need to check if the SIP
+                extension that is registered to the FXS port is reachable through an inbound
+                route.</p>
+            <p>You can set the destination to the SIP extension, IVR, ring group, or queue that
+                contains the SIP extension. </p>
+            <p><image href="../Images/admin/integrate_ta3200_inbound_route.png" width="500"
+                    id="image_m2x_jbr_b2b"/></p>
+        </section>
+    </body>
+</topic>

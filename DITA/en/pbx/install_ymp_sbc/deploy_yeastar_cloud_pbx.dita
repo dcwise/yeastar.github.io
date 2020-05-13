@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_ogz_3wc_scb">
+  <title>Deploy Yeastar Cloud PBX</title>
+  <body>
+    <p>You can choose to deploy Yeastar Cloud PBX in a data center, Amazon AWS or Alibaba Cloud.</p>
+    <p>
+      <ul id="ul_uvf_ywc_scb">
+        <li><xref href="deploy_yeastar_cloud_pbx_in_data_center.dita">Deploy Yeastar Cloud PBX in
+            Data Center</xref></li>
+        <li><xref href="deploy_yeastar_cloud_pbx_on_aws.dita">Deploy Yeastar Cloud PBX on
+          AWS</xref></li>
+        <li><xref href="deploy_yeastar_cloud_pbx_on_ali_cloud.dita">Deploy Yeastar Cloud PBX on Ali
+            Cloud</xref></li>
+      </ul>
+    </p>
+  </body>
+</topic>

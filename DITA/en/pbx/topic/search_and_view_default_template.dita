@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_djh_dry_scb">
+    <title>Search and View Default Template</title>
+    <titlealts>
+        <searchtitle>default auto provisioning template</searchtitle>
+    </titlealts>
+    <shortdesc><ph keyref="product_name"/>  has default auto provisioning templates for each phone
+        model. You can search and view the default template for your phones. </shortdesc>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/10/23"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <steps id="steps_ibt_5ty_scb">
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Auto Provisioning</uicontrol>
+                        <uicontrol>Template</uicontrol>
+                        <uicontrol>Default Template</uicontrol>
+                    </menucascade>.</cmd>
+            </step>
+            <step>
+                <cmd>Select the manufacturer and phone model, click
+                    <uicontrol>Search</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Click <image href="../Images/ui_icons/cp-view.png" width="20"
+                        id="image_w2c_gvy_scb"/> to view the default templates.</cmd>
+                <info><image href="../Images/admin/default_autop_template.png" width="650"
+                        id="image_fmy_3vy_scb"/></info>
+            </step>
+            <step>
+                <cmd>To search contents in the default template, press <uicontrol>Ctrl</uicontrol> +
+                        <uicontrol>F</uicontrol> on your keyboard.</cmd>
+            </step>
+            <step>
+                <cmd>In the search field, enter the search criteria.</cmd>
+                <stepresult>The matched contents will be highlighted. </stepresult>
+            </step>
+        </steps>
+    </taskbody>
+    <related-links>
+        <link href="add_a_customized_auto_provisioning_template.dita#task_hdh_rmy_scb"/>
+        <link href="add_additional_settings_in_custom_template.dita#task_hwy_srh_5cb"/>
+    </related-links>
+</task>

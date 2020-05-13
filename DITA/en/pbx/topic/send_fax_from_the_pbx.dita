@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_v5v_sfd_xdb">
+    <title>Send Fax from the PBX</title>
+    <shortdesc>To send a fax from the PBX, you need to install S2 module or SO module on the PBX,
+        and connect a fax machine to the FXS port on the PBX.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/05/22"/>
+            <!--Carol-->
+            <revised modified="2018/05/22"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Connect a fax machine to the FXS port of the PBX.</cmd>
+            </step>
+            <step>
+                <cmd>Set an FXS extension on the PBX.</cmd>
+                <substeps id="substeps_xyp_ggd_xdb">
+                    <substep>
+                        <cmd>Log in the PBX web interface, go to <menucascade>
+                                <uicontrol>Settings</uicontrol>
+                                <uicontrol>PBX</uicontrol>
+                                <uicontrol>Extensions</uicontrol>
+                            </menucascade>, set the extension <uicontrol>Type</uicontrol> to
+                                <codeph>FXS</codeph>, and select the FXS port that your fax machine
+                            is connected.</cmd>
+                        <info><image href="../Images/admin/fax_extension.png" width="650"
+                                id="image_hbf_ngd_xdb"/></info>
+                    </substep>
+                    <substep>
+                        <cmd>Click <uicontrol>Save</uicontrol> and
+                            <uicontrol>Apply</uicontrol>.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Set up an outbound route for the FXS extension.</cmd>
+                <substeps id="substeps_ewb_5gd_xdb">
+                    <substep>
+                        <cmd>Go to <menucascade>
+                                <uicontrol>Settings</uicontrol>
+                                <uicontrol>PBX</uicontrol>
+                                <uicontrol>Call Control</uicontrol>
+                                <uicontrol>Outbound Route</uicontrol>
+                            </menucascade>, configure an existed outbound route or add a new
+                            outbound route.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Set the <uicontrol>Dial Patterns</uicontrol> of the outbound
+                            route.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Select a trunk that supports to send fax.</cmd>
+                        <info>
+                            <note>If you choose a SIP trunk to send fax, you need to enable
+                                    <uicontrol>T.38 Support</uicontrol> on the
+                                    <uicontrol>Advanced</uicontrol> settings page of the SIP
+                                trunk.</note>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Select the FXS extension.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Click <uicontrol>Save</uicontrol> and
+                            <uicontrol>Apply</uicontrol></cmd>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+        <result id="result_tx5_jjd_xdb">Dial phone numbers on the fax machine according to the dial
+            patterns of your outbound route. After hear a fax tone, you can start to send
+            fax.</result>
+    </taskbody>
+</task>

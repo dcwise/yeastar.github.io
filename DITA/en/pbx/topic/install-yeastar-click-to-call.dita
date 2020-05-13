@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="install-yeastar-click-to-call">
+    <title>Install Yeastar Click to Call</title>
+    <shortdesc>Before using Yeastar Click to Call, make sure your operating system, browser, and
+        Linkus meet the requirements and Yeastar Click to Call is installed.</shortdesc>
+    <body>
+        <section id="section_up3_pct_xjb">
+            <title><?oxy_comment_start author="carol" timestamp="20191210T100742+0800" comment="这些内容跟安装extension 是没有关联的，没有这些条件，也是可以安装
+
+内容写到overview里面去。描述 这个extension 运行需要Linkus 支持，支持的版本是哪些。。
+
+Linkus 配置有什么要求。
+
+"?>Requirements<?oxy_comment_end?></title>
+            <p><?oxy_comment_start author="carol" timestamp="20191210T113904+0800" comment="这个不用说明"?><b>System
+                    requirement</b><?oxy_comment_end?></p>
+            <p>Windows or Mac OS. </p>
+            <p><?oxy_comment_start author="carol" timestamp="20191210T113837+0800" comment="你现在就在写 Chrome Extension， 这个条件的说明很多余"?><b>Browser
+                    requirement</b></p>
+            <p>Google Chrome browser.<?oxy_comment_end?></p>
+            <p><b>Linkus requirements</b></p>
+            <p>
+                <ul id="ul_itl_sct_xjb">
+                    <li>Install Linkus Desktop Client:<ul id="ul_rjr_vhc_yjb">
+                            <li>For Windows, install Linkus with version
+                                <?oxy_comment_start author="Becky" timestamp="20191204T162919+0800" comment="待确认"?>XXX<?oxy_comment_end?>
+                                or later.</li>
+                            <li>For Mac OS, install Linkus with version
+                                <?oxy_comment_start author="Becky" timestamp="20191204T162923+0800" comment="待确认"?>XXX<?oxy_comment_end?>
+                                or later.</li>
+                        </ul></li>
+                    <li>Linkus should be running. If not, <uicontrol>Auto Login</uicontrol> must be
+                        enabled.</li>
+                    <li>Extension user who has outbound call permission logs in and must be
+                        online.</li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_bmz_tct_xjb">
+            <title>Install Yeastar Click to Call</title>
+            <p>
+                <ol id="ol_qgk_vct_xjb">
+                    <li><?oxy_comment_start author="carol" timestamp="20191210T101112+0800" comment="1. 这个无需登录。
+Open the Chrome Web Store.
+2. 如何安装？
+Search Yeastar Click to Call and select the extension.
+
+"?>Log
+                        in <xref href="https://chrome.google.com/webstore/category/extensions?hl=en"
+                            format="html" scope="external">Chrome Web Store</xref> to install
+                        <?oxy_comment_start author="Becky" timestamp="20191203T152627+0800" comment="上架后补链接"?>Yeastar
+                        Click to Call<?oxy_comment_end?>.<?oxy_comment_end?></li>
+                    <li>Click <uicontrol>Add to Chrome</uicontrol>.
+                            <?oxy_delete author="carol" timestamp="20191210T101207+0800" content="A confirmation dialog pops up, and shows you what permissions will be granted to Yeastar Click to Call."?><?oxy_insert_start author="carol" timestamp="20191210T101210+0800"?><p><?oxy_comment_start author="carol" timestamp="20191210T101759+0800" comment="1. confirmation dialog -- dialog
+描述是什么dialog无意义。
+
+2. what permissions will be granted to Yeastar
+what permissions the Yeastar needs
+
+换一个角度。是Yeastar Click to Call 需要获取用户的权限才能运行。就像手机APP 需要获取手机的某些权限"?>A
+                            dialog pops up and shows what permissions the Yeastar Click to Call
+                            extension
+                                needs.<?oxy_comment_end?></p><?oxy_insert_end?><p><?oxy_comment_start author="Becky" timestamp="20191203T152752+0800" comment="上架后补图"?><image
+                                id="image_eyp_3dt_xjb"/><?oxy_comment_end?></p></li>
+                    <?oxy_comment_start author="carol" timestamp="20191210T101942+0800" comment="为什么要执行这个动作？"?>
+                    <li><?oxy_insert_start author="carol" timestamp="20191210T101851+0800"?>To
+                        approve the Yeastar Click to Call to get permissions,
+                        c<?oxy_insert_end?><?oxy_delete author="carol" timestamp="20191210T101919+0800" content="C"?>lick
+                            <uicontrol>Add
+                            Extension</uicontrol>.<?oxy_comment_end?><p><?oxy_comment_start author="carol" timestamp="20191210T103721+0800" comment="呈现合适的内容。
+The Yeastar icon displays on the right of the address bar.即可。
+
+为什么address bar 后面还要括号 （URL field）？"?>After
+                            the Extension is added to Google Chrome, Yeastar Click to Call is
+                            enabled automatically and the Yeastar icon <image
+                                href="../Images/admin/yeastar.png" width="20" id="image_fb2_dw5_xjb"
+                            />displays on the right of the address bar (URL
+                            field).<?oxy_comment_end?></p><p><?oxy_comment_start author="carol" timestamp="20191210T113023+0800" comment="这个状态描述不够准确，。仅说明出现icon就好。"?><image
+                                id="image_lxt_ggt_xjb" href="../Images/admin/yeastar-gray.png"
+                                width="20"/>: Yeastar Click to Call is unavailable on current
+                            page.</p><p><image id="image_ndj_1gt_xjb"
+                                href="../Images/admin/yeastar.png" width="20"/>: Yeastar Click to
+                            Call is available on current page. </p><p>
+                            <note>If you temporarily disable the Extension, Yeastar icon still
+                                displays <image href="../Images/admin/yeastar.png" width="20"
+                                    id="image_lrv_sy5_xjb"/>, but Yeastar Click to Call does not
+                                work.<?oxy_comment_end?></note>
+                        </p></li>
+                </ol>
+            </p>
+        </section>
+    </body>
+</topic>
+<?oxy_options track_changes="on"?>

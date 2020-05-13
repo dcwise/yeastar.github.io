@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_k5d_d1h_tdb">
+    <title>Check PBX Network Status</title>
+    <shortdesc>After you changed the PBX network mode, check if the network status is correct and
+        check the IP address of the 4G network.</shortdesc>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Go to <uicontrol>Resource Monitor</uicontrol>, check the current network and
+                    cellular network.</cmd>
+                <info><image href="../Images/admin/pbx_network_status.png" id="image_ccg_41h_tdb"
+                    /></info>
+                <info><image href="../Images/admin/cellular_network_status.png"
+                        id="image_dxz_41h_tdb"/></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

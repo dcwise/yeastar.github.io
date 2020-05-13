@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_apj_qhk_zdb">
+    <title>PBX Service Security</title>
+    <shortdesc product="s-series">The PBX provides various services that use different protocol. To
+        secure your PBX, you need to configure and manage the services on the PBX.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/05/30"/>
+            <!--Carol-->
+            <revised modified="2018/05/30"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <section id="section_vhx_k3k_zdb">
+            <title>PBX Service</title>
+            <p>Go to <menucascade>
+                    <uicontrol>Settings</uicontrol>
+                    <uicontrol>System</uicontrol>
+                    <uicontrol>Security</uicontrol>
+                    <uicontrol>Service</uicontrol>
+                </menucascade> to check all the service status and port.</p>
+            <p>
+                <note>We suggest you to change the default port.</note>
+            </p>
+            <p>
+                <table frame="all" rowsep="1" colsep="1" id="table_vsd_4jk_zdb">
+                    <title>Description of PBX Services</title>
+                    <tgroup cols="3">
+                        <colspec colname="c1" colnum="1" colwidth="1.06*"/>
+                        <colspec colname="c2" colnum="2" colwidth="1*"/>
+                        <colspec colname="c3" colnum="3" colwidth="3.17*"/>
+                        <thead>
+                            <row>
+                                <entry>Service</entry>
+                                <entry>Default Port</entry>
+                                <entry>Description</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row product="s-series">
+                                <entry>HTTPS</entry>
+                                <entry>8088</entry>
+                                <entry>Web access protocol.</entry>
+                            </row>
+                            <row product="s-series">
+                                <entry>HTTP</entry>
+                                <entry>8088</entry>
+                                <entry>Web access protocol.</entry>
+                            </row>
+                            <row product="s-series">
+                                <entry>SSH</entry>
+                                <entry>8022</entry>
+                                <entry>Access the PBX via SSH to debug the system.<p>
+                                        <note type="important">Do not enable SSH if you don't need
+                                            to debug the system.</note>
+                                    </p></entry>
+                            </row>
+                            <row product="s-series">
+                                <entry>FTP</entry>
+                                <entry>21</entry>
+                                <entry>Access the PBX via FTP to download files from the PBX or
+                                    upload files to the PBX.<p>
+                                        <note type="important">Do not enable FTP if you don't need
+                                            it.</note>
+                                    </p></entry>
+                            </row>
+                            <row product="s-series">
+                                <entry>TFTP</entry>
+                                <entry>/</entry>
+                                <entry>
+                                    <p>Yeastar S-Series VoIP PBX works as a TFTP server when auto
+                                        provisioning phones. </p>
+                                    <p>
+                                        <note type="important">You can disable TFTP if you don't
+                                            need to provisioning the phones.</note>
+                                    </p>
+                                </entry>
+                            </row>
+                            <row product="s-series">
+                                <entry>IAX</entry>
+                                <entry>4569</entry>
+                                <entry>IAX (Inter-Asterisk Exchange Protocol)</entry>
+                            </row>
+                            <row>
+                                <entry>SIP UDP</entry>
+                                <entry>5060</entry>
+                                <entry>Registration port of SIP UDP.</entry>
+                            </row>
+                            <row>
+                                <entry>SIP TCP</entry>
+                                <entry>5060</entry>
+                                <entry>Registration port of SIP TCP.</entry>
+                            </row>
+                            <row>
+                                <entry>SIP TLS</entry>
+                                <entry>5061</entry>
+                                <entry>Secure SIP packets with TLS encryption. TLS allows safe
+                                    transactions over untrusted networks and with authenticated
+                                    parties. </entry>
+                            </row>
+                            <row product="s-series">
+                                <entry>AMI</entry>
+                                <entry>5038</entry>
+                                <entry><?oxy_comment_start author="Becky" timestamp="20191209T111235+0800" comment="之前的英文：
+AMI a system monitoring and management interface provided by Asterisk."?>AMI
+                                    ( Asterisk Manager Interface): Monitor and control Asterisk
+                                    system through the interface.<?oxy_comment_end?><p>You can
+                                        connect a third-party software to the PBX via AMI
+                                        interface.</p></entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+    </conbody>
+</concept>
+<?oxy_options track_changes="on"?>

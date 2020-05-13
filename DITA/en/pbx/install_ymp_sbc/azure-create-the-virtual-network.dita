@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_s3k_bqz_xgb">
+    <title>Step1. Create the Virtual Network</title>
+    <shortdesc>A virtual network enables Azure resources, like virtual machines (VMs), to
+        communicate privately with each other, and with the internet. Create a virtual network,
+        later you need deploy YMP VMs and SBC VM into the virtual network. </shortdesc>
+    <taskbody>
+        <context/>
+        <steps>
+            <step>
+                <cmd>Sign in to the <xref href="https://portal.azure.com/" format="html"
+                        scope="external">Azure portal</xref>.</cmd>
+            </step>
+            <step>
+                <cmd>In the top-left corner of the portal, select <menucascade>
+                        <uicontrol>+ Create a resource</uicontrol>
+                        <uicontrol>Networking</uicontrol>
+                        <uicontrol>Virtual Network</uicontrol>
+                    </menucascade>.</cmd>
+            </step>
+            <step>
+                <cmd>In <b>Create virtual network</b>, enter or select the following
+                    information:</cmd>
+                <info><image href="../Images/SBC/azure-create-virtual-network.PNG"
+                        id="image_y1h_1tz_xgb"/></info>
+                <info>
+                    <table frame="all" rowsep="1" colsep="1" id="table_m5f_55z_xgb">
+                        <tgroup cols="3">
+                            <colspec colname="c1" colnum="1" colwidth="1*"/>
+                            <colspec colname="c2" colnum="2" colwidth="1.99*"/>
+                            <colspec colname="newCol3" colnum="3" colwidth="1*"/>
+                            <thead>
+                                <row>
+                                    <entry>Setting</entry>
+                                    <entry>Description</entry>
+                                    <entry>Example</entry>
+                                </row>
+                            </thead>
+                            <tbody>
+                                <row>
+                                    <entry>Name</entry>
+                                    <entry>Set a unique name for the virtual network.</entry>
+                                    <entry>Enter <i>Yeastar-Cloud-PBX</i></entry>
+                                </row>
+                                <row>
+                                    <entry>Address space</entry>
+                                    <entry>The address space for a virtual network is composed of
+                                        one or more non-overlapping address ranges that are
+                                        specified in CIDR notation. <p>
+                                            <note type="restriction">The IP segments 172.19.0.0 and
+                                                172.17.0.0 are NOT allowed.</note>
+                                        </p></entry>
+                                    <entry>Enter <i>10.0.0.0/8</i></entry>
+                                </row>
+                                <row>
+                                    <entry>Subscription</entry>
+                                    <entry>Select a <xref
+                                            href="https://docs.microsoft.com/en-us/azure/azure-glossary-cloud-terminology?toc=%2fazure%2fvirtual-network%2ftoc.json#subscription"
+                                            format="html" scope="external">subscription</xref>. <p>
+                                            <note>Any Azure resource that you connect to the virtual
+                                                network must be in the same subscription as the
+                                                virtual network.</note>
+                                        </p></entry>
+                                    <entry>-</entry>
+                                </row>
+                                <row>
+                                    <entry>Resource group</entry>
+                                    <entry>Select an existing <xref
+                                            href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview?toc=%2fazure%2fvirtual-network%2ftoc.json#resource-groups"
+                                            format="html" scope="external">resource group</xref> or
+                                        create a new one. <p>
+                                            <note>An Azure resource that you connect to the virtual
+                                                network can be in the same resource group as the
+                                                virtual network or in a different resource
+                                                group.</note>
+                                        </p></entry>
+                                    <entry>Select <uicontrol>Yeastar-Resource</uicontrol></entry>
+                                </row>
+                                <row>
+                                    <entry>Location</entry>
+                                    <entry> Select an Azure <xref
+                                            href="https://azure.microsoft.com/regions/"
+                                            format="html" scope="external">location</xref>, also
+                                        known as a region. <p>
+                                            <note>Any Azure resource that you connect to the virtual
+                                                network must be in the same location as the virtual
+                                                network.</note>
+                                        </p></entry>
+                                    <entry>Select <uicontrol>West US</uicontrol></entry>
+                                </row>
+                                <row>
+                                    <entry namest="c1" nameend="newCol3"><b>Subnet </b><p>The portal
+                                            requires that you define one subnet when you create a
+                                            virtual network, even though a virtual network isn't
+                                            required to have any subnets.</p></entry>
+                                </row>
+                                <row>
+                                    <entry>Name</entry>
+                                    <entry>Set a unique name for the subnet.</entry>
+                                    <entry>Set this subnet to deploy SBC VM, enter <i>SBC</i>.<p>
+                                            <note>Later, you need to create another subnet to deploy
+                                                YMP VMs.</note>
+                                        </p></entry>
+                                </row>
+                                <row>
+                                    <entry>Address range</entry>
+                                    <entry>The range must be within the address space you entered
+                                        for the virtual network.</entry>
+                                    <entry>Enter <i>10.0.0.0/24</i>.</entry>
+                                </row>
+                            </tbody>
+                        </tgroup>
+                    </table>
+                </info>
+            </step>
+            <step>
+                <cmd>Leave the rest of the defaults and select <b>Create</b>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

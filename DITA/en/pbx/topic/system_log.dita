@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_ss3_3y5_ydb">
+    <title>System Log</title>
+    <shortdesc>The PBX automatically trace the PBX information, notices, warnings, errors, debug
+        logs, and web logs, then generate log files. You can download the system logs on the PBX web
+        interface, and check the logs.</shortdesc>
+    <conbody>
+        <p>Go to <menucascade>
+                <uicontrol>Maintenance</uicontrol>
+                <uicontrol>System Log</uicontrol>
+            </menucascade> to trace real-time logs or download the generated system logs.</p>
+        <section id="section_eck_ynv_ydb">
+            <title>System Log Settings</title>
+            <p>The PBX traces different levels of log. </p>
+            <p>
+                <ul id="ul_ahg_f4v_ydb">
+                    <li><uicontrol>Information</uicontrol>: Basic information.</li>
+                    <li><uicontrol>Notice</uicontrol>: NOTICE information.</li>
+                    <li><uicontrol>Warning</uicontrol>: WARNING information.</li>
+                    <li><uicontrol>Error</uicontrol>: ERROR information.</li>
+                    <li><uicontrol>DTMF</uicontrol>: DTMF information.</li>
+                    <li><uicontrol>Time Log</uicontrol>: Add time stamp of system logs.</li>
+                    <li><uicontrol>Debug</uicontrol>: Select the following checkboxes to decide
+                        which type of debug logs to trace:<p>
+                            <ul id="ul_ivw_1wy_ykb">
+                                <li><uicontrol>Enable SIP Debug</uicontrol></li>
+                                <li><uicontrol>Enable RTP Debug</uicontrol></li>
+                                <li product="s-series"><uicontrol>Enable BRI Debug</uicontrol></li>
+                                <li product="s-series"><uicontrol>Enable SS7/PRI
+                                    Debug</uicontrol></li>
+                                <li product="s-series"><uicontrol>Enable SMS Debug</uicontrol></li>
+                            </ul>
+                        </p></li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_d4t_r4v_ydb"><title>System Log</title>The PBX generates system logs
+            everyday. The system logs are compressed into a tar file. You can check the system logs
+            on the <uicontrol>System Log</uicontrol> page. <p>Click <image
+                    href="../Images/ui_icons/download.png" width="20" id="image_qhc_fpv_ydb"/> to
+                download the log file and open the log file by <filepath>Notepad++</filepath> or
+                other editor software to check the logs.</p><p>The PBX provides the following kinds
+                of system logs:</p><p>
+                <ul id="ul_ojy_dms_nhb">
+                    <li>PBX firmware version</li>
+                    <li>AMI logs</li>
+                    <li>API logs </li>
+                    <li>Asterisk guard logs</li>
+                    <li>App logs</li>
+                    <li>Module update logs</li>
+                    <li>Linkus Cloud Service logs</li>
+                    <li>SSH connection logs</li>
+                    <li>PnP logs</li>
+                    <li>Web logs</li>
+                </ul>
+            </p></section>
+    </conbody>
+</concept>

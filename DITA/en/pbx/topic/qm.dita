@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_wsn_rh1_mdb">
+    <title>QueueMetrics Integration</title>
+    <shortdesc></shortdesc>
+    <conbody>
+        <p>QueueMetrics Integration provides the interface to connect this device and QueueMetrics
+            Live or QueueMetrics On-Premise server. QueueMetrics is a call center control platform
+            for Asterisk telephony system. The integration helps you to easily generate the queue
+            report and enjoy features like hot-desking, agent login and log out, real-time monitor
+            the queue, and monitor the call.</p>
+    </conbody>
+</concept>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_m3z_krq_bdb">
+  <title>Call Pickup</title>
+  <shortdesc>Call Pickup is a feature that allows a user to answer an incoming call that rings on a
+    telephone other than the user’s own. </shortdesc>
+  <prolog>
+    <critdates>
+      <!--Carol-->
+      <revised modified="2018/06/14"/>
+      <!--Carol-->
+      <revised modified="2018/10/24"/>
+    </critdates>
+  </prolog>
+</topic>

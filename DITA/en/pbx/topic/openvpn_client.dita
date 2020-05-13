@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_tpq_d1x_ydb">
+    <title>OpenVPN Client Overview</title>
+    <shortdesc><ph keyref="product_name"/> supports OpenVPN version 2.0.5. <ph keyref="product_name"
+        /> can act as an OpenVPN client to establish a connection with the VPN server access to VPN
+        services.</shortdesc>
+    <conbody>
+        <p>OpenVPN is a software based on VPN protocol. OpenVPN uses VPN techniques to secure
+            point-to-point and site-to-site connections. You can use VPN connection to bypass
+            geographic restrictions and government censorship by hiding your real IP address on the
+            Internet. Also, OpenVPN encrypts your Internet data and traffic to keep it from being
+            monitored and threatened by hackers.</p>
+    </conbody>
+</concept>
+<?oxy_options track_changes="on"?>

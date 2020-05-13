@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_pfz_vxb_b2b">
+    <title>Package Contents</title>
+    <shortdesc>Before you begin to install the PBX, check the package contents. If there is any
+        problem, contact your provider.</shortdesc>
+    <conbody>
+        <section id="section_bk1_dyb_b2b">
+            <title>Package Contents of S20</title>
+            <ul id="ul_w3l_hyb_b2b">
+                <li>1* S20 PBX</li>
+                <li>1* Power Adapter</li>
+                <li>1* Ethernet Cable</li>
+                <li>2* Telephony Line</li>
+                <li>4* Rubber Feet</li>
+                <li>1* Warranty Card</li>
+                <li>1* Quick Installation Guide</li>
+            </ul>
+        </section>
+        <section id="section_a51_kyb_b2b">
+            <title>Package Contents of S50</title>
+            <p>
+                <ul>
+                    <li>1* S50 PBX</li>
+                    <li>1* Power Cord</li>
+                    <li>1* Ethernet Cable</li>
+                    <li>2* Rack Mounting Kits</li>
+                    <li>1* Grounding Stud &amp; Nut</li>
+                    <li>4* Rubber Feet</li>
+                    <li>1* Warranty Card</li>
+                    <li>1* Quick Installation Guide</li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_w3h_tyb_b2b">
+            <title>Package Contents of S100</title>
+            <p>
+                <ul>
+                    <li>1* S100 PBX</li>
+                    <li>1* Power Cord</li>
+                    <li>1* Ethernet Cable</li>
+                    <li>2* Rack Mounting Kits</li>
+                    <li>1* Grounding Stud &amp; Nut</li>
+                    <li>4* Rubber Feet</li>
+                    <li>1* Warranty Card</li>
+                    <li>1* Quick Installation Guide</li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_gbl_wyb_b2b">
+            <title>Package Contents of S300</title>
+            <p>
+                <ul>
+                    <li>1* S300 PBX</li>
+                    <li>1* Power Cord</li>
+                    <li>1* Ethernet Cable</li>
+                    <li>2* Rack Mounting Kits</li>
+                    <li>1* Grounding Stud &amp; Nut</li>
+                    <li>4* Rubber Feet</li>
+                    <li>1* Warranty Card</li>
+                    <li>1* Quick Installation Guide</li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_s4f_gns_c2b">
+            <title>Package Contents of S412</title>
+            <p>
+                <ul>
+                    <li>1* S412 PBX</li>
+                    <li>1* Power Adapter</li>
+                    <li>1* Ethernet Cable</li>
+                    <li>4* Rubber Feet</li>
+                    <li>1* Warranty Card</li>
+                    <li>1* Quick Installation Guide</li>
+                </ul>
+            </p>
+        </section>
+    </conbody>
+</concept>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="app-linkus">
+    <title>Linkus Server</title>
+    <shortdesc>Yeastar Linkus Server App is designed to work with <xref
+            href="https://help.yeastar.com/en/linkus_client/topic/faq.html" format="html"
+            scope="external">Linkus client</xref>. Before users can log in Linkus and make calls
+        using Linkus, you should first configure the Linkus Server on <ph keyref="product_name"
+        />.</shortdesc>
+</concept>

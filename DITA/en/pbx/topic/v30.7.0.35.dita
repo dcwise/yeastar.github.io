@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_w2l_y41_pdb">
+    <title>Version 30.7.0.35</title>
+    <abstract>Released Date: April 25, 2018</abstract>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/06/20"/>
+            <!--Carol-->
+            <revised modified="2018/06/27"/>
+        </critdates>
+    </prolog>
+    <body>
+        <note type="important">
+            <p>In this firmware version, we enhanced the PBX security. This security update will
+                make your Yeastar S-Series VoIP PBX more secure and protect it from attacks. We
+                recommend you update the firmware as soon as possible.</p>
+        </note>
+        <section>
+            <title>Optimization</title>
+            <p><image href="../Images/horizon.png" id="image_aj3_vyv_pdb"/></p>
+            <p><b>PBX Security</b><div>
+                    <ul id="ul_wh4_4db_pdb">
+                        <li>Improved the PBX security.</li>
+                    </ul>
+                    <p><b>API Interface</b><div>
+                            <ul id="s_api_1.0.4">
+                                <li>Added API interface to query queue status and agent status.</li>
+                                <li>Added API interface to pause or resume an agent's service.</li>
+                                <li>The CDR reports will show DID number and the agent's ring
+                                    time.</li>
+                                <li>Added support for configuring an extension's outbound
+                                    route.</li>
+                                <li>Added support for querying an extension's outbound route.</li>
+                            </ul>
+                        </div></p>
+                </div></p>
+        </section>
+        <section id="section_ij3_q1b_pdb">
+            <title>Fixed Bug</title>
+            <p><image href="../Images/horizon.png" id="image_obd_yyv_pdb"/></p>
+            <p>
+                <ul>
+                    <li>Fixed the SIP trunk issue: <p>
+                            <ul id="ul_ixb_qwq_pdb">
+                                <li>The PBX might terminate a call that was made through a SIP
+                                    trunk.</li>
+                                <li>If T.38 was enabled on the SIP trunk, Call Parking and Call Hold
+                                    would not work for inbound calls through this SIP trunk.</li>
+                            </ul>
+                        </p></li>
+                </ul>
+            </p>
+        </section>
+    </body>
+</topic>

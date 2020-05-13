@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_ihd_t3k_xdb">
+    <title>Storage</title>
+    <shortdesc><ph keyref="product_name"/> provides local storage and supports <ph
+            product="s-series">external
+            <?oxy_comment_start author="carol" timestamp="20200310T132944+0800" comment="k2下个版本支持 USB"?>storage<?oxy_comment_end?>
+            and</ph> network drive storage. You can choose where to store the voicemails, CDR,
+        recordings, logs and backup files.</shortdesc>
+    <conbody>
+        <section id="section_gxd_cpm_xdb" product="s-series">
+            <title>Limitation of External Storage</title>
+            <p>
+                <simpletable frame="all" relcolwidth="2.3* 1.02* 1.27* 1.0* 1.4*"
+                    id="simpletable_f3q_fpm_xdb">
+                    <strow>
+                        <stentry>External Storage</stentry>
+                        <stentry>S20</stentry>
+                        <stentry>S50</stentry>
+                        <stentry>S100</stentry>
+                        <stentry>S300</stentry>
+                    </strow>
+                    <strow>
+                        <stentry>Micro SD Card (Up to 256 GB)</stentry>
+                        <stentry>1</stentry>
+                        <stentry>0</stentry>
+                        <stentry>0</stentry>
+                        <stentry>0</stentry>
+                    </strow>
+                    <strow>
+                        <stentry>SD Card (Up to 256 GB)</stentry>
+                        <stentry>0</stentry>
+                        <stentry>1</stentry>
+                        <stentry>1</stentry>
+                        <stentry>1</stentry>
+                    </strow>
+                    <strow>
+                        <stentry>USB 2.0 (Up to 2 TB)</stentry>
+                        <stentry>0</stentry>
+                        <stentry>0</stentry>
+                        <stentry>1</stentry>
+                        <stentry>1</stentry>
+                    </strow>
+                    <strow>
+                        <stentry>Hard Disk (Up to 2 TB)</stentry>
+                        <stentry>0</stentry>
+                        <stentry>0</stentry>
+                        <stentry>0</stentry>
+                        <stentry>1</stentry>
+                    </strow>
+                </simpletable>
+            </p>
+        </section>
+        <section id="section_evj_ypm_xdb" product="s-series">
+            <title>Requirements of SD Card/ Micro SD Card</title>
+            <p>
+                <simpletable frame="all" relcolwidth="1.0* 1.15* 1.62*" id="simpletable_ft2_dqm_xdb">
+                    <strow>
+                        <stentry><b>Minimum Performance </b></stentry>
+                        <stentry><b>Minimum Write Speed</b></stentry>
+                        <stentry><b>Recommended TF/SD Card</b></stentry>
+                    </strow>
+                    <strow>
+                        <stentry>SDHC/SDXC Class10<p>UHS-I U3</p></stentry>
+                        <stentry>60 MB/s</stentry>
+                        <stentry>
+                            <ul id="ul_ynt_lqm_xdb">
+                                <li>Sandisk Extreme Pro Series</li>
+                                <li>Sandisk Extreme Series</li>
+                                <li>TOSHIBA EXCERIA Series</li>
+                                <li>Samsung Pro Series</li>
+                            </ul>
+                        </stentry>
+                    </strow>
+                </simpletable>
+            </p>
+        </section>
+        <section id="section_pqh_44m_xdb">
+            <title>Storage Locations</title>
+            <p>
+                <ul id="ul_drh_kjr_xdb">
+                    <li><b>CDR, Voicemail and One Touch Recordings, Recordings, and Logs</b><p>Go to <menucascade>
+                                <uicontrol>Settings</uicontrol>
+                                <uicontrol>System</uicontrol>
+                                <uicontrol>Storage</uicontrol>
+                                <uicontrol>Preference</uicontrol>
+                            </menucascade> to change the storage locations for CDR, Voicemail and
+                            One Touch Recordings, Recordings, and Logs.</p><p><image
+                                href="../Images/admin/storage_locations.png" id="image_osy_54m_xdb"
+                                width="650"/></p></li>
+                </ul>
+            </p>
+            <p>
+                <ul id="ul_awf_mjr_xdb">
+                    <li><b>Backup Files</b><p>When you set a backup schedule, you can choose the
+                            storage location of the backup files.</p><p><image
+                                href="../Images/admin/backup_schedule.png" id="image_xzz_srm_ldb"
+                            /></p></li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_kyl_jkr_xdb">
+            <title>Storage Devices</title>
+            <p> The <uicontrol>Storage Devices</uicontrol> section shows the local storage<ph
+                    product="s-series">, your external storage</ph> and network drive. </p>
+            <p>
+                <ul id="ul_jz4_dlr_xdb">
+                    <li>Click <image href="../Images/ui_icons/restore.png" width="20"
+                            id="image_jqy_zkr_xdb"/> to refresh the status.</li>
+                    <li>Click <image href="../Images/ui_icons/config.png" width="20"
+                            id="image_r4y_2lr_xdb"/> to check or configure the storage device.</li>
+                </ul>
+            </p>
+            <p><image href="../Images/admin/storage_devices.png" id="image_i5v_wkr_xdb" width="650"
+                    product="s-series"/></p>
+        </section>
+    </conbody>
+</concept>

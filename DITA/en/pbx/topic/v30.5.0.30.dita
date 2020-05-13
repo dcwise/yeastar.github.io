@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_t52_l4k_jdb">
+  <title>Version 30.5.0.30</title>
+  <abstract>Released Date: September 22, 2017</abstract>
+  <prolog>
+    <critdates>
+      <!--Carol-->
+      <revised modified="2018/06/20"/>
+    </critdates>
+  </prolog>
+  <body>
+    <section id="section_gff_vsk_jdb">
+      <title>Upgrade Notes:</title>
+      <p>
+        <ul id="ul_ujz_xsk_jdb">
+          <li>This version has greatly enhanced the security mechanism; we strongly suggest all
+            users upgrade to this new version.</li>
+          <li>After upgrading to version 30.5.0.30, to make sure Linkus can be properly used, please
+            upgrade Linkus App to 1.4.7 in App Center. </li>
+          <li>If you are using Hot Standby, please disable it first, and upgrade the two PBXs
+            separately before enabling Hot Standby again. Otherwise, the PBX's extensions will fail
+            to register after the upgrade.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_nyk_p4g_jdb">
+      <title>New Feature</title>
+      <p><image href="../Images/horizon.png" id="image_acs_lzv_pdb"/></p>
+      <p>
+        <ul>
+          <li>Added API feature: Third-party applications can get IPPBX information via the API.
+            This feature is supported in S50, S100, S300.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_gzb_54g_jdb">
+      <title>Optimization</title>
+      <p><image href="../Images/horizon.png" id="image_y1c_nzv_pdb"/></p>
+      <p>
+        <ul id="ul_v2k_4tk_jdb">
+          <li>Reduced background noise when playing system prompts and global recording in Linkus
+            Mobile Clients.</li>
+          <li>Optimized Web interface login security: after five unsuccessful login attempts in the
+            Web interface, instead of locking the account for 10 minutes, the IP address will be
+            added into the firewall blacklist.</li>
+          <li>Optimized extension registration security: when failed to register extension using the
+            same IP address for five times in five minutes, the IP address will be added into the
+            firewall blacklist.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_cmm_x4g_jdb">
+      <title>Fixed Bug</title>
+      <p><image href="../Images/horizon.png" id="image_m1b_4zv_pdb"/></p>
+      <p>
+        <ul id="ul_g4m_ptk_jdb">
+          <li>Fixed Attended Transfer issue on Linkus Mobile Client: when Linkus Mobile Client user
+            A (extension A) made an outbound call through the GSM trunk, and transferred it to the
+            extension B during the call using the “Attended Transfer” feature, then user A pressed
+            the “Transfer” button before extension B could press the “Answer”, the call would be
+            hung up..</li>
+          <li>Fixed the issue that DTMF on Polycom Phones did not take effect.</li>
+          <li>Fixed the issue that when administrator sent emails containing a QR code for users to
+            login their Linkus Mobile Client account, some emails would display garbage
+            characters.</li>
+        </ul>
+      </p>
+    </section>
+  </body>
+</topic>

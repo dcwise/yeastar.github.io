@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="concept_jm2_pgb_t2b">
+    <title>使用其他话机</title>
+    <shortdesc>如果你不使用朗视Linkus软电话，你需要在你的话机或软电话注册分机，才能使用分机拨打和接听电话。</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/08/08"/>
+            <!--Carol-->
+            <revised modified="2018/08/08"/>
+            <!--Carol-->
+            <revised modified="2018/08/15"/>
+        </critdates>
+    </prolog>
+    <body>
+        <p><ph keyref="product_name"/>兼容市场上主流的IP话机与软电话，关于话机和软电话的配置指南，请查看<xref
+                href="manually_configure_your_phones.dita" format="html" scope="external"
+                product="s-series">话机配置手册</xref><xref href="manually_configure_your_phones.dita"
+                format="html" scope="external" product="cloudpbx">话机配置手册</xref>。</p>
+        <p>在话机或软电话注册分机，你需要在话机或软电话上填写PBX的IP/域名信息和要注册分机的信息。</p>
+        <p><image href="../Images/admin/use_other_phone.png" id="image_cy4_4r2_v2b" width="700"
+            /></p>
+    </body>
+</topic>

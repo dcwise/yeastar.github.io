@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_h2n_njm_ldb">
+    <title>Upload a Backup File</title>
+    <shortdesc>You can select a backup file from your local PC, and upload the file to the
+        PBX.</shortdesc>
+    <taskbody>
+        <context>
+            <p>
+                <note>The file format is <codeph>.bak</codeph> and the file name should not contain
+                    special characters.</note>
+            </p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Maintenance</uicontrol>
+                        <uicontrol>Backup and Restore</uicontrol>
+                    </menucascade>, click <uicontrol>Backup</uicontrol>.</cmd>
+                <info><image href="../Images/admin/upload_backup_file.png" id="image_xrf_q4m_ldb"
+                    /></info>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Browse</uicontrol>, and select your backup file to
+                    upload.</cmd>
+            </step>
+            <step>
+                <cmd importance="optional">In the <uicontrol>Memo</uicontrol> field, enter notes for
+                    the backup file.</cmd>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Upload</uicontrol>.</cmd>
+                <stepresult>The uploaded backup file will appear on the <uicontrol>Backup and
+                        Restore</uicontrol> page.</stepresult>
+            </step>
+        </steps>
+    </taskbody>
+</task>

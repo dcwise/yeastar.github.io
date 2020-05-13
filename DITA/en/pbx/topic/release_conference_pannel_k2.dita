@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_nkm_tqn_y2b">
+    <title>Conference Panel</title>
+    <conbody>
+        <section>
+            <title>Version 2.0.9</title>
+            <p>Released Date: May 14, 2019</p>
+            <p>
+                <ul id="ul_r3f_yh5_4hb">
+                    <li>Updated Russian and Italian web interface.</li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_w5s_gxk_5gb">
+            <title>Version 2.0.6</title>
+            <p>Released Date: February 25, 2019</p>
+            <p>
+                <ul>
+                    <li>Fixed the issue that when setting a mobile number as conference contact, the
+                        web interface displayed incorrectly.</li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_sqq_c3s_zfb">
+            <title>Version 2.0.5</title>
+            <p>Released Date: December 5, 2018</p>
+            <p>
+                <ul id="ul_lx3_j3s_zfb">
+                    <li>Improved the Web security.</li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_gn4_ttn_y2b">
+            <title>Version 2.0.2</title>
+            <p>Release Date: August 29, 2018</p>
+            <p>
+                <ul id="ul_kkg_xtn_y2b">
+                    <li>Fixed the issue that the conference panel would have a series of problems if
+                        the length of the conference number exceeded 4 characters.</li>
+                </ul>
+            </p>
+        </section>
+    </conbody>
+</concept>

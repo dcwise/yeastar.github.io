@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_njg_drs_xdb">
+    <title>File Share</title>
+    <shortdesc>After you set up the external storage on the PBX, you can share files that are stored
+        in the TF/SD card, USB device, or hard disk.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/05/24"/>
+            <!--Carol-->
+            <revised modified="2018/05/24"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <section id="section_apz_bss_xdb">
+            <title>Set up File Share</title>
+            <p>
+                <ol id="ol_fbc_4ss_xdb">
+                    <li>Go to <menucascade>
+                            <uicontrol>Settings</uicontrol>
+                            <uicontrol>System</uicontrol>
+                            <uicontrol>Storage</uicontrol>
+                            <uicontrol>File Share</uicontrol>
+                        </menucascade>.</li>
+                    <li>Check the option <uicontrol>Enable File Sharing</uicontrol>.</li>
+                    <li importance="optional">If you want to access the shared files via FTP, check
+                        the option <uicontrol>Enable FTP File Sharing</uicontrol>.</li>
+                    <li importance="optional">To allow users to change the shared files, check the
+                        option <uicontrol>Allow to change shared files</uicontrol>.</li>
+                    <li>Set the <uicontrol>Shared File Name</uicontrol><p><image
+                                href="../Images/admin/file_share_settings.png"
+                                id="image_klb_hss_xdb"/></p></li>
+                    <li>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</li>
+                </ol>
+            </p>
+        </section>
+    </conbody>
+</concept>

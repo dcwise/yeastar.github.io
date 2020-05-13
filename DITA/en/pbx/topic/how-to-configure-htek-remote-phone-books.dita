@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="how-to-configure-htek-remote-phone-books">
+    <title>How to Configure Htek Remote Phone Books</title>
+    <shortdesc>You can configure a corporate directory with Htek remote phone book. Then the users
+        can access the remote phone book and dial a contact number directly on their phone. This
+        guide provides instructions on how to configure a remote phone book on <ph
+            keyref="product_name"/>. </shortdesc>
+    <body>
+        <p>The details in this guide takes Htek UC926E running firmware 2.0.4.6.13 as an
+            example.</p>
+        <section id="section_yg2_qts_xhb">
+            <title>Step 1. Prepare an Htek remote phone book file</title>
+            <p>
+                <ol id="ol_zjg_bps_xhb">
+                    <li>Customize the remote phone book file. <p>The following is an example of an
+                            XML phone
+                        book.</p><codeblock outputclass="language-xml">&lt;?xml version="1.0" encoding="UTF-8"?>
+&lt;PhoneDirectory>
+    &lt;DirectoryEntry>
+        &lt;Name><varname>Remote Yeastar1</varname>&lt;/Name>
+        &lt;Telephone><varname>312</varname>&lt;/Telephone>
+    &lt;/DirectoryEntry>
+    &lt;DirectoryEntry>
+        &lt;Name><varname>Remote Yeastar2</varname>&lt;/Name>
+        &lt;Telephone><varname>122</varname>&lt;/Telephone>
+        &lt;Telephone><varname>132</varname>&lt;/Telephone>
+        &lt;Telephone><varname>142</varname>&lt;/Telephone>
+    &lt;/DirectoryEntry>
+    &lt;DirectoryEntry>
+        &lt;Name><varname>Remote Yeastar3</varname>&lt;/Name>
+        &lt;Telephone><varname>312</varname>&lt;/Telephone>
+    &lt;/DirectoryEntry>
+&lt;/PhoneDirectory></codeblock></li>
+                    <li> Save the file as an XML file (for example, Yeastar.xml). </li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_t3y_21t_xhb">
+            <title>Step 2. Configure remote phone book on Yeastar PBX</title>
+            <p>
+                <ol id="ol_xpt_dzs_xhb">
+                    <li>Set the PBX as a TFTP server and upload XML phone book file to the TFTP
+                        server. <ol id="ol_z44_xpt_xhb">
+                            <li>Go to <menucascade>
+                                <uicontrol>Settings</uicontrol>
+                                <uicontrol> System</uicontrol>
+                                <uicontrol> Security</uicontrol>
+                                <uicontrol> Service</uicontrol>
+                            </menucascade>, check the option <uicontrol>TFTP</uicontrol>, click
+                                <uicontrol>Save</uicontrol> and
+                                <uicontrol>Apply</uicontrol>.<p>The PBX is set up as a TFTP
+                                    server.</p><p><image href="../Images/enable-tftp.png"
+                                        id="image_xxh_q1t_xhb" width="650"/></p></li>
+                            <li>Go to <menucascade>
+                                <uicontrol>Auto Provisioning</uicontrol>
+                                <uicontrol> Upload Files</uicontrol>
+                            </menucascade>, click <b>Upload a File</b>, choose the XML file
+                                (Yeastar.xml) to upload.<p><image
+                                    href="../Images/autop-upload-remote-phone-book.png"
+                                    width="400" id="image_bpd_2ct_xhb"/></p></li>
+                        </ol></li>
+                    <li>Configure remote phone book for the phone.<ol id="ol_ofr_gqt_xhb">
+                        <li>Go to <menucascade>
+                            <uicontrol>Auto Provisioning</uicontrol>
+                            <uicontrol> Device List</uicontrol>
+                        </menucascade>, find your phone, click <image
+                            href="../Images/ui_icons/edit.png" id="image_ryv_yqt_xhb"
+                            width="20"/> to edit the configurations. </li>
+                        <li>Click <b>Features</b> tab, enter the phone book URL, and phone book name.<p>
+                            <note type="tip">The phone book access URL is
+                                tftp://<varname>pbx_ip</varname>/upload/autopfile/<varname>file_name</varname>,
+                                for example,
+                                tftp://<varname>192.168.6.36</varname>/upload/autopfile/<varname>Yeastar.xml</varname>.</note>
+                        </p><p><image id="image_dx5_mst_xhb"
+                            href="../Images/autop-htek-config-remote-phone-book.png"
+                            width="500"/></p></li>
+                        <li>Click <uicontrol>Save</uicontrol>.<p>A pop-up dialog prompts you whether
+                                    to reboot the phone.</p></li>
+                            <li>Click <uicontrol>Yes</uicontrol>. <p>Wait for about 6 minutes, the
+                                    phone will reboot, apply the changes and download the phone
+                                    book.</p><p>
+                                    <note>If the phone does not reboot automatically, reboot the
+                                        phone manually to make the configurations take
+                                        effect.</note>
+                                </p></li>
+                    </ol></li>
+                </ol>
+            </p>
+        </section>
+        <section>
+            <title>Step 3. Use remote phone book on Htek phone</title>
+            <ol id="ol_zh2_m15_xhb">
+                <li>On the Htek phone, press the <uicontrol> Directory</uicontrol> soft key.</li>
+                <li>Press the left navigation key to access <uicontrol>Remote Contacts</uicontrol>
+                    directory.</li>
+                <li>Select the desired remote phone book.</li>
+                <li>Press the <b>Enter</b> soft key to load the corporate directory. <p>The phone
+                        then connects to the remote phone book and proceeds to load it. </p></li>
+            </ol>
+        </section>
+    </body>
+</topic>

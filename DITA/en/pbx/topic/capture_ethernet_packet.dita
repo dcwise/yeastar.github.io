@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_pnf_wsv_ydb">
+    <title>Capture Ethernet Packets</title>
+    <shortdesc>When there is a problem on the VoIP extensions or trunks, you can use the Ethernet
+        Capture Tool to capture Ethernet packet, and download the packet to analyze it.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/05/28"/>
+            <!--Carol-->
+            <revised modified="2018/05/28"/>
+            <!--Carol-->
+            <revised modified="2018/07/03"/>
+            <!--Carol-->
+            <revised modified="2018/10/31"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Maintenance</uicontrol>
+                        <uicontrol>Troubleshooting</uicontrol>
+                        <uicontrol>Ethernet Capture Tool</uicontrol>
+                    </menucascade>.</cmd>
+                <info><image href="../Images/admin/ethernet_capture_tool.png" id="image_mqd_qdw_ydb"
+                        product="s-series"/></info>
+            </step>
+            <step product="s-series">
+                <cmd>Choose the <uicontrol>Ethernet Interface</uicontrol> where the packet will go
+                    through.</cmd>
+            </step>
+            <step importance="optional" product="s-series">
+                <cmd>In the <uicontrol>IP Address</uicontrol> field, enter the target IP
+                    address.</cmd>
+                <info>
+                    <note>If you don't set an IP address, the PBX will capture packets for all the
+                        IP addresses.</note>
+                </info>
+            </step>
+            <step importance="optional" product="s-series">
+                <cmd>In the <uicontrol>Port</uicontrol> field, enter the target port.</cmd>
+                <info>
+                    <note>If you don't set a port, the PBX will capture packets for all the
+                        ports.</note>
+                </info>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Start</uicontrol>.</cmd>
+                <info>The PBX will start to capture the Ethernet packet. During this time, you
+                    should duplicate the problem of your VoIP trunks or extensions. </info>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Stop</uicontrol> to stop capturing packets.</cmd>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Download</uicontrol> to download the captured packet. </cmd>
+                <info>
+                    <p><ph>Decompress the <codeph>.tar</codeph>file and use
+                                <filepath>Wireshark</filepath> software to open the packet
+                            file.</ph></p>
+                </info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

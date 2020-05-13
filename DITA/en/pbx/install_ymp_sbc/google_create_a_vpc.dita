@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_usw_3kn_rdb">
+    <title>Step1. Create a VPC</title>
+    <shortdesc>Create the VPC network that will contain SBC instance and YMP instance.</shortdesc>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Go to the <xref
+                        href="https://console.cloud.google.com//networking/networks/list"
+                        format="html" scope="external">VPC networks page</xref> in the Google Cloud
+                    Platform Console. </cmd>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Create VPC network</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>On the VPC configuration page, set the VPC network.</cmd>
+                <substeps id="substeps_ayr_pqn_rdb">
+                    <substep>
+                        <cmd>Enter the VPC <uicontrol>Name</uicontrol>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Set the subnet <uicontrol>Name</uicontrol>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Select the <uicontrol>Region</uicontrol>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Set the subnet <uicontrol>IP address range</uicontrol>.</cmd>
+                        <info>Recommended IP range: <codeph>10.0.0.0/24</codeph>.</info>
+                        <info>
+                            <note type="restriction">The IP segments 172.19.0.0 and 172.17.0.0 are
+                                NOT allowed.</note>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Set <uicontrol>Dynamic routing mode</uicontrol> to
+                                <codeph>Regional</codeph>.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Create</uicontrol>.</cmd>
+                <stepresult>
+                    <p>At this point, the VPC network has routes to the Internet and to any
+                        instances. However, the VPC network has no firewall rules that allow access
+                        to instances, even from other instances. You must create firewall rules to
+                        allow access.</p>
+                </stepresult>
+            </step>
+        </steps>
+    </taskbody>
+</task>

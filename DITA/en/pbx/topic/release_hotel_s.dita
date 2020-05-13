@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_nwr_y2n_jdb">
+  <title>Hotel</title>
+  <shortdesc>Release notes for Hotel App on Yeastar S-Series VoIP PBX.</shortdesc>
+  <body>
+    <section id="section_owk_24w_clb">
+      <title>Version 1.2.4</title>
+      <p><ph conref="v30.13.0.30.dita#v30.13.0.b/date"/></p>
+      <p>
+        <ul id="ul_zpr_t2h_jlb">
+          <li conref="v30.13.0.30.dita#v30.13.0.b/italian-language"/>
+        </ul>
+      </p>
+    </section>
+    <section id="section_mct_jtj_yjb">
+      <title>Version 1.2.0</title>
+      <p>Released Date: December 12, 2019</p>
+      <p>
+        <ul>
+          <li>Optimized the mechanism of applying configuration changes to improve the system
+              stability.<ul id="ul_s5q_kqb_wjb">
+              <li>You don't need to click <uicontrol>Apply</uicontrol> button to reload Asterisk if
+                you save unchanged configurations.</li>
+              <li>If no <uicontrol>Apply</uicontrol> button appears after you save some specific
+                configuration changes, then the configurations can be saved without reloading
+                Asterisk.</li>
+            </ul></li>
+        </ul>
+      </p>
+    </section>
+    <section>
+      <title>Version 1.1.26</title>
+      <p>Released Date: October 22, 2019</p>
+      <p>
+        <ul id="ul_agw_fyt_jjb">
+          <li>Fixed the extension issue of room: the extension was wrong after adding a room.</li>
+        </ul>
+      </p>
+    </section>
+    <section>
+      <title>Version 1.1.25</title>
+      <p>Released Date: May 14, 2019</p>
+      <p>
+        <ul id="ul_avw_4f5_4hb">
+          <li>Updated Russian and Italian web interface.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_zmq_wtk_qfb">
+      <title>Version 1.1.23</title>
+      <p>Released Date: November 5, 2018</p>
+      <p>
+        <ul id="ul_rhl_15k_qfb">
+          <li>Fixed the issue that the room extension could not be configured correctly when adding
+            or editing a hotel room.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_ufh_fkp_kfb">
+      <title>Version 1.1.21</title>
+      <p>Released Date: October 18, 2018</p>
+      <p>
+        <ul id="ul_atv_fkp_kfb">
+          <li>Optimized <xref
+              href="../references/import_parameters_hotel.dita#reference_ynh_fk3_mfb">Hotel Customer
+              Import </xref>function.</li>
+          <li>Improved Web security.</li>
+          <li>The billing rate can be rounded to 3 decimal places.</li>
+          <li>Added support for displaying the hotel customer's name as caller ID name (<menucascade>
+              <uicontrol>Hotel</uicontrol>
+              <uicontrol>Settings</uicontrol>
+              <uicontrol>General</uicontrol>
+              <uicontrol>Room Settings</uicontrol>
+              <uicontrol>Use Room Name as Caller ID Name</uicontrol>
+            </menucascade>).</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_j14_pkt_q2b">
+      <title>Version 1.1.14</title>
+      <p>Released Date: August 9, 2018</p>
+      <p>
+        <ul id="ul_fv5_qkt_q2b">
+          <li>Fixed the issue that the PBX didn't stop making wake-up calls even the wake-up call
+            was answered by the hotel guest.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_jfv_jmg_j2b">
+      <title>Version 1.1.11</title>
+      <p>Released Date: July 5, 2018</p>
+      <p>
+        <ul id="ul_cks_4mg_j2b">
+          <li>Added support for adding customized fields for customers. <p> The customized
+              information of customers will be displayed on the billing report. </p></li>
+          <li> Added support for adding additional information on the billing report. (<menucascade>
+              <uicontrol>Hotel</uicontrol>
+              <uicontrol>Settings</uicontrol>
+              <uicontrol>General</uicontrol>
+              <uicontrol>Company</uicontrol>
+              <uicontrol>Remark</uicontrol>
+            </menucascade>)</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_kvf_nlj_pdb">
+      <title>Version 1.1.2</title>
+      <p>Released Date: February 26, 2018</p>
+      <p>
+        <ul id="ul_cnn_qlj_pdb">
+          <li>Fixed the issue that the new billing report could not be checked.</li>
+          <li>Optimized the response speed of web page.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_nsq_qlj_pdb">
+      <title>Version 1.0.18</title>
+      <p>Released Date: December 27, 2017</p>
+      <ul id="ul_hlq_slj_pdb">
+        <li>Optimized wake-up calls: the system only keeps the wake-up calls which are created after
+          the customers check in.</li>
+        <li>Fixed the issue that if the web language was Chinese, the information on Room List page
+          might be incorrect.</li>
+      </ul>
+    </section>
+    <section id="section_vyv_slj_pdb">
+      <title>Version 1.0.16</title>
+      <p>Released Date: July 13, 2017</p>
+      <p>
+        <ul id="ul_qgc_vlj_pdb">
+          <li>Added support for German Web interface.</li>
+          <li>Updated Italian Web interface.</li>
+        </ul>
+      </p>
+    </section>
+  </body>
+</topic>

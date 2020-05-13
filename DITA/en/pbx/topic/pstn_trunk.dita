@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_ffx_lng_tdb">
+    <title>PSTN Trunk Introduction</title>
+    <shortdesc>PSTN Trunk is known as FXO analog line or CO line. The Public Switched Telephone
+        Network (PSTN) is the global collection of interconnects originally designed to support
+        circuit-switched voice communication. The PSTN provides traditional Plain Old Telephone
+        Service (POTS) — also known as landline phone service — to residences and many other
+        establishments.</shortdesc>
+</concept>
+<?oxy_options track_changes="on"?>

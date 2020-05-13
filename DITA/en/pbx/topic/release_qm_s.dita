@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_m2s_dgn_jdb">
+  <title>QueueMetrics Integration</title>
+  <shortdesc>Release notes for Queue Metrices Integration on Yeastar S-Series VoIP PBX.</shortdesc>
+  <body>
+    <section id="section_gqg_z4j_tkb">
+      <title>Version 1.4.1</title>
+      <p>Released Date: February 27, 2020<ul id="ul_mbv_jsj_tkb">
+          <li>Fixed the issue that QueueMetrics Integration App would be disabled
+            automatically.</li>
+        </ul></p>
+    </section>
+    <section id="section_jdn_ptj_yjb">
+      <title>Version 1.4.0</title>
+      <p>Released Date: December 12, 2019</p>
+      <p>
+        <ul>
+          <li>Optimized the mechanism of applying configuration changes to improve the system
+              stability.<ul id="ul_gqc_5tj_yjb">
+              <li>You don't need to click <uicontrol>Apply</uicontrol> button to reload Asterisk if
+                you save unchanged configurations.</li>
+              <li>If no <uicontrol>Apply</uicontrol> button appears after you save some specific
+                configuration changes, then the configurations can be saved without reloading
+                Asterisk.</li>
+            </ul></li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_kyl_bq1_43b">
+      <title>Version 1.3.1</title>
+      <p>Released Date: June 5, 2019</p>
+      <p>
+        <ul id="ul_ocx_2q1_43b">
+          <li>The <uicontrol>Queue Metrics Integration</uicontrol> App is free, no more license from
+            Yeastar is needed. </li>
+        </ul>
+      </p>
+    </section>
+    <section>
+      <title>Version 1.2.7</title>
+      <p>Released Date: May 14, 2019</p>
+      <p>
+        <ul id="ul_t4z_hf5_4hb">
+          <li>Updated Russian and Italian web interface.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_lvd_3hj_pdb">
+      <title>Version 1.2.6</title>
+      <p>Released Date: March 20, 2018</p>
+      <p>
+        <ul id="ul_hsf_4hj_pdb">
+          <li>Added support for QueueMetrics On-Premise.</li>
+          <li>Optimized the purchase process of the QueueMetrics account.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_u4m_4hj_pdb">
+      <title>Version 1.1.5</title>
+      <p>Released Date: July 13, 2017</p>
+      <p>
+        <ul id="ul_hlg_m3j_pdb">
+          <li>Added support for German Web interface.</li>
+          <li>Updated Italian Web interface.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_v4l_m3j_pdb">
+      <title>Version 1.1.4</title>
+      <p>Released Date: June 20, 2017</p>
+      <p>
+        <ul id="ul_z24_43j_pdb">
+          <li>Added support for sending verification email to activate QueueMetrics Live ID.</li>
+          <li>Added support for sending welcome email with login information when QueueMetrics Live
+            ID applied.</li>
+          <li>Optimized Web GUI: show “Current QueueMetrics Live ID” filed on the page after
+            connected to QueueMetrics Live.</li>
+          <li>Optimized the selection options of “Time Zone” when applying a demo QueueMetrics Live
+            ID: specify time zone with countries and cities.</li>
+          <li>Added the QueueMetrics Live Integration Application’s log into the PBX system
+            logs.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_usr_q3j_pdb">
+      <title>Version 1.0.11</title>
+      <p>Released Date: May 4, 2017</p>
+      <p>
+        <ul id="ul_d14_s3j_pdb">
+          <li>Optimized Web GUI: if QueueMetrics ID had been applied via the App, the Web GUI would
+            not show the link of applying QueueMetrics. Users can only apply one QueueMetrics ID
+            from the QueueMetrics Live Integration App.</li>
+          <li>Optimized Web GUI: added “QueueMetrics Login Username” field on the page of applying
+            QueueMetrics ID. The login username is “demoadmin”. Users should log in QueueMetrics
+            using the fixed username “demoadmin”.</li>
+          <li>Optimized Web GUI: added “Confirm Password” field on the page of applying QueueMetrics
+            ID. Users need to input password twice to ensure the password is correct.</li>
+          <li>Optimized QueueMetrics visit link to avoid web cache.</li>
+          <li>Added response from QueueMetrics into the PBX system logs.</li>
+        </ul>
+      </p>
+    </section>
+  </body>
+</topic>

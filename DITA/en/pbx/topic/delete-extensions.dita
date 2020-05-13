@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_thq_jr4_y3b">
+    <title>Delete Extensions</title>
+    <shortdesc>When an employee leaves or an extension is no longer needed, you can delete the
+        extension from the <ph keyref="product_name"
+        /><?oxy_comment_start author="carol" timestamp="20190911T100900+0800" comment="when and why
+When an employee leaves or an extension is no longer needed, you can delete the extension from the Yeastar XXXXX." flag="done"?>.<?oxy_comment_end?></shortdesc>
+    <body>
+        <section id="section_kx2_gl1_1jb">
+            <title>Delete an Extension</title>
+            <p>
+                <ol>
+                    <li>Log in PBX web interface, go to <menucascade>
+                            <uicontrol>Settings</uicontrol>
+                            <uicontrol>PBX</uicontrol>
+                            <uicontrol>Extensions</uicontrol>
+                        </menucascade>.</li>
+                    <li>On <uicontrol>Extensions</uicontrol> page, click <image
+                            id="image_rxg_ml1_1jb" href="../Images/ui_icons/delete.png"/> beside the
+                        extension that you want to delete.</li>
+                    <li>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_eyl_gl1_1jb">
+            <title>Bulk Delete Extensions</title>
+            <p>
+                <ol>
+                    <li>Log in PBX web interface, go to <menucascade>
+                            <uicontrol>Settings</uicontrol>
+                            <uicontrol>PBX</uicontrol>
+                            <uicontrol>Extensions</uicontrol>
+                        </menucascade>. </li>
+                    <li>On <uicontrol>Extensions</uicontrol> page, select the checkbox of desired
+                        extensions, and click <uicontrol>Delete</uicontrol>.</li>
+                    <li>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</li>
+                </ol>
+            </p>
+        </section>
+    </body>
+</topic>

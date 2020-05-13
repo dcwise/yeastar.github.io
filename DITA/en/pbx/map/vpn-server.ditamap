@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>VPN Server</title>
+    <keydef keys="product_name" product="s-series">
+        <topicmeta>
+            <keywords>
+                <keyword>Yeastar S-Series VoIP PBX</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <topicref href="../topic/vpn_server.dita" product="s-series">
+        <topicmeta>
+            <shortdesc>With VPN connection, you can set up multiple VPN clients to access <ph
+                    keyref="product_name"/>securely.</shortdesc>
+        </topicmeta>
+        <topicref href="../topic/openvpn-certificates-and-keys.dita">
+            <topicref href="../topic/openvpn-installation.dita"/>
+            <topicref href="../topic/openvpn-generate-certificates-and-keys.dita"/>
+            <topicref href="../topic/openvpn-check-certificates-and-keys.dita"/>
+        </topicref>
+        <topichead navtitle="OpenVPN Server Configurations">
+            <topicref href="../topic/openvpn-set-up-PBX-as-openvpn-server.dita">
+                <topicref href="../topic/openvpn-build-up-the-openvpn-server.dita"/>
+                <topicref href="../topic/openvpn-set-a-static-vpn-ip-for-client_.dita"/>
+                <topicref href="../topic/openvpn-username-password-authentication.dita"/>
+            </topicref>
+        </topichead>
+        <topichead navtitle="OpenVPN Clients Configurations">
+            <topicref href="../topic/openvpn-connect-to-pbx-with-another-pbx.dita"/>
+            <topicref href="../topic/openvpn-connect-to-pbx-with-windows.dita">
+                <topicref href="../topic/openvpn-create-client.ovpn-file-for-windsows-client.dita"/>
+                <topicref href="../topic/openvpn-connect-windows-pc-to-pbx-via-openvpn.dita"/>
+            </topicref>
+            <topicref href="../topic/openvpn-connect-PBX-with-iOS.dita">
+                <topicref href="../topic/openvpn-create-client-file-for-iOS.dita"/>
+                <topicref href="../topic/openvpn-connect-iOS-to-pbx-via-openvpn.dita"/>
+            </topicref>
+            <topicref href="../topic/openvpn-connect-PBX-with-android.dita">
+                <topicref href="../topic/openvpn-create-client-file-for-android.dita"/>
+                <topicref href="../topic/openvpn-connect-android-to-pbx-via-openvpn.dita"/>
+            </topicref>
+            <topicref href="../topic/openvpn-connect-yealink-phones-to-pbx.dita">
+                <topicref href="../topic/openvpn-create-client-file-for-Yelaink-phone.dita"/>
+                <topicref href="../topic/openvpn-connect-Yealink-phone-to-pbx-via-openvpn.dita"/>
+            </topicref>
+        </topichead>
+        <topicref href="../topic/openvpn-check-the-client-status.dita"/>
+    </topicref>
+</map>

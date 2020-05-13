@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="sip-extension-settings">
+    <title>SIP Extension Settings</title>
+    <shortdesc>This reference describes all settings on a SIP extension.</shortdesc>
+    <refbody>
+        <section id="section_tjd_yzv_y3b">
+            <title>Basic Settings</title>
+            <p>Navigation path: <menucascade>
+                    <uicontrol>Settings</uicontrol>
+                    <uicontrol>PBX</uicontrol>
+                    <uicontrol>Extensions</uicontrol>
+                </menucascade>, edit a SIP extension on the <uicontrol>Basic</uicontrol> tab.</p>
+            <p><b>General Settings</b></p>
+            <p>
+                <table frame="all" id="table_ng4_kd4_1jb">
+                    <tgroup cols="2">
+                        <colspec colname="c1" colnum="1" colwidth="1*" colsep="1" rowsep="1"/>
+                        <colspec colname="c2" colnum="2" colwidth="1*" colsep="1" rowsep="1"/>
+                        <thead>
+                            <row>
+                                <entry>Settings</entry>
+                                <entry>Descriptions</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row product="k2 s-series">
+                                <entry>Type</entry>
+                                <entry>Select <uicontrol>SIP</uicontrol>.</entry>
+                            </row>
+                            <row id="entensionNum">
+                                <entry>Extension</entry>
+                                <entry>Enter the extension number.</entry>
+                            </row>
+                            <row>
+                                <entry>Caller ID</entry>
+                                <entry>If you set the caller ID number, the called party will see
+                                    this caller ID number when the extension user makes an outgoing
+                                    call.</entry>
+                            </row>
+                            <row>
+                                <entry>Registration Name</entry>
+                                <entry>The name used to register a SIP extension.</entry>
+                            </row>
+                            <row id="callerIDname">
+                                <entry>Caller ID name</entry>
+                                <entry>If you set the caller ID name, the called party will see this
+                                    caller ID name when the extension user makes an outgoing
+                                    call.</entry>
+                            </row>
+                            <row>
+                                <entry>Concurrent Registrations</entry>
+                                <entry><ph keyref="product_name"/> supports to register one
+                                    extension number on multiple phones. When a call reaches the
+                                    extension number, all phones will ring.</entry>
+                            </row>
+                            <row>
+                                <entry>Registration Password</entry>
+                                <entry>The password is used to register a SIP extension. The
+                                    password is generated randomly by default.</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+            <p><b>User Information Settings</b></p>
+            <p>
+                <table frame="all" id="userInfo">
+                    <tgroup cols="2">
+                        <colspec colname="c1" colnum="1" colwidth="1*" colsep="1" rowsep="1"/>
+                        <colspec colname="c2" colnum="2" colwidth="1*" colsep="1" rowsep="1"/>
+                        <thead>
+                            <row>
+                                <entry>Settings</entry>
+                                <entry>Descriptions</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>Email</entry>
+                                <entry>Enter the email address. Extension user can reset his/her
+                                    login password, receive voice mails, faxes, or PBX notifications
+                                    via this email address.</entry>
+                            </row>
+                            <row>
+                                <entry>User Password</entry>
+                                <entry>The password is used to log in the PBX or log in Linkus
+                                    mobile client. The password is generated randomly by
+                                    default.</entry>
+                            </row>
+                            <row>
+                                <entry>Prompt Language</entry>
+                                <entry>The language of voice prompts. The default prompt language is
+                                    the same as the system language. If the extension user speaks
+                                    foreign language, you can set a specific system prompt.</entry>
+                            </row>
+                            <row>
+                                <entry>Mobile Number</entry>
+                                <entry>Enter the mobile number. Extension user can receive the PBX
+                                    notifications or forwarded calls on this mobile number.</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+        <section id="section_n3j_zpn_1jb">
+            <title id="presenceSettings">Presence Settings</title>
+            <p>Extension Presence indicates the availability status of a SIP extension. Presence
+                settings are linked to the Call Forwarding rules and Linkus ring strategy. You can
+                set different call forwarding rules and ring strategy for each presence status.</p>
+            <p>Navigation path: <menucascade>
+                    <uicontrol>Settings</uicontrol>
+                    <uicontrol>PBX</uicontrol>
+                    <uicontrol>Extensions</uicontrol>
+                </menucascade>, edit a SIP extension under the <uicontrol>Presence</uicontrol>
+                tab.</p>
+            <p><b>Presence Settings</b></p>
+            <p>
+                <table frame="all" id="presence">
+                    <tgroup cols="2">
+                        <colspec colname="c1" colnum="1" colwidth="1*" colsep="1" rowsep="1"/>
+                        <colspec colname="c2" colnum="2" colwidth="1*" colsep="1" rowsep="1"/>
+                        <thead>
+                            <row>
+                                <entry>Settings</entry>
+                                <entry>Description</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>Presence</entry>
+                                <entry>Set presence status.<p><ph keyref="product_name"/> provides
+                                        five presence statuses.</p><ul id="ul_qjw_xqn_1jb">
+                                        <li><uicontrol>Available</uicontrol>: You are online and
+                                            ready for communication. </li>
+                                        <li><uicontrol>Away</uicontrol>: You are currently away from
+                                            your office.</li>
+                                        <li><uicontrol>DND</uicontrol>: You don't want to be
+                                            disturbed, and you won't receive any calls.</li>
+                                        <li><uicontrol>Lunch Break</uicontrol>: You are currently on
+                                            lunch break.</li>
+                                        <li><uicontrol>On a Business Trip</uicontrol>:You are
+                                            currently on a business trip.</li>
+                                    </ul></entry>
+                            </row>
+                            <row>
+                                <entry>Presence Information</entry>
+                                <entry>Add details about your current status.</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+            <p><b>Call Forwarding Settings</b></p>
+            <p id="callForwarding">You can forward calls to a specific destination or a specific
+                extension user to avoid missing calls. Depending on the presence status and your
+                preferences, you can set the PBX to forward calls to voicemail, extension, mobile
+                number, queue, etc.</p>
+            <p>
+                <table frame="all" id="callForwardingTable">
+                    <tgroup cols="2">
+                        <colspec colname="c1" colnum="1" colwidth="1*" colsep="1" rowsep="1"/>
+                        <colspec colname="c2" colnum="2" colwidth="1*" colsep="1" rowsep="1"/>
+                        <thead>
+                            <row>
+                                <entry>Settings</entry>
+                                <entry>Description</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>Always</entry>
+                                <entry>Forward all calls to the designated destination.</entry>
+                            </row>
+                            <row>
+                                <entry>No Answer</entry>
+                                <entry>Only forward the unanswered calls to the designated
+                                    destination.</entry>
+                            </row>
+                            <row>
+                                <entry>When Busy</entry>
+                                <entry>Only forward the calls that come in while you are talking on
+                                    the phone.</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+            <p><b>Ring Strategy Settings</b></p>
+            <p>You can set ring strategy for the following terminals that the SIP extension
+                registered to.<ul id="ul_wbr_qr4_1jb">
+                    <li>Extension</li>
+                    <li>Linkus Mobile Client</li>
+                    <li>Linkus Desktop Client</li>
+                </ul></p>
+            <p>
+                <table frame="all" id="RingStrategyTable">
+                    <tgroup cols="2">
+                        <colspec colname="c1" colnum="1" colwidth="1*" colsep="1" rowsep="1"/>
+                        <colspec colname="c2" colnum="2" colwidth="1*" colsep="1" rowsep="1"/>
+                        <thead>
+                            <row>
+                                <entry>Settings</entry>
+                                <entry>Description</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>Ring First </entry>
+                                <entry>Set which terminal will ring first.</entry>
+                            </row>
+                            <row>
+                                <entry>Ring Secondly</entry>
+                                <entry>Set which terminal will ring secondly.</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+        <section id="features"><title id="featuresSettings">Features Settings</title>You can
+            configure voicemail, mobility extension, call monitoring, and other settings under the
+                <uicontrol>Features</uicontrol> tab.<p>Navigation path: <menucascade>
+                    <uicontrol>Settings</uicontrol>
+                    <uicontrol>PBX</uicontrol>
+                    <uicontrol>Extensions</uicontrol>
+                </menucascade>, edit a SIP extension under the <uicontrol>Features</uicontrol>
+                tab.</p><p><b>Voicemail Settings</b></p><p>
+                <table frame="all" id="voicemailTable">
+                    <tgroup cols="2">
+                        <colspec colname="c1" colnum="1" colwidth="1*" colsep="1" rowsep="1"/>
+                        <colspec colname="c2" colnum="2" colwidth="1*" colsep="1" rowsep="1"/>
+                        <thead>
+                            <row>
+                                <entry>Settings</entry>
+                                <entry>Description</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>Enable Voicemail</entry>
+                                <entry>Enable voicemail feature.</entry>
+                            </row>
+                            <row>
+                                <entry>Voicemail Access PIN</entry>
+                                <entry>Password used to access voicemail.</entry>
+                            </row>
+                            <row>
+                                <entry>Share Voicemail Status</entry>
+                                <entry>Enable this option to share voicemail status of this
+                                    extension with other extensions.</entry>
+                            </row>
+                            <row>
+                                <entry>Send Voicemail to Email</entry>
+                                <entry>Whether to send voicemail to the designated Email address or
+                                        not.<ul id="ul_lkl_ws4_1jb">
+                                        <li><uicontrol>Disabled</uicontrol>: Do not send voicemail
+                                            to the designated Email address.</li>
+                                        <li><uicontrol>Send to user's mail</uicontrol>: Send
+                                            voicemail to the email address of the extension
+                                            user.</li>
+                                        <li><uicontrol>Send to custom mail</uicontrol>: Customize an
+                                            email address, and the PBX will send the voicemail to
+                                            the designated Email address.</li>
+                                    </ul></entry>
+                            </row>
+                            <row>
+                                <entry>Busy Prompt</entry>
+                                <entry>Set the prompt that will be played when the extension user is
+                                    busy in a call.</entry>
+                            </row>
+                            <row>
+                                <entry>Unavailable Prompt</entry>
+                                <entry>Set the prompt that will be played when the extension user is
+                                    unavailable.</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p><p><b>Mobility Extension</b></p><p>Yeastar Mobility Extension allows you to stay in
+                contact with colleagues and clients using either office phone or mobile phone with
+                the same extension number.</p><p>
+                <table frame="all" id="mobilityTable">
+                    <tgroup cols="2">
+                        <colspec colname="c1" colnum="1" colwidth="1*" colsep="1" rowsep="1"/>
+                        <colspec colname="c2" colnum="2" colwidth="1*" colsep="1" rowsep="1"/>
+                        <thead>
+                            <row>
+                                <entry>Settings</entry>
+                                <entry>Description</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>Ring Simultaneously</entry>
+                                <entry>Enable this option to allow both extension and associated
+                                    mobile number ring simultaneously when anyone calls in the
+                                    extension number.</entry>
+                            </row>
+                            <row>
+                                <entry>Enable Mobility Extension</entry>
+                                <entry>Enable this option to allow your mobile number have the same
+                                    permission as the office phone when you use associated mobile
+                                    number to call in the PBX.</entry>
+                            </row>
+                            <row>
+                                <entry>Mobility Extension</entry>
+                                <entry>
+                                    <ul id="ul_f3k_m54_1jb">
+                                        <li><uicontrol>Set Mobile Number</uicontrol>: Set the
+                                            associated mobile number. </li>
+                                        <li><uicontrol>Prefix</uicontrol>: Set the prefix of the
+                                            mobile number according to the outbound route.</li>
+                                    </ul>
+                                </entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p><p><b>Monitor Settings</b></p><p>Call Monitoring allows authorized users to monitor
+                another extension user's call in real time. </p><p>
+                <table frame="all" id="monitorTable">
+                    <tgroup cols="2">
+                        <colspec colname="c1" colnum="1" colwidth="1*" colsep="1" rowsep="1"/>
+                        <colspec colname="c2" colnum="2" colwidth="1*" colsep="1" rowsep="1"/>
+                        <thead>
+                            <row>
+                                <entry>Settings</entry>
+                                <entry>Description</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>Allow Being Monitored</entry>
+                                <entry>Enable this option to allow anyone to monitor the extension
+                                    user's ongoing call.</entry>
+                            </row>
+                            <row>
+                                <entry>Monitor Mode </entry>
+                                <entry>Decide how you monitor other extension users' ongoing
+                                        call.<ul id="ul_gjt_gc4_1jb">
+                                        <li><uicontrol>Disabled</uicontrol><p>You can not monitor
+                                                other extension users' ongoing call.</p></li>
+                                    </ul><p>
+                                        <ul id="ul_d3q_wvn_1jb">
+                                            <li><uicontrol>Extensive</uicontrol>
+                                                <p>Use any one of listen, whisper, or barge-in mode
+                                                  to monitor other extension user's ongoing
+                                                  call.</p></li>
+                                            <li><uicontrol>Listen</uicontrol><p>Listen to a call in
+                                                  real time, but you can not talk with the monitored
+                                                  extension users.</p></li>
+                                            <li><uicontrol>Whisper</uicontrol><p>Listen to a call in
+                                                  real time, and talk with the monitored extension
+                                                  users privately.</p></li>
+                                            <li><uicontrol>Barge-in </uicontrol><p>Listen to a call
+                                                  in real time and talk with both parties.</p></li>
+                                        </ul>
+                                    </p></entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p><p><b>Other Settings</b></p><p>
+                <table frame="all" id="otherSetTable">
+                    <tgroup cols="2">
+                        <colspec colname="c1" colnum="1" colwidth="1*" colsep="1" rowsep="1"/>
+                        <colspec colname="c2" colnum="2" colwidth="1*" colsep="1" rowsep="1"/>
+                        <thead>
+                            <row>
+                                <entry>Settings</entry>
+                                <entry>Description</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>Ring Timeout (s)</entry>
+                                <entry>Set the timeout in seconds. Phone will stop ringing after
+                                    timeout.</entry>
+                            </row>
+                            <row>
+                                <entry id="max-call-duration-extension">Max Call Duration (s)</entry>
+                                <entry>Set the maximum call duration in seconds for every call of
+                                    this extension.<note>
+                                        <p>The precedence of <uicontrol>Max Call
+                                                Duration(s)</uicontrol> (<xref
+                                                href="system_preferences.dita#concept_lfw_fpw_d2b/max-call-duration-global"
+                                                >Global</xref> v.s. Extension):</p>
+                                        <p>
+                                            <ul id="ul_tbh_bp3_kjb">
+                                                <li>For internal calls: The <uicontrol>Max Call
+                                                  Duration(s)</uicontrol> setting of the caller's
+                                                  extension takes precedence. </li>
+                                                <li>For outbound calls: The <uicontrol>Max Call
+                                                  Duration(s)</uicontrol> setting of the caller's
+                                                  extension takes precedence. </li>
+                                                <li>For inbound calls: The global <uicontrol>Max
+                                                  Call Duration(s)</uicontrol> setting takes
+                                                  precedence. </li>
+                                            </ul>
+                                        </p>
+                                    </note></entry>
+                            </row>
+                            <row>
+                                <entry>Send email notification when extension user password is
+                                    changed</entry>
+                                <entry>Enable this option to send email notification when extension
+                                    user password is changed.</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p></section>
+        <section id="section_wn4_fhw_y3b">
+            <title>Advanced Settings</title>
+            <p>The advanced settings of SIP extension require professional knowledge of SIP
+                protocol. Incorrect configurations may cause calling issues. It is wise to retain
+                the default settings provided on the SIP extension page. However, for a few fields,
+                you need to change them to suit your situation. </p>
+            <p>Navigation path: <menucascade>
+                    <uicontrol>Settings</uicontrol>
+                    <uicontrol>PBX</uicontrol>
+                    <uicontrol>Extensions</uicontrol>
+                </menucascade>, edit an extension under the <uicontrol>Advanced</uicontrol> tab. </p>
+            <p><b>VoIP Settings</b></p>
+            <p>
+                <table frame="all" id="table_ek2_4hw_y3b">
+                    <tgroup cols="2">
+                        <colspec colname="c1" colnum="1" colwidth="1*" colsep="1" rowsep="1"/>
+                        <colspec colname="c2" colnum="2" colwidth="1*" colsep="1" rowsep="1"/>
+                        <thead>
+                            <row>
+                                <entry>Settings</entry>
+                                <entry>Description</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row product="k2 s-series">
+                                <entry>NAT</entry>
+                                <entry>Enable this option when the PBX is using the public IP
+                                    address. NAT is a process where public IP address is translated
+                                    into local IP address and vice versa.</entry>
+                            </row>
+                            <row>
+                                <entry>Qualify</entry>
+                                <entry
+                                    conref="voip-trunk-settings.dita#topic_pyd_f3t_2fb/qualify"
+                                />
+                            </row>
+                            <row product="k2 s-series">
+                                <entry>Register Remotely</entry>
+                                <entry>Enable or disable the registration of remote
+                                    extension.</entry>
+                            </row>
+                            <row>
+                                <entry>Enable SRTP</entry>
+                                <entry>Enable SRTP for voice encryption.</entry>
+                            </row>
+                            <row>
+                                <entry>T.38 Support</entry>
+                                <entry>Enable or disable T.38 fax for the extension. </entry>
+                            </row>
+                            <row>
+                                <entry>DTMF Mode</entry>
+                                <entry>Set the default mode for sending DTMF tones.<p>
+                                        <ul id="ul_zc4_bh2_2fb">
+                                            <li><uicontrol>RFC4733 (RFC2833)</uicontrol>: DTMF will
+                                                be carried in the RTP stream in different RTP
+                                                packets.</li>
+                                            <li><uicontrol>Info</uicontrol>: DTMF will be carried in
+                                                the SIP info messages.</li>
+                                            <li><uicontrol>Inband</uicontrol>: DTMF will be carried
+                                                in the audio signal.</li>
+                                            <li><uicontrol>Auto</uicontrol>: The PBX will detect if
+                                                the device supports RFC4733(RFC2833) DTMF. If
+                                                RFC4733(RFC2833) is supported, PBX will choose
+                                                RFC4733(RFC2833), or the PBX will choose
+                                                Inband.</li>
+                                        </ul>
+                                    </p></entry>
+                            </row>
+                            <row>
+                                <entry>Transport</entry>
+                                <entry>Set the transport protocol.<ul id="ul_hkz_mmw_y3b">
+                                        <li><uicontrol>UDP</uicontrol></li>
+                                        <li><uicontrol>TCP</uicontrol></li>
+                                        <li><uicontrol>TLS</uicontrol></li>
+                                    </ul></entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+            <p><b>Enable User Agent Registration Authorization</b></p>
+            <p>
+                <table frame="all" id="table_slw_thw_y3b">
+                    <tgroup cols="2">
+                        <colspec colname="c1" colnum="1" colwidth="1*" colsep="1" rowsep="1"/>
+                        <colspec colname="c2" colnum="2" colwidth="1*" colsep="1" rowsep="1"/>
+                        <thead>
+                            <row>
+                                <entry>Settings</entry>
+                                <entry>Description</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>Enable User Agent Registration Authorization</entry>
+                                <entry>Whether to restrict user agents from registering to the
+                                    extension.</entry>
+                            </row>
+                            <row>
+                                <entry>User Agent</entry>
+                                <entry>Enter the name of user agent. If the prefix of the user agent
+                                    does not match the value, the registration will fail.</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+            <p><b>IP Restriction</b></p>
+            <p>
+                <table frame="all" id="table_ocr_whw_y3b">
+                    <tgroup cols="2">
+                        <colspec colname="c1" colnum="1" colwidth="1*" colsep="1" rowsep="1"/>
+                        <colspec colname="c2" colnum="2" colwidth="1*" colsep="1" rowsep="1"/>
+                        <thead>
+                            <row>
+                                <entry>Settings</entry>
+                                <entry>Description</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>Enable IP Restriction</entry>
+                                <entry id="IPrestriction">This option is used for IP access control.
+                                    Only the IP address or IP section that matches the settings can
+                                    register the extension number.</entry>
+                            </row>
+                            <row>
+                                <entry>Permitted IP/Subnet mask</entry>
+                                <entry id="permittedIP">Enter the IP address and subnet mask.<ul
+                                        id="ul_y5d_wzw_y3b">
+                                        <li><i>192.168.5.100/255.255.255.255</i><p>In this example,
+                                                only the device whose IP address is
+                                                  <i>192.168.5.100</i> can register the extension
+                                                number.</p></li>
+                                        <li><i>192.168.5.0/255.255.255.0</i><p>In this example, only
+                                                the devices whose IP section is <i>192.168.5.0</i>
+                                                can register the extension number.</p></li>
+                                    </ul></entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+        <section id="section_vxv_sxn_1jb">
+            <title id="callPermission">Call Permission Settings</title>
+            <p>You can set the outbound call permissions for the SIP extension.</p>
+            <p>Navigation path: <menucascade>
+                    <uicontrol>Settings</uicontrol>
+                    <uicontrol>PBX</uicontrol>
+                    <uicontrol>Extensions</uicontrol>
+                </menucascade>, edit a SIP extension under the <uicontrol>Call
+                    Permission</uicontrol> tab.</p>
+            <p>
+                <table frame="all" id="callPermissionTab">
+                    <tgroup cols="2">
+                        <colspec colname="c1" colnum="1" colwidth="1*" colsep="1" rowsep="1"/>
+                        <colspec colname="c2" colnum="2" colwidth="1*" colsep="1" rowsep="1"/>
+                        <thead>
+                            <row>
+                                <entry>Settings</entry>
+                                <entry>Description</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>Outbound Routes</entry>
+                                <entry>Set outbound routes for the extension.</entry>
+                            </row>
+                            <row>
+                                <entry>Outbound Restriction</entry>
+                                <entry>Enable this option to prohibit this extension from making
+                                    outbound calls.</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+    </refbody>
+</reference>
+<?oxy_options track_changes="on"?>

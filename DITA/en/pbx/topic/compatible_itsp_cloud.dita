@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="reference_bt2_4yn_rdb">
+    <title>Yeastar Cloud PBX Compatible ITSP</title>
+    <shortdesc>Find out the tested and compatible ITSP for Yeastar Cloud PBX.</shortdesc>
+    <refbody>
+        <table frame="all" id="table_a4s_szn_rdb">
+            <tgroup cols="3">
+                <colspec colname="c1" colnum="1" colwidth="1*" colsep="1" rowsep="1"/>
+                <colspec colname="c2" colnum="2" colwidth="1*" rowsep="1" colsep="1"/>
+                <colspec colname="c3" colnum="3" colwidth="1*" rowsep="1" colsep="1"/>
+                <tbody>
+                    <row>
+                        <entry>Country</entry>
+                        <entry>ITSP</entry>
+                        <entry>Compatibility</entry>
+                    </row>
+                    <row>
+                        <entry morerows="3">USA</entry>
+                        <entry>Aasani</entry>
+                        <entry>Compatible</entry>
+                    </row>
+                    <row>
+                        <entry>Clearfly Communications</entry>
+                        <entry>Compatible</entry>
+                    </row>
+                    <row>
+                        <entry>Flowroute</entry>
+                        <entry>Compatible</entry>
+                    </row>
+                    <row>
+                        <entry>nexVortex</entry>
+                        <entry>Compatible (UDP)</entry>
+                    </row>
+                    <row>
+                        <entry morerows="2">UK</entry>
+                        <entry>VoiceHost</entry>
+                        <entry>Compatible</entry>
+                    </row>
+                    <row>
+                        <entry>DID logic</entry>
+                        <entry>Compatible</entry>
+                    </row>
+                    <row>
+                        <entry>Voyced</entry>
+                        <entry>Compatible</entry>
+                    </row>
+                    <row>
+                        <entry>South Africa</entry>
+                        <entry>HD Telecoms</entry>
+                        <entry>Compatible</entry>
+                    </row>
+                    <row>
+                        <entry morerows="1">German</entry>
+                        <entry>Reventix</entry>
+                        <entry>Compatible</entry>
+                    </row>
+                    <row>
+                        <entry>Peoplefone AG</entry>
+                        <entry>Compatible (UDP)</entry>
+                    </row>
+                    <row>
+                        <entry morerows="1">Italy</entry>
+                        <entry>OlimonTel.it  - Numero VoIP </entry>
+                        <entry>Compatible</entry>
+                    </row>
+                    <row>
+                        <entry>TreNove</entry>
+                        <entry>Compatible</entry>
+                    </row>
+                    <row>
+                        <entry>France</entry>
+                        <entry>Telecom Object</entry>
+                        <entry>Compatible</entry>
+                    </row>
+                    <row>
+                        <entry>Switzerland</entry>
+                        <entry>Peoplefone AG</entry>
+                        <entry>Compatible (UDP)</entry>
+                    </row>
+                    <row>
+                        <entry>Austria</entry>
+                        <entry>Peoplefone AG</entry>
+                        <entry>Compatible (UDP)</entry>
+                    </row>
+                    <row>
+                        <entry>Australia</entry>
+                        <entry>Australian Phone Company</entry>
+                        <entry>Compatible (UDP)</entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </refbody>
+</reference>

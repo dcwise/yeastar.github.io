@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_byr_t1c_5cb">
+    <title>Register Snom Phone with <ph keyref="product_name"/></title>
+    <shortdesc> This article is based on Snom D305 and <ph keyref="product_name"/>
+        <ph product="cloudpbx">v81.8.0.7</ph><ph product="s-series">v30.8.0.14</ph>.</shortdesc>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2019/01/22"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <context>This article is applicable to the following phones:<p>
+                <ul id="ul_w1c_xc3_ycb">
+                    <li>Snom 320, 710, 715, 720, 725, 760, 765</li>
+                    <li>Snom D Series: 305, 315, 345, 375</li>
+                </ul>
+            </p><p conref="register_htek.dita#task_n3s_q1c_5cb/different_phone_web"/></context>
+        <steps id="steps_v5l_zc3_ycb">
+            <step>
+                <cmd>To check the IP address of the phone, press <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol>Information</uicontrol>
+                        <uicontrol>System Info</uicontrol>
+                    </menucascade> or press <menucascade>
+                        <uicontrol>Menu</uicontrol>
+                        <uicontrol>Information</uicontrol>
+                        <uicontrol>System Info</uicontrol>
+                    </menucascade>.</cmd>
+            </step>
+            <step>
+                <cmd>Log in the web page of the phone, go to <menucascade>
+                        <uicontrol>Setup</uicontrol>
+                        <uicontrol>Identify 1</uicontrol>
+                    </menucascade> to configure the account 1.</cmd>
+                <info><image href="../Images/admin/register_snom1.png" width="650"
+                        id="image_hzk_zd3_ycb"/></info>
+                <choices>
+                    <choice><uicontrol>Identify active</uicontrol>: On  </choice>
+                    <choice><uicontrol>Displayname</uicontrol>: Fill in the name you wish to appear
+                        on the phone screen.</choice>
+                    <choice><uicontrol>Account</uicontrol>: Fill in the extension number.</choice>
+                    <choice><uicontrol>Password</uicontrol>: Fill in the extension's
+                            <uicontrol>Registration Password</uicontrol>.</choice>
+                    <choice><uicontrol>Registrar</uicontrol>: Fill in the domain<ph
+                            product="s-series"> or IP address</ph> of your PBX.</choice>
+                    <choice><uicontrol>Authentication Username</uicontrol>: Fill in the extension's
+                            <uicontrol>Registration Name</uicontrol>.</choice>
+                    <choice><uicontrol>Mailbox</uicontrol>: Fill in the feature code of
+                            <uicontrol>Check Voicemail</uicontrol> on the PBX. The default code is
+                        *2.</choice>
+                </choices>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>RTP</uicontrol> tab, set <uicontrol>RTP Encryption</uicontrol>
+                    to <uicontrol>Off</uicontrol> if you don't enable SRTP feature for the
+                    extension.</cmd>
+                <info><image href="../Images/admin/register_snom2.png" width="650"
+                        id="image_zxz_h5m_ycb"/></info>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Apply</uicontrol>, then click <uicontrol>Save</uicontrol> in
+                    the top-right corner.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

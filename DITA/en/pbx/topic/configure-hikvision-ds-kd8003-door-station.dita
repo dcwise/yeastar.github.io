@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="configure-hikvision-ds-kd8003-module-station">
+    <title>Step2. Configure Hikvision DS-KD8003 Door Station</title>
+    <shortdesc>Register an extension on Hikvision DS-KD8003 Door Station, configure the dial button,
+        audio codecs, and video codecs.</shortdesc>
+    <body>
+        <section id="section_g3r_bd4_f3b">
+            <title>Register an extension on DS-KD8003</title>
+            <p>
+                <ol id="ol_hrt_jfl_g3b">
+                    <li>Log in <xref
+                            href="hikvision_device_management.dita#hikvision_device_management"
+                            >iVMS-4200 client</xref>, go to <menucascade>
+                            <uicontrol>Device Management</uicontrol>
+                            <uicontrol> Device</uicontrol>
+                            <uicontrol> Hikvision Device</uicontrol>
+                        </menucascade>.<p>Select DS-KD8003 Door Station and click <uicontrol>Remote
+                                Configuration</uicontrol>.</p><p><image id="image_hzg_ddj_f3b"
+                                href="../Images/sip-endpoints/hikvision/remote-configuration-on-ds-kd8003.png"
+                                width="700"/></p></li>
+                    <li>Go to <menucascade>
+                            <uicontrol>Intercom</uicontrol>
+                            <uicontrol> Intercom Protocol</uicontrol>
+                        </menucascade>, select <uicontrol>SIP Control</uicontrol> from the drop-down
+                        menu of <uicontrol>Protocol</uicontrol>, and click
+                            <uicontrol>Save</uicontrol>.</li>
+                    <li importance="optional" product="s-series">If your PBX is not in the same
+                        network with Hikvision DS-KD8003, you should configure DNS server.<p>Go to <menucascade>
+                                <uicontrol>Network</uicontrol>
+                                <uicontrol>Advanced Settings</uicontrol>
+                            </menucascade>, enter IP address of DNS server.</p><p><image
+                                href="../Images/sip-endpoints/hikvision/DNS-setting-hikvision-8003.png"
+                                id="image_mhq_1nw_k3b"/></p></li>
+                    <li product="cloudpbx">Go to <menucascade>
+                            <uicontrol>Network</uicontrol>
+                            <uicontrol>Advanced Settings</uicontrol>
+                        </menucascade>, enter IP address of DNS server.<p><image
+                                href="../Images/sip-endpoints/hikvision/DNS-setting-hikvision-8003.png"
+                                id="image_psh_gnf_l3b"/></p></li>
+                    <li>Go to <menucascade>
+                            <uicontrol>Network</uicontrol>
+                            <uicontrol> SIP Settings</uicontrol>
+                        </menucascade>, enter the credentials of SIP extension 3621.<p><image
+                                id="image_i5l_rdj_f3b"
+                                href="../Images/sip-endpoints/hikvision/enter-sip-extension3621-and-credentials.png"
+                                width="600" product="s-series"/></p><p><image id="image_jmq_pdk_k3b"
+                                href="../Images/sip-endpoints/hikvision/enter-sip-extension3621-and-credentials-cloud.png"
+                                width="600" product="cloudpbx"/></p><p>
+                            <ul id="ul_zhp_4ys_g3b">
+                                <li product="s-series"><uicontrol>Server Domain</uicontrol>: Enter
+                                    IP address of Yeastar S100. In this example, enter
+                                        <i>192.168.9.217</i>.</li>
+                                <li product="cloudpbx"><uicontrol>Server Domain</uicontrol>: Enter
+                                    domain name of Yeastar Cloud PBX. In this example, enter
+                                        <i>yeastar.cloudpbx.com</i>.</li>
+                                <li product="s-series"><uicontrol>Server Port</uicontrol>: Enter SIP
+                                    registration port of Yeastar S100. The default port is
+                                        <b>5060</b>.</li>
+                                <li product="cloudpbx"><uicontrol>Server Port</uicontrol>: Enter SIP
+                                    registration port of Yeastar Cloud PBX. The default port is
+                                        <b>5060</b>.</li>
+                                <li><uicontrol>User Name</uicontrol>: Enter extension number. In
+                                    this example, enter <i>3621</i>.</li>
+                                <li><uicontrol>Password</uicontrol>: Enter registration password of
+                                    the extension.</li>
+                                <li><uicontrol>Number</uicontrol>: Enter extension number. In this
+                                    example, enter <i>3621</i>.</li>
+                            </ul>
+                        </p></li>
+                    <li>Click <uicontrol>Save</uicontrol>. <p>If the extension is registered, the
+                                <uicontrol>Registration Status</uicontrol> will display
+                            "Registered".</p></li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_wst_jfl_g3b">
+            <title>Dial Setting</title>
+            <p>
+                <ol>
+                    <li>On the <uicontrol>Remote Configuration</uicontrol> page of Hikvision
+                        DS-KD8003 Door Station, go to <menucascade>
+                            <uicontrol>Intercom</uicontrol>
+                            <uicontrol>Dial</uicontrol>
+                        </menucascade>.</li>
+                    <li>Configure the <uicontrol>Dial</uicontrol> settings:<p>
+                            <ul id="ul_sbz_4hg_h3b">
+                                <li><uicontrol>Quick Press for Calling Center</uicontrol>: Optional.
+                                    This option is applied to a residential call center. When a
+                                    guest presses the Dial button, the call will be received on
+                                    iVMS-4200 client.<p>
+                                        <note>In our scenario, do NOT check this option, or the
+                                            incoming calls cannot reach the DS-KH6320 Indoor
+                                            Station.</note>
+                                    </p></li>
+                                <li><uicontrol>CalledName</uicontrol>: Enter the extension number of
+                                    the DS-KH6320 Indoor Station. In this example, enter
+                                        <i>3620</i>.<p>When a guest presses the Dial button, the
+                                        Indoor station will ring.</p></li>
+                            </ul>
+                        </p><p><image id="image_xz2_fnm_g3b"
+                                href="../Images/sip-endpoints/hikvision/dial-setting-number.png"
+                                width="650"/></p></li>
+                    <li>Click <uicontrol>Save</uicontrol>.</li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_ifq_hhl_g3b">
+            <title>Audio &amp; Video Setting</title>
+            <p>
+                <ol id="ol_opc_dpm_g3b">
+                    <li> On the <uicontrol>Remote Configuration</uicontrol> page of Hikvision
+                        DS-KD8003 Door Station, go to <menucascade>
+                            <uicontrol>Video Display</uicontrol>
+                            <uicontrol> Video &amp; Audio</uicontrol>
+                        </menucascade>, configure the following settings:<p>
+                            <ul id="ul_t1p_yxg_h3b">
+                                <li><uicontrol>Video Type</uicontrol>: Select <uicontrol>Video &amp;
+                                        Audio</uicontrol>, both video and two-way audio will be
+                                    established when the call is answered.</li>
+                                <li><uicontrol>Audio Encoding Type</uicontrol>: G711_U</li>
+                                <li><uicontrol>Video Encoding Type</uicontrol>: STD_H264</li>
+                            </ul>
+                        </p><p>
+                            <note>Make sure the <xref
+                                    href="hikvision-configure-yeastar-s-series-voip-pbx.dita#configure-yeastar-s-series-voip-pbx"
+                                    >audio codec and video codec are selected on the
+                                PBX</xref>.</note>
+                        </p><p><image id="image_m1z_5vz_g3b"
+                                href="../Images/sip-endpoints/hikvision/video-and-audio-setting.png"
+                                width="700"/></p></li>
+                    <li>Click <uicontrol>Save</uicontrol>.</li>
+                </ol>
+            </p>
+        </section>
+        <p>For more information about Hikvision DS-KD8003 Door Station, refer to <xref
+                href="https://www.hikvision.com/mtsc/uploads/product/accessory/UD11560B-A_Baseline_Video_Intercom_Module_Door_Station_User_Manual_V2.0_20190313.pdf"
+                format="pdf" scope="external">DS-KD8003 Door Station User Guide</xref>.</p>
+    </body>
+</topic>

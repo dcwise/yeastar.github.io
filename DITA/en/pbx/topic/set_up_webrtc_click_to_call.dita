@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_qwk_qrv_mfb">
+    <title>Set up WebRTC Click-to-Call</title>
+    <shortdesc>Create a WebRTC trunk on the PBX, and place the generated link in your website. When
+        a website visitor clicks the link, a WebRTC call will be established between the visitor and
+        the pre-configured destination of the PBX.</shortdesc>
+    <body>
+        <section id="section_obz_wrv_mfb">
+            <title>1. Create a WebRTC Trunk</title>
+            <p>
+                <ol id="ol_pbz_wrv_mfb">
+                    <li>Enable WebRTC feature on the PBX.<p>Go to <menucascade>
+                                <uicontrol>Settings</uicontrol>
+                                <uicontrol>PBX</uicontrol>
+                                <uicontrol>General</uicontrol>
+                                <uicontrol>WebRTC</uicontrol>
+                            </menucascade>, check the option <uicontrol>Enable</uicontrol>, click
+                                <uicontrol>Save</uicontrol>.</p><p><image
+                                href="../Images/admin/enable-webrtc.png" id="image_ctn_vf2_nhb"
+                            /></p></li>
+                    <li>Go to <menucascade>
+                            <uicontrol>Settings</uicontrol>
+                            <uicontrol>PBX</uicontrol>
+                            <uicontrol>Trunks</uicontrol>
+                        </menucascade>, click <uicontrol>Add</uicontrol>.</li>
+                    <li>In the <uicontrol>Name</uicontrol> field, enter a trunk name.</li>
+                    <li>In the <uicontrol>Select Country</uicontrol> drop-down list, select
+                            <uicontrol>General</uicontrol>.</li>
+                    <li>In the <uicontrol>Trunk Type</uicontrol> drop-down list, select
+                            <uicontrol>WebRTC Trunk</uicontrol>.<p><image
+                                href="../Images/admin/webrtc_trunk.png" width="650"
+                                id="image_qbz_wrv_mfb"/></p></li>
+                    <li>Use the default number or change the <uicontrol>Trunk Number</uicontrol>.
+                            <p>When a WebRTC call is made through this trunk, the trunk number will
+                            be displayed on the ringing endpoint.</p></li>
+                    <li>Click <uicontrol>Save</uicontrol>.<p>A link for the WebRTC trunk is
+                            generated in <uicontrol>WebRTC Inbound Call Link</uicontrol>. You can
+                            place the link on your web page. When your website visitors click the
+                            link, they will be connected to the <xref
+                                href="#topic_qwk_qrv_mfb/section_sbz_wrv_mfb" format="dita"
+                                >destination of this WebRTC trunk</xref>.</p></li>
+                    <li>On the pop-up dialog, click <uicontrol>Copy Now</uicontrol> or
+                            <uicontrol>Copy Later</uicontrol>.</li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_sbz_wrv_mfb">
+            <title>2. Set WebRTC Call Destination</title>
+            <p>Create an inbound route for the WebRTC trunk to route the WebRTC incoming calls. When
+                the website visitors click to call from the web page, the calls will be routed to
+                the configured destination.</p>
+            <p>
+                <ol id="ol_v45_qwv_mfb">
+                    <li>Go to <menucascade>
+                            <uicontrol>Settings</uicontrol>
+                            <uicontrol>PBX</uicontrol>
+                            <uicontrol>Call Control</uicontrol>
+                            <uicontrol>Inbound Routes</uicontrol>
+                        </menucascade>, click <uicontrol>Add</uicontrol>.</li>
+                    <li>Set WebRTC call destination.<ul id="ul_hd3_dmf_x3b">
+                            <li><uicontrol>Name</uicontrol>: Enter a route name.</li>
+                            <li><uicontrol>Member Trunks</uicontrol>: Select the WebRTC trunk to the
+                                    <uicontrol>Selected</uicontrol> box.</li>
+                            <li><uicontrol>Enable Time Condition</uicontrol>: Select the checkbox of
+                                    <uicontrol>Enable Time Condition</uicontrol>, and configure
+                                    <xref href="time_condition.dita#concept_f3m_qyd_2db">time
+                                    conditions</xref> to route the incoming calls based on the time
+                                conditions.</li>
+                            <li><uicontrol>Destination</uicontrol>: Select the inbound route
+                                destination.</li>
+                        </ul><p><image href="../Images/admin/webrtc_inbound_route.png" width="650"
+                                id="image_tty_wyv_mfb"/></p></li>
+                    <li>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_g5c_n1w_mfb">
+            <title>3. Place WebRTC Link on Your Website</title>
+            <p>Create an HTML button on your website, and set the button link to WebRTC link that is
+                generated after you creating the WebRTC trunk.</p>
+            <p>
+                <note type="note">To test the WebRTC Click-to-Call, you can paste the WebRTC link in
+                    the web browser directly.</note>
+            </p>
+            <p>
+                <ol id="ol_ap1_bcw_mfb">
+                    <li>On the WebRTC turnk configuration page, click <image
+                            href="../Images/ui_icons/copy.png" id="image_imw_jcw_mfb"/> to copy the
+                        WebRTC link.<p><image href="../Images/admin/copy_webrtc_link.png"
+                                width="650" id="image_efd_fcw_mfb"/></p></li>
+                    <li>Paste the link  your web browser, press <uicontrol>Enter</uicontrol>.<p>A
+                            dialpad will be displayed on the web page and the call will be connected
+                            to your pre-configured destination.</p><p><image
+                                href="../Images/admin/webrtc_call.png" id="image_kft_xcw_mfb"
+                        /></p></li>
+                </ol>
+            </p>
+        </section>
+    </body>
+</topic>
+

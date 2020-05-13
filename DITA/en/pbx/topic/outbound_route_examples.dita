@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_ufc_lr5_tcb">
+  <title>Outbound Route Examples</title>
+  <shortdesc>This topic provides sample configurations that will help you understand dial patterns
+    of outbound route.</shortdesc>
+  <body>
+    <section id="section_uss_ct5_tcb">
+      <title>Route Name: Domestic</title>
+      <p>In Xiamen, China, local numbers are all 7-digit numbers and the numbers do not start with
+        0, such as 5503305.</p>
+      <p>For long-distance calls, you need to dial the 4-digit area code and local numbers, such as
+        0595-5503305. The area code in China is in the format of 0ZXX, the first digit is 0, and the
+        second digit cannot be 0.</p>
+      <p>
+        <table frame="all" rowsep="1" colsep="1" id="table_xtx_fjv_tcb">
+          <tgroup cols="4">
+            <colspec colname="c1" colnum="1" colwidth="1*"/>
+            <colspec colname="c2" colnum="2" colwidth="1*"/>
+            <colspec colname="c3" colnum="3" colwidth="1.07*"/>
+            <colspec colname="c4" colnum="4" colwidth="3.59*"/>
+            <thead>
+              <row>
+                <entry>Pattern</entry>
+                <entry>Strip</entry>
+                <entry>Prepend</entry>
+                <entry>Description</entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry><i>90ZXX.</i></entry>
+                <entry>1</entry>
+                <entry>Leave it blank.</entry>
+                <entry>
+                  <p>This is for a long-distance call. </p>
+                  <p>The long-distance number starts with 0, and users should dial 9 before the
+                    number.</p>
+                  <p>
+                    <note>Before placing the call, PBX will strip the leading digit 9.</note>
+                  </p>
+                  <p><b>Example</b>: To call number 05955503303, the user should dial
+                    905955503303.</p>
+                </entry>
+              </row>
+              <row>
+                <entry><i>9ZXXXXXX</i></entry>
+                <entry>1</entry>
+                <entry>Leave it blank.</entry>
+                <entry>
+                  <p>This is for a local call.</p>
+                  <p>The local number starts with digit 1-9, and users should dial 9 before the
+                    number.</p>
+                  <p>
+                    <note>Before placing the call, PBX will strip the leading digit 9.</note>
+                  </p>
+                  <p><b>Example</b>: To call number 5503301, the user should dial 95503301.</p>
+                </entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+      </p>
+  
+    </section>
+    <section id="section_wrt_gt5_tcb">
+      <title>Route Name: Mobile</title>
+      <p>All mobile phone numbers in China are 11-digit numbers and start with digit 1, such as
+        15880260666.</p>
+      <p>
+        <table frame="all" rowsep="1" colsep="1" id="table_iz5_njv_tcb">
+          <tgroup cols="4">
+            <colspec colname="c1" colnum="1" colwidth="1.16*"/>
+            <colspec colname="c2" colnum="2" colwidth="1.03*"/>
+            <colspec colname="c3" colnum="3" colwidth="1*"/>
+            <colspec colname="c4" colnum="4" colwidth="2.81*"/>
+            <thead>
+              <row>
+                <entry>Pattern</entry>
+                <entry>Strip</entry>
+                <entry>Prepend</entry>
+                <entry>Description</entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry><i>1XXXXXXXXXX</i></entry>
+                <entry>Leave it blank.</entry>
+                <entry>Leave it blank.</entry>
+                <entry>Users can dial the mobile number as they usually do.<p><b>Example</b>: To
+                    call number 15880260666, dial 15880260666.</p></entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+      </p>
+     
+    </section>
+    <section id="section_aly_ht5_tcb">
+      <title>Route Name: International_Call</title>
+      <p>All international numbers start with digits 00.</p>
+      <p>
+        <table frame="all" rowsep="1" colsep="1" id="table_o2b_5jv_tcb">
+          <tgroup cols="4">
+            <colspec colname="c1" colnum="1" colwidth="1*"/>
+            <colspec colname="c2" colnum="2" colwidth="1.2*"/>
+            <colspec colname="c3" colnum="3" colwidth="1.28*"/>
+            <colspec colname="c4" colnum="4" colwidth="3.9*"/>
+            <thead>
+              <row>
+                <entry>Pattern</entry>
+                <entry>Strip</entry>
+                <entry>Prepend</entry>
+                <entry>Description</entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry><i>00.</i></entry>
+                <entry>Leave it blank.</entry>
+                <entry>Leave it blank.</entry>
+                <entry>Numbers start with digits 00 will go through this outbound
+                      route.<p><b>Example</b>: To call number 16262023379, dial
+                  001626202379.</p></entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+      </p>
+      <p>
+       
+      </p>
+    </section>
+  </body>
+</topic>

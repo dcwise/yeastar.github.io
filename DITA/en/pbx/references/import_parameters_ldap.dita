@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="reference_bv5_4j3_mfb">
+    <title>Import Parameters - LDAP Phonebook</title>
+    <shortdesc>Descriptions for the LDAP Phonebook parameters that you can import to <ph
+            keyref="product_name"/>.</shortdesc>
+    <refbody>
+        <section id="section_xr4_mv4_mfb">
+            <p>
+                <note>The LDAP server has a default LDAP phonebook with <b>PBX DN</b>. You can NOT
+                    import contacts with the default phonebook node.</note>
+            </p>
+        </section>
+        <section id="section_tmh_2n3_mfb">
+            <p>
+                <table id="table_apm_2n3_mfb">
+                    <tgroup cols="4">
+                        <colspec colnum="1" colname="col1" colsep="1" rowsep="1" colwidth="1*"/>
+                        <colspec colnum="2" colname="col2" rowsep="1" colsep="1" colwidth="2.46*"/>
+                        <colspec colnum="3" colname="col3" rowsep="1" colsep="1" colwidth="1.75*"/>
+                        <colspec colnum="4" colname="col6" rowsep="1" colsep="1" colwidth="2.46*"/>
+                        <thead>
+                            <row>
+                                <entry>Parameter</entry>
+                                <entry>Description</entry>
+                                <entry>Importance</entry>
+                                <entry>Restriction</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>Phonebook Node</entry>
+                                <entry>The Phonebook that contact information will be imported to.<p>
+                                        <note>
+                                            <ul id="ul_hkj_3yn_mfb">
+                                                <li>The contacts that do not specify "Phonebook"
+                                                  will not be imported.</li>
+                                                <li>If the specified Phonebook is not existing in
+                                                  PBX, PBX will create a new Phonebook.</li>
+                                            </ul>
+                                        </note>
+                                    </p></entry>
+                                <entry>Required </entry>
+                                <entry>Only alphanumeric characters are allowed.</entry>
+                            </row>
+                            <row>
+                                <entry>Extension</entry>
+                                <entry>This is the extension number for default phonebook. <p>
+                                        <note>Leave Extension field empty if you want to import
+                                            custom contacts.</note>
+                                    </p></entry>
+                                <entry>Optional</entry>
+                                <entry>
+                                    <ul id="ul_gxm_syn_mfb">
+                                        <li>Only numbers are allowed. </li>
+                                        <li>The maximum length is 7.</li>
+                                    </ul>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>Nickname</entry>
+                                <entry>The name of Contact.</entry>
+                                <entry>Required</entry>
+                                <entry>
+                                    <p>
+                                        <ul>
+                                            <li>The following characters are NOT
+                                                  allowed:<p><codeph>&amp;</codeph>
+                                                  <codeph>"</codeph>
+                                                  <codeph>'</codeph>
+                                                  <codeph>\</codeph>
+                                                  <codeph>&lt;</codeph>
+                                                  <codeph>></codeph>
+                                                  <codeph>`</codeph>
+                                                  <codeph>|</codeph>
+                                                  <codeph>+</codeph></p></li>
+                                            <li>The maximum length is 63.</li>
+                                        </ul>
+                                    </p>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>First Name</entry>
+                                <entry>The first name of Contact.</entry>
+                                <entry>Optional</entry>
+                                <entry>
+                                    <ul>
+                                        <li>The following characters are NOT
+                                                  allowed:<p><codeph>&amp;</codeph>
+                                                <codeph>"</codeph>
+                                                <codeph>'</codeph>
+                                                <codeph>\</codeph>
+                                                <codeph>&lt;</codeph>
+                                                <codeph>></codeph>
+                                                <codeph>`</codeph>
+                                                <codeph>|</codeph></p></li>
+                                        <li>The maximum length is 31.</li>
+                                    </ul>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>Last Name</entry>
+                                <entry>The last name of Contact.</entry>
+                                <entry>Optional</entry>
+                                <entry>
+                                    <ul>
+                                        <li>The following characters are NOT
+                                                  allowed:<p><codeph>&amp;</codeph>
+                                                <codeph>"</codeph>
+                                                <codeph>'</codeph>
+                                                <codeph>\</codeph>
+                                                <codeph>&lt;</codeph>
+                                                <codeph>></codeph>
+                                                <codeph>`</codeph>
+                                                <codeph>|</codeph></p></li>
+                                        <li>The maximum length is 31.</li>
+                                    </ul>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>Email</entry>
+                                <entry>The email address of Contact.</entry>
+                                <entry morerows="3">At lease 1 contact method must be entered:<p>
+                                        <ul id="ul_pw3_hzn_mfb">
+                                            <li>Email</li>
+                                            <li>Mobile Number</li>
+                                            <li>Office Number</li>
+                                            <li>Home Number</li>
+                                        </ul>
+                                    </p></entry>
+                                <entry>
+                                    <ul>
+                                        <li>Must be email address format.</li>
+                                        <li>The following characters are NOT
+                                                  allowed:<p><codeph>#</codeph>
+                                                <codeph>;</codeph>
+                                                <codeph>,</codeph>
+                                                <codeph>[</codeph>
+                                                <codeph>]</codeph>
+                                                <codeph>=</codeph>
+                                                <codeph>&amp;</codeph>
+                                                <codeph>"</codeph>
+                                                <codeph>'</codeph>
+                                                <codeph>\</codeph>
+                                                <codeph>&lt;</codeph>
+                                                <codeph>></codeph>
+                                                <codeph>`</codeph>
+                                                <codeph>$</codeph>
+                                            </p></li>
+                                    </ul>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>Mobile Number</entry>
+                                <entry>The mobile number of Contact.</entry>
+                                <entry>The maximum length is 31.</entry>
+                            </row>
+                            <row>
+                                <entry>Office Number</entry>
+                                <entry>The office number of Contact.</entry>
+                                <entry>The maximum length is 63.</entry>
+                            </row>
+                            <row>
+                                <entry>Home Number</entry>
+                                <entry>The home number of Contact.</entry>
+                                <entry>The maximum length is 31.</entry>
+                            </row>
+                            <row>
+                                <entry>Department</entry>
+                                <entry>The department name of Contact.</entry>
+                                <entry>Optional</entry>
+                                <entry>The following characters are NOT
+                                            allowed:<p><codeph>&amp;</codeph>
+                                        <codeph>"</codeph>
+                                        <codeph>'</codeph>
+                                        <codeph>\</codeph>
+                                        <codeph>&lt;</codeph>
+                                        <codeph>></codeph>
+                                        <codeph>`</codeph>
+                                        <codeph>|</codeph></p></entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+    </refbody>
+</reference>

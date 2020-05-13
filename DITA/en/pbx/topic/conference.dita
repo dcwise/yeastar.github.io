@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_x1v_hvm_tdb">
+    <title>Conference</title>
+    <shortdesc>Conference calls increase employee efficiency and productivity, and provide a more
+        cost-effective way to hold meetings.  </shortdesc>
+    <conbody>
+        <p>Conference members can dial * to access to the settings options and the admin can kick
+            the last user out and lock the conference room.</p>
+    </conbody>
+</concept>

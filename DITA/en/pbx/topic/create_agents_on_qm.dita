@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_c2t_2f1_wdb">
+    <title>Create Agents on QueueMetrics</title>
+    <shortdesc>You need to tell QueueMetrics on which queues our agents will be working. The agents
+        should be configured according to the extensions on your PBX.</shortdesc>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>On the QueueMetrics <uicontrol>Home</uicontrol> page, click <uicontrol>Edit
+                        agents</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Create New</uicontrol>.</cmd>
+                <info><image href="../Images/admin/qm_create_agents.png" id="image_inf_xf1_wdb"
+                        width="650"/></info>
+            </step>
+            <step>
+                <cmd>Configure the <uicontrol>Agent Detail</uicontrol> according to the extension
+                    settings on your PBC. </cmd>
+                <info>Set the following parameters and leave all other parameters blank.</info>
+                <choices>
+                    <choice><uicontrol>Asterisk agent code</uicontrol>: The format is
+                            <codeph>Agent/xxxx</codeph>. For example, the agent’s extension number
+                        is 1000, the Asterisk agent code should be
+                        <codeph>Agent/1000</codeph>.</choice>
+                    <choice><uicontrol>Agent description</uicontrol>: Enter the agent's
+                        name.</choice>
+                    <choice><uicontrol>Current terminal</uicontrol>: Enter the agent’s extension
+                        number.</choice>
+                </choices>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_tn3_1sb_5cb">
+  <title>Activate/Deactivate Call Forwarding</title>
+  <shortdesc>Extension users can dial the Call Forwarding feature codes on their phones to activate
+    or deactivate Call Forwarding function.</shortdesc>
+  <body>
+    <p>
+      <div>
+        <p>Below are the default call forwarding feature codes and the description of how to use the
+          feature codes.</p>
+        <p>
+          <table frame="all" rowsep="1" colsep="1" id="table_pdy_jsb_5cb">
+            <tgroup cols="3">
+              <colspec colname="c1" colnum="1" colwidth="1*"/>
+              <colspec colname="c2" colnum="2" colwidth="3.46*"/>
+              <colspec colname="c3" colnum="3" colwidth="5.08*"/>
+              <thead>
+                <row>
+                  <entry> Code</entry>
+                  <entry>Action</entry>
+                  <entry>Example</entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <entry>*71</entry>
+                  <entry>Activate call forwarding ALWAYS</entry>
+                  <entry>
+                    <ul id="ul_ssv_ysb_5cb">
+                      <li>Dial *71 to forward all calls to voicemail.</li>
+                      <li>Dial *716000 to forward all calls to extension 6000.</li>
+                    </ul>
+                  </entry>
+                </row>
+                <row>
+                  <entry>*071</entry>
+                  <entry>Deactivate call forwarding ALWAYS</entry>
+                  <entry>
+                    <ul id="ul_bgm_ctb_5cb">
+                      <li>Dial *071 to deactivate call forwarding ALWAYS.</li>
+                    </ul>
+                  </entry>
+                </row>
+                <row>
+                  <entry>*72</entry>
+                  <entry>Activate call forwarding WHEN BUSY</entry>
+                  <entry>
+                    <ul>
+                      <li>Dial *72 to forward calls (when the user is busy) to voicemail.</li>
+                      <li>Dial *726000 to forward calls (when the user is busy) to extension
+                        6000.</li>
+                    </ul>
+                  </entry>
+                </row>
+                <row>
+                  <entry>*072</entry>
+                  <entry>Deactivate call forwarding WHEN BUSY</entry>
+                  <entry>
+                    <ul>
+                      <li>Dial *072 to deactivate call forwarding WHEN BUSY.</li>
+                    </ul>
+                  </entry>
+                </row>
+                <row>
+                  <entry>*73</entry>
+                  <entry>Activate call forwarding NO ANSWER</entry>
+                  <entry>
+                    <ul>
+                      <li>Dial *73 to forward calls (when the user doesn't answer) to
+                        voicemail.</li>
+                      <li>Dial *736000 to forward calls ((when the user doesn't answer) to extension
+                        6000.</li>
+                    </ul>
+                  </entry>
+                </row>
+                <row>
+                  <entry>*073</entry>
+                  <entry>Deactivate call forwarding NO ANSWER</entry>
+                  <entry>
+                    <ul>
+                      <li>Dial *073 to deactivate call forwarding NO ANSWER.</li>
+                    </ul>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </p>
+      </div>
+    </p>
+  </body>
+</topic>

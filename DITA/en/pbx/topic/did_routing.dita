@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="concept_wz1_lbd_sfb">
+    <title>Route Inbound Calls Based on DID </title>
+    <shortdesc>This topic describes what is DID numbers and how to configure inbound routes on <ph
+            keyref="product_name"/> to route inbound calls based on DID.</shortdesc>
+    <body>
+        <section id="section_abl_my2_sfb">
+            <title>DID numbers</title>
+            <p>DID (Direct Inward Dialing) is a telephone service that allows outside users to reach
+                a certain destination instead of going to a receptionist or a queue and needing to
+                dial an extension number. </p>
+            <p>DID numbers are provided by the trunk provider. <ph product="k2 s-series">The
+                    following types of trunks support DID numbers:</ph></p>
+            <p product="k2 s-series">
+                <ul id="ul_tcv_3x2_sfb">
+                    <li>VoIP</li>
+                    <li>BRI</li>
+                    <li>E1/T1/J1</li>
+                </ul>
+            </p>
+            <p product="k2 s-series">
+                <note>PSTN trunk and GSM trunk have no DID numbers.</note>
+            </p>
+            <p>The trunk provider usually assigns a range of numbers to the VoIP trunk or the
+                physical trunk. There is an extra charge for the DID numbers. Contact your trunk
+                provider for more information about DID numbers. </p>
+        </section>
+        <section id="section_qcs_ny2_sfb">
+            <title>Configure DID routing - single DID </title>
+            <p>Bind a DID number to an inbound destination.</p>
+            <p><b>Example</b>: </p>
+            <p>You purchased two DID numbers from the SIP trunk provider: 5503301 and 5503302. </p>
+            <p>To route inbound calls to different destinations based on different DID numbers, you
+                can set up two inbound routes for the two DID numbers.</p>
+            <p><image href="../Images/admin/configure_did_routing_single_did.png"
+                    id="image_gyk_m1k_sfb" width="650"/></p>
+            <p>
+                <ol id="ul_ot2_l2f_sfb">
+                    <li>Inbound Route <b>ToSales</b> for DID number 5503301.<p><image
+                                href="../Images/admin/did_routing_sales.png" width="650"
+                                id="image_p4x_zff_sfb"/></p><p>
+                            <ul id="ul_a1b_h2v_2jb">
+                                <li><b>Name</b>: Set a name to help you identify it.</li>
+                            </ul>
+                            <ul id="ul_pl1_tff_sfb">
+                                <li><uicontrol>DID Pattern</uicontrol>: Enter the DID number
+                                        <i>5503301</i>.</li>
+                                <li><uicontrol>Caller ID Pattern</uicontrol>: Leave it blank, which
+                                    means no limit on caller's Caller ID.</li>
+                                <li><uicontrol>Member Trunks</uicontrol>: Select the trunk that is
+                                    bound with the DID number.</li>
+                                <li><uicontrol>Destination</uicontrol>: Select the desired
+                                    destination. When users dial the DID number 5503301, the call
+                                    will be routed to the destination.</li>
+                            </ul>
+                        </p></li>
+                    <li>Inbound Route <b>ToSupport</b> for DID number 5503302.<p><image
+                                href="../Images/admin/did_routing_support.png" width="650"
+                                id="image_a5p_1gf_sfb"/></p><ul id="ul_mj2_w2v_2jb">
+                            <li><b>Name</b>: Set a name to help you identify it.</li>
+                        </ul><p>
+                            <ul>
+                                <li><uicontrol>DID Pattern</uicontrol>: Enter the DID number
+                                        <i>5503302</i>.</li>
+                                <li><uicontrol>Caller ID Pattern</uicontrol>: Leave it blank, which
+                                    means no limit on caller's Caller ID.</li>
+                                <li><uicontrol>Member Trunks</uicontrol>: Select the trunk that is
+                                    bound with the DID number.</li>
+                                <li><uicontrol>Destination</uicontrol>: Select the desired
+                                    destination. When users dial the DID number 5503302, the call
+                                    will be routed to the destination.</li>
+                            </ul>
+                        </p></li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_kvk_fgf_sfb">
+            <title>Configure DID routing - multiple DIDs</title>
+            <p>You can assign DID numbers to extension users one by one. When an outside user dials
+                an DID number, the user can reach a specific extension directly.</p>
+            <p>
+                <note>The DID numbers should be consecutive DID numbers.</note>
+            </p>
+            <p><b>Example</b>: You purchased 10 DID numbers from the SIP trunk provider:
+                8823201-8823210.</p>
+            <p><image href="../Images/admin/configure_did_routing_multiple_dids.png"
+                    id="image_k5c_5ck_sfb"/></p>
+            <p>To assign the DID numbers one by one to extension 1001-1010 , you can configure the
+                inbound route as follows.</p>
+            <p><image href="../Images/admin/did_routing_multiple_did.png" width="650"
+                    id="image_n2s_3jf_sfb"/></p>
+            <ul id="ul_lhr_wfv_2jb">
+                <li><b>Name</b>: Set a name to help you identify it.</li>
+            </ul>
+            <p>
+                <ul>
+                    <li><uicontrol>DID Pattern</uicontrol>: Enter the DID range
+                            <i>8823201-8823210</i>.</li>
+                    <li><uicontrol>Caller ID Pattern</uicontrol>: Leave it blank, which means no
+                        limit on caller's Caller ID.</li>
+                    <li><uicontrol>Member Trunks</uicontrol>: Select the trunk that is bound with
+                        the DID numbers.</li>
+                    <li><uicontrol>Destination</uicontrol>: Select <uicontrol>Extension
+                            Range</uicontrol>, and enter the extension range
+                            <i>1001-1010</i>.<note>The number of extensions and DID numbers must be
+                            the same.</note></li>
+                </ul>
+            </p>
+        </section>
+    </body>
+</topic>

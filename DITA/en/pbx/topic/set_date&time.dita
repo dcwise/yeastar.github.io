@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_e2f_tlc_2cb">
+    <title>Set Date and Time</title>
+    <shortdesc>Adjust the time of your PBX (including the time zone) to your local time. The PBX
+        will generate call logs with your local time.</shortdesc>
+    <taskbody>
+        <steps id="steps_mwc_zlc_2cb">
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol> System</uicontrol>
+                        <uicontrol> Date &amp; Time</uicontrol>
+                    </menucascade>. </cmd>
+            </step>
+            <step>
+                <cmd>Select your time zone.</cmd>
+            </step>
+            <step>
+                <cmd>(Optional) Configure <uicontrol>Daylight Saving Time</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>On the pop-up window in the bottom right corner, click
+                        <uicontrol>Yes</uicontrol> to reboot the system.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

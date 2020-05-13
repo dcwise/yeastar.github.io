@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="release_ldap_cloud">
+    <title>LDAP Server</title>
+    <shortdesc>Release notes for LDAP Server on <ph keyref="product_name"/>.</shortdesc>
+    <body>
+        <section id="section_jmv_xnj_tkb">
+            <title>Version 1.0.5</title>
+            <p>Released Date: February 27, 2020<ul id="ul_ulk_ynj_tkb">
+                    <li>Fixed the display issue of the LDAP Server icon.</li>
+                </ul></p>
+        </section>
+        <section>
+            <title>Version 1.0.4</title>
+            <p>Released Date: October 22, 2019<ul id="ul_ecj_yxt_jjb">
+                    <li>Improve functional stability.</li>
+                </ul></p>
+        </section>
+    </body>
+</topic>

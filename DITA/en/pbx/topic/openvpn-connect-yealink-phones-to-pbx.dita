@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="openvpn-connect-yealink-phones-to-pbx">
+    <title>Connect Yealink Phones to <ph keyref="product_name"/></title>
+    <shortdesc>This topic shows you how to configure a client file for Yealink, and to connect to
+            <ph keyref="product_name">Yeastar S-Series VoIP PBX</ph> via OpenVPN network</shortdesc>
+    <body/>
+</topic>

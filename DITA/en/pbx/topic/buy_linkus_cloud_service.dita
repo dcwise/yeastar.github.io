@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_nlv_mgr_2fb">
+    <title> Buy Linkus Cloud Service</title>
+    <shortdesc>Yeastar provides 30-day free trial for LCS (Linkus Cloud Service). After you've tried
+        the Linkus Cloud Service, you can subscribe and buy LCS for your Linkus server for one
+        year.</shortdesc>
+    <taskbody>
+        <context>
+            <note>If you buy Linkus Cloud Service during the free-trial period, you will get a
+                discount.</note>
+        </context>
+        <steps>
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Linkus</uicontrol>
+                        <uicontrol>Linkus Server Settings</uicontrol>
+                    </menucascade>,  click <uicontrol>Buy Service</uicontrol>.</cmd>
+                <info>The purchase page opens and your PBX information is filled in the form on the
+                    web page automatically.</info>
+            </step>
+            <step>
+                <cmd>On the purchase page, enter the purchase information and complete the purchase
+                    process.</cmd>
+            </step>
+            <step>
+                <cmd>Select the checkbox to accept the Terms of Service and Privacy Policy.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

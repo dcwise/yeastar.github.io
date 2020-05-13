@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_sdr_3vl_l2b">
+    <title>Linkus Server</title>
+    <shortdesc>Release notes for Linkus server on the Yeastar K2 IPPBX.</shortdesc>
+    <conbody>
+        <section id="section_xj5_dmw_clb">
+            <title>Version 2.7.2</title>
+            <p><ph conref="v30.13.0.30.dita#v30.13.0.b/date"/></p>
+            <p>
+                <ul id="ul_tby_b4w_clb">
+                    <li conref="v30.13.0.30.dita#v30.13.0.b/linkus-CTI"/>
+                </ul>
+            </p>
+            <ul id="ul_dnw_3mx_hlb">
+                <li>Fixed the issue of the push notification for Linkus calls: With
+                        <uicontrol>Presence</uicontrol> set to <uicontrol>Do Not
+                    Disturb</uicontrol>, members in a Ring Group could still receive incoming
+                    calls.</li>
+                <li>Fixed the display issue of extensions: On Linkus Mobile Client, not all
+                    registered extensions were displayed on <uicontrol>Extension</uicontrol>
+                    list.</li>
+                <li>Fixed the issue that members in a queue didn't receive notifications when
+                    there're incoming calls.</li>
+            </ul>
+        </section>
+        <section>
+            <title>Version 2.6.10</title>
+            <p>Released Date: February 27, 2020</p>
+            <p><b>This version updates the following, you need to simultaneously upgrade Linkus
+                    clients to the latest version (iOS version: 2.9.10; Android version: 2.9.6), or
+                    Linkus may not work.</b></p>
+            <p>
+                <ul id="ul_rnf_vk4_vkb">
+                    <li>Added compatibility with PBX <uicontrol>Contacts</uicontrol> feature.</li>
+                    <li>Optimized Linkus iOS Push.</li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_bq4_qkp_1kb">
+            <title>Version 2.5.9</title>
+            <p>Released Date: December 17, 2019<ul id="ul_bj2_zjp_1kb">
+                    <li>Fixed the LCS (Linkus Cloud Service) issue: When the mounted network drive
+                        disconnected with PBX, users failed to change password on Linkus Mobile
+                        Client.</li>
+                    <li>Fixed the following Conference issues.<ul id="ul_yht_mkp_1kb">
+                            <li>
+                                <p>Display issue of conference members.</p>
+                            </li>
+                            <li>
+                                <p>Occasionally failed to exit from a conference.</p>
+                            </li>
+                        </ul></li>
+                </ul></p>
+        </section>
+        <section id="section_tyr_v5b_wjb">
+            <title>Version 2.5.1</title>
+            <p>Released Date: December 12, 2019<ul id="ul_mcs_y5b_wjb">
+                    <li>Optimized the mechanism of applying configuration changes to improve the
+                        system stability.<ul id="ul_gnc_1vb_wjb">
+                            <li>You don't need to click <uicontrol>Apply</uicontrol> button to
+                                reload Asterisk if you save unchanged configurations.</li>
+                            <li>If no <uicontrol>Apply</uicontrol> button appears after you save
+                                some specific configuration changes, then the configurations can be
+                                saved without reloading Asterisk.</li>
+                        </ul></li>
+                </ul></p>
+        </section>
+        <section id="section_xcn_dgd_3jb">
+            <title>Version 2.3.15</title>
+            <p>Released Date: October 22, 2019</p>
+            <p>
+                <ul id="ul_rgm_vfd_3jb">
+                    <li>
+                        <p>Improved Linkus performance.</p>
+                    </li>
+                    <li>Increased the number of extensions of Linkus.</li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_ffs_bhv_q3b">
+            <title>Version 2.2.21</title>
+            <p>Released Date: August 7, 2019</p>
+            <p>
+                <ul>
+                    <li>Added support for <uicontrol>Linkus Cloud Service</uicontrol>.</li>
+                    <li>Fixed the issue of Linkus Call: The Linkus user in the ring group could not
+                        answer the call, which is transferred from another ring group after
+                        timeout.</li>
+                    <li>Fixed the issue of Linkus Email: The login QR code could not be displayed if
+                        the email was sent to Gmail, Whitebox, and Outlook.</li>
+                    <li>Fixed the issue of Linkus Call: If <uicontrol>All Busy Mode for SIP
+                            Forking</uicontrol> was enabled, the Linkus client, which was a Ring
+                        Group member could not receive calls.</li>
+                </ul>
+            </p>
+        </section>
+        <section>
+            <title>Version 1.8.9</title>
+            <p>Released Date: May 14, 2019</p>
+            <p>
+                <ul id="ul_mm5_vh5_4hb">
+                    <li>Improved the Linkus stability.</li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_nnr_fxk_5gb">
+            <title>Version 1.8.6</title>
+            <p>Released Date: February 25, 2019</p>
+            <p>
+                <ul id="ul_dxw_r1l_5gb">
+                    <li>Improved the Linkus stability.</li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_oyv_vhs_zfb">
+            <title>Version 1.8.2</title>
+            <p>Released Date: December 5, 2018</p>
+            <p>
+                <ul id="ul_zzy_xhs_zfb">
+                    <li>Improved the Linkus stability.</li>
+                    <li>Added support for <b>Linkus for Windows Desktop</b> and <b>Linkus for Mac
+                            Desktop</b>.</li>
+                    <li>Added support for forcing logout of Linkus desktop client on Linkus mobile
+                        client.</li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_a55_4sn_y2b">
+            <title>Version 1.8.0</title>
+            <p>Released Date: August 29, 2018</p>
+            <p>
+                <ul id="ul_clh_5sn_y2b">
+                    <li>Added support for MiPush, Huawei Push, and JPush.</li>
+                    <li>Added support for Background Mode function on Linkus Android client.</li>
+                </ul>
+                <ul id="ul_uvw_5sn_y2b">
+                    <li>Added supported for logging in Linkus by email address.</li>
+                    <li>Improved the security of the Linkus login.</li>
+                    <li>Expand the expiration time of QR code and login link that are in the Linkus
+                        email to 24 hours.</li>
+                    <li>Optimized the Linkus Email Template.</li>
+                    <li>Optimized the Linkus login link.</li>
+                </ul>
+            </p>
+            <ul id="ul_n5g_wsn_y2b">
+                <li>Optimized the Linkus email template.</li>
+                <li>Fixed the issue that Linkus server would not be updated if the local IP address
+                    of the PBX was changed.</li>
+                <li>Added Privacy Policy Agreement and Data Processing Agreement.</li>
+            </ul>
+            <ul id="ul_ik1_ysn_y2b">
+                <li>Fixed the issue that Linkus call push would fail.</li>
+            </ul>
+        </section>
+        <section id="section_j4v_4vl_l2b">
+            <title>Version 1.7.1</title>
+            <p>Released Date: July 13, 2018</p>
+            <p>
+                <ul>
+                    <li>Fixed the Linkus iOS push issue.</li>
+                    <li>Optimized the extension status on Linkus client.</li>
+                </ul>
+            </p>
+        </section>
+    </conbody>
+</concept>

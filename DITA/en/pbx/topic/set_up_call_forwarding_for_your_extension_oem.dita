@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_lgw_pfb_5cb">
+    <title>Set up Call Forwarding for Your Extension</title>
+    <shortdesc>Log in the Extension User Portal to change the call forwarding settings for your
+        extension.</shortdesc>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/08/22"/>
+            <!--Carol-->
+            <revised modified="2018/08/23"/>
+            <!--Carol-->
+            <revised modified="2018/09/06"/>
+            <!--Carol-->
+            <revised modified="2018/09/07"/>
+            <!--Carol-->
+            <revised modified="2018/09/11"/>
+            <!--Carol-->
+            <revised modified="2018/09/12"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <context/>
+        <steps>
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Me</uicontrol>
+                        <uicontrol>Extension Settings</uicontrol>
+                        <uicontrol>Call Forwarding</uicontrol>
+                    </menucascade>.</cmd>
+                <info><image href="../Images/user/call_forwarding.png" id="image_oby_jbg_x2b"
+                    /></info>
+            </step>
+            <step>
+                <cmd>Check the condition option.</cmd>
+                <choices id="choices_fj3_znz_zcb">
+                    <choice><uicontrol>Always</uicontrol>: All the calls will be forwarded
+                        regardless of your state.</choice>
+                    <choice><uicontrol>No Answer</uicontrol>: Calls will be forwarded to if you
+                        don't answer the call.</choice>
+                    <choice><uicontrol>When Busy</uicontrol>: Calls will be forwarded when you are
+                        busy in a call.</choice>
+                </choices>
+            </step>
+            <step>
+                <cmd>Select the destination for the forwarding condition.</cmd>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

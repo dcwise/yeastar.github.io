@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_w3w_xzc_sfb">
+    <title>Caller ID Routing</title>
+    <shortdesc>Caller ID Routing allows you to route or reject inbound calls based on the caller's
+        phone number. </shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/11/06"/>
+            <!--Carol-->
+            <revised modified="2018/11/06"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <p>If a call comes in from [<i>Given Number</i>] then send the call to [<i>Given
+                Destination</i>]” which will in effect, send all calls that follow the rule to the
+            right department, individual, queue or voicemail and enable you to utilise your staff
+            more effectively.</p>
+        <p>This is a beneficial feature for companies whose sales/service teams cover specified
+            regions. Calls are routed by the originating area code to a specific person or office
+            location. Numbers that fall outside the standard area codes (such as 800 numbers or
+            blocked numbers) could be sent directly to a designated account manager.</p>
+    </conbody>
+</concept>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_nqp_h1k_2fb">
+    <title>Version 30.9.0.20</title>
+    <abstract>Released Date: September 25, 2018</abstract>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/09/18"/>
+            <!--Carol-->
+            <revised modified="2018/09/18"/>
+        </critdates>
+    </prolog>
+    <body>
+        <section>
+            <title>New Feature</title>
+            <p><image href="../Images/horizon.png" id="image_aj3_vyv_pdb"/></p>
+            <p>
+                <ul id="ul_qwp_ckt_q2b">
+                    <li>Added support for Linkus Cloud Service.<p>Linkus Cloud Service supports
+                            Linkus Chat function, simplifies Linkus server settings, and provides
+                            better Linkus experience.</p></li>
+                </ul>
+            </p>
+        </section>
+    </body>
+</topic>

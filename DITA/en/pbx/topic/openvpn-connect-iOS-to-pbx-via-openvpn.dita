@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="openvpn-connect-iOS-phone-to-pbx-via-openvpn">
+    <title>Connect iOS Phone to <ph keyref="product_name"/> via OpenVPN</title>
+    <body>
+        <p>Before connecting your iOS phone to <ph keyref="product_name"/>, you need to install the
+            OpenVPN on your phone.</p>
+        <p>
+            <note>Make sure that the <uicontrol>TUN</uicontrol> device mode is set on VPN
+                server.</note>
+            <ol id="ol_h14_t2h_j3b">
+                <li>Connect your phone to PC, select your device on iTunes, go to OpenVPN under the
+                        <uicontrol>Apps</uicontrol> tab, and drop the OpenVPN connection files into
+                    the file sharing window.<p><image href="../Images/admin/openvpn-iOS-import.png"
+                            id="image_s4k_ljl_33b" width="650"/></p><p>
+                        <table id="table_efx_45k_33b" colsep="1" rowsep="1">
+                            <title>Files for iOS client</title>
+                            <tgroup cols="2" align="center">
+                                <colspec colname="c1" colnum="1" colwidth="176px"/>
+                                <colspec colname="c2" colnum="2" colwidth="514px"/>
+                                <thead>
+                                    <row valign="middle">
+                                        <entry>File</entry>
+                                        <entry>Note</entry>
+                                    </row>
+                                </thead>
+                                <tbody>
+                                    <row valign="middle">
+                                        <entry><filepath>ca.crt</filepath></entry>
+                                        <entry>Root Certificate Authority</entry>
+                                    </row>
+                                    <row valign="middle">
+                                        <entry><filepath>iOS.crt</filepath></entry>
+                                        <entry>a certificate file for iOS client</entry>
+                                    </row>
+                                    <row valign="middle">
+                                        <entry><filepath>iOS.key</filepath></entry>
+                                        <entry>a key file for iOS client</entry>
+                                    </row>
+                                    <row valign="middle">
+                                        <entry><filepath>iOS.ovpn</filepath></entry>
+                                        <entry>an OpenVPN connection file</entry>
+                                    </row>
+                                    <row valign="middle">
+                                        <entry>
+                                            <filepath>passfile</filepath></entry>
+                                        <entry align="left">Required for <xref
+                                                href="openvpn-username-password-authentication.dita#openvpn-create-account-password-for-each-client"
+                                                >OpenVPN username/password
+                                            authentication</xref>.</entry>
+                                    </row>
+                                    <row valign="middle">
+                                        <entry><filepath>ta.key</filepath></entry>
+                                        <entry align="left">Required for client when
+                                                <uicontrol>SSL/TLS</uicontrol> is enabled on the
+                                            OpenVPN server.</entry>
+                                    </row>
+                                </tbody>
+                            </tgroup>
+                        </table>
+                    </p></li>
+                <li>Open the OpenVPN app on your iPhone.</li>
+                <li>Tap <uicontrol>OVPN Profile</uicontrol>, and then tap the
+                        <uicontrol>ADD</uicontrol> under the file you want to add. <p><image
+                            href="../Images/admin/openvpn-iOS-app.png" id="image_egw_kcq_33b"
+                            width="200"/><image href="../Images/admin/openvpn-iOS-import-files.png"
+                            width="200" id="image_ezm_f2q_33b"/></p></li>
+                <li>Tap the <uicontrol>ADD</uicontrol>, and then tap <uicontrol>Allow</uicontrol> to
+                    import the OpenVPN connection file.<p>You may need to confirm VPN Configuration
+                        by using Touch ID or another security method set on your iOS
+                            device.</p><p><image
+                            href="../Images/admin/openvpn-iOS-import-confirm.png" width="200"
+                            id="image_fzm_f2q_33b"/><image
+                            href="../Images/admin/openvpn-iOS-accept-connect.png" width="200"
+                            id="image_azr_s2q_33b"/></p></li>
+                <li>Tap on the gray slider to start the connection.<p>If the connection has been
+                        established, the slider will become green and the state will change to
+                            <uicontrol>CONNECTED</uicontrol>.</p><p><image
+                            href="../Images/admin/openvpn-iOS-connect.png" width="200"
+                            id="image_tjs_jfq_33b"/><image
+                            href="../Images/admin/openvpn-iOS-connect-success.png" width="200"
+                            id="image_f1v_qfq_33b"/></p></li>
+            </ol>
+        </p>
+        <note type="trouble">If you are prompted "tun_prop_error: if config address are not is the
+            same /30 subnet (toplogy net30).", you should <xref
+                href="openvpn-set-a-static-vpn-ip-for-client_.dita#openvpn-allocate-a-static-IP-address-for-each-VPN-client"
+                >allocate a static IP address</xref> for iOS client.</note>
+    </body>
+</topic>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_fjj_t4z_xgb">
+    <title>Deploy Yeastar Cloud PBX on Microsoft Azure </title>
+    <prolog>
+        <author>carol</author>
+    </prolog>
+    <body>
+        <p><b>Requirements</b></p>
+        <p>
+            <ul id="ul_lmn_5tx_lcb">
+                <li>SBC has two ethernet ports, WAN interface is created on Microsoft Azure, LAN
+                    interface is a virtual ethernet to communicate with YMP LAN ports.<p>
+                        <note> Yeastar will add SBC LAN interface when installing Yeastar Cloud
+                            PBX.</note>
+                    </p></li>
+                <li>SBC WAN can receive data from the Internet and send data to the Internet.</li>
+                <li>SBC Virtual Machine acts as a gateway. The YMP will initiate outbound
+                    connections to the Internet through the SBC gateway.</li>
+            </ul>
+        </p>
+        <p><image href="../Images/SBC/azure.png" width="700" id="image_vzk_mfj_bhb"/></p>
+    </body>
+</topic>

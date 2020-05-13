@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="use-ldap-on-fanvil-phones">
+    <title>LDAP Configurations on Fanvil Phone</title>
+    <shortdesc>In this example, we demonstrate how to configure and use LDAP phonebook using a
+        Fanvil X5S (version 1.12.1).</shortdesc>
+    <body>
+        <section id="section_hty_zwh_r3b"><title>Configuration Example</title><p>The example
+                configurations are set according to default settings of <ph keyref="product_name"/>
+                LDAP server. You can use the following settings as a starting point and adjust the
+                filter and display attributes according to your needs.</p>Log in the Fanvil phone
+            web interface, go to <menucascade>
+                <uicontrol>Phonebook</uicontrol>
+                <uicontrol>Cloud phonebook</uicontrol>
+                <uicontrol>LDAP Settings</uicontrol>
+            </menucascade> to configure LDAP
+                    client.<p><?oxy_attributes product="&lt;change type=&quot;modified&quot; oldValue=&quot;s-series&quot; author=&quot;Becky&quot; timestamp=&quot;20200227T163518+0800&quot; /&gt;"?><image
+                    href="../Images/admin/fanvil-ldap-s-series.png" product="k2 s-series"
+                    width="700" id="image_t3w_qgm_s3b"/></p><p><image
+                    href="../Images/admin/fanvil-ldap-cloud-pbx.png" product="cloudpbx" width="700"
+                    id="image_bqb_sgm_s3b"/></p><p>
+                <table frame="all" id="table_nvn_nxh_r3b">
+                    <tgroup cols="3">
+                        <?oxy_attributes colwidth="&lt;change type=&quot;modified&quot; oldValue=&quot;1*&quot; author=&quot;Becky&quot; timestamp=&quot;20200102T151843+0800&quot; /&gt;"?>
+                        <colspec colname="c1" colnum="1" colwidth="1*" colsep="1" rowsep="1"/>
+                        <?oxy_attributes colwidth="&lt;change type=&quot;modified&quot; oldValue=&quot;2.38*&quot; author=&quot;Becky&quot; timestamp=&quot;20200102T151843+0800&quot; /&gt;"?>
+                        <colspec colname="c2" colnum="2" colwidth="2.35*" colsep="1" rowsep="1"/>
+                        <?oxy_attributes colwidth="&lt;change type=&quot;modified&quot; oldValue=&quot;1.18*&quot; author=&quot;Becky&quot; timestamp=&quot;20200102T151843+0800&quot; /&gt;"?>
+                        <colspec colname="c3" colnum="3" colwidth="1.9*" rowsep="1" colsep="1"/>
+                        <thead>
+                            <row>
+                                <entry>Setting</entry>
+                                <entry>Description</entry>
+                                <entry>Example</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>LDAP</entry>
+                                <entry>Choose one of the following phonebooks.<ul
+                                        id="ul_am3_2gv_q3b">
+                                        <li>LDAP 1</li>
+                                        <li>LDAP 2</li>
+                                        <li>LDAP 3</li>
+                                        <li>LDAP 4</li>
+                                    </ul></entry>
+                                <entry>LDAP 1</entry>
+                            </row>
+                            <row>
+                                <entry>Display Title </entry>
+                                <entry>Specify the name of phonebook.</entry>
+                                <entry>LDAP</entry>
+                            </row>
+                            <row>
+                                <entry>Version</entry>
+                                <entry><ph keyref="product_name"/> LDAP server uses Version
+                                    3.</entry>
+                                <entry>Version3</entry>
+                            </row>
+                            <row>
+                                <entry>Server Address</entry>
+                                <entry>Enter the
+                                        <?oxy_attributes product="&lt;change type=&quot;modified&quot; oldValue=&quot;s-series&quot; author=&quot;Becky&quot; timestamp=&quot;20200227T163524+0800&quot; /&gt;"?><ph
+                                        product="k2 s-series">IP address of PBX</ph><ph
+                                        product="cloudpbx">domain name of Cloud PBX</ph>.</entry>
+                                <entry><?oxy_attributes product="&lt;change type=&quot;modified&quot; oldValue=&quot;s-series&quot; author=&quot;Becky&quot; timestamp=&quot;20200227T163527+0800&quot; /&gt;"?><ph
+                                        product="k2 s-series">192.168.6.36</ph><ph
+                                        product="cloudpbx">becky.isbc.yeastarcloud.com</ph></entry>
+                            </row>
+                            <row>
+                                <entry>Server Port</entry>
+                                <entry>Enter the LDAP server port.</entry>
+                                <entry>
+                                    <?oxy_attributes product="&lt;change type=&quot;modified&quot; oldValue=&quot;s-series&quot; author=&quot;Becky&quot; timestamp=&quot;20200227T163531+0800&quot; /&gt;"?><ph
+                                        product="k2 s-series">389</ph><ph product="cloudpbx"
+                                        >636</ph></entry>
+                            </row>
+                            <row>
+                                <entry>LDAP TLS Mode</entry>
+                                <entry>Specify the connection mode between the LDAP server and the
+                                    IP phone.<p>
+                                        <ul id="ul_xwj_bwt_23b">
+                                            <li>LDAP</li>
+                                            <li>LDAP TLS Start </li>
+                                            <li>LDAPS<note>
+                                                  <?oxy_attributes product="&lt;change type=&quot;modified&quot; oldValue=&quot;s-series&quot; author=&quot;Becky&quot; timestamp=&quot;20200227T163540+0800&quot; /&gt;"?>
+                                                  <p product="k2 s-series"><ph keyref="product_name"
+                                                  /> supports LDAP.</p>
+                                                  <p product="cloudpbx"><ph keyref="product_name"/>
+                                                  supports LDAP and LDAPS. We recommend using LDAPS
+                                                  protocol to connect IP phones and Cloud PBX for
+                                                  security.</p>
+                                                </note></li>
+                                        </ul>
+                                    </p></entry>
+                                <entry><?oxy_attributes product="&lt;change type=&quot;modified&quot; oldValue=&quot;s-series&quot; author=&quot;Becky&quot; timestamp=&quot;20200227T163536+0800&quot; /&gt;"?><ph
+                                        product="k2 s-series">LDAP</ph>
+                                    <ph product="cloudpbx">LDAPS</ph></entry>
+                            </row>
+                            <row>
+                                <entry>Calling Line</entry>
+                                <entry>Select a dialing line that LDAP uses. When a call is
+                                    initiated from the specified line, contacts information is
+                                    searched in the LDAP phonebook of the corresponding line. If no
+                                    contacts information is found, contacts information is searched
+                                    in LDAP phonebooks configured as <uicontrol>AUTO</uicontrol>. </entry>
+                                <entry>AUTO</entry>
+                            </row>
+                            <row>
+                                <entry>Authentication</entry>
+                                <entry>Select authentication type to access to LDAP server.<p>
+                                        <ul id="ul_rfr_kd1_r3b">
+                                            <li>None</li>
+                                            <li>DIGEST-MD5</li>
+                                            <li>CRAM-MD5</li>
+                                            <li>Simple (Default Configuration)</li>
+                                        </ul>
+                                    </p></entry>
+                                <entry>Simple</entry>
+                            </row>
+                            <row>
+                                <entry>Search Line</entry>
+                                <entry>Select an answering line that LDAP uses. When a call is
+                                    received from the specified line, contacts information is
+                                    searched in the LDAP phonebook of the corresponding line. If no
+                                    contacts information is found, contacts information is searched
+                                    in LDAP phonebooks configured as
+                                    <uicontrol>AUTO</uicontrol>.</entry>
+                                <entry>AUTO</entry>
+                            </row>
+                            <row>
+                                <entry>Username</entry>
+                                <entry>Enter the user name to log in the LDAP server.</entry>
+                                <entry><?oxy_attributes product="&lt;change type=&quot;modified&quot; oldValue=&quot;s-series&quot; author=&quot;Becky&quot; timestamp=&quot;20200227T163546+0800&quot; /&gt;"?><ph
+                                        product="k2 s-series">cn=admin,dc=pbx,dc=com</ph><ph
+                                        product="cloudpbx"
+                                        >cn=admin,dc=becky,dc=isbc,dc=yeastarcloud,dc=com</ph></entry>
+                            </row>
+                            <row>
+                                <entry>Password</entry>
+                                <entry>Enter the password to log in the LDAP server.</entry>
+                                <entry><?oxy_attributes product="&lt;change type=&quot;modified&quot; oldValue=&quot;s-series&quot; author=&quot;Becky&quot; timestamp=&quot;20200227T163549+0800&quot; /&gt;"?><ph
+                                        product="k2 s-series">password</ph><ph product="cloudpbx"
+                                        >Yeastar134</ph></entry>
+                            </row>
+                            <row>
+                                <entry>Search Base</entry>
+                                <entry>Specify a starting point in the directory tree from which to
+                                        search.<ul id="ul_xzd_kgm_s3b">
+                                        <li>To search all contacts, enter the Base DN of LDAP
+                                            server.</li>
+                                        <li>To search part of contacts, enter the desired phonebook
+                                            node.</li>
+                                    </ul></entry>
+                                <entry><?oxy_attributes product="&lt;change type=&quot;modified&quot; oldValue=&quot;s-series&quot; author=&quot;Becky&quot; timestamp=&quot;20200227T163552+0800&quot; /&gt;"?><ph
+                                        product="k2 s-series">dc=pbx,dc=com</ph><ph
+                                        product="cloudpbx"
+                                        >dc=becky,dc=isbc,dc=yeastarcloud,dc=com</ph></entry>
+                            </row>
+                            <row>
+                                <entry>Max Hits </entry>
+                                <entry>Specify the maximum number of search results to be returned
+                                    by the LDAP server.</entry>
+                                <entry>50</entry>
+                            </row>
+                            <row>
+                                <entry>Telephone</entry>
+                                <entry>Specify the telephoneNumber attributes of each record to be
+                                    returned by the LDAP server.</entry>
+                                <entry>telephoneNumber</entry>
+                            </row>
+                            <row>
+                                <entry>Mobile</entry>
+                                <entry>Specify the mobileNumber attributes of each record to be
+                                    returned by the LDAP server.</entry>
+                                <entry>mobile</entry>
+                            </row>
+                            <row>
+                                <entry>Other</entry>
+                                <entry>Specify the other attributes of each record to be returned by
+                                    the LDAP server.</entry>
+                                <entry>other</entry>
+                            </row>
+                            <row>
+                                <entry>Name Attr</entry>
+                                <entry>Specify the name attributes of each record to be returned by
+                                    the LDAP server. You can configure multiple name attributes
+                                    separated by space. </entry>
+                                <entry>cn sn ou</entry>
+                            </row>
+                            <row>
+                                <entry>Sort Attr</entry>
+                                <entry>Specify the mode of sorting the query results.</entry>
+                                <entry>cn</entry>
+                            </row>
+                            <row>
+                                <entry>Display name</entry>
+                                <entry>Specify the display name of the contact record displayed on
+                                    the LCD screen. </entry>
+                                <entry>cn</entry>
+                            </row>
+                            <row>
+                                <entry>Name Filter</entry>
+                                <entry>
+                                    <p>Specify the name attributes for LDAP searching. </p>
+                                    <p>
+                                        <ul id="ul_rpy_21w_tdb">
+                                            <li>The <codeph>*</codeph> symbol in the filter stands
+                                                for any character.</li>
+                                            <li>The <codeph>%</codeph> symbol in the filter stands
+                                                for the entering string used as the prefix of the
+                                                filter condition.</li>
+                                        </ul>
+                                    </p>
+                                </entry>
+                                <entry>(|(cn=%)(sn=%))</entry>
+                            </row>
+                            <row>
+                                <entry>Number Filter</entry>
+                                <entry>
+                                    <p>Specify the number attributes for LDAP searching. </p>
+                                    <p>
+                                        <ul id="ul_qqy_21w_tdb">
+                                            <li>The <codeph>*</codeph> symbol in the filter stands
+                                                for any character.</li>
+                                            <li>The <codeph>%</codeph> symbol in the filter stands
+                                                for the entering string used as the prefix of the
+                                                filter condition.</li>
+                                        </ul>
+                                    </p>
+                                </entry>
+                                <entry>(|(telephoneNumber=%)(mobile=%)(other=%))</entry>
+                            </row>
+                            <row>
+                                <entry>Enable in Call Search</entry>
+                                <entry>Enable or disable IP phone to perform LDAP search when
+                                    receiving an incoming call.</entry>
+                                <entry>Enabled</entry>
+                            </row>
+                            <row>
+                                <entry>Enable Out Call Search</entry>
+                                <entry>Enable or disable IP phone to perform LDAP search when
+                                    placing an outgoing call.</entry>
+                                <entry>Enabled </entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p></section>
+        <section id="section_jlw_1xh_r3b">
+            <title>Set an LDAP Key</title>
+            <p>Set an LDAP key on Fanvil phone to quickly access the LDAP phonebook.</p>
+            <p>
+                <ol id="ol_z5j_3xh_r3b">
+                    <li>Log in the Fanvil phone web interface, go to <uicontrol>Function
+                            Key</uicontrol>.</li>
+                    <li>Choose a DSS key, select key type to <uicontrol>Key Event</uicontrol> and
+                        subtype to <uicontrol>LDAP Group</uicontrol>.<p><image
+                                href="../Images/admin/set-fanvil-ldap-key-cloud-pbx.png" width="650"
+                                id="image_iwq_kxh_r3b"/></p></li>
+                    <li>Click <uicontrol>Apply</uicontrol>.</li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_atk_bxh_r3b">
+            <title>Search LDAP Contacts</title>
+            <p>You can press the LDAP key to access the LDAP phonebook. Enter the search criteria to
+                search a contact from LDAP phonebook and call the contact.</p>
+            <p>
+                <ol id="ol_ej1_dxh_r3b">
+                    <li>Press the LDAP key to access the LDAP phonebook.</li>
+                    <li>Press <b>Search</b> to search the contact name or number using the keypad.
+                        The contacts whose name or phone number match the characters entered will
+                        appear on the LCD screen.<p><image id="image_gyg_5d3_r3b"
+                                href="../Images/admin/fanvil_ldap_1.png"/></p></li>
+                    <li>Press the navigation key to select the desired contact.</li>
+                    <li>Press <uicontrol>Dial</uicontrol> to call the contact.</li>
+                </ol>
+            </p>
+        </section>
+    </body>
+</topic>
+<?oxy_options track_changes="on"?>

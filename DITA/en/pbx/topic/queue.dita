@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_yn1_gvm_tdb">
+    <title>Queue</title>
+    <shortdesc>Queues are designed to receiving calls in a call center. </shortdesc>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/06/15"/>
+            <!--Carol-->
+            <revised modified="2018/10/24"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <p>A queue is like a virtual waiting room, in which callers wait in line to talk with the
+            available agent. Once the caller called in PBX and reached the queue, he/she will hear
+            hold music and prompts, while the queue sends out the call to the logged-in and
+            available agents. A number of configuration options on the queue help you to control how
+            the incoming calls are routed to the agents and what callers hear and do while waiting
+            in the line. </p>
+        <section id="section_g1m_zrn_4fb">
+            <title>Queue Agents</title>
+            <p><ph keyref="product_name"/> supports dynamic agents and static agents.</p>
+            <p>
+                <ul id="ul_ukm_fsn_4fb">
+                    <li><b>Static Agent</b>: A static agent always stays in a queue to receive
+                        incoming calls.</li>
+                    <li><b>Dynamic Agent</b>: A dynamic agent can log in a queue or log out a queue
+                        at any time.</li>
+                </ul>
+            </p>
+            <p>On the Queue configuration page, the unselected agents act as dynamic agents.</p>
+            <p><image href="../Images/admin/queue_support.png" id="image_bdp_3cl_q2b" width="650"
+                /></p>
+        </section>
+    </conbody>
+</concept>

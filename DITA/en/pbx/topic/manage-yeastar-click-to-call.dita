@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="manage-yeastar-to-call">
+    <title>Manage Yeastar Click to
+        <?oxy_comment_start author="carol" timestamp="20191210T131538+0800" comment="关于如何管理click to call 插件没必要展开讲，说得反而给用户造成困扰。
+
+本文集合所有的操作即可。
+分以下几个section：
+- Turn on/off Yeastar Click to Call extension
+- Site Access of Yeastar Click to Call extension
+ 网站访问权限说明
+- Upgrade Yeastar Click to Call extension
+- Uninstall Yeastar Click to Call extension (写一种方法即可，参照 Chrome 的文章书写风格)
+https://support.google.com/chrome_webstore/answer/2664769?p=enable_extensions&amp;visit_id=637115632960807169-1096477579&amp;rd=1#extensionpermissions
+
+
+
+
+"?>Call<?oxy_comment_end?></title>
+    <shortdesc/>
+    <body>
+        <section id="section_aq1_xxt_zjb">
+            <title/>
+            <p>
+                <ol id="ol_cmv_byt_zjb">
+                    <li>On your computer, open Chrome.</li>
+                    <li>At the top right, click <menucascade>
+                            <uicontrol>More</uicontrol>
+                            <uicontrol>More tools</uicontrol>
+                            <uicontrol>Extensions</uicontrol>
+                        </menucascade>.</li>
+                    <li>Make your changes:<ul id="ul_gmv_byt_zjb">
+                            <li><b>Turn on/off:</b> Turn the extension on or off.</li>
+                            <li><b>Allow incognito:</b> On the extension, click <b>Details</b>. Turn
+                                on <b>Allow in incognito</b>.</li>
+                            <li><b>Allow site access:</b> On the extension, click <b>Details</b>.
+                                    <p>Next to <uicontrol>Allow this extension to read and change
+                                        all your data on websites you visit</uicontrol>, change the
+                                    extension’s site access to <b>On click</b>, <b>On specific
+                                        sites</b>, or <b>On all sites</b>.</p></li>
+                        </ul></li>
+                </ol>
+            </p>
+        </section>
+    </body>
+</topic>

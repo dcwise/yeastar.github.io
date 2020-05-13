@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_n4x_2z3_pdb">
+    <title>Version 1.4.12</title>
+    <abstract>Released Date: January 13, 2017</abstract>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/06/20"/>
+        </critdates>
+    </prolog>
+    <body>
+        <section id="section_z43_gbx_pdb">
+            <title>Optimization</title>
+            <p><image href="../Images/horizon.png" id="image_ap3_gbx_pdb"/></p>
+            <p>
+                <ul>
+                    <li>Added support for French, Italian Web interface.</li>
+                    <li>Updated Turkish Web interface.</li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_gnz_gbx_pdb">
+            <title>Fixed Bug</title>
+            <p><image href="../Images/horizon.png" id="image_hnz_gbx_pdb"/></p>
+            <p>
+                <ul>
+                    <li>Fixed importing and exporting extensions issue: exported extensions and
+                        deleted extensions on the PBX, then imported the extensions, only one
+                        extension would be imported.</li>
+                    <li>Fixed Inbound Route issue: chose the Fax Destination to an extension, then
+                        deleted the extension, the Fax Destination would display an “h”. </li>
+                    <li>Fixed Time Condition issue: any extension user could reset the time
+                        condition.</li>
+                    <li>Fixed Time Condition issue: if Time Condition Override was disabled, only
+                        the first inbound route could work.</li>
+                    <li>Fixed CDR issue: the extensions users who have privilege to download other
+                        user’s CDR might be unable to check or download the relevant call logs.</li>
+                    <li>Fixed the Call Transfer issue: if a user pressed the Transfer key on IP
+                        phone to transfer a call, and the other party didn’t answer the call, he/she
+                        would receive a “Recall” call.</li>
+                    <li>Fixed Extension Status issue: an extension number was registered on multiple
+                        IP phones, and the extension status would display only one IP address. </li>
+                    <li>Fixed Whitelist/Blacklist issue: a whitelist/blacklist could not be imported
+                        to PBX if the numbers contain letters.</li>
+                </ul>
+            </p>
+        </section>
+    </body>
+</topic>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>Hotel</title>
+    <keydef keys="product_name" product="s-series">
+        <topicmeta>
+            <keywords>
+                <keyword>Yeastar S-Series VoIP PBX</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="product_name" product="k2">
+        <topicmeta>
+            <keywords>
+                <keyword>Yeastar K2 IPPBX</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <topicref href="../topic/hotel.dita" product="k2 s-series" print="yes">
+        <topicmeta>
+            <shortdesc> Hotel App provides hotel management with the <ph keyref="product_name"/>.
+            </shortdesc>
+        </topicmeta>
+        <topicref href="../topic/hotel_system_settings.xml">
+            <topicref href="../topic/hotel_general_settings.dita"/>
+            <topicref href="../topic/hotel_staff_settings.dita"/>
+            <topicref href="../topic/call_rate_settings.dita"/>
+            <topicref href="../topic/mini_bar_settings.dita"/>
+            <topicref href="../topic/holiday_settings.dita"/>
+            <topicref href="../topic/hotel_email_template.dita"/>
+        </topicref>
+        <topicref href="../topic/room_management.dita">
+            <topicref href="../topic/add_room_types.dita"/>
+            <topicref href="../topic/add_a_room.dita"/>
+            <topicref href="../topic/add_bulk_rooms.dita"/>
+            <topicref href="../topic/room_settings.dita"/>
+        </topicref>
+        <topicref href="../topic/use_hotel_app.dita">
+            <topicref href="../topic/access_the_hotel_app.dita"/>
+            <topicref href="../topic/book_rooms.dita"/>
+            <topicref href="../topic/check_in.dita"/>
+            <topicref href="../topic/group_rooms.dita"/>
+            <topicref href="../topic/change_room.dita"/>
+            <topicref href="../topic/check_out.dita"/>
+            <topicref href="../topic/hotel_billing_report.dita"/>
+            <topicref href="../topic/guests_management.dita"/>
+        </topicref>
+    </topicref>
+</map>

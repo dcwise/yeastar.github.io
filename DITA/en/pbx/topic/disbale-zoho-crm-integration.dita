@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_l4s_1lm_ggb">
+    <title>Disable Zoho CRM Integration</title>
+    <shortdesc>Disable the Zoho CRM integration on Yeastar Cloud PBX if you don't need the
+        service.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/12/27"/>
+            <!--Carol-->
+            <revised modified="2018/12/28"/>
+            <!--Carol-->
+            <revised modified="2018/12/29"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <context>
+            <note>
+                <p>
+                    <ul id="ul_mvn_pvt_ggb">
+                        <li>After disabling the integration, all the Zoho CRM users cannot make
+                            calls in Zoho CRM via Yeastar Cloud PBX.</li>
+                        <li>After disable the integration, call details in Zoho CRM remain
+                            intact.</li>
+                    </ul>
+                </p>
+            </note>
+        </context>
+        <steps>
+            <step>
+                <cmd>Log in the PBX web interface, go to <uicontrol>Zoho CRM
+                    Integration</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Uncheck the option <uicontrol>Enable Zoho CRM Integration</uicontrol>.</cmd>
+                <info>The Integration Status shows "Disabled".</info>
+                <info><image href="../Images/admin/disable-zoho-crm.jpg" id="image_x41_twt_ggb"
+                        width="650"/></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

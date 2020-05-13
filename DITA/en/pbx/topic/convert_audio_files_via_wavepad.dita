@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_oq5_t1k_5cb">
+    <title>Convert Audio Files via WavePad</title>
+    <shortdesc>WavePad is audio editing software, you can convert audio files via WavePad, then
+        upload the audio files to your PBX.</shortdesc>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/06/14"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <steps id="steps_sgp_hck_5cb">
+            <step>
+                <cmd>Launch WavePad, open your audio file.</cmd>
+            </step>
+            <step>
+                <cmd>Click <menucascade>
+                        <uicontrol>File</uicontrol>
+                        <uicontrol>Save File As</uicontrol>
+                    </menucascade>.</cmd>
+                <info><image href="../Images/admin/wavepad_save_file_as.png" id="image_nfz_sck_5cb"
+                    /></info>
+            </step>
+            <step>
+                <cmd>Set the <uicontrol>Save as type</uicontrol> to <codeph>.wav</codeph> or
+                        <codeph>.gsm</codeph>, click <uicontrol>Save</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>For the <codeph>.wav</codeph> type, set the encoder options according to the
+                        <xref href="requirements_of_custom_audio_file.dita#concept_kwb_pyj_5cb"
+                        >requirements of custom audio files</xref>, click
+                    <uicontrol>OK</uicontrol>.</cmd>
+                <info><image href="../Images/admin/wave_encoder_options.png" id="image_ykp_kdk_5cb"
+                    /></info>
+            </step>
+        </steps>
+    </taskbody>
+    <related-links>
+        <link href="convert_audio_files_via_online_tool.dita#task_vkr_31k_5cb"/>
+    </related-links>
+</task>

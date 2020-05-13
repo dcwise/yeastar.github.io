@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_uxx_p4y_ghb">
+    <title>Step1. <ph product="s-series">Set up</ph><ph product="cloudpbx">Enable</ph> Linkus
+        Server</title>
+    <shortdesc>In this article, we introduce how to set up Linkus server based on a typical
+        scenario.</shortdesc>
+    <taskbody>
+        <context id="context_lrv_ssy_ghb" product="k2 s-series">
+            <p><ph keyref="product_name"/> supports for setting up Linkus server with LCS and
+                setting up Linkus without LCS. </p>
+            <p>In this article, we introduce how to set up Linkus server without LCS based on a
+                typical scenario, for more details of Linkus server settings, refer to <xref
+                    href="set_up_linkus_server_with_LCS.dita"/> and <xref
+                    href="set_up_linkus_server_without_lcs.dita"/>.</p>
+            <p>The following figure shows a typical Linkus network typology and this article
+                explains how to set up Linkus server based on this scenario.</p>
+            <p><image href="../Images/admin/linkus_server_nat.png" id="image_jbq_t4y_5db"
+                    width="650"/></p>
+        </context>
+        <steps>
+            <step product="cloudpbx">
+                <cmd>Log in PBX web interface, select <uicontrol>Linkus</uicontrol> App.</cmd>
+            </step>
+            <step product="cloudpbx">
+                <cmd>Check the option <uicontrol>Enable</uicontrol> to enable Linkus service.</cmd>
+                <info><image href="../Images/admin/enable_linkus_server.png" id="image_q34_tnk_ngb"
+                        width="650"/></info>
+            </step>
+            <step product="cloudpbx">
+                <cmd>In the pop-up dialog, click <uicontrol>Yes</uicontrol> to confirm. </cmd>
+            </step>
+            <step product="k2 s-series">
+                <cmd>According to the PBX network, forward the Linkus relevant ports on the router.
+                    In this example, forward the following ports:</cmd>
+                <info>
+                    <p>
+                        <table frame="all" rowsep="1" colsep="1" id="table_yq1_gqs_2fb">
+                            <tgroup cols="3">
+                                <colspec colname="c1" colnum="1" colwidth="1*"/>
+                                <colspec colname="c2" colnum="2" colwidth="1.38*"/>
+                                <colspec colname="newCol3" colnum="3" colwidth="1.97*"/>
+                                <thead>
+                                    <row>
+                                        <entry>Service</entry>
+                                        <entry>Local Port</entry>
+                                        <entry>External Port</entry>
+                                    </row>
+                                </thead>
+                                <tbody>
+                                    <row>
+                                        <entry>Linkus service port</entry>
+                                        <entry>TCP&amp;UDP 8111</entry>
+                                        <entry>TCP&amp;UDP 8111</entry>
+                                    </row>
+                                    <row>
+                                        <entry>SIP registration port</entry>
+                                        <entry>TCP&amp;UDP 5060</entry>
+                                        <entry>TCP&amp;UDP 6023</entry>
+                                    </row>
+                                    <row>
+                                        <entry>RTP ports</entry>
+                                        <entry>UDP 10000-12000</entry>
+                                        <entry>UDP 10000-12000</entry>
+                                    </row>
+                                </tbody>
+                            </tgroup>
+                        </table>
+                    </p>
+                </info>
+            </step>
+            <step product="k2 s-series">
+                <cmd>Configure the PBX <uicontrol>NAT</uicontrol> to ensure that the Linkus could
+                    work properly in an external network.</cmd>
+                <info>Log in the PBX web interface, go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol>PBX</uicontrol>
+                        <uicontrol>General</uicontrol>
+                        <uicontrol>SIP</uicontrol>
+                        <uicontrol>NAT</uicontrol>
+                    </menucascade>, configure the NAT according to the PBX network.</info>
+                <info>
+                    <p><image href="../Images/admin/nat_settings.png" id="image_skc_wqy_5db"
+                            width="650"/></p>
+                    <p>
+                        <ul id="ul_ufc_pqy_5db">
+                            <li><uicontrol>NAT Type</uicontrol>:  Select a type according to your
+                                network environment. In this example, select <uicontrol>External IP
+                                    Address</uicontrol>.</li>
+                            <li><uicontrol>External IP Address</uicontrol>: Enter the public IP
+                                address of PBX and the external SIP port. In this example, enter
+                                    <i>11.11.11.11：6023</i>.</li>
+                            <li><uicontrol>Local Network Identification</uicontrol>: Enter the local
+                                IP address of the PBX and the subnet mask. In this example, enter
+                                    <i>192.168.7.0/255.255.255.0</i>.</li>
+                            <li><uicontrol>NAT Mode</uicontrol>:  Select
+                                <uicontrol>Yes</uicontrol>.</li>
+                        </ul>
+                    </p>
+                </info>
+            </step>
+            <step product="k2 s-series">
+                <cmd>Set up Linkus server.</cmd>
+                <substeps>
+                    <substep>
+                        <cmd>On the Linkus App <uicontrol>Linkus Server Settings</uicontrol> page,
+                            check the option <uicontrol>Enable Linkus Server</uicontrol>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>According to the PBX network, configure the Linkus server.</cmd>
+                        <info><image href="../Images/admin/linkus_server_setting_1.png"
+                                id="image_gkq_44z_ghb"/></info>
+                        <info>
+                            <ul>
+                                <li><uicontrol>Local Hostname/IP:Port</uicontrol>: Enter the local
+                                    IP address of the PBX and Linkus local port. In this example,
+                                    enter <i>192.168.7.112：8111</i>.</li>
+                                <li><uicontrol>External Hostname/IP:Port</uicontrol>: Enter the
+                                    public IP address or domain name of the PBX and the Linkus
+                                    external port. In this example, enter
+                                    <i>11.11.11.11:8111</i>.</li>
+                                <li><uicontrol>SIP Remote Registration Port</uicontrol>: Enter the
+                                    SIP external port. In this example, enter <i>6023</i>.</li>
+                            </ul>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Click <uicontrol>Save</uicontrol> and
+                            <uicontrol>Apply</uicontrol>.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

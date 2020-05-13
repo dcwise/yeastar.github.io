@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="reference">
+    <title>References</title>
+    <shortdesc>General references and glossary of <ph keyref="product_name"/>.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/09/03"/>
+            <!--Carol-->
+            <revised modified="2018/09/03"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <p></p>
+    </conbody>
+</concept>

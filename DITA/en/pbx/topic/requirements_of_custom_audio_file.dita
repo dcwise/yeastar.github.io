@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_kwb_pyj_5cb">
+ <title>Requirements of Custom Audio Files</title>
+ <shortdesc>You can upload your audio file to the PBX, the audio file should meet the following
+  requirements.</shortdesc>
+ <prolog>
+  <critdates>
+   <!--Carol-->
+   <revised modified="2018/06/14"/>
+  </critdates>
+ </prolog>
+ <conbody>
+  <p>
+   <table frame="all" rowsep="1" colsep="1" id="audio_file_format">
+    <tgroup cols="2">
+     <colspec colname="c1" colnum="1" colwidth="1*"/>
+     <colspec colname="c2" colnum="2" colwidth="3.35*"/>
+     <thead>
+      <row>
+       <entry>Option</entry>
+       <entry>Requirement</entry>
+      </row>
+     </thead>
+     <tbody>
+      <row>
+       <entry>File Format</entry>
+       <entry><codeph>WAV</codeph>, <codeph>wav</codeph>, or <codeph>gsm</codeph> file.<p>
+         <ul id="ul_x5p_d1k_5cb">
+          <li>gsm 6.10 8kHz, Mono, 1Kb/s</li>
+          <li>alaw 8kHz, Mono, 1Kb/s</li>
+          <li>ulaw 8kHz, Mono, 1Kb/s</li>
+          <li>pcm 8kHz, Mono, 16Kb/s</li>
+         </ul>
+        </p></entry>
+      </row>
+      <row>
+       <entry>File Name</entry>
+       <entry>Should NOT contain special characters.</entry>
+      </row>
+      <row>
+       <entry>File Size</entry>
+       <entry>Smaller than 8MB.</entry>
+      </row>
+     </tbody>
+    </tgroup>
+   </table>
+  </p>
+ </conbody>
+</concept>

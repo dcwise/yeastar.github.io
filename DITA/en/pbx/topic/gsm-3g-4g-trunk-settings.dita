@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="gsm-3g-4g-trunk-settings">
+    <title>GSM/3G/4G Trunk Settings</title>
+    <shortdesc>When you configure a GSM/3G/4G trunk, you may need to configure some of the advanced
+        settings. This reference describes all the settings on a GSM/3G/4G trunk.</shortdesc>
+    <body>
+        <section id="section_khx_3my_53b">
+            <title>Basic settings</title>
+            <p>Navigation path: <menucascade>
+                    <uicontrol>Settings</uicontrol>
+                    <uicontrol> PBX</uicontrol>
+                    <uicontrol> Trunks</uicontrol>
+                </menucascade>, edit a trunk on the <uicontrol>Basic</uicontrol> tab.</p>
+            <p>
+                <table frame="all" id="table_ahh_tmy_53b">
+                    <tgroup cols="2" align="left">
+                        <colspec colname="c1" colnum="1" colwidth="173px" rowsep="1" colsep="1"/>
+                        <colspec colname="c2" colnum="2" colwidth="478px" rowsep="1" colsep="1"/>
+                        <thead>
+                            <row>
+                                <entry>Settings</entry>
+                                <entry>Description</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>Name</entry>
+                                <entry>Give this trunk a name to help you identify it.</entry>
+                            </row>
+                            <row>
+                                <entry>PIN Code</entry>
+                                <entry>Enter the SIM card PIN code if the card has one. <p>
+                                        <note>If you fail to enter your correct PIN code 3 times in
+                                            succession, the SIM card will be permanently locked,
+                                            which means you will need a new SIM card.</note>
+                                    </p></entry>
+                            </row>
+                            <row>
+                                <entry>RX Volume</entry>
+                                <entry>Set the receiving volume of GSM port or choose "Custom" to
+                                    define the RX Gain below.</entry>
+                            </row>
+                            <row>
+                                <entry>TX Volume</entry>
+                                <entry>Set the transmitting volume of GSM port or choose 'Custom''
+                                    to define the TX Gain below.</entry>
+                            </row>
+                            <row>
+                                <entry>Echo Cancellation</entry>
+                                <entry>Enable or disable echo cancellation.</entry>
+                            </row>
+                            <row conref="pstn-trunk-settings.dita#pstn-trunk-settings/DNIS">
+                                <entry/>
+                            </row>
+                            <row>
+                                <entry>DID Number</entry>
+                                <entry>If you wish the inbound call through this trunk to be
+                                    redirected via outbound route, please fill in the destination
+                                    number to be called.</entry>
+                            </row>
+                            <row>
+                                <entry>Enable SLA</entry>
+                                <entry>After enabling <xref
+                                        href="../topic/sla.dita#concept_anq_5dw_rdb">SLA</xref>,
+                                    users can share this trunk to make outbound calls and receive
+                                    inbound calls by BLF keys on their phones. <p>
+                                        <note>If SLA is enabled, Inbound Route settings and Outbound
+                                            Route settings for this trunk is invalid.</note>
+                                    </p></entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+        <section>
+            <title>Advanced Settings (4G)</title>
+            <p>Navigation path: <menucascade>
+                    <uicontrol>Settings</uicontrol>
+                    <uicontrol> PBX</uicontrol>
+                    <uicontrol> Trunks</uicontrol>
+                </menucascade>, edit a trunk on the <uicontrol>Advanced</uicontrol> tab.</p>
+            <p>
+                <table frame="all" id="table_lmn_5qy_53b">
+                    <tgroup cols="2" align="left">
+                        <colspec colname="c1" colnum="1" colwidth="176px" rowsep="1" colsep="1"/>
+                        <colspec colname="c2" colnum="2" colwidth="480px" rowsep="1" colsep="1"/>
+                        <thead>
+                            <row>
+                                <entry>Settings</entry>
+                                <entry>Description</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>Carrier</entry>
+                                <entry>
+                                    <p>Choose the carrier:</p>
+                                    <p><uicontrol>Automatic</uicontrol>: the system will select a
+                                        carrier automatically.</p>
+                                    <p><uicontrol>Manual</uicontrol>: choose a carrier from the
+                                        available carrier that the system provided.</p>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>Mode</entry>
+                                <entry>
+                                    <p>Select trunk mode:<ul id="ul_v25_jry_53b">
+                                            <li>Voice and Data: can be used for both voice call and
+                                                data access.</li>
+                                            <li>Voice Only: can be used only for voice call.</li>
+                                        </ul></p>
+                                    <p>If you need to access the Internet via 4G network, please
+                                        install the 4G LTE module on the designated module slot of
+                                        the corresponding PBX models. (S412: Slot_3; S20/S50 :
+                                        Slot_1; S100/S300: Slot_1. Expansion Card_1.)</p>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>Network Type</entry>
+                                <entry>
+                                    <p>Select the network type:<ul id="ul_kyw_kry_53b">
+                                            <li>Automatic: system will select a suitable network
+                                                type for you.</li>
+                                            <li>LTE Only: use only 4G network. By selecting this
+                                                option, you can enable VoLTE for HD voice;</li>
+                                            <li>WCDMA Only: use only 3G network;</li>
+                                            <li>GSM Only: use only 2G network;</li>
+                                        </ul></p>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>VoLTE</entry>
+                                <entry>The change of this option requires the device to be rebooted.
+                                    Before enabling this option, make sure VoLTE is supported by
+                                    your carrier and has been activated.</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+        <section conref="voip-trunk-settings.dita#topic_pyd_f3t_2fb/adapt-caller-ID"
+            id="section_xlz_n2y_53b"/>
+    </body>
+</topic>

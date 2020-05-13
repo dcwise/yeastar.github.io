@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_fy5_hrr_xdb">
+    <title>Auto Cleanup</title>
+    <shortdesc>Auto Cleanup is a feature that can auto clean your CDR, logs, voicemails, one-touch
+            recordings<ph product="s-series"> and recordings</ph> periodically.</shortdesc>
+    <conbody>
+        <p>
+            <table frame="all" rowsep="1" colsep="1" id="table_vh5_1sr_xdb">
+                <title>Configuration Parameters of Auto Cleanup</title>
+                <tgroup cols="2">
+                    <colspec colname="c1" colnum="1" colwidth="1*"/>
+                    <colspec colname="c2" colnum="2" colwidth="2.16*"/>
+                    <thead>
+                        <row>
+                            <entry namest="c1" nameend="c2" align="left">CDR Auto Cleanup</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row>
+                            <entry>Max Number of CDR</entry>
+                            <entry>Set the maximum number of CDR that should be retained. The old
+                                CDR will be deleted when the threshold is reached.</entry>
+                        </row>
+                        <row>
+                            <entry>CDR Preservation Duration</entry>
+                            <entry>Set the maximum number of days that CDR should be retained.
+                            </entry>
+                        </row>
+                        <row id="auto-cleanup-voicemail">
+                            <entry namest="c1" nameend="c2"><b>Voicemail and One Touch Recording
+                                    Auto Cleanup</b></entry>
+                        </row>
+                        <row>
+                            <entry>Max Number of Files</entry>
+                            <entry>Set the maximum number of voicemail and one touch recording files
+                                that should be retained. The old CDR will be deleted when the
+                                threshold is reached.</entry>
+                        </row>
+                        <row>
+                            <entry>Files Preservation Duration</entry>
+                            <entry>Set the maximum number of minutes that voicemails and one touch
+                                recordings should be retained. </entry>
+                        </row>
+                        <row product="s-series" id="auto-cleanup-recordings">
+                            <entry namest="c1" nameend="c2"><b>Auto Recordings Auto
+                                Cleanup</b></entry>
+                        </row>
+                        <row product="s-series">
+                            <entry>Max Usage of Device (%)</entry>
+                            <entry>Set the maximum storage percentage the device is allowed to
+                                store. <p>The recordings will be deleted when the threshold is
+                                    reached.</p></entry>
+                        </row>
+                        <row product="s-series">
+                            <entry>Auto Recordings Preservation Duration</entry>
+                            <entry>Set the maximum number of days that recording files should be
+                                retained.</entry>
+                        </row>
+                        <row id="auto-cleanup-logs">
+                            <entry namest="c1" nameend="c2"><b>Logs Auto Cleanup</b></entry>
+                        </row>
+                        <row>
+                            <entry>Max Size of Total Logs</entry>
+                            <entry>Limit the total size of pbxlog files in syslog.<p>The old logs
+                                    will be deleted when the threshold is reached.</p></entry>
+                        </row>
+                        <row>
+                            <entry>Logs Preservation Duration</entry>
+                            <entry>
+                                <p>Set the maximum number of days that system logs should be
+                                    retained respectively.</p>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>Max Number of Logs</entry>
+                            <entry>
+                                <p>Set the maximum number of event logs and operation logs that
+                                    should be retained. The old logs will be deleted when the
+                                    threshold is reached.</p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+        </p>
+    </conbody>
+</concept>

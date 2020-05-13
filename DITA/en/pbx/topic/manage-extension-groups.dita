@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_hjm_xr4_y3b">
+    <title><?oxy_comment_start author="Sunmy" timestamp="20190905T164222+0800" comment="新增" flag="done"?>Manage
+        Extension Groups<?oxy_comment_end?></title>
+    <body>
+        <section id="section_djl_frq_y3b">
+            <title>Edit extension groups</title>
+            <p>You can edit the group name, add more extensions to the group or remove extensions
+                from the group.</p>
+            <p>
+                <ol id="ol_hv1_jrq_y3b">
+                    <li>Go to <menucascade>
+                            <uicontrol>Settings</uicontrol>
+                            <uicontrol>PBX</uicontrol>
+                            <uicontrol>Extensions</uicontrol>
+                        </menucascade>, search and find the desired extension group, click <image
+                            href="../Images/ui_icons/edit.png" width="20" id="image_x2s_2pl_53b"
+                        />.</li>
+                    <li>Edit the group as you need.</li>
+                    <li>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_cdc_4tq_y3b">
+            <title>Delete extension group</title>
+            <p>
+                <ol id="ol_hsh_5tq_y3b">
+                    <li>Go to <menucascade>
+                            <uicontrol>Settings</uicontrol>
+                            <uicontrol>PBX</uicontrol>
+                            <uicontrol>Extensions</uicontrol>
+                            <uicontrol>Extension Group</uicontrol>
+                        </menucascade>, search and find the desired extension group, click <image
+                            href="../Images/ui_icons/delete.png" width="20" id="image_xgc_ppl_53b"
+                        />.</li>
+                    <li>Click <uicontrol>Yes</uicontrol> to confirm the deletion.</li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_pz2_c4q_y3b">
+            <title>Extension Groups Application</title>
+            <p>You can use the extension groups when you need to assign extensions for outbound
+                routes, ring groups, queues, etc. </p>
+            <p>For example, you need to set an outbound route and only allow the Support group
+                members to make outbound calls through this route. You can simply assign the Support
+                extension group instead of assigning an extension member one by one. It simplifies
+                the configuration process.</p>
+            <p><image href="../Images/admin/use_extension_group.png" id="image_jfq_m4m_tcb"
+                    width="650"/></p>
+        </section>
+    </body>
+</topic>

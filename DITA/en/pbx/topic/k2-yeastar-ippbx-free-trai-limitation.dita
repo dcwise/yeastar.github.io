@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="k2-yeastar-k2-ippbx-trail">
+    <title>Apply a Free Trial of Yeastar K2 IPPBX System</title>
+    <shortdesc>After installing the Yeastar K2 IPPBX system, you can try out limited PBX features
+        free without time limit. To experience full features of the PBX according to your needs,
+        contact Yeastar to apply for a 3-month free trial of Yeastar K2 IPPBX system.</shortdesc>
+    <body>
+        <section id="section_lv2_4ym_23b">
+            <title>Limitation of an inactivated Yeastar K2 IPPBX system</title>
+            <p>By default, an inactivated Yeastar K2 IPPPBX system has the following
+                limitations.</p>
+            <p>
+                <table frame="all" rowsep="1" colsep="1" id="table_nnc_ymm_c3b">
+                    <title/>
+                    <tgroup cols="2" align="center">
+                        <colspec colname="c1" colnum="1" colwidth="298px"/>
+                        <colspec colname="c2" colnum="2" colwidth="194px"/>
+                        <thead>
+                            <row>
+                                <entry align="center" valign="middle">Feature</entry>
+                                <entry align="center" valign="middle">Max number</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry align="center" valign="middle">Extension</entry>
+                                <entry align="center" valign="middle">10</entry>
+                            </row>
+                            <row>
+                                <entry align="center" valign="middle">Concurrent call</entry>
+                                <entry align="center" valign="middle">5</entry>
+                            </row>
+                            <row>
+                                <entry align="center" valign="middle">Trunk</entry>
+                                <entry align="center" valign="middle">1</entry>
+                            </row>
+                            <row>
+                                <entry align="center" valign="middle">Ring Group</entry>
+                                <entry align="center" valign="middle">1</entry>
+                            </row>
+                            <row>
+                                <entry align="center" valign="middle">RingGroup Member</entry>
+                                <entry align="center" valign="middle">1</entry>
+                            </row>
+                            <row>
+                                <entry align="center" valign="middle">Queue</entry>
+                                <entry align="center" valign="middle">1</entry>
+                            </row>
+                            <row>
+                                <entry align="center" valign="middle">Queue Member</entry>
+                                <entry align="center" valign="middle">1</entry>
+                            </row>
+                            <row>
+                                <entry align="center" valign="middle">Conference</entry>
+                                <entry align="center" valign="middle">1</entry>
+                            </row>
+                            <row>
+                                <entry align="center" valign="middle">Conference Member</entry>
+                                <entry align="center" valign="middle">1</entry>
+                            </row>
+                            <row>
+                                <entry align="center" valign="middle">Pickup Group</entry>
+                                <entry align="center" valign="middle">1</entry>
+                            </row>
+                            <row>
+                                <entry align="center" valign="middle">Paging/Intercom</entry>
+                                <entry align="center" valign="middle">1</entry>
+                            </row>
+                            <row>
+                                <entry align="center" valign="middle">Paging/Intercom Member</entry>
+                                <entry align="center" valign="middle">1</entry>
+                            </row>
+                            <row>
+                                <entry align="center" valign="middle">Speed Dial</entry>
+                                <entry align="center" valign="middle">1</entry>
+                            </row>
+                            <row>
+                                <entry align="center" valign="middle">Callback</entry>
+                                <entry align="center" valign="middle">1</entry>
+                            </row>
+                            <row>
+                                <entry align="center" valign="middle">DISA</entry>
+                                <entry align="center" valign="middle">1</entry>
+                            </row>
+                            <row>
+                                <entry align="center" valign="middle">Inbound Routes</entry>
+                                <entry align="center" valign="middle">1</entry>
+                            </row>
+                            <row>
+                                <entry align="center" valign="middle">Outbound Routes</entry>
+                                <entry align="center" valign="middle">1</entry>
+                            </row>
+                            <row>
+                                <entry align="center" valign="middle">SLA</entry>
+                                <entry align="center" valign="middle">1</entry>
+                            </row>
+                            <row>
+                                <entry align="center" valign="middle">Time Condition</entry>
+                                <entry align="center" valign="middle">1</entry>
+                            </row>
+                            <row>
+                                <entry align="center" valign="middle">Holiday</entry>
+                                <entry align="center" valign="middle">1</entry>
+                            </row>
+                            <row>
+                                <entry align="center" valign="middle">IVR</entry>
+                                <entry align="center" valign="middle">1</entry>
+                            </row>
+                            <row>
+                                <entry align="center" valign="middle">Blackllist/Whitelist</entry>
+                                <entry align="center" valign="middle">1</entry>
+                            </row>
+                            <row>
+                                <entry align="center" valign="middle">PIN List</entry>
+                                <entry align="center" valign="middle">1</entry>
+                            </row>
+                            <row>
+                                <entry align="center" valign="middle">PIN List Number</entry>
+                                <entry align="center" valign="middle">1</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+        <section id="section_wjq_124_f3b">
+            <title>Apply for a free trial </title>
+            <p>
+                <ol id="ol_dkg_c24_f3b">
+                    <li/>
+                </ol>
+            </p>
+        </section>
+    </body>
+</topic>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_jjb_c1c_5cb">
+    <title>Register Cisco Phone with <ph keyref="product_name"/></title>
+    <shortdesc>This article is based on Cisco SPA509G and <ph keyref="product_name"/>
+        <ph product="cloudpbx">v81.8.0.7</ph><ph product="s-series">v30.8.0.14</ph>.</shortdesc>
+    <taskbody>
+        <context>
+            <p>This guide is applicable to the following phones:</p>
+            <ul id="ul_xsn_wrg_ycb">
+                <li>Cisco SPA series: 301, 303, 501G, 502G, 508G, 509G, 512G, 514G, 525G5</li>
+                <li>Cisco CP7821</li>
+            </ul>
+            <p conref="register_htek.dita#task_n3s_q1c_5cb/different_phone_web"/>
+        </context>
+        <steps id="steps_sp3_qsg_ycb">
+            <step>
+                <cmd>To check the IP address of the phone, press the menu key, go to
+                        <uicontrol>Network</uicontrol>, then press <uicontrol>Select</uicontrol>.
+                </cmd>
+            </step>
+            <step>
+                <cmd>Type the phone IP address in your browser, click <b>Enter</b> key to access the
+                    web page of the IP phone.</cmd>
+            </step>
+            <step>
+                <cmd>In the upper-right corner, click <uicontrol>Admin Login</uicontrol>, then click
+                        <uicontrol>Advanced</uicontrol> to access the advanced administrator
+                    page.</cmd>
+                <info><image href="../Images/admin/register_cisco1.png" width="650"
+                        id="image_b2z_qtg_ycb"/><ul id="ul_y4r_ytg_ycb">
+                        <li>Choose one account to configure. Here we click <b>EXT1</b> to configure
+                            account 1. Configure the account as follows:</li>
+                    </ul></info>
+            </step>
+            <step>
+                <cmd>Choose one account to configure. Here we choose
+                    <uicontrol>EXT1</uicontrol>.</cmd>
+                <substeps id="substeps_tzs_pwg_ycb">
+                    <substep>
+                        <cmd>Set the <uicontrol>Line Enable</uicontrol> to
+                                <uicontrol>Yes</uicontrol>.</cmd>
+                        <info><image href="../Images/admin/register_cisco2.png" width="650"
+                                id="image_qbz_f5g_ycb"/></info>
+                    </substep>
+                    <substep>
+                        <cmd>In the <uicontrol>Proxy and Registration</uicontrol> section, set the
+                                <uicontrol>Proxy</uicontrol> to the domain<ph product="s-series"> or
+                                IP address</ph> of your PBX. </cmd>
+                        <info><image href="../Images/admin/register_cisco3.png" width="650"
+                                id="image_sfv_x5g_ycb"/></info>
+                    </substep>
+                    <substep>
+                        <cmd>In the <uicontrol>Subscriber Information</uicontrol> section, fill in
+                            the extension information.</cmd>
+                        <info><image href="../Images/admin/register_cisco4.png" width="650"
+                                id="image_czy_tvg_ycb"/><p>
+                                <ul id="ul_rjw_swg_ycb">
+                                    <li><uicontrol>Display Name</uicontrol>: Set the name you want
+                                        to appear on other phone’s display when calling other
+                                        phones.</li>
+                                    <li><uicontrol>User ID</uicontrol>: Fill in the extension
+                                        number.</li>
+                                    <li><uicontrol>Password</uicontrol>: Fill in the extension's
+                                            <b>Registration Password</b>.</li>
+                                    <li><uicontrol>Use Auth ID</uicontrol>: Set to
+                                            <uicontrol>Yes</uicontrol>.</li>
+                                    <li><uicontrol>Auth ID</uicontrol>: Fill in the extension's
+                                            <uicontrol>Registration Name</uicontrol>.</li>
+                                </ul>
+                            </p></info>
+                    </substep>
+                    <substep>
+                        <cmd>In the <uicontrol>Dial Plan</uicontrol> section, set the
+                                <uicontrol>Dial Plan</uicontrol> to <codeph>[x*].</codeph>.</cmd>
+                        <info><image href="../Images/admin/register_cisco5.png"
+                                id="image_kbf_cxg_ycb"/></info>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Phone</uicontrol> tab, adjust the audio parameters according
+                    to the RTP settings on your PBX, and set <uicontrol>RTP Packet Size</uicontrol>
+                    to <b>0.020</b>.<image href="../Images/admin/register_cisco6.png" width="650"
+                        id="image_nwr_szg_ycb"/></cmd>
+            </step>
+            <step>
+                <cmd>In the bottom of the page, click <uicontrol>Submit All Changes</uicontrol>. </cmd>
+                <info>The phone will restart. After the phone restarts, check if the extension is
+                    registered.</info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

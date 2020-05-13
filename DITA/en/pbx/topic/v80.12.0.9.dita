@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_qcy_zmk_kkb">
+    <title>Version 80.12.0.9</title>
+    <abstract>Date: January 20, 2020</abstract>
+    <body>
+        <section>
+            <title>OPTIMIZATION</title>
+            <p>
+                <dl>
+                    <dlentry>
+                        <dt>Queues</dt>
+                        <dd>
+                            <ul id="ul_q33_bmk_kkb">
+                                <li>Fixed the Queue issue: Users might not be able to call in a
+                                    queue.</li>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                </dl>
+                <dl>
+                    <dlentry>
+                        <dt>Extensions</dt>
+                        <dd>
+                            <ul id="ul_t3s_cmk_kkb">
+                                <li>Fixed the Extension issue: The extension’s call permission would
+                                    be automatically deleted if you updated</li>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                </dl>
+                <dl>
+                    <dlentry>
+                        <dt>Hot Standby</dt>
+                        <dd>
+                            <ul id="ul_msz_qnk_kkb">
+                                <li>Fixed the Hot Standby issue: The system worked abnormally after
+                                    upgrading the firmware.</li>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                </dl>
+                <dl>
+                    <dlentry>
+                        <dt>API</dt>
+                        <dd>
+                            <ul id="ul_vkq_kmk_kkb">
+                                <li>Fixed the issue of <codeph>queue/update</codeph> endpoint:
+                                    Updating the queue settings could not take effect.</li>
+                                <li>Fixed the issue of <codeph>paginggroup/update</codeph> endpoint:
+                                    Updating the settings of paging group members could not take
+                                    effect.</li>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                </dl>
+            </p>
+        </section>
+    </body>
+</topic>

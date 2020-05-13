@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_ry5_cm5_c2b">
+    <title>Billing Statistics</title>
+    <shortdesc></shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/06/11"/>
+            <!--Carol-->
+            <revised modified="2018/06/12"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <p>Go to <menucascade>
+                <uicontrol>Billing</uicontrol>
+                <uicontrol>Statistics</uicontrol>
+            </menucascade> to search and check billing statistics. </p>
+        <p><image href="../Images/admin/billing_statistics.png" width="650" id="image_ynh_kwz_c2b"
+            /></p>
+        <p>You can search billing statistics by the following criteria:</p>
+        <p>
+            <ul id="ul_plx_mwz_c2b">
+                <li><uicontrol>Start/End Date</uicontrol></li>
+                <li><uicontrol>Statistics Filter</uicontrol><ul id="ul_qlx_mwz_c2b">
+                        <li><codeph>None-zero statistics</codeph>: the calls that have zero cost
+                            will not be analyzed in the statistics.</li>
+                        <li><codeph>All statistics</codeph>: all calls including the calls that do
+                            not generate cost will be analyzed.</li>
+                    </ul></li>
+                <li><uicontrol>Statistics Type</uicontrol>: Set type as <codeph>Daily</codeph>,
+                        <codeph>Monthly</codeph>, or <codeph>Annually</codeph>.</li>
+                <li><uicontrol>Trunk</uicontrol>: Which trunk was used to call out.</li>
+                <li><uicontrol>Extension</uicontrol></li>
+                <li><uicontrol>Account</uicontrol></li>
+            </ul>
+        </p>
+    </conbody>
+</concept>

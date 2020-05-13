@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="identify-callers-from-contacts">
+    <title>Identify
+        <?oxy_comment_start author="carol" timestamp="20200218T101213+0800" comment="缺漏点： 匹配优先级" flag="done"?>Callers<?oxy_comment_end?>
+        from Contacts</title>
+    <shortdesc>Contacts feature allows extension users to identify callers
+        <?oxy_comment_start author="carol" timestamp="20200212T180125+0800" comment="这边不是人被保存在 Contacts" flag="done"?>who<?oxy_comment_end?>se
+        information are saved in
+        <?oxy_comment_start author="carol" timestamp="20200218T100608+0800" comment="Contacts 是一个广义的功能。
+我们这里应该说存在 company contacts 或者personal contacts
+" flag="done"?>Company
+        Contacts or Personal Contacts<?oxy_comment_end?> .</shortdesc>
+    <body>
+        <section id="section_gcq_qkb_tkb">
+            <title><?oxy_comment_start author="carol" timestamp="20200218T102436+0800" comment="这段的标题可以换一下，换一个跟你的内容更符合的
+
+这一段文字有点多，内容是对的，想一下你主要要表达的点是什么，可以再做进一步精简把，主要要传达的点清晰地呈现出来
+"?>Applications<?oxy_comment_end?></title>
+            <p>
+                <dl>
+                    <dlentry>
+                        <dt>Identify callers from Company Contacts</dt>
+                        <dd>The Caller ID Match feature works for the extension users who are
+                            allowed to view Company Contacts.  </dd>
+                        <dd>When receiving an incoming call from a company contact, an extension
+                            user who is allowed to view Company Contacts will see both contact name
+                            and phone number on phone screen; while an extension user who is not
+                            allowed to view Company Contacts will only see the phone number on phone
+                            screen.</dd>
+                    </dlentry>
+                </dl>
+            </p>
+            <dl>
+                <dlentry>
+                    <dt>Identify callers from Personal Contacts</dt>
+                    <dd>When receiving an incoming call from a personal contact, the extension user
+                        who create the Personal Contact will see both contact name and phone number
+                        on phone screen; while you will only see the phone number in <uicontrol>CDR
+                            and Recording</uicontrol>.</dd>
+                </dlentry>
+            </dl>
+        </section>
+        <section id="section_t5b_wt3_tkb">
+            <title>Caller ID lookup priority</title>
+            <p>When an extension user receives an incoming call, the system matches the incoming
+                Caller ID with phonebooks in the following order:</p>
+            <p><menucascade>
+                    <uicontrol>Company Contacts</uicontrol>
+                    <uicontrol>Personal Contacts</uicontrol>
+                </menucascade></p>
+            <p>If an extension user has a local phonebook (e.g. a local phonebook on IP phone or
+                Linkus Mobile Client ), the system matches the incoming Caller ID with phonebooks in
+                the following order:</p>
+            <p><menucascade>
+                    <uicontrol>Local phonebook</uicontrol>
+                    <uicontrol>Company Contacts</uicontrol>
+                    <uicontrol>Personal Contacts</uicontrol>
+                </menucascade></p>
+        </section>
+        <section id="section_zs4_vlb_tkb">
+            <title>Enable Caller ID Match</title>
+        </section>
+        <p>
+            <ol>
+                <li>Log in PBX web interface by your admin account and password.</li>
+                <li>Go to <uicontrol>Contacts</uicontrol> (<image
+                        href="../Images/admin/contacts-main-menu.png" width="20"
+                        id="image_wlb_gy1_tkb"/>), and click <uicontrol>Settings</uicontrol>
+                    tab.</li>
+                <li>Select the checkbox of <uicontrol>Enable Caller ID Match</uicontrol>, and decide
+                    the match method of Caller ID.<ul id="ul_pbv_fzp_rkb">
+                        <li><uicontrol>Exact Match</uicontrol>: When the incoming Caller ID exactly
+                            matches the phone number in <uicontrol>Contacts</uicontrol>, the Caller
+                            ID will display the matched contact's name.</li>
+                        <li><uicontrol>Fuzzy matching</uicontrol>: When the last few digits of
+                            incoming Caller ID matches that of phone number in
+                                <uicontrol>Contacts</uicontrol>, the Caller ID will display the
+                            matched contact's name. The default value is 7.<note>Sometimes the ISP
+                                will add an area code in front of a phone number before sending a
+                                call out. For example, when a caller calls 7537150994, the ISP may
+                                send +447537150994. To prevent match failure of Caller ID,
+                                <?oxy_comment_start author="carol" timestamp="20200218T103841+0800" comment="we recommend that you"?>we
+                                recommend you<?oxy_comment_end?> to enable fuzzy
+                            matching.</note></li>
+                    </ul></li>
+                <li>In the <uicontrol>Name Display Format</uicontrol> field, select the display
+                    format of Caller ID name.<ul id="ul_ucy_11q_rkb">
+                        <li><uicontrol>First Name Last Name</uicontrol></li>
+                        <li><uicontrol>Last Name First Name</uicontrol></li>
+                    </ul></li>
+                <li>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</li>
+            </ol>
+        </p>
+    </body>
+</topic>

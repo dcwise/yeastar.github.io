@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_vcc_nkj_dfb">
+    <title>VoIP Peer Trunk</title>
+    <shortdesc>IP based VoIP trunk. A VoIP Peer Trunk doesn't require the <ph keyref="product_name"
+        /> to register with the provider. The public IP address or the domain of the <ph
+            keyref="product_name"/> needs to be configured with the provider.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/09/14"/>
+            <!--Carol-->
+            <revised modified="2018/09/14"/>
+            <!--Carol-->
+            <revised modified="2018/09/17"/>
+            <!--Carol-->
+            <revised modified="2018/09/20"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <p product="s-series">A VoIP Peer Trunk is usually used to connect <ph keyref="product_name"
+            /> with other devices.</p>
+    </conbody>
+</concept>

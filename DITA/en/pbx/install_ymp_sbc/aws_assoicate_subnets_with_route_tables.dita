@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="task_yqh_x44_hfb">
+    <title>3) Associate Subnets with Table Routes</title>
+    <shortdesc>Each subnet must be associated with a route table, which specifies the allowed routes
+        for outbound traffic leaving the subnet. Every subnet that you create is automatically
+        associated with the main route table for the VPC. You need to create two custom table routes
+        and apply the table routes to your subnets respectively.</shortdesc>
+    <body>
+        <section>The following diagram represents the architecture of your VPC after you've
+            completed this step.<p><image
+                    href="../Images/SBC/aws_associate_subnets_with_route_tables_diagram.png"
+                    id="image_hgf_5t4_hfb" height="450"/></p></section>
+        <section id="section_yvh_ftt_hfb">
+            <title>Set up Public Subnet</title>
+            <p>Create a custom route table and add a route over the internet gateway. When a subnet
+                is associated with this route table, the subnet's traffic will be routed to the
+                internet. In this way, the subnet acts as a public subnet.<ol id="ol_w1n_htt_hfb">
+                    <li>Open the Amazon VPC console at <xref
+                            href="https://console.aws.amazon.com/vpc/" format="html"
+                            scope="external">https://console.aws.amazon.com/vpc/</xref>.</li>
+                    <li>In the navigation pane, select <b>Route Tables</b>, then click <b>Create
+                            Route Table</b>.</li>
+                    <li>Configure the route table, and click <uicontrol>Yes,
+                                Create</uicontrol>.<p><image
+                                href="../Images/SBC/aws_route_table_sbc_wan.png"
+                                id="image_bp3_m2w_kcb"/></p><p>
+                            <ul>
+                                <li><uicontrol>Name tag</uicontrol>: Specify the route table name.
+                                    For example, <codeph>Public-Route-Table</codeph>.</li>
+                                <li><uicontrol>VPC</uicontrol>: Select the VPC that is for Yeastar
+                                    Cloud PBX.</li>
+                            </ul>
+                        </p></li>
+                    <li>On the <uicontrol>Route Tables</uicontrol> page, edit the new created route table.<p>
+                            <ol id="ol_w3h_ltt_hfb">
+                                <li> Select the target route table. </li>
+                                <li> Under the route table list, click <uicontrol>Routes</uicontrol>
+                                    tab, and click <uicontrol>Edit</uicontrol>.<p><image
+                                            href="../Images/SBC/aws_edit_rroute_table_wan.png"
+                                            id="image_b2d_zhw_kcb"/></p></li>
+                                <li>Scroll down the page, click <uicontrol>Add another
+                                        route</uicontrol>.</li>
+                                <li>Enter <uicontrol>Destination</uicontrol> as
+                                        <codeph>0.0.0.0/0</codeph>, and select
+                                        <uicontrol>Target</uicontrol> to the internet
+                                            gateway.<p><image
+                                            href="../Images/SBC/aws_add_internet_gateway_route.png"
+                                            id="image_q15_43w_kcb"/></p></li>
+                                <li>Click <uicontrol>Save</uicontrol>.</li>
+                            </ol>
+                        </p></li>
+                    <li>Associate the desired subnet to the route table.<p>
+                            <ol>
+                                <li> Click <uicontrol>Subnet Associations</uicontrol> tab, then
+                                    click <uicontrol>Edit</uicontrol>.</li>
+                                <li> Select the desired subnet.<itemgroup><image
+                                            href="../Images/SBC/aws_subnet_association_wan.png"
+                                            id="image_xjw_14w_kcb"/></itemgroup></li>
+                                <li> Click <uicontrol>Save</uicontrol>. </li>
+                            </ol>
+                        </p></li>
+                </ol></p>
+        </section>
+        <section id="section_szy_5tt_hfb">
+            <title>Set up Private Subnet</title>
+            <p>Create a custom route table and remain the default route (same with the main table
+                route). If a subnet is associated with the route table, the subnet will act as a
+                private subnet.<ol id="ol_q4y_xtt_hfb">
+                    <li>Open the Amazon VPC console at <xref
+                            href="https://console.aws.amazon.com/vpc/" format="html"
+                            scope="external">https://console.aws.amazon.com/vpc/</xref>.</li>
+                    <li>In the navigation pane, select <b>Route Tables</b>, then click <b>Create
+                            Route Table</b>.</li>
+                    <li>Configure the route table, and click <uicontrol>Yes,
+                                Create</uicontrol>.<p><image
+                                href="../Images/SBC/aws_route_table_sbc_lan.png"
+                                id="image_r4y_xtt_hfb"/></p><p>
+                            <ul id="ul_s4y_xtt_hfb">
+                                <li><uicontrol>Name tag</uicontrol>: Specify the route table name.
+                                    For example, <codeph>Private-Route-Table</codeph>.</li>
+                                <li><uicontrol>VPC</uicontrol>: Select the VPC that is for Yeastar
+                                    Cloud PBX.</li>
+                            </ul>
+                        </p></li>
+                    <li>Associate the desired subnet to the route table.<p>
+                            <ol id="ol_qlt_z5t_hfb">
+                                <li> Click <uicontrol>Subnet Associations</uicontrol> tab, then
+                                    click <uicontrol>Edit</uicontrol>.</li>
+                                <li> Select the desired subnet.<itemgroup><image
+                                            href="../Images/SBC/aws_subnet_association_lan.png"
+                                            id="image_rlt_z5t_hfb" width="650"/></itemgroup></li>
+                                <li> Click <uicontrol>Save</uicontrol>. </li>
+                            </ol>
+                        </p></li>
+                </ol></p>
+        </section>
+    </body>
+</topic>

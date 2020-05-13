@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="monitor-yeastar-pbx-with-nagios-snmp">
+    <title>Monitor <ph keyref="product_name"/> on Nagios XI-SNMP</title>
+    <shortdesc>This topic describes how to monitor the <ph keyref="product_name"/> in Nagios XI with
+        SNMP monitor.</shortdesc>
+    <body>
+        <section id="section_zrv_hdl_3lb"><title>Before you begin</title>Before you add a host on
+            Nagios XI, you need to enable SNMP and configure SNMP settings on the PBX. For more
+            information, see <xref href="configure-pbx-to-communicate-with-an-snmp-manager.dita"
+            />.</section>
+        <section id="section_zbh_jdl_3lb">
+            <title>Monitor PBX using SNMP</title>
+        </section>
+        <section id="section_i3f_4hh_vkb">
+            <p>Go to <menucascade>
+                    <uicontrol>Configure</uicontrol>
+                    <uicontrol> Configure Wizards</uicontrol>
+                </menucascade>, search "SNMP" and select <uicontrol>SNMP</uicontrol>.</p>
+            <p><image href="../Images/admin/snmp-waizad.png" width="650" id="image_afw_31b_vkb"
+                /></p>
+            <p>
+                <ol id="ol_xwz_phh_vkb">
+                    <li>On the <uicontrol>SNMP - Step 1</uicontrol> page, enter the PBX's IP address
+                        in the <uicontrol>Device Address</uicontrol> field, and click
+                            <uicontrol>Next</uicontrol>.</li>
+                    <li>On the <uicontrol>SNMP - Step 2</uicontrol> page, complete the following
+                            configurations.<note>The SNMP settings configured on Nagios XI and PBX
+                            must be consistent.</note><ol id="ol_x2n_g3h_vkb">
+                            <li>In the <uicontrol>Host name</uicontrol> field, enter a host name to
+                                help you identify this host.</li>
+                            <li>Enter the SNMP authentication information and device port of your PBX.<p>
+                                    <table frame="all" rowsep="1" colsep="1" id="table_dc3_y1p_vkb">
+                                        <tgroup cols="3">
+                                            <colspec colname="c1" colnum="1" colwidth="1*"/>
+                                            <colspec colname="c2" colnum="2" colwidth="1.36*"/>
+                                            <colspec colname="c3" colnum="3" colwidth="2.28*"/>
+                                            <thead>
+                                                <row>
+                                                  <entry>SNMP version</entry>
+                                                  <?oxy_comment_start author="carol" timestamp="20200226T155751+0800" comment="下面的描述嵌套太多了，考虑其他形式的表达，例如表格。
+
+参数最好指导一下如何填写" flag="done"?>
+                                                  <entry><?oxy_comment_end?>Settings</entry>
+                                                  <entry>Description</entry>
+                                                </row>
+                                            </thead>
+                                            <tbody>
+                                                <row>
+                                                  <entry valign="middle">SNMP v1 or v2c</entry>
+                                                  <entry valign="middle">SNMP Community</entry>
+                                                  <entry valign="middle">Enter the community that is
+                                                  defined in PBX.</entry>
+                                                </row>
+                                                <row>
+                                                  <entry morerows="3" align="left" valign="middle"
+                                                  >SNMP v3</entry>
+                                                  <entry valign="middle">Username</entry>
+                                                  <entry valign="middle">Enter the SNMPv3 user that
+                                                  is defined in PBX.</entry>
+                                                </row>
+                                                <row>
+                                                  <entry valign="middle">Security Level</entry>
+                                                  <entry valign="middle">
+                                                  <p>Select a level according to the PBX's
+                                                  <uicontrol>Access Limit</uicontrol> setting.</p>
+                                                  <ul id="ul_etq_n2l_3lb">
+                                                  <li><uicontrol>noAuthNoPrivate</uicontrol>: only
+                                                  the user name is needed.</li>
+                                                  <li><uicontrol>AuthNoPriv</uicontrol>: enter the
+                                                  <uicontrol>Authentication
+                                                  Password</uicontrol>.</li>
+                                                  <li><uicontrol>authPriv</uicontrol>: enter the
+                                                  <uicontrol>Authentication password</uicontrol> and
+                                                  <uicontrol>Privacy Password</uicontrol>.</li>
+                                                  </ul>
+                                                  </entry>
+                                                </row>
+                                                <row>
+                                                  <entry valign="middle">Authentication
+                                                  Protocol</entry>
+                                                  <entry valign="middle">Select
+                                                  <uicontrol>MD5</uicontrol>.</entry>
+                                                </row>
+                                                <row>
+                                                  <entry valign="middle">Privacy Password</entry>
+                                                  <entry valign="middle">Select
+                                                  <uicontrol>DES</uicontrol>.</entry>
+                                                </row>
+                                            </tbody>
+                                        </tgroup>
+                                    </table>
+                                </p><p><image
+                                        href="../Images/admin/snmp-configure-host-on-nagios-snmp.png"
+                                        width="500" id="image_omd_smg_vkb"/></p></li>
+                            <li>In the <uicontrol>SNMP Services</uicontrol> list, select the OIDs
+                                you'd like to monitor, and configure monitor items.<ul
+                                    id="ul_qx1_1nt_3lb">
+                                    <li><uicontrol>OID</uicontrol>: Enter the OID name in according
+                                        to <xref href="yeastar-pbx-mib.dita">MIB file</xref>.</li>
+                                    <li><uicontrol>Displya Name</uicontrol>: Enter the display name
+                                        of OID.</li>
+                                </ul><p><image href="../Images/admin/snmp-add-monitor-item.png"
+                                        width="500" id="image_q2j_vng_vkb"/></p></li>
+                        </ol></li>
+                    <li>Click <uicontrol>Next</uicontrol>.</li>
+                    <li>On <uicontrol>SNMP-Step 3</uicontrol> page, click
+                            <uicontrol>Finish</uicontrol>.<p>After the wizard applies the
+                            configuration, you can click the <uicontrol>View status detail for
+                                &lt;Host IP address></uicontrol> to see the host
+                                status.</p><p><image
+                                href="../Images/admin/snmp-walk-configured-success-on-nagios.png"
+                                width="450" id="image_xl4_whp_vkb"/></p></li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_bf4_jth_vkb">
+            <title>View the PBX status</title>
+            <p>Go to <menucascade>
+                    <uicontrol>Views</uicontrol>
+                    <uicontrol> My Views</uicontrol>
+                    <uicontrol> Service Detail</uicontrol>
+                </menucascade>, view the PBX status.</p>
+            <p><image href="../Images/admin/snmp-view-host-stauts-on-nagios-snmp.png" width="650"
+                    id="image_bj1_r3g_vkb"/></p>
+        </section>
+    </body>
+</topic>

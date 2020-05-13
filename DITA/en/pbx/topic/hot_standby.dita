@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_r3b_v3k_xdb">
+    <title>Hot Standby</title>
+    <shortdesc>The Hot Standby solution offers you the ability to provide high system availability,
+        helping to prevent the unnecessary business loss caused by unexpected server
+        failure.</shortdesc>
+    <conbody>
+        <section id="section_sc4_jjk_xdb">
+            <title>Precondition</title>
+            <p>The primary server and secondary server in the failover pair must meet the following
+                requirements:</p>
+            <ul id="ul_qfc_flv_c3b">
+                <li>Same model</li>
+                <li>Same firmware version</li>
+            </ul>
+            <p>You can set one PBX as a primary server, set another PBX as a secondary server. The
+                hot-standby server (secondary server) can automatically and instantly take over if
+                the primary server goes down. Callers still reach the people they need and business
+                can continue as usual.</p>
+            <p><image href="../Images/admin/Hot-Standby.png" id="image_ks1_gjk_xdb"/></p>
+        </section>
+    </conbody>
+</concept>

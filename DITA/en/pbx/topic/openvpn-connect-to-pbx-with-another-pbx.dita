@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="openvpn-connect-to-pbx-with-another-pbx">
+    <title>Connect  <ph keyref="product_name"/> to another <ph keyref="product_name"/></title>
+    <shortdesc>This topic shows you how to set up <ph keyref="product_name"/> as an OpenVPN client,
+        and to connect to <ph keyref="product_name">Yeastar S-Series VoIP PBX</ph> via OpenVPN
+        network.</shortdesc>
+    <body>
+        <p>
+            <ol id="ol_ing_vhq_33b">
+                <li>Log in the S300 PBX web interface, go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol> System</uicontrol>
+                        <uicontrol> Network</uicontrol>
+                        <uicontrol> OpenVPN</uicontrol>
+                    </menucascade>, check <uicontrol>Enable OpenVPN</uicontrol>.</li>
+                <li>Set the <uicontrol>Type</uicontrol> to <uicontrol>Manual
+                        Configurations</uicontrol>, and configure the following settings according
+                    to the VPN server configurations.<p><image
+                            href="../Images/admin/openvpn-manually-connect-to-another-pbx.png"
+                            id="image_dqs_mkq_33b" width="650"/></p><p>
+                        <table id="table_u2v_j4s_33b" colsep="1" rowsep="1">
+                            <title>Description of OpenVPN settings</title>
+                            <tgroup cols="2">
+                                <colspec colname="c1" colnum="1" colwidth="199px"/>
+                                <colspec colname="c2" colnum="2" colwidth="503px"/>
+                                <thead>
+                                    <row>
+                                        <entry>Options</entry>
+                                        <entry>Description</entry>
+                                    </row>
+                                </thead>
+                                <tbody>
+                                    <row>
+                                        <entry align="center" valign="middle">Server Address </entry>
+                                        <entry>Enter the IP address of the OpenVPN server.</entry>
+                                    </row>
+                                    <row>
+                                        <entry align="center" valign="middle">Server Port</entry>
+                                        <entry>Enter the OpenVPN server port.</entry>
+                                    </row>
+                                    <row>
+                                        <entry align="center" valign="middle">Protocol</entry>
+                                        <entry>Select the same protocol as the OpenVPN
+                                            server.</entry>
+                                    </row>
+                                    <row>
+                                        <entry align="center" valign="middle">Device Mode</entry>
+                                        <entry>Select the same mode as the OpenVPN server.</entry>
+                                    </row>
+                                    <row>
+                                        <entry align="center" valign="middle">Encryption</entry>
+                                        <entry>Select the same type as the OpenVPN server.</entry>
+                                    </row>
+                                    <row>
+                                        <entry align="center" valign="middle">Username</entry>
+                                        <entry>If the <xref
+                                                href="openvpn-username-password-authentication.dita#openvpn-create-account-password-for-each-client"
+                                                >OpenVPN username/password authentication</xref> is
+                                            required on server, enter your user name.</entry>
+                                    </row>
+                                    <row>
+                                        <entry align="center" valign="middle">Password</entry>
+                                        <entry>If the <xref
+                                                href="openvpn-username-password-authentication.dita#openvpn-create-account-password-for-each-client"
+                                                >OpenVPN username/password authentication</xref> is
+                                            required on server, enter your password.</entry>
+                                    </row>
+                                    <row>
+                                        <entry align="center" valign="middle">Compression</entry>
+                                        <entry>Compression on the VPN link. The client and server
+                                            must be the same setting.</entry>
+                                    </row>
+                                </tbody>
+                            </tgroup>
+                        </table>
+                    </p></li>
+                <li>Upload certificates and keys for client.<p><image
+                            href="../Images/admin/openvpn-s300-upload-client.png" id="image_yby_qdr_33b"/></p><p>
+                        <table colsep="1" rowsep="1">
+                            <title/>
+                            <tgroup cols="2" align="center">
+                                <colspec colname="c1" colnum="1" colwidth="165px"/>
+                                <colspec colname="c2" colnum="2" colwidth="492px"/>
+                                <thead>
+                                    <row>
+                                        <entry>Options</entry>
+                                        <entry>CA &amp; Key</entry>
+                                    </row>
+                                </thead>
+                                <tbody>
+                                    <row>
+                                        <entry>CA Cert</entry>
+                                        <entry align="left">Upload
+                                            <filepath>ca.crt</filepath>.</entry>
+                                    </row>
+                                    <row>
+                                        <entry>Public Server Cert</entry>
+                                        <entry align="left">Upload the client certificate
+                                                <filepath>s300.crt</filepath>.</entry>
+                                    </row>
+                                    <row>
+                                        <entry>Private Server Key</entry>
+                                        <entry align="left">Upload the client key
+                                                <filepath>s300.key</filepath>.</entry>
+                                    </row>
+                                    <row>
+                                        <entry>TLS Authentication</entry>
+                                        <entry align="left">If you enable SSL/TLS on the VPN server,
+                                            enable this option.</entry>
+                                    </row>
+                                    <row>
+                                        <entry>TA Key</entry>
+                                        <entry align="left">If you enable TLS Authentication, upload
+                                                <filepath>ta.key</filepath> file.</entry>
+                                    </row>
+                                </tbody>
+                            </tgroup>
+                        </table>
+                    </p></li>
+                <li>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</li>
+                <li>Go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol>Resource Monitor</uicontrol>
+                        <uicontrol>Network</uicontrol>
+                    </menucascade>, check the VPN client status and IP address.<p><image
+                            href="../Images/admin/openvpn-connect-to-another-pbx-status.png"
+                            id="image_rgk_cnq_33b"/></p></li>
+            </ol>
+        </p>
+    </body>
+</topic>
+<?oxy_options track_changes="on"?>

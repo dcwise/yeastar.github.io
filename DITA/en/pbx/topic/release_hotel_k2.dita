@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_a3j_yqn_y2b">
+    <title>Hotel</title>
+    <conbody>
+        <section id="section_f25_jmv_hlb">
+            <title>Version 2.1.3</title>
+            <p><ph conref="v30.13.0.30.dita#v30.13.0.b/date"/></p>
+            <ul id="ul_z11_mgh_jlb">
+                <li>Fixed the issue of <uicontrol>Extension</uicontrol> display: When the extension
+                    user with administrator privileges managed a hotel room, the assignable
+                        <uicontrol>Extension</uicontrol> was displayed incorrectly, and the room
+                    cannot be checked in.</li>
+            </ul>
+            
+        </section>
+        <section id="section_wx5_4hb_wjb">
+            <title>Version 2.1.1</title>
+            <p>Released Date: December 12, 2019<ul id="ul_jyj_mhb_wjb">
+                    <li>Optimized the mechanism of applying configuration changes to improve the
+                        system stability.<ul id="ul_gnc_1vb_wjb">
+                            <li>You don't need to click <uicontrol>Apply</uicontrol> button to
+                                reload Asterisk if you save unchanged configurations.</li>
+                            <li>If no <uicontrol>Apply</uicontrol> button appears after you save
+                                some specific configuration changes, then the configurations can be
+                                saved without reloading Asterisk.</li>
+                        </ul></li>
+                    <li>Added support for adding up to 400 rooms in bulk.</li>
+                    <li>Fixed the CDR issue: No billing information in the CDR for the outbound
+                        calls that were made after checking in.</li>
+                </ul></p>
+        </section>
+        <section id="section_xcx_cw5_jjb"><title>Version 2.0.12</title>Released Date: October 22,
+                2019<ul id="ul_pd1_fw5_jjb">
+                <li>Fixed the extension issue of room: the extension was wrong after adding a
+                    room.</li>
+            </ul></section>
+        <section id="section_z1k_zh5_4hb">
+            <title>Version 2.0.11</title>
+            <p>Released Date: May 14, 2019</p>
+            <p>
+                <ul>
+                    <li>Updated Russian and Italian web interface.</li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_gpm_njs_zfb">
+            <title>Version  2.0.8</title>
+            <p>Released Date: December 5, 2018</p>
+            <p>
+                <ul id="ul_uyb_qjs_zfb">
+                    <li>Optimized Hotel Customer Import function.</li>
+                    <li>Improved Web security.</li>
+                    <li>The billing rate can be rounded to 3 decimal places.</li>
+                    <li>Added support for displaying the hotel customer's name as caller ID name (<menucascade>
+                            <uicontrol>Hotel</uicontrol>
+                            <uicontrol>Settings</uicontrol>
+                            <uicontrol>General</uicontrol>
+                            <uicontrol>Room Settings</uicontrol>
+                            <uicontrol>Use Room Name as Caller ID Name</uicontrol>
+                        </menucascade>).</li>
+                    <li>Fixed the issue that the room extension could not be configured correctly
+                        when adding or editing a hotel room.</li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_ddt_15n_y2b">
+            <title>Version 2.0.6</title>
+            <p>Released Date: August 29, 2018</p>
+            <p>
+                <ul id="ul_ftn_q5n_y2b">
+                    <li>Fixed the issue that the new billing report could not be checked.</li>
+                </ul>
+                <ul id="ul_mfy_q5n_y2b">
+                    <li>Added support for adding customized fields for customers. <p> The customized
+                            information of customers will be displayed on the billing report.
+                        </p></li>
+                    <li> Added support for adding additional information on the billing report.
+                        (Hotel > Settings > General > Company > Remark)</li>
+                </ul>
+            </p>
+        </section>
+    </conbody>
+</concept>

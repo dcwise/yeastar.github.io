@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map xml:lang="en">
+    <title>Auto Provisioning</title>
+    <topicmeta>
+        <category>Auto Provisioning</category>
+        <prodinfo>
+            <prodname>
+                <data><ph keyref="product_name"/></data>
+                <data><ph product="cloudpbx">1.8.7</ph><ph product="s-series k2">1.8.15</ph></data>
+            </prodname>
+        </prodinfo>
+    </topicmeta>
+    <keydef keys="product_name" product="cloudpbx">
+        <topicmeta>
+            <keywords>
+                <keyword>Yeastar Cloud PBX</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="product_name" product="s-series">
+        <topicmeta>
+            <keywords>
+                <keyword>Yeastar S-Series VoIP PBX</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="product_name" product="k2">
+        <topicmeta>
+            <keywords>
+                <keyword>Yeastar K2 IPPBX</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <topicref href="../topic/auto_provisioning.dita" print="yes">
+        <topicmeta>
+            <shortdesc>Auto Provisioning App helps you set up your IP phones and Yeastar TA VoIP
+                gateways in bulk. </shortdesc>
+        </topicmeta>
+        <topicref href="../topic/supported_ip_phone_manufactures_and_phone_models_cloud.dita"
+            product="cloudpbx"/>
+        <topicref href="../topic/supported_ip_phone_manufactures_and_phone_models_s.dita"
+            product="s-series k2"/>
+        <topicref href="../topic/auto_provision_phones_by_pnp.dita" product="k2 s-series"/>
+        <topicref href="../topic/auto_provision_phones_by_dhcp.dita" product="k2 s-series"/>
+        <topicref href="../topic/steps_to_auto_provision_phones.dita" product="cloudpbx"/>
+        <topicref href="../topic/auto_provision_phone_lines.dita" product="cloudpbx"/>
+        <topicref href="../topic/update_auto_provision_settings.dita"/>
+        <topicref href="../topic/auto_provision_phonebook.dita"/>
+        <topicref href="../topic/auto_provision_contacts.dita"/>
+        <topicref href="../topic/auto_provision_phone_firmware.dita"/>
+        <topicref href="../topic/synchronize_phone_time_with_the_pbx.dita"/>
+        <topicref href="../topic/export_auto_provision_settings.dita" product="cloudpbx"/>
+        <topicref href="../topic/auto_provisioning_template.dita">
+            <topicref href="../topic/search_and_view_default_template.dita"/>
+            <topicref href="../topic/add_a_customized_auto_provisioning_template.dita"/>
+            <topicref href="../topic/add_additional_settings_in_custom_template.dita"/>
+        </topicref>
+    </topicref>
+</map>

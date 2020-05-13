@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_kw5_xmf_qfb">
+    <title>Set up Callback</title>
+    <shortdesc>Add a Callback rule and set Inbound Route destination to the Callback
+        rule.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/10/30"/>
+            <!--Carol-->
+            <revised modified="2018/10/30"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <context>
+            <p>
+                <note>Make sure that the Caller ID service is enabled on the callback trunk. If the
+                    PBX cannot recognize the inbound caller ID, callback will fail.</note>
+            </p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Add a Callback rule.</cmd>
+                <substeps>
+                    <substep>
+                        <cmd>Go to <menucascade>
+                                <uicontrol>Settings</uicontrol>
+                                <uicontrol>PBX</uicontrol>
+                                <uicontrol>Call Features</uicontrol>
+                                <uicontrol>Callback</uicontrol>
+                            </menucascade>, click <uicontrol>Add</uicontrol>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>On the Callback configuration page, finish the callback settings.</cmd>
+                        <info><image href="../Images/admin/add_callback.png" id="image_n3d_qrf_qfb"
+                                width="650"/></info>
+                        <info>
+                            <ul id="ul_p4r_kpf_qfb">
+                                <li><uicontrol>Name</uicontrol>: Set a name for the Callback.</li>
+                                <li><uicontrol>Callback Through</uicontrol>: Select which trunk to
+                                    use when calling back.<p>
+                                        <note>Make sure that you have set up an outbound route for
+                                            the trunk, or callback will fail.
+                                            <?oxy_comment_start author="Sunmy" timestamp="20190819T170232+0800" comment="add"?>If
+                                            the Register-Trunk is used for Callback, make sure the
+                                                <uicontrol>From User</uicontrol> is configured, or
+                                            callback would fail.<?oxy_comment_end?></note>
+                                    </p></li>
+                                <li><uicontrol>Delay Before Callback</uicontrol>: How long to wait
+                                    before calling back the caller.</li>
+                                <li><uicontrol>Strip</uicontrol>: Optional. How many digits will be
+                                    stripped from the call in number before the callback is placed.<p>
+                                        <note>You do not need to configure
+                                                <uicontrol>Strip</uicontrol> if the trunk supports
+                                            calling back with the Caller ID directly.<p>For example,
+                                                user 5503301 calls in the PBX, the caller ID
+                                                displays 05503301. To call back to the user, you
+                                                should set strip 1 digit so that the PBX will call
+                                                back to 5503301.</p></note>
+                                    </p></li>
+                                <li><uicontrol>Prepend</uicontrol>: Optional. The digits added
+                                    before a callback number before the callback is placed.<p>
+                                        <note>You do not need to configure
+                                                <uicontrol>Prepend</uicontrol> if the trunk supports
+                                            calling back with the Caller ID directly.<p>For example,
+                                                user 15880232154 calls in the PBX, the caller ID
+                                                displays 15880232154. To call back to the
+                                                long-distance number 15880232154 through the
+                                                selected trunk, you should add digit 9 before the
+                                                number. In this case, set
+                                                  <uicontrol>Prepend</uicontrol> to
+                                                  <uicontrol>9</uicontrol>. </p></note>
+                                    </p></li>
+                            </ul>
+                        </info>
+                        <info>
+                            <ul id="ul_q4r_kpf_qfb">
+                                <li><uicontrol>Destination</uicontrol>: Where the callback will
+                                    direct the caller to.</li>
+                            </ul>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Click <uicontrol>Save</uicontrol> and
+                            <uicontrol>Apply</uicontrol>.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Set Inbound Route destination to callback.</cmd>
+                <substeps>
+                    <substep>
+                        <cmd>Go to <menucascade>
+                                <uicontrol>Settings</uicontrol>
+                                <uicontrol>PBX</uicontrol>
+                                <uicontrol>Call Control</uicontrol>
+                                <uicontrol>Inbound Route</uicontrol>
+                            </menucascade>, edit your inbound route.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Set the Inbound <uicontrol>Destination</uicontrol> to the
+                            Callback.</cmd>
+                        <info><image href="../Images/admin/inbound_callback.png"
+                                id="image_ngs_bnf_qfb"/></info>
+                    </substep>
+                    <substep>
+                        <cmd>Click <uicontrol>Save</uicontrol> and
+                            <uicontrol>Apply</uicontrol>.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Test callback.</cmd>
+                <info>Make an inbound call to the PBX trunk, after you hear the ring tone, hangup
+                    the call, the PBX will call back to you.</info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

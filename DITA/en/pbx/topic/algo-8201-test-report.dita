@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_gfj_bgc_fhb">
+    <title>Algo 8201 SIP Intercom Test Report</title>
+    <shortdesc>This article is the Interoperability Test Report for <ph keyref="product_name"/> and
+        Algo 8201 SIP Intercom.</shortdesc>
+    <body>
+        <section id="section_ohx_rxh_fhb">
+            <title>Tested Equipment &amp; Software</title>
+            <p>
+                <table frame="all" rowsep="1" colsep="1" id="table_sfc_txh_fhb">
+                    <tgroup cols="2">
+                        <colspec colname="c1" colnum="1" colwidth="1*"/>
+                        <colspec colname="c2" colnum="2" colwidth="1.6*"/>
+                        <thead>
+                            <row>
+                                <entry>Equipment</entry>
+                                <entry>Firmware/Software Version</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>Algo 8201 SIP Intercom</entry>
+                                <entry>1.6.2</entry>
+                            </row>
+                            <row>
+                                <entry>Yeastar S300</entry>
+                                <entry>30.10.0.59</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+        <section id="section_qdm_hhq_fhb">
+            <title>Summary of test focus</title>
+            <p>The following table shows a summary of the validated capabilities.</p>
+            <p>
+                <table frame="all" rowsep="1" colsep="1" id="table_x2m_nhq_fhb">
+                    <tgroup cols="2">
+                        <colspec colname="c1" colnum="1" colwidth="1.78*"/>
+                        <colspec colname="c2" colnum="2" colwidth="1*"/>
+                        <thead>
+                            <row>
+                                <entry>Feature</entry>
+                                <entry>Test Result</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry namest="c1" nameend="c2"><b>DUT Services</b></entry>
+                            </row>
+                            <row>
+                                <entry>SIP Registration</entry>
+                                <entry>PASS</entry>
+                            </row>
+                            <row>
+                                <entry>Inbound Call</entry>
+                                <entry>PASS</entry>
+                            </row>
+                            <row>
+                                <entry>Outbound Call</entry>
+                                <entry>PASS</entry>
+                            </row>
+                            <row>
+                                <entry>Serviceability</entry>
+                                <entry>PASS</entry>
+                            </row>
+                            <row>
+                                <entry namest="c1" nameend="c2"><b>PBX Services</b></entry>
+                            </row>
+                            <row>
+                                <entry>Paging/Intercom Group</entry>
+                                <entry>PASS</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+        <section id="section_nst_g3c_fhb">
+            <title>Definitions</title>
+            <p>Word definitions in the following test plan table.</p>
+            <p>
+                <ul id="ul_dvw_g3q_fhb">
+                    <li><b>DUT</b>: Device Under Test, which in this case is the Algo 8180G2 Audio
+                        Alerter.</li>
+                    <li><uicontrol>Phone A</uicontrol>:  A SIP compatible endpoint used to place and
+                        receive calls.</li>
+                    <li><b>Phone B</b>: A SIP compatible endpoint used to place and receive
+                        calls.</li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_vgb_4jq_fhb">
+            <title>Test plan</title>
+            <p><b>SIP Registration</b></p>
+            <p>
+                <table frame="all" rowsep="1" colsep="1" id="table_qbj_zjq_fhb">
+                    <tgroup cols="3">
+                        <colspec colname="c1" colnum="1" colwidth="3.06*"/>
+                        <colspec colname="c2" colnum="2" colwidth="4.12*"/>
+                        <colspec colname="c3" colnum="3" colwidth="1*"/>
+                        <thead>
+                            <row>
+                                <entry>Test Case</entry>
+                                <entry>Expected Result</entry>
+                                <entry>Test Result</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>Attempt registering DUT Extension using incorrect password. </entry>
+                                <entry>Registration failure status is correctly displayed in web
+                                    interface </entry>
+                                <entry>PASS</entry>
+                            </row>
+                            <row>
+                                <entry>Attempt registering DUT Extension using incorrect
+                                    username.</entry>
+                                <entry>Registration failure status is correctly displayed in web
+                                    interface.</entry>
+                                <entry>PASS</entry>
+                            </row>
+                            <row>
+                                <entry>Correctly register DUT Extension</entry>
+                                <entry>DUT registers properly and status is correctly displayed in
+                                    web interface</entry>
+                                <entry>PASS</entry>
+                            </row>
+                            <row>
+                                <entry>Register DUT Extension using UDP protocol.</entry>
+                                <entry>DUT registers properly and status is correctly displayed in
+                                    web interface</entry>
+                                <entry>PASS</entry>
+                            </row>
+                            <row>
+                                <entry>Register DUT Extension using TCP protocol.</entry>
+                                <entry>DUT registers properly and status is correctly displayed in
+                                    web interface</entry>
+                                <entry>PASS</entry>
+                            </row>
+                            <row>
+                                <entry>Register DUT Extension using TLS protocol.</entry>
+                                <entry>DUT registers properly and status is correctly displayed in
+                                    web interface</entry>
+                                <entry>PASS</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+        <p><b>Inbound Call</b></p>
+        <p>
+            <table frame="all" rowsep="1" colsep="1" id="table_hqh_jkq_fhb">
+                <tgroup cols="3">
+                    <colspec colname="c1" colnum="1" colwidth="2.51*"/>
+                    <colspec colname="c2" colnum="2" colwidth="3.9*"/>
+                    <colspec colname="c3" colnum="3" colwidth="1*"/>
+                    <thead>
+                        <row>
+                            <entry>Test Case</entry>
+                            <entry>Expected Result</entry>
+                            <entry>Test Result</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row>
+                            <entry>Call the DUT from Phone A.</entry>
+                            <entry>A two-way audio call is established.</entry>
+                            <entry>PASS</entry>
+                        </row>
+                        <row>
+                            <entry>Call the DUT from Phone A and mute/un-mute the call.</entry>
+                            <entry>
+                                <ul id="ul_jqv_fkv_fhb">
+                                    <li>Mute: The DUT doesn't plays the audio from Phone A.</li>
+                                    <li>Unmute:  The DUT plays the audio from Phone A.</li>
+                                </ul>
+                            </entry>
+                            <entry>PASS</entry>
+                        </row>
+                        <row>
+                            <entry>When the DUT is already in a call with Phone A, call the DUT from
+                                Phone B.</entry>
+                            <entry>Phone B receives busy tone while  Phone A call continues.</entry>
+                            <entry>PASS</entry>
+                        </row>
+                        <row>
+                            <entry>Call the DUT from Phone A and maintain the call for a period of
+                                time.</entry>
+                            <entry>The call remains up after the Session Refresh (REINVITE) is sent
+                                to the DUT.</entry>
+                            <entry>PASS</entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+        </p>
+        <p><b>Outbound Call</b></p>
+        <p>
+            <table frame="all" rowsep="1" colsep="1" id="table_akh_trr_fhb">
+                <tgroup cols="3">
+                    <colspec colname="c1" colnum="1" colwidth="1.98*"/>
+                    <colspec colname="c2" colnum="2" colwidth="2.12*"/>
+                    <colspec colname="c3" colnum="3" colwidth="1*"/>
+                    <thead>
+                        <row>
+                            <entry>Test Case</entry>
+                            <entry>Expected Result</entry>
+                            <entry>Test Result</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row>
+                            <entry>Press the call button on the DUT to call Phone A. </entry>
+                            <entry>When the call is answered by Phone A. a two-way audio call is
+                                established.</entry>
+                            <entry>PASS</entry>
+                        </row>
+                        <row>
+                            <entry>Call the DUT from Phone A and Phone A doesn't answer the
+                                call.</entry>
+                            <entry>Phone A continues ringing until timeout.</entry>
+                            <entry>PASS</entry>
+                        </row>
+                        <row>
+                            <entry>When an outbound call is established on the DUT and Phone A, call
+                                the DUT from Phone B.</entry>
+                            <entry>Phone B receives busy tone, while Phone A call continues.</entry>
+                            <entry>PASS</entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+        </p>
+        <p><b>Serviceability</b></p>
+        <p>
+            <table frame="all" rowsep="1" colsep="1" id="table_hzg_drr_fhb">
+                <tgroup cols="3">
+                    <colspec colname="c1" colnum="1" colwidth="2.04*"/>
+                    <colspec colname="c2" colnum="2" colwidth="2.74*"/>
+                    <colspec colname="c3" colnum="3" colwidth="1*"/>
+                    <thead>
+                        <row>
+                            <entry>Test Case</entry>
+                            <entry>Expected Result</entry>
+                            <entry>Test Result</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row>
+                            <entry>Disconnect, then reconnect, the ethernet cable from the
+                                DUT.</entry>
+                            <entry>DUT registers with the PBX server after the network is restored. </entry>
+                            <entry>PASS</entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+        </p>
+        <p><b>PBX Feature: Paging/Intercom Group</b></p>
+        <p>The following test cases verify the Paging/Intercom Group of Yeastar S300. The DUT acts
+            as a multicast slaver.</p>
+        <p>
+            <table
+                conref="algo-8180-test-report.dita#topic_gfj_bgc_fhb/algo-test-plan-intercom-paging-group"
+                id="table_gdm_pnw_fhb">
+                <tgroup cols="1">
+                    <tbody>
+                        <row>
+                            <entry/>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+        </p>
+    </body>
+</topic>

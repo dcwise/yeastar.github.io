@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_nqc_y35_c2b">
+    <title>Billing General Settings</title>
+    <shortdesc>Before you start to use the Billing App, you need to enable the Billing App and
+        configure the general settings.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/06/11"/>
+            <!--Carol-->
+            <revised modified="2018/06/11"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <section id="section_vj3_cj5_c2b">
+            <title>Enable Billing App</title>
+            <p>
+                <ol>
+                    <li>Log in the PBX web interface, go to <menucascade>
+                            <uicontrol>Billing</uicontrol>
+                            <uicontrol>General Settings</uicontrol>
+                        </menucascade>, check the option <uicontrol>Enable
+                                Billing</uicontrol>.<p><image
+                                href="../Images/admin/enable_billing.png" id="image_ek3_tk5_c2b"
+                                width="650"/></p></li>
+                    <li>Click <uicontrol>Save</uicontrol>.</li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_lbx_5k5_c2b">
+            <title>Billing General Settings</title>
+            <p>Go to <menucascade>
+                    <uicontrol>Billing</uicontrol>
+                    <uicontrol>General Settings</uicontrol>
+                </menucascade>, configure the general settings of the Billing App.</p>
+            <p>
+                <ul id="ul_nxl_yk5_c2b">
+                    <li><uicontrol>Currency</uicontrol>: Select the billing currency, or you can
+                        enter a currency in the text box directly.</li>
+                    <li><uicontrol>Rounding Scale</uicontrol>: Set the number of significant digits
+                        to the right of the decimal point. <p>For example, a scale of 2 applied to
+                            11.3633 rounds to 11.36.</p></li>
+                    <li><uicontrol>Insufficient Balance Prompt</uicontrol>: When the
+                        extension/account doesn’t have sufficient balance to dial out, the system
+                        will play the prompt. </li>
+                    <li><uicontrol>Extensions Locked Prompt</uicontrol>: When the extension/account
+                        is locked, the system will play the prompt.</li>
+                    <li><uicontrol>Top-up Prompt</uicontrol>: If the extension/account reaches the
+                            <b>Balance Threshold</b>, the system will play the top up prompt when
+                        you are calling out.</li>
+                    <li><uicontrol>Balance Threshold</uicontrol>: When the balance of the
+                        extension/account reaches the threshold, the system will play the <b>Top up
+                            Prompt</b> to remind you to top up your extension/account.</li>
+                    <li><uicontrol>Hangup with Insufficient Balance</uicontrol>: When the account
+                        balance is less than the credit limit, the call will be hung up
+                        automatically.</li>
+                </ul>
+            </p>
+        </section>
+    </conbody>
+</concept>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="task_wbd_kkd_2cb">
+    <title>Create a VoIP Peer Trunk - General</title>
+    <shortdesc>If your VoIP provider is not included in the supported VoIP provider list, and the
+        ITSP only provides an IP address or domain for your purchased VoIP account, you can set up a
+        Peer Trunk on the <ph keyref="product_name"/>.</shortdesc>
+    <body>
+        <p>Assume that you bought a SIP trunk from the ITSP, and the trunk information is displayed
+            as below. We will introduce how to set up a Peer Trunk according to the trunk
+            information.</p>
+        <p>
+            <table frame="all" rowsep="1" colsep="1" id="table_hnr_j2r_53b">
+                <tgroup cols="2" align="left">
+                    <colspec colname="c1" colnum="1" colwidth="155px"/>
+                    <colspec colname="c2" colnum="2" colwidth="189px"/>
+                    <tbody>
+                        <row>
+                            <entry>Provider address</entry>
+                            <entry>peer.sip.com</entry>
+                        </row>
+                        <row>
+                            <entry>Protocol</entry>
+                            <entry>SIP</entry>
+                        </row>
+                        <row>
+                            <entry>SIP Port</entry>
+                            <entry>5060</entry>
+                        </row>
+                        <row>
+                            <entry>Transport</entry>
+                            <entry>UDP</entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+        </p>
+        <ol id="ol_epq_l2r_53b">
+            <li>Go to <menucascade>
+                    <uicontrol>Settings</uicontrol>
+                    <uicontrol> PBX</uicontrol>
+                    <uicontrol> Trunks</uicontrol>
+                </menucascade>, click <uicontrol>Add</uicontrol>.</li>
+            <li>In the <uicontrol>Name</uicontrol> field, enter a trunk name.</li>
+            <li>In the <uicontrol>Select Country</uicontrol> drop-down list, select
+                    <uicontrol>General</uicontrol>.</li>
+            <li>In the <uicontrol>Trunk Type</uicontrol> drop-down list, select <uicontrol>Peer
+                    Trunk</uicontrol>.</li>
+            <li>Enter the trunk information that is provided by the VoIP provider.<ul
+                    id="ol_hfb_4vz_53b">
+                    <li><uicontrol>Hostname/IP</uicontrol>: Enter the IP address or the domain of
+                        the VoIP provider (e.g.,<i>peer.sip.com</i>).</li>
+                    <li><uicontrol>Domain</uicontrol>: Enter the IP address or the domain of the
+                        VoIP provider (e.g., <i>peer.sip.com</i>).</li>
+                </ul></li>
+            <li
+                conref="set-up-voip-trunk-by-templates.dita#set-up-voip-trunk-by-templates/voip-settings-step"/>
+            <li>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.<p
+                    conref="set-up-voip-trunk-by-templates.dita#set-up-voip-trunk-by-templates/check-trunk-status"
+                /></li>
+        </ol>
+    </body>
+    <related-links>
+        <link href="add_outbound_route.dita#task_az3_dht_tcb"/>
+        <link href="add_an_inbound_route.dita#task_v43_nfr_5cb"/>
+        <link href="set_up_dod_numbers_on_voip_trunks.dita#task_rrh_vgf_2fb"/>
+    </related-links>
+</topic>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_amz_kvn_rdb">
+    <title>Step5. Create an Instance for YMP Server</title>
+    <shortdesc>Create an instance for YMP server from the Google public image <codeph>Ubuntu 16.04
+            LTS</codeph>.</shortdesc>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Go to the <xref href="https://console.cloud.google.com/compute/instances"
+                        format="html" scope="external">VM instance page</xref>.</cmd>
+            </step>
+            <step>
+                <cmd>Select your project and click <uicontrol>Continue</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Select an Image for the instance.</cmd>
+                <info>
+                    <ol id="ol_pjh_wtm_hhb">
+                        <li>Click <uicontrol>Image</uicontrol> on the left-side navigation, type
+                                <i>ubuntu-1604-xenial</i> to search the image.</li>
+                        <li>Click <uicontrol>Show deprecated images</uicontrol> to show all the
+                            relevant images.</li>
+                        <li>Select the image
+                            <uicontrol>ubuntu-1604-xenial-v20180306</uicontrol>.</li>
+                        <li>Click <uicontrol>CREATE INSTANCE</uicontrol>.</li>
+                    </ol>
+                </info>
+                <info><image href="../Images/SBC/google_image.png" id="image_d23_g44_rdb"
+                        width="450"/></info>
+            </step>
+            <step>
+                <cmd>On the instance configuration page, set the instance for your YMP server.</cmd>
+                <substeps>
+                    <substep>
+                        <cmd>Specify a <uicontrol>Name</uicontrol> for the YMP instance.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Select the <uicontrol>Zone</uicontrol> to the same zone as your VPC
+                            network.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Select a <uicontrol>Machine type</uicontrol> for the YMP
+                            instance.</cmd>
+                        <info>Refer to the <xref
+                                href="system_requirements_for_ymp.dita#topic_dvm_b3j_3cb">YMP system
+                                requirements</xref> to decide which machine type to choose.</info>
+                    </substep>
+                    <substep>
+                        <cmd>Set the <uicontrol>Firewall</uicontrol>.</cmd>
+                        <info>
+                            <ol id="ol_gr1_4r4_rdb">
+                                <li>Click <menucascade>
+                                        <uicontrol>Management, disk, networking, SSH key</uicontrol>
+                                        <uicontrol>Networking</uicontrol>
+                                    </menucascade>.</li>
+                                <li>Set the <uicontrol>Network tags</uicontrol>.<p>
+                                        <note>Required option. This network tag will be used when
+                                            configuring the VPC route.</note>
+                                    </p></li>
+                                <li>Edit <uicontrol>Network interfaces</uicontrol>, set
+                                        <uicontrol>Network</uicontrol> as your VPC network.</li>
+                                <li>Set <uicontrol>External IP</uicontrol> to
+                                        <uicontrol>None</uicontrol>.</li>
+                                <li>Set <uicontrol>IP forwarding</uicontrol> to
+                                        <uicontrol>On</uicontrol>.</li>
+                                <li>Click <uicontrol>Done</uicontrol>.</li>
+                            </ol>
+                        </info>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Click <b>Create</b> to create and start the instance.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

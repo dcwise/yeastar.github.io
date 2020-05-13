@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "glossary.dtd">
+<glossentry id="glossentry_lrn_c35_xfb">
+    <glossterm>SIP</glossterm>
+    <glossdef>SIP, short for Session Initiation Protocol is an IP telephony signaling protocol used
+        to establish, modify and terminate VoIP telephone calls.</glossdef>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/11/26"/>
+            <!--Carol-->
+            <revised modified="2018/11/26"/>
+        </critdates>
+    </prolog>
+    <glossBody/>
+</glossentry>

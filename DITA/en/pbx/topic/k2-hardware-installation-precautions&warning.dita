@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="Installation_Precautions">
+    <title>Installation Precautions &amp; Warning</title>
+    <conbody>
+        <section>
+            <title>Installation Precautions</title>
+            <ul>
+                <li>The equipment room should be dry, ventilated, no corrosive gases, and no strong
+                    electromagnetic interference.</li>
+                <li>Reserve space for the device to facilitate heat dissipation.</li>
+                <li>The humidity of the equipment room should be kept less than 80%, and the
+                    humidity should be constant at around 25 °C. If necessary, the corresponding
+                    facilities should be installed.</li>
+                <li>Avoid installation in direct sunlight, too cold, too hot or humid (temperature
+                    range: 0 ° C ~ 40 ° C, humidity range: 60% or less).</li>
+                <li>Avoid installation in places where there is frequent vibration, dust, or contact
+                    with water and oil.</li>
+                <li>It is better to install an anti-static floor.</li>
+                <li>Keep a distance from other devices and do not stack them with other
+                    devices.</li>
+            </ul>
+        </section>
+        <section>
+            <title>Warning</title>
+            <p>
+                <ul>
+                    <li>Do not disassemble or modify the device.</li>
+                    <li>Never use a 3rd party power adapter.</li>
+                    <li>Do not  remove the power supply during the device startup or upgrade,
+                        otherwise, the device may not be able to start up.</li>
+                    <li>Please remove the power supply when writing. Power on the device after
+                        wiring is completed.</li>
+                </ul>
+            </p>
+        </section>
+    </conbody>
+</concept>

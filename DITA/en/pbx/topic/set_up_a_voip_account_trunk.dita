@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="task_gpv_3lj_dfb">
+    <title>Create a VoIP Account Trunk - General</title>
+    <shortdesc>Create a VoIP Account Trunk on the <ph keyref="product_name"/>, and provide this
+        account for the other device to register. In this way, <ph keyref="product_name"/> and the
+        other device are connected.</shortdesc>
+    <body>
+        <p>
+            <ol id="ol_pj2_y3r_53b">
+                <li>Go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol> PBX</uicontrol>
+                        <uicontrol> Trunks</uicontrol>
+                    </menucascade>, click <uicontrol>Add</uicontrol>.</li>
+                <li>In the <uicontrol>Name</uicontrol> field, enter a trunk name.</li>
+                <li>In the <uicontrol>Select Country</uicontrol> drop down list,
+                    select <uicontrol>General</uicontrol>.</li>
+                <li>In the <uicontrol>Trunk Type</uicontrol> drop-down list, select
+                        <uicontrol>Account Trunk</uicontrol>.</li>
+                <li>Enter the account information as your need:<ul id="ol_rcz_zzz_53b">
+                        <li><uicontrol>Username</uicontrol>: Use the default or change the
+                            number.</li>
+                        <li><uicontrol>Password</uicontrol>: Use the default or change the
+                            number.</li>
+                        <li><uicontrol>Authentication Name</uicontrol>: Use the default or change
+                            the number.</li>
+                    </ul><note> The other device should use the provided trunk information to
+                        connect to the <ph keyref="product_name"/>.</note><p><image
+                            href="../Images/admin/add_account_trunk_cloud.png" width="650"
+                            id="image_qjn_351_ffb" product="cloudpbx"/></p><p><image
+                            href="../Images/admin/add_account_trunk.png" id="image_wxg_h3d_2fb"
+                            width="650" product="s-series"/></p></li>
+                <li
+                    conref="set-up-voip-trunk-by-templates.dita#set-up-voip-trunk-by-templates/voip-settings-step"/>
+                <li>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.<p>After the
+                        Account Trunk is registered on the other device, you can check the trunk
+                        status in PBX Monitor. If the trunk status shows <image
+                            href="../Images/ui_icons/ok.png" id="image_kgb_mxz_2fb" width="20"/>,
+                        the trunk is ready for use.</p></li>
+            </ol>
+        </p>
+    </body>
+    <related-links>
+        <link href="add_outbound_route.dita#task_az3_dht_tcb"/>
+        <link href="add_an_inbound_route.dita#task_v43_nfr_5cb"/>
+    </related-links>
+</topic>

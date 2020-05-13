@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="task_u52_zr1_mdb">
+    <title>LDAP Configurations on Cisco SPA Phone</title>
+    <shortdesc>In this example, we demonstrate how to configure and use LDAP phonebook using a Cisco
+        SPA-942 (version 6.1.5(a)).</shortdesc>
+    <body>
+        <section id="section_nll_413_r3b">
+            <title>Configuration Example</title>
+            <p>The example configurations are set according to default settings of <ph
+                    keyref="product_name"/> LDAP server. You can use the following settings as a
+                starting point and adjust the filter and display attributes according to your
+                needs.</p>
+            <p>
+                <ol>
+                    <li>Log in the Cisco SPA phone web interface, click <uicontrol>Admin
+                            Login</uicontrol> and <uicontrol>advanced</uicontrol> to log in as an
+                        administrator.</li>
+                    <li>Go to <menucascade>
+                            <uicontrol>Phone</uicontrol>
+                            <uicontrol>LDAP Corporate Directory Search</uicontrol>
+                        </menucascade> to configure LDAP client.</li>
+                </ol>
+            </p>
+            <p><image href="../Images/admin/cisco-ldap-s-series.png" product="k2 s-series"
+                    id="image_cpv_3hm_s3b"/></p>
+            <p><image href="../Images/admin/cisco-ldap-cloud-pbx.png" product="cloudpbx"
+                    id="image_erb_khm_s3b"/></p>
+        </section>
+        <table frame="all" id="table_dg4_spt_q3b">
+            <title/>
+            <tgroup cols="3">
+                <colspec colname="c1" colnum="1" colwidth="1*" colsep="1" rowsep="1"/>
+                <colspec colname="c2" colnum="2" colwidth="1.72*" colsep="1" rowsep="1"/>
+                <colspec colname="newCol3" colnum="3" colwidth="1.4*" colsep="1" rowsep="1"/>
+                <thead>
+                    <row>
+                        <entry>Setting</entry>
+                        <entry>Description</entry>
+                        <entry>Example</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>LDAP Dir Enable</entry>
+                        <entry>Whether to enable LDAP directory or not.</entry>
+                        <entry>yes</entry>
+                    </row>
+                    <row>
+                        <entry>LDAP Corp Dir Name</entry>
+                        <entry>Specify the name of phonebook.</entry>
+                        <entry>yeastar</entry>
+                    </row>
+                    <row>
+                        <entry>LDAP Server</entry>
+                        <entry><ph product="k2 s-series">Enter the IP address of PBX.</ph><p
+                                product="cloudpbx">Enter the domain name of Cloud PBX. </p></entry>
+                        <entry><ph product="k2 s-series">192.168.6.216</ph><ph product="cloudpbx"
+                                >ray.isbc.yeastarcloud.com (Cloud PBX domain name)</ph></entry>
+                    </row>
+                    <row>
+                        <entry>LDAP Auth Method</entry>
+                        <entry>Select the authentication method that the LDAP server requires.<ul
+                                id="ul_nnn_2qt_q3b">
+                                <li>None: No authentication is used between the client and the
+                                    server.</li>
+                                <li>Simple: The client sends its fully-qualified domain name and
+                                    password to the LDAP server. But this may cause security
+                                        issues.<note>If the version of your LDAP server is 1.4.12 or
+                                        later, you should select
+                                        <uicontrol>Simple</uicontrol>.</note></li>
+                                <li>Digest-MD5: The LDAP server sends authentication options and a
+                                    token to the client. The client returns an encrypted response
+                                    that is decrypted and verified by the server.</li>
+                            </ul></entry>
+                        <entry>Simple</entry>
+                    </row>
+                    <row>
+                        <entry>LDAP Client DN</entry>
+                        <entry>
+                            <p><ph product="cloudpbx">Enter the Base DN of LDAP server.</ph><ph
+                                    product="k2 s-series">Enter the Username of LDAP
+                                server.</ph></p>
+                        </entry>
+                        <entry><p product="k2 s-series"><ph>cn=admin,dc=pbx,dc=com</ph></p><ph
+                                product="cloudpbx"
+                            >dc=ray,dc=isbc,dc=yeastarcloud,dc=com</ph></entry>
+                    </row>
+                    <row>
+                        <entry>LDAP Username</entry>
+                        <entry>Enter the user name to log in the LDAP server.</entry>
+                        <entry><ph product="k2 s-series">cn=admin,dc=pbx,dc=com</ph><ph
+                                product="cloudpbx">cn=admin,dc=ray,dc=isbc,dc=yeastarcloud,dc=com
+                            </ph>
+                        </entry>
+                    </row>
+                    <row>
+                        <entry>LDAP Password</entry>
+                        <entry>Enter the password to log in the LDAP server.</entry>
+                        <entry>
+                            <ph product="k2 s-series">password</ph><ph product="cloudpbx"
+                                >Yeastar134</ph></entry>
+                    </row>
+                    <row>
+                        <entry>LDAP Search Base</entry>
+                        <entry>Specify a starting point in the directory tree from which to
+                                search.<ul id="ul_xzd_kgm_s3b">
+                                <li>To search all contacts, enter the Base DN of LDAP server.</li>
+                                <li>To search part of contacts, enter the desired phonebook
+                                    node.</li>
+                            </ul></entry>
+                        <entry><ph product="k2 s-series">dc=pbx,dc=com</ph><ph product="cloudpbx"
+                                >dc=ray,dc=isbc,dc=yeastarcloud,dc=com</ph></entry>
+                    </row>
+                    <row>
+                        <entry>LDAP Last Name Filter</entry>
+                        <entry>This defines the search for surnames [sn], known as last
+                            name.</entry>
+                        <entry>sn:(sn=*$VALUE*) </entry>
+                    </row>
+                    <row>
+                        <entry>LDAP First Name Filter</entry>
+                        <entry>This defines the search for the common name [cn]. </entry>
+                        <entry>cn:(cn=*$VALUE*)</entry>
+                    </row>
+                    <row>
+                        <entry>LDAP Search Item3</entry>
+                        <entry>Additional customized search item. Can be blank if not needed. </entry>
+                        <entry>Leave it blank.</entry>
+                    </row>
+                    <row>
+                        <entry>LDAP Item 3 Filter</entry>
+                        <entry>Customized filter for the searched item. Can be blank if not needed. </entry>
+                        <entry>Leave it blank.</entry>
+                    </row>
+                    <row>
+                        <entry>LDAP Search Item 4</entry>
+                        <entry>Additional customized search item. Can be blank if not needed. </entry>
+                        <entry>Leave it blank.</entry>
+                    </row>
+                    <row>
+                        <entry>LDAP Item 4 Filter</entry>
+                        <entry>Customized filter for the searched item. Can be blank if not needed. </entry>
+                        <entry>Leave it blank.</entry>
+                    </row>
+                    <row>
+                        <entry>LDAP Display Attr</entry>
+                        <entry>Format of LDAP results displayed on phone.</entry>
+                        <entry>a=sn;a=cn;a=telephoneNumber,<p>n=Phone,t=p; </p></entry>
+                    </row>
+                    <row>
+                        <entry>LDAP Number Mapping</entry>
+                        <entry>Can be blank if not needed.</entry>
+                        <entry>Leave it blank.</entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+        <section id="section_in3_1jm_s3b">
+            <title>Cisco LDAP Display Attributes</title>
+            <p>
+                <table frame="all" id="table_vr3_gjm_s3b">
+                    <tgroup cols="3">
+                        <colspec colname="c1" colnum="1" colwidth="1*" colsep="1" rowsep="1"/>
+                        <colspec colname="c2" colnum="2" colwidth="1.05*" colsep="1" rowsep="1"/>
+                        <colspec colname="c3" colnum="3" colwidth="2.24*" colsep="1" rowsep="1"/>
+                        <thead>
+                            <row>
+                                <entry>Attribute</entry>
+                                <entry>Value</entry>
+                                <entry>Description</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>a</entry>
+                                <entry>Attribute name</entry>
+                                <entry>N/A</entry>
+                            </row>
+                            <row>
+                                <entry>cn</entry>
+                                <entry>Common name</entry>
+                                <entry>N/A</entry>
+                            </row>
+                            <row>
+                                <entry>sn</entry>
+                                <entry>Surname (last name)</entry>
+                                <entry>N/A</entry>
+                            </row>
+                            <row>
+                                <entry>telephoneNumber </entry>
+                                <entry>phone number</entry>
+                                <entry>N/A</entry>
+                            </row>
+                            <row>
+                                <entry>n</entry>
+                                <entry>Display name</entry>
+                                <entry>Example: n=Phone will cause "Phone:" to be displayed in front
+                                    of the phone number of an LDAP query result when the detail soft
+                                    button is pressed.</entry>
+                            </row>
+                            <row>
+                                <entry>t</entry>
+                                <entry>type</entry>
+                                <entry>When t=p, that is, t is of type phone number, then the
+                                    retrieved number can be dialed. Only one number can be made
+                                    dialable. If two numbers are defined as dialable, only the first
+                                    number is used. Example: a=ipPhone, t=p; a=mobile, t=p; Only the
+                                    IP Phone number is dialable and the mobile number will be
+                                    ignored.</entry>
+                            </row>
+                            <row>
+                                <entry>p</entry>
+                                <entry>phone number</entry>
+                                <entry>When p is assigned to a type attribute, example t=p, then the
+                                    retrieved number will be dialable by the phone.</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+        <section id="section_cxr_413_r3b">
+            <title>Search LDAP Contacts</title>
+            <p>Enter the search criteria to search a contact from LDAP phonebook and call the
+                contact.</p>
+            <p>
+                <ol id="ol_q3z_q13_r3b">
+                    <li>Press the <uicontrol>Dir</uicontrol> soft key on the SPA phone.</li>
+                    <li>Select the LDAP Corporate Directory from the list. </li>
+                    <li>Enter the search parameters for Last Name and First Name, and press
+                            <uicontrol>submit</uicontrol>.<p><image id="image_skv_24t_q3b"
+                                href="../Images/admin/cisco-ldap-search-cloud.png" width="400"
+                        /></p></li>
+                    <li>Press <uicontrol>Dial</uicontrol>, <uicontrol>EditDial</uicontrol>,
+                            <uicontrol>Detail</uicontrol>, or <b>Cancel</b> to use the LDAP
+                        results.</li>
+                </ol>
+            </p>
+        </section>
+    </body>
+</topic>

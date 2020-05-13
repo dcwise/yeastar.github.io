@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_j41_54k_jdb">
+  <title>Version 30.2.0.27</title>
+  <abstract>Released Date: November 21, 2016</abstract>
+  <prolog>
+    <critdates>
+      <!--Carol-->
+      <revised modified="2018/06/20"/>
+    </critdates>
+  </prolog>
+  <body>
+    <section id="section_nyk_p4g_jdb">
+      <title>New Feature</title>
+      <p><image href="../Images/horizon.png" id="image_u11_c1w_pdb"/></p>
+      <p>
+        <ul id="ul_omq_fvk_jdb">
+          <li>Added Linkus Application.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_gzb_54g_jdb">
+      <title>Optimization</title>
+      <p><image href="../Images/horizon.png" id="image_oqf_c1w_pdb"/></p>
+      <p>
+        <ul id="ul_irp_gvk_jdb">
+          <li>Optimized IVR: users could set Invalid Key event to a custom prompt. When the caller
+            presses an invalid key, he/she could hear the invalid key prompt.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_cmm_x4g_jdb">
+      <title>Fixed Bug</title>
+      <p><image href="../Images/horizon.png" id="image_egx_c1w_pdb"/></p>
+      <p>
+        <ul id="ul_h2k_hvk_jdb">
+          <li>Fixed one touch recording issue: if one touch recording prompt was enabled, and the
+            two parties both dialed *1 to finish one touch recording, that would cause the system to
+            break down.</li>
+        </ul>
+      </p>
+    </section>
+  </body>
+</topic>

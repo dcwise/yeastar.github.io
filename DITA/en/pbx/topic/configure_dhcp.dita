@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="configure_dhcp">
+    <title>Obtain an IP Address from a DHCP Server</title>
+    <shortdesc>You can configure <ph keyref="product_name"/> to automatically obtain an IP address
+        from a DHCP server running in your network.</shortdesc>
+    <body>
+        <p>
+            <note>The the IP address assigned to the PBX may vary every time the PBX is started up.
+                We suggest that your configure a static IP address for the PBX.</note>
+        </p>
+        <p>
+            <ol>
+                <li>Go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol>Systems</uicontrol>
+                        <uicontrol>Network</uicontrol>
+                        <uicontrol>Basic Settings</uicontrol>
+                    </menucascade>.</li>
+                <li>In the <uicontrol>Hostname</uicontrol> field, enter a host name.</li>
+                <li>In the <uicontrol>Mode</uicontrol> field, select <uicontrol>Single</uicontrol>
+                    mode.</li>
+                <li>Select <uicontrol>DHCP</uicontrol> to obtain an IP address from a DHCP
+                            server.<p><image href="../Images/admin/DHCP-network.png" width="600"
+                            id="image_nzp_l1s_3jb"/></p></li>
+                <li>Click <uicontrol>Save</uicontrol> and reboot the PBX to take effect.<p>You can
+                        check the IP address of the PBX from your router.</p></li>
+            </ol>
+        </p>
+    </body>
+</topic>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_nx3_tvn_4fb">
+    <title>Add a Ring Group</title>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/10/24"/>
+            <!--Carol-->
+            <revised modified="2018/10/24"/>
+            <!--Carol-->
+            <revised modified="2018/10/30"/>
+            <!--Carol-->
+            <revised modified="2019/01/22"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol>PBX</uicontrol>
+                        <uicontrol>Call Features</uicontrol>
+                        <uicontrol>Ring Group</uicontrol>
+                    </menucascade>, click <uicontrol>Add</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Configure the ring group.</cmd>
+                <info>
+                    <ul id="ul_rxg_fwn_4fb">
+                        <li><uicontrol>Number</uicontrol>: Use the default number or change the
+                            number.</li>
+                        <li><uicontrol>Name</uicontrol>: Give a name for the ring group to help you
+                            identify it.</li>
+                        <li><uicontrol>Ring Strategy</uicontrol>:<p>
+                                <ul id="ul_cnf_4wn_4fb">
+                                    <li><uicontrol>Ring All Simultaneously</uicontrol>: Ring all the
+                                        available extensions simultaneously. </li>
+                                    <li><uicontrol>Ring Sequentially</uicontrol>: Ring each
+                                        extension in the group one at a time.</li>
+                                </ul>
+                            </p></li>
+                        <li><uicontrol>Seconds to ring each member</uicontrol>: Define how long the
+                            system will wait to ring next member.</li>
+                        <li><uicontrol>Members</uicontrol>: Select the desired extensions to the
+                                <uicontrol>Selected</uicontrol> box.</li>
+                        <li><uicontrol>Failover Destination</uicontrol>: Define what will happen if
+                            none of the members in the ring group answer the call in the defined
+                            time.</li>
+                    </ul>
+                </info>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

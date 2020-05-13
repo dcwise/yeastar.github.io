@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_dvm_b3j_3cb">
+  <title>System Requirements for YMP</title>
+  <shortdesc>To deploy YMP server, you need to know the requirements of hardware, Ethernet port, and
+    operation system.</shortdesc>
+  <body>
+    <section id="section_nxx_t4m_mcb"><title>Hardware Requirements</title><p>The server used to host
+        the YMP should meet the following minimum requirements.</p><p>
+        <note>
+          <p>
+            <ul id="ul_xbt_f3g_h2b">
+              <li>The YMP server only supports Intel CPU.</li>
+              <li>Intel® Streaming SIMD Extensions 4 (Intel® SSE4) should be supported on the
+                CPU.</li>
+              <li>For Data center, we suggest that you use Intel Xeron E5 series CPU, and set the
+                YMP server storage to 1TB.</li>
+            </ul>
+          </p>
+        </note>
+      </p>The following table shows the minimum system requirements according to the PBX numbers
+      that will be created in the YMP server.<p>
+        <ul id="ul_phn_vby_nhb">
+          <li><b>CC:</b> Concurrent Calls. The concurrent calls in the YMP server.</li>
+        </ul>
+      </p><table frame="all" rowsep="1" colsep="1" id="table_imw_wwx_nhb">
+        <title>YMP Hardware Requirements</title>
+        <tgroup cols="8">
+          <colspec colname="c1" colnum="1" colwidth="1*"/>
+          <colspec colname="newCol2" colnum="2" colwidth="1.19*"/>
+          <colspec colname="c2" colnum="3" colwidth="1.01*"/>
+          <colspec colname="newCol3" colnum="4" colwidth="1.08*"/>
+          <colspec colname="newCol4" colnum="5" colwidth="1.04*"/>
+          <colspec colname="newCol5" colnum="6" colwidth="1.01*"/>
+          <colspec colname="newCol6" colnum="7" colwidth="1.04*"/>
+          <colspec colname="newCol7" colnum="8" colwidth="1.04*"/>
+          <thead>
+            <row>
+              <entry namest="c1" nameend="newCol2" id="ymp-requirements"/>
+              <entry>PBX <p>0-10</p></entry>
+              <entry>PBX <p>11-20</p></entry>
+              <entry>PBX <p>21-40</p></entry>
+              <entry>PBX<p>41-60</p></entry>
+              <entry>PBX <p>61-80</p></entry>
+              <entry>PBX <p>81-100</p></entry>
+            </row>
+          </thead>
+          <tbody>
+            <row>
+              <entry namest="c1" nameend="newCol2" align="center" valign="middle"
+                ><b>Memory</b></entry>
+              <entry align="center" valign="middle">4GB</entry>
+              <entry align="center" valign="middle">6GB</entry>
+              <entry align="center" valign="middle">8GB</entry>
+              <entry align="center" valign="middle">10GB</entry>
+              <entry align="center" valign="middle">12GB</entry>
+              <entry align="center" valign="middle">16GB</entry>
+            </row>
+            <row>
+              <entry namest="c1" nameend="newCol2" align="center" valign="middle"><b>CPU
+                  Frequency</b></entry>
+              <entry namest="c2" nameend="newCol7" align="center" valign="middle">Minimum 2.4GHz
+              </entry>
+            </row>
+            <row>
+              <entry morerows="5" align="center" valign="middle"><b>vCPU (Threads)</b></entry>
+              <entry align="center" valign="middle">0-20 CC</entry>
+              <entry align="center" valign="middle">2</entry>
+              <entry align="center" valign="middle">2</entry>
+              <entry align="center" valign="middle">4</entry>
+              <entry align="center" valign="middle">4</entry>
+              <entry align="center" valign="middle">6</entry>
+              <entry align="center" valign="middle">8</entry>
+            </row>
+            <row>
+              <entry align="center" valign="middle">21-50 CC</entry>
+              <entry align="center" valign="middle">4</entry>
+              <entry align="center" valign="middle">4</entry>
+              <entry align="center" valign="middle">6</entry>
+              <entry align="center" valign="middle">6</entry>
+              <entry align="center" valign="middle">8</entry>
+              <entry align="center" valign="middle">10</entry>
+            </row>
+            <row>
+              <entry align="center" valign="middle">51-200 CC</entry>
+              <entry align="center" valign="middle">6</entry>
+              <entry align="center" valign="middle">6</entry>
+              <entry align="center" valign="middle">8</entry>
+              <entry align="center" valign="middle">8</entry>
+              <entry align="center" valign="middle">10</entry>
+              <entry align="center" valign="middle">12</entry>
+            </row>
+            <row>
+              <entry align="center" valign="middle">201-300 CC</entry>
+              <entry align="center" valign="middle">8</entry>
+              <entry align="center" valign="middle">8</entry>
+              <entry align="center" valign="middle">10</entry>
+              <entry align="center" valign="middle">10</entry>
+              <entry align="center" valign="middle">12</entry>
+              <entry align="center" valign="middle">14</entry>
+            </row>
+            <row>
+              <entry align="center" valign="middle">301-400 CC</entry>
+              <entry align="center" valign="middle">10</entry>
+              <entry align="center" valign="middle">10</entry>
+              <entry align="center" valign="middle">12</entry>
+              <entry align="center" valign="middle">12</entry>
+              <entry align="center" valign="middle">14</entry>
+              <entry align="center" valign="middle">16</entry>
+            </row>
+            <row>
+              <entry align="center" valign="middle">401-500 CC</entry>
+              <entry align="center" valign="middle">12</entry>
+              <entry align="center" valign="middle">12</entry>
+              <entry align="center" valign="middle">14</entry>
+              <entry align="center" valign="middle">14</entry>
+              <entry align="center" valign="middle">16</entry>
+              <entry align="center" valign="middle">18</entry>
+            </row>
+            <row>
+              <entry morerows="1" align="center" valign="middle"><b>Storage</b></entry>
+              <entry align="center" valign="middle">System Disk</entry>
+              <entry align="center" valign="middle">50GB</entry>
+              <entry align="center" valign="middle">50GB</entry>
+              <entry align="center" valign="middle">100GB</entry>
+              <entry align="center" valign="middle">200GB</entry>
+              <entry align="center" valign="middle">300GB</entry>
+              <entry align="center" valign="middle">400GB</entry>
+            </row>
+            <row>
+              <entry align="center" valign="middle">Data Disk for Call Recording</entry>
+              <entry namest="c2" nameend="newCol7" align="center" valign="middle">Minimum 50GB<p>
+                  <note type="important">Minimum 60MB/s read speed and 60MB/s write speed.</note>
+                </p></entry>
+            </row>
+            <row>
+              <entry namest="c1" nameend="newCol2" align="center" valign="middle"
+                ><b>Ethernet</b></entry>
+              <entry namest="c2" nameend="newCol7" align="center" valign="middle">1000Mbit/s</entry>
+            </row>
+          </tbody>
+        </tgroup>
+      </table></section>
+    <section id="section_vxj_x4m_mcb">
+      <title>Ethernet Port Requirements</title>
+      <p>The YMP server needs 1 Ethernet port.</p>
+    </section>
+    <section id="section_ifq_v4m_mcb">
+      <title>Operation System Requirements</title>
+      <p>Ubuntu 16.04.2 (or 16.04.3 or 16.04.4) LTS Server Edition - 64 bit</p>
+      <p>
+        <note>Other Ubuntu versions are not tested and supported.</note>
+      </p>
+      <ul id="ul_fkm_yly_zcb">
+        <li><xref
+            href="https://update-ys2015-alicloud.oss-cn-hongkong.aliyuncs.com/Ubuntu/ubuntu-16.04.2-server-amd64.iso"
+            format="html" scope="external">Download Ubuntu 16.04.2 LTS</xref></li>
+      </ul>
+    </section>
+  </body>
+  <related-links>
+    <link href="aws_recommended_instance_type.dita#reference_zpq_ppl_x2b"/>
+    <link href="ali_recommended_instance_type.dita#reference_lhw_2zq_ndb"/>
+  </related-links>
+</topic>

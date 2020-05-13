@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_hkw_r4c_phb">
+    <title>OpenVPN Certificates and Keys</title>
+    <shortdesc>Before you start to set up the OpenVPN network, you need to make the related
+        certificates and keys for VPN server and VPN clients.</shortdesc>
+    <conbody>
+        <p>This topic describes how to set up your own Certificate Authority (CA) and generate
+            certificates and keys for an OpenVPN server and multiple clients on Windows 10 via
+            OpenVPN.</p>
+    </conbody>
+</concept>
+<?oxy_options track_changes="on"?>

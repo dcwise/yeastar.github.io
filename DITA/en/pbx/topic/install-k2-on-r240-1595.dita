@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="install-k2-on-r240">
+    <title>Install Yeastar K2 IPPBX System on Dell EMC PowerEdge R240 Server</title>
+    <shortdesc>After writing K2 Image in the USB, you can install K2 system on Dell EMC PowerEdge
+        R240 server.</shortdesc>
+    <body>
+        <section><?oxy_comment_start author="carol" timestamp="20190927T142441+0800" comment="新增"?><title>Before
+                You Begin</title>You need to <xref
+                href="k2-write-ippbx-image-in-a-usb.dita#k2-write-k2-image-in-a-usb">write Yeastar
+                K2 image in a USB</xref>, then connect the USB driver to the physical machine to
+            start installing the K2 system.<?oxy_comment_end?></section>
+        <section id="section_zv2_4yt_2jb">
+            <title>Step1. Prepare before Installation Process</title>
+            <?oxy_comment_start author="carol" timestamp="20190929T131027+0800" comment="这是必须的吗？"?>
+            <note>Do not connect R240 server to network.<?oxy_comment_end?></note>
+            <p>
+                <ol id="ol_cwy_pyt_2jb">
+                    <li>Connect the USB driver to
+                        <?oxy_insert_start author="carol" timestamp="20190929T131104+0800"?>the USB
+                        2.0 port on <?oxy_insert_end?> Dell EMC PowerEdge R240
+                            Server.<p><?oxy_comment_start author="carol" timestamp="20190929T131125+0800" comment="图片标识清楚就好了。
+这边加一句说明：
+Note： The installation process cannot work with USB 3.0. "?>The
+                            USB 2.0 port is at the right control
+                                panel.<?oxy_comment_end?></p><p><?oxy_comment_start author="carol" timestamp="20190929T131522+0800" comment="这个最好是放完整的硬件图，能让人清楚地知道方位。"?><image
+                                href="../Images/connect-usb.jpg" id="image_hny_jw5_2jb" width="400"
+                            /><?oxy_comment_end?></p></li>
+                    <li>Power on the system by pressing the power button. During boot, press
+                            <b>F2</b> immediately after you see <uicontrol>F2 = System
+                            Setup</uicontrol> to enter the <uicontrol>System
+                            Setup</uicontrol>.<note>If the operating system begins to load before
+                            you press F2, wait for the system to finish booting, and then restart
+                            the system and try again.</note><p><image
+                                href="../Images/admin/k2-r240-f2.jpg" width="400"
+                                id="image_xgx_xrz_2jb"/></p></li>
+                    <li>Go to <menucascade>
+                            <uicontrol>System BIOS</uicontrol>
+                            <uicontrol> Boot Settings</uicontrol>
+                        </menucascade>, set the <uicontrol>Boot Mode</uicontrol> to
+                            <uicontrol>UEFI</uicontrol>.<p><image
+                                href="../Images/admin/k2-r240-BIOS.jpg" width="400"
+                                id="image_i3n_fsz_2jb"/></p></li>
+                    <li>Press <uicontrol>Ctrl</uicontrol> + <uicontrol>Alt</uicontrol> +
+                            <uicontrol>Delete</uicontrol> key to reboot the sever.</li>
+                    <li>During boot, press <uicontrol>F11</uicontrol> to enter the <uicontrol>Boot
+                            Manager</uicontrol>.</li>
+                    <li>Select <uicontrol>One-shot UEFI Boot Menu</uicontrol>, and then select the
+                        legacy boot option: <uicontrol>Disk connected to front USB
+                                1</uicontrol>.<p><image href="../Images/admin/k2-r240-usb.jpg"
+                                width="400" id="image_ikj_4tz_2jb"/></p></li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_k5d_rw5_2jb">
+            <title>Step 2. Configure language and location</title>
+            <p>The installer will begin with a prompt to select a language for the installation
+                wizard.</p>
+            <p>
+                <ol id="ol_mzx_k1z_b3b">
+                    <li>Select a language for the installation wizard.<p><image
+                                href="../Images/admin/k2-select-language.jpg" id="image_atr_p1z_b3b"
+                                width="650"/></p></li>
+                    <li>Select <uicontrol>Install Ubuntu Server</uicontrol>.<p><image
+                                href="../Images/admin/k2-install-ubunto-server.jpg"
+                                id="image_jbs_bbz_b3b" width="500"/></p></li>
+                    <li>Select a language to be used for the installation process and installed
+                                system.<p><image
+                                href="../Images/admin/k2-select-language-for-process.jpg"
+                                id="image_e41_swd_23b"/></p></li>
+                    <li>Select your location based on the language you selected.<p><image
+                                href="../Images/admin/k2-select-location.jpg" id="image_r13_twd_23b"
+                            /></p></li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_tbp_2bz_b3b">
+            <title>Step 2. Configure the keyboard</title>
+            <p>
+                <ol id="ol_mct_gbz_b3b">
+                    <li>Select <uicontrol>NO</uicontrol>, not to do keyboard layout
+                                detection.<p><image href="../Images/admin/k2-keyboard-no.jpg"
+                                id="image_h3g_kbz_b3b"/></p></li>
+                    <li>Select a country of origin for the keyboard of this computer.<p><image
+                                href="../Images/admin/k2-country-of-keyboard.jpg"
+                                id="image_rtt_gxd_23b"/></p></li>
+                    <li>Select the layout matching the keyboard for your machine.<p><image
+                                href="../Images/admin/k2-keyboard-layout.jpg" id="image_akb_pxd_23b"
+                            /></p></li>
+                    <li>If it is the first time to install K2 on
+                        R240<?oxy_insert_start author="carol" timestamp="20190929T131551+0800"?>
+                        server<?oxy_insert_end?>, you may be
+                        prompted<?oxy_insert_start author="carol" timestamp="20190929T131555+0800"?>
+                        that<?oxy_insert_end?> the installation CD-ROM couldn't be mounted.
+                        <?oxy_insert_start author="carol" timestamp="20190929T131617+0800"?>To solve
+                        this issue,
+                        d<?oxy_insert_end?><?oxy_delete author="carol" timestamp="20190929T131624+0800" content="D"?>isconnect
+                        your USB driver and reconnect it
+                                again.<p><?oxy_delete author="carol" timestamp="20190929T132400+0800" content="&lt;image href=&quot;../Images/mount-usb.jpg&quot; id=&quot;image_mwr_21v_2jb&quot; width=&quot;650&quot;/&gt;"?><?oxy_insert_start author="carol" timestamp="20190929T132401+0800"?><image
+                                href="../Images/admin/detect-and-mount-cd-rom.png"
+                                id="image_plv_fg1_fjb"/><?oxy_insert_end?></p></li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_hp2_rfv_2jb">
+            <title>Step 3. <?oxy_insert_start author="carol" timestamp="20190929T132424+0800"?>Skip
+                network
+                configuration<?oxy_insert_end?><?oxy_delete author="carol" timestamp="20190929T132423+0800" content="Cancel to configure the Network"?></title>
+            <p>
+                <ol>
+                    <li>Select the primary network
+                            interface.<p><?oxy_delete author="carol" timestamp="20190929T133223+0800" content="&lt;image href=&quot;../Images/network-interface.jpg&quot; width=&quot;650&quot; id=&quot;image_xkg_jbv_2jb&quot;/&gt;"?></p><?oxy_insert_start author="carol" timestamp="20190929T133227+0800"?><p><image
+                                href="../Images/admin/install-k2-configure-the-network.png"
+                                id="image_ah1_cl1_fjb" width="650"/></p><?oxy_insert_end?></li>
+                    <li>When you see the DHCP configuration process, press
+                            <uicontrol>Enter</uicontrol> key to
+                            cancel.<p><?oxy_delete author="carol" timestamp="20190929T133248+0800" content="&lt;image href=&quot;../Images/admin/k2-nework-dhcp.jpg&quot; id=&quot;image_jyc_dfv_2jb&quot; width=&quot;650&quot;/&gt;"?></p><?oxy_insert_start author="carol" timestamp="20190929T133251+0800"?><p><image
+                                href="../Images/admin/install-k2-configuring-network-with-dhcp.png"
+                                id="image_kdk_hy1_fjb"/></p><?oxy_insert_end?>You will be
+                        prompted<?oxy_insert_start author="carol" timestamp="20190929T133258+0800"?>
+                        that<?oxy_insert_end?> the network auto configuration failed, press
+                            <uicontrol>Enter</uicontrol> key to continue.
+                            <p><?oxy_delete author="carol" timestamp="20190929T133313+0800" content="&lt;image href=&quot;../Images/admin/k2-network-failed.jpg&quot; id=&quot;image_t51_cfv_2jb&quot; width=&quot;650&quot;/&gt;"?></p><?oxy_insert_start author="carol" timestamp="20190929T133318+0800"?><p><image
+                                href="../Images/admin/install-k2-network-autoconfiguration-failed.png"
+                                id="image_bgj_kk1_fjb"/></p><?oxy_insert_end?></li>
+                    <li>Select <uicontrol>Do not configure the network at this
+                            time</uicontrol>.<p><?oxy_delete author="carol" timestamp="20190929T133352+0800" content="&lt;image href=&quot;../Images/admin/k2-not-network.jpg&quot; id=&quot;image_gcb_4fv_2jb&quot; width=&quot;650&quot;/&gt;"?></p><?oxy_insert_start author="carol" timestamp="20190929T133356+0800"?><p><image
+                                href="../Images/admin/install-k2-do-not-configure-the-network-this-time.png"
+                                id="image_l55_qx1_fjb" width="650"/></p><?oxy_insert_end?></li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_qvj_4bz_b3b">
+            <title>Step 4. Plan and create partition disk</title>
+            <ol id="ol_eqb_qbz_b3b">
+                <li>Select <uicontrol>Manual</uicontrol> partitioning method.<p><image
+                            href="../Images/admin/k2-manual-partition-disk.jpg"
+                            id="image_ogp_5bz_b3b"/></p></li>
+                <li importance="optional">
+                    <?oxy_comment_start author="carol" timestamp="20190929T133724+0800" comment="条件置前"?><?oxy_delete author="carol" timestamp="20190929T133521+0800" content="Delete all the existed partitions if there has old partitions."?><?oxy_insert_start author="carol" timestamp="20190929T133521+0800"?>If
+                    the system has partitions, delete all of the existed
+                    partitions.<?oxy_comment_end?><?oxy_insert_end?></li>
+                <li>Select the partition of the
+                            <?oxy_insert_start author="carol" timestamp="20190929T133750+0800"?>system<?oxy_insert_end?><?oxy_delete author="carol" timestamp="20190929T133746+0800" content="virtual machine"?>.<p><image
+                            href="../Images/admin/k2-select-partition-VM.jpg" id="image_ogy_zbz_b3b"
+                        /></p></li>
+                <li>Select <uicontrol>Yes</uicontrol> to create new empty partition table on this
+                            device.<p><image
+                            href="../Images/admin/k2-create-new-partition-table.jpg"
+                            id="image_ivc_hcz_b3b"/></p></li>
+                <li>Create partition 1: root directory for system files.<ol id="ol_zzk_3cz_b3b">
+                        <li>Select the <uicontrol>FREE SPACE</uicontrol> to create partition
+                                    1.<p><image
+                                    href="../Images/admin/k2-select-free-space-partition1.jpg"
+                                    id="image_tmg_ncz_b3b"/></p></li>
+                        <li>Select <uicontrol>Create a new
+                                    partition</uicontrol>.<p><?oxy_attributes width="&lt;change type=&quot;inserted&quot; author=&quot;carol&quot; timestamp=&quot;20190929T133910+0800&quot; /&gt;"?><image
+                                    href="../Images/admin/k2-create-new-partition-partition1.jpg"
+                                    id="image_o3j_xcz_b3b" width="400"/></p></li>
+                        <li>Set the partition
+                                size.<p><?oxy_delete author="carol" timestamp="20190929T133934+0800" content="Partition size recommend"?><?oxy_insert_start author="carol" timestamp="20190929T133934+0800"?>Recommended
+                                size<?oxy_insert_end?>: 50<?oxy_insert_start author="carol" timestamp="20190929T133923+0800"?>
+                                <?oxy_insert_end?>GB.</p><p><image
+                                    href="../Images/admin/k2-set-partition-size-partition1.jpg"
+                                    id="image_khy_1dz_b3b"/></p></li>
+                        <li>Choose the partition type as <uicontrol>Primary</uicontrol>.<p><image
+                                    href="../Images/admin/k2-choose-pritition-type-partition1.jpg"
+                                    id="image_kw2_fdz_b3b"/></p></li>
+                        <li>Select location for the partition as
+                                    <uicontrol>Beginning</uicontrol>.<p><image
+                                    href="../Images/admin/k2-select-beginning-location-partition1.jpg"
+                                    id="image_xzr_jdz_b3b"/></p></li>
+                        <li>Set <uicontrol>Use as</uicontrol> and <uicontrol>Mount point</uicontrol>
+                            for the partition 1, then select <uicontrol>Done settings up the
+                                partition</uicontrol>.<ul id="ul_uh2_ndz_b3b">
+                                <li><uicontrol>Use as</uicontrol>: Ext4 journaling file system</li>
+                                <li><uicontrol>Mount point</uicontrol>: /</li>
+                                <li><?oxy_comment_start author="Sunmy" timestamp="20190926T175722+0800" comment="add"?><uicontrol>Bootable
+                                        flag</uicontrol>: on<?oxy_comment_end?></li>
+                            </ul><p><?oxy_comment_start author="Sunmy" timestamp="20190926T180235+0800" comment="改"?><image
+                                    href="../Images/admin/k2-set-mount-point-parition1.jpg"
+                                    id="image_czk_5dz_b3b"/><?oxy_comment_end?></p></li>
+                    </ol></li>
+                <li>Create partition
+                    2:<?oxy_comment_start author="Sunmy" timestamp="20190917T105856+0800" comment="add" flag="done"?>
+                    home directory for data and recordings.<?oxy_comment_end?><ol
+                        id="ol_fbz_xdz_b3b">
+                        <li>Select the <uicontrol>FREE SPACE</uicontrol> to create partition 2.
+                                    <p><image
+                                    href="../Images/admin/k2-select-free-space-partition2.png"
+                                    id="image_khq_42z_b3b"/></p></li>
+                        <li>Select <uicontrol>Create a new
+                                    partition</uicontrol>.<p><?oxy_attributes width="&lt;change type=&quot;inserted&quot; author=&quot;carol&quot; timestamp=&quot;20190929T134013+0800&quot; /&gt;"?><image
+                                    href="../Images/admin/k2-create-new-partition-partition2.png"
+                                    id="image_pc4_cx5_2jb" width="400"/></p></li>
+                        <li>Set the partition size.<p>
+                                <note>
+                                    <ul id="ul_ljh_x4t_cjb">
+                                        <li>1000-minute recordings require about 1GB space.</li>
+                                        <li>We recommend that you set a larger space for the
+                                            partition to have more space to store your recordings
+                                            and other data. </li>
+                                    </ul>
+                                </note>
+                            </p><p><image
+                                    href="../Images/admin/k2-set-partition-size-partition2.png"
+                                    id="image_qc4_cx5_2jb" width="650"/></p></li>
+                        <li>Choose the partition type as
+                                    <uicontrol>Logical</uicontrol>.<p><?oxy_attributes width="&lt;change type=&quot;inserted&quot; author=&quot;carol&quot; timestamp=&quot;20190929T134022+0800&quot; /&gt;"?><image
+                                    href="../Images/admin/k2-choose-pritition-type-partition2.png"
+                                    id="image_w55_q2z_b3b" width="300"/></p></li>
+                        <li>Select location for the partition as
+                                    <uicontrol>Beginning</uicontrol>.<p><image
+                                    href="../Images/admin/k2-select-beginning-location-partition2.png"
+                                    id="image_rc4_cx5_2jb"/></p></li>
+                        <li>Set <uicontrol>Use as</uicontrol> and <uicontrol>Mount point</uicontrol>
+                            for the partition 2, then select <uicontrol>Done settings up the
+                                partition</uicontrol>.<ul id="ul_y55_q2z_b3b">
+                                <li>Use as: Ext4 journaling file system</li>
+                                <li>Mount point: /home</li>
+                            </ul><p><image href="../Images/admin/k2-set-mount-point-partition2.png"
+                                    id="image_sc4_cx5_2jb"/></p></li>
+                    </ol></li>
+                <li>Create partition 3: swap area for storing data when system hibernates.<ol
+                        id="ol_olq_tfz_b3b">
+                        <li>Select the <uicontrol>FREE SPACE</uicontrol> to create a new partition.
+                                    <p><image
+                                    href="../Images/admin/k2-select-free-space-partition3.png"
+                                    id="image_tc4_cx5_2jb"/></p></li>
+                        <li>Select <uicontrol>Create a new partition</uicontrol>.<p><image
+                                    href="../Images/admin/k2-create-new-partition-partition3.png"
+                                    id="image_uc4_cx5_2jb"/></p></li>
+                        <li>Set the partition size.<p>Partition size recommend: 10G.</p><p><image
+                                    href="../Images/admin/k2-set-partition-size-partition3.png"
+                                    id="image_vc4_cx5_2jb"/></p></li>
+                        <li>Select the partition type as
+                                    <uicontrol>Logical</uicontrol>.<p><?oxy_attributes width="&lt;change type=&quot;inserted&quot; author=&quot;carol&quot; timestamp=&quot;20190929T134049+0800&quot; /&gt;"?><image
+                                    href="../Images/admin/k2-choose-pritition-type-partition3.png"
+                                    id="image_wc4_cx5_2jb" width="300"/></p></li>
+                        <li>Select location for the partition as
+                                    <uicontrol>Beginning</uicontrol>.<p><image
+                                    href="../Images/admin/k2-select-beginning-location-partition3.png"
+                                    id="image_xc4_cx5_2jb"/></p></li>
+                        <li>Set <uicontrol>Use as</uicontrol> and <uicontrol>Mount point</uicontrol>
+                            for the partition 3, then select <uicontrol>Done settings up the
+                                partition</uicontrol>.<ul id="ul_ulq_tfz_b3b">
+                                <li>Use as: swap area</li>
+                            </ul><p><image href="../Images/admin/k2-set-mount-point-partition3.png"
+                                    id="image_yc4_cx5_2jb"/></p></li>
+                    </ol></li>
+                <li>Select <uicontrol>Finish partitioning and write changes to
+                            disk</uicontrol>.<p><image
+                            href="../Images/admin/k2-finish-partition.jpg" id="image_ehx_wgz_b3b"
+                        /></p></li>
+                <li>Select <uicontrol>Yes</uicontrol>, write the changes to disks.<p><image
+                            href="../Images/admin/k2-write-change-disk.jpg" id="image_jsk_ygz_b3b"
+                        /></p></li>
+            </ol>
+        </section>
+        <section id="section_ep2_1hz_b3b">
+            <title>Step 5. Install the IPPBX System</title>
+            <p>After finishing partitioning and write changes to disk,
+                <?oxy_delete author="carol" timestamp="20190929T134122+0800" content="the virtual machine starts to install the system"?><?oxy_insert_start author="carol" timestamp="20190929T134124+0800"?>the
+                K2 system starts to be installed on the server<?oxy_insert_end?>. Wait for a few
+                minutes for the installation.<ol id="ol_gzq_2hz_b3b">
+                    <li>Select <uicontrol>No automatic updates</uicontrol>.<p>
+                            <note type="important">Do not select other options.<p><image
+                                        href="../Images/admin/k2-no-automatic-updates.jpg"
+                                        id="image_wlr_xhz_b3b"/></p></note>
+                        </p></li>
+                    <li>Select <uicontrol>Continue</uicontrol> to skip this step.<p><image
+                                href="../Images/admin/k2-install-system-continute.jpg"
+                                id="image_u43_b3z_b3b"/></p></li>
+                    <li>Select <uicontrol>Yes</uicontrol> to install the GPUB boot loader.<p><image
+                                href="../Images/admin/k2-select-yes-install.jpg"
+                                id="image_hht_c3z_b3b"/></p></li>
+                    <li>When you are
+                        prompted<?oxy_insert_start author="carol" timestamp="20190929T134253+0800"?>
+                        that<?oxy_insert_end?> the installation is complete, disconnect your USB
+                        driver,
+                        <?oxy_delete author="carol" timestamp="20190929T134303+0800" content="and "?>then
+                        select <uicontrol>Continue</uicontrol> to boot into your system.<p><image
+                                href="../Images/admin/k2-finish-intallation.jpg"
+                                id="image_c5f_23z_b3b"/></p><p>When the following screen displays,
+                            the IPPBX system is successfully
+                                installed.</p><p><?oxy_attributes width="&lt;change type=&quot;inserted&quot; author=&quot;carol&quot; timestamp=&quot;20190929T134324+0800&quot; /&gt;"?><image
+                                href="../Images/admin/k2-install-success-screen.jpg"
+                                id="image_x2p_h3z_b3b" width="500"/></p></li>
+                </ol></p>
+        </section>
+    </body>
+</topic>
+<?oxy_options track_changes="on"?>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="openvpn-allocate-a-static-IP-address-for-each-VPN-client">
+    <title>Allocate a static IP address for a VPN client</title>
+    <shortdesc>By default, Yeastar VPN Server dynamically assigns an IP address from its IP address
+        pool to the VPN clients. To take more control of the client activities, you can assign a
+        static IP address for the VPN clients. This article shows how to assign a fixed IP address
+        to the VPN clients.</shortdesc>
+    <body>
+        <p>Allocation for static IP addresses is supported on <ph keyref="product_name"/> version
+            30.4.0.25 or later.</p>
+        <section id="section_r1x_tnx_33b">
+            <title>Allocate a static IP address for a client in TUN device mode</title>
+            <p>
+                <ol id="ol_dz1_gh2_33b">
+                    <li>Log in the PBX web interface, go to <menucascade>
+                            <uicontrol>VPN Server</uicontrol>
+                            <uicontrol>Static IP</uicontrol>
+                        </menucascade>, click <uicontrol>Add</uicontrol>.</li>
+                    <li>Specify a client which you want to assign a static IP address to.<ul
+                            id="ul_oyd_4s2_33b">
+                            <li>If you use <xref
+                                    href="openvpn-build-up-the-openvpn-server.dita#build_up_the_openvpn_server/verification_mode"
+                                        ><uicontrol>CA Cert + Client Cert</uicontrol></xref>
+                                verification mode, enter the Common Name of this client in the
+                                    <uicontrol>CN</uicontrol> filed.<p>You can double click the
+                                    client certificate <filepath>client.crt</filepath>, go to <menucascade>
+                                        <uicontrol>Details</uicontrol>
+                                        <uicontrol> Subject</uicontrol>
+                                    </menucascade> and find <uicontrol>CN</uicontrol>.</p><p><image
+                                        href="../Images/admin/openvpn-client-cn.png"
+                                        id="image_gv2_ygy_k3b" width="300"/></p></li>
+                            <li>If you use <xref
+                                    href="openvpn-username-password-authentication.dita#openvpn-create-account-password-for-each-client"
+                                    >username/password authentication</xref>, and you have created
+                                an account for the specified client, select a client account from
+                                    <uicontrol>Account Name</uicontrol> field.</li>
+                        </ul></li>
+                    <li>Assign the IP address, subnet mask and TUN remote IP address to this client.<p>
+                            <note type="tip">The virtual client IP address and TUN remote IP address
+                                must be taken from successive /30 subnets in order to be compatible
+                                with Windows clients and the TAP-Windows driver. Specifically, the
+                                last octet in the IP address of the virtual client IP address and
+                                TUN remote IP address must be taken from the
+                                    following:<codeblock>[ 5,  6] [  9, 10] [ 13, 14] [ 17, 18] [ 21, 22] [ 25, 26] [ 29, 30] [ 33, 34] [ 37, 38] 
+[ 41, 42] [ 45, 46] [ 49, 50] [ 53, 54] [ 57, 58] [ 61, 62] [ 65, 66] [ 69, 70] [ 73, 74]
+[ 77, 78] [ 81, 82] [ 85, 86] [ 89, 90] [ 93, 94] [ 97, 98] [101,102] [105,106] [109,110] 
+[113,114] [117,118] [121,122] [125,126] [129,130] [133,134] [137,138] [141,142] [145,146] 
+[149,150] [153,154] [157,158] [161,162] [165,166] [169,170] [173,174] [177,178] [181,182] 
+[185,186] [189,190] [193,194] [197,198] [201,202] [205,206] [209,210] [213,214] [217,218] 
+[221,222] [225,226] [229,230] [233,234] [237,238] [241,242] [245,246] [249,250] [253,254]</codeblock><p>In
+                                    this example, the IP address is set to <i>10.8.0.5</i>, then the
+                                    TUN remote IP address must be <i>10.8.0.6</i>.</p><p><image
+                                        href="../Images/admin/openvpn-staic-ip-client.png"
+                                        id="image_tm3_thy_5db" width="350"/><image
+                                        href="../Images/admin/openvpn-set-static-IP-tun-account.jpg"
+                                        id="image_orz_bpx_33b" width="350"/></p></note>
+                        </p></li>
+                    <li>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_i51_1y4_h3b">
+            <title>Allocate a static IP address for a client in TAP mode</title>
+            <ol id="ol_mpr_pwf_h3b">
+                <li>Log in the PBX web interface, go to <menucascade>
+                        <uicontrol>VPN Server</uicontrol>
+                        <uicontrol>Static IP</uicontrol>
+                    </menucascade>, click <uicontrol>Add</uicontrol>.</li>
+                <li>Specify a client which you want to assign a static IP address to.<ul
+                        id="ul_rgn_nt2_33b">
+                        <li>If you use <xref
+                                href="openvpn-build-up-the-openvpn-server.dita#build_up_the_openvpn_server/verification_mode"
+                                    ><uicontrol>CA Cert + Client Cert</uicontrol></xref>
+                            verification mode, enter the Common Name of this client in the
+                                <uicontrol>CN</uicontrol> filed.<p>You can double click the client
+                                certificate <filepath>client.crt</filepath>, go to <menucascade>
+                                    <uicontrol>Details</uicontrol>
+                                    <uicontrol> Subject</uicontrol>
+                                </menucascade> and find <uicontrol>CN</uicontrol>.</p><p><image
+                                    href="../Images/admin/openvpn-client-cn.png" width="300"
+                                    id="image_eql_h3y_k3b"/></p></li>
+                        <li>If you use <xref
+                                href="openvpn-username-password-authentication.dita#openvpn-create-account-password-for-each-client"
+                                >username/password authentication</xref>, and you have created an
+                            account for the specified client, select a client account from
+                                <uicontrol>Account Name</uicontrol> field.</li>
+                    </ul></li>
+                <li>Assign the IP address to this client in the <uicontrol>IP Address</uicontrol> field.<p>
+                        <note>The IP address should be in the address pool of the VPN server. The
+                            allowed IP range is from XXX.XXX.XXX.3 to XXX.XXX.XXX.253.</note>
+                    </p></li>
+                <li>Enter the subnet mask in the <uicontrol>Subnet Mask</uicontrol> field.<p><image
+                            href="../Images/admin/openvpn-set-static-IP-tap.png" width="350"
+                            id="image_cpy_np3_33b"/><image
+                            href="../Images/admin/openvpn-set-static-IP-tap-account.jpg"
+                            id="image_mmf_252_33b" width="350"/></p></li>
+                <li>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</li>
+            </ol>
+        </section>
+    </body>
+</topic>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_y3j_ns1_ydb">
+    <title>Dial Patterns of Outbound Route</title>
+    <shortdesc>This topic describes dial pattern settings of Outbound Route to help you understand
+        and configure the dial patterns of Outbound Route.</shortdesc>
+    <conbody>
+        <section id="section_imy_zs1_ydb">
+            <title>Pattern</title>
+            <p>A pattern specifies routing rules to route a call based on the digits dialed by a
+                user. The PBX matches a dial pattern and routes the call out based on the dial
+                    pattern.<table frame="all" rowsep="1" colsep="1" id="table_vj1_5gv_tcb">
+                    <tgroup cols="2">
+                        <colspec colname="c1" colnum="1" colwidth="1*"/>
+                        <colspec colname="c2" colnum="2" colwidth="3.76*"/>
+                        <thead>
+                            <row>
+                                <entry>Pattern</entry>
+                                <entry>Description</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry><i>X</i></entry>
+                                <entry>Refers to any digit between 0 and 9.</entry>
+                            </row>
+                            <row>
+                                <entry><i>Z</i></entry>
+                                <entry>Refers to any digit between 1 and 9.</entry>
+                            </row>
+                            <row>
+                                <entry><i>N</i></entry>
+                                <entry>Refers to any digit between 2 and 9.</entry>
+                            </row>
+                            <row>
+                                <entry><i>[###]</i></entry>
+                                <entry>Refers to any digit in the brackets, example [123] would
+                                    match the numbers 1, 2, or 3. <p>Range of numbers can be
+                                        specified with a dash, example [136-8] would match the
+                                        numbers 1, 3, 6, 7, and 8.</p></entry>
+                            </row>
+                            <row>
+                                <entry><i>.</i></entry>
+                                <entry>Wildcard <i>.</i> matches one or more numbers.<p>Example
+                                            <i>9011.</i> matches any numbers starting with 9011
+                                        (excluding 9011 itself).</p></entry>
+                            </row>
+                            <row>
+                                <entry><i>!</i></entry>
+                                <entry>
+                                    <p product="s-series">Wildcard <i>!</i> has different meanings
+                                        for SIP extensions and FXS extensions.</p>
+                                    <p>
+                                        <ul id="ul_qwr_ncj_3jb">
+                                            <li product="s-series">If the call is made by a SIP
+                                                extension, <i>!</i> matches one or more
+                                                  characters.<p>Example <i>9011!</i> matches any
+                                                  numbers starting with 9011 (including 9011
+                                                  itself).</p></li>
+                                        </ul>
+                                    </p>
+                                    <p>
+                                        <ul id="ul_gbt_4cj_3jb">
+                                            <li>
+                                                <p product="s-series">If the call is made by an FXS
+                                                  extension, <i>!</i> limits the digit and number
+                                                  that users dial.</p>
+                                                <p product="s-series">Example: Set
+                                                  <uicontrol>Pattern</uicontrol> as <i>9011!</i>,
+                                                  only when users dials <i>9011</i> will the PBX
+                                                  send the call out.</p>
+                                            </li>
+                                        </ul>
+                                    </p>
+                                    <p product="cloudpbx k2">Wildcard <i>!</i> matches none or more
+                                        than one characters.</p>
+                                    <p product="cloudpbx k2">Example <i>9011!</i> matches any
+                                        numbers starting with 9011 (including 9011 itself).</p>
+                                </entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table></p>
+        </section>
+        <section id="section_zsm_bt1_ydb">
+            <title><b>Strip</b></title>
+            <p><uicontrol>Strip</uicontrol> is an optional setting, it defines how many digits will
+                be stripped from the front of the dialed number before the call is placed.</p>
+            <p><b>Example</b>: </p>
+            <p>If you set <uicontrol>Pattern</uicontrol> as <i>9.</i> and set
+                    <uicontrol>Strip</uicontrol> as <i>1</i>. </p>
+            <p>If a user wants to call number 1588902923, he/she should dial 91588902923. The PBX
+                will strip digit 9 from the dialed number, and call the number 1588902923.</p>
+        </section>
+        <section id="section_p31_ft1_ydb">
+            <title><b>Prepend</b></title>
+            <p><uicontrol>Prepend</uicontrol> is an optional setting. The prepend will be added to
+                the beginning of a successful match. If the dialed number matches the
+                    <uicontrol>Pattern</uicontrol>, the prepend will be added to the beginning of
+                the number before placing the call.</p>
+            <p><b>Example</b>:</p>
+            <p>If a trunk requires 10-digit dialing, but users are more comfortable with 7-digit
+                dialing, you can  prepend a 3-digit area code to all 7-digit phone numbers before
+                the calls are placed. </p>
+        </section>
+        <section id="section_u5r_h51_ydb">
+            <title>Prefix and dial patterns</title>
+            <p>
+                <dl>
+                    <dlentry>
+                        <dt>Scenarios</dt>
+                        <dd>
+                            <uicontrol>Prefix</uicontrol> setting appears when you are configuring
+                            the following settings:</dd>
+                        <dd>
+                            <ul id="ul_xxg_dbv_hlb">
+                                <li><xref href="mobility-extension.dita">Mobility Extension</xref>
+                                </li>
+                                <li>Mobile phone number for <xref
+                                        href="add_notification_contacts.dita#task_yn4_bq1_ydb"
+                                        >Notification Contacts</xref></li>
+                                <li><xref
+                                        href="forward-incoming-calls-to-an-external-number-with-IVR.dita"
+                                        >External number for IVR keypress</xref></li>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                </dl>
+                <dl>
+                    <dlentry>
+                        <dt>How to configure Prefix</dt>
+                        <dd>You need to configure <uicontrol>Prefix</uicontrol> according to the
+                            dial pattern settings on your outbound route. If the
+                                <uicontrol>Prefix</uicontrol> is not configured correctly, the PBX
+                            cannot call to the external number successfully.</dd>
+                        <dd>
+                            <ul id="ul_aj2_5bv_hlb">
+                                <li><b>Leave Prefix setting blank</b><p>If the
+                                            <uicontrol>Strip</uicontrol> of outbound route is not
+                                        set, you don't have to add a prefix before the phone
+                                        number.</p><p>As the following figure shows, only the
+                                        destination number that starts with digit <i>1</i> can be
+                                        called out through this outbound route.</p><p>For example,
+                                        to call number 125451, you should dial the number 125451
+                                        directly.</p><p><image href="../Images/admin/no_strip.png"
+                                            id="image_uly_cz1_ydb"/></p></li>
+                                <li><b>Add prefix before a number</b><p>If
+                                            <uicontrol>Strip</uicontrol> is set, you need to set the
+                                        prefix according to the
+                                        <uicontrol>Patterns</uicontrol>.</p><p>As the following
+                                        figure shows, to make calls through the outbound route, you
+                                        need to add prefix <i>9</i> before the number, and the
+                                        destination number should start with digit <i>1</i>.
+                                        </p><p>For example, to call number 125451, you should add
+                                        prefix 9 before the number 125451.</p><p><image
+                                            href="../Images/admin/have_strip.png"
+                                            id="image_tf3_tz1_ydb"/></p></li>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                </dl>
+            </p>
+        </section>
+    </conbody>
+    <related-links>
+        <link href="outbound_route_examples.dita#topic_ufc_lr5_tcb"/>
+    </related-links>
+</concept>

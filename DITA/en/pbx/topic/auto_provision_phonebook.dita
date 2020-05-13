@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_os5_5ny_scb">
+    <title>Auto Provision Phonebook</title>
+    <shortdesc>You can upload a phonebook to the PBX, and auto provision the phonebook to all the
+        users' phones.</shortdesc>
+    <taskbody>
+        <context>
+            <p>
+                <note>
+                    <ul id="ul_y13_m2m_tcb">
+                        <li>After auto provisioning phonebooks to the users' phones, the existing
+                            phonebooks on their phones will disappear.</li>
+                        <li>Auto provisioning phonebook only works for the phones that were
+                            registered to the PBX via auto provisioning.</li>
+                    </ul>
+                </note>
+            </p>
+        </context>
+        <steps id="steps_czj_l2m_tcb">
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Auto Provisioning</uicontrol>
+                        <uicontrol>Phonebook</uicontrol>
+                        <uicontrol>Phonebook</uicontrol>
+                    </menucascade>, click <uicontrol>Upload Phonebook</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>On the configuration page, select the phone manufacturer, and click
+                        <uicontrol>Browse</uicontrol> to choose an xml file.</cmd>
+                <info>
+                    <note>
+                        <ul id="ul_erk_2nn_tcb">
+                            <li>The file name should not contain special characters.</li>
+                            <li>To make an xml file, contact your phone manufacturer; you can also
+                                log in the phone web interface, export an xml file to start
+                                with.</li>
+                        </ul>
+                    </note>
+                </info>
+                <info><image href="../Images/admin/autop_upload_phonebook.png"
+                        id="image_g24_2fm_tcb"/></info>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Upload</uicontrol> to upload the file to PBX.</cmd>
+            </step>
+            <step>
+                <cmd>Reboot the phone(s) and update phonebook</cmd>
+            </step>
+        </steps>
+    </taskbody>
+    <related-links>
+        <link href="auto_provision_contacts.dita#task_b5h_tfm_tcb"/>
+    </related-links>
+</task>

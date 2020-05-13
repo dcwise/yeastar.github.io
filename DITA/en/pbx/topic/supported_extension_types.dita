@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_prp_3jj_3db">
+ <title>Supported Extension Types</title>
+ <conbody>
+  <p>Yeastar S-Series VoIP PBX supports the following extension types:</p>
+  <p>
+   <ul id="ul_klt_njj_3db">
+    <li>
+     <p><b>FXS</b>: FXS extensions will assign to the relevant analog phones or fax machines
+      connected to the PBX's FXS ports.</p>
+    </li>
+    <li>
+     <p><b>SIP:</b> SIP is the standard protocol for VoIP handsets and soft phones.</p>
+    </li>
+    <li>
+     <p><b>IAX: </b>IAX is the "Inter Asterisk Protocol", a newer protocol supported by a few
+      devices and soft phones.</p>
+    </li>
+   </ul>
+  </p>
+ </conbody>
+</concept>

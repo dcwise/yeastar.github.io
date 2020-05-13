@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_fcf_4zq_ldb">
+    <title>Upgrade Firmware by TFTP Method</title>
+    <shortdesc product="s-series">You can download the latest firmware file from <xref
+            href="https://www.yeastar.com/firmware-download/" format="html" scope="external">Yeastar
+            Firmware Download center</xref> to your TFTP server. Then upgrade the PBX firmware from
+        the TFTP server.</shortdesc>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/09/25"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <context id="context_ozm_rzq_ldb">
+            <p>
+                <ul id="ul_gzm_srr_d3b">
+                    <li>If the TFTP server is your local PC, this upgrade method is suitable when
+                        the PBX cannot access the Internet.</li>
+                    <li>If you fail to upgrade firmware via TFTP server, we suggest you to close
+                        safety configuration like firewall or virus defense.</li>
+                </ul>
+            </p>
+        </context>
+        <steps id="steps_pzm_rzq_ldb">
+            <step>
+                <cmd>Create a TFTP server, take TFTP32 for example.</cmd>
+            </step>
+            <step>
+                <cmd>Configure a TFTP server. Click <uicontrol>Browse</uicontrol> to select the
+                    firmware file uploaded path.</cmd>
+                <info><image id="image_ccf_45p_d3b" href="../Images/admin/tftp-upgrade-firmware.png"
+                    /></info>
+            </step>
+            <step>
+                <cmd>Go to Yeastar system upgrade page, click<menucascade>
+                        <uicontrol>Maintenance</uicontrol>
+                        <uicontrol>Upgrade</uicontrol>
+                        <uicontrol>Manual Upgrade</uicontrol>
+                    </menucascade>.</cmd>
+            </step>
+            <step>
+                <cmd importance="optional">If you want to reset the configuration to factory
+                    defaults, check the option <uicontrol>Reset Configuration to Factory
+                        Default</uicontrol>.</cmd>
+                <info>
+                    <note type="important">If you check this option, all your PBX configurations
+                        will be erased. We don't suggest you reset the PBX before upgrade firmware.  </note>
+                </info>
+            </step>
+            <step>
+                <cmd>Set <uicontrol>Type</uicontrol> to <uicontrol>Download From TFTP
+                        Server</uicontrol>.</cmd>
+                <info><image href="../Images/admin/upgrade_tftp.png" id="image_qzm_rzq_ldb"/></info>
+            </step>
+            <step>
+                <cmd>In the <uicontrol>TFTP Server</uicontrol> field, enter the IP address of the
+                    TFTP server.</cmd>
+            </step>
+            <step>
+                <cmd>In the<uicontrol>File Name</uicontrol> field, enter the firmware file
+                    name.</cmd>
+                <info>
+                    <note>The file should be a <codeph>.bin</codeph> file. For example,
+                            <codeph>30.7.0.27.bin</codeph>.</note>
+                </info>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Download</uicontrol>.</cmd>
+                <stepresult>The PBX will start downloading file from the TFTP server, and upgrading
+                    the firmware automatically.<p>
+                        <note
+                            conref="browse_a_local_file_to_upgrade.dita#task_vyl_3sq_ldb/upgrade_note"/>
+                    </p></stepresult>
+            </step>
+        </steps>
+    </taskbody>
+</task>

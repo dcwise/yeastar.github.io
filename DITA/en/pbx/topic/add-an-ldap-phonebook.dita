@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="add-an-ldap-phonebook">
+    <title>Add an LDAP Phonebook</title>
+    <shortdesc>You can add other phonebooks for external contacts. </shortdesc>
+    <body>
+        <p>
+            <ol>
+                <li>Go to LDAP Server page, and click <uicontrol>Add</uicontrol>.</li>
+                <li>Enter the phonebook name.<p> The Phonebook Node that contains the phonebook name
+                        and the Base DN will be generated automatically.</p><p><image
+                            id="image_byc_wgr_53b"
+                            href="../Images/admin/add-new-phonebook-s-series.png"
+                            product="k2 s-series"/></p><p><image
+                            href="../Images/admin/add-new-phonebook.png" id="image_kpf_z3s_s3b"
+                            product="cloudpbx"/></p></li>
+                <li>Click <uicontrol>Save</uicontrol>.</li>
+            </ol>
+        </p>
+    </body>
+</topic>

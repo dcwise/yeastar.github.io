@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_jtv_24c_5cb">
+    <title>Customize System Prompt</title>
+    <shortdesc>You can upload your own system prompts to the PBX, so that users can hear the
+        customized system prompts. </shortdesc>
+    <taskbody>
+        <prereq id="prereq_p4v_tsm_zjb">
+            <p>Contact Yeastar support to record your own system prompts.</p>
+        </prereq>
+        <steps id="steps_ly2_3pc_5cb">
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol>PBX</uicontrol>
+                        <uicontrol>Voice Prompts</uicontrol>
+                        <uicontrol>System Prompt</uicontrol>
+                    </menucascade>.</cmd>
+            </step>
+            <step>
+                <cmd>In the <uicontrol>Upload System Prompts</uicontrol> section, click
+                        <uicontrol>Browse</uicontrol> to choose the system prompt file.</cmd>
+                <info>
+                    <note>Upload the <filepath>.tar</filepath> file that is provided by Yeastar, or
+                        the system prompt won't work.</note>
+                </info>
+                <info><image href="../Images/admin/system_prompt_browse.png" id="image_kbd_vpc_5cb"
+                    /></info>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Upload</uicontrol>.</cmd>
+                <info>If the file is uploaded successfully, you can see the prompt file in the
+                        <uicontrol>Prompt List</uicontrol>.</info>
+            </step>
+            <step>
+                <cmd>Set the uploaded system prompt as the default system prompt.</cmd>
+                <info><image href="../Images/admin/set_default_system_prompt.png" width="650"
+                        id="image_jkr_bsc_5cb"/></info>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

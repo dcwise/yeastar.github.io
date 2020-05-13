@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_sym_yw1_wdb">
+    <title>Join a Conference</title>
+    <shortdesc>Both the PBX extension users and the external users can join the
+        conference.</shortdesc>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>For the PBX extension users, dial the conference number to join the conference
+                    room.</cmd>
+            </step>
+            <step>
+                <cmd>For the external users, you need to set the inbound route destination to a
+                    conference first, then the external users call to the PBX, their calls will be
+                    routed to the conference.</cmd>
+                <info><image href="../Images/admin/inbound_conference.png" id="image_urz_bwn_tdb"
+                        width="650"/></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

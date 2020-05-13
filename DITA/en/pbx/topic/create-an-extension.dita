@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_h4p_bqk_scb">
+    <title>Create an Extension</title>
+    <shortdesc>Before registering a SIP account on phones, you need to create a SIP
+        account.</shortdesc>
+    <taskbody>
+        <steps id="steps_lds_5rk_scb">
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol>PBX</uicontrol>
+                        <uicontrol>Extensions</uicontrol>
+                    </menucascade>, click <uicontrol>Add</uicontrol>.</cmd>
+            </step>
+            <step>
+                <?oxy_comment_start author="Becky" timestamp="20190904T142545+0800" comment="原文：On the extension Basic page, set the general settings of the extension.
+①因为之前说页面页签要写清楚，所以调整了②其它几个topic也改了，没有再标注" flag="done"?>
+                <cmd>On the <uicontrol>Basic</uicontrol> page, go to <uicontrol>General</uicontrol>
+                    section, and set the general settings of the extension.</cmd><?oxy_comment_end?>
+                <info><image href="../Images/admin/extension_general.png" width="650"
+                        id="image_n2s_twk_scb"/></info>
+                <info>
+                    <ul id="ul_sz5_dhn_1jb">
+                        <li><uicontrol>Extension</uicontrol>: Enter the extension number.</li>
+                        <li><uicontrol>Caller ID</uicontrol>:
+                            Enter<?oxy_comment_start author="Becky" timestamp="20190905T143843+0800" comment="原文：Generally, the caller ID is the same with the extension number.
+①其它几个topic也改了，没有再标注" flag="done"?>
+                            the caller ID number. The called party will see this caller ID number
+                            when the extension user makes an
+                            <?oxy_comment_start author="carol" timestamp="20190909T104216+0800" comment="outbound 我们一般只外线号码。
+这边是内部外部电话都会显示这个Caller ID" flag="done"?>outgoing
+                            ca<?oxy_comment_end?>ll.<?oxy_comment_end?></li>
+                        <li><uicontrol>Registration Name</uicontrol>:
+                            <?oxy_comment_start author="Becky" timestamp="20190905T143952+0800" comment="原文：The registration validation for the extension." flag="done"?>The
+                            name used to register a SIP extension.<?oxy_comment_end?></li>
+                        <li><uicontrol>Caller ID name</uicontrol>: Enter
+                            <?oxy_comment_start author="Becky" timestamp="20190905T144018+0800" comment="①其它几个topic也改了，没有再标注" flag="done"?>the
+                            caller ID name. The called party will see this caller ID name when the
+                            extension user makes an outgoing call.<?oxy_comment_end?></li>
+                        <li><uicontrol>Concurrent Registrations</uicontrol>: <ph
+                                keyref="product_name"/> supports to register one extension number on
+                            multiple phones. When a call reaches the extension number, all phones
+                            will ring.
+                            <?oxy_comment_start author="Becky" timestamp="20190905T085845+0800" comment="新增" flag="done"?>The
+                            maximum number of concurrent registrations is 4.
+                            <?oxy_comment_end?></li>
+                        <li><uicontrol>Registration Password</uicontrol>: The password is used to
+                            register the extension.</li>
+                    </ul>
+                </info>
+            </step>
+            <step>
+                <?oxy_comment_start author="Becky" timestamp="20190905T085930+0800" comment="原文：On the extension Basic page, set the user information.
+①其它几个topic也改了，没有再标注" flag="done"?>
+                <cmd>On the <uicontrol>Basic</uicontrol> page, go to <uicontrol>User
+                        Information</uicontrol> section, and set the user information.</cmd><?oxy_comment_end?>
+                <info><image href="../Images/admin/extension_user_info.png" width="650"
+                        id="image_um5_lxk_scb"/></info>
+                <info>
+                    <ul id="ul_rrc_hhn_1jb">
+                        <li><uicontrol>Email</uicontrol>: Extension user can reset his/her login
+                            password, receive voice mails, faxes, or PBX notifications via this
+                            email address.</li>
+                        <li><uicontrol>User Password</uicontrol>: The password is used to log in the
+                            PBX or log in Linkus mobile client. The password is generated randomly
+                            by default.</li>
+                        <li><uicontrol>Prompt Language</uicontrol>:
+                            <?oxy_comment_start author="Becky" timestamp="20190905T090751+0800" comment="原文：If the user works in a foreign language, you can set a specific system prompt for the user.
+①其它几个topic也改了，没有再标注" flag="done"?>The
+                            default prompt language is the same as the system language. If the
+                            extension user speaks foreign language, you can set a specific system
+                                prompt.<?oxy_comment_end?><?oxy_comment_start author="Becky" timestamp="20190912T113909+0800" comment="新增路径,其他topic也对应添加" flag="done"?><note>Before
+                                selecting other system prompts, go to <menucascade>
+                                    <uicontrol>Settings</uicontrol>
+                                    <uicontrol>PBX</uicontrol>
+                                    <uicontrol>Voice Prompts</uicontrol>
+                                    <uicontrol>System Prompt</uicontrol>
+                                </menucascade> to download online
+                            prompts.</note><?oxy_comment_end?></li>
+                        <li><uicontrol>Mobile Number</uicontrol>: Extension user can receive the PBX
+                            notifications or forwarded calls on this mobile number.</li>
+                    </ul>
+                </info>
+            </step>
+            <step importance="optional">
+                <cmd>Click
+                        <?oxy_comment_start author="Becky" timestamp="20190905T091026+0800" comment="根据界面新增" flag="done"?><uicontrol>Presence</uicontrol><?oxy_comment_end?>,
+                        <uicontrol>Features</uicontrol>, <uicontrol>Advanced</uicontrol>, or
+                        <uicontrol>Call Permission</uicontrol> tab to configure other
+                    settings.</cmd>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

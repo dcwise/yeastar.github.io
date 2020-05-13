@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_z3y_5mg_1db">
+  <title>Check and  Manage Your Voicemail</title>
+  <shortdesc>You can log in the Extension User Portal to check your received voicemails and manage
+    the voicemails.</shortdesc>
+  <prolog>
+    <critdates>
+      <!--Carol-->
+      <revised modified="2018/08/23"/>
+      <!--Carol-->
+      <revised modified="2018/09/11"/>
+      <!--Carol-->
+      <revised modified="2018/09/12"/>
+    </critdates>
+  </prolog>
+  <body>
+    <section id="section_uxv_mcl_cfb">
+      <p>Go to <menucascade>
+          <uicontrol>Me</uicontrol>
+          <uicontrol>Voicemail</uicontrol>
+        </menucascade>, the received voicemails are displayed.</p>
+      <p><image href="../Images/admin/extension_check_voicemail_web.png" width="650"
+          id="image_zbz_4z1_5cb" product="cloudpbx s-series"/></p>
+      <p><image href="../Images/admin/extension_check_voicemail_web_oem.png" width="650"
+          product="OEM" id="image_fpd_zc5_cfb"/></p>
+      <ul id="ul_tgl_hfl_cfb">
+        <li>Click <image href="../Images/ui_icons/download.png" width="20" id="image_tx4_3fl_cfb"/>
+          to download the voicemail file.</li>
+        <li>Click <image href="../Images/ui_icons/play.png" width="20" id="image_lqc_kfl_cfb"/> to
+          play the voicemail file.</li>
+        <li>Click <image href="../Images/ui_icons/delete.png" width="20" id="image_iq5_lfl_cfb"/> to
+          delete the voicemail file.</li>
+      </ul>
+    </section>
+    <section id="section_kgm_by1_5cb">
+      <p><b>Voicemail Status</b>:</p>
+      <ul id="ul_fdx_k2l_cfb">
+        <li><image href="../Images/ui_icons/unread.png" id="image_as5_ydl_cfb" width="17"/>: The
+          voicemail is unread. <p>Click the icon to mark the voicemail as read voicemail.</p></li>
+        <li><image href="../Images/ui_icons/read.png" id="image_ogr_22l_cfb" width="17"/>: The
+          voicemail is read.<p>Click the icon to mark the voicemail as unread voicemail.</p></li>
+      </ul>
+    </section>
+  </body>
+</topic>

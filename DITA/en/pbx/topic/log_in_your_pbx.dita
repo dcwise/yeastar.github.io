@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_ovc_vbl_zcb">
+    <title>Log in Your PBX</title>
+    <taskbody>
+        <context>Yeastar S-Series provides web-based configuration interface for administrator and
+            extension users. The administrator can manage the device by logging in the Web
+            interface. <p>
+                <note>Connect your PC to the same local network of the PBX.</note>
+            </p></context>
+        <steps id="steps_pnr_dcl_zcb">
+            <step>
+                <cmd>Start a web browser on your PC, enter the default IP address
+                        <codeph>192.168.5.150</codeph>, press <b>Enter</b> on your keyboard.</cmd>
+                <info>The web page will inform you that the IP is unsafe.</info>
+            </step>
+            <step>
+                <cmd>Ignore the warning on the web page, proceed to the access the IP. </cmd>
+                <info><image href="../../../Images/admin/en/login_unsafe.png" id="image_dy4_kdl_zcb"
+                        height="400"/></info>
+            </step>
+            <step>
+                <cmd>Enter the default user name and password, click
+                    <uicontrol>Login</uicontrol>.</cmd>
+                <info><image href="../../../Images/admin/en/login_s-pbx.png" id="image_slh_j2l_zcb"
+                        width="400"/></info>
+                <choices>
+                    <choice><uicontrol>Username</uicontrol>: admin</choice>
+                    <choice><uicontrol>Password</uicontrol>: password</choice>
+                </choices>
+            </step>
+        </steps>
+    </taskbody>
+</task>

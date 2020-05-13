@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_nk4_qdb_5db">
+    <title>Generate OpenVPN Certificates and Keys</title>
+    <shortdesc>Generate OpenVPN certificates and keys for <ph keyref="product_name"/> and
+        clients.</shortdesc>
+    <body>
+        <p>
+            <note type="important">Commands below are executed in one Command Prompt window. <p>If
+                    you want to open a new Command Prompt window to execute commands (i.e. create
+                    certificates for new client):</p><ul id="ul_bwv_3lb_5db">
+                    <li>Each time you open a new Command Prompt window, you need to execute
+                            <codeph>vars</codeph> command first, then execute other commands.</li>
+                    <li>You don’t need to execute <codeph>init-config</codeph> command, unless you
+                        want to edit <filepath>vars.bat</filepath> file again.</li>
+                </ul></note>
+        </p>
+        <section id="section_wgf_w3b_5db">
+            <title>Initialize the OpenVPN configuration</title>
+        <p>
+            <ol id="ol_kms_3f1_h3b">
+                <li>Press <uicontrol>Windows</uicontrol> Key and <uicontrol>R</uicontrol> key, type
+                            <codeph>cmd</codeph> and press <uicontrol>Enter</uicontrol> key.</li>
+                <li>Navigate to <filepath>%ProgramFiles%\OpenVPN\easy-rsa</filepath> (e.g.
+                            <filepath>D:\OpenVPN\easy-rsa</filepath>).<p>
+                            <codeblock>cd D:\OpenVPN\easy-rsa</codeblock>
+                        </p></li>
+                <li>Initialize the configurations.<p>
+                            <codeblock>init-config</codeblock>
+                        </p></li>
+                    <li>Open the <filepath>vars.bat</filepath> file in a text
+                            editor.<codeblock>notepad vars.bat</codeblock><ol id="ol_y3m_mmz_33b">
+                            <li>Change the <codeph>KEY_SIZE</codeph> settings.<p>Usually, set the
+                                    private key size to <codeph>1024</codeph> or
+                                        <codeph>2048</codeph>.<codeblock>set KEY_SIZE=2048</codeblock></p></li>
+                            <li>Edit the following lines to display your address and
+                                    company.<p>Later, when you make CA, certificates and keys, you
+                                    will be asked to enter information that will be incorporated
+                                    into your certificate request. If you change the default
+                                    variables below, you don’t have to enter these information each
+                                    time.</p><codeblock>set KEY_COUNTRY=CN
+set KEY_PROVINCE=FJ
+set KEY_CITY=Xiamen
+set KEY_ORG=Yeastar
+set KEY_EMAIL=support@yeastar.com</codeblock></li>
+                            <li>Save the <filepath>vars.bat</filepath> file and back to Command
+                                Prompt window.</li>
+                        </ol></li>
+                <li>Run the following commands, make sure you are operating in a clean environment.<p>
+                            <note type="caution">This will remove all certificates and keys from the
+                                    <filepath>keys</filepath> directory.</note>
+                        </p><codeblock outputclass="language-c">vars
+clean-all</codeblock></li>
+            </ol>
+        </p>
+        </section>
+        <section id="section_lhv_xj1_h3b">
+            <title>Build Certificate Authority (CA)</title>
+            <p>
+                <ol id="ol_djp_bk1_h3b">
+                    <li>Run the following command to create the <filepath>ca.crt</filepath> and
+                            <filepath>ca.key</filepath> file in the <filepath>keys</filepath>
+                        directory.<codeblock>build-ca</codeblock></li>
+                    <li>When prompted to enter information that will be incorporated into your
+                        certificate request, enter your country, organization, etc.<p>Or press the
+                                <uicontrol>Enter</uicontrol> key to use the preset values appeared
+                            in brackets.</p><p>
+                            <note type="important">The only parameter that must be explicitly
+                                entered is the <b>Common Name</b>. In the example below, we set
+                                Common Name to <codeph>OpenVPN_CA</codeph>.</note>
+                        </p><codeblock outputclass="language-c">Country Name (2 letter code) [CN]:
+State or Province Name (full name) [FJ]:
+Locality Name (eg, city) [Xiamen]:
+Organization Name (eg, company) [Yeastar]:
+Organizational Unit Name (eg, section) [changeme]:admin
+Common Name (eg, your name or your server's hostname) [changeme]:<varname>OpenVPN_CA</varname>
+Name [changeme]:Yeastar
+Email Address [support@yeastar.com]:</codeblock></li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_sjf_vjb_5db">
+            <title>Build certificate and key for server</title>
+        <p>
+            <ol id="ol_d5b_gl1_h3b">
+                <li>Run the following command to create the
+                                <filepath><varname>{server_name}</varname>.crt</filepath> and
+                                <filepath><varname>{server_name}</varname>.key</filepath> file in
+                        the <filepath>keys</filepath> directory.<p>In the command below, we create
+                                <filepath>server.crt</filepath> and
+                            <filepath>server.key</filepath>.<codeblock>build-key-server server</codeblock></p></li>
+                <li>When prompted to enter information that will be incorporated into your
+                        certificate request, enter your country, organization, etc.<p>Or press the
+                                <uicontrol>Enter</uicontrol> key to use the preset values appeared
+                            in brackets. </p><p>
+                            <note type="important">The only parameter that must be explicitly
+                                entered is the <b>Common Name</b>. Enter the same name
+                                    as<varname>{server_name}</varname>. In the example below, we set
+                                Common Name to <codeph>server</codeph>.</note>
+                        </p><codeblock>Country Name (2 letter code) [CN]:
+State or Province Name (full name) [FJ]:
+Locality Name (eg, city) [Xiamen]:
+Organization Name (eg, company) [Yeastar]:
+Organizational Unit Name (eg, section) [changeme]:admin
+Common Name (eg, your name or your server's hostname) [changeme]:<varname>server</varname>
+Name [changeme]:Yeastar
+Email Address [support@yeastar.com]:</codeblock></li>
+                <li>When prompted to sign the certificate and commit, type <codeph>y</codeph> and
+                        press the <uicontrol>Enter</uicontrol> key.<p>
+                            <codeblock>Sign the certificate? [y/n]:<varname>y</varname>
+1 out of 1 certificate requests certified, commit? [y/n]<varname>y</varname></codeblock>
+                        </p></li>
+            </ol>
+        </p>
+        </section>
+        <section id="section_qvy_3n1_h3b">
+            <title>Build certificate and key for client</title>
+            <p>
+                <ol id="ol_awb_nn1_h3b">
+                    <li>Run the following command to create the
+                                <filepath><varname>{client_name}</varname>.crt</filepath> and
+                                <filepath><varname>{client_name}</varname>.key</filepath> file in
+                        the <filepath>keys</filepath> directory.<p>In the command below, we create
+                                <filepath>client.crt</filepath> and
+                            <filepath>client.key</filepath>.</p><p>
+                            <codeblock>build-key client</codeblock>
+                        </p></li>
+                    <li>When prompted to enter information that will be incorporated into your
+                        certificate request, enter your country, organization, etc.<p>Or press the
+                                <uicontrol>Enter</uicontrol> key to use the preset values appeared
+                            in brackets. </p><p>
+                            <note type="important">The only parameter that must be explicitly
+                                entered is the <b id="client_CN">Common Name</b>. Enter the same
+                                name as <varname>{client_name}</varname>. In the example below, we
+                                set Common Name to <codeph>client</codeph>.</note>
+                            <codeblock>Country Name (2 letter code) [CN]:
+State or Province Name (full name) [FJ]:
+Locality Name (eg, city) [Xiamen]:
+Organization Name (eg, company) [Yeastar]:
+Organizational Unit Name (eg, section) [changeme]:admin
+Common Name (eg, your name or your server's hostname) [changeme]:<varname>client</varname>
+Name [changeme]:Yeastar
+Email Address [support@yeastar.com]:</codeblock>
+                        </p></li>
+                    <li>When prompted to sign the certificate and commit, type <codeph>y</codeph>
+                        and press the <uicontrol>Enter</uicontrol> key.<p>
+                            <codeblock>Sign the certificate? [y/n]:<varname>y</varname>
+1 out of 1 certificate requests certified, commit? [y/n]<varname>y</varname></codeblock>
+                        </p></li>
+                    <li>Repeat steps 1 to 3 to create Certificate &amp; Key for each client
+                            respectively.<p>For each client, choose a name to identify, such as
+                                <codeph>Windows.crt</codeph> and <codeph>Windows.key</codeph> for
+                            Windows PC.</p></li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_vvc_xkb_5db">
+            <title>Build a ta.key</title>
+        
+        <p>Run the following command to create <filepath>ta.key</filepath> file in the
+                    <filepath>keys</filepath> directory.</p>
+        
+            <p>
+                <codeblock>OpenVPN --genkey --secret keys/ta.key</codeblock>
+            </p>
+        </section>
+        <section id="section_isg_zfp_h3b">
+            <title>Generate Diffie Hellman parameters</title>
+            <codeblock>build-dh</codeblock>
+        </section>
+    </body>
+</topic>

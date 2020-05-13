@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="app-vpn">
+    <title>VPN Server</title>
+    <shortdesc><ph keyref="product_name"/> VPN Server provides flexible VPN solutions for small and
+        medium company which does not set up a VPN network for whole company. With VPN connection,
+        you can set up multiple VPN clients to access <ph keyref="product_name"/> safely and
+        securely wherever and whenever.</shortdesc>
+    <conbody>
+        <p><ul id="ul_bsc_mz1_5db">
+                <li>
+                    <ph keyref="product_name"/> supports OpenVPN protocol.</li>
+                <li>VPN Sever App is supported on <ph keyref="product_name"/> version 30.2.0.8 or
+                    later.</li>
+            </ul><image href="../Images/admin/vpn_server_senior.png" id="image_gsm_fbb_5db"
+                width="700"/></p>
+        <section id="section_anh_z3s_g3b">
+            <title>About This Guide</title>
+            <p>This guide is intended to help you to set up the <ph keyref="product_name"/> VPN
+                server, and connect <ph keyref="product_name"/> server via OpenVPN with the
+                following clients:</p>
+            <p>
+                <ul id="ul_nzs_hzb_33b">
+                    <li>Windows</li>
+                    <li>iOS</li>
+                    <li>Android</li>
+                    <li>Yealink IP phone</li>
+                    <li><ph keyref="product_name"/></li>
+                </ul>
+            </p>
+        </section>
+    </conbody>
+</concept>

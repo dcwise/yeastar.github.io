@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topicID"><title>System
+Report</title><body><p>The PBX will send report to the application server automatically
+when there is a change of system configuration or extension status,
+etc.</p></body></topic><topic><title/><body><section><title>{#system-startup}</title></section></body></topic>

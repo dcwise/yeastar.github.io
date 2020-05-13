@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_qcb_zwm_vcb">
+    <title>Distinguish Inbound Calls by Ring Tones</title>
+    <shortdesc>Distinctive ringtone distinguishes calls from different inbound routes. You can set
+        distinctive ringtones on different inbound routes. When a user hears the ringtone of an
+        incoming call, he/she may notice the intention of the call. </shortdesc>
+    <taskbody>
+        <context>
+            <p>
+                <note>Distinctive Ringtone feature needs support from the IP phones. We take Yealink
+                    phone as an example.</note>
+            </p>
+        </context>
+        <steps id="steps_f1w_mym_vcb">
+            <step>
+                <cmd>Log in the phone web interface, go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol>Ring</uicontrol>
+                    </menucascade>, select a ringtone and set the name.</cmd>
+                <info><image href="../Images/admin/yealink_distinctive_ringtone.png"
+                        id="image_ssx_lzm_vcb"/><p>
+                        <ol id="ol_gxr_s5w_kjb">
+                            <li>In the <uicontrol>Internal Ringer Text</uicontrol> field, enter the
+                                ringtone name.</li>
+                            <li>In the <uicontrol>Internal Ringer File</uicontrol> drop-down list,
+                                select a ringtone file.</li>
+                            <li>Click <uicontrol>Confirm</uicontrol> to save the settings.</li>
+                        </ol>
+                    </p></info>
+            </step>
+            <step>
+                <cmd>Log in the PBX web interface, go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol>PBX</uicontrol>
+                        <uicontrol>Call Control</uicontrol>
+                        <uicontrol>Inbound Routes</uicontrol>
+                    </menucascade>, select an inbound route to edit.</cmd>
+                <info><image href="../Images/admin/distinctive_ringtone.png" width="650"
+                        id="image_bxq_c1n_vcb"/><p>
+                        <ol id="ol_ulg_bvw_kjb">
+                            <li>In the <uicontrol>Distinctive Ringtone</uicontrol> field, enter the
+                                ringtone name that is configured on IP phone.</li>
+                            <li>Click <uicontrol>Save</uicontrol> and
+                                <uicontrol>Apply</uicontrol>.</li>
+                        </ol>
+                    </p></info>
+            </step>
+        </steps>
+        <result id="result_jc5_21n_vcb">When a call comes through the inbound route, the phone will
+            play corresponding ringtone.</result>
+    </taskbody>
+</task>

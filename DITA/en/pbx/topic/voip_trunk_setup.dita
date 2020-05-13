@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_l5v_vch_4fb">
+    <title>VoIP Trunk Creation Overview</title>
+    <shortdesc>This topic describes two methods by which to create a VoIP trunk.</shortdesc>
+    <conbody>
+        <section id="section_klj_2gy_53b">
+            <title>VoIP Trunk Creation Methods</title>
+            <p><ph keyref="product_name"/> supports two methods to create a VoIP trunk.</p>
+            <p>
+                <dl>
+                    <dlentry>
+                        <dt>Create a VoIP Trunk by a Template</dt>
+                        <dd><ph keyref="product_name"/> supports leading VoIP Service Providers
+                            across the globe, you can use the pre-configured VoIP templates included
+                            in <ph keyref="product_name"/> to set up a VoIP trunk quickly and
+                            easily.</dd>
+                        <dd>Check the <xref href="https://www.yeastar.com/itsp-partners/"
+                                format="html" scope="external">tested and supported VoIP
+                                providers</xref>.</dd>
+                        <dd>For more information, see <xref
+                                href="set-up-voip-trunk-by-templates.dita"/>.</dd>
+                    </dlentry>
+                </dl>
+                <dl>
+                    <dlentry>
+                        <dt>Create a General VoIP Trunk</dt>
+                        <dd>If your VoIP provider has not undergone an interoperability test by
+                            Yeastar, you can set up a General VoIP trunk.</dd>
+                        <dd>For more information, see the following topics:</dd>
+                        <dd>
+                            <ul id="ul_clg_5gy_53b">
+                                <li><xref href="set_up_a_voip_register_trunk.dita"/></li>
+                                <li product="s-series"><xref href="set_up_a_voip_peer_trunk.dita"
+                                    /></li>
+                                <li product="cloudpbx"><xref href="set-up-peer-trunk-cloud.dita"
+                                    /></li>
+                                <li><xref href="set_up_a_voip_account_trunk.dita"/></li>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                </dl>
+            </p>
+        </section>
+    </conbody>
+</concept>

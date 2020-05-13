@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="access_ftp">
+    <title>Set up FTP File Sharing</title>
+    <shortdesc>You can share the files that are stored in an external storage device via FTP. After
+        you enable FTP File Sharing, you can check both the files that are in external storage and
+        the files that are in local storage.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/05/25"/>
+            <!--Carol-->
+            <revised modified="2018/05/25"/>
+            <!--Carol-->
+            <revised modified="2018/05/30"/>
+            <!--Carol-->
+            <revised modified="2018/06/14"/>
+            <!--Carol-->
+            <revised modified="2018/09/26"/>
+            <!--Carol-->
+            <revised modified="2018/10/18"/>
+        </critdates>
+    </prolog>
+    <body>
+        <ol id="ftp_file_share">
+            <li> Go to <menucascade>
+                    <uicontrol>Settings</uicontrol>
+                    <uicontrol>System</uicontrol>
+                    <uicontrol>Storage</uicontrol>
+                    <uicontrol>File Share</uicontrol>
+                </menucascade>, check the option <uicontrol>Enable FTP File
+                Sharing</uicontrol>.</li>
+            <li><xref href="../topic/access_the_pbx_via_ftp.dita#task_lrx_jbk_zdb">Enable FTP and
+                    access the PBX via FTP.</xref></li>
+            <li> Enter the folder <filepath>ftp_media</filepath> to check the shared
+                        files.<itemgroup><image href="../Images/admin/access_shared_folder_ftp.png"
+                        id="image_nc2_qkz_xdb"/></itemgroup>
+                <itemgroup>
+                    <ul id="ul_dyy_mjz_xdb">
+                        <li><filepath>mmc</filepath> folder for the shared files in TF/SD card.</li>
+                        <li><filepath>usb1</filepath> folder for the shared files in USB drive.</li>
+                        <li><filepath>harddisk</filepath> folder for the shared files in hard
+                            disk.</li>
+                        <li><filepath>local</filepath> folder for the shared files in the local
+                            storage of the PBX.</li>
+                    </ul>
+                </itemgroup>
+            </li>
+        </ol>
+    </body>
+</topic>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_esv_jfh_hfb">
+    <title>1) Create &amp; Attach an EBS Volume to YMP Instance</title>
+    <shortdesc>Create an EBS volume and attach the volume to your YMP instance.</shortdesc>
+    <taskbody>
+        <context>
+            <p>
+                <note type="important">Do NOT place any other files to this EBS volume, or your
+                    recording files will be lost.</note>
+            </p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Create an EBS volume.</cmd>
+                <substeps id="substeps_jqb_5fh_hfb">
+                    <substep>
+                        <cmd>Open the Amazon EC2 console at <xref
+                                href="https://console.aws.amazon.com/ec2/" format="html"
+                                scope="external"/>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>In the upper-right corner, select the <uicontrol>Region</uicontrol> to
+                            the same region as your YMP instance.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>In the left-side navigation pane, select <menucascade>
+                                <uicontrol>ELASTIC BLOCK STORE</uicontrol>
+                                <uicontrol>Volumes</uicontrol>
+                            </menucascade>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>On the <uicontrol>Volumes</uicontrol> page, click <uicontrol>Create
+                                Volume</uicontrol>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>On the <uicontrol>Create Volume</uicontrol> page, complete the volume
+                            configurations, and click <uicontrol>Create Volume</uicontrol>.</cmd>
+                        <info><image href="../Images/ymp/aws_create_volume.png"
+                                id="image_x4t_whh_hfb" width="650"/></info>
+                        <info>
+                            <ul id="ul_eqc_4gh_hfb">
+                                <li><uicontrol>Volume Type</uicontrol>: Select <uicontrol>General
+                                        Purpose SSD</uicontrol></li>
+                                <li><uicontrol>Size</uicontrol>: Set the volume size.<p>
+                                        <note type="restriction">Minimum 50GB Storage
+                                            Capacity.</note>
+                                    </p><p>
+                                        <note>1 GB (Storage Capacity) = 1000 minutes (Recording
+                                            Time)</note>
+                                    </p></li>
+                                <li><uicontrol>Availability Zone</uicontrol>: Select the same zone
+                                    as YMP instance.</li>
+                                <li><uicontrol>Encryption</uicontrol>: Optional.</li>
+                            </ul>
+                        </info>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Go back to <uicontrol>Volumes</uicontrol> page, find the new created volume,
+                    specify the volume name to help you identify it.</cmd>
+                <info><image href="../Images/ymp/aws_volume_name.png" id="image_vsj_kkh_hfb"
+                    /></info>
+            </step>
+            <step>
+                <cmd>Attach the EBS volume to YMP instance.</cmd>
+                <substeps id="substeps_mdr_mkv_hfb">
+                    <substep>
+                        <cmd>Select the new created EBS volume, and click <menucascade>
+                                <uicontrol>Actions</uicontrol>
+                                <uicontrol>Attach Volume</uicontrol>
+                            </menucascade>. </cmd>
+                        <info>
+                            <p>choose <b>Actions</b>, <b>Attach Volume</b>.</p>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Configure the volume and click <uicontrol>Attach</uicontrol>.</cmd>
+                        <info><image href="../Images/SBC/aws_attach_volume.png"
+                                id="image_v4d_vlv_hfb" width="650"/></info>
+                        <info>
+                            <ul id="ul_aby_vlv_hfb">
+                                <li><uicontrol>Instance</uicontrol>: Select the YMP instance.</li>
+                                <li><uicontrol>Device</uicontrol>: Keep the suggested device name.<p>
+                                        <note>Newer Linux kernels may rename your device to
+                                                <codeph>/dev/xvdf</codeph>, even the device name
+                                            here is set to <codeph>/dev/sdf</codeph>.</note>
+                                    </p></li>
+                            </ul>
+                        </info>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd><xref href="aws_make_the_ebs_volume_available_for_use.dita#task_gtf_mmv_hfb"
+                        >Connect to your instance and mount the volume.</xref></cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

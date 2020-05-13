@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_anq_5dw_rdb">
+    <title>SLA Overview</title>
+    <shortdesc>SLA (Shared Line Appearance) feature helps users share and monitor SIP trunks<ph
+            product="k2 s-series"> and PSTN trunks</ph>. After enabling SLA feature for a trunk, the
+        trunk works as the exclusive line for SLA station and is unavailable in both inbound routes
+        and outbound routes.</shortdesc>
+    <conbody>
+        <p>SLA trunk refers to the trunk with SLA feature enabled. SLA station refers to an
+            extension which is bound with a SLA trunk.<ul id="ul_e53_xsq_fjb">
+                <li>When an SLA station makes an outbound call through SLA trunk, other members
+                    sharing the SLA trunk can monitor the trunk state by BLF keys LED on phone
+                    devices.</li>
+                <li>When receiving an external call from SLA trunk, all extensions sharing the SLA
+                    trunk will ring. <note>If <uicontrol>Allow Barge</uicontrol> feature is enabled
+                        on an SLA trunk, all members can place and join multi-party calls.
+                    </note></li>
+            </ul></p>
+    </conbody>
+</concept>

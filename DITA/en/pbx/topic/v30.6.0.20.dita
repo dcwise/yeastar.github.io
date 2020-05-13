@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_xnj_34k_jdb">
+  <title>Version 30.6.0.20</title>
+  <abstract>Released Date: January 18, 2018</abstract>
+  <prolog>
+    <critdates>
+      <!--Carol-->
+      <revised modified="2018/06/20"/>
+    </critdates>
+  </prolog>
+  <body>
+    <section id="section_nyk_p4g_jdb">
+      <title>New Feature</title>
+      <p><image href="../Images/horizon.png" id="image_fhy_hzv_pdb"/></p>
+      <p>
+        <ul id="ul_mg1_3sk_jdb">
+          <li>Added support for Remote Management.</li>
+        </ul>
+      </p>
+    </section>
+  </body>
+</topic>

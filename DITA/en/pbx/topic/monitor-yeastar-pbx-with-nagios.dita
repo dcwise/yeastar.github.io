@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="get-data-from-pbx-by-snmp">
+    <title>Monitor <ph keyref="product_name"/> on Nagios XI - SNMP Walk</title>
+    <shortdesc>This topic describes how to monitor the <ph keyref="product_name"/> in Nagios XI with
+        SNMP Walk.</shortdesc>
+    <body>
+        <section id="section_ocn_ys4_vkb">
+            <title>Before you begin</title>
+            <p>The SNMP Walk Wizard in Nagios XI scans an SNMP-enabled host to see the available
+                SNMP objects for monitoring.</p>
+            <p>Before you add a host on Nagios XI, you need to enable SNMP and configure SNMP
+                settings on the PBX. For more information, see <xref
+                    href="configure-pbx-to-communicate-with-an-snmp-manager.dita"
+                />.<?oxy_comment_start author="carol" timestamp="20200226T144808+0800" comment="原句：
+therefore, make sure the SNMP is enabled on PBX before using SNMP Walk.
+
+尽可能地使用现在时态" flag="done"?></p><?oxy_comment_end?>
+        </section>
+        <section id="section_yfk_xfh_vkb">
+            <title>Upload Yeastar MIB file</title>
+            <p>Obtain the <xref
+                    href="https://help.yeastar.com/download/docs/snmp/YEASTAR-PBX-MIB-V4.txt"
+                    format="html" scope="external">Yeastar PBX MIB file</xref>, and upload the MIB
+                file to Nagios XI.<ol id="ol_tnz_fhh_vkb">
+                    <li>Log in Nagios XI web interface, go to <menucascade>
+                            <uicontrol>Admin</uicontrol>
+                            <uicontrol> System Extensions</uicontrol>
+                            <uicontrol> Manage MIBs</uicontrol>
+                        </menucascade>.</li>
+                    <li>Click <uicontrol>Browse</uicontrol>, select the MIB file, and click
+                            <uicontrol>Upload MIB</uicontrol>.<p><image
+                                href="../Images/admin/snmp-upload-MIB-on-server.png" width="650"
+                                id="image_err_4hh_vkb"/></p></li>
+                </ol></p>
+        </section>
+        <section id="section_i3f_4hh_vkb">
+            <title>Monitor PBX using SNMP Walk</title>
+            <p>Go to <menucascade>
+                    <uicontrol>Configure</uicontrol>
+                    <uicontrol> Configure Wizards</uicontrol>
+                </menucascade>, search "SNMP" and select <uicontrol>SNMP Walk</uicontrol>.</p>
+            <p><image href="../Images/admin/snmp-walk-waizad.png" width="650" id="image_afw_31b_vkb"
+                /></p>
+            <p>
+                <ol id="ol_xwz_phh_vkb">
+                    <li>On the <uicontrol>SNMP Walk - Step 1</uicontrol> page, complete the
+                        following configurations.<note>The SNMP settings configured on Nagios XI and
+                            PBX must be consistent.</note><ol id="ol_x2n_g3h_vkb">
+                            <li>In the <uicontrol>Device Address</uicontrol> field, enter the PBX's
+                                IP address.</li>
+                            <li>In the <uicontrol>Device port</uicontrol> field, enter the SNMP
+                                port.</li>
+                            <li>Enter the SNMP authentication information of your PBX.<p>
+                                    <table frame="all" rowsep="1" colsep="1" id="table_dc3_y1p_vkb">
+                                        <tgroup cols="3">
+                                            <colspec colname="c1" colnum="1" colwidth="1*"/>
+                                            <colspec colname="c2" colnum="2" colwidth="1.36*"/>
+                                            <colspec colname="c3" colnum="3" colwidth="2.28*"/>
+                                            <thead>
+                                                <row>
+                                                  <entry>SNMP version</entry>
+                                                  <?oxy_comment_start author="carol" timestamp="20200226T155751+0800" comment="下面的描述嵌套太多了，考虑其他形式的表达，例如表格。
+
+参数最好指导一下如何填写" flag="done"?>
+                                                  <entry><?oxy_comment_end?>Settings</entry>
+                                                  <entry>Description</entry>
+                                                </row>
+                                            </thead>
+                                            <tbody>
+                                                <row>
+                                                  <entry valign="middle">SNMP v1 or v2c</entry>
+                                                  <entry valign="middle">SNMP Community</entry>
+                                                  <entry valign="middle">Enter the community that is
+                                                  defined in PBX.</entry>
+                                                </row>
+                                                <row>
+                                                  <entry morerows="3" align="left" valign="middle"
+                                                  >SNMP v3</entry>
+                                                  <entry valign="middle">Username</entry>
+                                                  <entry valign="middle">Enter the SNMPv3 user that
+                                                  is defined in PBX.</entry>
+                                                </row>
+                                                <row>
+                                                  <entry valign="middle">Security Level</entry>
+                                                  <entry valign="middle">
+                                                  <p>Select a level according to the PBX's
+                                                  <uicontrol>Access Limit</uicontrol> setting.</p>
+                                                  <ul>
+                                                  <li><uicontrol>noAuthNoPrivate</uicontrol>: only
+                                                  the user name is needed.</li>
+                                                  <li><uicontrol>AuthNoPriv</uicontrol>: enter the
+                                                  <uicontrol>Authentication
+                                                  Password</uicontrol>.</li>
+                                                  <li><uicontrol>authPriv</uicontrol>: enter the
+                                                  <uicontrol>Authentication password</uicontrol> and
+                                                  <uicontrol>Privacy Password</uicontrol>.</li>
+                                                  </ul>
+                                                  </entry>
+                                                </row>
+                                                <row>
+                                                  <entry valign="middle">Authentication
+                                                  Protocol</entry>
+                                                  <entry valign="middle">Select
+                                                  <uicontrol>MD5</uicontrol>.</entry>
+                                                </row>
+                                                <row>
+                                                  <entry valign="middle">Privacy Password</entry>
+                                                  <entry valign="middle">Select
+                                                  <uicontrol>DES</uicontrol>.</entry>
+                                                </row>
+                                            </tbody>
+                                        </tgroup>
+                                    </table>
+                                </p><p><image
+                                        href="../Images/admin/snmp-configure-host-on-nagios.png"
+                                        width="500" id="image_omd_smg_vkb"/></p></li>
+                            <li>In the <uicontrol>MIBs</uicontrol> filed, select the uploaded MIB
+                                        file.<p><image
+                                        href="../Images/admin/snmp-scan-setting-on-nagios.png"
+                                        width="500" id="image_q2j_vng_vkb"/></p></li>
+                        </ol></li>
+                    <li>Click <uicontrol>Next</uicontrol>, Nagios XI scans the available OIDs for
+                            monitoring.<?oxy_comment_start author="carol" timestamp="20200226T163824+0800" comment="如果有未被扫描到的OID，如何手动添加？" id="isk_srp_vkb" flag="done"?><?oxy_comment_start author="Sunmy" timestamp="20200226T175150+0800" comment="暂不添加" parentID="isk_srp_vkb" flag="done" mid="3"?><p><?oxy_comment_end?><?oxy_comment_end mid="3"?>On
+                            the <uicontrol>SNMP Walk - Step2</uicontrol> page, complete the
+                            following configurations.</p><p>
+                            <ol id="ol_cdf_g2p_vkb">
+                                <li>In the <uicontrol>Host name</uicontrol> field, enter a host name
+                                    to help you identify this host.</li>
+                                <li>In the <uicontrol>SNMP Services</uicontrol> list, select the
+                                    OIDs you'd like to monitor, and configure how to monitor the OIDs.<p>
+                                        <ul id="ul_nhh_3gp_vkb">
+                                            <li><b>For Integer OIDs</b><p>Set <uicontrol>Match
+                                                  Type</uicontrol> to
+                                                  <uicontrol>Numeric</uicontrol>, and enter the a
+                                                  waring value and a critical value in the
+                                                  <uicontrol>Thresholds</uicontrol>
+                                                  column.</p><note>If the thresholds is reached,
+                                                  Nagios displays an alarm for the monitored
+                                                  service.</note></li>
+                                        </ul>
+                                        <ul id="ul_gv3_tgp_vkb">
+                                            <li><b>For String OIDs</b><p>Set <uicontrol>Match
+                                                  Type</uicontrol> to <uicontrol>String</uicontrol>
+                                                  or
+                                                  <uicontrol>None</uicontrol>.<?oxy_comment_start author="carol" timestamp="20200226T163505+0800" comment="应该有不需要匹配string 的OID" id="hll_ssp_vkb"?><?oxy_comment_start author="Sunmy" timestamp="20200226T175927+0800" comment="如软件版本被升级了，降级等，会检测到" parentID="hll_ssp_vkb" mid="5"?></p><?oxy_comment_end?><?oxy_comment_end mid="5"?><p>For
+                                                  the OIDs that need to be matched to a string,
+                                                  enter the string.<note>If the string changes,
+                                                  Nagios displays an alarm for the monitored
+                                                  service.</note></p></li>
+                                        </ul>
+                                    </p><p><?oxy_comment_start author="carol" timestamp="20200226T161559+0800" comment="这个图最好把&quot;SNMP Servces&quot; 这个几个字眼显示出来，还有OID前面的复选框
+" flag="done"?><image
+                                            href="../Images/admin/snmp-edit-monitor-item.png"
+                                            width="650" id="image_xsg_shp_vkb"
+                                        /><?oxy_comment_end?></p></li>
+                            </ol>
+                        </p></li>
+                    <li>Click <uicontrol>Next</uicontrol>.</li>
+                    <li>Click <uicontrol>Finish</uicontrol>.<p>After the wizard applies the
+                            configuration, you can click the <uicontrol>View status detail for
+                                &lt;Host IP address></uicontrol> to see the host
+                                status.</p><p><image
+                                href="../Images/admin/snmp-walk-configured-success-on-nagios.png"
+                                width="450" id="image_xl4_whp_vkb"/></p></li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_bf4_jth_vkb">
+            <title>View the PBX status</title>
+            <p>Go to <menucascade>
+                    <uicontrol>Views</uicontrol>
+                    <uicontrol> My Views</uicontrol>
+                    <uicontrol> Service Detail</uicontrol>
+                </menucascade>, view the PBX status.</p>
+            <p><image href="../Images/admin/snmp-view-host-stauts-on-nagios.png" width="650"
+                    id="image_bj1_r3g_vkb"/></p>
+        </section>
+    </body>
+</topic>

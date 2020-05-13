@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="concept_h3q_ppn_tdb">
+    <title>Change Inbound Caller ID</title>
+    <shortdesc>By default, the Inbound caller ID on <ph keyref="product_name"/> displays the
+        caller's phone number, you can change the inbound caller ID with Adapt Caller ID
+        feature.</shortdesc>
+    <body>
+        <p>Adapt Caller ID feature is supported on each trunk. Go to <menucascade>
+                <uicontrol>Settings</uicontrol>
+                <uicontrol>PBX</uicontrol>
+                <uicontrol>Trunks</uicontrol>
+            </menucascade>, click <uicontrol>Adapt Caller ID</uicontrol> tab on the trunk edit page
+            to configure the settings. </p>
+        <section id="section_wff_tpn_tdb">
+            <title>Example 1</title>
+            <p>Company A wants to add a digit 0 to the 11-digit incoming caller ID number that
+                begins with digit 1 for quick redial purposes. </p>
+            <p>For example, company A wants to display 012345678910 instead of 12345678910. </p>
+            <p>In this case, you can configure Adapt Caller ID on trunk 1, and set the rules as
+                follows:</p>
+            <p>
+                <ul id="ul_alv_3qb_3jb">
+                    <li><uicontrol>Patterns</uicontrol>: 1.</li>
+                    <li><uicontrol>Strip</uicontrol>: Leave it blank.</li>
+                    <li><uicontrol>Prepend</uicontrol>: 0</li>
+                </ul>
+            </p>
+        </section>
+        <image href="../Images/admin/adapt_caller_id_1.png" id="image_tjd_y2f_2fb" width="650"/>
+        <section id="section_pqs_rqb_3jb"><title>Example 2</title><p>Company B wants all Xiamen
+                numbers to be displayed as local number without Xiamen area code (0592) that is
+                received through the trunk 2. </p><p>For example, company B wants to display number
+                5503301 instead of 05925503301.</p><p>In this case, you can configure Adapt Caller
+                ID on trunk 2, and set the rules as follows:</p><p>
+                <ul id="ul_hf2_5qb_3jb">
+                    <li><uicontrol>Patterns</uicontrol>: 0592.</li>
+                    <li><uicontrol>Strip</uicontrol>: 4</li>
+                    <li><uicontrol>Prepend</uicontrol>: Leave it blank.</li>
+                </ul>
+            </p><image href="../Images/admin/adapt_caller_id_2.png" width="650"
+                id="image_tqc_2ff_2fb"/></section>
+    </body>
+</topic>

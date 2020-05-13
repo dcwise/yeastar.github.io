@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_f3m_qyd_2db">
+ <title>Time Conditions Overview</title>
+ <shortdesc><?oxy_comment_start author="Becky" timestamp="20191017T103956+0800" comment="Condition defines periods of time that can be applied to Inbound Route or Outbound Route.
+和set time conditions描述接近，改成一致的" flag="done"?>A
+  Time Condition is a time group, which can be applied to outbound routes and inbound
+  routes.<?oxy_comment_end?> You can use Time Condition to control calls based on date and
+  time.</shortdesc>
+ <conbody>
+  <section id="section_nvy_5df_2jb">
+   <title>What is a Time Condition used for?</title>
+   <p>A Time Condition contains a time group.</p>
+   <p>
+    <ul id="ul_pdj_y2f_2jb">
+     <li><b>Apply Time Condition to an Inbound Route</b><p>Time Condition is typically used to
+              control the destination of an inbound call based on the date and time. </p><p>You can
+              select a Time Condition and set a corresponding destination for an inbound route. When
+              a call reaches the PBX, PBX will route the call to the destination when the current
+              system time matches the time defined in the Time Condition.</p></li>
+     <li><b>Apply Time Condition to an Outbound Route</b><p>You can also apply Time Condition to an
+              outbound route to limit when the users can use the outbound route.</p></li>
+    </ul>
+   </p>
+  </section>
+ </conbody>
+</concept>

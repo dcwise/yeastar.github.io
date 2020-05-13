@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_ygp_4qb_r3b">
+    <title>LDAP Overview</title>
+    <shortdesc><ph keyref="product_name"/> - LDAP Server App provides a centralized phonebook
+        management. With the LDAP phonebook, you can quickly launch calls without wasting time
+        finding a contact’s number and subsequently entering it on your phone.</shortdesc>
+    <conbody>
+        <p>LDAP stands for Lightweight Directory Access Protocol which is a client-server protocol
+            for accessing a directory service. </p>
+        <section id="section_f3f_sj1_mdb">
+            <title>What kind of information can be stored in the LDAP directory?</title>
+            <p>The LDAP information model is based on <i>entries</i>. </p>
+            <p>An entry is a collection of attributes that has a globally-unique Distinguished Name
+                (DN). </p>
+            <p>The DN is used to refer to the entry clearly. Each of the entry's attributes has a
+                    <i>type</i> and one or more <i>values</i>. The types are typically mnemonic
+                strings, like "cn" for common name, or "mail" for email address. </p>
+            <p>The syntax of values depends on the attribute type. For example, a <b><i>cn</i></b>
+                attribute might contain the value "Babs Jensen". A <b><i>mail </i></b>attribute
+                might contain the value "babs@example.com".</p>
+            <p>
+                <table frame="all" rowsep="1" colsep="1" id="table_txx_xj1_mdb">
+                    <title>Common LDAP Attributes</title>
+                    <tgroup cols="3">
+                        <colspec colname="c1" colnum="1" colwidth="1*"/>
+                        <colspec colname="c2" colnum="2" colwidth="1*"/>
+                        <colspec colname="c3" colnum="3" colwidth="1*"/>
+                        <thead>
+                            <row>
+                                <entry>Yeastar LDAP Server Option</entry>
+                                <entry>Attribute</entry>
+                                <entry>Alias</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>Nickname</entry>
+                                <entry>cn</entry>
+                                <entry>commonName</entry>
+                            </row>
+                            <row>
+                                <entry>First Name</entry>
+                                <entry>gn</entry>
+                                <entry>givenName</entry>
+                            </row>
+                            <row>
+                                <entry>Last Name</entry>
+                                <entry>sn</entry>
+                                <entry>surname</entry>
+                            </row>
+                            <row>
+                                <entry>Email</entry>
+                                <entry>mail</entry>
+                                <entry>rfc822Mailbox</entry>
+                            </row>
+                            <row>
+                                <entry>Mobile Number</entry>
+                                <entry>mobile</entry>
+                                <entry>mobileTelephoneNumber</entry>
+                            </row>
+                            <row>
+                                <entry>Office Number</entry>
+                                <entry>telephoneNumber</entry>
+                                <entry>telephoneNumber</entry>
+                            </row>
+                            <row>
+                                <entry>Home Number</entry>
+                                <entry>homePhone</entry>
+                                <entry>homeTelephoneNumber</entry>
+                            </row>
+                            <row>
+                                <entry>Department</entry>
+                                <entry>departmentNumber</entry>
+                                <entry>departmentNumber</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+        <section id="section_j2b_sk1_mdb"><title>How is the information arranged?</title><p>In LDAP,
+                directory entries are arranged in a hierarchical tree-like structure. The following
+                figure shows an example of <ph keyref="product_name"/> LDAP directory
+                    tree.</p><p><b>Terminology</b><ul id="ul_qlp_kkm_s3b">
+                    <li>dc: Domain Component<ph product="cloudpbx">, usually refers to a part of a
+                            domain name</ph>.</li>
+                    <li>ou: Organization Unit, usually refers to a name of an organization
+                        unit.</li>
+                    <li>cn: Common Name, usually refers to a contact name.</li>
+                </ul></p><image href="../Images/admin/ldap_tree.png" width="700"
+                product="k2 s-series" id="image_rl5_sqb_r3b"/><p><image id="image_l4n_z15_q3b"
+                    href="../Images/admin/ldap-tree-cloud-pbx.png" width="700" product="cloudpbx"
+                /></p></section>
+    </conbody>
+</concept>

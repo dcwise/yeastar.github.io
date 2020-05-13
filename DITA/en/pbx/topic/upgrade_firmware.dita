@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_kfc_wsl_ldb">
+    <title>Upgrade Firmware</title>
+    <shortdesc><ph product="s-series">You have multiple ways to update the PBX firmware.
+        </ph></shortdesc>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/06/14"/>
+            <!--Carol-->
+            <revised modified="2018/10/23"/>
+        </critdates>
+    </prolog>
+    <body>
+        <p>
+            <note>
+                <p>
+                    <ul id="ul_kdk_tsr_d3b">
+                        <li>Back up the PBX configurations before you start to update the PBX
+                            firmware.</li>
+                        <li>If “Reset configuration to Factory Defaults” is enabled, the system will
+                            reset to factory default settings after upgrading.</li>
+                        <li>When update the firmware, please don’t turn off the power. Or the system
+                            will get damaged.</li>
+                    </ul>
+                </p>
+            </note>
+        </p>
+    </body>
+    <related-links>
+        <link href="create_a_backup_file.dita#task_d3c_djm_ldb"/>
+    </related-links>
+</topic>

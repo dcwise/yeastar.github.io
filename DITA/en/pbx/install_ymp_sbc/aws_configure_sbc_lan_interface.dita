@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_k1z_dgp_f2b">
+    <title>3) Configure SBC LAN Interface</title>
+    <shortdesc>By default, SBC LAN interface is not configured even you have added the interface on
+        SBC instance. You need to log in the SBC via SSH to configure the network
+        interface.</shortdesc>
+    <taskbody><steps>
+            <step>
+                <cmd>Connect SSH to the elastic IP address of the SBC instance.</cmd>
+            </step>
+            <step>
+                <cmd>Edit the configuration file <filepath>50-cloud-init.cfg</filepath>.</cmd>
+                <info>
+                    <codeblock>vi /etc/network/interfaces.d/50-cloud-init.cfg</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Add the following sentences in the configuration file.</cmd>
+                <info>
+                    <note>
+                        <ul id="ul_dk5_4nt_hfb">
+                            <li><codeph>[SBC_LAN_INTERFACE]</codeph> is the network interface name
+                                of your SBC LAN port. Generally, the LAN interface name is
+                                    <codeph>eth1</codeph>. For different AMI chosen on the instance,
+                                the interface name may be different. </li>
+                        </ul>
+                    </note>
+                </info>
+                <info>
+                    <codeblock>auto [SBC_LAN_INTERFACE]
+iface [SBC_LAN_INTERFACE] inet dhcp</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Press <uicontrol>ESC</uicontrol> key to exit the edit mode, type
+                        <codeph>:wq</codeph> to save the file.</cmd>
+            </step>
+            <step>
+                <cmd>Type the command to restart network.</cmd>
+                <info>
+                    <codeblock>/etc/init.d/networking restart</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Type the command to check the network interfaces of the SBC instance.</cmd>
+                <info>
+                    <codeblock>ifconfig</codeblock>
+                </info>
+            </step>
+        </steps></taskbody>
+</task>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="k2-upgrade-yeastar-k2-ippbx">
+    <title><?oxy_comment_start author="Sunmy" timestamp="20190623T110245+0800" comment="upgrade pbx 容易与软件升级混淆。实际时license升级，或更新。
+考虑升级license是朗视控制。用户实际是更新激活码，或者理解为重新激活。" id="dgv_bpm_23b"?><?oxy_comment_start author="carol" timestamp="20190624T144432+0800" comment="我们可以直接写扩容。用户的目的也是扩容。
+Expand System Capacity of Yeastar K2 IPPBX" parentID="dgv_bpm_23b" mid="1"?>Update
+        License <?oxy_comment_end mid="1"?><?oxy_comment_end?>for Function Expansion</title>
+    <?oxy_comment_start author="carol" timestamp="20190624T144821+0800" comment="If you need to expand the number of extensions, concurrent calls or other features, contact Yeastar to update your licence."?>
+    <shortdesc>To expand your extensions or concurrent calls, you can contact Yeastar to upgrade
+        your license, and then update license on your PBX.<?oxy_comment_end?></shortdesc>
+    <body>
+        <p>This article shows you how to update your license.</p>
+        <section id="section_djf_mpm_c3b">
+            <?oxy_comment_start author="carol" timestamp="20190624T145328+0800" comment="License update methods"?>
+            <title>The supported update methods<?oxy_comment_end?></title>
+            <p>According to your network connection state and in which way you have activated your
+                PBX, you need to know which method to update. </p>
+            <p>
+                <table frame="none" rowsep="0" colsep="0" id="table_ym3_jcm_c3b">
+                    <title/>
+                    <tgroup cols="3" align="center">
+                        <colspec colname="c1" colnum="1" colwidth="190px" align="center" rowsep="1"
+                            colsep="1"/>
+                        <colspec colname="c2" colnum="2" colwidth="137px" colsep="1" rowsep="1"/>
+                        <colspec colname="c3" colnum="3" colwidth="374px" colsep="1" rowsep="1"/>
+                        <thead>
+                            <row>
+                                <entry align="center" valign="middle">Activation method</entry>
+                                <entry align="center" valign="middle">License required</entry>
+                                <entry>Note</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry align="center" valign="middle">Online<p>Activated using
+                                        E-License</p></entry>
+                                <entry align="center" valign="middle">no</entry>
+                                <entry align="left" valign="middle">Make sure your K2 IPPBX is
+                                    always connect to the Internet.</entry>
+                            </row>
+                            <row>
+                                <entry align="center" valign="middle">Offline<p>Activated using
+                                        Key+License</p></entry>
+                                <entry align="center" valign="middle"> a new License</entry>
+                                <entry align="left" valign="middle">
+                                    <p>Make sure your USB Key is always connected to your PBX, or
+                                        some functions on the K2 might not work because of
+                                        activation fail.</p>
+                                </entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+        <section id="section_jpd_1dm_c3b">
+            <title>Update license online</title>
+            <p>
+                <ol id="ol_bz4_gdm_c3b">
+                    <li>Log in the PBX web interface, go to <menucascade>
+                            <uicontrol>Maintenance</uicontrol>
+                            <uicontrol>Activation</uicontrol>
+                        </menucascade>, click <uicontrol>Update</uicontrol>.<p><image
+                                href="../Images/admin/k2-upgrade-k2-license.jpg"
+                                id="image_y34_4sq_d3b"/></p></li>
+                    <?oxy_comment_start author="carol" timestamp="20190624T145523+0800" comment="点击update就出现对话框，然后点击OK 就可以了吗？
+如果是这样的话，这样写
+In the pop-up dialog, click OK to confirm."?>
+                    <li>Click <uicontrol>OK</uicontrol> after update.</li><?oxy_comment_end?>
+                </ol>
+            </p>
+        </section>
+        <section id="section_btp_wdm_c3b">
+            <?oxy_comment_start author="carol" timestamp="20190624T145606+0800" comment="Update license offline (USB Key)
+标题要带usb key 字眼，不然有些人可能不知道是什么"?>
+            <title>Update license offline<?oxy_comment_end?></title>
+            <p><?oxy_comment_start author="carol" timestamp="20190624T145734+0800" comment="To update license via a USB key, you need to contact Yeastar to get a new USB key."?>If
+                you activate PBX using a USB Key, the Yeastar will provide you a new license to
+                update.<?oxy_comment_end?></p>
+            <p>
+                <ol id="ol_tmt_h2m_c3b">
+                    <li><?oxy_comment_start author="carol" timestamp="20190624T145816+0800" comment="添加第一步。
+1. Connect the new USB key to the computer where the Yeastar K2 IPPBX is installed."?>Log<?oxy_comment_end?>
+                        in the PBX web interface, go to <menucascade>
+                            <uicontrol>Maintenance</uicontrol>
+                            <uicontrol>Activation </uicontrol>
+                        </menucascade>, click <uicontrol>Update</uicontrol>.</li>
+                    <li>Enter your new license, click <uicontrol>Activate</uicontrol>.<p><image
+                                href="../Images/admin/k2-USB-key-update.png" id="image_ngd_dyr_d3b"
+                            /></p></li>
+                    <li>Click <uicontrol>OK</uicontrol> after update.</li>
+                </ol>
+            </p>
+        </section>
+    </body>
+</topic>

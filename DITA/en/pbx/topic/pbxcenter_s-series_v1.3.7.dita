@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_n4x_2z3_pdb">
+    <title>Version 1.3.7</title>
+    <abstract>Released Date: Novermber 2, 2016</abstract>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/06/20"/>
+        </critdates>
+    </prolog>
+    <body>
+        <section id="section_btc_kbx_pdb">
+            <title>New Feature</title>
+            <p><image href="../Images/horizon.png" id="image_ctc_kbx_pdb"/></p>
+            <p>
+                <ul>
+                    <li>Added support for deleting used records, keeping missed call records only,
+                        and phone numbers digits match for AutoCLIP route.</li>
+                    <li>Added support for enabling/disabling VoIP trunks.</li>
+                    <li>Added support for changing auto logout time.</li>
+                    <li>Added IVR invalid key prompt setting.</li>
+                    <li>Added support for enabling/disabling “Local SIP Port”.</li>
+                    <li>Added one touch recording prompt settings.</li>
+                    <li>Extension users could check their outbound route privileges on S-Series web
+                        user interface. Notice that the extension users could only check but could
+                        not edit outbound routes.</li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_qkl_kbx_pdb">
+            <title>Optimization</title>
+            <p><image href="../Images/horizon.png" id="image_rkl_kbx_pdb"/></p>
+            <p>
+                <ul>
+                    <li>Time search on CDR and Recording page is accurate to the seconds.</li>
+                    <li>Increased the maximum number of conference members.<ul id="ul_qtg_4dj_pdb">
+                            <li>S20: 10</li>
+                            <li>S50: 25</li>
+                            <li>S100: 60</li>
+                            <li>S300: 120</li>
+                        </ul></li>
+                    <li>Increased the maximum number of pickup groups.<ul id="ul_rtg_4dj_pdb">
+                            <li>S20: 10</li>
+                            <li>S50: 25</li>
+                            <li>S100: 64</li>
+                            <li>S300: 64</li>
+                        </ul></li>
+                    <li>Limited the SIP UDP port setting: the port value could not fall in the range
+                        of local SIP ports.</li>
+                    <li>Character limit for Trunk name: characters * ? are not allowed.</li>
+                    <li>Character limit for Inbound route DID number: character + is allowed.</li>
+                    <li>Character limit for Time Condition Name: characters ! $ ( ) \ / # ; , [ ] \
+                        " = &lt; > &amp; ' ` ^ % @ { } | \ and blank character are not allowed.</li>
+                    <li>Character limit for system email password: character $ is allowed.</li>
+                    <li>Notification template could work for both SMS notification and email
+                        notification.</li>
+                    <li>You can sort speed dial numbers.</li>
+                    <li>Optimized Call Features Web User Interface.</li>
+                    <li>Updated Chinese system prompts.</li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_oxm_lbx_pdb">
+            <title>Fixed Bug</title>
+            <p><image href="../Images/horizon.png" id="image_pxm_lbx_pdb"/></p>
+            <p>
+                <ul id="ul_jpd_qdj_pdb">
+                    <li>Fixed event center issue: when the PBX used Dual network mode, if you
+                        disconnected network cables for both LAN and WAN port, the system would not
+                        send notification.</li>
+                    <li>Fixed CDR issue: if you change the E1 trunk name, the CDR would display an
+                        incorrect E1 trunk name.</li>
+                    <li>Fixed the issue that if an extension user download call logs from web, he
+                        would download all the call logs on the system even he didn’t have the
+                        privilege.</li>
+                    <li>Fixed the SD card issue: the system would always warn you that the SD card
+                        format was wrong.</li>
+                    <li>Fixed event center issue: if you use GSM/3G trunk to call out and the called
+                        party declined, the system would treat this call as a failed call and send
+                        you a notification.</li>
+                    <li>Fixed VoIP trunk issue: if you enable proxy server, and disable it again,
+                        then save the changes, the VoIP trunk would not work properly. </li>
+                    <li>Fixed conference issue: if a conference moderator extension is in an
+                        extension group, the moderator would be required to enter a password to
+                        enter the conference.</li>
+                    <li>Fixed custom prompt issue: two prompt files would be created if you made a
+                        custom prompt using an extension.</li>
+                    <li>Fixed conference issue: if you invited users to one conference, the system
+                        concurrent calls would be twice of the invited users. </li>
+                    <li>Fixed SMS to Email issue: emails received in Foxmail would display incorrect
+                        received time.</li>
+                    <li>Fixed one touch recording issue: if you changed extension A’s default Caller
+                        ID, and use extension A call to extension B, press *1 to make one touch
+                        record; this call would not be recorded in CDR. </li>
+                    <li>Fixed one touch recording issue: in an internal call, if the two extension
+                        users both press *1 to make one touch record; this call would not be
+                        recorded in CDR.</li>
+                    <li>Fixed network drive issue: if the shared folder name is a Chinese name, the
+                        network drive could not be mounted to PBX.</li>
+                    <li>Fixed Email to SMS issue: received contents in your mobile phone might be
+                        incomplete if you write too many contents in the email. </li>
+                    <li>Fixed the temporary voicemail message issue.</li>
+                    <li>Fixed holiday time condition issue: the system computed holiday time
+                        incorrectly.</li>
+                    <li>Fixed queue issue: when you called in a queue, if you pressed any key on
+                        your phone when you were waiting for answer, the call would be disconnected
+                        automatically.</li>
+                    <li>Fixed SIP trunk issue: for a registered and active SIP trunk, if the SIP
+                        provider always requires an Expires field in REGISTER packets, the SIP trunk
+                        would turn into an unavailable trunk.</li>
+                    <li>Fixed queue issue: if the ring strategy was set to “Ring All”, some queue
+                        members might not ring at the same time.</li>
+                    <li>Fixed PPPoE issue: if you set store system logs to one network drive, and
+                        changed network mode to PPPoE, the system could not obtain network.</li>
+                    <li>Fixed VLAN issue: if network mode was DHCP, VLAN could not work.</li>
+                    <li>Fixed inbound route DID issue: if DID number starts with digit 0, the system
+                        would automatically delete digit 0. </li>
+                    <li>Fixe whitelist/blacklist issue: if you entered a number range, the web
+                        interface would display incorrectly.</li>
+                    <li>Fixed AutoCLIP route issue: if you set “Record Keep Time” to 0, the system
+                        CPU would reach 100%.</li>
+                    <li>Fixed the issue that feature code *8 was not available.</li>
+                    <li>Fixed user permission issue: if you set the privilege as “Custom”, and
+                        granded “voice prompts” privilege for the user, the privilege would be
+                        invalid for the user. </li>
+                    <li>Fixed recording prompt issue: if you set inbound route to one callback
+                        destination, the system did not play the recording prompt for the incoming
+                        calls.</li>
+                    <li>Fixed connection issue between two S-Series PBXs: PBX1 set NAT mode to STUN,
+                        PBX2 set NAT mode to external IP address, internal calls between the two
+                        PBXs could not work properly. </li>
+                    <li>Fixed the CDR issue: if an extension user pressed *1 to make one touch
+                        recording, he could not check the call log on web.</li>
+                    <li>Fixed the issue that SIP Registration/Subscription settings could not take
+                        effect. </li>
+                    <li>Fixed the issue that if virtual ring back tone was enabled on GSM/3G trunk,
+                        the trunk could not receive calls. </li>
+                    <li>Fixed that Peer SIP trunk issue.</li>
+                    <li>Fixed the issue that if an incoming call is forwarded to an external number,
+                        this call would not be recorded.</li>
+                    <li>Fixed VoIP trunk issue: if “Hostname/IP” and “Domain” were set differently,
+                        the trunk could not work properly. </li>
+                    <li>Fixed the issue that custom configuration file extensions.conf could not
+                        work properly.</li>
+                </ul>
+            </p>
+        </section>
+    </body>
+</topic>

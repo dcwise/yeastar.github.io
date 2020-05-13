@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_xnr_vkj_dfb">
+    <title>VoIP Account Trunk</title>
+    <shortdesc>Account Trunk is designed for connection between <ph keyref="product_name"/> and
+        other devices. <ph keyref="product_name"/> will act as a VoIP account provider, the other
+        device should register this account to connect to <ph keyref="product_name"/>.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/09/14"/>
+            <!--Carol-->
+            <revised modified="2018/09/14"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <p></p>
+    </conbody>
+</concept>

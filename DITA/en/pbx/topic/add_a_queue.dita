@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_jbq_dzv_d2b">
+    <title>Add a Queue</title>
+    <shortdesc>Add a simple call queue.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/06/15"/>
+            <!--Carol-->
+            <revised modified="2018/06/15"/>
+            <!--Carol-->
+            <revised modified="2018/07/30"/>
+            <!--Carol-->
+            <revised modified="2018/10/24"/>
+            <!--Carol-->
+            <revised modified="2018/10/30"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol>PBX</uicontrol>
+                        <uicontrol>Call Features</uicontrol>
+                        <uicontrol>Queue</uicontrol>
+                    </menucascade>, click <uicontrol>Add</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Specify a <b>Name</b> and <b>Number</b> for the queue.</cmd>
+            </step>
+            <step>
+                <cmd>Select a <b>Ring Strategy</b> for the call.</cmd>
+                <info>
+                    <ul>
+                        <li><b>Ringing All</b>: Ring All available Agents simultaneously until one
+                            answer.</li>
+                        <li><b>Least Recent</b>: Ring the Agent which was least recently
+                            called.</li>
+                        <li><b>Fewest Calls</b>: Ring the Agent with the fewest completed
+                            calls.</li>
+                        <li><b>Random</b>: Ring a Random Agent.</li>
+                        <li><b>Rememory</b>: Round Robin with Memory,Remembers where it left off in
+                            the last ring pass.</li>
+                        <li><b>Linear</b>: Rings interfaces in the order specicied in the
+                            configuration file.</li>
+                    </ul>
+                </info>
+            </step>
+            <step>
+                <cmd>Select <b>Failover Destination</b>, define what should happen if the call does
+                    not get answered by an agent.</cmd>
+            </step>
+            <step>
+                <cmd>Select <uicontrol>Static Agents</uicontrol> for the queue.</cmd>
+                <info><image href="../Images/admin/queue_support.png" id="image_kfx_r1l_q2b"
+                        width="650"/></info>
+                <info>
+                    <ul id="ul_nr5_v1l_q2b">
+                        <li><b>Dynamic agents</b>: A dynamic agent can log in or log out a queue at
+                            any time.</li>
+                        <li><b>Static agents</b>: A static agents will always stay in the
+                            queue.</li>
+                    </ul>
+                </info>
+            </step>
+            <step>
+                <cmd>Set the <b>Agent Timeout</b>, define how long the phone should keep ringing
+                    before it considers the call unanswered by that agent.</cmd>
+            </step>
+            <step>
+                <cmd>Click <b>Save</b> and <b>Apply</b>.</cmd>
+            </step>
+        </steps>
+        <result id="result_eh3_qzv_d2b">It is done for a simple call queue, for more information of
+            queue settings, refer to <xref href="queue_settings.dita#reference_xcs_jrn_4fb"
+            />.</result>
+    </taskbody>
+</task>

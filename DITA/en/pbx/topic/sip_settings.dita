@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_j4g_lww_d2b">
+    <title>SIP Settings</title>
+    <shortdesc> The SIP configurations require professional knowledge of SIP protocol, incorrect
+        configuration may cause calling issues on the SIP extensions and SIP trunks.</shortdesc>
+    <conbody>
+        <p>Go to <menucascade>
+                <uicontrol>Settings</uicontrol>
+                <uicontrol>PBX</uicontrol>
+                <uicontrol>General</uicontrol>
+                <uicontrol>SIP</uicontrol>
+            </menucascade> to configure the SIP settings.</p>
+        <section id="section_l4m_5xw_d2b">
+            <title>SIP General Settings</title>
+            <p>
+                <table frame="all" rowsep="1" colsep="1" id="table_i4h_yxw_d2b">
+                    <tgroup cols="2">
+                        <colspec colname="c1" colnum="1" colwidth="1*"/>
+                        <colspec colname="c2" colnum="2" colwidth="2.24*"/>
+                        <thead>
+                            <row>
+                                <entry>Option</entry>
+                                <entry>Description</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>UDP Port</entry>
+                                <entry>UDP Port used for SIP registrations. The default is
+                                    5060.</entry>
+                            </row>
+                            <row product="s-series">
+                                <entry>RTP Port</entry>
+                                <entry><p>RTP Port for transmitting data. The From-port should start
+                                        from 10000. From-port and To-port should have a difference
+                                        value between 100 and 10000. </p> The default is
+                                    10000-12000.</entry>
+                            </row>
+                            <row>
+                                <entry>TCP Port</entry>
+                                <entry>TCP Port used for SIP registrations. The default is
+                                    5060.</entry>
+                            </row>
+                            <row product="s-series">
+                                <entry>Local SIP Port</entry>
+                                <entry>A random port in the port range will be used when sending
+                                    packets to SIP server. The default range is 5062-5082.</entry>
+                            </row>
+                            <row id="sip-settings-registeration-timer">
+                                <entry namest="c1" nameend="c2"><uicontrol>Registration
+                                        Timers</uicontrol></entry>
+                            </row>
+                            <row>
+                                <entry>Max Registration Time</entry>
+                                <entry>Maximum duration (in seconds) of incoming registrations and
+                                    subscriptions. The default is 3600 seconds.</entry>
+                            </row>
+                            <row>
+                                <entry>Min Registration Time</entry>
+                                <entry>Minimum duration (in seconds) of incoming registration and
+                                    subscriptions. The default is 60 seconds.</entry>
+                            </row>
+                            <row>
+                                <entry>Qualify Frequency</entry>
+                                <entry>How often to send SIP OPTIONS packet to SIP device to check
+                                    if the device is up. The default is 30 per second.</entry>
+                            </row>
+                            <row id="sip-settings-outbound-SIP">
+                                <entry namest="c1" nameend="c2"><uicontrol>Outbound SIP
+                                        Registrations</uicontrol></entry>
+                            </row>
+                            <row>
+                                <entry>Registration Attempts</entry>
+                                <entry>The number of registration attempts before giving up (0 for
+                                    no limit).</entry>
+                            </row>
+                            <row>
+                                <entry>Default Incoming/Outgoing Registration Time</entry>
+                                <entry>
+                                    <p>Default duration (in seconds) of incoming/outgoing
+                                        registration. The default is 120 seconds. </p>
+                                    <note>The actual duration needs to minus 10 seconds from the
+                                        value you filled in.</note>
+                                </entry>
+                            </row>
+                            <row id="sip-settings-subscription-timer">
+                                <entry namest="c1" nameend="c2"><uicontrol>Subscription
+                                        Timer</uicontrol></entry>
+                            </row>
+                            <row>
+                                <entry>Max Subscription Time</entry>
+                                <entry>Maximum duration (in seconds) of incoming subscriptions. The
+                                    default is 3600 seconds.</entry>
+                            </row>
+                            <row>
+                                <entry>Min Subscription Time</entry>
+                                <entry>Minimum duration (in seconds) of incoming subscriptions. The
+                                    default is 90 seconds.</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+        <section id="section_cdt_xyw_d2b" product="s-series">
+            <title>NAT Settings</title>
+            <p>If your PBX is operating in a network connected to the internet through a single
+                router, your PBX is behind NAT. </p>
+            <p>The NAT device has to be instructed to forward the right inbound packets (from
+                internet) to the PBX server. </p>
+            <p>
+                <note>You need to configure NAT settings when you want to register a remote
+                    extension to the PBX or when you need connect to the PBX via SIP trunk.</note>
+            </p>
+            <p><ph keyref="product_name"/> supports 3 methods to configure NAT.</p>
+            <p>
+                <ul id="ul_gg3_tzw_d2b">
+                    <li><xref href="set_nat_with_external_host.dita#task_crx_msd_zdb"/></li>
+                    <li><xref href="set_nat_with_external_ip_address.dita#task_crx_msd_zdb"/></li>
+                    <li><xref href="set_nat_with_stun.dita#task_crx_msd_zdb"/></li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_avr_zzw_d2b">
+            <title>SIP Codec</title>
+            <p>A codec is a compression or decompression algorithm that used in the transmission of
+                voice packets over a network or the Internet. </p>
+            <p>
+                <dl>
+                    <dlentry>
+                        <dt>Codec Selection</dt>
+                        <dd><ph keyref="product_name"/> supports G711 a-law, u-law, GSM, H261, H263,
+                            H263P, H264, SPEEX, G722, G726, ADPCM, G729A,
+                                MPEG4<?oxy_comment_start author="Sunmy" timestamp="20200325T134904+0800" comment="13.b 加入，k2 cloud 支持"?><ph
+                                product="k2 cloudpbx">, opus</ph><?oxy_comment_end?> and iLBC.</dd>
+                        <dd>
+                            <note>
+                                <ul id="ul_y3x_tbx_d2b">
+                                    <li>You need to choose at least one same code on the PBX and on
+                                        your phones, or there may be a problem of the call.</li>
+                                    <li>If you want to make video calls, you need to select H261,
+                                        H263, H263P, H264 or MPEG4 codec on the PBX and on your
+                                        phones.</li>
+                                </ul>
+                            </note>
+                        </dd>
+                    </dlentry>
+                    <dlentry>
+                        <dt>iLBC Settings</dt>
+                        <dd>The iLBC codec supports two modes: 20ms and 30ms frame length modes, </dd>
+                        <dd>To get better voice quality, you need to set the iLBC mode according to
+                            your SIP endpoints.</dd>
+                        <dd>
+                            <note>Linkus uses iLBC 20ms mode. When Linkus is enabled, this option is
+                                switched to 20ms mode automatically.</note>
+                        </dd>
+                    </dlentry>
+                </dl>
+            </p>
+        </section>
+        <section id="section_pjg_vbx_d2b">
+            <title>TLS Settings</title>
+            <p>
+                <table frame="all" rowsep="1" colsep="1" id="table_ubp_ybx_d2b">
+                    <tgroup cols="2">
+                        <colspec colname="c1" colnum="1" colwidth="1*"/>
+                        <colspec colname="c2" colnum="2" colwidth="3.65*"/>
+                        <thead>
+                            <row>
+                                <entry>Option</entry>
+                                <entry align="left">Description</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>Enable TLS</entry>
+                                <entry>Check the checkbox to enable TLS.</entry>
+                            </row>
+                            <row>
+                                <entry>TLS Port</entry>
+                                <entry>TLS Port used for SIP registrations. The default is
+                                    5061.</entry>
+                            </row>
+                            <row product="s-series">
+                                <entry>Certificate</entry>
+                                <entry>Choose the TLS certificates.</entry>
+                            </row>
+                            <row product="s-series">
+                                <entry>TLS Verify Server</entry>
+                                <entry>If set to <codeph>no</codeph>, don't verify the servers
+                                    certificate when acting as a client. If you don't have the
+                                    server's CA certificate you can set this and it will connect
+                                    without requiring TLS CA file. The default is
+                                        <codeph>no</codeph>.</entry>
+                            </row>
+                            <row product="s-series">
+                                <entry>TLS Verify Client</entry>
+                                <entry>If set to <codeph>yes</codeph>, verify certificate when
+                                    acting as server. The default is <codeph>no</codeph>.</entry>
+                            </row>
+                            <row>
+                                <entry>TLS Client Method</entry>
+                                <entry>Specify protocol for outbound client connections. The default
+                                    is sslv2.</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+        <section id="section_zl1_jcx_d2b">
+            <title>Session Timer</title>
+            <p>A periodic refreshing of a SIP session that allows both the user agent and proxy to
+                determine if the SIP session is still active.</p>
+            <p>
+                <table frame="all" rowsep="1" colsep="1" id="table_fln_qcx_d2b">
+                    <tgroup cols="2">
+                        <colspec colname="c1" colnum="1" colwidth="1*"/>
+                        <colspec colname="c2" colnum="2" colwidth="3.35*"/>
+                        <thead>
+                            <row>
+                                <entry>Option</entry>
+                                <entry align="left">Description</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>Session-timers</entry>
+                                <entry><p>Choose the session timers mode on the system:</p><ul
+                                        id="ul_r2y_5cx_d2b">
+                                        <li><uicontrol>No</uicontrol>: Do not include “timer” value
+                                            in any field</li>
+                                        <li><uicontrol>Supported</uicontrol>: Include “timer” value
+                                            in Supported header</li>
+                                        <li><uicontrol>Require</uicontrol>: Include “timer” value in
+                                            Require header</li>
+                                        <li><uicontrol>Forced</uicontrol>: Iclude “timer” value in
+                                            both pportednd equired header.</li>
+                                    </ul> The default is <uicontrol>Supported</uicontrol>.</entry>
+                            </row>
+                            <row>
+                                <entry>Session-Expires</entry>
+                                <entry>The max refresh interval in seconds.</entry>
+                            </row>
+                            <row>
+                                <entry>Min-SE</entry>
+                                <entry>The min refresh interval in seconds, it must not be less than
+                                    90.</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+        <section id="section_dtq_jcx_d2b">
+            <title>Qos </title>
+            <p>QoS (Quality of Service) is a major issue in VoIP implementations. The issue is how
+                to guarantee that packet traffic for a voice or other media connection will not be
+                delayed or dropped due interference from other lower priority traffic. </p>
+            <p>When the network capacity is insufficient, QoS could provide priority to users by
+                setting the value.</p>
+            <p>
+                <table frame="all" rowsep="1" colsep="1" id="table_c3t_ycx_d2b">
+                    <tgroup cols="2">
+                        <colspec colname="c1" colnum="1" colwidth="1*"/>
+                        <colspec colname="c2" colnum="2" colwidth="3.55*"/>
+                        <thead>
+                            <row>
+                                <entry>Option</entry>
+                                <entry align="left">Description</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>ToS SIP</entry>
+                                <entry>Type of Service for SIP packets.</entry>
+                            </row>
+                            <row>
+                                <entry>ToS Audio</entry>
+                                <entry>Type of Service for RTP audio packets.</entry>
+                            </row>
+                            <row>
+                                <entry>ToS Video</entry>
+                                <entry>Type of Service for RTP video packets.</entry>
+                            </row>
+                            <row>
+                                <entry>Cos SIP</entry>
+                                <entry> Class of Service for SIP packets.</entry>
+                            </row>
+                            <row>
+                                <entry>Cos Audio</entry>
+                                <entry>Class of Service for RTP audio packets.</entry>
+                            </row>
+                            <row>
+                                <entry>Cos Video</entry>
+                                <entry>Class of Service for RTP video packets.</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+        <section id="section_apd_kcx_d2b">
+            <title>T.38</title>
+            <p>Adjust T.38 settings if T.38 Fax don't work.</p>
+            <p>
+                <table frame="all" rowsep="1" colsep="1" id="table_ncd_wkb_ffb">
+                    <tgroup cols="2">
+                        <colspec colname="c1" colnum="1" colwidth="1*"/>
+                        <colspec colname="c2" colnum="2" colwidth="1.86*"/>
+                        <thead>
+                            <row>
+                                <entry>Option</entry>
+                                <entry align="left">Description</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>No T.38 Attributes in Re-invite SDP</entry>
+                                <entry>If this option is selected, SDP re-invite packet will not
+                                    contain T.38 attributes.</entry>
+                            </row>
+                            <row>
+                                <entry>Error Correction</entry>
+                                <entry>Enable or disable Error Correction for the fax.</entry>
+                            </row>
+                            <row>
+                                <entry>T.38 Max BitRate</entry>
+                                <entry>Adjust the max BitRate for T.38 fax.</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+        <section id="section_ifr_lcx_d2b">
+            <title>Advanced SIP Settings</title>
+            <p>
+                <table frame="all" rowsep="1" colsep="1" id="table_d4m_nlb_ffb">
+                    <tgroup cols="2">
+                        <colspec colname="c1" colnum="1" colwidth="1*"/>
+                        <colspec colname="c2" colnum="2" colwidth="1.86*"/>
+                        <thead>
+                            <row>
+                                <entry>Option</entry>
+                                <entry align="left">Description</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row product="s-series">
+                                <entry>Allow RTP Re-invite</entry>
+                                <entry>By default, the system will route media streams from SIP
+                                    endpoints through itself. Enabling this option causes the system
+                                    to attempt to negotiate the endpoints to route packets to each
+                                    other directly, by passing the system. It is not always possible
+                                    for the system to negotiate endpoint-to-endpoint media
+                                    routing.</entry>
+                            </row>
+                            <row>
+                                <entry>User Agent</entry>
+                                <entry>Change the User-Agent field.</entry>
+                            </row>
+                            <row>
+                                <entry>Send Remote Party ID</entry>
+                                <entry>Whether to send Remote-Party-ID in SIP header or not.
+                                        <note>This configuration only take effects on internal
+                                        calls. To set up for external calls, configure the
+                                            <uicontrol>Advance</uicontrol> settings of SIP
+                                        trunk.</note></entry>
+                            </row>
+                            <row>
+                                <entry>Send P Asserted Identify</entry>
+                                <entry>Whether to send P-Asserted-Identify in SIP header or not.
+                                        <note>This configuration only take effects on internal
+                                        calls. To set up for external calls, configure the
+                                            <uicontrol>Advance</uicontrol> settings of SIP
+                                        trunk.</note></entry>
+                            </row>
+                            <row>
+                                <entry>Send Diversion ID</entry>
+                                <entry>Whether to send Diversion in SIP header or not. <p>If this
+                                        option is selected, the Diversion value will be extension
+                                        number.</p><note>This configuration only take effects on
+                                        internal calls. To set up for external calls, configure the
+                                            <uicontrol>Advance</uicontrol> settings of SIP
+                                        trunk.</note></entry>
+                            </row>
+                            <row>
+                                <entry>Support Early Media</entry>
+                                <entry>Whether to support Early Media or not.</entry>
+                            </row>
+                            <row>
+                                <entry>All Busy Mode for SIP Forking</entry>
+                                <entry>
+                                    <ul id="ul_uw4_c4b_ffb">
+                                        <li>Check this option: When one of the terminals that
+                                            register the same extension number is busy in a call,
+                                            the other terminals will not receive calls.</li>
+                                        <li>Uncheck this option: When one terminal is busy, the
+                                            other terminals will still be able to make and receive
+                                            calls.</li>
+                                    </ul>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>Inband Progress</entry>
+                                <entry>This Inband Progress setting applies to all the extensions.<p>
+                                        <note>To configure global Inband Progress setting, you need
+                                            to contact Yeastar support to configure a custom config
+                                            file.</note>
+                                    </p><p>
+                                        <ul id="ul_iq1_31t_nhb">
+                                            <li>Check this option: PBX will send a 183 Session
+                                                Progress to the extension when told to indicate
+                                                ringing and will immediately start sending ringing
+                                                as audio.</li>
+                                            <li>Uncheck this option: PBX will send a 180 Ringing to
+                                                the extension when told to indicate ringing and will
+                                                NOT send it as audio.</li>
+                                        </ul>
+                                    </p></entry>
+                            </row>
+                            <row>
+                                <entry id="global-get-caller-id">Get Caller ID From</entry>
+                                <entry>Decide the system will retrieve Caller ID from which header
+                                    field.</entry>
+                            </row>
+                            <row>
+                                <entry id="global-get-did">Get DID From</entry>
+                                <entry>Decide the system will retrieve DID from which header field.<p>
+                                        <note>If Remote-Party-ID is selected but the SIP trunk
+                                            doesn't support this, the system will retrieve DID fron
+                                            INVITE header.</note>
+                                    </p></entry>
+                            </row>
+                            <row>
+                                <entry>100rel</entry>
+                                <entry>Whether to support 100rel or not.</entry>
+                            </row>
+                            <row product="s-series">
+                                <entry>Allow Guest</entry>
+                                <entry>If this option is selected, PBX will accept the unknown
+                                    calls.</entry>
+                            </row>
+                            <row>
+                                <entry>Support Message Request</entry>
+                                <entry>Whether to support SIP Message Request or not.</entry>
+                            </row>
+                            <row>
+                                <entry>Maxptime</entry>
+                                <entry>Select or enter the Maxptime value.</entry>
+                            </row>
+                            <row product="s-series">
+                                <entry>DTMF Passthrough</entry>
+                                <entry>
+                                    <p>If DTMF Passthrough is enabled, PBX will not process the DMTF
+                                        tones, and passe DTMF tones transparently to the other
+                                        end.</p>
+                                </entry>
+                            </row>
+                            <?oxy_comment_start author="Sunmy" timestamp="20200325T135701+0800" comment="13.B add"?>
+                            <row>
+                                <entry>Enable uaCSTA connection</entry>
+                                <entry>If this option is enabled, the PBX will use uaCSTA (User
+                                    Agent Computer Supported Telecommunications Application) to
+                                    remotely control the IP Phone via Linkus Desktop Client CTI.
+                                    Your IP Phone needs to support uaCSTA standard to use this
+                                    function.</entry>
+                            </row><?oxy_comment_end?>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+    </conbody>
+</concept>

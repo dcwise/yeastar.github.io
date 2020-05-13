@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="task_k1z_5bb_5db">
+    <title>Install OpenVPN on Windows</title>
+    <shortdesc>You need to install OpenVPN on your PC, and then get sample configuration files and
+        make OpenVPN keys and certificates.</shortdesc>
+    <body>
+        <p>
+            <ol id="ol_rh2_5sx_33b">
+                <li><xref href="https://openvpn.net/community-downloads/" format="html"
+                        scope="external">On the OpenVPN download page</xref>, select a suitable
+                    OpenVPN installer to download.<p>
+                        <note>OpenVPN must be installed and run by a user who has administrative
+                            privileges.</note>
+                    </p></li>
+                <li>Double click the OpenVPN installer to start installation.</li>
+                <li>Click <uicontrol>Next</uicontrol>.<p><image
+                            href="../Images/admin/openvpn-win10-installation-1.jpg"
+                            id="image_bn4_y5s_g3b" width="400"/></p></li>
+                <li>Click <uicontrol>I Agree</uicontrol>.<p><image
+                            href="../Images/admin/openvpn-win10-installation-2.jpg"
+                            id="image_mtv_bvs_g3b" width="400"/></p></li>
+                <li>Check <uicontrol>EasyRSA2 Certificate Management Scripts</uicontrol>, click
+                        <uicontrol>Next</uicontrol>.<p><image
+                            href="../Images/admin/openvpn-win10-installation-3.jpg"
+                            id="image_vp4_gvs_g3b" width="400"/></p></li>
+                <li>Choose the install location for OpenVPN, and click
+                        <uicontrol>Install</uicontrol> to start installation.<p>In this example, we
+                        set the destination folder to <filepath>D:\OpenVPN</filepath>.</p><p><image
+                            href="../Images/admin/openvpn-win10-installation-4.jpg"
+                            id="image_alg_4vs_g3b" width="400"/></p></li>
+                <li>Click <uicontrol>Finish</uicontrol>.</li>
+            </ol>
+        </p>
+    </body>
+</topic>
+<?oxy_options track_changes="on"?>

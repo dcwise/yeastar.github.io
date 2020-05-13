@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_a1z_lgn_2fb">
+    <title>Linkus Event Settings</title>
+    <shortdesc>To get informed of Linkus events, you can enable notification of Linkus related
+        events and allow the PBX to record the Linkus events.</shortdesc>
+    <body>
+        <section id="section_tj4_bjn_2fb">
+            <title>Linkus Event Settings</title>
+            <p>Go to <menucascade>
+                    <uicontrol>Settings</uicontrol>
+                    <uicontrol>Event Center</uicontrol>
+                    <uicontrol>Event Settings</uicontrol>
+                    <uicontrol>Operation</uicontrol>
+                </menucascade>, decide which Linkus event will be recorded in the Event Log and
+                which Linkus event notification you will receive.</p>
+            <p><ph keyref="product_name"/> provides the following Linkus events:</p>
+            <p>
+                <ul id="ul_hkm_2kn_2fb">
+                    <li>Linkus Login Failed</li>
+                    <li>Linkus Client has been Locked</li>
+                    <li product="k2 s-series">Linkus Cloud Service Expiration Reminder</li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_tfd_4kn_2fb">
+            <title>Linkus Event Log</title>
+        </section>
+        <p>If the <uicontrol>Record</uicontrol> function is enabled for a Linkus event, when the
+            Linkus event occurs, the log will be recorded.</p>
+        <p><b>To view the Linkus event logs</b>:</p>
+        <p>
+            <ol id="ol_pp5_lln_2fb">
+                <li>Go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol>Event Center</uicontrol>
+                        <uicontrol>Event Log</uicontrol>
+                    </menucascade>.</li>
+                <li>From the <uicontrol>Event Name</uicontrol> drop-down list, select a Linkus
+                    event.</li>
+                <li>Select the time period, click <uicontrol>Search</uicontrol>.</li>
+            </ol>
+        </p>
+        <p><image href="../Images/admin/linkus_event_log.png" id="image_ujl_jln_2fb" width="650"
+            /></p>
+    </body>
+</topic>

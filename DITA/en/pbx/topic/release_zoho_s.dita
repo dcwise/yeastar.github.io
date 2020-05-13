@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="release_zoho_s">
+    <title>Zoho Integration</title>
+    <shortdesc>Release notes for Zoho Integration on <ph keyref="product_name">Yeastar S-Series VoIP
+            PBX</ph>.</shortdesc>
+    <body>
+        <section id="section_kkm_vqv_hlb">
+            <title>Version 1.1.5</title>
+            <p><ph conref="v30.13.0.30.dita#v30.13.0.b/date"/></p>
+            <p>
+                <ul id="ul_lnm_mfh_jlb">
+                    <li>Improved functional stability.</li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_ajw_k4j_tkb">
+            <title>Version 1.1.4</title>
+            <p>Released Date: February 27, 2020<ul id="ul_yg1_m4j_tkb">
+                    <li>The Zoho Integration App is free, no more license from Yeastar is
+                        needed.</li>
+                </ul></p>
+        </section>
+    </body>
+</topic>

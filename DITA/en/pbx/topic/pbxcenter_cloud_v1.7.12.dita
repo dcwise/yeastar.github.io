@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_pyt_psb_dfb">
+    <title>Version 1.7.12</title>
+    <abstract>Released Date: October 25, 2018</abstract>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/09/13"/>
+            <!--Carol-->
+            <revised modified="2018/09/13"/>
+            <!--Carol-->
+            <revised modified="2018/09/14"/>
+            <!--Carol-->
+            <revised modified="2018/10/18"/>
+        </critdates>
+    </prolog>
+    <body>
+        <section id="section_ksp_lpm_m2b">
+            <title>New Features</title>
+            <p><image href="../Images/horizon.png" id="image_ygd_hhx_wdb"/></p>
+            <p>
+                <ul id="ul_tbg_qrm_m2b">
+                    <li>Added support for Call Recording.</li>
+                    <li>Added support for VoIP trunk templates.<p>Supported SIP trunk
+                        providers.</p></li>
+                    <li>Added support for WebRTC Click to Call.</li>
+                    <li>Added support for monitoring status of dynamic agents.</li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_yfm_clv_m2b">
+            <title>Optimization</title>
+            <p><image href="../Images/horizon.png" id="image_rnz_dlv_m2b"/></p>
+            <p id="pbxcenter_1.7.x"><b>Security</b></p>
+            <p>
+                <ul id="ul_sh5_tw1_dfb">
+                    <li>Improved the strength of extension's User Password and Registration
+                        Password.</li>
+                    <li>Optimized the "Welcome Email" template: The extension's registration
+                        password is not included in the default template. <p>
+                            <note>You can edit the template and add the variable of registration
+                                password in the template according to your needs.</note>
+                        </p></li>
+                </ul>
+            </p>
+            <p><b>Extension</b></p>
+            <p>
+                <ul id="ul_hbv_xx1_dfb">
+                    <li>The super administrator can bind an extension with his/her email address
+                        that is used for web login. <p>After login, the super administrator can
+                            configure his/her extension settings, check and manage his/her
+                            voicemail, CDR, and one-touch recordings on <uicontrol>Me</uicontrol>
+                            page.</p></li>
+                    <li>Added support for T.38.</li>
+                    <li>Added email template for "Voicemail to Email" and "Fax to Email".</li>
+                    <li>Deleted the <b>Name</b> setting, added <b>Caller ID name</b> setting.
+                        Generally, set the user's name as <b>Caller ID name</b>.</li>
+                    <li>Fixed the issue that <b>All Busy Mode for SIP Forking</b> setting didn't
+                        take effect if the extension had a DOD number.</li>
+                </ul>
+            </p>
+            <p><b>SIP Trunk</b></p>
+            <p>
+                <ul id="ul_unf_1y1_dfb">
+                    <li>Added support for setting trunk password that contains special
+                        characters.</li>
+                    <li>G711 a-law and G711 u-law are added as the default codecs.</li>
+                </ul>
+            </p>
+            <p>
+                <ul id="ul_b1q_xqh_dfb">
+                    <li>Added <b>Outbound Parameters</b> to configure SIP parameters for outbound
+                            calls.<ul id="ul_c1q_xqh_dfb">
+                            <li>P Asserted Identify: Choose which "P Asserted Identify" value should
+                                be contained in the SIP INVITE headers.</li>
+                            <li>Diversion: Choose which "Diversion" value should be contained in the
+                                SIP INVITE headers.</li>
+                            <li>Remote Party ID: Choose which "Remote Party ID" value should be
+                                contained in the SIP INVITE headers.</li>
+                        </ul></li>
+                    <li>Added <b>Transfer Parameters</b> to configure SIP parameters for transferred
+                            calls.<ul id="ul_d1q_xqh_dfb">
+                            <li>From: Choose which "From" value should be contained in the SIP
+                                INVITE headers.</li>
+                            <li>Diversion: Choose which "Diversion" value should be contained in the
+                                SIP INVITE headers.</li>
+                            <li>Remote Party ID: Choose which "Remote Party ID" value should be
+                                contained in the SIP INVITE headers.</li>
+                            <li>P Asserted Identify: Choose which "P Asserted Identify" value should
+                                be contained in the SIP INVITE headers.</li>
+                        </ul></li>
+                </ul>
+                <ul id="ul_nby_d2b_dfb">
+                    <li>Added support for T.38 on Account Trunk.</li>
+                    <li>Added compatibility with NOTIFY packets from SIP providers: PBX will
+                        recognize the NOTIFY packets and respond 200OK.</li>
+                    <li>Fixed the issue that the trunk could not work if DNS-NAPTR transport was
+                        enabled for the trunk.</li>
+                    <li>Fixed the issue the Music on Hold could not be played if the T.38 was
+                        enabled for the trunk.</li>
+                    <li>Fixed the issue if <uicontrol>User Phone</uicontrol> was enabled, the SIP
+                        ACK packet would contain multiple <codeph>user=phone</codeph> fields.</li>
+                    <li>Fixed the issue that PBX didn't send RTP packets to the latest SDP
+                        address.</li>
+                    <li>Fixed the issue that the status of Register SIP trunk was incorrect.</li>
+                </ul>
+            </p>
+            <p><b>Conference</b></p>
+            <p>
+                <ul id="ul_d5k_3sh_dfb">
+                    <li>Fixed the issue that when you transferred a call to a conference, the call
+                        would be terminated automatically.</li>
+                    <li>Fixed the issue that pressing <codeph>#</codeph> to invite a conference
+                        member would fail.</li>
+                    <li>Fixed the issue that the PBX might initiate a conference automatically.</li>
+                </ul>
+            </p>
+            <p><b>Fax</b></p>
+            <p>
+                <ul id="ul_mkn_sgb_dfb">
+                    <li>Fixed the issue that sending multi-page fax would fail.</li>
+                    <li>Fixed the compatibility issue with Yeastar TA gateway.</li>
+                    <li>Fixed T.38 fax issue: Sending fax to extension through a peer SIP trunk
+                        would fail if fax detection was enabled.</li>
+                </ul>
+            </p>
+            <p><b>AutoCLIP</b><ul id="ul_c1t_4dc_dfb">
+                    <li>Fixed the issue that AutoCLIP could not match incoming caller ID.</li>
+                    <li>Fixed the issue that AutoCLIP could not be disabled.</li>
+                </ul></p>
+            <p><b>Web Interface</b></p>
+            <p>
+                <ul id="ul_xhy_scb_dfb">
+                    <li>Optimized <uicontrol>Limited Country Access</uicontrol> web page.</li>
+                    <li>Added compatibility with the new version of Safari browser and Firefox
+                        browser.</li>
+                </ul>
+            </p>
+            <p><b>Queue</b></p>
+            <p>
+                <ul id="ul_avm_mkb_dfb">
+                    <li>Fixed the Queue issue: The Queue could not work properly if the
+                        "Satisfaction Survey" was enabled.</li>
+                </ul>
+            </p>
+            <p><b>Time Condition</b></p>
+            <p>
+                <ul id="ul_vkp_vgb_dfb">
+                    <li>Optimized Time Condition: Each Inbound route has a different feature code of
+                        Time condition.</li>
+                    <li>Fixed the issue that BLF status of Time Condition was incorrect.</li>
+                </ul>
+            </p>
+            <p><b>Call Features</b></p>
+            <p>
+                <ul id="ul_jl3_kj3_dfb">
+                    <li>Fixed BLF key of Call Parking: The BLF key might not work after rebooting
+                        the PBX.</li>
+                    <li>Fixed Call Transfer issue: The user who performed a call transfer would stay
+                        in busy status.</li>
+                    <li>Fixed Emergency Call issue: When making an emergency call from an extension,
+                        the called party couldn't see the trunk number but the extension
+                        number.</li>
+                    <li>Fixed the issue of "Seizing a Line to Call": If an extension was not
+                        selected in an outbound route and <uicontrol>Match Route Permission When
+                            Seizing a Line</uicontrol> was disabled, the extension could not seize a
+                        line to call out. </li>
+                </ul>
+            </p>
+            <p><b>CDR</b></p>
+            <p>
+                <ul id="ul_jpy_2cc_dfb">
+                    <li>Optimized CDR records.</li>
+                </ul>
+            </p>
+        </section>
+    </body>
+</topic>

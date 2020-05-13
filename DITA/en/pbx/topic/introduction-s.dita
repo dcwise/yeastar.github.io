@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="s-series_intro">
+ <title>Introduction</title>
+ <prolog>
+  <critdates>
+   <!--Carol-->
+   <revised modified="2018/06/06"/>
+  </critdates>
+ </prolog>
+ <conbody>
+  <p>Designed with the small and medium sized enterprises in mind, supporting up to 500 users and
+   built using the very latest technology, the Yeastar S-Series delivers exceptional cost savings,
+   productivity and efficiency improvements, delivering power, performance, quality and peace of
+   mind.</p>
+  <p>The all new S-Series is engineered for the communications needs of today and tomorrow, and with
+   the Yeastar unique modular design future proofs your investment choice.</p>
+  <section id="section_b1q_x1l_zcb"><p><b>Appreciate the Easy-to-use Solution</b></p><ul
+    id="ul_axy_y1l_zcb">
+    <li>Intuitive and graphical UI brings point-and-click configuration.</li>
+    <li>Convenient Phone Provisioning feature saves you tremendous time.</li>
+    <li>Everything can be managed from anywhere with Internet access.</li>
+   </ul><p><b>Your Choice of Technologies and Features</b></p><ul id="ul_bxy_y1l_zcb">
+    <li>Embedded VoIP capability and analog phone connections.</li>
+    <li>Rich external lines options include SIP, PSTN, ISDN BRI, E1/T1/PRI, and cellular
+     networks.</li>
+    <li>Concurrent calls and maximum users are expandable with modules.</li>
+    <li>App Center integrates features that you can add when you need them.</li>
+   </ul><p><b>Telephone System without Risk</b></p><ul id="ul_cxy_y1l_zcb">
+    <li>Meanwell power supply featuring MTBF>560Kh.</li>
+    <li>High-quality Freescale CPU processor and industry leading TI DSP voice processor.</li>
+    <li>Connectors from TE Connectivity with a gold plating layer as thick as 15 μ.</li>
+    <li>Lightening protection on analog ports complying with ITU-T K.20/45/21 8/20 μs and GR-1089
+     standard.</li>
+   </ul><p><b>Play Safe and Expect Reliability</b></p><ul id="ul_dxy_y1l_zcb">
+    <li>TLS, SRTP, and HTTPS standards for better security.</li>
+    <li>Defend against malicious attack with built-in Firewall.</li>
+    <li>Monitor system status and behavior and be notified when abnormalities occur.</li>
+   </ul><xref href="https://www.yeastar.com/s-series-voip-pbx/" format="html" scope="external">Learn
+    more about Yeastar S-Series VoIP PBX</xref></section>
+ </conbody>
+</concept>

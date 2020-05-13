@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_bc2_vfr_bdb">
+  <title>Call Parking</title>
+  <shortdesc>Call Parking is a feature that allows you to suspend a call for an extended period of
+    time and then retrieve that call from any extension.</shortdesc>
+  <prolog>
+    <critdates>
+      <!--Carol-->
+      <revised modified="2018/06/14"/>
+      <!--Carol-->
+      <revised modified="2018/11/02"/>
+    </critdates>
+  </prolog>
+  <body>
+    <section id="section_pt3_bnb_y3b">
+      <title>Scenarios</title>
+      <p>During a call with clients, extension users may need to check information somewhere else.
+        In such case, extension users can park the call temporarily and retrieve the call by any
+        extensions when getting things done. </p>
+    </section>
+    <section id="section_wpy_ygb_y3b"><title>Settings of Call Parking</title><p>Go to <menucascade>
+          <uicontrol>Settings</uicontrol>
+          <uicontrol>PBX</uicontrol>
+          <uicontrol>General</uicontrol>
+          <uicontrol>Feature Code</uicontrol>
+          <uicontrol>Call Parking</uicontrol>
+        </menucascade>, you can modify the feature code, parking extension range, and parking
+        time.</p>We provide default settings of call parking as follows.<p>
+        <table frame="all" id="table_aqr_3kb_y3b">
+          <tgroup cols="2">
+            <colspec colname="c1" colnum="1" colwidth="1*" colsep="1" rowsep="1"/>
+            <colspec colname="c2" colnum="2" colwidth="2.64*" colsep="1" rowsep="1"/>
+            <thead>
+              <row>
+                <entry>Settings</entry>
+                <entry>Descriptions</entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry>Call Parking </entry>
+                <entry>The default feature code is *6. During a call, dial *6 on your phone, the
+                  system will automatically assign a parking slot number to the call.</entry>
+              </row>
+              <row>
+                <entry>Directed Call Parking</entry>
+                <entry>The default feature code is *06. During a call, dial "06+parking slot
+                  number", the call will be parked to the designated parking slot number.</entry>
+              </row>
+              <row>
+                <entry>Parking Extension Range</entry>
+                <entry>Specify the range of parking extension where a call will be parked. The
+                  default value is 6900-6999.<note>The rang of parking extension must be different
+                    from existing extension ranges (<menucascade>
+                      <uicontrol>Settings</uicontrol>
+                      <uicontrol>PBX</uicontrol>
+                      <uicontrol>General</uicontrol>
+                      <uicontrol>Preferences</uicontrol>
+                      <uicontrol>Extension Preferences</uicontrol>
+                    </menucascade>).</note></entry>
+              </row>
+              <row>
+                <entry>Parking Timeout (s)</entry>
+                <entry>Specify the time that a call can be parked before it is retrieved by other
+                  extensions. The default value is 60s. <note>Parking Timeout must be longer than
+                    30s.</note></entry>
+              </row>
+              <row>
+                <entry>Timeout Destination</entry>
+                <entry>
+                  <p>If a parked call hasn't been retrieved before the parking timeout, PBX will
+                    route the call to the designated destination.</p>
+                  <p>
+                    <ul id="ul_xqs_cdv_hkb">
+                      <li><uicontrol>Original
+                        Parker</uicontrol>:<?oxy_comment_start author="carol" timestamp="20200114T180506+0800" comment="注意冒号后面的单词首字母是大写。"?><?oxy_comment_end?>The
+                        call will be routed to the user who parks this call.</li>
+                      <li><uicontrol>Extension</uicontrol>: Te call will be routed to the designated
+                        extension number.</li>
+                      <li><uicontrol>Extension's Voicemail</uicontrol>: The call will be routed to
+                        the designated extension's voicemail.</li>
+                      <li><uicontrol>Custom Number</uicontrol>: The call will be routed to the
+                        designated number.</li>
+                    </ul>
+                  </p>
+                </entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+      </p></section>
+    <section id="section_e1g_lhr_bdb">
+      <title>Call Parking (Default feature code: *6)</title>
+    </section>
+    <p>You can dial the feature code of Call Parking to get the parking slot number, then dial the
+      parking slot number on another phone to retrieve the call.</p>
+    <p><b>Example</b>: </p>
+    <p>
+      <ol id="ol_fwh_4x1_rfb">
+        <li>During a call, dial *6 on your phone, the system will prompt you that the parking slot
+          number is 6900. </li>
+        <li>Dial 6900 on another phone to retrieve the call.</li>
+      </ol>
+    </p>
+    <section id="section_i4h_nhr_bdb">
+      <title>Direct Call Parking (Default feature code: *06)</title>
+    </section>
+    <p>If you get a parking slot number from your administrator, you can dial the “feature code of
+      Direct Call Parking+parking slot number" to park the call to the slot.</p>
+    <p><b>Example</b>: </p>
+    <p>
+      <ol id="ol_jpd_rx1_rfb">
+        <li>During a call, dial *066900 to park the call to slot 6900. </li>
+        <li>Dial 6900 on another phone to retrieve the call.</li>
+      </ol>
+    </p>
+  </body>
+</topic>

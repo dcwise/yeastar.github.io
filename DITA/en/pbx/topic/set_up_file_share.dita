@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_fnp_hvs_xdb">
+    <title>Set up File Sharing</title>
+    <shortdesc>After you set up the external storage on the PBX, you can share files that are stored
+        in the SD card, Micro SD card, USB device, or hard disk.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/05/24"/>
+            <!--Carol-->
+            <revised modified="2018/05/24"/>
+            <!--Carol-->
+            <revised modified="2018/05/25"/>
+            <!--Carol-->
+            <revised modified="2018/07/02"/>
+            <!--Carol-->
+            <revised modified="2018/09/26"/>
+            <!--Carol-->
+            <revised modified="2018/09/27"/>
+            <!--Carol-->
+            <revised modified="2018/10/18"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol>System</uicontrol>
+                        <uicontrol>Storage</uicontrol>
+                        <uicontrol>File Share</uicontrol>
+                    </menucascade>.</cmd>
+            </step>
+            <step>
+                <cmd>Configure File Sharing.</cmd>
+                <info><image href="../Images/admin/file_share_settings.png" id="image_klb_hss_xdb"
+                    /></info>
+                <substeps id="substeps_ud3_dh5_mfb">
+                    <substep>
+                        <cmd>Check the option <uicontrol>Enable File Sharing</uicontrol>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>To allow users to change the shared files, check the option
+                                <uicontrol>Allow to change shared files</uicontrol>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Set the <uicontrol>Shared File Name</uicontrol>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Set the <uicontrol>Password</uicontrol> for accessing the shared
+                            folder.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Click <uicontrol>Save</uicontrol>.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Access the shared folder.</cmd>
+                <substeps id="substeps_xxv_11t_xdb">
+                    <substep>
+                        <cmd>In the Windows search field, enter <filepath>\\{IP address of the
+                                PBX}</filepath>, press <uicontrol>Enter</uicontrol>.</cmd>
+                        <info><image href="../Images/admin/access_shared_folder.png"
+                                id="image_ih3_wty_xdb" width="250"/></info>
+                    </substep>
+                    <substep>
+                        <cmd>Enter the access username and password.</cmd>
+                        <info><image href="../Images/admin/access_file_share.png"
+                                id="image_sc1_xjs_gfb" width="650"/></info>
+                    </substep>
+                </substeps>
+                <choices>
+                    <choice><uicontrol>Username</uicontrol>: Enter <codeph>share</codeph>.</choice>
+                    <choice><uicontrol>Password</uicontrol>: Enter the password that you set on the
+                            <uicontrol>File Share</uicontrol> page.</choice>
+                </choices>
+            </step>
+        </steps>
+        <tasktroubleshooting id="tasktroubleshooting_iw2_q1r_32b"><image
+                href="../Images/ui_icons/troubleshooting.png" id="image_jtm_wcr_32b"/><b>Windows 10
+                users cannot access the shared folder of the PBX</b><p>
+                <ol id="ol_ntr_x1r_32b">
+                    <li>Go to the Windows <menucascade>
+                            <uicontrol>Control Panel</uicontrol>
+                            <uicontrol>Programs and Features</uicontrol>
+                        </menucascade>.<p><image
+                                href="../Images/admin/windows_programs_and_features.png" width="650"
+                                id="image_k2g_w2r_32b"/></p></li>
+                    <li>Click <uicontrol>Turn Windows features on or off</uicontrol>, check the
+                        option <uicontrol>SMB 1.0/CIFS Client</uicontrol>.<p><image
+                                href="../Images/admin/share_file_win10_smb.png" width="650"
+                                id="image_zcf_y2r_32b"/></p></li>
+                </ol>
+            </p></tasktroubleshooting>
+    </taskbody>
+</task>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_knt_5fk_5cb">
+    <title>Upload a Custom Prompt</title>
+    <taskbody>
+        <steps id="steps_i41_yfk_5cb">
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol>PBX</uicontrol>
+                        <uicontrol>Voice Prompts</uicontrol>
+                        <uicontrol>Custom Prompts</uicontrol>
+                    </menucascade>, click <uicontrol>Upload</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>On the configuration page, click <uicontrol>Browse</uicontrol> to choose your
+                    audio file.</cmd>
+                <info><image href="../Images/admin/upload_a_prompt.png" id="image_fkm_2gk_5cb"
+                    /></info>
+                <info>
+                    <note>The uploaded file should meet the <xref
+                            href="requirements_of_custom_audio_file.dita#concept_kwb_pyj_5cb">audio
+                            file requirements</xref>.</note>
+                </info>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Upload</uicontrol> to start uploading the file.</cmd>
+            </step>
+        </steps>
+        <result id="result_msp_kgk_5cb">After the file is uploaded, you can see the file on the
+                <uicontrol>Custom Prompts</uicontrol> page.<p><image
+                    href="../Images/admin/custom_prompt_list.png" width="650" id="image_uf1_rgk_5cb"
+                /></p></result>
+    </taskbody>
+</task>

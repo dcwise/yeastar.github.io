@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_npw_btl_ldb">
+    <title>Backup and Restore</title>
+    <shortdesc>Go to <menucascade>
+            <uicontrol>Maintenance</uicontrol>
+            <uicontrol>Backup and restore</uicontrol>
+        </menucascade>, then you can back up all configurations of PBX. Once backed up, back up file
+        will be displayed in the list. You can upload backup file from local client to PBX, or you
+        can choose from backup list and restore.</shortdesc>
+</topic>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_zmv_4vm_tdb">
+    <title>Blacklist/Whitelist</title>
+    <shortdesc><ph keyref="product_name"/> allows you to blacklist and whitelist IP addresses. This
+        article briefly introduces the definitions and basic settings of blacklist and whitelist,
+        and provides related configuration examples.</shortdesc>
+    <conbody>
+        <section id="section_inw_hkg_x3b">
+            <title>What is Blacklist and Whitelist </title>
+            <p>We briefly introduce the definitions of blacklist and whitelist as follows. </p>
+            <ul id="ul_zlh_rng_x3b">
+                <li>Blacklist <p>The blacklist is used to filter phone numbers. If a phone number is
+                        added to the blacklist, the system blocks incoming or outgoing calls for the
+                        phone number. </p></li>
+                <li>Whitelist<p>The whitelist is used to add trusted phone numbers. If a phone
+                        number is added to the whitelist, the system allows incoming or outgoing
+                        calls for the phone number. <note>The whitelist has a higher priority than
+                            the blacklist.</note></p></li>
+            </ul>
+        </section>
+        <section id="section_exj_3tk_w3b">
+            <title>Blacklist/Whitelist Setting</title>
+            <p><ph keyref="product_name"/> supports system blacklist/whitelist and personal
+                blacklist/whitelist. You can set a global system blacklist/whitelist to apply to all
+                extensions. Extension users can also log in the PBX web interface by their accounts,
+                and set blacklist/whitelist for their own extensions.</p>
+            <p>
+                <ul id="ul_qmc_h5k_w3b">
+                    <li><b>System Blacklist and Whitelist</b><p>Log in the PBX web interface as an
+                            administrator, and go to <menucascade>
+                                <uicontrol>Settings</uicontrol>
+                                <uicontrol>PBX</uicontrol>
+                                <uicontrol>Call Features</uicontrol>
+                                <uicontrol>Blacklist/Whitelist</uicontrol>
+                            </menucascade> to set blacklist and whitelist.</p><p><ph
+                                keyref="product_name"/> supports to block or allow three types of
+                                numbers:<ul id="ul_a1k_35k_w3b">
+                                <li><b>Inbound</b>: If blacklist type is set to
+                                        <uicontrol>Inbound</uicontrol>, the number can not call in
+                                    the system; if whitelist type is set to
+                                        <uicontrol>Inbound</uicontrol>, the number can call in the
+                                    system.</li>
+                                <li><b>Outbound</b>: Extension users can not call the number whose
+                                    blacklist type is <uicontrol>Outbound</uicontrol>; extension
+                                    users can call the number whose whitelist type is
+                                        <uicontrol>Outbound</uicontrol>.</li>
+                                <li><b>Both</b>: Neither inbound calls nor outbound calls are
+                                    allowed for the number whose blacklist type is
+                                        <uicontrol>Both</uicontrol>; both inbound calls and outbound
+                                    calls are allowed for the number whose whitelist type is
+                                        <uicontrol>Both</uicontrol>.</li>
+                            </ul></p></li>
+                </ul>
+            </p>
+            <ul id="ul_qx5_k5k_w3b">
+                <li><b>Personal Blacklist and Whitelist</b><p>Log in the PBX web interface by
+                        extension accounts, the extension users can view the system blacklist and
+                        whitelist that is set by the administrator.</p><p>
+                        <note>Extension users can add personal blacklist and whitelist for their
+                            extensions according to their needs.</note>
+                    </p></li>
+            </ul>
+            <ul id="ul_tvr_w5k_w3b">
+                <li><b>Blacklist/Whitelist Priority</b><p>Priority of blacklist/whitelist: system
+                        whitelist > system blacklist> personal whitelist > personal blacklist.
+                    </p></li>
+            </ul>
+        </section>
+        <section id="section_rv2_jvk_w3b"><title>Blacklist Example</title><p>We demonstrate a few
+                examples of blacklist as follows.</p><b>Prohibit inbound calls from external
+                numbers</b><p>For example, 10086 and 1008611 are not allowed to call in PBX. You can
+                add the two numbers to blacklist as follows.</p><p><image
+                    href="../Images/admin/blacklist-inbound.png" id="image_b3l_xjz_5hb" width="600"
+                /></p><p><b>Prohibit inbound calls and outbound calls</b></p><p>For example, 10086
+                and 1008611 are not allowed to call in PBX, and all extensions on PBX are not
+                allowed to call out 10086 and 1008611.</p><p><image
+                    href="../Images/admin/blacklist-in-and-out.png" width="600"
+                    id="image_mw5_jkz_5hb"/></p><p><b>Prohibit selected extensions or extension
+                    groups from calling certain numbers</b></p><p>
+                <ul id="ul_b2r_hxk_w3b">
+                    <li>Prohibit extension group (Sales) from calling 10086 and 1008611.<p>
+                            <note>You can <xref
+                                    href="create-an-extension-group.dita#task_fgj_5ds_scb">add an
+                                    extension group</xref> in advance for quick selection.<p><image
+                                        id="image_q2d_zxk_w3b"
+                                        href="../Images/admin/blacklist-out1.png" width="600"
+                                /></p></note>
+                        </p></li>
+                </ul>
+            </p><ul id="ul_prk_hyk_w3b">
+                <li>Prohibit all extensions from calling 10086 and 1008611.<p><image
+                            href="../Images/admin/blacklist-out2.png" width="600"
+                            id="image_vx4_tlz_5hb"/></p></li>
+            </ul><ul id="ul_tkd_syk_w3b">
+                <li><b>Prohibit extensions from calling numbers with specified extension
+                        format</b><p>For example, prohibit extension group (sales) from calling
+                        R&amp;D team (all extension numbers are in the format 5XXX).</p><p><image
+                            id="image_n4v_fzk_w3b" href="../Images/admin/blacklist-out3.png"
+                            width="600"/></p></li>
+            </ul></section>
+        <section id="section_nvv_lzk_w3b">
+            <title>Whitelist Example</title>
+            <p>The whitelist has a higher priority than the blacklist, so you can use whitelist to
+                filter trusted phone numbers from blacklist, and allow inbound/outbound calls for
+                the phone numbers.</p>
+            <p>For example, assume you've added 5XXX (extension numbers of R&amp;D team) to
+                blacklist to prohibit sales from calling R&amp;D teams, but you want to allow sales
+                to call extension 5001. In this case, you can add 5001 to whitelist as follows.</p>
+            <p><image id="image_rfb_nzk_w3b" href="../Images/admin/whitelist-out.png" width="650"
+                /></p>
+        </section>
+    </conbody>
+</concept>
+<?oxy_options track_changes="on"?>

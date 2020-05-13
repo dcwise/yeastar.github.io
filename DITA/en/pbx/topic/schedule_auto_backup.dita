@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_jxh_wjm_ldb">
+    <title>Schedule Auto Backup</title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Maintenance</uicontrol>
+                        <uicontrol>Backup and Restore</uicontrol>
+                    </menucascade>, click <uicontrol>Backup Schedule</uicontrol>.</cmd>
+                <info><image href="../Images/admin/backup_schedule.png" id="image_xzz_srm_ldb"
+                    /></info>
+            </step>
+            <step>
+                <cmd>Check the option <uicontrol>Enable Schedule Backup</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Set the backup <uicontrol>Schedule</uicontrol> settings.</cmd>
+                <choices>
+                    <choice>Frequency and time: Select the backup frequency and when to make the
+                        backup.</choice>
+                    <choice><uicontrol>Location Type</uicontrol>: Select where to store the backup
+                        file.</choice>
+                    <choice><uicontrol>Backup Rotation</uicontrol>: Set the maximum number of backup
+                        files that is stored in the selected location. When the number of backup
+                        files exceeds the set value, the oldest file will be replaced with the
+                        newest.</choice>
+                </choices>
+            </step>
+            <step>
+                <cmd>Set which files to back up.</cmd>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+    <related-links>
+        <link href="storage.dita#concept_ihd_t3k_xdb"/>
+    </related-links>
+</task>

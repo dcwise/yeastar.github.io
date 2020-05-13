@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title></title>
+    <topichead navtitle="Beta" product="OEM">
+        <topicref href="../topic/provision-yealink-phones-with-yeastar-pbx.dita"/>
+        <topicref href="../topic/how-to-configure-Yealink-remote-phone-books.dita"/>
+        <topicref href="../topic/how-to-factory-reset-yealink-phones.dita"/>
+        <topicref href="../topic/auto-provisioning-template.dita"/>
+        <topicref href="../topic/provision_grandstream_phones_with_yeastar_pbx.dita"/>
+        <topicref href="../topic/how-to-factory-reset-grandstream-phones.dita"/>
+        <topicref href="../topic/provision-snom-phones-with-yeastar-pbx.dita"/>
+        <topicref href="../topic/how-to-factory-reset-snom-phones.dita"/>
+        <topicref href="../topic/provision-htek-phones-with-yeastar-pbx.dita"/>
+        <topicref href="../topic/how-to-factory-reset-htek-phones.dita"/>
+        <topicref href="../topic/how-to-configure-htek-remote-phone-books.dita"/>
+        <topicref href="../topic/provision-fanvil-phones-with-yeastar-pbx.dita"/>
+        <topicref href="../topic/how-to-factory-reset-fanvil-phones.dita"/>
+        <topicref href="../topic/provision-vtech-phones-with-yeastar-pbx.dita"/>
+        <topicref href="../topic/how-to-factory-reset-vtech-phones.dita"/>
+        <topicref href="../topic/provision-gigaset-phones-with-yeastar-pbx.dita"/>
+        <topicref href="../topic/how-to-factory-reset-gigaset-phones.dita"/>
+        <topicref href="../topic/provision-akuvox-phones-with-yeastar-pbx.dita"/>
+        <topicref href="../topic/how-to-factory-reset-akuvox-phones.dita"/>
+        <topicref href="../topic/provision-escene-phones-with-yeastar-phones.dita"/>
+        <topicref href="../topic/how-to-factory-reset-escene-phones.dita"/>
+        <topicref href="../topic/provision-univois-phones-with-yeastar-pbx.dita"/>
+        <topicref href="../topic/how-to-factory-reset-univois-phones.dita"/>
+        <topicref href="../topic/provision-panasonic-phones-with-yeastar-pbx.dita"/>
+        <topicref href="../topic/how-to-factory-reset-panasonic-phones.dita"/>
+        <topicref href="../topic/provision-cisco-phones-with-yeastar-pbx.dita"/>
+        <topicref href="../topic/how-to-factory-reset-cisco-phones.dita"/>
+        <topicref href="../topic/provision-polycom-phones-with-yeastar-pbx.dita"/>
+        <topicref href="../topic/how-to-factory-reset-polycom-phones.dita"/>
+        <topicref href="../topic/provision-mitel-phones-with-yeastar-pbx.dita"/>
+        <topicref href="../topic/how-to-factory-reset-mitel-phones.dita"/>
+    </topichead>
+</map>

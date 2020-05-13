@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_xsk_lfw_ydb">
+    <title>Ping IP Address</title>
+    <shortdesc>A ping utility sends test messages from the local client to a remote target over the
+        TCP/IP network connection. You can use IP Ping tool to test if the PBX can access the target
+        IP address.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/05/28"/>
+            <!--Carol-->
+            <revised modified="2018/05/28"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Maintenance</uicontrol>
+                        <uicontrol>Troubleshooting</uicontrol>
+                        <uicontrol>IP Ping</uicontrol>
+                    </menucascade>.</cmd>
+                <info><image href="../Images/admin/ip_ping.png" id="image_mqd_qdw_ydb"/></info>
+            </step>
+            <step>
+                <cmd>In the <uicontrol>Host</uicontrol> field, enter the target domain name or IP
+                    address.</cmd>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Start</uicontrol> and check the result.</cmd>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Stop</uicontrol> to stop ping.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

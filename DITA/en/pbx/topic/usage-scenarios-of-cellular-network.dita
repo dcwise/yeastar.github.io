@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="task_d2g_jch_tdb">
+    <title>Usage Scenarios of Cellular Network</title>
+    <shortdesc>The usages of cellular network vary by the type of the cellular network.</shortdesc>
+    <body>
+        <section>
+            <p><b>For Public Cellular Network</b></p>
+            <p>If you have a public cellular network, you can do the following via the cellular
+                network:</p>
+            <ul id="ul_izg_bdh_tdb">
+                <li>Register a remote extension to the PBX</li>
+                <li>Create a register-based VoIP trunk.</li>
+                <li>Create a peer-to-peer VoIP trunk</li>
+                <li>Send notification emails from the PBX</li>
+            </ul>
+            <p><b>For Private Cellular Network</b></p>
+            <p>The private IP is unreachable from Internet, so network traffic from other devices
+                cannot reach the PBX. But the PBX can set network traffic to the Internet.</p>
+            <p>In this way, you can do the followings via the cellular network:</p>
+            <p>
+                <ul id="ul_qhf_lps_ljb">
+                    <li>Create a register-based VoIP trunk on the PBX.</li>
+                    <li>Send notification emails from the PBX Trunk</li>
+                </ul>
+            </p>
+            <p> </p>
+        </section>
+    </body>
+</topic>

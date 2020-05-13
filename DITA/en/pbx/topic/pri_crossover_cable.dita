@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_tcr_n55_ydb">
+    <title>PRI Crossover Cable</title>
+    <shortdesc>Get a ISDN PRI crossover cable from the BRI carrier or make a ISDN PRI
+        cable.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/05/28"/>
+            <!--Carol-->
+            <revised modified="2018/05/28"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <p> You can take an Ethernet cable to make PRI crossover cable. Check the PRI cable pinouts
+            below.</p>
+        <p><image href="../Images/admin/e1_cable_pinout.png" id="image_hbr_pw5_ydb"/></p>
+    </conbody>
+</concept>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_fpd_q4q_ldb">
+    <title>Edit 'Welcome Email' Template</title>
+    <shortdesc><ph keyref="product_name"/> has a default template of the welcome email. You can
+        change the email subject and email contents according to your needs.</shortdesc>
+    
+        <taskbody>
+            <steps id="steps_tm1_q5r_scb">
+                <step>
+                <cmd>Log in PBX web interface, go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol>PBX</uicontrol>
+                        <uicontrol>Extensions</uicontrol>
+                    </menucascade>, click <uicontrol>Welcome Email</uicontrol>.</cmd>
+            </step>
+                <step>
+                    <cmd>On the <uicontrol>Send Welcome Email</uicontrol> page, click
+                            <uicontrol>Edit Template</uicontrol>.</cmd>
+                    <info>You will see the description of variables and the default email contents. <p>
+                            <note> The variables in the email contents are unchangeable.</note>
+                        </p></info>
+                    <info><image href="../Images/admin/default_email_template.png" width="650"
+                        id="image_gf1_gvr_scb"/></info>
+                </step>
+                <step>
+                    <cmd>Edit the email subject and email contents.</cmd>
+                    <info><image href="../Images/admin/edit_email_template.png" width="650"
+                        id="image_jhs_4vr_scb"/></info>
+                </step>
+                <step>
+                    <cmd>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</cmd>
+                </step>
+            </steps>
+        </taskbody>
+    
+</task>

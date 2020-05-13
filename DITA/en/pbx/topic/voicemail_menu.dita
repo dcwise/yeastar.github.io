@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_j4g_jx1_5cb">
+  <title>Voicemail Menu</title>
+  <shortdesc>You can dial *2 on your phone to access the voicemail menu. Below is the detailed
+    voicemail menu.</shortdesc>
+  <body>
+    <p><image href="../Images/admin/voicemail_menu.png" id="image_cqk_lx1_5cb" width="750"/></p>
+  </body>
+</topic>

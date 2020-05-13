@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_axm_rqd_2cb">
+    <title>Receive Inbound Calls</title>
+    <shortdesc>When a call comes into the PBX from outside, PBX needs to know where to direct it.
+        The incoming call can be directed to an extension, a ring group, a queue, or a digital
+        receptionist (IVR) etc. For this purpose, you need to set up inbound routes on the
+        PBX.</shortdesc>
+    <taskbody>
+        <steps id="steps_m3d_vqd_2cb">
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol> PBX</uicontrol>
+                        <uicontrol> Call Control</uicontrol>
+                        <uicontrol> Inbound Routes</uicontrol>
+                    </menucascade>.</cmd>
+            </step>
+            <step>
+                <cmd>Click <image href="../Images/ui_icons/edit.png" id="image_ynj_zqd_2cb"
+                        width="20"/> to edit the default inbound route.</cmd>
+            </step>
+            <step>
+                <cmd>In the <uicontrol>Member Trunks</uicontrol> field, double click the desired
+                    trunk in the <uicontrol>Available</uicontrol> box, the trunk will appear on
+                        <uicontrol>Selected</uicontrol> box.</cmd>
+                <info><image href="../Images/admin/member_trunk.png" id="image_gpx_jyk_2cb"
+                        width="650"/></info>
+            </step>
+            <step>
+                <cmd>In the <uicontrol>Destination</uicontrol> field, select a destination for the
+                    inbound route (e.g. extension 1001).</cmd>
+                <info><image href="../Images/admin/inbound_destination.png" id="image_rqd_myk_2cb"
+                        width="650"/></info>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</cmd>
+            </step>
+        </steps>
+        <result id="result_nh3_vtd_2cb">When a person calls in the selected trunk "cloudcall", the
+            call will be directed to extension 1001.</result>
+    </taskbody>
+</task>

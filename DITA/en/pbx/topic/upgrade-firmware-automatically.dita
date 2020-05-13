@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="task_jrs_jdr_ldb">
+    <title>Upgrade Firmware <ph product="s-series">Automatically</ph></title>
+    <shortdesc>You can check for new version immediately or schedule automatic firmware check, if
+        the PBX has a new released version, upgrade the PBX firmware with just one
+        click.</shortdesc>
+    <body>
+        <section>
+            <p>
+                <note product="cloudpbx">Make sure that the PBX can access the Internet, or the
+                    upgrade will fail.</note>
+            </p>
+        </section>
+        <section id="section_opc_34l_xhb">
+            <title>Check firmware and upgrade immediately</title>
+            <p>
+                <ol>
+                    <li> Go to <menucascade>
+                            <uicontrol>Maintenance</uicontrol>
+                            <uicontrol>Upgrade</uicontrol>
+                            <uicontrol product="s-series">Automatic Upgrade</uicontrol>
+                        </menucascade>.</li>
+                    <li> Click <uicontrol>Check for new version</uicontrol> to check for new
+                        firmware immediately.<itemgroup>
+                            <p>If a new version is detected, you can click
+                                    <uicontrol>New</uicontrol> check the release notes and decide
+                                whether to upgrade or not.</p>
+                            <p><image href="../Images/admin/check-for-new-version.png"
+                                    id="image_tvb_mkg_xhb" width="650"/></p>
+                        </itemgroup></li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_jy4_44l_xhb">
+            <title>Schedule automatic update</title>
+            <p>
+                <ol>
+                    <li> Go to <menucascade>
+                            <uicontrol>Maintenance</uicontrol>
+                            <uicontrol>Upgrade</uicontrol>
+                            <uicontrol product="k2 s-series">Automatic Upgrade</uicontrol>
+                        </menucascade>.</li>
+                    <li>Select one of the following options:<p>
+                            <ul id="ul_dft_cpl_xhb">
+                                <li><uicontrol>Never check for updates</uicontrol><p>This option
+                                        disables Automatic Updates.</p></li>
+                                <li><uicontrol>Check for updates and let me choose whether to
+                                        upgrade</uicontrol><p>This option notifies you that there
+                                        are updates available. It requires user interaction to
+                                        download them and install them.</p></li>
+                                <li><uicontrol product="s-series">Check for updates and
+                                        automatically install</uicontrol><p product="s-series">This
+                                        option lets you select the day and the time that updates are
+                                        automatically downloaded and installed. This can be every
+                                        day, or it can be on a specific day and time.</p></li>
+                            </ul>
+                        </p></li>
+                    <li>Click <uicontrol>Save</uicontrol> and  <uicontrol>Apply</uicontrol>.<p>If a
+                            new version is detected, you can click <uicontrol>New</uicontrol> check
+                            the release notes and decide whether to upgrade or not.</p><p>
+                            <image href="../Images/admin/schedule-auto-upgrade.png"
+                                id="image_cjl_3vl_xhb" width="650"/></p></li>
+                </ol>
+            </p>
+        </section>
+    </body>
+</topic>

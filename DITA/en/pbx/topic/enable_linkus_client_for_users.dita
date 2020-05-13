@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_xkx_s12_2cb">
+    <title>Enable Linkus Client for Users</title>
+    <shortdesc>After setting up the Linkus Server, you need to enable Linkus Client for extension
+        users to allow them log in Linkus client.</shortdesc>
+    <taskbody>
+        <prereq id="prereq_h45_2mq_ngb">
+            <p>
+                <ul id="ul_lfw_gmq_ngb">
+                    <li product="cloudpbx"><xref href="enable-linkus-server.dita#task_rdj_hmk_ngb"
+                        /></li>
+                    <li product="s-series"><xref href="set_up_linkus_server.dita#topic_svp_l22_2cb"
+                            >Enable and set up Linkus Server</xref></li>
+                </ul>
+            </p>
+        </prereq>
+        <steps id="steps_ovb_w12_2cb">
+            <step>
+                <cmd>Log in the PBX web interface, go to <menucascade>
+                        <uicontrol>Linkus</uicontrol>
+                        <uicontrol product="s-series">Linkus Client Settings</uicontrol>
+                    </menucascade>.</cmd>
+            </step>
+            <step>
+                <cmd>To enable Linkus Client for all users, do the followings:</cmd>
+                <info><image href="../Images/admin/enable_linkus_service.png" width="650"
+                        id="image_wpz_chm_2fb" product="s-series"/></info>
+                <info><image href="../Images/admin/enable-linkus-clients-all-users-cloud.png"
+                        width="650" id="image_xtg_jrq_ngb" product="cloudpbx"/></info>
+                <substeps id="substeps_hgm_4gm_2fb">
+                    <substep>
+                        <cmd>To display more users in one page, set a larger
+                                <uicontrol>Displaying</uicontrol> number. </cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Select the checkbox for all the extensions.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Click <uicontrol>Enable</uicontrol>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>In the dialog box, click <uicontrol>Yes</uicontrol> to confirm.</cmd>
+                    </substep>
+                    <substep importance="optional">
+                        <cmd>If you have more extensions in the next page, go to next page, and
+                            repeat step <b>b</b>-<b>d</b>.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>To enable Linkus Client for a specific user, do the followings:</cmd>
+                <info><image href="../Images/admin/enable_linkus_service_for_a_user.png"
+                        id="image_wyx_xjm_2fb" width="650" product="s-series"/></info>
+                <info><image href="../Images/admin/enable-linkus-client-for-a-user-cloud.png"
+                        width="650" id="image_f1h_vrq_ngb" product="cloudpbx"/></info>
+                <substeps>
+                    <substep>
+                        <cmd>Search the user by extension number or name.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Click <image href="../Images/ui_icons/enabled.png"
+                                id="image_iyq_zjm_2fb" width="20"/> to enable Linkus service for the
+                            user.</cmd>
+                        <info>The status switches to <image href="../Images/ui_icons/disabled.png"
+                                width="20" id="image_drk_1nm_2fb"/> (Enabled).</info>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+        <postreq id="postreq_z4r_xrq_ngb"><xref
+                href="send_linkus_emails_to_users.dita#task_ns5_p22_2cb"/></postreq>
+    </taskbody>
+</task>

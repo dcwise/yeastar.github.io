@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="task_ab3_2k3_ygb">
+    <title>1) Create a Data Disk in YMP VM</title>
+    <shortdesc>Create a data disk to store recording files in YMP Virtual Machine (VM).</shortdesc>
+    <body>
+        <note type="important">Do NOT place any other files to the data disk,  or your recording
+            files will be lost.</note>
+        <section id="context_ptx_mk3_ygb">
+            <ol>
+                <li>On the <uicontrol>Virtual machines</uicontrol> page, click the YMP VM to
+                    configure the VM.</li>
+                <li>Under <uicontrol>Settings</uicontrol>, select <uicontrol>Disks</uicontrol>, and
+                    click <uicontrol>+Add data disk</uicontrol>.<p><image
+                            href="../Images/SBC/azure-disks-add-data-disk.png" width="650"
+                            id="image_eg2_2l3_ygb"/></p></li>
+                <li>In the data disk <uicontrol>NAME</uicontrol> drop-down menu, select
+                        <uicontrol>Create disk</uicontrol>.<p><image
+                            href="../Images/SBC/azure-create-disk.png" width="650"
+                            id="image_u5k_pl3_ygb"/></p></li>
+                <li>On the <uicontrol>Create managed disk</uicontrol> page, configure the following
+                    information, and click <uicontrol>Create</uicontrol>.<p><image
+                            href="../Images/SBC/azure-create-a-disk.png" id="image_tjx_tl3_ygb"
+                            width="650"/></p><p>
+                        <ul id="ul_i2m_yl3_ygb">
+                            <li><uicontrol>Name</uicontrol>: Set a name for the data disk. For
+                                example, <i>recordings</i>.</li>
+                            <li><uicontrol>Resource group</uicontrol>: Select the same resource
+                                group as the virtual network.</li>
+                            <li><uicontrol>Account type</uicontrol>: Select <uicontrol>Premium
+                                    SSD</uicontrol>.</li>
+                            <li><uicontrol>Source type</uicontrol>: Select <uicontrol>None (empty
+                                    disk)</uicontrol>.</li>
+                            <li><uicontrol>Size</uicontrol>: Set the disk size.<p>
+                                    <note type="restriction">Minimum 50GB Storage Capacity.</note>
+                                </p><p>
+                                    <note>1 GB (Storage Capacity) = 1000 minutes (Recording
+                                        Time)</note>
+                                </p></li>
+                        </ul>
+                    </p></li>
+                <li>Select the new created data disk, and set the <uicontrol>HOST
+                        CACHING</uicontrol> to <uicontrol>Read/write</uicontrol>.<p><image
+                            href="../Images/SBC/azure-select-data-disk.png" width="650"
+                            id="image_fpg_gn3_ygb"/></p></li>
+                <li>Click <uicontrol>Save</uicontrol>.<p>After you create the data disk to YMP VM,
+                        you must format and mount the disk to make the disk ready for use.</p></li>
+            </ol>
+        </section>
+    </body>
+</topic>

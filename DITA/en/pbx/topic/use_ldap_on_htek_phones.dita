@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="task_fny_wr1_mdb">
+    <title>LDAP Configurations on Htek Phone</title>
+    <shortdesc><ph>In this example, we demonstrate how to configure and use LDAP phonebook using a
+                <ph>Htek UC912 (version 2.0.4.4)</ph></ph>.</shortdesc>
+    <body>
+        <section id="section_jmn_kzh_r3b">
+            <title>Configuration Example</title>
+            <p>The example configurations are set according to default settings of <ph
+                    keyref="product_name"/> LDAP server. You can use the following settings as a
+                starting point and adjust the filter and display attributes according to your
+                needs.</p>
+            <p>Log in the Htek phone web interface, go to <menucascade>
+                    <uicontrol>Directory</uicontrol>
+                    <uicontrol>LDAP</uicontrol>
+                </menucascade> to configure LDAP client.</p>
+            <p><image href="../Images/admin/htek-ldap-s-series.png" product="k2 s-series"
+                    width="650" id="image_c3k_1hm_s3b"/></p>
+            <p><image href="../Images/admin/htek-ldap-cloud-pbx.png" product="cloudpbx" width="650"
+                    id="image_zt5_bhm_s3b"/></p>
+            <p>
+                <table frame="all" id="table_dvk_vzh_r3b">
+                    <tgroup cols="3">
+                        <colspec colname="c1" colnum="1" colwidth="1*" colsep="1" rowsep="1"/>
+                        <colspec colname="c2" colnum="2" colwidth="1.87*" colsep="1" rowsep="1"/>
+                        <colspec colname="c3" colnum="3" colwidth="1*" colsep="1" rowsep="1"/>
+                        <thead>
+                            <row>
+                                <entry>Setting</entry>
+                                <entry>Description</entry>
+                                <entry>Example</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>LDAP Name Filter</entry>
+                                <entry>
+                                    <p>Specify the name attributes for LDAP searching. </p>
+                                    <p>
+                                        <ul id="ul_rpy_21w_tdb">
+                                            <li>The <codeph>*</codeph> symbol in the filter stands
+                                                for any character.</li>
+                                            <li>The <codeph>%</codeph> symbol in the filter stands
+                                                for the entering string used as the prefix of the
+                                                filter condition.</li>
+                                        </ul>
+                                    </p>
+                                </entry>
+                                <entry>(|(cn=%)(sn=%)) </entry>
+                            </row>
+                            <row>
+                                <entry>LDAP Number Filter</entry>
+                                <entry>
+                                    <p>Specify the number attributes for LDAP searching. </p>
+                                    <p>
+                                        <ul id="ul_qqy_21w_tdb">
+                                            <li>The <codeph>*</codeph> symbol in the filter stands
+                                                for any character.</li>
+                                            <li>The <codeph>%</codeph> symbol in the filter stands
+                                                for the entering string used as the prefix of the
+                                                filter condition.</li>
+                                        </ul>
+                                    </p>
+                                </entry>
+                                <entry>(|(telephoneNumber=%)(homePhone=%)(mobile=%))</entry>
+                            </row>
+                            <row>
+                                <entry>Server Address</entry>
+                                <entry>Enter the <ph product="k2 s-series">IP address of PBX</ph><ph
+                                        product="cloudpbx">domain name of Cloud PBX</ph>.</entry>
+                                <entry>
+                                    <ph product="k2 s-series">192.168.6.216</ph><ph
+                                        product="cloudpbx">ray.isbc.yeastarcloud.com</ph></entry>
+                            </row>
+                            <row>
+                                <entry>Port</entry>
+                                <entry>Enter the LDAP server port.</entry>
+                                <entry>389 </entry>
+                            </row>
+                            <row>
+                                <entry>Base</entry>
+                                <entry>Specify a starting point in the directory tree from which to
+                                        search.<ul id="ul_xzd_kgm_s3b">
+                                        <li>To search all contacts, enter the Base DN of LDAP
+                                            server.</li>
+                                        <li>To search part of contacts, enter the desired phonebook
+                                            node.</li>
+                                    </ul></entry>
+                                <entry><ph product="k2 s-series">dc=pbx,dc=com</ph><ph
+                                        product="cloudpbx"
+                                        >dc=ray,dc=isbc,dc=yeastarcloud,dc=com</ph></entry>
+                            </row>
+                            <row>
+                                <entry>Username</entry>
+                                <entry>Enter the user name to log in the LDAP server.</entry>
+                                <entry><ph product="k2 s-series">cn=admin,dc=pbx,dc=com</ph><ph
+                                        product="cloudpbx"
+                                        >cn=admin,dc=ray,dc=isbc,dc=yeastarcloud,dc=com</ph></entry>
+                            </row>
+                            <row>
+                                <entry>Password</entry>
+                                <entry>Enter the password to log in the LDAP server.</entry>
+                                <entry><ph product="k2 s-series">password</ph><ph product="cloudpbx"
+                                        >Yeastar134</ph></entry>
+                            </row>
+                            <row>
+                                <entry>Max.Hits(1~32000)</entry>
+                                <entry>Specify the maximum number of search results to be returned
+                                    by the LDAP server.</entry>
+                                <entry>50 </entry>
+                            </row>
+                            <row>
+                                <entry>LDAP Name Attributes</entry>
+                                <entry>Specify the name attributes of each record to be returned by
+                                    the LDAP server. You can configure multiple name attributes
+                                    separated by space. </entry>
+                                <entry>cn sn displayName</entry>
+                            </row>
+                            <row>
+                                <entry>LDAP Number Attributes</entry>
+                                <entry>Specify the number attributes of each record to be returned
+                                    by the LDAP server. You can configure multiple number attributes
+                                    separated by space.</entry>
+                                <entry>telephoneNumber homePhone mobile mail
+                                    departmentNumber</entry>
+                            </row>
+                            <row>
+                                <entry>LDAP Display Name</entry>
+                                <entry>Specify the display name of the contact record displayed on
+                                    the LCD screen. This parameter value must start with
+                                        <codeph>%</codeph> symbol.</entry>
+                                <entry> %cn </entry>
+                            </row>
+                            <row>
+                                <entry>Search Delay(0~2000ms)</entry>
+                                <entry>The time to display the search results after entering search
+                                    information.</entry>
+                                <entry>Leave it blank.</entry>
+                            </row>
+                            <row>
+                                <entry>Protocol</entry>
+                                <entry><ph keyref="product_name"/> LDAP server uses Version 3. </entry>
+                                <entry>Version 3 </entry>
+                            </row>
+                            <row>
+                                <entry>LDAP Lookup For Call</entry>
+                                <entry>Enable or disable IP phone to perform an LDAP search when
+                                    receiving an incoming call.</entry>
+                                <entry>On</entry>
+                            </row>
+                            <row>
+                                <entry>LDAP Sorting Results</entry>
+                                <entry>Enable or disable IP phone to sort out search results in
+                                    alphabetical and numerical order.</entry>
+                                <entry>On</entry>
+                            </row>
+                            <row>
+                                <entry>LDAP Synchronize Time(0~9999mins)</entry>
+                                <entry>The default value is 0, which means never
+                                    synchronize.</entry>
+                                <entry>Leave it blank.</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+        <section id="section_qdw_kzh_r3b">
+            <title>Set an LDAP Key</title>
+            <p>Set an LDAP key on Htek phone to quickly access the LDAP phonebook.</p>
+            <p>
+                <ol id="ol_zhr_rzh_r3b">
+                    <li>Log in the Htek phone web interface, go to <menucascade>
+                            <uicontrol>Function Keys</uicontrol>
+                            <uicontrol>LineKey</uicontrol>
+                        </menucascade>.</li>
+                    <li>Choose a DSS key, and select key type to
+                                <uicontrol>LDAP</uicontrol>.<p><image id="image_qvx_335_q3b"
+                                href="../Images/admin/htek-ldap-key-cloud-pbx.png" width="650"
+                        /></p></li>
+                    <li>Click <uicontrol>SaveSet</uicontrol>.</li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_lf1_lzh_r3b">
+            <title>Search LDAP Contacts</title>
+            <p>You can press the LDAP key to access the LDAP phonebook. Enter the search criteria to
+                search a contact from LDAP phonebook and call the contact.</p>
+            <p>
+                <ol id="ol_vxn_nzh_r3b">
+                    <li>Press the LDAP key to access the LDAP phonebook.</li>
+                    <li>Search the contact name or number using the keypad. The contacts whose name
+                        or phone number match the characters entered will appear on the LCD
+                                screen.<p><image id="image_dss_p4j_r3b"
+                                href="../Images/admin/htek_ldap_1.png"/></p></li>
+                    <li>Press the navigation key to select the desired contact.</li>
+                    <li>Press <uicontrol>Dial</uicontrol> to call the contact.</li>
+                </ol>
+            </p>
+        </section>
+    </body>
+</topic>

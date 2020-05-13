@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_ozh_swg_tdb">
+    <title>Use Cellular Network of 4G Module</title>
+    <shortdesc>If the 4G module is in “data mode”, you can visit the PBX web interface, register
+        remote extensions, and connect the PBX and other device via the 4G network.</shortdesc>
+    <conbody>
+        <p>To use cellular network of 4G, you need to configure the following settings:<ul
+                id="ul_xkw_4k3_w3b">
+                <li><xref href="configure_cellular_network_on_4g_module.dita#task_yhh_2xg_tdb"
+                        >Configure cellular network on 4G Module</xref></li>
+                <li><xref href="enable_cellular_network_on_the_pbx.dita#task_fbb_3yg_tdb">Enable
+                        cellular network on the PBX</xref></li>
+            </ul></p>
+    </conbody>
+</concept>

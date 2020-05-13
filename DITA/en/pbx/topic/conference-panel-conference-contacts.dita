@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="conference-contacts">
+    <title>Manage Conference Contacts</title>
+    <shortdesc>Phonebook allows you to quickly select contacts before initiating a conference call.
+        You can add a phonebook on Conference Panel or save members' information as a new phonebook
+        after a conference is concluded.</shortdesc>
+    <body>
+        <section id="section_b4h_bdp_h3b">
+            <title>Add a phonebook</title>
+            <p>
+                <ol id="ol_uwk_cdp_h3b">
+                    <li>Log in <uicontrol>Conference Panel</uicontrol>.</li>
+                    <li>Click <uicontrol>Conference Contacts</uicontrol> tab, and click
+                            <uicontrol>Add</uicontrol> to create a phonebook and add contacts.</li>
+                    <li>Enter <uicontrol>Group Name</uicontrol>.<p>
+                            <note>Special characters like <codeph>&amp;""\&lt;>'|$</codeph> are not
+                                allowed.</note>
+                        </p></li>
+                    <li>On <uicontrol>More</uicontrol> section, select the type of phone number and
+                        add a contact, then click <uicontrol>Add</uicontrol>.<p>
+                            <ul id="ul_zvn_4jj_33b">
+                                <li><uicontrol>Extension</uicontrol>: Select an internal contact on
+                                    PBX. For the internal contact, you can select either an
+                                    extension number or an associated phone number.<ul
+                                        id="ul_bxq_14s_bkb">
+                                        <li><?oxy_comment_start author="Becky" timestamp="20191217T150733+0800" comment="两种方法，无序列表就可以？中文未同步"?><uicontrol>Extension</uicontrol><?oxy_comment_end?>:
+                                            The extension number will be saved on the
+                                                  phonebook.<p><image
+                                                  href="../Images/admin/add-contacts-by-extension.png"
+                                                  width="450" id="image_u4p_b4s_bkb"/></p></li>
+                                    </ul><ul id="ul_pnx_b4s_bkb">
+                                        <li><uicontrol>Mobile Number</uicontrol>: Select the
+                                            checkbox of <uicontrol>Mobile Number</uicontrol>. The
+                                            mobile number will be saved on the phonebook while
+                                            extension number will not be displayed.<note>If a prefix
+                                                is specified for the outbound route which is
+                                                available to the extension, you should set the
+                                                corresponding prefix for mobile number.
+                                                  </note><p><image
+                                                  href="../Images/admin/add-phonebook-by-extension-mobile-number.png"
+                                                  width="450" id="image_pvt_d4s_bkb"/></p></li>
+                                    </ul></li>
+                                <li>
+                                    <p><uicontrol>Custom</uicontrol>: Add an external contact to
+                                        phonebook by mobile number.</p>
+                                    <p> Select <uicontrol>Custom</uicontrol>, enter
+                                            <uicontrol>Number</uicontrol> and
+                                            <uicontrol>Name</uicontrol>, and click
+                                            <uicontrol>Add</uicontrol>.<note>If a prefix is
+                                            specified for the outbound route which is used to dial
+                                            external numbers out, you should set the corresponding
+                                            prefix of the phone number.</note></p>
+                                    <p><image id="image_unp_srn_j3b"
+                                            href="../Images/admin/add-contacts-by-mobile-phone.png"
+                                            width="450"/></p>
+                                </li>
+                            </ul>
+                        </p></li>
+                    <li>Click <uicontrol>Save</uicontrol> to save the phonebook.</li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_rm1_jdp_h3b">
+            <title>Save a phonebook</title>
+            <p>If you invite a contact who is not available on the phonebook to the conference, you
+                can save the contact as a new phonebook. You can quickly select the contact from
+                phonebook next time you want to initiate another conference.</p>
+            <p>
+                <ol id="ol_ftn_ldp_h3b">
+                    <li>Log in <uicontrol>Conference Panel</uicontrol>.</li>
+                    <li>Select a conference, and click <image
+                            href="../Images/admin/conference-list-operation.png"
+                            id="image_kzn_ndp_h3b"/> to enter the specific conference page, which
+                        displays all members in the conference.</li>
+                    <li>Click <uicontrol>Save Contacts</uicontrol>, system saves all members in the
+                        conference as the phonebook by default.<p>You can delete members who are not
+                            required to join the follow-up conference.<ul id="ul_lxw_g4s_bkb">
+                                <?oxy_comment_start author="Becky" timestamp="20191217T150838+0800" comment="中文为有序列表"?>
+                                <li><b>Delete one by one</b>: Click <image
+                                        href="../Images/admin/conference-delte-contacts.png"
+                                        id="image_ir1_34s_bkb"/> beside the contact who you want to
+                                    delete.</li><?oxy_comment_end?>
+                                <li><b>Bulk delete</b>: Select contacts who you want to delete, and
+                                    click <uicontrol>Delete</uicontrol>.</li>
+                            </ul></p></li>
+                    <li>Enter <uicontrol>Group Name</uicontrol>.<p>
+                            <note>Special characters like <codeph>&amp;""\&lt;>'|$</codeph> are not
+                                allowed.</note>
+                        </p></li>
+                    <li>Click <uicontrol>Save</uicontrol>.</li>
+                </ol>
+            </p>
+        </section>
+    </body>
+</topic>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+ <title/>
+ <topicref href="install_ymp_sbc/introduction_of_yeastar_cloud_pbx.dita">
+  <topicmeta>
+   <shortdesc>Architecture of Yeastar Cloud PBX and the domain structure of the Yeastar Cloud PBX.
+   </shortdesc>
+  </topicmeta>
+  <topicref href="install_ymp_sbc/framework_of_yeastar_cloud_pbx.dita"/>
+  <topicref href="install_ymp_sbc/domain_structure_of_yeastar_cloud_pbx.dita"/>
+ </topicref>
+ <topicref href="install_ymp_sbc/system_requirements.dita">
+  <topicmeta>
+   <shortdesc>Requirements of YMP server and SBC server.</shortdesc>
+  </topicmeta>
+  <topicref href="install_ymp_sbc/system_requirements_for_sbc.dita"/>
+  <topicref href="install_ymp_sbc/system_requirements_for_ymp.dita"/>
+ </topicref>
+ <topicref href="install_ymp_sbc/deploy_yeastar_cloud_pbx_on_aws.dita">
+  <topicmeta>
+   <shortdesc>Deploy the SBC server and YMP server on AWS.</shortdesc>
+  </topicmeta>
+  <topicref href="install_ymp_sbc/aws_create_the_vpc.dita"/>
+  <topicref href="install_ymp_sbc/aws_configure_the_vpc.dita">
+   <topicref href="install_ymp_sbc/aws_create_two_subnets_in_the_vpc.dita"/>
+   <topicref href="install_ymp_sbc/aws_create_internet_gateway.dita"/>
+   <topicref href="install_ymp_sbc/aws_assoicate_subnets_with_route_tables.dita"/>
+  </topicref>
+  <topicref href="install_ymp_sbc/launch_instances.dita"/>
+  <topicref href="install_ymp_sbc/aws_configure_network_of_sbc_instance.dita">
+   <topicref href="install_ymp_sbc/allocate_elastic_ip_to_sbc.dita"/>
+   <topicref href="install_ymp_sbc/disable_source_dest_check_on_sbc_lan.dita"/>
+   <topicref href="install_ymp_sbc/aws_configure_sbc_lan_interface.dita"/>
+   <topicref href="install_ymp_sbc/aws_set_sbc_lan_as_default_gateway.dita"/>
+  </topicref>
+  <topicref href="install_ymp_sbc/aws_set_up_ebs_volume_for_call_recording.dita">
+   <topicref href="install_ymp_sbc/aws_create_attach_an_ebs_volume_to_ymp_instance.dita"/>
+   <topicref href="install_ymp_sbc/aws_make_the_ebs_volume_available_for_use.dita"/>
+  </topicref>
+  <topicref href="install_ymp_sbc/aws_recommended_instance_type.dita"/>
+ </topicref>
+ <topicref href="install_ymp_sbc/deploy-yeastar-cloud-pbx-on-microsoft-azure.dita"
+  navtitle="Recording Storage">
+  <topichead navtitle="Plan">
+   <topicref href="install_ymp_sbc/azure-create-the-virtual-network.dita"/>
+   <topicref href="install_ymp_sbc/azure-set-up-a-security-group.dita"/>
+   <topicref href="install_ymp_sbc/azure-create-a-subnet-for-ymp.dita"/>
+  </topichead>
+  <topichead navtitle="Deploy">
+   <topicref href="install_ymp_sbc/azure-create-a-vm-for-ymp.dita"/>
+   <topicref href="install_ymp_sbc/azure-create-a-vm-for-sbc.dita"/>
+  </topichead>
+  <topichead navtitle="Network">
+   <topicref href="install_ymp_sbc/azure-set-up-a-route-table.dita"/>
+   <topicref href="install_ymp_sbc/azure-enable-ip-forwarding-on-sbc.dita"/>
+  </topichead>
+  <topichead navtitle="Recording Storage">
+   <topicref href="install_ymp_sbc/azure-set-up-data-disk-for-call-recording.dita">
+    <topicref href="install_ymp_sbc/azure-create-a-data-disk-in-ymp-vm.dita"/>
+    <topicref href="install_ymp_sbc/azure_format_mount_a_data_disk.dita"/>
+   </topicref>
+  </topichead>
+ </topicref>
+ <topicref href="install_ymp_sbc/google_deploy_yeastar_cloud_pbx.dita">
+  <topicref href="install_ymp_sbc/google_create_a_vpc.dita"/>
+  <topicref href="install_ymp_sbc/google_create_firewall_rules.dita"/>
+  <topicref href="install_ymp_sbc/google_create_an_eip.dita"/>
+  <topicref href="install_ymp_sbc/google_create_sbc_instance.dita"/>
+  <topicref href="install_ymp_sbc/google_create_ymp_instance.dita"/>
+  <topicref href="install_ymp_sbc/google_create_vpc_route.dita"/>
+  <topicref href="install_ymp_sbc/google_set_sbc_as_gateway.dita"/>
+  <topicref href="install_ymp_sbc/google_set_up_data_disk_for_call_recording.dita">
+   <topicref href="install_ymp_sbc/google_add_a_persistent_disk_to_ymp_instance.dita"/>
+   <topicref href="install_ymp_sbc/google_format_mount_a_persistent_disk.dita"/>
+  </topicref>
+ </topicref>
+ <topicref href="install_ymp_sbc/deploy_yeastar_cloud_pbx_on_ali_cloud.dita">
+  <topicmeta>
+   <shortdesc>Deploy the SBC server and YMP server on Alibaba Cloud.</shortdesc>
+  </topicmeta>
+  <topicref href="install_ymp_sbc/ali_create_the_vpc.dita"/>
+  <topicref href="install_ymp_sbc/ali_create_security_group.dita"/>
+  <topicref href="install_ymp_sbc/ali_set_up_sbc_instance.dita">
+   <topicref href="install_ymp_sbc/ali_create_an_instance_for_sbc.dita"/>
+   <topicref href="install_ymp_sbc/ali_apply_eip.dita"/>
+   <topicref href="install_ymp_sbc/ali_bind_an_IP_to_sbc_instance.dita"/>
+   <topicref href="install_ymp_sbc/ali_add_a_route_rule.dita"/>
+  </topicref>
+  <topicref href="install_ymp_sbc/ali_create_an_instance_for_ymp.dita"/>
+  <topicref href="install_ymp_sbc/ali_set_up_data_disk_for_call_recording.dita">
+   <topicref href="install_ymp_sbc/ali_create_attach_a_cloud_disk.dita"/>
+   <topicref href="install_ymp_sbc/ali_format_mount_a_data_disk.dita"/>
+  </topicref>
+  <topicref href="install_ymp_sbc/ali_recommended_instance_type.dita"/>
+ </topicref>
+ <topicref href="install_ymp_sbc/deploy_yeastar_cloud_pbx_in_data_center.dita">
+  <topicmeta>
+   <shortdesc>Deploy the SBC server and YMP server in a data center.</shortdesc>
+  </topicmeta>
+  <topicref href="install_ymp_sbc/datacenter_steps_to_deploy_yeastar_cloudpbx.dita">
+   <topicref href="install_ymp_sbc/datacenter_set_sbc_as_gateway.dita"/>
+   <topicref href="install_ymp_sbc/datacenter_check_network.dita"/>
+  </topicref>
+ </topicref>
+ <topicref href="install_ymp_sbc/maintenance.dita">
+  <topicref href="install_ymp_sbc/disaster_recovery_plan.dita">
+   <topicref href="install_ymp_sbc/best-practices-for-disaster-recovery-planning.dita"/>
+   <topicref href="install_ymp_sbc/local-backup-and-restore.dita">
+    <topicref href="install_ymp_sbc/schedule-auto-backup.dita"/>
+    <topicref href="install_ymp_sbc/restore-local-backups.dita"/>
+   </topicref>
+   <topicref href="install_ymp_sbc/snapshot-solution.dita"/>
+   <topicref href="install_ymp_sbc/external-backup-and-restore.dita"/>
+  </topicref>
+  <topicref href="install_ymp_sbc/upgrade_sbc_firmware.dita"/>
+  <topicref href="install_ymp_sbc/r_log_fie_path.dita">
+   <topicmeta>
+    <shortdesc>Path of log files in SBC server.</shortdesc>
+   </topicmeta>
+  </topicref>
+  <topicref href="install_ymp_sbc/check_sbc_version.dita"/>
+ </topicref>
+</map>

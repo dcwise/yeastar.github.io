@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_yzy_1c3_kcb">
+  <title>Set up AWS VPC</title>
+  <body>
+    <p>You need to set up AWS VPC for Yeastar SBC and YMP. After you finish the VPC setup, provide
+      the requested information to Yeastar, we will help you install SBC and YMP on AWS.</p>
+    <p>
+      <ol id="ol_m5l_hts_lcb">
+        <li><xref href="aws_create_the_vpc.dita"/></li>
+        <li><xref href="aws_configure_the_vpc.dita"/></li>
+        <li><xref href="aws_create_a_security_group.dita"/></li>
+        <li><xref href="aws_launch_instance_for_sbc.dita"/></li>
+        <li><xref href="aws_launch_instance_for_ymp.dita"/></li>
+      </ol>
+    </p>
+  </body>
+</topic>

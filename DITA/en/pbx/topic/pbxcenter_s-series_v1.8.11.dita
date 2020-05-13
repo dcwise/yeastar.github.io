@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_n4x_2z3_pdb">
+    <title>Version 1.8.11</title>
+    <abstract>Released Date: March 20, 2018</abstract>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/06/20"/>
+        </critdates>
+    </prolog>
+    <body>
+        <section id="section_bcx_w1x_pdb">
+            <title>Optimization</title>
+            <p><image href="../Images/horizon.png" id="image_ccx_w1x_pdb"/></p>
+            <p>
+                <ul>
+                    <li>Supported 30 Extension Groups.</li>
+                    <li>Improved the security of the extension “User Password”.</li>
+                    <li>SIP trunk:<ul id="ul_d4f_1cj_pdb">
+                            <li>Administrator can set the value of Diversion.</li>
+                            <li>Added P Asserted Identify setting.</li>
+                            <li>Added Remote Party ID setting.</li>
+                            <li>Added Inband Progress setting.</li>
+                            <li>Added DID setting.</li>
+                            <li>Administrator can set whether to add “user=phone” in the SIP INVITE
+                                packet.</li>
+                        </ul></li>
+                    <li>Increased the range of Extension Users to 0~59999.</li>
+                    <li>Recording function:<ul id="ul_e4f_1cj_pdb">
+                            <li>Extension users can dial feature code to pause or resume recordings
+                                during a call. </li>
+                            <li>Added support for monitoring the recording status of an extension on
+                                a BLF key.</li>
+                        </ul></li>
+                    <li>Optimized Hangup Detection on PSTN trunk: supported Chinese Standard Busy
+                        Pattern and Frequency.</li>
+                    <li>Optimized BRI trunk: supported 8 DNIS.</li>
+                    <li>Optimized Bulk Editing function of extensions: bulk editing User Agent
+                        Registration Authorizations will not affect NAT and Register Remotely
+                        settings.</li>
+                    <li>Optimized GSM and 3G trunks: supported manually setting the Carrier. </li>
+                    <li>Added SIP advanced settings:<p>
+                            <ul id="ul_nwz_1cj_pdb">
+                                <li>Early Media</li>
+                                <li>Maxptime</li>
+                            </ul>
+                        </p></li>
+                    <li>Optimized Time Condition: extension users can dial feature code to switch
+                        the inbound route destination to “Other Time” destination. </li>
+                    <li>Optimized Queue function: by default, the PBX would not ring the agent who
+                        is busy in a call. </li>
+                    <li>Optimized CDR: supported displaying DID numbers in CDR.</li>
+                    <li>Optimized Voicemail prompts.</li>
+                    <li>Optimized Recording prompts.</li>
+                    <li>Optimized the function of Seizing Trunk by BLF key: the administrator can
+                        set who can seize a trunk to call out.</li>
+                    <li>Optimized Call Forwarding function through E1 trunk.</li>
+                    <li>Optimized Ring Group and Queue: if an extension is registered on multiple
+                        phones, when the extension is busy, the PBX would not call other phones that
+                        registered the same extension.</li>
+                    <li>Optimized the Periodic Announcements of a Queue.</li>
+                    <li>Optimized the Web interface.</li>
+                </ul>
+            </p>
+        </section>
+    
+        <section id="section_ujn_x1x_pdb">
+            <title>Fixed Bug</title>
+            <p><image href="../Images/horizon.png" id="image_vjn_x1x_pdb"/></p>
+            <p>
+                <ul>
+                    <li>Fixed the issue that video call could not work.</li>
+                    <li>Fixed the compatibility issue with Yeastar TA FXS Gateway.</li>
+                    <li>Fixed the SIP message issue: SIP message could not work on Fanvil
+                        phones.</li>
+                    <li>Fixed the issue that PBX could not resolve FSK signal.</li>
+                    <li>Fixed the issue that the when a user pressed BLF key to seize a trunk to
+                        call out, the call didn’t conform to the dial pattern on PBX.</li>
+                    <li>Fixed the PSTN trunk issue: the call through a PSTN trunk might hang up
+                        automatically.</li>
+                    <li>Fixed the interconnection issue with another device: the interconnection
+                        would fail if you used S-Series IPPBX’s extension to register a SIP trunk on
+                        other device. </li>
+                    <li>Fixed the issue that the SIP trunk could not work if the transport protocol
+                        was changed. </li>
+                    <li>Fixed the Inbound to Outbound call issue on E1 trunk.</li>
+                    <li>Fixed the DOD issue on E1/BRI trunk: importing DOD numbers could not work
+                        properly.</li>
+                    <li>Fixed the DID matching issue on Inbound Route: if multiple inbound routes
+                        have the same DID number(s), the PBX could route inbound calls properly. </li>
+                    <li>Fixed the Recording issue: the voice of the caller and callee might be
+                        overlapping.</li>
+                    <li>Fixed the issue that the status of PSTN trunk was incorrect.</li>
+                    <li>Fixed SMS to Email issue:<ul id="ul_q55_ccj_pdb">
+                            <li>If you sent SMS to email frequently in a short time, the SMS might
+                                not be sent successfully.</li>
+                            <li>If the SMS has too much content, the SMS might not be sent
+                                successfully.</li>
+                        </ul></li>
+                    <li>Fixed Email to SMS issue: Email to SMS could not work properly if the email
+                        contains Portuguese contents.</li>
+                    <li>Fixed the issue that the status of GSM module and 3G module was
+                        incorrect.</li>
+                    <li>Fixed conference issue: inviting external members by your phone would fail
+                        if a password was set on the outbound route. </li>
+                    <li>Fixed the voicemail prompt issue: the PBX didn’t play the customized prompt. </li>
+                    <li>Fixed the Call Forward issue: the PBX could not forward calls to an external
+                        number. </li>
+                    <li>Fixed CDR issue: when an external call reached a queue, the CDR of this call
+                        was incorrect.</li>
+                    <li>Fixed the identification issue of feature code.</li>
+                </ul>
+            </p>
+        </section>
+    </body>
+</topic>

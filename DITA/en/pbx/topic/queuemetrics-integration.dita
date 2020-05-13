@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="app-qm">
+    <title>QueueMetrics Integration</title>
+    <shortdesc><ph keyref="product_name"/> - QueueMetrics Integration App provides the interface to
+        connect your PBX and QueueMetrics. </shortdesc>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/12/19"/>
+            <!--Carol-->
+            <revised modified="2018/12/20"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <p>With the QueueMetrics Integration App, you can:</p>
+        <ul id="ul_qt5_rvt_vdb">
+            <li>Apply a QueueMetrics Live Demo ID</li>
+            <li>Integrate Yeastar S-Series VoIP PBX and QueueMetrics Live</li>
+            <li>Integrate Yeastar S-Series VoIP PBX and QueueMetrics On-Premise</li>
+        </ul>
+        <section id="section_yym_vwm_2gb">
+            <title>About QueueMetrics </title>
+            <p>QueueMetrics is a call center suite for Asterisk telephony system.  <xref
+                    href="https://www.queuemetrics.com/" format="html" scope="external">Learn more
+                    about QueueMetrics</xref>.</p>
+        </section>
+    </conbody>
+</concept>

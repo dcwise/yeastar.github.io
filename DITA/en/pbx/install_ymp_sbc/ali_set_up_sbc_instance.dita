@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_uqp_fhs_lcb">
+  <title>Step3. Set up ECS Instance for SBC</title>
+  <shortdesc>Create one ECS instamce for SBC server, and bind an Elastic IP address to the SBC
+    server, then set the SBC server as a gateway.</shortdesc>
+  <body>
+    <p/>
+  </body>
+</topic>

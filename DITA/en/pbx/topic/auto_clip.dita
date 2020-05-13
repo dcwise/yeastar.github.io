@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_mf5_psv_rdb">
+    <title>AutoCLIP Overview</title>
+    <shortdesc>AutoCLIP (Auto Calling Line Identity Presentation) is an intelligent call matching
+        feature. You can configure AutoCLIP to route inbound calls to original extensions, which
+        will promote your customer satisfaction and work efficiency.</shortdesc>
+    <conbody>
+        <section id="section_gch_qnl_2jb">
+            <?oxy_comment_start author="carol" timestamp="20190925T102146+0800" comment="具体场景应用 
+
+可以参考我们的blog 和youtube video
+或其他资源
+
+We often encounter this kind of situation: in your office, when your sales representative makes a business call to your lead, the called party miss the call for some reason. And when he/she calls back, he is welcomed by your front desk or business auto attendant and could not find the original extension (the sales representative) that made the call. Your lead has no idea of why he/she was called and, in turns, you might lose a potential customer. AutoCLIP is ideal to solve the problem. It can redirect calls to the original extension." flag="done"?>
+            <title>Scenarios<?oxy_comment_end?></title>
+            <p>Assume sales representatives in your company often make outbound calls to customers
+                for promotion. More or less, some customers may miss the calls. When customers call
+                back, the calls are routed to the reception or business auto attendant. Neither
+                reception/business auto attendant nor the customers know who placed the call. </p>
+            <p>With AutoCLIP feature, the PBX can  redirect the calls to the original extension
+                users who placed the calls when customers call back.</p>
+        </section>
+        <section id="section_m33_1pl_2jb">
+            <title>How does the PBX redirect calls to original extensions?</title>
+            <p>
+                <ol>
+                    <li>When extension users make outbound calls, the PBX automatically stores the
+                        records to AutoCLIP routing table.</li>
+                    <li>When customers call in the PBX, PBX will search the phone numbers from the
+                        AutoCLIP routing table.<p>
+                            <ul id="ul_b3l_rjd_wfb">
+                                <li>If there're matched records in AutoCLIP routing table, the calls
+                                    will be routed to corresponding extensions.</li>
+                                <li>If there're not matched records in AutoCLIP routing table, the
+                                    calls will be routed to the destination specified in inbound
+                                    routes.</li>
+                            </ul>
+                        </p></li>
+                </ol>
+            </p>
+            <p><image href="../Images/admin/autoclip.png" id="image_djh_fyv_rdb" width="650"/></p>
+        </section>
+    </conbody>
+</concept>

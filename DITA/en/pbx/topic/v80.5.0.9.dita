@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="v80.5.0.9">
+    <title>Version 80.5.0.9</title>
+    <abstract>Released Date: August 7, 2019</abstract>
+    <body>
+        <section>
+            <title>OPTIMIZATION</title>
+            <p><image href="../Images/horizon.png" id="image_lhk_kvt_4hb"/></p>
+            <p>
+                <dl>
+                    <dlentry>
+                        <dt>System Stability</dt>
+                        <dd>
+                            <ul id="ul_q4c_xv4_43b">
+                                <li>Fixed the system issue: Neither internal calls nor external
+                                    calls could be established when multiple Linkus Push channels
+                                    were not released. </li>
+                                <li>Fixed the system issue: The system would crash after receiving
+                                    an abnormal ACK packet (Non-existed extension number in the From
+                                    header and no tag in To header).</li>
+                                <li>Fixed the system issue: The PBX might crash for high CPU usage
+                                    when the Call Pickup feature was used.</li>
+                                <li>Speed up the hard disk formatting.</li>
+                                <li>Optimized the system stability: If all extensions were selected
+                                    on a configuration page (e.g. Outbound Route page), the
+                                        <uicontrol>Extension List</uicontrol> page would get
+                                    stuck.</li>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                </dl>
+                <dl>
+                    <dlentry>
+                        <dt>Extension</dt>
+                        <dd>
+                            <ul id="ul_r4c_xv4_43b">
+                                <li>Fixed the <uicontrol>Presence</uicontrol> issue: DND status
+                                    could not be changed on web.</li>
+                                <li>Fixed the issue of <uicontrol>Extension Monitor</uicontrol>: The
+                                    extension with 1-digit number could not be monitored.</li>
+                                <li>Fixed the issue of <uicontrol>Call Forwarding</uicontrol>: If
+                                    the Call Forwarding destination was set to a mobile number, the
+                                    mobile number <uicontrol>Prefix</uicontrol> could not be
+                                    deleted.</li>
+                                <li>
+                                    <p>Fixed the issue of <uicontrol>Extension List</uicontrol>: The
+                                            <uicontrol>Extension List</uicontrol> page could not
+                                        display if the database has an error of the extension
+                                            <uicontrol>User Password</uicontrol>.</p>
+                                </li>
+                                <li>
+                                    <p>Optimized <uicontrol>All Busy Mode for SIP
+                                            Forking</uicontrol>: PBX would send “486 Busy” message
+                                        to the caller when the callee is busy.</p>
+                                    <p>In the earlier version, PBX would sent “603 Decline” to the
+                                        caller.</p>
+                                </li>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                </dl>
+            </p>
+            <p>
+                <dl>
+                    <dlentry>
+                        <dt>Trunk</dt>
+                        <dd>
+                            <ul id="ul_s4c_xv4_43b">
+                                <li>
+                                    <p>Added support for processing P-Preferred-Identity (PPI)
+                                        header in the request message.</p>
+                                    <p>Added the <uicontrol>P-Preferred-Identity (PPI)</uicontrol>
+                                        option to <uicontrol>Outbound Parameters</uicontrol> and
+                                            <uicontrol>Transfer Parameters</uicontrol>(<menucascade>
+                                            <uicontrol>Settings</uicontrol>
+                                            <uicontrol>PBX</uicontrol>
+                                            <uicontrol>VoIP Trunk</uicontrol>
+                                            <uicontrol>Advanced</uicontrol>
+                                        </menucascade>).</p>
+                                </li>
+                                <li>Optimized the Register Trunk settings: Special characters <i>;
+                                        &amp; " ' \ &lt; > ` |</i> are allowed in the
+                                        <uicontrol>Password</uicontrol> field.</li>
+                                <li>Fixed the issue of <uicontrol>Peer Trunk</uicontrol>: Fail to
+                                    register a peer-trunk by using Chinese characters in
+                                        <uicontrol>Username</uicontrol> field.</li>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                </dl>
+            </p>
+            <dl>
+                <dlentry>
+                    <dt>SIP Settings</dt>
+                    <dd>
+                        <ul id="ul_t4c_xv4_43b">
+                            <li>Added support for getting DID and Caller ID from
+                                P-Preferred-Identity (PPI) header.<ul id="ul_u4c_xv4_43b">
+                                    <li>Added <uicontrol>P-Preferred-Identity</uicontrol> option to
+                                            <uicontrol>Get DID From</uicontrol> and <uicontrol>Get
+                                            Caller ID From</uicontrol> (<menucascade>
+                                            <uicontrol>Settings</uicontrol>
+                                            <uicontrol>PBX</uicontrol>
+                                            <uicontrol>VoIP Trunk</uicontrol>
+                                            <uicontrol>Advanced</uicontrol>
+                                            <uicontrol>Inbound Parameters</uicontrol>
+                                        </menucascade>).</li>
+                                    <li>Added <uicontrol>P-Preferred-Identity</uicontrol> option to
+                                            <uicontrol>Get DID From</uicontrol> and <uicontrol>Get
+                                            Caller ID From</uicontrol> (<menucascade>
+                                            <uicontrol>Settings</uicontrol>
+                                            <uicontrol>PBX</uicontrol>
+                                            <uicontrol>General</uicontrol>
+                                            <uicontrol>SIP</uicontrol>
+                                            <uicontrol>Advanced</uicontrol>
+                                        </menucascade>).</li>
+                                </ul></li>
+                            <li>Added the <uicontrol>iLBC Mode</uicontrol>: You can go to <menucascade>
+                                    <uicontrol>Settings</uicontrol>
+                                    <uicontrol>PBX</uicontrol>
+                                    <uicontrol>General Settings</uicontrol>
+                                    <uicontrol>SIP</uicontrol>
+                                    <uicontrol>Codec</uicontrol>
+                                    <uicontrol>iLBC Settings</uicontrol>
+                                </menucascade>, select the iLBC mode: <uicontrol>20ms</uicontrol>
+                                (default) or <uicontrol>30ms</uicontrol>.</li>
+                        </ul>
+                    </dd>
+                </dlentry>
+                <dlentry>
+                    <dt>Outbound Routes</dt>
+                    <dd>
+                        <ul id="ul_v4c_xv4_43b">
+                            <li>Fixed the issue of <uicontrol>Outbound Routes</uicontrol>: If 100
+                                trunks were selected for an outbound route, the users could not make
+                                outbound calls through this route. </li>
+                        </ul>
+                    </dd>
+                </dlentry>
+                <dlentry>
+                    <dt>Callback</dt>
+                    <dd>
+                        <ul id="ul_w4c_xv4_43b">
+                            <li>
+                                <p>Optimized the Callback feature: If the Peer-Trunk is used for
+                                    Callback, the From header in INVITE request would use its DOD
+                                    number in priority.<ul id="ul_x4c_xv4_43b">
+                                        <li>If the peer trunk has no DOD number, PBX will use
+                                            "callback+original caller ID" in From header, which
+                                            would cause a callback failure.</li>
+                                        <li>If the Register-Trunk is used for Callback, make sure
+                                            the <uicontrol>From User</uicontrol> is configured, or
+                                            callback would fail.</li>
+                                    </ul></p>
+                            </li>
+                        </ul>
+                    </dd>
+                </dlentry>
+                <dlentry>
+                    <dt>Call Queue</dt>
+                    <dd>
+                        <ul id="ul_y4c_xv4_43b">
+                            <li>Fixed the issue of <uicontrol>Call Queue</uicontrol>: The CPU usage
+                                was too high when transferring an external call to a queue by
+                                dialing *75.</li>
+                            <li>Fixed the issue of Queue custom configuration: The custom
+                                configuration in which defined the incoming calls transferred to the
+                                failover destination when the queue members were busy or ringing
+                                didn't take effect.</li>
+                            <li>Fixed the issue of <uicontrol>Call Queue</uicontrol>: The Queue
+                                would work abnormally after you transferred an external call to a
+                                queue by dialing *75.</li>
+                        </ul>
+                    </dd>
+                </dlentry>
+                <dlentry>
+                    <dt>CDR and Recording</dt>
+                    <dd>
+                        <ul id="ul_z4c_xv4_43b">
+                            <li>Fixed the issue of <uicontrol>Call Recording</uicontrol>: If call
+                                was parked, the conversation resumed on another phone would not be
+                                recorded.</li>
+                            <li>Fixed the issue of <uicontrol>CDR and Recording</uicontrol>: The PBX
+                                did not generate a CDR and Recording file when an external call was
+                                transferred to call queue.</li>
+                            <li>Optimized <uicontrol>Recordings Auto Cleanup</uicontrol>: The
+                                recordings can be cleaned up automatically even if the home
+                                partition is not created when installing PBX system.</li>
+                        </ul>
+                    </dd>
+                </dlentry>
+                <dlentry>
+                    <dt>Hot Standby</dt>
+                    <dd>
+                        <ul id="ul_apc_xv4_43b">
+                            <li>Fixed the issue of Hot Standby: The File Share function could not
+                                work after the Hot Standby was enabled.</li>
+                            <li>Fixed the issue of Hot Standby: The data was not synchronized
+                                between the primary server and the secondary server if the secondary
+                                server took over as an active server.</li>
+                        </ul>
+                    </dd>
+                </dlentry>
+            </dl>
+            <dl>
+                <dlentry>
+                    <dt>Firewall</dt>
+                    <dd>
+                        <ul id="ul_bpc_xv4_43b">
+                            <li>Fixed the <uicontrol>Firewall</uicontrol> issue: If the default
+                                firewall rules were deleted, the rules would be automatically
+                                restored after the PBX was rebooted.</li>
+                        </ul>
+                    </dd>
+                </dlentry>
+                <dlentry>
+                    <dt>User Permission</dt>
+                    <dd>
+                        <ul id="ul_cpc_xv4_43b">
+                            <li>Fixed the issue of User Permission: Up to 1000 extensions were
+                                displayed and available to be selected when granting
+                                permissions.</li>
+                        </ul>
+                    </dd>
+                </dlentry>
+                <dlentry>
+                    <dt>Me Page</dt>
+                    <dd>
+                        <ul id="ul_dpc_xv4_43b">
+                            <li>Fixed the issue of <uicontrol>Me</uicontrol> page: The
+                                    <uicontrol>Voicemail Access PIN</uicontrol> could not be
+                                edited.</li>
+                        </ul>
+                    </dd>
+                </dlentry>
+            </dl>
+            <dl>
+                <dlentry>
+                    <dt>API</dt>
+                    <dd>
+                        <ul id="ul_epc_xv4_43b">
+                            <li>Added support for Cross-Origin Resource Sharing (CORS),which allows
+                                JavaScript clients from a different origin to access PBX APIs.</li>
+                            <li>Fixed the issue of Call Transfer API: The API program would be
+                                restarted if Call Transfer API was used.</li>
+                            <li>Fixed the Extension Status report: PBX didn't send API report when
+                                the extension status was changed.</li>
+                            <li>Fixed the Apply issue: If the third-party server frequently sends
+                                API application requests, the PBX might fail to establish internal
+                                calls and external calls.</li>
+                            <li>Fixed the issue of DTMF report: The infos parameters were not sent
+                                to the 3rd-party server because that the URL was incorrect.</li>
+                            <li>Fixed the issue of DTMF report: No infos parameters in the DMTF
+                                report when you dialed an external number through IVR and the callee
+                                pressed keys following by the IVR prompt.</li>
+                        </ul>
+                    </dd>
+                </dlentry>
+                <dlentry>
+                    <dt>Linkus</dt>
+                    <dd><b>The Linkus version will be updated to 2.2.21 automatically after you
+                            upgrade the PBX. Check the updates of the new Linkus App in the
+                            followings.</b></dd>
+                    <dd>
+                        <ul id="ul_fpc_xv4_43b">
+                            <li>Added support for Linkus Cloud Service.</li>
+                            <li>Fixed the issue of Linkus Call: The Linkus user in the ring group
+                                could not answer the call, which is transferred from another ring
+                                group after timeout.</li>
+                            <li>Fixed the issue of Linkus Email: The login QR code could not be
+                                displayed if the email was sent to Gmail, Whitebox, and
+                                Outlook.</li>
+                            <li>Fixed the issue of Linkus Call: If <uicontrol>All Busy Mode for SIP
+                                    Forking</uicontrol> was enabled, the Linkus client, which was a
+                                Ring Group member could not receive calls.</li>
+                        </ul>
+                    </dd>
+                </dlentry>
+            </dl>
+            <dl>
+                <dlentry>
+                    <dt>Auto Provisioning</dt>
+                    <dd>
+                        <ul id="ul_gpc_xv4_43b">
+                            <li>Fixed the issue of <uicontrol>Auto Provision Template</uicontrol>:
+                                The special characters %cn in the custom template could not be
+                                identified correctly and would be deleted.</li>
+                            <li>Fixed the issue of <uicontrol>Auto Provisioning Device
+                                    List</uicontrol>: The <uicontrol>Auto Provisioning Device
+                                    List</uicontrol> could not display if the assigned extension
+                                name contains a line break.</li>
+                        </ul>
+                    </dd>
+                </dlentry>
+            </dl>
+        </section>
+    </body>
+</topic>

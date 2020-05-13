@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_zmb_5w4_mgb">
+    <title>Bulk Edit Extension Names and Emails</title>
+    <shortdesc>To bulk edit the extension names and emails, you need to export the extensions from
+            <ph keyref="product_name"/> first, edit the extension names and email addresses in the
+        CSV file, then import the file to the PBX.</shortdesc>
+    <taskbody>
+        <steps>
+            <step>
+                <?oxy_comment_start author="Becky" timestamp="20190909T174629+0800" comment="1.支持导出所有分机，而不是当前页面的分机
+2.超过100个分机也可以直接导出" id="wrr_x4n_1jb" flag="done"?>
+                <?oxy_comment_start author="carol" timestamp="20190911T095027+0800" comment="好的！
+这个好像是研发自己偷偷优化的功能，我们发布新版的时候都没有相关记录说明，所以最好跟测试再确认一下，目前这个导出功能有什么限制，比如一次性最多可以导出多少个。" parentID="wrr_x4n_1jb" flag="done" mid="2"?>
+                <?oxy_comment_start author="Becky" timestamp="20190911T173023+0800" comment="和测试确认过，可以导出所有分机" parentID="wrr_x4n_1jb" flag="done" mid="1"?>
+                <cmd>Log in PBX web interface, go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol>PBX</uicontrol>
+                        <uicontrol>Extensions</uicontrol>
+                    </menucascade>, click <uicontrol>Export</uicontrol> to export all the
+                    extensions.</cmd><?oxy_comment_end?><?oxy_comment_end mid="2"?><?oxy_comment_end mid="1"?>
+            </step>
+            <step>
+                <cmd>Edit the CSV file, enter the users' names and email addresses, then save the
+                    file.</cmd>
+                <info><image href="../Images/admin/extension_csv.png" width="650"
+                        id="image_rmj_zg5_qfb"/></info>
+                <info>
+                    <ul id="ul_kbk_1h5_qfb">
+                        <li><uicontrol>fullname</uicontrol>: Enter the user's name. The
+                                <uicontrol>fullname</uicontrol> stands for the <uicontrol>Caller ID
+                                Name</uicontrol>.</li>
+                        <li><uicontrol>email</uicontrol>: Enter the user's email address.</li>
+                    </ul>
+                </info>
+            </step>
+            <step>
+                <cmd>Import the CSV file to the PBX.</cmd>
+                <substeps id="substeps_my4_31p_mgb">
+                    <substep>
+                        <cmd>Go to <menucascade>
+                                <uicontrol>Settings</uicontrol>
+                                <uicontrol>PBX</uicontrol>
+                                <uicontrol>Extensions</uicontrol>
+                            </menucascade>, click <uicontrol>Import</uicontrol>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>On the pop-up dialog, click <uicontrol>Browse</uicontrol>, select your
+                            CSV file.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Click <uicontrol>Import</uicontrol>.</cmd>
+                        <info>
+                            <note>You may get an error prompt like the following figure.<p><image
+                                        href="../Images/admin/extension_import_error.png"
+                                        id="image_nr4_xh5_qfb"/></p></note>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Click <uicontrol>Yes</uicontrol> to check the log.</cmd>
+                        <info>
+                            <note>Ignore the error if the Error Cause displays
+                                    "username[<varname>1000</varname>]: The imported record is
+                                existing, the record has been overwritten". </note>
+                        </info>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Check the imported extensions on your PBX.</cmd>
+                <info><image href="../Images/admin/imported_extension.png" width="650"
+                        id="image_zt5_m35_qfb"/></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>
+<?oxy_options track_changes="on"?>

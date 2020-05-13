@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="manage-personal-contacts">
+    <title>Manage Personal Contacts</title>
+    <shortdesc>This topic describes how to add, edit, delete, import, and export personal contacts
+        on PBX web page. </shortdesc>
+    <body>
+        <section><title>Operation permissions</title>Users can manage personal contacts on both Web
+            and Linkus, <?oxy_insert_start author="Becky" timestamp="20200422T101931+0800"?>or view
+            personal contacts on an IP
+                phone<?oxy_insert_end?><?oxy_delete author="Becky" timestamp="20200422T101924+0800" content="but the operation permissions are different"?>.<?oxy_comment_start author="Becky" timestamp="20200422T101659+0800" comment="改"?><p>For
+                more information of Contacts on Linkus, see <xref
+                    href="https://help.yeastar.com/en/linkus_client/topic/how-to-add-a-contact-pc.html"
+                    format="html" scope="external">Linkus FAQ</xref>.</p><p>For more information of
+                Contacts on an IP phone, see <xref href="query-and-use-contacts-on-ip-phone.dita"
+                />.</p><?oxy_comment_end?><p>
+                <table frame="all" rowsep="1" colsep="1" id="table_d22_dc2_5kb">
+                    <tgroup cols="4">
+                        <colspec colname="c1" colnum="1" colwidth="1.42*"/>
+                        <colspec colname="c2" colnum="2" colwidth="1*"/>
+                        <colspec colname="c3" colnum="3" colwidth="1.21*"/>
+                        <colspec colname="newCol4" colnum="4" colwidth="1*"/>
+                        <thead>
+                            <row>
+                                <entry>Operations</entry>
+                                <entry>Web</entry>
+                                <entry>Linkus</entry>
+                                <entry>IP phone</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <?oxy_comment_start author="Becky" timestamp="20200422T102039+0800" comment="+"?>
+                            <row>
+                                <entry>View</entry>
+                                <entry>√</entry>
+                                <entry>√</entry>
+                                <entry>√</entry>
+                            </row><?oxy_comment_end?>
+                            <row>
+                                <entry>Add</entry>
+                                <entry>√</entry>
+                                <entry>√</entry>
+                                <entry>×</entry>
+                            </row>
+                            <row>
+                                <entry>Edit</entry>
+                                <entry>√</entry>
+                                <entry>√</entry>
+                                <entry>×</entry>
+                            </row>
+                            <row>
+                                <entry>Delete</entry>
+                                <entry>√</entry>
+                                <entry>√</entry>
+                                <entry>×</entry>
+                            </row>
+                            <row>
+                                <entry>Export</entry>
+                                <entry>√</entry>
+                                <entry>×</entry>
+                                <entry>×</entry>
+                            </row>
+                            <row>
+                                <entry>Import</entry>
+                                <entry>√</entry>
+                                <entry>×</entry>
+                                <entry>×</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p></section>
+        <section id="access-personal-contacts-on-web">
+            <title>Access Personal Contacts</title>
+            <p>Each extension user has a Personal Contacts phone book. </p>
+        </section>
+        <p>
+            <ol id="ol_zxg_yyd_skb">
+                <li>Log in PBX web interface using extension email <ph product="k2 s-series">or
+                        extension number </ph>and password.<ul id="ul_ap3_kmq_rkb">
+                        <li><uicontrol>Username</uicontrol>: Enter extension email<ph
+                                product="k2 s-series"> or extension number</ph>.</li>
+                        <li><uicontrol>Password</uicontrol>: Enter the User Password of
+                            extension.</li>
+                    </ul></li>
+                <li>On the PBX desktop, select <uicontrol>Contacts</uicontrol>.<p>The
+                            <uicontrol>Personal Contacts</uicontrol> is displayed.</p><p><image
+                            href="../Images/admin/personal-contacts.png" width="600"
+                            id="image_qck_dhg_skb"/></p></li>
+            </ol>
+        </p>
+        <section id="section_ilg_1db_skb">
+            <title>Add a personal contact </title>
+        </section>
+        <p>
+            <ol id="ol_e4n_zyd_skb">
+                <li><xref href="#manage-personal-contacts/access-personal-contacts-on-web"
+                        format="dita">Access Personal Contacts on Web.</xref></li>
+                <li>On the <uicontrol>Personal Contacts</uicontrol> page, click
+                        <uicontrol>Add</uicontrol>.</li>
+                <li>Enter the contact information.<p>
+                        <note>The <uicontrol>First Name</uicontrol>, <uicontrol>Last
+                                Name</uicontrol> are required fields, and at least one number is
+                            required.</note>
+                    </p></li>
+                <li>Click <uicontrol>Save</uicontrol>.</li>
+            </ol>
+        </p>
+        <section id="section_pft_n2b_skb">
+            <title>Edit a personal contact </title>
+            <p>
+                <ol id="ol_f4n_zyd_skb">
+                    <li><xref href="#manage-personal-contacts/access-personal-contacts-on-web"
+                            format="dita">Access Personal Contacts on Web.</xref></li>
+                    <li>Select a contact, and click <image href="../Images/ui_icons/edit.png"
+                            width="20" id="image_acs_4gb_skb"/>.</li>
+                    <li>Edit the contact information.</li>
+                    <li>Click <uicontrol>Save</uicontrol>.</li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_qlm_fgb_skb">
+            <title>Delete personal contacts </title>
+            <p>
+                <ol id="ol_g4n_zyd_skb">
+                    <li><xref href="#manage-personal-contacts/access-personal-contacts-on-web"
+                            format="dita">Access Personal Contacts on Web.</xref></li>
+                    <li>To delete a single contact, select the contact and click <image
+                            href="../Images/admin/delete-ldap-phonebook.png" id="image_xlz_flb_skb"
+                        />.</li>
+                    <li>To delete multiple contacts, select the checkboxes of the desired contacts,
+                        and click <uicontrol>Delete</uicontrol>.</li>
+                </ol>
+            </p>
+        </section>
+        <section id="export-company-contacts">
+            <title>Export personal contacts </title>
+        </section>
+        <p>
+            <ol id="ol_bt3_14b_skb">
+                <li><xref href="#manage-personal-contacts/access-personal-contacts-on-web"
+                        format="dita">Access Personal Contacts on Web.</xref></li>
+                <li>Click <uicontrol>Export</uicontrol>.<p>All the contacts will be exported to a
+                        CSV file. </p></li>
+            </ol>
+        </p>
+        <section id="section_uwk_w12_skb">
+            <title>Import personal contacts</title>
+            <p><b>Before you begin</b></p>
+            <p>
+                <ul id="ul_qms_rpb_skb">
+                    <li>Prepare a CSV file<p>To import contacts, you can <xref
+                                href="#manage-personal-contacts/export-company-contacts"
+                                format="dita">export contacts</xref> to a CSV file. </p><p>Use the
+                            CSV file as a template, save your data in the same format. For the data
+                            requirements in the CSV file, see <xref
+                                href="../references/import-parameters-contacts.dita#import-parameters-contacts"
+                            />.</p></li>
+                </ul>
+            </p>
+            <p>
+                <ol id="ol_lxk_w12_skb">
+                    <li><xref href="#manage-personal-contacts/access-personal-contacts-on-web"
+                            format="dita">Access Personal Contacts on Web.</xref></li>
+                    <li>Click <uicontrol>Import</uicontrol>.</li>
+                    <li>In the pop-up dialog, click <uicontrol>Browser</uicontrol>, and select your
+                        CSV file.</li>
+                    <li>Click <uicontrol>Import</uicontrol>.<p>If the contact data is imported
+                            successfully, the web page will display the following
+                                confirmation.</p><p><image
+                                href="../Images/admin/import-successfully.png"
+                                id="image_e13_phg_skb"/></p><p>If you get an error prompt like the
+                            following figure, click <uicontrol>Yes</uicontrol> to check the log and
+                            update your data in the CSV file.</p><p><image
+                                href="../Images/admin/extension_import_error.png"
+                                id="image_nr4_xh5_qfb"/></p></li>
+                </ol>
+            </p>
+        </section>
+    </body>
+</topic>

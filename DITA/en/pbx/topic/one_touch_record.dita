@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_d1p_mbr_bdb">
+  <title>One Touch Record</title>
+  <shortdesc>During a call, you can dial the One Touch Record feature code to start recording the
+    call; dial the feature code again to stop the recording.</shortdesc>
+  <body>
+    <section id="section_pwh_b4g_4fb">
+      <title>One Touch Record Feature Code</title>
+      <p>The default One Touch Record feature code  is *1. </p>
+      <p>You can change the code via <menucascade>
+          <uicontrol>Settings</uicontrol>
+          <uicontrol>PBX</uicontrol>
+          <uicontrol>General</uicontrol>
+          <uicontrol>Feature Code</uicontrol>
+          <uicontrol>One Touch Record</uicontrol>
+        </menucascade>.</p>
+    </section>
+    <section id="section_bxt_c4g_4fb">
+      <title>One Touch Record Prompt</title>
+      <p>By default, when a user dials *1 to record the call, the PBX will not play prompt to notify
+        the other party that the call is being recorded.</p>
+      <p><b>To set One Touch Record prompt:</b></p>
+      <p>
+        <ol id="ol_bvv_csg_4fb">
+          <li>Go to <menucascade>
+              <uicontrol>Settings</uicontrol>
+              <uicontrol>PBX</uicontrol>
+              <uicontrol>Voice Prompts</uicontrol>
+              <uicontrol>Prompt Preferences</uicontrol>
+            </menucascade>.</li>
+          <li>In the <uicontrol>One Touch Record Start Prompt</uicontrol> field, select a <xref
+              href="custom_prompt.dita#topic_zrr_ffk_5cb">custom prompt</xref>.<p>When an extension
+              user dial *1 to record the call, PBX will play the prompt to the other party.</p></li>
+          <li>In the <uicontrol>One Touch Recording End Prompt</uicontrol> field, select a <xref
+              href="custom_prompt.dita#topic_zrr_ffk_5cb">custom prompt</xref>.<p>When an extension
+              user dial *1 to stop recording the call, PBX will play the prompt to the other
+              party.</p></li>
+          <li>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</li>
+        </ol>
+      </p>
+    </section>
+  </body>
+</topic>

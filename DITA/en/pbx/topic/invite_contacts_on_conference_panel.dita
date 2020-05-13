@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_vrd_mdb_wdb">
+    <title>Invite Contacts on Conference Panel</title>
+    <shortdesc>You can invite contacts to join a conference on the Conference Panel.</shortdesc>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>On the <uicontrol>Conference Panel</uicontrol>, choose a conference, and click
+                        <image href="../Images/ui_icons/operation.png" width="20"
+                        id="image_omn_khb_wdb"/>.</cmd>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Open Contacts</uicontrol> to open your <xref
+                        href="add_contacts_on_conference_panel.dita#task_ard_hz1_wdb">contact
+                        group</xref>.</cmd>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Add</uicontrol> to add an individual contact.</cmd>
+            </step>
+            <step>
+                <cmd>Select the desired contacts, click <uicontrol>Invite
+                    Selected</uicontrol>.</cmd>
+                <stepresult>The PBX will call the invited contacts. If the contacts answer the call,
+                    they will join the conference.</stepresult>
+            </step>
+        </steps>
+    </taskbody>
+</task>

@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="reference_xcs_jrn_4fb">
+    <title>Queue Settings</title>
+    <shortdesc>References of basic queue settings and caller experience settings.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/10/24"/>
+            <!--Carol-->
+            <revised modified="2018/10/24"/>
+        </critdates>
+    </prolog>
+    <refbody>
+        <section id="section_lpj_jf4_tdb">
+            <title>Basic Queue Settings</title>
+            <p>
+                <table frame="all" rowsep="1" colsep="1" id="table_s5y_wzv_d2b">
+                  
+                    <tgroup cols="2">
+                        <colspec colname="c1" colnum="1" colwidth="1*"/>
+                        <colspec colname="c2" colnum="2" colwidth="2.7*"/>
+                        <thead>
+                            <row>
+                                <entry>Option</entry>
+                                <entry>Description</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>Number</entry>
+                                <entry>Use this number to dial into the queue, or transfer callers
+                                    to this number to put them into the queue.</entry>
+                            </row>
+                            <row>
+                                <entry>Name</entry>
+                                <entry>Give this queue a brief name to help you identify it.</entry>
+                            </row>
+                            <row>
+                                <entry>Password</entry>
+                                <entry>You can require agents to enter a password before they can
+                                    login to this queue.</entry>
+                            </row>
+                            <row>
+                                <entry>Ring Strategy</entry>
+                                <entry>
+                                    <p>This option sets the Ringing Strategy for this Queue. </p>
+                                    <p>
+                                        <ul id="ul_tx4_qrn_4fb">
+                                            <li><b>Ringing All</b>: Ring All available Agents
+                                                simultaneously until one answer.</li>
+                                            <li><b>Least Recent</b>: Ring the Agent which was least
+                                                recently called.</li>
+                                            <li><b>Fewest Calls</b>: Ring the Agent with the fewest
+                                                completed calls.</li>
+                                            <li><b>Random</b>: Ring a Random Agent.</li>
+                                            <li><b>Rememory</b>: Round Robin with Memory,Remembers
+                                                where it left off in the last ring pass.</li>
+                                            <li><b>Linear</b>: Rings interfaces in the order
+                                                specicied in the configuration file.</li>
+                                        </ul>
+                                    </p>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>Failover Destination</entry>
+                                <entry>Set the failover destination.</entry>
+                            </row>
+                            <row>
+                                <entry>Static Agents</entry>
+                                <entry>
+                                    <p>Select static agent of the queue. The static agents will
+                                        always stay in the queue.</p>
+                                    <p>
+                                        <note>
+                                            <ul id="ul_lyw_sbw_d2b">
+                                                <li>The static agent is not allowed to log in and
+                                                  log out the queue.</li>
+                                                <li>The unselected users are dynamic agents.</li>
+                                            </ul>
+                                        </note>
+                                    </p>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>Agent Timeout</entry>
+                                <entry>The number of seconds an agent's phone can ring before we
+                                    consider it a timeout. If you wish to customize, enter the value
+                                    in the text box directly.</entry>
+                            </row>
+                            <row>
+                                <entry>Ring In Use</entry>
+                                <entry>If set to <codeph>no</codeph>, unchecked, the queue will
+                                    avoid sending calls to members whose device are known to be “in
+                                    use”.</entry>
+                            </row>
+                            <row>
+                                <entry>Agent Announcement</entry>
+                                <entry>Announcement played to the Agent prior to bridging in the
+                                    caller.</entry>
+                            </row>
+                            <row>
+                                <entry>Retry</entry>
+                                <entry>The number of seconds to wait before trying all the phones
+                                    again. If you wish to customize, enter the value in the text box
+                                    directly.</entry>
+                            </row>
+                            <row>
+                                <entry>Wrap-up Time</entry>
+                                <entry>How many seconds after the completion of a call an Agent will
+                                    have before the Queue can ring them with a new call .If you wish
+                                    to customize, enter the value in the text box directly. Input 0
+                                    for no delay.</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+        <section id="section_b2n_h1w_d2b">
+            <title>Call Experience Settings</title>
+            <p>
+                <table frame="all" rowsep="1" colsep="1" id="table_zqb_l1w_d2b">
+                    
+                    <tgroup cols="2">
+                        <colspec colname="c1" colnum="1" colwidth="1*"/>
+                        <colspec colname="c2" colnum="2" colwidth="2.57*"/>
+                        <thead>
+                            <row>
+                                <entry namest="c1" nameend="c2" align="left">Caller Settings</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>Music On Hold</entry>
+                                <entry>Select the “Music on Hold” playlist for this Queue.</entry>
+                            </row>
+                            <row>
+                                <entry>Caller Max Wait Time</entry>
+                                <entry>Select the maximum number of seconds a caller can wait in a
+                                    queue before being pulled out. If you wish to customize, enter
+                                    the value in the text box directly. Input 0 for
+                                    unlimited.</entry>
+                            </row>
+                            <row>
+                                <entry>Leave When Empty</entry>
+                                <entry>If enabled, callers already on hold will be forced out of a
+                                    queue when no agents available.</entry>
+                            </row>
+                            <row>
+                                <entry>Join Empty</entry>
+                                <entry>If enabled, callers can join a queue that has no
+                                    agents.</entry>
+                            </row>
+                            <row>
+                                <entry>Join Announcement</entry>
+                                <entry>Announcement played to callers once prior to joining the
+                                    queue.</entry>
+                            </row>
+                            <row>
+                                <entry>Agent ID Announcement</entry>
+                                <entry>Announcement played to the callers to prompt the agent ID.
+                                    The agent is who will answer the call.<p>
+                                        <ul id="ul_dm5_plw_d2b">
+                                            <li>[None]: The system will not announce the agent
+                                                ID.</li>
+                                            <li>[Default]: The system will play the prompt
+                                                “{extension number} will be connected. Please wait”.
+                                                The {extension number} is the extension number of
+                                                the agent.</li>
+                                            <li>Custom Prompt: If you choose your custom prompt. The
+                                                system will play "{extension number}" + your custom
+                                                prompt.</li>
+                                        </ul>
+                                    </p></entry>
+                            </row>
+                            <row>
+                                <entry>Satisfaction Survey Prompt</entry>
+                                <entry>When the agent hangs up, the system will play the prompt to
+                                    ask the caller to rate their satisfaction scale.</entry>
+                            </row>
+                            <row id="queue-setting-caller-position">
+                                <entry namest="c1" nameend="c2"><b>Caller Position
+                                    Announcements</b></entry>
+                            </row>
+                            <row>
+                                <entry>Announce Position</entry>
+                                <entry>Announce position of caller in the queue.</entry>
+                            </row>
+                            <row>
+                                <entry>Announce Hold Time</entry>
+                                <entry>Enabling this option causes PBX to announce the hold time to
+                                    the caller periodically based on the frequency timer. Either yes
+                                    or no; hold time will be announced after one minute.</entry>
+                            </row>
+                            <row>
+                                <entry>Frequency</entry>
+                                <entry>How often to announce queue position and estimated hold
+                                    time.</entry>
+                            </row>
+                            <row id="queue-setting-periodic">
+                                <entry namest="c1" nameend="c2"><b>Periodic
+                                    Announcements</b></entry>
+                            </row>
+                            <row>
+                                <entry>Prompt</entry>
+                                <entry>Select a prompt file to play periodically.</entry>
+                            </row>
+                            <row>
+                                <entry>Frequency</entry>
+                                <entry>How often to play the periodic announcements.</entry>
+                            </row>
+                            <row id="queue-setting-events">
+                                <entry namest="c1" nameend="c2"><b>Events</b></entry>
+                            </row>
+                            <row>
+                                <entry>Key</entry>
+                                <entry>Once the events settings are configured, the callers are able
+                                    to press the key to enter the destination you set. Usually, a
+                                    prompt should be set on <b>Periodic Announcements </b>to guide
+                                    the callers to press the key.</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+    </refbody>
+</reference>

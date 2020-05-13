@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_mbt_q12_2jb">
+    <title>Set Time Conditions</title>
+    <shortdesc>A Time Condition is a time group, which can be applied to outbound routes and inbound
+        routes. This topic describes how to set office hours, non-office hours, and holidays on <ph
+            keyref="product_name"/>.</shortdesc>
+    <body>
+        <section id="section_v2b_t12_2jb"><title>Set office hours</title>Add a Time Condition
+            according to your office hours. Apply this Time Condition to inbound routes to route
+            incoming calls during office hours to the corresponding destination.<p>
+                <ol id="ol_jvd_542_2jb">
+                    <li>Go to <menucascade>
+                            <uicontrol>Settings</uicontrol>
+                            <uicontrol>PBX</uicontrol>
+                            <uicontrol>Call Control</uicontrol>
+                            <uicontrol>Time Conditions</uicontrol>
+                            <uicontrol>Time Conditions</uicontrol>
+                        </menucascade>, click <uicontrol>Add</uicontrol>.</li>
+                    <li>In the <uicontrol>Name</uicontrol> field, enter a name to help you identify
+                        it.</li>
+                    <li>In the <uicontrol>Time</uicontrol> field, set the time according to your
+                        office time.</li>
+                    <li>Click <image href="../Images/ui_icons/add.png" width="20"
+                            id="image_ytn_t42_2jb"/> to add another time period.</li>
+                    <li>In the <uicontrol>Days of Week</uicontrol> field, select your office
+                                days.<p><image href="../Images/admin/add_time_condition.png"
+                                width="650" id="image_ztn_t42_2jb"/></p></li>
+                    <li importance="optional">If you want to apply the time period(s) to specific
+                        dates, select the checkbox of <uicontrol>Advanced Options</uicontrol>, and
+                        set the month and the days of month. <p>
+                            <note>Advanced Options is disabled by default, which means that the time
+                                period(s) will be applied throughout the year.</note>
+                        </p></li>
+                    <li>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</li>
+                </ol>
+            </p></section>
+        <section id="section_cjz_512_2jb">
+            <title>Set non-office hours</title>
+            <p>PBX has a default Time Condition-<uicontrol>Other Time</uicontrol>. Generally, when
+                you're configuring an inbound route, you can set one destination for office hours,
+                and set the other destination for Other Time. </p>
+            <p>However, you may need to add another Time Condition to route incoming calls to other
+                destinations due to company's schedule. For example, you want all incoming calls
+                during lunch break to be routed to the receptionist. In this way, employees can
+                enjoy nap time without missing any important calls.</p>
+            <p>In this case, you can add another Time Condition for non-office hours.</p>
+            <p>
+                <ol>
+                    <li>Go to <menucascade>
+                            <uicontrol>Settings</uicontrol>
+                            <uicontrol>PBX</uicontrol>
+                            <uicontrol>Call Control</uicontrol>
+                            <uicontrol>Time Conditions</uicontrol>
+                            <uicontrol>Time Conditions</uicontrol>
+                        </menucascade>, click <uicontrol>Add</uicontrol>.</li>
+                    <li>In the <uicontrol>Name</uicontrol> field, enter a name to help you identify
+                        it.</li>
+                    <li>In the <uicontrol>Time</uicontrol> field, set the time according to your
+                        non-office time.</li>
+                    <li importance="optional">Click <image href="../Images/ui_icons/add.png"
+                            width="20" id="image_hvm_vlm_2jb"/> to add another time period.</li>
+                    <li>In the <uicontrol>Days of Week</uicontrol> field, select your office
+                                days.<p><image id="image_cty_hmm_2jb"
+                                href="../Images/admin/add_time_condition_non_office.png" width="650"
+                            /></p></li>
+                    <li importance="optional">If you want to apply the time period(s) to specific
+                        dates, select the checkbox of <uicontrol>Advanced Options</uicontrol>, and
+                        set the month and the days of month. <p>
+                            <note>Advanced Options is disabled by default, which means that the time
+                                period(s) will be applied throughout the year.</note>
+                        </p></li>
+                    <li>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_stb_w12_2jb">
+            <title>Set holidays</title>
+            <p>You can add a group of holidays and set a Time Condition destination like an IVR for
+                the holidays on your inbound route. When a customer calls to your company during
+                holidays, the PBX will route the call to the IVR and inform your customers that you
+                are on vacation.</p>
+            <p>
+                <ol id="ol_yr5_cr2_2jb">
+                    <li>Go to <menucascade>
+                            <uicontrol>Settings</uicontrol>
+                            <uicontrol>PBX</uicontrol>
+                            <uicontrol>Call Control</uicontrol>
+                            <uicontrol>Time Conditions</uicontrol>
+                            <uicontrol>Holiday</uicontrol>
+                        </menucascade>, click <uicontrol>Add</uicontrol>.</li>
+                    <li>In the <uicontrol>Name</uicontrol> field, enter a name to help you identify
+                        it.</li>
+                    <li>In the <uicontrol>Type</uicontrol> field, select a type.<p><image
+                                href="../Images/admin/add_holiday.png" width="569"
+                                id="image_xvm_fq2_2jb"/></p><p>
+                            <ul id="ul_lhk_jr2_2jb">
+                                <li><uicontrol>By Date</uicontrol>: If the holiday such as Chinese
+                                    Spring Festival varies every year, select this type.</li>
+                                <li><uicontrol>By Month</uicontrol>: If the holiday such Chinese
+                                    National Day always falls on the same calendar date, select this
+                                    type.</li>
+                                <li><uicontrol>By Week</uicontrol>: If the holiday such as
+                                    Thanksgiving Day always falls on the same week, select this
+                                    type.</li>
+                            </ul>
+                        </p></li>
+                    <li>In the <uicontrol>Start Date</uicontrol> field, select the start date of the
+                        holiday.</li>
+                    <li>In the <uicontrol>End Date</uicontrol> field, select the end date of the
+                        holiday.</li>
+                    <li>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</li>
+                </ol>
+            </p>
+        </section>
+    </body>
+</topic>

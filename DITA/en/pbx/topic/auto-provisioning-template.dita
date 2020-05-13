@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="auto_provisioning_template">
+    <title>Auto Provisioning Template</title>
+    <shortdesc>The Auto Provisioning Template provides pre-configured phone settings, which helps
+        you quickly provision your phones. Each phone model has a default provisioning template, you
+        can add a provisioning template with your customized phone settings.</shortdesc>
+    <body>
+        <section id="section_dzl_blj_yhb">
+            <title>Add a custom template</title>
+            <p>
+                <ol id="ol_wn1_dlj_yhb">
+                    <li>Go to <menucascade>
+                            <uicontrol>Auto Provisioning</uicontrol>
+                            <uicontrol>Template</uicontrol>
+                            <uicontrol>Custom Template</uicontrol>
+                        </menucascade>, click <uicontrol>Add</uicontrol>.</li>
+                    <li>Set a name, select the manufacturer and phone model for the
+                                template.<p><image
+                                href="../Images/autop-set-template-name-model.jpg"
+                                id="image_dzk_3rj_yhb" width="650"/></p></li>
+                    <li>Click the corresponding feature tap to customize phone settings, such as
+                        Line Keys Settings, Features, Preference, etc.</li>
+                    <li>If you want to include additional configurations, click
+                            <uicontrol>Other</uicontrol>, add the parameters with valid values.<p>
+                            <note>The parameters you add in the template should be supported by the
+                                phone manufacturer.</note>
+                        </p><p><image href="../Images/autop-add-additional-configurations.jpg"
+                                id="image_yqx_xqj_yhb" width="650"/></p></li>
+                    <li>Click <uicontrol>Save</uicontrol>.<p>When you are configuring auto
+                            provisioning devices, you can select the customized
+                                template.</p><p><image href="../Images/autop-apply-template.png"
+                                id="image_vdr_ntj_yhb" width="650"/></p></li>
+                </ol>
+            </p>
+        </section>
+    </body>
+</topic>

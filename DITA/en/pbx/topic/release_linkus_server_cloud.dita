@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_yv1_bgn_jdb">
+  <title>Linkus Server</title>
+  <shortdesc>Release notes for Linkus Server on Yeastar Cloud PBX Instance.</shortdesc>
+  <body>
+    <section>
+      <title>Version 2.7.2</title>
+      <p><ph conref="v30.13.0.30.dita#v30.13.0.b/date"/></p>
+      <p>
+        <ul id="ul_tby_b4w_clb">
+          <li conref="v30.13.0.30.dita#v30.13.0.b/linkus-CTI"/>
+        </ul>
+      </p>
+      <ul id="ul_jch_cnx_hlb">
+        <li>Fixed the issue of the push notification for Linkus calls: With
+            <uicontrol>Presence</uicontrol> set to <uicontrol>Do Not Disturb</uicontrol>, members in
+          a Ring Group could still receive incoming calls.</li>
+        <li>Fixed the display issue of extensions: On Linkus Mobile Client, not all registered
+          extensions were displayed on <uicontrol>Extension</uicontrol> list.</li>
+        <li>Fixed the issue that members in a queue didn't receive notifications when there are
+          incoming calls.</li>
+      </ul>
+    </section>
+    <section>
+      <title>Version 2.6.10</title>
+      <p>Released Date: February 27, 2020</p>
+      <p><b>This version updates the following, you need to simultaneously upgrade Linkus clients to
+          the latest version (iOS version: 2.9.10; Android version: 2.9.6), or Linkus may not
+          work.</b></p>
+      <p>
+        <ul id="ul_ikj_qk4_vkb">
+          <li>Added compatibility with PBX <uicontrol>Contacts</uicontrol> feature.</li>
+          <li>Optimized Linkus iOS Push.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_cpl_pkp_1kb">
+      <title>Version 2.5.8</title>
+      <p>Released Date: December 17, 2019<ul id="ul_bj2_zjp_1kb">
+          <li>Fixed the following Conference issues.<ul id="ul_yht_mkp_1kb">
+              <li>
+                <p>Display issue of conference members.</p>
+              </li>
+              <li>
+                <p>Occasionally failed to exit from a conference.</p>
+              </li>
+            </ul></li>
+        </ul></p>
+    </section>
+    <section id="section_tyr_v5b_wjb">
+      <title>Version 2.5.1</title>
+      <p>Released Date: December 4, 2019<ul id="ul_mcs_y5b_wjb">
+          <li>Optimized the mechanism of applying configuration changes to improve the system
+              stability.<ul id="ul_gnc_1vb_wjb">
+              <li>You don't need to click <uicontrol>Apply</uicontrol> button to reload Asterisk if
+                you save unchanged configurations.</li>
+              <li>If no <uicontrol>Apply</uicontrol> button appears after you save some specific
+                configuration changes, then the configurations can be saved without reloading
+                Asterisk.</li>
+            </ul></li>
+        </ul></p>
+    </section>
+    <section id="section_nyl_n3x_mjb">
+      <title>Version 2.4.5</title>
+      <p>Released Date: October 25, 2019<ul id="ul_fbn_43x_mjb">
+          <li>
+            <p>Fixed the issue of Linkus login.</p>
+          </li>
+          <li>
+            <p>Optimized APNs (Apple Push Notification service).</p>
+          </li>
+        </ul></p>
+    </section>
+    <section id="section_tp2_bgd_3jb">
+      <title>Version 2.3.15</title>
+      <p>Released Date: October 22, 2019</p>
+      <p>
+        <ul id="ul_rgm_vfd_3jb">
+          <li>
+            <p>Improved Linkus performance.</p>
+          </li>
+        </ul>
+      </p>
+    </section>
+    <section>
+      <title>Version 2.2.27</title>
+    </section>
+    <p>Released Date: August 8, 2019<ul id="ul_cnh_htp_43b">
+        <li>
+          <p>Added support for Resume from Breakpoint. You can resume downloading Voicemail and
+            One-Touch Recordings at the broken point.</p>
+        </li>
+        <li>
+          <p>Optimized the Voicemail and One-Touch Recordings: Linkus client only displays the
+            voicemail and one-touch recordings that are stored in the current storage location (<menucascade>
+              <uicontrol>System</uicontrol>
+              <uicontrol>Storage</uicontrol>
+              <uicontrol>Preference</uicontrol>
+              <uicontrol>Storage Locations</uicontrol>
+              <uicontrol> Voicemail &amp; One Touch Recordings</uicontrol>
+            </menucascade> ).</p>
+        </li>
+        <li>
+          <p>Fixed the issue of <uicontrol>Linkus Call</uicontrol>: The Linkus user in the ring
+            group could not answer the call, which is transferred from another ring group after
+            timeout.</p>
+        </li>
+        <li>
+          <p>Fixed the issue of <uicontrol>Linkus Email</uicontrol>: The login QR code could not be
+            displayed if the email was sent to Gmail, Whitebox, and Outlook.</p>
+        </li>
+        <li>Fixed the issue of <uicontrol>Linkus Call</uicontrol>: If <uicontrol>All Busy Mode for
+            SIP Forking</uicontrol> was enabled, the Linkus client, which was a Ring Group member
+          could not receive calls.</li>
+      </ul></p>
+    <section>
+      <title>Version 2.2.13</title>
+      <p>Released Date: June 27, 2019</p>
+      <p>
+        <ul id="ul_mv1_w23_f3b">
+          <li>Optimized the Mi Push for Linkus Android client.</li>
+          <li>Fixed the Recording issue on Linkus PC client: When Linkus recevied an incoming call
+            via an IVR or a queue and this call was recorded on Linkus, the recording would not be
+            saved on Linkus.</li>
+        </ul>
+      </p>
+    </section>
+    <section>
+      <title>Version 2.2.8</title>
+      <p>Released Date: April 24, 2019</p>
+      <p><b>In this version, we update the iOS certificate, please upgrade to this new version, or
+          the iPhone users wouldn't receive Linkus calls.</b></p>
+      <p>
+        <ul id="ul_ary_p22_nhb">
+          <li>Updated the iOS certificate.</li>
+          <li>Optimized Android push notification.</li>
+          <li>Added Linkus Server Guide link for quick access.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_t4d_phr_dhb">
+      <title>Version 2.2.2</title>
+      <p>Released Date: March 21, 2019</p>
+      <p>
+        <ul id="ul_gfb_13r_dhb">
+          <li>
+            <p>Changed the default RTP port range to 4000-10000.</p>
+          </li>
+          <li>
+            <p>Fixed known issues.</p>
+          </li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_e1b_pxk_5gb">
+      <title>Version 2.1.42</title>
+      <p>Released Date: February 25, 2019</p>
+      <p>
+        <ul id="ul_thq_bbl_5gb">
+          <li>Improved the Linkus stability.</li>
+        </ul>
+      </p>
+    </section>
+    <section>
+      <title>Version 2.1.26</title>
+      <p>Released Date: December 27, 2018</p>
+      <p>
+        <ul id="ul_fgq_dtl_ggb">
+          <li>Optimized Google FCM (FireBase Cloud Messaging) for Linkus.</li>
+          <li>Fixed known issues.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_gsn_wdv_1gb">
+      <title>Version 2.1.7</title>
+      <p>Released Date: December 10, 2018</p>
+      <p>
+        <ul id="ul_l1k_4rv_1gb">
+          <li>Fixed known issues.</li>
+        </ul>
+      </p>
+    </section>
+    <section>
+      <title>Version 2.0.15</title>
+      <p>Released Date: October 26, 2018</p>
+      <p>
+        <ul id="ul_ogs_2q1_pfb">
+          <li>Improved the Linkus stability.</li>
+          <li>Added support for forcing logout of Linkus desktop client on Linkus mobile
+            client.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_zhr_mpm_t2b">
+      <title>Version 1.8.15</title>
+      <p>Released Date: August 13, 2018</p>
+      <p>
+        <ul id="ul_im5_4pm_t2b">
+          <li>Users can log in Linkus mobile client and Linkus desktop client by a same login
+            link.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_v34_d34_m2b">
+      <title>Version 1.8.10</title>
+      <p>Released Date: July 26, 2018</p>
+      <p>
+        <ul id="ul_kb1_f34_m2b">
+          <li>Added support for Linkus Windows desktop.</li>
+          <li>Added support for Chat feature on Linkus.</li>
+          <li>Added support for Presence feature on Linkus.</li>
+          <li>Improved the stability of Linkus mobile client.</li>
+          <li>Optimized Linkus iOS push.</li>
+          <li>Improved the calling experience on Linkus Android client.</li>
+          <li>Fixed known issues.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_d55_hv4_32b">
+      <title>Version 1.7.18</title>
+      <p>Released Date: June 29, 2018</p>
+      <p>
+        <ul id="ul_xvc_lv4_32b">
+          <li>Fixed the issue that Linkus call push would fail.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_rhl_zwv_wdb">
+      <title>Version 1.7.17</title>
+      <p>Released Date: May 23, 2018</p>
+      <p>
+        <ul id="ul_knr_wxv_wdb">
+          <li>Optimized the Linkus login link.</li>
+          <li>Optimized the Linkus email template.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_d2f_4k3_pdb">
+      <title>Version 1.6.10</title>
+      <p>Released Date: April 10, 2018</p>
+      <p>
+        <ul id="ul_pjj_qk3_pdb">
+          <li>Users could only log in Linkus client by email address.</li>
+          <li>Improved the security of the Linkus login.</li>
+          <li>Expand the expiration time of QR code and login link that are in the Linkus email to
+            24 hours.</li>
+          <li>Optimized the Linkus Email Template.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_xgn_qk3_pdb">
+      <title>Version 1.4.18</title>
+      <p>Released Date: January 10, 2018</p>
+      <p>
+        <ul id="ul_xzm_sk3_pdb">
+          <li>Compatible with Yeastar Cloud PBX v81.3.0.12.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_wvt_hl3_pdb">
+      <title>Version 1.4.12</title>
+      <p>Released Date: December 5, 2017</p>
+      <p>
+        <ul id="ul_wyx_jl3_pdb">
+          <li>Linkus Server is enabled by default.</li>
+          <li>Added support for selecting all extensions and sending Linkus e-mails to all the
+            extensions. </li>
+          <li>Optimized call push feature of Linkus client.</li>
+          <li>Optimized CDR on Linkus client: the CDR will display numbers without outbound
+            prefixes.</li>
+          <li>Fixed the issue that there was noise when using Linkus client to play system
+            prompts.</li>
+          <li>Fixed the issue that if Linkus call push was failed, the CPU usage of Linkus server
+            was high.</li>
+          <li>Fixed the issue that if the web debug log was enabled on the PBX, Conference function
+            on Linkus client could not work. </li>
+          <li>Fixed the issue that after re-enabling Linkus server, the ring strategy on Linkus
+            client could not work.</li>
+          <li>Fixed the issue that after re-enabling Linkus server, users could not make outbound
+            calls through Linkus client.</li>
+          <li>Fixed the Linkus login e-mail issue: if the email subject contains Chinese characters,
+            the email contents would display messy codes.</li>
+        </ul>
+      </p>
+    </section>
+  </body>
+</topic>

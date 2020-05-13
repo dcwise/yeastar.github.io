@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_ogl_lzt_vdb">
+    <title>Activate QueueMetrics Integration</title>
+    <shortdesc>You can activate the QueueMetrics Integration App directly or activate it after you
+        try out the integration App and the QueueMetrics functions.</shortdesc>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Provide the following information to Yeastar.</cmd>
+                <info>We will activate the integration App and provide a QueueMetrics ID for
+                        you.<table frame="all" rowsep="1" colsep="1" id="table_jyc_jjc_d3b">
+                        <title/>
+                        <tgroup cols="2">
+                            <colspec colname="c1" colnum="1" colwidth="1*"/>
+                            <colspec colname="c2" colnum="2" colwidth="1*"/>
+                            <thead>
+                                <row>
+                                    <entry>Wanna turn Demo Id to Subscription Live ID</entry>
+                                    <entry>Wanna a New ID</entry>
+                                </row>
+                            </thead>
+                            <tbody>
+                                <row>
+                                    <entry>PBX SN (Serial Number)</entry>
+                                    <entry>PBX SN (Serial Number)</entry>
+                                </row>
+                                <row>
+                                    <entry>PBX MAC</entry>
+                                    <entry>PBX MAC</entry>
+                                </row>
+                                <row>
+                                    <entry>PBX Model</entry>
+                                    <entry>
+                                        <p>PBX Model</p>
+                                    </entry>
+                                </row>
+                                <row>
+                                    <entry>QueueMetrics Live ID</entry>
+                                    <entry>
+                                        <p>QueueMetrics Live ID</p>
+                                    </entry>
+                                </row>
+                                <row>
+                                    <entry>Agent Number</entry>
+                                    <entry>
+                                        <p>Agent Number</p>
+                                    </entry>
+                                </row>
+                                <row>
+                                    <entry>/</entry>
+                                    <entry>
+                                        <p>Time Zone</p>
+                                    </entry>
+                                </row>
+                                <row>
+                                    <entry>/</entry>
+                                    <entry>
+                                        <p>Contact Person</p>
+                                    </entry>
+                                </row>
+                                <row>
+                                    <entry>/</entry>
+                                    <entry>
+                                        <p>Contact Email</p>
+                                    </entry>
+                                </row>
+                                <row>
+                                    <entry>/</entry>
+                                    <entry>
+                                        <p>Long Name</p>
+                                    </entry>
+                                </row>
+                                <row>
+                                    <entry>/</entry>
+                                    <entry>
+                                        <p>Password: Generate randomly</p>
+                                    </entry>
+                                </row>
+                            </tbody>
+                        </tgroup>
+                    </table></info>
+            </step>
+            <step>
+                <cmd>Log in the PBX web interface, go to <uicontrol>App Center</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Choose QueueMetrics Integration App, click
+                    <uicontrol>License</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Enter your license, click <uicontrol>Activate</uicontrol>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

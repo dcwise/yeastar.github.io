@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_rpp_kv3_3cb">
+  <title>Deploy Yeastar Cloud PBX on Alibaba Cloud</title>
+  <body>
+    <p><b>Requirements</b></p>
+    <p>
+      <ul id="ul_lmn_5tx_lcb">
+        <li>SBC has two ethernet ports, eth0 created on Ali cloud, eth0:1 is a virtual ethernet to
+          communicate with YMP LAN (eth0) ports.<p>
+            <note> Yeastar will add eth0:1 to the SBC instance when installing.</note>
+          </p></li>
+        <li>SBC WAN (eth0) can receive data from the Internet and send data to the Internet.</li>
+        <li>SBC instance acts as a gateway. The YMP will initiate outbound connections to the
+          Internet through the SBC gateway.</li>
+      </ul>
+    </p>
+    <p>The figure below shows an example deployment of YMP and SBC on Ali Cloud.</p>
+    <p><image href="../Images/SBC/Ali-cloud-en.png" id="image_s51_mrq_lcb" width="650"/></p>
+  </body>
+</topic>

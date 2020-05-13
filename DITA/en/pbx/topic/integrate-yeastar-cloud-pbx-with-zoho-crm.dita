@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="task_kj5_rjm_ggb">
+    <title>Integrate Yeastar Cloud PBX with Zoho CRM</title>
+    <shortdesc>Log in the PBX web interface, and go to Zoho CRM Integration App, follow the steps to
+        integrate Yeastar Cloud PBX with Zoho CRM.</shortdesc>
+    <body>
+        <section id="section_tdh_lfs_ggb">
+            <title>Prerequisite</title>
+            <p>
+                <ul id="ul_tqs_qys_ggb">
+                    <li>To make this integration to work, you must have a super admin account of
+                        Zoho CRM.</li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_jmj_yfs_ggb">
+            <title>Agree the Integration Statement</title>
+            <p>
+                <ol id="ol_yw3_cgs_ggb">
+                    <li>Log in the PBX web interface, go to <uicontrol>Zoho CRM
+                            Integration</uicontrol> App.</li>
+                    <li>Read the statement, then check the option <uicontrol>I agree with the
+                            statement</uicontrol>.<p><image
+                                href="../Images/admin/agree-zoho-statement.jpg" width="650"
+                                id="image_e5w_2ys_ggb"/></p></li>
+                    <li>Click <uicontrol>Next</uicontrol> to do the integration <xref
+                            href="#task_kj5_rjm_ggb/section_dzv_wgs_ggb" format="dita">step
+                        1</xref>.</li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_dzv_wgs_ggb">
+            <title>Step1. Enable Yeastar Integration</title>
+            <p>
+                <ol id="ol_hvp_4hs_ggb">
+                    <li>Log in Zoho CRM with the super admin account, follow the steps to enable
+                            <uicontrol>Yeastar Integration</uicontrol>.<p>
+                            <ol id="ol_prf_1js_ggb">
+                                <li>Go to <menucascade>
+                                        <uicontrol>Setup</uicontrol>
+                                        <uicontrol>Channels</uicontrol>
+                                        <uicontrol>Telephony</uicontrol>
+                                    </menucascade>.</li>
+                                <li>From the <uicontrol>Choose a telephony provider</uicontrol>
+                                    drop-down menu, select <uicontrol>Yeastar
+                                        Integration</uicontrol>.</li>
+                                <li>Click <uicontrol>Enable</uicontrol>.<p>
+                                        <note>Please wait while the page refreshes automatically.
+                                        </note>
+                                    </p></li>
+                            </ol>
+                        </p></li>
+                    <li>Back to the PBX <uicontrol>Zoho CRM Integration</uicontrol> page, click
+                            <uicontrol>Next</uicontrol> to do <xref
+                            href="#task_kj5_rjm_ggb/section_q1y_ths_ggb" format="dita">step
+                        2</xref>.</li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_q1y_ths_ggb">
+            <title>Step 2. Get Zoho User Consent</title>
+            <p>Authorize PBX to access your Zoho CRM.</p>
+            <p>
+                <ol id="ol_d4x_lls_ggb">
+                    <li>In the <uicontrol>Zoho CRM Login Address</uicontrol> drop-down menu, select
+                        your Zoho CRM login address. <p><image
+                                href="../Images/admin/zoho-crm-login-address.jpg" width="650"
+                                id="image_bzy_32y_ggb"/></p></li>
+                    <li>Click <uicontrol>Authorize</uicontrol>, the Zoho Authorization web page
+                        opens automatically.</li>
+                    <li>On the Zoho Authorization web page, click <uicontrol>Accept</uicontrol> to
+                        allow PBX to access data in your Zoho account.<p><image
+                                href="../Images/admin/zoho-authorization-page.jpg"
+                                id="image_ah1_4ns_ggb" width="650"/></p></li>
+                    <li>If the authorization is succeed, the <uicontrol>Zoho CRM
+                            Integration</uicontrol> page will display "Authorization Succeed!".
+                            <p>Click <uicontrol>Continue</uicontrol> to do the <xref
+                                href="#task_kj5_rjm_ggb/section_uq5_p4s_ggb" format="dita">step
+                                3</xref>.</p><p><image
+                                href="../Images/admin/zoho-authorized-successfully.jpg" width="650"
+                                id="image_pdq_3ps_ggb"/></p></li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_uq5_p4s_ggb">
+            <title>Step 3. Associate Zoho CRM users with their extensions</title>
+        </section>
+        <p>To active the integration for all Zoho users, you need to associate Zoho CRM users with
+            their extensions. </p>
+        <p>
+            <ol id="ol_sg4_kts_ggb">
+                <li>On the <uicontrol>Zoho CRM Integration</uicontrol> page, click <image
+                        href="../Images/ui_icons/refresh.png" width="20" id="image_mws_cts_ggb"/> to
+                    detect and display Zoho CRM users.</li>
+                <li>Click <uicontrol>Associate Automatically</uicontrol> to associate the Zoho CRM
+                    users with their extensions.<p>The Zoho CRM users and the PBX extensions that
+                        are bound with the same email address will be associated
+                            automatically.</p><p><image
+                            href="../Images/admin/zoho-associate-automatically.jpg" width="650"
+                            id="image_zr1_pws_ggb"/></p></li>
+                <li importance="optional">If a user has different email addresses that are bound
+                    with his/her Zoho CRM and PBX extension, click <image
+                        href="../Images/ui_icons/edit.png" width="20" id="image_bxw_fxs_ggb"/> to
+                    associate the Zoho user and PBX extension.<p><image
+                            href="../Images/admin/zoho-associate-extension.jpg" width="650"
+                            id="image_jzd_m2y_ggb"/></p></li>
+                <li>Click <uicontrol>Finish</uicontrol> to finish the integration.</li>
+            </ol>
+        </p>
+    </body>
+</topic>

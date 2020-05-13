@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_t4b_spw_rdb">
+    <title>IVR</title>
+    <shortdesc>Like most organisations, where possible, we would like to route incoming calls an
+        Auto Attendant. You can create one or more IVR (Auto Attendant) on the system to achieve it. </shortdesc>
+    <conbody>
+        <p>When calls are routed to an IVR, the system will play a recording prompting them what
+            options the callers can enter such as “Welcome to XX, for sales press 1, for Technical
+            Support press 2”.</p>
+        <p></p>
+    </conbody>
+</concept>

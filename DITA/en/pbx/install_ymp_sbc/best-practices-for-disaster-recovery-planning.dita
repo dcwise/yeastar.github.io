@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_sjj_33s_lhb">
+    <title>Best Practices for Disaster Recovery Planing</title>
+    <shortdesc>Best practice tips for creating a disaster recovery plan </shortdesc>
+    <body>
+        <p>
+            <ol id="ol_w4m_vhv_jhb">
+                <li>Set up system monitoring and alarm notifications.<p>Set up monitoring items and
+                        create alarm rules on your cloud platform or data center.</p><p>We suggest
+                        that you monitor the following items on your YMP server and SBC server:</p><p>
+                        <ul id="ul_z3f_w3s_lhb">
+                            <li>CPU utilization</li>
+                            <li>Network utilization (Network In &amp; Network Out)</li>
+                            <li>Disk performance </li>
+                            <li>Memory utilization</li>
+                        </ul>
+                    </p></li>
+                <li importance="required">Schedule local backups on YMP.<p>Backup Schedule is enable
+                        by default, you can <xref href="schedule-auto-backup.dita">adjust the backup
+                            schedule settings</xref> on YMP web interface.</p></li>
+                <li>Prepare a secondary YMP server and a secondary SBC server in a different region.<p>
+                        <note>
+                            <p>
+                                <ul id="ul_m53_cks_lhb">
+                                    <li>The YMP server should meets the <xref
+                                            href="system_requirements_for_ymp.dita#topic_dvm_b3j_3cb"
+                                            >YMP system requirements</xref>; The SBC server should
+                                        meets the <xref
+                                            href="system_requirements_for_sbc.dita#topic_dyg_3qj_3cb"
+                                            >SBC system requirements</xref>.</li>
+                                    <li>Make sure the network configurations on the secondary
+                                        servers are the same as the primary servers.</li>
+                                </ul>
+                            </p>
+                        </note>
+                    </p></li>
+                <li importance="recommended"><xref
+                        href="snapshot-solution.dita#topic_uth_sht_jhb/section_u3g_lmt_jhb">Schedule
+                        auto snapshots</xref> of the primary YMP server and primary SBC server.<p>
+                        <note>Snapshot feature should be supported on the cloud platform or data
+                            center. <p>If  Snapshot feature is not support on the cloud platform or
+                                the data center, you need <xref
+                                    href="external-backup-and-restore.dita#topic_owr_4lt_jhb"
+                                    >schedule external backups</xref> of YMP server.</p></note>
+                    </p></li>
+            </ol>
+        </p>
+    </body>
+</topic>

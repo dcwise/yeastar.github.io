@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_onq_3lr_zcb">
+  <title>Manage Your Extension</title>
+  <body>
+    <p>You can log in the web page of the PBX to configure your extension settings.</p>
+    <p>By default, you can check your voicemail, one-touch recording files, and configure your
+      extension settings on the web. </p>
+    <p>
+      <note> If your administrator had granted more permission for you, you can refer to the  Admin
+        Guide for more information.</note>
+    </p>
+  </body>
+</topic>

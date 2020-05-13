@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_lh5_1bh_tdb">
+    <title>Configure LTE Dial-up</title>
+    <shortdesc>The Dial-up settings contain the dial up connection parameters. The SIM card will
+        establish Internet communication with the CARRIER via the dialup connection
+        parameters.</shortdesc>
+    <taskbody>
+        <context>
+            <p>By default, you don’t need to configure the dial-up settings. The PBX can identify
+                the SIM card and dialup parameters to connect to the Internet. </p>
+            <p>You need to configure Dial-up settings in the following situations:</p>
+            <ul id="ul_chp_gbh_tdb">
+                <li>The SIM card is installed in a place where the carrier network is not covered.
+                        <p>Contact the carrier if the SIM card could connect to a non-local network,
+                        if the answer is yes, then ask the dial-up connection parameters from the
+                        carrier.</p></li>
+                <li>The SIM card carrier asks you to change dial-up settings, so that you can
+                    connect to a specific network or another carrier network.</li>
+            </ul>
+            <p>
+                <note>Configure the dial-up settings under the guidance of your carrier, or the
+                    cellular network will fail.</note>
+            </p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol>System</uicontrol>
+                        <uicontrol>Network</uicontrol>
+                        <uicontrol>Cellular Network</uicontrol>
+                    </menucascade>.</cmd>
+            </step>
+            <step>
+                <cmd>Enter the parameters provided by the ISP.</cmd>
+                <info><image href="../Images/admin/dial_up_settings.png" id="image_xjb_rbh_tdb"
+                    /></info>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol>, reboot the PBX to take effect.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>
+<?oxy_options track_changes="on"?>

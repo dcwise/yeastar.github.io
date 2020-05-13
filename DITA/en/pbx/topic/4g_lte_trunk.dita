@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_wgt_t4g_tdb">
+    <title>4G LTE Trunks Usage</title>
+    <shortdesc>To use 4G LTE trunk on the PBX, you need to install 4G module on the PBX. </shortdesc>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/09/25"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <p>Different S-Series VoIP PBX supports different number of 4G module.</p>
+        <p>
+            <table frame="all" rowsep="1" colsep="1" id="table_lhj_hsj_gfb">
+                <tgroup cols="3">
+                    <colspec colname="c1" colnum="1" colwidth="1*"/>
+                    <colspec colname="c2" colnum="2" colwidth="1*"/>
+                    <colspec colname="c3" colnum="3" colwidth="1*"/>
+                    <thead>
+                        <row>
+                            <entry>PBX Model</entry>
+                            <entry>4G Module (For Audio Calls)</entry>
+                            <entry>4G Module (For Cellular Data)</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row>
+                            <entry>S412</entry>
+                            <entry>Max. 2</entry>
+                            <entry>Max. 1</entry>
+                        </row>
+                        <row>
+                            <entry>S20</entry>
+                            <entry>Max. 1</entry>
+                            <entry>Max. 1</entry>
+                        </row>
+                        <row>
+                            <entry>S50</entry>
+                            <entry>Max. 4</entry>
+                            <entry>Max. 1</entry>
+                        </row>
+                        <row>
+                            <entry>S100</entry>
+                            <entry>Max. 6</entry>
+                            <entry>Max. 1</entry>
+                        </row>
+                        <row>
+                            <entry>S300</entry>
+                            <entry>Max. 6</entry>
+                            <entry>Max. 1</entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+        </p>
+        <section id="section_vf5_cpg_tdb">
+            <title>4G LTE Module Features</title>
+            <ul id="ul_b4w_dpg_tdb">
+                <li><b>4G Connection</b><p>Accessing <ph keyref="product_name"/> via the 4G network
+                        and enjoy all the powerful features on the PBX. It is suitable for temporary
+                        locations, mobile offices, and places where a fixed-line broadband is not
+                        available.</p></li>
+                <li><b>Voice over LTE</b><p>Place the phone call over LTE connection rather than the
+                        existing 2G/3G voice networks. With VoLTE, you can expect faster connection
+                        time, high-definition call quality. Improving call stability, voice quality,
+                        and message integrations, VoLTE offers great benefits to companies.</p></li>
+            </ul>
+            <ul id="ul_d4w_dpg_tdb">
+                <li><b>4G LTE Network Failover </b><p>Automatically reroute the S-Series PBX’s
+                        internet usage to 4G LTE wireless network if the PBX’s primary internet
+                        connection fails. </p></li>
+            </ul>
+            <ul id="ul_e4w_dpg_tdb">
+                <li><b>Short Message Service (SMS)</b><p>Supports SMS to Email and Email to SMS
+                        features.</p></li>
+            </ul>
+        </section>
+    </conbody>
+</concept>

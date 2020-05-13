@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>Billing</title>
+    <keydef keys="product_name" product="cloudpbx">
+        <topicmeta>
+            <keywords>
+                <keyword>Yeastar Cloud PBX</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="product_name" product="s-series">
+        <topicmeta>
+            <keywords>
+                <keyword>Yeastar S-Series VoIP PBX</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="product_name" product="k2">
+        <topicmeta>
+            <keywords>
+                <keyword>Yeastar K2 IPPBX</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <topicref href="../topic/billing.dita" product="k2 s-series" print="yes">
+        <topicmeta>
+            <shortdesc> Billing App provides a powerful and flexible billing solution. </shortdesc>
+        </topicmeta>
+        <topicref href="../topic/billing_general_settings.dita"/>
+        <topicref href="../topic/extension_billing.dita"/>
+        <topicref href="../topic/account_billing.dita"/>
+        <topicref href="../topic/billing_rate.dita"/>
+        <topicref href="../topic/top_up_history.dita"/>
+        <topicref href="../topic/billing_logs.dita"/>
+        <topicref href="../topic/billing_statistics.dita"/>
+    </topicref>
+</map>

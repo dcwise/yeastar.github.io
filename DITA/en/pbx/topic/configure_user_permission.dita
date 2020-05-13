@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="task_gxc_zll_xdb">
+    <title>Configure User Permission</title>
+    <shortdesc>To grand more privilege for a user or change the user's privilege, you need to
+        configure the User Permission on PBX.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/05/23"/>
+            <!--Carol-->
+            <revised modified="2018/05/23"/>
+        </critdates>
+    </prolog>
+    <body>
+        <section id="section_vqx_cky_ykb">
+            <title>Scenarios</title>
+            <p>In the following scenarios, you may need to add permissions for the extension users
+                according to their roles.</p>
+            <p>
+                <ul id="ul_vtw_mly_ykb">
+                    <li>
+                        <p>For an HR, he/she may need the permission to add extension, configure
+                            extension's outbound route privilege when there are new staffs.</p>
+                    </li>
+                    <li>
+                        <p>For a supervisor, he/she will have permission to check the CDR and
+                            recordings, and have no permission to configure the system or other
+                            extensions.</p>
+                    </li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_t11_4ly_ykb">
+            <title>Procedures</title>
+        </section>
+        <ol id="ol_vnb_ply_ykb">
+            <li> Log in the PBX web interface by <ph product="k2 s-series"><codeph>admin</codeph>
+                    account</ph><ph product="cloudpbx">the super admin account</ph>, go to <menucascade>
+                    <uicontrol>Settings</uicontrol>
+                    <uicontrol>System</uicontrol>
+                    <uicontrol>User Permission</uicontrol>
+                </menucascade>, click <uicontrol>Add</uicontrol>.</li>
+            <li> On the configuration page, select the <uicontrol>User</uicontrol>.</li>
+            <li> Set the <uicontrol>Set Privilege As</uicontrol>.<ul id="ul_wnb_ply_ykb">
+                    <li><uicontrol>Administrator</uicontrol>: All the permissions are enabled for
+                        the user by default.</li>
+                    <li><uicontrol>Custom User</uicontrol>: No permission is enabled for the user by
+                        default.</li>
+                </ul></li>
+            <li> Click the <uicontrol>Settings</uicontrol>, <uicontrol>CDR and
+                    Recordings</uicontrol>, <uicontrol>Monitor</uicontrol>,
+                    <uicontrol>Application</uicontrol>, <uicontrol>Contacts</uicontrol>, and
+                    <uicontrol>Others</uicontrol> tabs, and check or uncheck the relevant options
+                for the user.</li>
+            <li> Click <uicontrol>Save</uicontrol> and
+                        <uicontrol>Apply</uicontrol>.<p><b>Results:</b> When the user logs in the
+                    PBX web interface by the extension user account, he/she can access the permitted
+                    configuration page.</p></li>
+        </ol>
+    </body>
+</topic>

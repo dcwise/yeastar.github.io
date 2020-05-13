@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_xws_fpp_yfb">
+    <title>Version 1.12.3</title>
+    <abstract>Released Date: November 30, 2018</abstract>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/11/29"/>
+            <!--Carol-->
+            <!--Carol-->
+            <revised modified="2018/11/29"/>
+            <!--Carol-->
+            <revised modified="2018/11/30"/>
+        </critdates>
+    </prolog>
+    <body>
+        <section id="section_ytq_stp_yfb">
+            <title>Optimization</title>
+            <p><image href="../Images/horizon.png" id="image_xcc_4wb_kfb"/></p>
+            <p><b>Extension</b></p>
+            <p>
+                <ul id="ul_rqy_zqp_yfb">
+                    <li>Fixed the issue that remote extensions might not be registered.</li>
+                    <li>Fixed the issue that <uicontrol>Max Call Duration</uicontrol> setting could
+                        not take effect.</li>
+                </ul>
+            </p>
+            <p><b>Queue</b></p>
+            <p>
+                <ul id="ul_cxk_frp_yfb">
+                    <li>Fixed the issue that if password was set on a queue, the dynamic agents
+                        might not receive incoming calls.</li>
+                </ul>
+            </p>
+        </section>
+    </body>
+</topic>

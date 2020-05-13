@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_vhw_t1s_lhb">
+    <title>Schedule Auto Backup</title>
+    <shortdesc>Backup Schedule is enabled by default, you can adjust the schedule settings according
+        to your needs.</shortdesc>
+    <taskbody>
+        <context id="context_ngc_2fs_lhb">
+            <note>Do NOT disable Backup Schedule.</note>
+        </context>
+        <steps>
+            <step>
+                <cmd>Log in the YMP web interface, go to <menucascade>
+                        <uicontrol>Maintenance</uicontrol>
+                        <uicontrol>Backup &amp; Restore</uicontrol>
+                    </menucascade> .</cmd>
+            </step>
+            <step>
+                <cmd>Set where to store the backup files.</cmd>
+                <substeps id="substeps_mxx_bbs_lhb">
+                    <substep>
+                        <cmd>On the <uicontrol>Backup &amp; Restore</uicontrol> page, click
+                                <uicontrol>Storage</uicontrol>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Choose the <uicontrol>Storage Location</uicontrol> to
+                                <uicontrol>Local</uicontrol>.</cmd>
+                        <info>
+                            <p>The backup files will be stored to the local disk of the YMP
+                                server.</p>
+                            <p><image href="../Images/SBC/ymp_backup_storage.png"
+                                    id="image_eg3_rsw_k2b"/></p>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Click <uicontrol>Save</uicontrol>.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Set the Backup Schedule.</cmd>
+                <info>
+                    <note type="important">We suggest that you make a schedule to create backup
+                        files everyday and keep at least 7 backup files stored in the YMP
+                        system.</note>
+                </info>
+                <substeps id="substeps_jp5_xds_lhb">
+                    <substep>
+                        <cmd>On the <uicontrol>Backup &amp; Restore</uicontrol> page, click
+                                <uicontrol>Backup Schedule</uicontrol>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>On the <uicontrol>Backup Schedule</uicontrol> page, configure the
+                            following settings:</cmd>
+                        <info>
+                            <ul>
+                                <li><uicontrol>Enable Schedule Backup</uicontrol>: Check this
+                                    option.</li>
+                                <li><uicontrol>Time</uicontrol>: Set the backup frequency and when
+                                    to create the backup files.</li>
+                                <li><uicontrol>Backup Rotation</uicontrol>: Set the maximum number
+                                    of backup files that will be stored in the selected location.
+                                        <p>When the number of backup files exceeds the set value,
+                                        the oldest file will be replaced with the newest.</p></li>
+                                <li><uicontrol>The backup file will include</uicontrol>: Choose
+                                    which configurations and files you want to back up.<p>
+                                        <note>To ensure that you won't lose any data, we recommend
+                                            choosing all the files to backup.</note>
+                                    </p></li>
+                            </ul>
+                        </info>
+                        <info><image href="../Images/SBC/ymp_auto_backup.png" width="500"
+                                id="image_cfp_hww_k2b"/></info>
+                    </substep>
+                    <substep>
+                        <cmd>Click <uicontrol>Save</uicontrol>.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

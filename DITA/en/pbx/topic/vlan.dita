@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_wn3_d5w_ydb">
+    <title>Configure VLAN on <ph keyref="product_name"/></title>
+    <shortdesc>To perform VoIP communication securely, you can configure VLAN on <ph
+            keyref="product_name"/>.</shortdesc>
+    <conbody>
+        <note><ph keyref="product_name"/> is a VLAN client, not a VLAN server.</note>
+            <p>
+                <ol id="ol_ush_rvw_ydb">
+                    <li>Configure VLAN settings on your switch or router, allocate a VLAN ID and IP
+                        address for the PBX.</li>
+                    <li>Log in the PBX web interface, go to <menucascade>
+                            <uicontrol>Settings</uicontrol>
+                            <uicontrol>System</uicontrol>
+                            <uicontrol>Network</uicontrol>
+                            <uicontrol>Basic Settings</uicontrol>
+                        </menucascade>.</li>
+                    <li>In the <uicontrol>Mode</uicontrol> field, select a desired Ethernet
+                        mode.</li>
+                    <li>Configure VLAN for LAN port or WAN port. <p><image
+                            href="../Images/admin/vlan_settings.png" id="image_p23_cww_ydb"/></p><ul
+                        id="ul_osn_cjc_djb">
+                        <li><uicontrol>Enable VLAN</uicontrol>: Select the checkbox.</li>
+                        <li><uicontrol>VLAN ID</uicontrol>: Enter the VLAN ID that is assigned to
+                            the PBX. <p>VLAN ID is the identification of the VLAN. </p><p>For
+                                example, if the VLAN ID is 3, it means the PBX will send the packet
+                                with the tag which has VLAN ID 3. When the packet from PBX is sent
+                                to the switch, the switch will send the packet to the VLAN 3 only.
+                            </p></li>
+                        <li><uicontrol>VLAN Priority</uicontrol>: Enter the priority associated with
+                            the VLAN ID.<p>The priority value is between <codeph><i>0</i></codeph>
+                                to <codeph><i>7</i></codeph>. <codeph><i>7</i></codeph> has the
+                                highest priority.</p></li>
+                    </ul></li>
+                <li>If you want to connect to other VLANs, select the checkbox of <uicontrol>Enable
+                        VLAN Subinterface 1</uicontrol> or <uicontrol>Enable VLAN Subinterface
+                        2</uicontrol>, configure another VLAN for the network interface.<p><image
+                            href="../Images/admin/vlan-subinterface.png" id="image_wd2_rmc_djb"
+                            width="650"/></p><p>
+                        <ul id="ul_crn_tmc_djb">
+                            <li><uicontrol>IP Address</uicontrol>: Enter another VLAN IP
+                                address.</li>
+                            <li><uicontrol>Subnet Mask</uicontrol>: Enter the subnet mask associated
+                                with this VLAN.</li>
+                            <li><uicontrol>VLAN ID</uicontrol>: Enter the VLAN ID associated with
+                                this VLAN.</li>
+                            <li><uicontrol>VLAN Priority</uicontrol>: Enter the VLAN priority
+                                associated with the VLAN ID.</li>
+                        </ul>
+                    </p></li>
+                    <li>Click <uicontrol>Save</uicontrol> and reboot the PBX to take effect.</li>
+                </ol>
+            </p>
+        
+    </conbody>
+</concept>
+<?oxy_options track_changes="on"?>

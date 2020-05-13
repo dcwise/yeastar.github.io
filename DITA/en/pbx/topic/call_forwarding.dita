@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_i1q_fcb_5cb">
+  <title>Call Forwarding</title>
+  <shortdesc>Call Forwarding is used to forward incoming calls to different destinations based on
+    conditions such as <uicontrol>No Answer</uicontrol>, <uicontrol>When Busy</uicontrol>, and
+      <uicontrol>Always</uicontrol>.</shortdesc>
+  <prolog>
+    <critdates>
+      <!--Carol-->
+      <revised modified="2018/08/22"/>
+    </critdates>
+  </prolog>
+  <body>
+    <p/>
+  </body>
+</topic>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title></title>
+    <topicmeta>
+        <author type="creator">Carol</author>
+        <author type="contributor">Yeastar</author>
+        <author type="contributor">Carol</author>
+        <critdates>
+            <created date="2018/07/12"/>
+            <!--Carol-->
+            <revised modified="2018/07/12"/>
+            <!--Yeastar-->
+            <revised modified="2018/08/28"/>
+            <!--Carol-->
+            <revised modified="2018/12/03"/>
+            <!--Carol-->
+            <revised modified="2018/12/04"/>
+            <!--Carol-->
+            <revised modified="2018/12/13"/>
+            <!--Carol-->
+            <revised modified="2018/12/18"/>
+        </critdates>
+    </topicmeta>
+    <topichead navtitle="PBX">
+        <topicref href="../topic/v80.13.0.30.dita"/>
+        <topicref href="../topic/v80.13.0.15.dita"/>
+        <topicref href="../topic/v80.12.0.9.dita"/>
+        <topicref href="../topic/v80.12.0.6.dita"/>
+        <topicref href="../topic/v80.5.0.29.dita"/>
+        <topicref href="../topic/v80.5.0.9.dita"/>
+        <topicref href="../topic/v80.4.0.51.dita"/>
+        <topicref href="../topic/v80.4.0.49.dita"/>
+        <topicref href="../topic/v80.4.0.41.dita"/>
+        <topicref href="../topic/v80.3.0.3.dita"/>
+        <topicref href="../topic/v80.2.0.37.dita"/>
+    </topichead>
+    <topichead navtitle="Apps">
+        <topicref href="../topic/release_auto_provision_k2.dita"/>
+        <topicref href="../topic/release_linkus_server_k2.dita"/>
+        <topicref href="../topic/release_ldap_server_k2.dita"/>
+        <topicref href="../topic/release_conference_pannel_k2.dita"/>
+        <topicref href="../topic/release_hotel_k2.dita"/>
+        <topicref href="../topic/release_billing_k2.dita"/>
+    </topichead>
+</map>

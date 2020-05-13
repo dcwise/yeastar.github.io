@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_efs_b2d_djb">
+    <title>Import Outbound Routes</title>
+    <shortdesc>You can import outbound routes to quickly set up outbound routing on <ph
+            keyref="product_name"/>.</shortdesc>
+    <taskbody>
+        <context id="context_oqy_vtb_fjb">
+            <p>
+                <ol id="ol_xml_mh5_2jb">
+                    <li>Go to <menucascade>
+                            <uicontrol>Settings</uicontrol>
+                            <uicontrol>PBX</uicontrol>
+                            <uicontrol>Call Control</uicontrol>
+                            <uicontrol>Outbound Routes</uicontrol>
+                        </menucascade>, click <uicontrol>Import</uicontrol>.</li>
+                    <li>Click <uicontrol>Download the Template</uicontrol>, add the outbound routes
+                        information in the template file.<note>
+                            <ul id="ul_kqy_l5b_3jb">
+                                <li>The imported file should be a UTF-8 <filepath>.csv</filepath>
+                                    file.</li>
+                                <li>For requirements of the import parameters, refer to <xref
+                                        href="../references/import_parameters_outbound_routes.dita"
+                                    />.</li>
+                            </ul>
+                        </note></li>
+                    <li>Click <uicontrol>Browse</uicontrol> to upload the template file.</li>
+                    <li>Click <uicontrol>Import</uicontrol>.</li>
+                </ol>
+            </p>
+        </context>
+    </taskbody>
+</task>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_fr4_nrt_tcb">
+    <title>Add a Rule to Restrict Outbound Calls</title>
+    <shortdesc>The PBX has a default rule to limit users to make maximum 5 outbound calls in 1
+        minute. You can add an Outbound Restriction rule to define how many outbound calls the
+        extension users can make during a period of time.</shortdesc>
+    <taskbody>
+        <steps id="steps_ull_2xt_tcb">
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol>PBX</uicontrol>
+                        <uicontrol>Call Control</uicontrol>
+                        <uicontrol>Outbound Restriction</uicontrol>
+                    </menucascade>, click <uicontrol>Add</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>On the configuration page, configure an outbound restriction rule according to
+                    your needs.</cmd>
+                <info>
+                    <p><image id="image_tsn_d1r_kjb"
+                            href="../Images/admin/add-outbound-restriction-rule.png" width="650"
+                        /></p>
+                </info>
+                <info>
+                    <ul id="ul_jcn_3fr_kjb">
+                        <li><uicontrol>Name</uicontrol>: Enter a name to help you identify it.</li>
+                        <li><uicontrol>Time Limit(min)</uicontrol>: Set time in minutes to limit the
+                            number of outbound calls during the time period.</li>
+                        <li><uicontrol>Number of Calls Limit</uicontrol>: Set the number of outbound
+                            calls during the specified time period. For example, set <uicontrol>Time
+                                Limit(min)</uicontrol> to 5, <uicontrol>Number of Calls
+                                Limit</uicontrol> to 10. It means if the selected extension users
+                            make outbound calls over 10 times in 5 minutes, the extension(s) will be
+                            locked and can not make outbound calls.</li>
+                        <li><uicontrol>Member Extensions</uicontrol>: Select extensions which will
+                            be restricted by the rule.</li>
+                    </ul>
+                </info>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

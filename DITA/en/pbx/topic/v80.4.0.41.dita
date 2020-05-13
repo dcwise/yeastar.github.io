@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_vv3_nwd_5gb">
+    <title>Version 80.4.0.41</title>
+    <abstract>Released Date: March 25, 2019</abstract>
+    <body>
+        <section id="section_njt_ffz_2hb">
+            <title>New Feature</title>
+            <p>
+                <ul>
+                    <li>Added Configuration Wizard.<p>The Configuration Wizard helps an
+                            administrator to quickly set up a phone system for his/her
+                        company.</p></li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_q15_qyd_5gb">
+            <title>Optimization</title>
+            <p><image href="../Images/horizon.png" id="image_r15_qyd_5gb"/></p>
+            <p><b>System Stability</b>:</p>
+            <p>
+                <ul id="ul_hq3_mjk_5gb">
+                    <li>Fixed a few issues to improve the system stability.</li>
+                </ul>
+            </p>
+            <p><b>System Security</b></p>
+            <p>
+                <ul id="ul_hyb_22r_zfb">
+                    <li>Improved the system security.</li>
+                    <li>Improved the security of SSH login.</li>
+                </ul>
+            </p>
+            <p>
+                <ul id="ul_gwh_31r_zfb">
+                    <li>Improved Web security.</li>
+                    <li>Optimized Extension Registration Password and User Password.<p>A strong
+                            password is required by default. The administrator can enable <menucascade>
+                                <uicontrol>Allow Weak Password</uicontrol>
+                            </menucascade> on <menucascade>
+                                <uicontrol>Settings</uicontrol>
+                                <uicontrol>System</uicontrol>
+                                <uicontrol>Security</uicontrol>
+                            </menucascade> page. </p></li>
+                    <li>Added support for bulk deleting firewall rules; Optimized the Firewall
+                            <b>Reject</b> rule and <b>Drop</b> rule (previously known as
+                            <b>Ignore</b>).</li>
+                    <li>Optimized the message prompt of port conflicts.</li>
+                    <li>Fixed SSH login issue: SSH login would fail by using the auto-generated
+                        password.</li>
+                    <li>Fixed <uicontrol>Blocked IP Address</uicontrol> issue: The
+                            <uicontrol>Blocked IP Address</uicontrol> page displayed a large number
+                        of records for the same IP addresses.</li>
+                </ul>
+            </p>
+            <p><b>Call Recording</b></p>
+            <p>
+                <ul id="ul_vg4_3mw_tgb">
+                    <li>Added a digital signature in each auto recording file and one-touch
+                        recording file.<p>The digital signature ensures a recording has not been
+                            altered in any way. </p></li>
+                    <li>Added support for recording calls with consent: When external users call in
+                        the PBX, they have options choose weather the calls will be recorded or not. <p>
+                            <note>You can configure IVR to achieve this feature. For more details,
+                                refer to our guide.</note>
+                        </p></li>
+                </ul>
+            </p>
+            <p><b>Extension</b></p>
+            <p>
+                <ul id="ul_fdh_ycc_5gb">
+                    <li>Fixed Voicemail Password issue: After editing an extension, the extension's
+                        voicemail password would be changed automatically.</li>
+                    <li>Added support for configuring overlapped Extension ranges (<menucascade>
+                            <uicontrol>Settings</uicontrol>
+                            <uicontrol>PBX</uicontrol>
+                            <uicontrol>General</uicontrol>
+                            <uicontrol>Preferences</uicontrol>
+                            <uicontrol>Extension Preferences</uicontrol>
+                        </menucascade>).</li>
+                    <li>Optimized Extension setup: PBX will allow you to create an extension number
+                        that is not in the User Extension range.</li>
+                    <li>Fixed Extension Group issue: Creating an extension would fail if the
+                        extension number was used as an Extension Group name.</li>
+                </ul>
+            </p>
+            <p><b>Trunk</b>
+            </p>
+            <p>
+                <ul id="ul_w15_qyd_5gb">
+                    <li>Fixed SIP trunk issue: The configurations of ITSP templates were
+                        incorrect.</li>
+                </ul>
+            </p>
+            <p>
+                <ul id="ul_x15_qyd_5gb">
+                    <li>SIP Trunk: Added <uicontrol>Outbound Parameters</uicontrol> to configure SIP
+                        parameters for outbound calls.<p>
+                            <ul id="ul_rzg_tjk_5gb">
+                                <li>P Asserted Identify: Choose which "P Asserted Identify" value
+                                    should be contained in the SIP INVITE headers.</li>
+                                <li>Diversion: Choose which "Diversion" value should be contained in
+                                    the SIP INVITE headers.</li>
+                                <li>Remote Party ID: Choose which "Remote Party ID" value should be
+                                    contained in the SIP INVITE headers.</li>
+                            </ul>
+                        </p></li>
+                    <li>SIP Trunk: Added <uicontrol>Transfer Parameters</uicontrol> to configure SIP
+                        parameters for transferred calls.<p>
+                            <ul id="ul_szg_tjk_5gb">
+                                <li>From: Choose which "From" value should be contained in the SIP
+                                    INVITE headers.</li>
+                                <li>Diversion: Choose which "Diversion" value should be contained in
+                                    the SIP INVITE headers.</li>
+                                <li>Remote Party ID: Choose which "Remote Party ID" value should be
+                                    contained in the SIP INVITE headers.</li>
+                                <li>P Asserted Identify: Choose which "P Asserted Identify" value
+                                    should be contained in the SIP INVITE headers.</li>
+                            </ul>
+                        </p></li>
+                    <li>SIP Trunk: Supports up to 64 DID numbers.</li>
+                    <li>Fixed SIP Peer Trunk issue:  If making outbound calls through a SIP peer
+                        trunk, the DOD number was displayed incorrectly.</li>
+                    <li>Fixed SIP trunk issue: SIP trunk configurations would be lost after
+                        rebooting the PBX.</li>
+                    <li>Fixed DOD issue: If  DOD numbers were bound to an extension group, the DOD
+                        numbers were displayed incorrectly when making outbound calls.</li>
+                    <li>Optimized the web configuration page of ITSP template.</li>
+                    <li>Optimized ITSP template of Germany LAN IP Voice.</li>
+                    <li>Fixed the issue that the PBX NAT settings could not take effect if the SIP
+                        trunk TCP or TLS was enabled.</li>
+                    <li>Fixed the issue that custom configuration file could not take effect if
+                        blank spaces were included in the SIP trunk name.</li>
+                </ul>
+            </p>
+            <p><b>Call Control</b></p>
+            <p>
+                <ul id="ul_r4x_chc_5gb">
+                    <li>Fixed Inbound Route issue: The PBX could not correctly match inbound calls
+                        with DID numbers that were set on multiple inbound routes.</li>
+                </ul>
+            </p>
+            <p><b>Call Feature</b></p>
+            <p>
+                <ul id="ul_fl5_ylw_tgb">
+                    <li>Optimized BLF feature of <uicontrol>Queue</uicontrol>: A queue agent can set
+                        a BLF key (<codeph>*75<varname>｛queue_number｝</varname></codeph>) to achieve
+                        both Status Monitoring and Status Switching.<p>
+                            <note>In the earlier version, a queue agent had to set two BLF keys. One
+                                BLF key
+                                        (<codeph>*75<varname>｛extension_number｝</varname><varname>{queue_number}</varname></codeph>)
+                                for Status Monitoring and the other BLF key
+                                        (<codeph>*75<varname>｛queue_number｝</varname></codeph>) for
+                                Status Switching. </note>
+                        </p></li>
+                    <li>Optimized <uicontrol>Call Parking</uicontrol> feature: Retrieving a parked
+                        call occupies one call channel.<p>
+                            <note>In the earlier version,  rectrieving a parked call occupied two
+                                call channels.</note>
+                        </p></li>
+                    <li>Fixed <uicontrol>Voicemail</uicontrol> issue: If <uicontrol>Voicemail to
+                            Email</uicontrol> feature was enabled on an extension, the associated
+                        user could not receive voicemail messages on Linkus.</li>
+                    <li>Fixed <uicontrol>DISA</uicontrol> issue: When a user dialed numbers after
+                        the secondary dial tone, the PBX used an incorrect trunk to send the
+                        call.</li>
+                    <li>Fixed the compatibility issue with Yealink phones: The BLF key status could
+                        not change.</li>
+                </ul>
+            </p>
+            <p>
+                <ul id="ul_h2s_4gz_2hb">
+                    <li>Optimized Call Pickup: Users can see the incoming caller ID before they pick
+                        up the call.</li>
+                    <li>Optimized Call Pickup: If an extension's incoming call is picked up by other
+                        person, the extension's phone will not display any information of "missed
+                        call".</li>
+                    <li>Fixed the Call Forwarding issue: The system would hang up if a call was
+                        forwarded to a queue.</li>
+                    <li>Fixed the BLF monitoring issue on Extension: The BLF LED could not properly
+                        indicate the monitored extension's status if the extension had multiple
+                        calls at the same time.</li>
+                    <li>Fixed the BLF monitoring issue on Extension: The BLF LED status was
+                        incorrect when the monitored extension was not registered.</li>
+                    <li>Fixed the BLF monitoring issue on Static Agent: The BLF LED status was
+                        incorrect if the agent's <b>Caller ID Name</b>was not the extension
+                        number.</li>
+                </ul>
+            </p>
+            <p>
+                <ul id="ul_i2s_4gz_2hb">
+                    <li>Fixed Queue issue: If password was set on a queue, the dynamic agents might
+                        not receive incoming calls.</li>
+                </ul>
+            </p>
+            <p><b>Import Function</b></p>
+            <p>
+                <ul id="ul_j2c_n1r_zfb">
+                    <li>Optimized the Import function for Extensions, Trunks, Inbound Routes,
+                        Outbound Routes, Firewall Rules.</li>
+                </ul>
+            </p>
+            <p><b>Compatibility</b></p>
+            <p>
+                <ul id="ul_rqf_vbs_zfb">
+                    <li>Fixed the compatibility issue with Asternic: The Asternic Control Panel
+                        displayed incorrect status.</li>
+                    <li>Added support for synchronizing DND settings on PBX and Yealink IP
+                        phones.</li>
+                    <li>Optimized the compatibility with video door phone: Added support for
+                        checking the video before answering a call.</li>
+                </ul>
+            </p>
+            <p><b>Voice Prompt</b></p>
+            <p>
+                <ul id="ul_nwg_fwc_5gb">
+                    <li>Optimized <uicontrol>Custom Prompts</uicontrol>: The maximum file size is
+                        limited to 8 MB.</li>
+                </ul>
+            </p>
+            <p><b>CDR</b></p>
+            <p>
+                <ul id="ul_yks_3gc_5gb">
+                    <li>Fixed several CDR issues.</li>
+                </ul>
+            </p>
+            <p><b>PBX Monitor</b></p>
+            <p>
+                <ul id="ul_eb1_dvc_5gb">
+                    <li>Fixed Extension Status issue: The extension status was displayed incorrectly
+                        if the extension was registered on Linkus.</li>
+                </ul>
+            </p>
+            <p><b>System</b></p>
+            <p>
+                <ul id="ul_bb5_qyd_5gb">
+                    <li>Fixed the system password issue: The web login password, SSH login password,
+                        and API login password would be changed automatically after upgrading the
+                        PBX from 80.3.0.X to 80.4.0.X.</li>
+                </ul>
+            </p>
+            <p><b>API</b></p>
+            <p>
+                <ul>
+                    <li>Added API interfaces of Paging Group:<p>
+                            <ul id="ul_jg4_xlk_5gb">
+                                <li>Query Paging Group list</li>
+                                <li>Query a Paging Group settings</li>
+                                <li>Add a Paging Group</li>
+                                <li>Edit a Paging Group</li>
+                                <li>Delete a Paging Group</li>
+                            </ul>
+                        </p></li>
+                    <li>Added API interfaces of SIP trunk:<p>
+                            <ul id="ul_r2q_fmk_5gb">
+                                <li>Query a SIP trunk settings</li>
+                                <li>Add a SIP trunk</li>
+                                <li>Edit a SIP trunk</li>
+                                <li>Delete a SIP trunk</li>
+                            </ul>
+                        </p></li>
+                    <li>Added API interfaces of Outbound Route:<p>
+                            <ul id="ul_c3s_3mk_5gb">
+                                <li>Query an Outbound Route settings</li>
+                                <li>Add an Outbound Route</li>
+                                <li>Edit an Outbound Route</li>
+                                <li>Delete an Outbound Route</li>
+                            </ul>
+                        </p></li>
+                    <li>Added API interfaces of Inbound Route:<p>
+                            <ul id="ul_bgj_pmk_5gb">
+                                <li>Query an Inbound Route settings</li>
+                                <li>Add an Inbound Route</li>
+                                <li>Edit an Inbound Route</li>
+                                <li>Delete an Inbound Route</li>
+                            </ul>
+                        </p></li>
+                    <li>Added support for perform Call Transfer during an internal call or an
+                        external call.</li>
+                    <li>Added support for downloading CDR.</li>
+                    <li>Fixed the API stability issue: The API would fail to work after a certain
+                        time.</li>
+                    <li>Fixed the <uicontrol>login</uicontrol> API interface: Changing password
+                        didn't take effect.</li>
+                </ul>
+            </p>
+            <p>
+                <ul>
+                    <li>The IP address that exceeds the allowed failed login attempts would be
+                        listed on the PBX <b>Block IP Address</b> page.<p>You can delete the trusted
+                            IP address from the blacklist.</p></li>
+                    <li>Added Transfer Inbound Calls interface.<p>Through this interface, inbound
+                            calls can be transferred to different destinations, like extension, IVR,
+                            queue, etc.</p></li>
+                    <li>Added Transfer Outbound Calls interface.<p>Through this interface, outbound
+                            calls can be transferred to different destinations, like extension, IVR,
+                            queue, etc.</p></li>
+                    <li>Added Hotel Check Out interface.<p>Through this interface, PBX will do the
+                            following operations for the hotel extension:</p><ul id="ul_h2t_wbs_zfb">
+                            <li>Empty the extension's voicemail box.</li>
+                            <li>Delete the extension's outbound route permissions.</li>
+                            <li>Delete the extension's alarms.</li>
+                            <li>Reset the extension's <b>Caller ID name</b> setting.</li>
+                        </ul></li>
+                    <li>Optimized "Prompt Play End" report:<p>After an IVR prompt is played, PBX
+                            will send an API report to the 3rd-party application server.</p></li>
+                    <li>Optimized API reports: All the API reports include SN parameters.</li>
+                    <li>Added the following failure reasons in "Call Failure" report:<ul
+                            id="ul_i2t_wbs_zfb">
+                            <li>404 NOT found</li>
+                            <li>480 Temporarily unavailable</li>
+                            <li>484 Address Incomplete</li>
+                            <li>486 Busy Here</li>
+                            <li>487 Request Terminated</li>
+                            <li>603 Declined</li>
+                        </ul></li>
+                    <li>Fixed the issue that "Call an External Number via IVR" would not generate
+                        CDR.</li>
+                </ul>
+            </p>
+            <p><b>Remote Management</b></p>
+            <p>
+                <ul id="ul_wbg_fnk_5gb">
+                    <li>Fixed the issue that <uicontrol>Remote Management</uicontrol> was lost from
+                        the web interface.</li>
+                </ul>
+            </p>
+            <p><b>App</b></p>
+            <p>
+                <ul>
+                    <li>Optimized <uicontrol>Linkus</uicontrol> Send Email feature: You can choose
+                        to send Linkus emails by Yeastar server. By doing this, you don't have to
+                        set up Email on your PBX.<p>By choosing Yeastar server, you can send Linkus
+                            emails even though your PBX Email is not configured.</p></li>
+                    <li>Fixed <uicontrol>Auto Provisioning</uicontrol> issue: If you configured the
+                        custom templates of Yealink phones, garbled characters would appear on the
+                        Custom Template page.</li>
+                </ul>
+            </p>
+            <p><uicontrol>Me</uicontrol></p>
+            <p>
+                <ul id="ul_ib5_qyd_5gb">
+                    <li>Fixed the issue that Linkus QR code would appear on
+                            <uicontrol>Me</uicontrol> page even the Linkus was not enabled.</li>
+                </ul>
+            </p>
+            <p><b>Event Center</b></p>
+            <p>
+                <ul id="ul_e1l_1cs_zfb">
+                    <li>Added <b>System New Firmware Detection</b> event.<p>When the a new PBX
+                            firmware is detected, PBX will send the event notification. The event
+                            notification is disabled by default.</p></li>
+                    <li>Renamed the <b>Application Upgrade</b> to <b>Application New Version
+                            Detection</b>.<p>When a new Application is detected, PBX will send then
+                            event notification. The event notification is disabled by
+                        default.</p></li>
+                    <li>Added <b>Application Upgrade</b> event.<p>When a Application is upgraded,
+                            PBX will send the event notification. The event notification is disabled
+                            by default.</p></li>
+                </ul>
+            </p>
+            <p><b>System Log</b></p>
+            <p>
+                <ul id="ul_b4z_bcs_zfb">
+                    <li>Added support for recording Linkus server logs.</li>
+                </ul>
+            </p>
+            <p><b>Operation Log</b></p>
+            <p>The operations of checking extension's password and enabling weak password would be
+                recorded in <b>Operation Log</b>. </p>
+            <p>
+                <note>These types of logs could not be deleted.</note>
+            </p>
+            <p><b>Upgrade</b></p>
+            <p>
+                <ul id="ul_zxg_zdr_zfb">
+                    <li>If <b>Reset Configuration to Factory Default</b> is enabled, a verification
+                        code is required to avoid misoperation.</li>
+                </ul>
+            </p>
+            <p><b>Storage</b></p>
+            <p>
+                <ul id="ul_n2j_gcs_zfb">
+                    <li>Optimized <b>File Share</b> web configuration page.</li>
+                </ul>
+            </p>
+            <p><b>Hotel</b></p>
+            <p>
+                <ul id="ul_zlw_b2r_zfb">
+                    <li>Fixed the issue that the room extension could not be configured correctly
+                        when adding or editing a hotel room.</li>
+                </ul>
+            </p>
+        </section>
+    </body>
+</topic>

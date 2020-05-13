@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_prb_d1h_1db">
+    <title>View CDR and Recordings</title>
+    <shortdesc>By default, the CDR and One Touch Recording page displays a maximum of 10 records.
+        You can set to view more records on one page.</shortdesc>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/05/23"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Go to <uicontrol>CDR &amp; One Touch Recording</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Set the value of <uicontrol>Displaying</uicontrol>.</cmd>
+                <info><image href="../Images/user/view_call_log.png" width="650"
+                        id="image_hmw_4nn_1db"/></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_zmb_5w4_mgb">
+    <title>Bulk Edit Extension Names and Emails</title>
+    <shortdesc>To bulk edit the extension names and emails, you need to export the extensions from
+            <ph keyref="product_name"/> first, edit the extension names and email addresses in the
+        CSV file, then import the file to the PBX.</shortdesc>
+    <taskbody>
+        <steps>
+            <step>
+                <?oxy_delete author="Becky" timestamp="20190909T174013+0800" content="&lt;cmd&gt;Export the extensions.&lt;/cmd&gt;"?>
+                <?oxy_insert_start author="Becky" timestamp="20190909T174108+0800"?>
+                <?oxy_comment_start author="Becky" timestamp="20190909T174629+0800" comment="1.支持导出所有分机，而不是当前页面的分机
+2.超过100个分机也可以直接导出"?>
+                <cmd>Log in PBX web interface, go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol>PBX</uicontrol>
+                        <uicontrol>Extensions</uicontrol>
+                    </menucascade>, click <uicontrol>Export</uicontrol> to export the
+                    extensions.</cmd>
+                <?oxy_insert_end?><?oxy_comment_end?>
+                <?oxy_delete author="Becky" timestamp="20190909T174013+0800" content="&lt;info&gt;&lt;note&gt;&lt;ul id=&quot;ul_zb1_m25_qfb&quot;&gt;&lt;li&gt;For now, PBX only supports exporting all the extensions that are displayed on the current page. &lt;/li&gt;&lt;li&gt;A maximum of 100 extensions can be exported at once. &lt;p&gt;If you have more than 100 extensions, you need to repeat &lt;b&gt;step a&lt;/b&gt; to &lt;b&gt;step b&lt;/b&gt; to export other extensions to another CSV file.&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/note&gt;&lt;/info&gt;&lt;substeps id=&quot;substeps_ly4_31p_mgb&quot;&gt;&lt;substep&gt;&lt;cmd&gt;Go to &lt;menucascade&gt;&lt;uicontrol&gt;Settings&lt;/uicontrol&gt;&lt;uicontrol&gt;PBX&lt;/uicontrol&gt;&lt;uicontrol&gt;Extensions&lt;/uicontrol&gt;&lt;/menucascade&gt;, set a larger &lt;uicontrol&gt;Displaying&lt;/uicontrol&gt; value.&lt;/cmd&gt;&lt;info&gt;&lt;image href=&quot;../Images/admin/displaying_value.png&quot; width=&quot;650&quot; id=&quot;image_axl_tf5_qfb&quot;/&gt;&lt;/info&gt;&lt;/substep&gt;&lt;substep&gt;&lt;cmd&gt;Select all the extensions, click &lt;uicontrol&gt;Export&lt;/uicontrol&gt;.&lt;/cmd&gt;&lt;info&gt;&lt;image href=&quot;../Images/admin/select_all_extensions.png&quot; width=&quot;650&quot; id=&quot;image_r11_cg5_qfb&quot;/&gt;&lt;/info&gt;&lt;stepresult&gt;The extensions will be exported to a CSV file.&lt;/stepresult&gt;&lt;/substep&gt;&lt;/substeps&gt;"?>
+            </step>
+            <step>
+                <cmd>Edit the CSV file, enter the users' names and email addresses, then save the
+                    file.</cmd>
+                <info><image href="../Images/admin/extension_csv.png" width="650"
+                        id="image_rmj_zg5_qfb"/></info>
+                <info>
+                    <ul id="ul_kbk_1h5_qfb">
+                        <li><uicontrol>fullname</uicontrol>: Enter the user's name. The
+                                <uicontrol>fullname</uicontrol> stands for the <uicontrol>Caller ID
+                                Name</uicontrol>.</li>
+                        <li><uicontrol>email</uicontrol>: Enter the user's email address.</li>
+                    </ul>
+                </info>
+            </step>
+            <step>
+                <cmd>Import the CSV file to the PBX.</cmd>
+                <substeps id="substeps_my4_31p_mgb">
+                    <substep>
+                        <cmd>Go to <menucascade>
+                                <uicontrol>Settings</uicontrol>
+                                <uicontrol>PBX</uicontrol>
+                                <uicontrol>Extensions</uicontrol>
+                            </menucascade>, click <uicontrol>Import</uicontrol>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>On the pop-up dialog, click <uicontrol>Browse</uicontrol>, select your
+                            CSV file.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Click <uicontrol>Import</uicontrol>.</cmd>
+                        <info>
+                            <note>You may get an error prompt like the following figure.<p><image
+                                        href="../Images/admin/extension_import_error.png"
+                                        id="image_nr4_xh5_qfb"/></p></note>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Click <uicontrol>Yes</uicontrol> to check the log.</cmd>
+                        <info>
+                            <note>Ignore the error if the Error Cause displays
+                                    "username[<varname>1000</varname>]: The imported record is
+                                existing, the record has been overwritten". </note>
+                        </info>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Check the imported extensions on your PBX.</cmd>
+                <info><image href="../Images/admin/imported_extension.png" width="650"
+                        id="image_zt5_m35_qfb"/></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

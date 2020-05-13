@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_jgk_5l5_c2b">
+    <title>Billing Rate</title>
+    <shortdesc>Set up billing rate according to extensions/accounts, time periods, call duration,
+        call types (whether it’s local or international, from landline or mobile phone).</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/06/11"/>
+            <!--Carol-->
+            <revised modified="2018/06/12"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <p>When calls are made to external numbers, they are checked against the “Match Pattern”,
+            “Number Length”, and “Time”.</p>
+        <p><?oxy_comment_start author="Becky" timestamp="20191126T165458+0800" comment="新增"?>System
+            will match the called number with billing rates from top to bottom<?oxy_comment_end?>.
+            You can adjust the rate sequence by clicking these buttons <image
+                href="../Images/ui_icons/botton.png" width="20" id="image_okw_rlt_c2b"/>
+            <image href="../Images/ui_icons/drag.png" width="20" id="image_pkw_rlt_c2b"/>
+            <image href="../Images/ui_icons/down.png" width="20" id="image_qkw_rlt_c2b"/>
+            <image href="../Images/ui_icons/up.png" width="20" id="image_rkw_rlt_c2b"/>.</p>
+        <p>The matching priority is as bellow:</p>
+        <p>
+            <ol id="ol_mxz_ynz_c2b">
+                <li>Time</li>
+                <li>Number Length</li>
+                <li>Match Pattern</li>
+            </ol>
+        </p>
+        <p><image href="../Images/admin/billing_rate.png" id="image_r3w_c4z_c2b" width="650"/></p>
+        <section id="section_rkz_f4z_c2b">
+            <title>Call Costs</title>
+            <p>If a match is found then the cost is calculated as follows: </p>
+            <ul id="ul_mjv_g4z_c2b">
+                <li>Total Cost = Initial Cost + Billable Unit Number * Rate
+                    <?oxy_comment_start author="Becky" timestamp="20191126T165740+0800" comment="新增"?>(less
+                    than one billing unit will be regarded as one billing
+                    unit)<?oxy_comment_end?>.</li>
+                <li>If the talking time is less than the “Initial Time”, the Total Cost = Initial
+                    Cost.</li>
+            </ul>
+            <p>Below is an example billing rate setting, please check call cost details for
+                different calls.</p>
+            <ul id="ul_mcg_5mc_d3b">
+                <li>Initial Time: 120 seconds </li>
+                <li>Initial Cost: 0.2$</li>
+                <li>Rate: 0.3$</li>
+                <li>Billable Unit: 60 seconds</li>
+            </ul>
+            <table frame="all" rowsep="1" colsep="1" id="table_k52_lmc_d3b">
+                <title>Billing Rate setting example</title>
+                <tgroup cols="3">
+                    <colspec colname="c1" colnum="1" colwidth="1.09*"/>
+                    <colspec colname="c2" colnum="2" colwidth="1*"/>
+                    <colspec colname="c3" colnum="3" colwidth="1.46*"/>
+                    <thead>
+                        <row>
+                            <entry>Talk Time (s)</entry>
+                            <entry>Total Cost ($)</entry>
+                            <entry>Call Cost Details</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row>
+                            <entry>68</entry>
+                            <entry>0.2</entry>
+                            <entry>
+                                <p>Talk Time(68) &lt; Initial Time(120)</p>
+                                <p>Total Cost = Initial Cost</p>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>125</entry>
+                            <entry>0.5</entry>
+                            <entry>
+                                <p>Talk Time: 125=120+5</p>
+                                <p>Total Cost: 0.2+0.3*1=0.5</p>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>180</entry>
+                            <entry>0.5</entry>
+                            <entry>
+                                <p>Talk Time: 180=120+60*1</p>
+                                <p>Total Cost: 0.2+0.3*1=0.5</p>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>190</entry>
+                            <entry>0.8</entry>
+                            <entry>
+                                <p>Talk Time: 190=120+60*1+10</p>
+                                <p>Total Cost: 0.2+0.3*2=0.8</p>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry>380</entry>
+                            <entry>1.7</entry>
+                            <entry>
+                                <p>Talk Time: 380=120+4*60+20</p>
+                                <p>Total Cost: 0.2+0.3*5=1.7</p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+        </section>
+        <section>
+            <title>Call Rate Settings</title>
+            <p>Go to <menucascade>
+                    <uicontrol>Billing</uicontrol>
+                    <uicontrol>Rate</uicontrol>
+                </menucascade> to add or edit billing rate.</p>
+            <p><b>General Settings of Rate</b></p>
+            <p><image href="../Images/admin/billing_general_rate.png" id="image_f1w_bpz_c2b"
+                    width="650"/></p>
+            <p>
+                <ul id="ul_gkt_2pz_c2b">
+                    <li><uicontrol>Match Pattern</uicontrol>: The prefix of the called number. This
+                        setting must match the dial pattern of the outbound routes in your PBX.
+                        Leave it blank, the rate will apply to all numbers.<p>
+                            <note type="restriction">Wildcard character <codeph>.</codeph> and
+                                    <codeph>!</codeph> are not allowed.</note>
+                        </p></li>
+                    <li><uicontrol>Number Length</uicontrol>:
+                        <?oxy_comment_start author="Becky" timestamp="20191126T165840+0800" comment="新增"?>Used
+                        to restrict the length of called number.<?oxy_comment_end?> If the length of
+                        dialed number is shorter or equal to the “Number Length”, the rate will
+                        apply to it. Leave it blank, the rate will apply to all numbers.</li>
+                    <li><uicontrol>Rate</uicontrol>:  After the initial time, each billable unit
+                        will be charged with this rate.</li>
+                    <li><uicontrol>Billable Unit</uicontrol>: Set the billable unit after initial
+                        time. If the rate is $0.2 and billable unit is 60 seconds, the call you make
+                        will cost $0.2 per 60 seconds (less than one billing unit will be regarded
+                        as one billing unit).</li>
+                </ul>
+            </p>
+            <p><b>Other Settings of Billing Rate</b></p>
+            <p><image href="../Images/admin/billing_other_rate_settings.png" width="650"
+                    id="image_xqg_5pz_c2b"/></p>
+            <p>
+                <ul id="ul_gtw_5pz_c2b">
+                    <li><uicontrol>Initial Time &amp; Initial Cost</uicontrol>: If the
+                            <uicontrol>Initial Cost</uicontrol> is <codeph>$0.2</codeph> and the
+                            <uicontrol>Initial Time</uicontrol> is <codeph>60</codeph> seconds, it
+                        means the first 60 seconds of this call will cost $0.2. </li>
+                    <li><uicontrol>Time</uicontrol>: Set when the rate will be applied to.</li>
+                    <li><uicontrol>Days of Week</uicontrol>: Set which days will the rate applies
+                        to.</li>
+                    <li><uicontrol>Member Extensions</uicontrol>: Choose which extensions will the
+                        rate applies to.</li>
+                    <li><uicontrol>Member Accounts</uicontrol>: Choose which accounts will the rate
+                        applies to.</li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_fn1_mqz_c2b">
+            <title>Import/Export Call Rates</title>
+            <p>You can import and export rate rules; this helps you manage billing rates easily.</p>
+            <p>Go to <menucascade>
+                    <uicontrol>Billing</uicontrol>
+                    <uicontrol>Rate</uicontrol>
+                </menucascade> to import or export the call rates.</p>
+            <p>
+                <ul id="ul_bfy_fh5_c2b">
+                    <li>Click <uicontrol>Import</uicontrol> to import a guest list<p>
+                            <note type="tip">You can export a guest file from PBX and use it as a
+                                sample to start with.</note>
+                        </p></li>
+                </ul>
+                <ul id="ul_t3p_nh5_c2b">
+                    <li>Click <uicontrol>Export</uicontrol> to export the guests into a
+                            <codeph>csv</codeph> file</li>
+                </ul>
+            </p>
+        </section>
+    </conbody>
+</concept>

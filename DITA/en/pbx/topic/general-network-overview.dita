@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="general-network-instroduction">
+    <title>Basic Network Overview</title>
+    <shortdesc>Before using the <ph keyref="product_name"/> in your network, you must configure the
+        basic network.</shortdesc>
+    <body>
+        <section id="section_mng_pqw_ydb">
+            <title>Network interfaces</title>
+            <p><ph keyref="product_name"/> supports LAN interface and WAN interface. By default, the
+                LAN interface is enabled, and the WAN interface is disabled.</p>
+            <p>According to your network environment, you may need to use dual network interfaces. </p>
+            <p>If you use dual network interface, the system route entries are automatically created
+                for the default network interface. To properly route the network traffic through the
+                desired network interface, you need to  <xref
+                    href="add-a-static-route.dita#task_pnw_2qh_mgb">add a static route</xref> on the
+                PBX.</p>
+        </section>
+        <section id="section_yfb_dqr_3jb">
+            <title>Ethernet modes</title>
+            <p><ph keyref="product_name"/> supports <ph product="k2">two</ph><ph product="s-series">three</ph> Ethernet modes:<ul
+                    id="ul_ohj_bhv_cjb">
+                    <li><uicontrol>Single</uicontrol>: Only LAN port will be used for connection,
+                        WAN port is disabled.</li>
+                    <li product="s-series"><uicontrol>Bridge</uicontrol>: LAN port will be used for
+                        connection. WAN port will be used as bridge for PC connection. </li>
+                    <li><uicontrol>Dual</uicontrol>: Both LAN port and WAN port can be used for
+                            connection.<p>If you use <uicontrol>Dual</uicontrol> mode, you need to
+                            choose a default network interface for the PBX.<note>The traffic will be
+                                routed to the default interface; you need to <xref
+                                    href="add-a-static-route.dita#task_pnw_2qh_mgb">add a static
+                                    route</xref> to override the default route entries, routing the
+                                traffic from a specific IP address to the specified
+                                destination.</note></p></li>
+                </ul></p>
+        </section>
+        <section id="section_rj5_2qr_3jb">
+            <title>IP address assignment</title>
+            <p><ph keyref="product_name"/> supports three types of IP address assignment:<ul
+                    id="ul_vl2_s4v_cjb">
+                    <li><uicontrol>Assign a static IP address</uicontrol><p>Contact your network
+                            administrator to assign an IP address to the PBX. Then you need to
+                            manually configure settings such as the IP address, subnet mask, default
+                            gateway, and DNS servers on the PBX.</p></li>
+                    <li><uicontrol>Obtain an IP address from a DHCP server</uicontrol><p>You can
+                            configure the PBX to automatically obtain its IP address when it starts
+                            up from a DHCP server running in your network.</p><note>The IP address
+                            assigned to the PBX may vary every time the PBX is started
+                        up.</note></li>
+                    <li><uicontrol>Obtain an IP address from a PPPoE client</uicontrol><p>You can
+                            connect the PBX to a PPPoE client, and set up a PPPoE connection on the
+                            PBX to get the IP address.</p></li>
+                </ul></p>
+        </section>
+    </body>
+</topic>

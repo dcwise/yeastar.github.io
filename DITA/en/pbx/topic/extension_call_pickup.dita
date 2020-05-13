@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_cqp_lmm_4fb">
+    <title>Extension Call Pickup</title>
+    <shortdesc>When a user wants to pick up a call that is ringing at the other extension that is
+        not in the same pickup group, the user can dial "Extension Pickup feature code (default *04)
+        + Extension Number" to pick up the call. </shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/10/24"/>
+            <!--Carol-->
+            <revised modified="2018/10/24"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <section>
+            <title>Extension Call Pickup Feature Code</title>
+            <p>The default Extension Call Pickup feature code is *04. </p>
+            <p>You can change the code on <menucascade>
+                    <uicontrol>Settings</uicontrol>
+                    <uicontrol>PBX</uicontrol>
+                    <uicontrol>General</uicontrol>
+                    <uicontrol>Feature Code</uicontrol>
+                    <uicontrol>Extension Pickup</uicontrol>
+                </menucascade>.</p>
+        </section>
+        <section id="section_ot2_l2n_4fb">
+            <title>Operation</title>
+            <p>Dial *04[EXT_NUM] to pick up a call.</p>
+            <p>For example, the ringing extension number is 1000, you should dial *041000 to pick up
+                the call.</p>
+        </section>
+    </conbody>
+</concept>

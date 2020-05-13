@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_wwt_l5n_42b">
+    <title>如何解决安卓手机无来电提醒的问题？</title>
+    <shortdesc></shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/07/23"/>
+            <!--Carol-->
+            <revised modified="2018/07/23"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <p>部分安卓手机系统会自行停止Linkus应用的运行，或者没有启用相关的设置，导致Linkus来电弹出消息提示。</p>
+        <p>
+            <note>要正常地接收到Linkus来电消息，进入Linkus客户端的<menucascade>
+                    <uicontrol>我</uicontrol>
+                    <uicontrol>设置</uicontrol>
+                    <uicontrol>高级选项</uicontrol>
+                </menucascade>，启用Linkus的<uicontrol>后台模式</uicontrol>。<p><image
+                        href="../../Linkus/linkus_uc/image/faq/linkus_background.png"
+                        id="image_c2l_gvn_42b"/></p></note>
+        </p>
+        <p>针对不同的手机型号，还需要设置相关选项，保证Linkus可以正常接收来电提醒。</p>
+        <section id="section_h3c_kyn_42b"
+                    ><title>华为手机</title>一、启用Linkus的自启动权限。<p>打开<uicontrol>手机管家</uicontrol>，点击<uicontrol>启动管理</uicontrol>，启用Linkus的权限。</p><p><image
+                    href="../../../zh-cn/Linkus%E5%AE%A2%E6%88%B7%E7%AB%AF/Linkus_uc/image/faq/%E5%8D%8E%E4%B8%BA_%E8%87%AA%E5%90%AF%E5%8A%A8.jpg"
+                    id="image_hzd_5yn_42b"/></p><p>二、设置Linkus不受数据流量限制。</p><ol id="ol_eyz_lzn_42b">
+                <li>打开<uicontrol>手机管家</uicontrol>，点击<menucascade>
+                        <uicontrol>流量管理</uicontrol>
+                        <uicontrol>省流量模式</uicontrol>
+                    </menucascade>。</li>
+                <li>在<uicontrol>不受数据用量限制的应用</uicontrol>中，启用Linkus。</li>
+            </ol><p><image
+                    href="../../../zh-cn/Linkus%E5%AE%A2%E6%88%B7%E7%AB%AF/Linkus_uc/image/faq/%E7%9C%81%E6%B5%81%E9%87%8F%E6%A8%A1%E5%BC%8F%E7%99%BD%E5%90%8D%E5%8D%95%E5%88%97%E8%A1%A8.jpg"
+                    id="image_msr_jzn_42b"/></p></section>
+        <section id="section_h1l_pzn_42b">
+            <title>小米手机</title>
+            <p>一、启用Linkus的自启动权限。</p>
+            <p>打开<uicontrol>安全中心</uicontrol>，点击<menucascade>
+                    <uicontrol>应用管理</uicontrol>
+                    <uicontrol>权限</uicontrol>
+                    <uicontrol>自启动管理</uicontrol>
+                </menucascade>，启用Linkus。</p>
+            <p><image
+                    href="../../../zh-cn/Linkus%E5%AE%A2%E6%88%B7%E7%AB%AF/Linkus_uc/image/faq/%E5%B0%8F%E7%B1%B3_%E8%87%AA%E5%90%AF%E5%8A%A8.jpg"
+                    id="image_atx_414_42b"/></p>
+            <p>二、禁用Linkus省电优化。</p>
+            <p>
+                <ol id="ol_uwz_w14_42b">
+                    <li>打开<uicontrol>安全中心</uicontrol>，点击电量图标，进入<uicontrol>省电优化</uicontrol>设置页面。</li>
+                    <li>点击<uicontrol>应用智能省电</uicontrol>，找到Linkus应用，点击进入。</li>
+                    <li>设置Linkus的省电设置为<uicontrol>无限制</uicontrol>。<p><image
+                                href="../../../zh-cn/Linkus%E5%AE%A2%E6%88%B7%E7%AB%AF/Linkus_uc/image/faq/%E5%B0%8F%E7%B1%B3_%E7%9C%81%E7%94%B5%E8%AE%BE%E7%BD%AE.jpg"
+                                id="image_cgm_lb4_42b"/></p></li>
+                </ol>
+            </p>
+            <p>三、启用Linkus的锁屏显示权限。</p>
+            <p>
+                <ol id="ol_b1t_pb4_42b">
+                    <li>打开<uicontrol>安全中心</uicontrol>，点击<menucascade>
+                            <uicontrol>应用管理</uicontrol>
+                            <uicontrol>权限</uicontrol>
+                            <uicontrol>应用权限管理</uicontrol>
+                        </menucascade>，找到Linkus应用，点击进入权限配置界面。</li>
+                    <li>点击<uicontrol>锁屏显示</uicontrol>，选择<uicontrol>允许</uicontrol>。<p><image
+                                href="../../../zh-cn/Linkus%E5%AE%A2%E6%88%B7%E7%AB%AF/Linkus_uc/image/faq/%E5%B0%8F%E7%B1%B3_%E9%94%81%E5%B1%8F%E8%AE%BE%E7%BD%AE.jpg"
+                                id="image_a25_bc4_42b"/></p></li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_xlx_dc4_42b">
+            <title>魅族手机</title>
+            <p>启用Linkus的自启动权限。</p>
+            <p>
+                <ol id="ol_kzb_hc4_42b">
+                    <li>打开<uicontrol>手机管家</uicontrol>，点击<menucascade>
+                            <uicontrol>权限管理</uicontrol>
+                            <uicontrol>应用权限</uicontrol>
+                        </menucascade>，找到Linkus应用，点击进入权限配置界面。</li>
+                    <li>点击<uicontrol>锁屏显示</uicontrol>。</li>
+                    <li>在弹出的对话框中选择<uicontrol>允许后台运行</uicontrol>。<p><image
+                                href="../../../zh-cn/Linkus%E5%AE%A2%E6%88%B7%E7%AB%AF/Linkus_uc/image/faq/%E9%AD%85%E6%97%8F_%E5%90%8E%E5%8F%B0%E8%BF%90%E8%A1%8C.jpg"
+                                id="image_jmq_1d4_42b"/></p></li>
+                </ol>
+            </p>
+        </section>
+    </conbody>
+</concept>

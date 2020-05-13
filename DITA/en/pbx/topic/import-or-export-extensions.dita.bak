@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_i1n_52l_scb">
+    <?oxy_comment_start author="Becky" timestamp="20190909T162753+0800" comment="改成两个section"?>
+    <title>Import/Export Extensions</title><?oxy_comment_end?>
+    <shortdesc><?oxy_comment_start author="Becky" timestamp="20190909T162024+0800" comment="原文：You can import extensions from a CSV file to the PBX. This will save your time if you need to add a large number of extensions on the PBX." flag="done"?>The
+        extensions configured on <ph keyref="product_name"/> can be exported and saved as a
+        template. You can fill in desired extension information and import the CSV file to PBX
+        again.<?oxy_comment_end?></shortdesc>
+    <taskbody>
+        <section id="section_fdb_p1b_1jb">
+            <title>Export Extensions</title>
+            <p>
+                <ol id="ol_jhb_q1b_1jb">
+                    <li>Log in PBX web interface, go to <menucascade>
+                            <uicontrol>Settings</uicontrol>
+                            <uicontrol>PBX</uicontrol>
+                            <uicontrol>Extensions</uicontrol>
+                        </menucascade>.</li>
+                    <li>Click <uicontrol>Export</uicontrol> to export the extensions to a CSV
+                        file.</li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_ckd_r1b_1jb">
+            <title>Import Extensions</title>
+            <p>
+                <note type="tip">You can export extensions first, and use the CSV file as a
+                    template.</note>
+            </p>
+            <p>
+                <ol>
+                    <li>Log in PBX web interface, go to <menucascade>
+                            <uicontrol>Settings</uicontrol>
+                            <uicontrol>PBX</uicontrol>
+                            <uicontrol>Extensions</uicontrol>
+                        </menucascade>.</li>
+                    <li product="s-series,k2">Refer to the <xref
+                            href="../references/import_parameters_extensions.dita#reference_pq4_yzh_mfb"
+                        />, and edit your CSV file.</li>
+                    <li>Click <uicontrol>Import</uicontrol>.</li>
+                    <li>On the <uicontrol>Import Extension</uicontrol> page, click
+                            <uicontrol>Browse</uicontrol> to select your CSV file.</li>
+                    <li>Click <uicontrol>Import</uicontrol>.</li>
+                </ol>
+            </p>
+        </section>
+    </taskbody>
+    <related-links>
+        <link href="../references/import_parameters_extensions.dita#reference_pq4_yzh_mfb"
+            product="s-series"/>
+    </related-links>
+</task>

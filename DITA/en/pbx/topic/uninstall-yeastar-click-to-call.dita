@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="uninstall-yeastar-click-to-call">
+    <title>Uninstall Yeastar Click to Call</title>
+    <shortdesc>Remove Yeastar Click to Call from Google Chrome Browser if you don't need
+                it.</shortdesc>
+    <body>
+        <p>Follow one of the methods below to uninstall Yeastar Click to Call.</p>
+                <p>Open Google Chrome Browser, and choose one of the following methods:</p>
+                <p>
+                        <ul id="ul_eyq_rst_xjb">
+                                <li>In the search bar (URL field), enter
+                                        <i>chrome://extensions/</i>, go to Yeastar Click to Call and
+                                        click <uicontrol>Remove</uicontrol>.</li>
+                                <li>On the right of search bar (URL field), go to <menucascade>
+                                                <uicontrol><image href="../Images/admin/yeastar.png"
+                                                  width="20" id="image_l2b_g31_yjb"/></uicontrol>
+                                                <uicontrol>Remove from Chrome...</uicontrol>
+                                        </menucascade>. After the confirmation dialog pops up, click
+                                                <uicontrol>Remove</uicontrol>.</li>
+                        </ul>
+                </p>
+    </body>
+</topic>

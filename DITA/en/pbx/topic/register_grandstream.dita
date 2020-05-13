@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_wl5_41c_5cb">
+    <title>Register Grandstream Phone with <ph keyref="product_name"/></title>
+    <shortdesc>This guide is based on Grandstream GXP2135 and <ph keyref="product_name"/>
+        <ph product="cloudpbx">v81.8.0.7</ph><ph product="s-series">v30.8.0.14</ph>.</shortdesc>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2019/01/22"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <context id="context_kcs_41h_ycb">
+            <p>This guide is applicable to the following phones:</p>
+            <ul id="ul_xsn_wrg_ycb">
+                <li>Grandstream GXP Series 1160, 1165, 1400, 1405, 1450, 1610, 1620, 1625, 1628,
+                    1630, 2130, 2135, 2140, 2160, 2170, 2200, 3240, 3245</li>
+            </ul>
+            <p conref="register_htek.dita#task_n3s_q1c_5cb/different_phone_web"/>
+        </context>
+        <steps id="steps_cbl_t1h_ycb">
+            <step>
+                <cmd>Log in the web page of the IP phone.</cmd>
+                <info><image href="../Images/admin/register_grandstream1.png" id="image_dp5_bbh_ycb"
+                        width="400"/></info>
+                <choices id="choices_mds_w1h_ycb">
+                    <choice><b>Username</b>: admin</choice>
+                    <choice><b>Default Password</b>: admin</choice>
+                </choices>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Account</uicontrol> tab, choose one account, and configure the
+                    general settings.</cmd>
+                <info><image href="../Images/admin/register_grandstream2.png" width="650"
+                        id="image_w2p_lbh_ycb"/></info>
+                <choices>
+                    <choice><uicontrol>Account Active</uicontrol>: Yes</choice>
+                    <choice><uicontrol>Account Name</uicontrol>: Set a name for the account, the
+                        name will be displayed on the phone LCD.</choice>
+                    <choice><uicontrol>SIP Server</uicontrol>: Fill in the domain<ph
+                            product="s-series"> or IP address</ph> of your PBX.</choice>
+                    <choice><uicontrol>SIP User ID</uicontrol>: Fill in the extension
+                        number</choice>
+                    <choice><uicontrol>Authenticate ID</uicontrol>: Fill in the extension's
+                            <uicontrol>Registration Name</uicontrol>.</choice>
+                    <choice><uicontrol>Authenticate Password</uicontrol>: Fill in the extension's
+                            <uicontrol>Registration Password</uicontrol>.</choice>
+                </choices>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save and Apply</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Status</uicontrol>
+                        <uicontrol>Account Status</uicontrol>
+                    </menucascade> to check the account status.  </cmd>
+                <info>If the extension is registered, the <uicontrol>SIP Registration</uicontrol>
+                    shows "Yes".</info>
+                <info><image href="../Images/admin/register_grandstream3.png" id="image_qp3_33h_ycb"
+                    /></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

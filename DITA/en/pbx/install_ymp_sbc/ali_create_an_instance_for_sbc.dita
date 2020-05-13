@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_j42_xqr_lcb">
+    <title>1) Create a ECS Instance for SBC</title>
+    <shortdesc>Create an ECS instance for SBC by using an existing Ubuntu image.</shortdesc>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/06/21"/>
+            <!--Carol-->
+            <revised modified="2018/10/18"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <steps id="steps_ed3_zrr_lcb">
+            <step>
+                <cmd>Log on to the <xref href="https://ecs.console.aliyun.com/#/home" format="html"
+                        scope="external">ECS console</xref>.</cmd>
+            </step>
+            <step>
+                <cmd>On the left-side navigation pane, click <b>Instances</b>.</cmd>
+            </step>
+            <step>
+                <cmd>On the <b>Instance List</b> page, click <b>Create Instance</b>.</cmd>
+            </step>
+            <step>
+                <cmd> Set the <b>Basic Configurations</b>.</cmd>
+                <substeps>
+                    <substep>
+                        <cmd>Select the <uicontrol>Billing Method</uicontrol>.</cmd>
+                        <info><ul id="ul_z2q_hhq_ndb">
+                                <li><b>Subscription</b>: A prepaid method that allows you to use an
+                                    instance only after you make the payment for it</li>
+                                <li><b>Pay-As-You-Go</b>: A postpaid method in which you can pay
+                                    after using the instance.</li>
+                            </ul>For more information about the billing methods, see <xref
+                                href="https://www.alibabacloud.com/help/doc-detail/25370.htm"
+                                format="html" scope="external">Purchase ECS instances</xref>.</info>
+                    </substep>
+                    <substep>
+                        <cmd>Select the <uicontrol>Region</uicontrol> as the VPC region.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>In the<uicontrol>Instance Type</uicontrol> section, set the following
+                            options, and select one instance type from the list.</cmd>
+                        <info>Refer to <xref
+                                href="ali_recommended_instance_type.dita#reference_lhw_2zq_ndb"/> to
+                            decide which instance to choose.</info>
+                        <info>
+                            <ul id="ul_yjf_lqq_ndb">
+                                <li><uicontrol>Network Type</uicontrol>: VPC</li>
+                                <li><uicontrol>Architecture</uicontrol>: x86-Architecture</li>
+                                <li><uicontrol>Category</uicontrol>: Compute</li>
+                            </ul>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Set the <uicontrol>Image</uicontrol> as <codeph>Ubuntu 16.04
+                                64bit</codeph>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Set the <uicontrol>Storage</uicontrol>.</cmd>
+                        <info>
+                            <ul id="ul_gh3_tqq_ndb">
+                                <li><uicontrol>System Disk</uicontrol>: Set to <uicontrol>Ultra
+                                        Cloud Disk</uicontrol>.</li>
+                                <li><uicontrol>Data Disk</uicontrol>: Optional. No data disk needed
+                                    on SBC server. </li>
+                            </ul>
+                        </info>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Next Step: Networking</uicontrol>, set the
+                        <uicontrol>Networking</uicontrol> settings.</cmd>
+                <substeps id="substeps_hbt_hrq_ndb">
+                    <substep>
+                        <cmd>Set the <uicontrol>Network </uicontrol> as <uicontrol>VPC</uicontrol>,
+                            and select the created VPC.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>In the <uicontrol>Network Billing Method</uicontrol> section, do NOT
+                            check the option <uicontrol>Assign public IP</uicontrol>.</cmd>
+                        <info><image href="../Images/SBC/ali_network_binding_method.png"
+                                id="image_jb2_qxq_ndb"/></info>
+                    </substep>
+                    <substep>
+                        <cmd>Select the security group that is created for the VPC. </cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Next Step: System Configurations</uicontrol>, set the
+                        <uicontrol>System Configurations</uicontrol>.</cmd>
+                <substeps id="substeps_uj5_hsq_ndb">
+                    <substep>
+                        <cmd>Set the <uicontrol>Log on Credentials</uicontrol>. You can select a
+                            password or an SSH key pair as a credential for a Linux instance.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Specify the instance name, which is displayed in the ECS console, and
+                            the host name, which is displayed inside the guest operating
+                            system.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd importance="optional">Click <uicontrol>Next Step: Grouping</uicontrol>. You can
+                    add tags to the instance to simplify future management.</cmd>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Next Step: Preview</uicontrol> to confirm your order.</cmd>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Create Order</uicontrol> and activate the instance.</cmd>
+                <stepresult>
+                    <p>When the instance is activated, you can go to the ECS console to view the
+                        instance details.</p>
+                </stepresult>
+            </step>
+        </steps>
+    </taskbody>
+    <related-links>
+        <link href="ali_recommended_instance_type.dita#reference_lhw_2zq_ndb"/>
+    </related-links>
+</task>

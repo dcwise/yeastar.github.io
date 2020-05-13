@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_f3p_4ld_2cb">
+  <title>Set up VoIP Trunks</title>
+  <shortdesc>To make and receive calls through a VoIP trunk, you need to buy a VoIP account from the
+    VoIP provider and register the account on the PBX.</shortdesc>
+  <prolog>
+    <critdates>
+      <!--Carol-->
+      <revised modified="2018/08/17"/>
+    </critdates>
+  </prolog>
+  <body>
+    <p/>
+  </body>
+</topic>

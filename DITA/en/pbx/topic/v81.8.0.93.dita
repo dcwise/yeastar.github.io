@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_gj4_frr_whb">
+    <title>Version 81.8.0.93</title>
+    <abstract>Released Date:  June 5, 2019</abstract>
+    <body>
+        <section>
+            <title>BUG FIXES</title>
+            <p><image href="../Images/horizon.png" id="image_xcc_4wb_kfb"/></p>
+            <p>
+                <ul id="ul_snd_vsr_whb">
+                    <li>Fixed the issue that the SIP trunk advanced settings would be lost after
+                        upgrading the PBX.</li>
+                    <li>
+                        <p>Fixed the <uicontrol>Allow Mode for SIP Forking</uicontrol> issue: If
+                                <uicontrol>Allow Mode for SIP Forking</uicontrol> setting was
+                            enabled, a system hang would occur when a ring group member performed a
+                            blind transfer to another user.</p>
+                    </li>
+                    <li>Fixed registration issue on SIP trunk: PBX IP might be blocked by the VoIP
+                        provider if PBX sent a mass of REGISTER packets to retry register SIP trunk
+                        after the first registration failure.</li>
+                </ul>
+            </p>
+        </section>
+    </body>
+</topic>

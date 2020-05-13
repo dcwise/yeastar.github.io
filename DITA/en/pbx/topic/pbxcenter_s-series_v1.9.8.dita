@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="concept_w3s_hb3_f2b">
+    <title>Version 1.9.8</title>
+    <abstract>Released Date: July 5, 2018</abstract>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/06/20"/>
+            <!--Carol-->
+            <revised modified="2018/06/20"/>
+            <!--Carol-->
+            <revised modified="2018/06/25"/>
+            <!--Carol-->
+            <revised modified="2018/06/26"/>
+            <!--Carol-->
+            <revised modified="2018/07/04"/>
+        </critdates>
+    </prolog>
+    <body>
+        <section conref="v30.8.0.8.dita#concept_lwk_kph_f2b/section_lqk_nph_f2b"
+            id="section_pf3_lc3_f2b"/>
+        <section id="section_hym_mc3_f2b">
+            <title>Optimization</title>
+            <p><image href="../Images/horizon.png" id="image_vfw_frh_f2b"/></p>
+            <p><b>Security</b></p>
+            <p>
+                <ul id="ul_vc2_hrh_f2b">
+                    <li>Improved the security of web login.</li>
+                    <li>Improved the security of SSH login.</li>
+                </ul>
+            </p>
+            <p><b>Extension</b></p>
+            <p>
+                <ul id="ul_mcw_krh_f2b">
+                    <li>Deleted the <uicontrol>Name</uicontrol> setting, added <uicontrol>Caller ID
+                            name</uicontrol> setting. Generally, set <uicontrol>Caller ID
+                            name</uicontrol> to the user's name.</li>
+                    <li>Fixed the issue that <uicontrol>All Busy Mode for SIP Forking</uicontrol>
+                        setting didn't take effect if the extension had a DOD number.</li>
+                    <li>Fixed the compatibility issue with Vtech IP phone: TLS extension could not
+                        be registered.</li>
+                </ul>
+            </p>
+            <p><b>SIP Trunk</b></p>
+            <p>
+                <ul id="ul_z31_xrh_f2b">
+                    <li>Added <uicontrol>Outbound Parameters</uicontrol> to configure SIP parameters
+                        for outbound calls.<p>
+                            <ul id="ul_x4v_zrh_f2b">
+                                <li>P Asserted Identify: Choose which "P Asserted Identify" value
+                                    should be contained in the SIP INVITE headers.</li>
+                                <li>Diversion: Choose which "Diversion" value should be contained in
+                                    the SIP INVITE headers.</li>
+                                <li>Remote Party ID: Choose which "Remote Party ID" value should be
+                                    contained in the SIP INVITE headers.</li>
+                            </ul>
+                        </p></li>
+                    <li>Added <uicontrol>Transfer Parameters</uicontrol> to configure SIP parameters
+                        for transferred calls.<p>
+                            <ul id="ul_n4j_sth_f2b">
+                                <li>From: Choose which "From" value should be contained in the SIP
+                                    INVITE headers.</li>
+                                <li>Diversion: Choose which "Diversion" value should be contained in
+                                    the SIP INVITE headers.</li>
+                                <li>Remote Party ID: Choose which "Remote Party ID" value should be
+                                    contained in the SIP INVITE headers.</li>
+                                <li>P Asserted Identify: Choose which "P Asserted Identify" value
+                                    should be contained in the SIP INVITE headers.</li>
+                            </ul>
+                        </p></li>
+                    <li>Supports up to 64 characters.</li>
+                </ul>
+            </p>
+            <p><b>Jitter Buffer</b></p>
+            <p>
+                <ul id="ul_dyl_f5h_f2b">
+                    <li>The path of <uicontrol>Jitter Buffer</uicontrol> settings are changed to <menucascade>
+                            <uicontrol>Settings</uicontrol>
+                            <uicontrol>PBX</uicontrol>
+                            <uicontrol>General</uicontrol>
+                            <uicontrol>Jitter Buffer</uicontrol>
+                        </menucascade>.</li>
+                    <li>Added support for choosing which extensions and trunks to apply jitter
+                        buffer settings.</li>
+                    <li id="s-pbxcenter-30.8">Added support for configuring the <uicontrol>Adaptive
+                            Adjustment Size</uicontrol> of jitter buffer.</li>
+                </ul>
+            </p>
+            <p><b>CDR</b></p>
+            <p>
+                <ul id="ul_sy4_xsr_g2b">
+                    <li>Added support for displaying billing <uicontrol>Account</uicontrol> in the
+                        CDR logs.</li>
+                </ul>
+            </p>
+        </section>
+    </body>
+</topic>

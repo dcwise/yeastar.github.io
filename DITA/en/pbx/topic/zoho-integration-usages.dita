@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="task_dmp_yjm_ggb">
+    <title>Use Zoho Integration</title>
+    <shortdesc><?oxy_comment_start author="carol" timestamp="20191125T103206+0800" comment="语法细节" flag="done"?>After
+        integrating <ph keyref="product_name"/> and Zoho applications, the Zoho users can manage
+        calls in Zoho applications.<?oxy_comment_end?></shortdesc>
+    <body>
+        <p>
+            <note type="important">Make sure that Zoho users' extensions are registered on IP phones
+                or softphones, otherwise, they
+                <?oxy_comment_start author="carol" timestamp="20191125T103703+0800" comment="语法： cannot" flag="done"?>cannot
+                <?oxy_comment_end?>handle calls on Zoho applications.</note>
+        </p>
+        <section id="section_xmb_32t_ggb">
+            <title>Incoming call pop-ups</title>
+            <p>When the Zoho user receives an incoming call from Zoho contact via PBX, the user's
+                phone rings, and a Contact Card pop-up in Zoho application.</p>
+            <p>The Zoho user can quick glance at the essential details and answer call on the
+                phone.</p>
+            <p><image href="../Images/zoho/zoho-card-view.png" id="image_sjb_psx_rjb"/></p>
+        </section>
+        <section id="section_xrs_pft_ggb">
+            <title>Click-to-Call</title>
+            <p>A Zoho user can initial a call to Zoho contact in Zoho application.</p>
+            <p>
+                <ol id="ol_dn2_wrt_ggb">
+                    <li>In the contact's detail page, click the green <uicontrol>Call</uicontrol>
+                        icon beside the phone number. <image
+                            href="../Images/zoho/zoho-call-icon.png" width="40"
+                            id="image_msw_g5x_rjb"/>.<p>The Zoho user's phone will ring
+                                first.</p><p><image href="../Images/zoho/zoho-click-to-call.png"
+                                id="image_v5h_gby_rjb"/></p></li>
+                    <li>The Zoho user answers the call, then the PBX starts to call the
+                        contact.</li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_o2x_1py_rjb">
+            <title>Call control</title>
+            <p>During a call, the Zoho user can end the call, hold the call, or mute the call.</p>
+            <p><?oxy_comment_start author="carol" timestamp="20191114T150216+0800" comment="注释和红框不要加阴影" flag="done"?><image
+                    href="../Images/zoho/zoho-call-control.png" id="image_pmc_3qy_rjb" width="500"
+                /><?oxy_comment_end?></p>
+        </section>
+        <section id="section_zt5_zrt_ggb">
+            <title>Follow-up activity </title>
+            <p>After the end of call, Zoho user can do any of the following activities from the Call
+                End window in Zoho application, for subsequent follow-up visits.</p>
+            <p><image href="../Images/zoho/zoho-call-end.png" id="image_mc5_dwx_rjb" width="300"/></p>
+            <p>
+                <ul id="ul_ujh_kst_ggb">
+                    <li>Click <uicontrol>Call</uicontrol> to add a follow-up call.<p>Set up
+                            reminders for the calls so that you do not miss the opportunity to call
+                            the customer.</p><p><image
+                                href="../Images/zoho/zoho-add-a-follow-up-call.png"
+                                id="image_xql_fxx_rjb" width="300"/></p></li>
+                    <li>Click <uicontrol>Task</uicontrol> to create a task.<p>Task refers to a
+                            specific piece of work required to be done within a given time frame. In
+                            Zoho CRM, you can create recurring tasks and set reminders to your
+                            tasks.</p><p><image href="../Images/zoho/zoho-add-a-follow-up-task.png"
+                                id="image_vxk_nxx_rjb" width="450"/></p></li>
+                    <li>Click <uicontrol>Event</uicontrol> to create a event.<p>Event refers to an
+                            activity that happens at a given place and time. In Zoho CRM, you can
+                            create recurring events, set reminders, and add invitees to the
+                            event.</p><p><image href="../Images/zoho/zoho-add-a-follow-up-activity.png"
+                                id="image_tth_tyx_rjb"/></p></li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_f4p_sst_ggb">
+            <title>View the call log</title>
+            <p>All outgoing calls, incoming calls, and missed call records on the PBX will be logged
+                on the Zoho application. You can view the call log in
+                    <uicontrol>Activities</uicontrol> page.</p>
+            <p><image href="../Images/zoho/zoho-view-call-logs.png" id="image_mcb_jzx_rjb" width="450"
+                /></p>
+        </section>
+    </body>
+</topic>

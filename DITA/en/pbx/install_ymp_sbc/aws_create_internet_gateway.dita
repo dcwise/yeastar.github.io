@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_kk1_cv5_kcb">
+    <title>2) Create Internet Gateway</title>
+    <shortdesc>Create an Internet gateway for the VPC. An internet gateway enables your instances to
+        connect to the internet through the Amazon EC2 network edge.</shortdesc>
+    <taskbody>
+        <context id="context_rpd_jl4_hfb">The following diagram represents the architecture of your
+            VPC after you've completed this step.<p><image
+                    href="../Images/SBC/aws_create_internet_gateway_diagram.png"
+                    id="image_nhd_4m4_hfb" height="450"/></p></context>
+        <steps id="steps_ryt_hv5_kcb">
+            <step>
+                <cmd>Open the Amazon VPC console at <xref href="https://console.aws.amazon.com/vpc/"
+                        format="html" scope="external"
+                    >https://console.aws.amazon.com/vpc/</xref>.</cmd>
+            </step>
+            <step>
+                <cmd>In the navigation pane, select <b>Internet Gateways</b>, then click <b>Create
+                        Internet Gateway</b>.</cmd>
+            </step>
+            <step>
+                <cmd>Set the <uicontrol>Name tag</uicontrol>, then click
+                        <uicontrol>Create</uicontrol>.</cmd>
+                <info><image href="../Images/SBC/aws_create_internet_gateway.png"
+                        id="image_njv_kw5_kcb"/></info>
+            </step>
+            <step>
+                <cmd>On the <uicontrol>Internet Gateways</uicontrol> page, select and right click
+                    the new created gateway, click <uicontrol>Attach to VPC</uicontrol>.</cmd>
+                <info><image href="../Images/SBC/aws_attach_to_vpc.png" id="image_dqb_q5v_kcb"
+                        width="500"/></info>
+            </step>
+            <step>
+                <cmd>Select the VPC that is for Yeastar Cloud PBX.</cmd>
+                <info><image href="../Images/SBC/aws_attach_to_vpc2.png" id="image_emg_1vv_kcb"
+                    /></info>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Attach</uicontrol>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

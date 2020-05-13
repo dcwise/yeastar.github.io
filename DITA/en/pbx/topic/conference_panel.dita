@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="app-conference">
+    <title>Conference Panel</title>
+    <shortdesc>Conference Panel App allows you to establish a multiparty call, monitor and manage
+        the conference call  on web pages. </shortdesc>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/12/19"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <section id="section_rw3_qhr_yjb">
+            <title>Features</title>
+            <p>
+                <ul id="ul_hcd_rhr_yjb">
+                    <li>Instant conference</li>
+                    <li>Dial-in conference</li>
+                    <li>Check conference status</li>
+                    <li>Add/Delete conference members </li>
+                    <li>Change status of conference members</li>
+                    <li>Phonebook</li>
+                </ul>
+            </p>
+        </section>
+    </conbody>
+</concept>

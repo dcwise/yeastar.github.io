@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_u13_lwz_xdb">
+    <title>API</title>
+    <shortdesc><ph keyref="product_name"/> provides API interfaces for you to integrate a
+        third-party software or device.</shortdesc>
+    <conbody>
+        <section id="section_j3n_qlj_wgb">
+            <title>Compatibility</title>
+            <p product="s-series">API feature is supported on the following S-Series VoIP PBX
+                models:</p>
+            <p product="s-series">
+                <ul id="ul_mtx_wnj_wgb">
+                    <li>S50  v30.5.0.30 or later</li>
+                    <li>S100 v30.5.0.30 or later</li>
+                    <li>S300 v30.5.0.30 or later</li>
+                </ul>
+            </p>
+            <p product="cloudpbx">API feature is supported on Yeastar Cloud PBX v81.4.0.8 or
+                later.</p>
+            <p product="k2">API feature is supported on Yeastar K2 IPPBX v80.2.0.X or later.</p>
+        </section>
+        <section id="section_w4t_l1j_wgb">
+            <title>API Guide</title>
+            <p product="cloudpbx">For more information of API, refer to <xref
+                    href="https://help.yeastar.com/en/cloudpbx-developer/" format="html"
+                    scope="external">Yeastar Cloud PBX- API guide</xref>.</p>
+            <p product="s-series">For more information of API, refer to <xref
+                    href="https://help.yeastar.com/en/s-series-developer/" format="html"
+                    scope="external">Yeastar S-Series API Guide</xref>.</p>
+            <p product="k2">For more information of API, refer to <xref
+                    href="https://help.yeastar.com/en/k2-developer/" format="html" scope="external"
+                    >Yeastar K2 API Guide</xref>.</p>
+            <p>In the API guide, we introduces how to enable and configure API on <ph
+                    keyref="product_name"/>, and provides API references.</p>
+        </section>
+    </conbody>
+</concept>

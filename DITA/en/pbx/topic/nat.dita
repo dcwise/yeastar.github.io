@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_cch_djd_zdb">
+    <title>NAT Overview</title>
+    <shortdesc><?oxy_comment_start author="Becky" timestamp="20191017T101218+0800" comment="Network address translation (NAT) is a method of translating the private (not globally unique) address in Internet Protocol (IP) into legal address. NAT is used to limit the number of public IP addresses for security purpose.
+原来的不太直白
+参考链接：①https://www.cisco.com/c/en/us/support/docs/ip/network-address-translation-nat/26704-nat-faq-00.html②https://whatismyipaddress.com/nat" flag="done"?>Network
+        address translation (NAT) is a method of translating the private (not globally unique)
+        address in Internet Protocol (IP) into legal address. NAT is used to limit the number of
+        public IP addresses for security purpose..<?oxy_comment_end?></shortdesc>
+    <conbody>
+        <section id="section_ngs_xvd_zdb"><image href="../Images/admin/nat_example.png"
+                id="image_jlk_yvd_zdb"/></section>
+        <section id="section_zbc_wjd_zdb">
+            <title>When do you need to configure NAT?</title>
+            <p>If your PBX is operating in a network connected to the Internet through a single
+                router, your PBX is behind NAT.</p>
+            <p>The NAT device has to be instructed to forward the right inbound packets (from
+                Internet) to the PBX server. You need to configure NAT settings in the following
+                situations:</p>
+            <p>
+                <ul id="ul_r31_dkd_zdb">
+                    <li> Register a remote extension to the PBX</li>
+                    <li>Connect a device to the PBX via SIP trunk</li>
+                </ul>
+            </p>
+            <p>
+                <note>Problems like "One way audio" or "Call drops after XX seconds" are mostly
+                    caused by incorrect NAT settings.</note>
+            </p>
+        </section>
+        <section id="section_us2_jjx_djb"><title>NAT types</title><ph keyref="product_name"/>
+            provides three types of NAT configurations, you can select a type to configure NAT
+            according to your network environment.<p>
+                <ul id="ul_ltw_1kx_djb">
+                    <li><uicontrol>External IP Address</uicontrol>: If your PBX has a private IP
+                        address and is connected to a router that has a static public IP address,
+                        you can set NAT with External IP Address. <p>Your PBX will communicate with
+                            the external devices with the static public IP address. When the router
+                            gets packets back from the external devices, the router can redirect the
+                            packet to the PBX.</p></li>
+                    <li><uicontrol>External Host</uicontrol>: If your PBX has a private IP address
+                        and is connected to a router that doesn't have a static public IP address,
+                        you can set NAT with External Host.</li>
+                    <li><uicontrol>STUN</uicontrol>: If your PBX has no static public IP address and
+                        domain name, you can set the NAT with STUN (Simple Traversal Utilities for
+                        NAT). STUN is a simple protocol for discovering the public IP address.</li>
+                </ul>
+            </p></section>
+    </conbody>
+</concept>
+<?oxy_options track_changes="on"?>

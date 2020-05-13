@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="v30.11.0.28">
+    <title>Version 30.11.0.28</title>
+    <abstract>Released Date: October 22, 2019</abstract>
+    <body>
+        <section>
+            <title>OPTIMIZATION</title>
+            <dl>
+                <dlentry>
+                    <dt>System Stability</dt>
+                    <dd>
+                        <ul id="ul_mq2_hyg_jjb">
+                            <li>Fixed the system issue: The system memory would be insufficient if
+                                an unstable network drive kept disconnecting and reconnecting to the
+                                PBX.</li>
+                        </ul>
+                    </dd>
+                </dlentry>
+                <dlentry>
+                    <dt>Extension</dt>
+                    <dd>
+                        <ul id="ul_drt_5yg_jjb">
+                            <li>Optimized <uicontrol>Max Call Duration(s)</uicontrol> setting.<ul
+                                    id="ul_spf_vyg_jjb">
+                                    <li><uicontrol>Max Call Duration(s)</uicontrol> setting is
+                                        applicable to all types of calls on the PBX.</li>
+                                    <li><uicontrol>Max Call Duration(s)</uicontrol> setting for
+                                            <uicontrol>Extensions</uicontrol>: Added
+                                            <uicontrol>10800</uicontrol> option (<menucascade>
+                                            <uicontrol>PBX</uicontrol>
+                                            <uicontrol> Extensions</uicontrol>
+                                            <uicontrol> Features</uicontrol>
+                                            <uicontrol> Max Call Duration(s)</uicontrol>
+                                        </menucascade>).</li>
+                                    <li><uicontrol>Global Max Call Duration(s)</uicontrol> setting:
+                                        Added <uicontrol>10800</uicontrol> option (<menucascade>
+                                            <uicontrol>PBX</uicontrol>
+                                            <uicontrol> General</uicontrol>
+                                            <uicontrol> Preferences(s)</uicontrol>
+                                        </menucascade>).</li>
+                                </ul><note>The precedence of <uicontrol>Max Call Duration(s)
+                                    </uicontrol>(Global v.s. Extension):<ul id="ul_wpd_zyg_jjb">
+                                        <li>For internal calls: The <uicontrol>Max Call Duration(s)
+                                            </uicontrol>setting of the caller's extension takes
+                                            precedence. </li>
+                                        <li>For outbound calls: The <uicontrol>Max Call
+                                                Duration(s)</uicontrol> setting of the caller's
+                                            extension takes precedence. </li>
+                                        <li>For inbound calls: The global <uicontrol>Max Call
+                                                Duration(s)</uicontrol> setting takes precedence.
+                                        </li>
+                                    </ul></note></li>
+                            <li>Optimized extension registration: The PBX would not send MWI NOTIFY
+                                message to Linkus client after the Linkus client was
+                                registered.</li>
+                            <li>Optimized extension registration: Speed up and shorten the time of
+                                registering extensions in bulk.</li>
+                        </ul>
+                    </dd>
+                </dlentry>
+                <dlentry>
+                    <dt>Trunk</dt>
+                    <dd>
+                        <ul id="ul_qbl_b1h_jjb">
+                            <li>Fixed the issue of SIP trunk setting: The setting of
+                                    <uicontrol>Maximum Channels</uicontrol> on SIP trunk could not
+                                take effect.</li>
+                        </ul>
+                    </dd>
+                </dlentry>
+                <dlentry>
+                    <dt>SIP Settings</dt>
+                    <dd>
+                        <ul id="ul_olt_f1h_jjb">
+                            <li>Added support for responding 200OK when receiving 407 Proxy
+                                Authentication Required.</li>
+                            <li>Optimized the <uicontrol>All Busy Mode for SIP Forking</uicontrol>
+                                feature.</li>
+                            <li>Fixed the issue of <uicontrol>Inband Progress</uicontrol>: The
+                                    <uicontrol>Inband Progress</uicontrol> option was not checked,
+                                the <varname>inband_progress = no</varname> parameter was added to
+                                configuration file automatically, then the users' custom
+                                configuration could not take effect.</li>
+                            <li>Fixed the issue of SIP INFO compatibility: PBX did not respond when
+                                receiving SIP INFO packets (content-type=application/QSIG), and the
+                                call was ended after 32 seconds.</li>
+                        </ul>
+                    </dd>
+                </dlentry>
+                <dlentry>
+                    <dt>Network</dt>
+                    <dd>
+                        <ul id="ul_ox3_bjh_jjb">
+                            <li>
+                                <p>Optimized the feature of <uicontrol>IP Auto Defense</uicontrol>:
+                                    The maximum value of <uicontrol>Number of IP Packets</uicontrol>
+                                    is <uicontrol>255</uicontrol>.<note>In the earlier version, the
+                                        maximum value of <uicontrol>Number of IP Packets</uicontrol>
+                                        was <uicontrol>120</uicontrol>.</note></p>
+                            </li>
+                            <li>Fixed the static routes issue: The static routes for
+                                    <uicontrol>PPPoE</uicontrol> could not take effect after PPPoE
+                                was reconnected.</li>
+                        </ul>
+                    </dd>
+                </dlentry>
+                <dlentry>
+                    <dt>Call Features</dt>
+                    <dd>
+                        <ul id="ul_b1t_c2h_jjb">
+                            <li>Fixed the <uicontrol>Call Forwarding</uicontrol> issue: Call
+                                Forwarding destination was set to <uicontrol>Ring Group</uicontrol>,
+                                but calls could not be forwarded to the Ring Group correctly.</li>
+                            <li>Fixed the <uicontrol>Ring Group</uicontrol> issue: The internal call
+                                to a Ring Group has been answered by a Ring Group member, but a
+                                prompt of missed call still displayed on other members' phone.</li>
+                            <li>Fixed the issue of <uicontrol>Speed Dial</uicontrol> list: After
+                                adjusting the order of speed dial list by <uicontrol>Speed Dial
+                                    Code</uicontrol> or <uicontrol>Phone Number</uicontrol>, the
+                                speed dial list was disappeared.</li>
+                            <li>Fixed the issue of call pickup: The caller ID was not displayed on
+                                the phone when the inbound call was picked up.</li>
+                        </ul>
+                    </dd>
+                </dlentry>
+                <dlentry>
+                    <dt>CDR and Call Recording</dt>
+                    <dd>
+                        <ul id="ul_icm_5ht_jjb">
+                            <li>Optimized the search method of <uicontrol>CDR and
+                                    recordings</uicontrol>: Speed up and shorten the time of
+                                searching CDR and recordings.</li>
+                            <li>Fixed the <uicontrol>CDR</uicontrol> issue: When the Queue members
+                                enabled DND, the missed calls did not display in the CDR.</li>
+                            <li>Fixed the <uicontrol>CDR</uicontrol> issue: If a call to a Queue was
+                                unanswered after transferring blindly, multiple records of missed
+                                calls were generated in CDR.</li>
+                        </ul>
+                    </dd>
+                </dlentry>
+                <dlentry>
+                    <dt>Fax Detection</dt>
+                    <dd>
+                        <ul id="ul_lrs_4jh_jjb">
+                            <li>Fixed the issue of <uicontrol>Fax Detection</uicontrol>: If a trunk
+                                was used both for call and fax, and <uicontrol>Fax
+                                    Detection</uicontrol> was enabled on <uicontrol>Inbound
+                                    Routes</uicontrol>, fax might fail to be sent from PBX.</li>
+                        </ul>
+                    </dd>
+                </dlentry>
+                <dlentry>
+                    <dt>Multisite Interconnect</dt>
+                    <dd>
+                        <ul id="ul_zqx_3dh_jjb">
+                            <li>Fixed the compatibility issue between <uicontrol>Multisite
+                                    Interconnect</uicontrol> and <uicontrol>Queue</uicontrol>: The
+                                asterisk might crash when the caller who called to a queue hung
+                                up.</li>
+                            <li>Fixed the issue of <uicontrol>Multisite Interconnect</uicontrol>:
+                                When using <uicontrol>Multisite Interconnect</uicontrol> feature,
+                                the <uicontrol>PIN List</uicontrol> of <uicontrol>Outbound
+                                    Routes</uicontrol> could not take effect on the
+                                Headquarter.</li>
+                        </ul>
+                    </dd>
+                </dlentry>
+                <dlentry>
+                    <dt>Event Notification</dt>
+                    <dd>
+                        <ul id="ul_adr_sjh_jjb">
+                            <li>Optimized the event notification feature: when network disconnects,
+                                the PBX can notify the contact through extension or mobile
+                                phone.</li>
+                            <li>Fixed the notification issue of <uicontrol>System New Firmware
+                                    Detection</uicontrol>: After enabling the <uicontrol>System New
+                                    Firmware Detection</uicontrol>, the notification contact would
+                                receive a large number of event emails after the PBX updated
+                                firmware.</li>
+                        </ul>
+                    </dd>
+                </dlentry>
+                <dlentry>
+                    <dt>Storage</dt>
+                    <dd>
+                        <ul id="ul_vy5_1pv_jjb">
+                            <li>Fixed the issue of USB formatting: After formatting the USB driver,
+                                the USB status displayed on <uicontrol>Storage Devices</uicontrol>
+                                list was wrong.</li>
+                        </ul>
+                    </dd>
+                </dlentry>
+                <dlentry>
+                    <dt>Event Log</dt>
+                    <dd>
+                        <ul>
+                            <li>Fixed the <uicontrol>Event Log</uicontrol> issue: If the
+                                    <uicontrol>Interface Type of Digital</uicontrol> trunk was set
+                                to <uicontrol>T1</uicontrol> or <uicontrol>J1</uicontrol>, the
+                                    <uicontrol>SS7/PRI Debug</uicontrol> could not be set
+                                correctly.</li>
+                        </ul>
+                    </dd>
+                </dlentry>
+                <dlentry>
+                    <dt>API</dt>
+                    <dd>
+                        <ul id="ul_sk1_13t_jjb">
+                            <li>Fixed the issue of <uicontrol>wake-up service</uicontrol>: Set the
+                                alarm <varname>type</varname> to <varname>onetime</varname>, even if
+                                the wake-up call had been answered, the alarm still repeated at the
+                                next cycle.</li>
+                            <li>Fixed the issue that the API worked anomaly, and the web interface
+                                was inaccessible.</li>
+                        </ul>
+                    </dd>
+                </dlentry>
+                <dlentry>
+                    <dt>Firewall</dt>
+                    <dd>
+                        <ul id="ul_wbh_4gt_jjb">
+                            <li>Optimized Firewall feature: when the blocked IP address is added to
+                                    <uicontrol>Firewall Rules</uicontrol>, this IP address will be
+                                removed from the <uicontrol>Blocked IP Address</uicontrol>
+                                list.</li>
+                            <li>Fixed the Firewall issue: The PBX would add the dropped IP address
+                                to <uicontrol>Blocked IP Address</uicontrol> list even if
+                                    <uicontrol>Drop All</uicontrol> was enabled.</li>
+                        </ul>
+                    </dd>
+                </dlentry>
+                <dlentry>
+                    <dt>Email</dt>
+                    <dd>
+                        <ul id="ul_szw_4lt_jjb">
+                            <li>
+                                <p>Added <uicontrol>STARTTLS</uicontrol> option to
+                                        <uicontrol>Email</uicontrol>.<note>If you enable
+                                            <uicontrol>TLS</uicontrol>, the
+                                            <uicontrol>STARTTLS</uicontrol> is enabled by default .
+                                        If the mail server doesn't support
+                                            <uicontrol>STARTTLS</uicontrol>, please disable this
+                                        option.</note></p>
+                            </li>
+                            <li>Optimized the <uicontrol>Email</uicontrol> settings: All characters
+                                are allowed in the <uicontrol>Password</uicontrol> field.</li>
+                            <li>Fixed the issue of system <uicontrol>Email</uicontrol>: The PBX
+                                could not delete the received emails that contained long contents or
+                                special characters, which caused the PBX web interface to be
+                                inaccessible.</li>
+                        </ul>
+                    </dd>
+                </dlentry>
+                <dlentry>
+                    <dt>Remote Management</dt>
+                    <dd>
+                        <ul id="ul_ehw_skt_jjb">
+                            <li>Fixed the issue of <uicontrol>Remote Management</uicontrol>: The
+                                prompt time displayed wrongly after time-out of remote
+                                connection.</li>
+                            <li>Fixed the issue that remote management connection might be
+                                failed.</li>
+                        </ul>
+                    </dd>
+                </dlentry>
+                <dlentry>
+                    <dt>Auto Provisioning</dt>
+                    <dd><b>The new version of Auto Provisioning (1.8.13) is pre-installed after
+                            upgrading the PBX. Check the updates below.</b></dd>
+                    <dd>
+                        <ul id="ul_wlb_nxt_jjb">
+                            <li>
+                                <p>Added support for the following IP phones:</p>
+                                <p>
+                                    <ul id="ul_njt_1mn_1jb">
+                                        <li>Fanvil: X210, X210i, X1, X1S, X1SG, X2C, X3SG, X3U, X4U,
+                                            X5U, X6U, X7, X7A and X7C</li>
+                                        <li>Snom: D385, D735 and D717</li>
+                                        <li>Yealink: VP59 and W60B</li>
+                                        <li>Polycom: VVX411</li>
+                                    </ul>
+                                </p>
+                            </li>
+                            <li>Optimized DSS settings of Fanvil phones (X5/X5G,X4/X4G,X5S and X6):
+                                Added <uicontrol>Action URL</uicontrol> type of DSS key.</li>
+                            <li>Optimized Custom Template of Snom phones:You can add custom
+                                parameters in the custom template.</li>
+                            <li>Fixed the issue of Snom phones: The phones did not reboot
+                                automatically after performing auto provision.</li>
+                            <li>Optimized settings on Snom phones (D305, D315, D345 and D375): Added
+                                the <uicontrol>Tone Scheme</uicontrol> setting in
+                                    <uicontrol>Preference</uicontrol> tab.</li>
+                            <li>Optimized the IP address of Snom phones: Whatever the <uicontrol>Web
+                                    Server Type</uicontrol> you set for the phone, you can click the
+                                IP address that is displayed on the <uicontrol>Device
+                                    List</uicontrol> page to access the IP phone.</li>
+                            <li>Optimized the issue of Snom phones: Even through you didn't upload
+                                the phone firmware to the PBX, an error of firmware upgrade failed
+                                would be displayed on the IP phone.</li>
+                            <li>Fixed the auto provision template issue of Fanvil phones: The value
+                                of &lt;language> parameter in the template was incorrect.</li>
+                            <li>Fixed the issue of Custom Template: Custom template did not take
+                                effect if you added devices in bulk or imported an auto provisioning
+                                file.</li>
+                            <li>Fixed the issue on Firmware Upgrade page: The uploaded firmware
+                                wasn't be displayed on <uicontrol>Firmware Upgrade</uicontrol> page
+                                after upgrading the phone version.</li>
+                        </ul>
+                    </dd>
+                </dlentry>
+                <dlentry>
+                    <dt>Linkus Server</dt>
+                    <dd><b>The new version of Linkus Server (2.3.15) is pre-installed after
+                            upgrading the PBX. Check the updates below:</b><ul id="ul_aym_y5v_jjb">
+                            <li>Improved Linkus performance.</li>
+                        </ul></dd>
+                </dlentry>
+                <dlentry>
+                    <dt>Hotel</dt>
+                    <dd><b>The updates of  Hotel new version (1.1.26):</b><ul id="ul_fhh_3kt_jjb">
+                            <li>Fixed the extension issue of room: the extension was wrong after
+                                adding a room.</li>
+                        </ul></dd>
+                </dlentry>
+                <dlentry>
+                    <dt>LDAP Server</dt>
+                    <dd><b>The updates of LDAP Server new version (1.4.12):</b><ul
+                            id="ul_tjl_fxt_jjb">
+                            <li>Optimized LDAP authentication: Anonymous access to the LDAP server
+                                is not allowed.</li>
+                        </ul></dd>
+                </dlentry>
+                <dlentry>
+                    <dt>Char utile h+ Integration</dt>
+                    <dd><b>The updates of Char utile h+ Integration new version (1.0.21):</b><ul
+                            id="ul_t3j_gxt_jjb">
+                            <li>
+                                <p>Changed the alarm codes of <uicontrol>Char App</uicontrol>.</p>
+                                <p>The alarm codes on newly installed Char App are as follows:</p>
+                                <p>
+                                    <ul id="ul_slp_lkt_jjb">
+                                        <li>The default code of <uicontrol>Set Alarm</uicontrol> is:
+                                                <uicontrol>*95</uicontrol>.</li>
+                                        <li>The default code of <uicontrol>Delete Alarm</uicontrol>
+                                            is: <uicontrol>*96</uicontrol>.</li>
+                                        <li>The default code of <uicontrol>Delete All
+                                                Alarm</uicontrol> is:
+                                            <uicontrol>*97</uicontrol>.</li>
+                                        <li>The default code of <uicontrol>Check Alarm</uicontrol>
+                                            is: <uicontrol>*98</uicontrol>.</li>
+                                    </ul>
+                                </p>
+                            </li>
+                        </ul></dd>
+                </dlentry>
+            </dl>
+        </section>
+    </body>
+</topic>

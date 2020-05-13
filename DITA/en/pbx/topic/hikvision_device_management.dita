@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="hikvision_device_management">
+    <title>Preparation: Configure Hikvision iVMS-4200 Client</title>
+    <shortdesc>iVMS-4200 Client Software is a management software for Hikvision Devices. You can
+        manage devices on the client, including adding, modifying and deleting devices. You can also
+        perform operations such as checking online users and QR code for devices.</shortdesc>
+    <body>
+        <section id="section_pz1_jt4_f3b">
+            <title>Install Hikvision iVMS-4200</title>
+            <p>Download and install <xref
+                    href="https://us.hikvision.com/sites/default/files/ivms-4200_v2.8.2.2_ml_windows_0.zip"
+                    format="zip" scope="external">iVMS-4200 Client Software</xref> on your local
+                PC.</p>
+        </section>
+        <section id="section_xld_5v3_f3b">
+            <title>Register and Log in Hikvision iVMS-4200 </title>
+            <p>You should register a super user and then you can log in the client with the super
+                user account as administrator.</p>
+            <ul id="ul_dcb_vv3_f3b">
+                <li><b>Register a User</b><p>For the first time using the client software, you
+                        should register a super user for login. </p><p>Perform the following steps
+                        to register a super user for login.</p><p>
+                        <ol id="ol_jv3_fx3_f3b">
+                            <li>After installing the client, double click <image
+                                    id="image_opv_t34_f3b"
+                                    href="../Images/sip-endpoints/hikvision/ivs-4200-client.png"
+                                    width="45"/> to run the software.<p><image
+                                        id="image_fxl_kx3_f3b"
+                                        href="../Images/sip-endpoints/hikvision/register-a-user.png"
+                                        width="400"/></p></li>
+                            <li>Create a user name and password for the super user.</li>
+                            <li>Confirm the password.</li>
+                            <li><option>Optional</option>: Check the <uicontrol>Enable
+                                    Auto-login</uicontrol> checkbox to log in to the software
+                                automatically.</li>
+                            <li>Click <uicontrol>Register</uicontrol> to register the super
+                                user.</li>
+                        </ol>
+                    </p></li>
+                <li><uicontrol>Login </uicontrol><p>Perform this task if you want to log in to the
+                        client software.</p><p>
+                        <ol id="ol_jns_mx3_f3b">
+                            <li>Run the client software to open login dialog.<p><image
+                                        id="image_yll_dk4_f3b"
+                                        href="../Images/sip-endpoints/hikvision/login-hikvision-ivms-4200.png"
+                                        width="400"/></p></li>
+                            <li>Input the user name and password you registered.</li>
+                            <li importance="optional">Check the <uicontrol>Enable
+                                    Auto-login</uicontrol> checkbox to log in to the software
+                                automatically for next running.</li>
+                            <li>Click <uicontrol>Login</uicontrol> to log in to the client
+                                software.</li>
+                        </ol>
+                    </p></li>
+            </ul>
+        </section>
+        <section id="section_ird_sx3_f3b">
+            <title>Activate Intercom Video Devices</title>
+            <p>For some devices, you are required to create the password to activate them before
+                they can be added to the software and work properly. </p>
+            <p><b>Perform this task to activate device</b>:</p>
+        </section>
+        <ol id="ol_vww_5x3_f3b">
+            <li>Go to <menucascade>
+                    <uicontrol>Device Management</uicontrol>
+                    <uicontrol> Online Device</uicontrol>
+                </menucascade>.</li>
+            <li>Check the device status (shown on <uicontrol>Security</uicontrol> column) and select
+                an inactive device.<p><image id="image_znq_by3_f3b"
+                        href="../Images/sip-endpoints/hikvision/activate-devices.png" width="700"
+                    /></p></li>
+            <li>Click <uicontrol>Activate</uicontrol> to open the <uicontrol>Activation</uicontrol>
+                dialog. </li>
+            <li>Create a password in the <uicontrol>Password</uicontrol> field and confirm the
+                password.</li>
+        </ol>
+        <section>
+            <title>Add Devices to iVMS-4200 Client</title>
+            <p>All active online devices in the same local subnet with the client software will be
+                displayed on the <uicontrol>Online Device</uicontrol> area. Add video intercom
+                devices to iVMS-4200 Client so that you can configure and manage them on the client. </p>
+            <p>Choose one of the following methods:</p>
+            <p>
+                <ul id="ul_icp_s2m_g3b">
+                    <li><uicontrol>+ Add to Client</uicontrol><p>You can add devices manually and
+                            specify nickname for identification on iVMS-4200 client.</p><p>
+                            <ol id="ol_bpc_1ns_g3b">
+                                <li>Choose device and click <uicontrol>+ Add to
+                                    Client</uicontrol>.</li>
+                                <li>Specify <uicontrol>Nickname</uicontrol> for the device and click
+                                        <uicontrol>Add</uicontrol>.</li>
+                            </ol>
+                        </p><p><image id="image_fzz_v1l_g3b"
+                                href="../Images/sip-endpoints/hikvision/add-devices-to-client.png"
+                                width="700"/></p><ul id="ul_jwr_gns_g3b">
+                            <li><uicontrol>Nickname</uicontrol>: Enter a name for the device to
+                                identify. In this example, enter <i>DS-KD8003-IME1</i>.</li>
+                            <li><uicontrol>Address</uicontrol>: Enter IP address of the device. The
+                                IP address of the device is obtained automatically in this adding
+                                mode. In this example, IP address is <i>192.168.9.209</i>.</li>
+                            <li><uicontrol>Port</uicontrol>: Enter the device port number. The
+                                default value is <b>8000</b>. </li>
+                            <li><uicontrol>User Name</uicontrol>: Enter the user name to log in to
+                                the client. The default user name is <b>admin</b>. </li>
+                            <li><uicontrol>Password</uicontrol>: Enter the password to log in to the
+                                client. The default password is <b>12345</b>. </li>
+                        </ul></li>
+                    <li>
+                        <p><uicontrol>+ Add All</uicontrol></p>
+                        <p>You can add all online devices to the client software with just
+                            one-click.</p>
+                        <p>
+                            <ol id="ol_nv5_kns_g3b">
+                                <li>Click <menucascade>
+                                        <uicontrol>Add All</uicontrol>
+                                        <uicontrol> OK</uicontrol>
+                                    </menucascade>.</li>
+                                <li>Enter <uicontrol>User Name</uicontrol> and
+                                        <uicontrol>Password</uicontrol>, and click
+                                        <uicontrol>Add</uicontrol>. Then all available devices will
+                                    be added to the iVMS-4200 Client with default
+                                            setting.<p><uicontrol>User Name</uicontrol>: Enter the
+                                        user name to log in to the client. The default user name is
+                                            <b>admin</b>. </p><p><uicontrol>Password</uicontrol>:
+                                        Enter the password to log in to the client. The default
+                                        password is <b>12345</b>. </p><p><image
+                                            id="image_thk_cvy_g3b"
+                                            href="../Images/sip-endpoints/hikvision/add-all-online-devices.png"
+                                        /></p></li>
+                            </ol>
+                        </p>
+                    </li>
+                </ul>
+            </p>
+        </section>
+        <p>For more information about iVMS-4200 Client, refer to <xref
+                href="https://us.hikvision.com/system/files_force/ivms-4200_v2.8.2.2_windows_user_manual_v2_0.pdf?download=1"
+                format="pdf" scope="external">iVMS-4200 User Manual</xref>.</p>
+    </body>
+</topic>

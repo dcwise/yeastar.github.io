@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_fbb_3yg_tdb">
+    <title>Enable Cellular Network on the PBX</title>
+    <shortdesc>The PBX uses wired network as the default network, and the cellular network is not
+        enabled. To use the cellular network, you need to change the PBX network.</shortdesc>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Set event notification of Cellular Network.</cmd>
+                <info>When the PBX network changes to cellular network, the PBX will send
+                    notification to the relevant contacts.</info>
+                <substeps>
+                    <substep>
+                        <cmd>Go to <menucascade>
+                                <uicontrol>Settings</uicontrol>
+                                <uicontrol>Event Center</uicontrol>
+                                <uicontrol>Event Settings</uicontrol>
+                            </menucascade>, enable <uicontrol>Cellular Network
+                            Connected</uicontrol>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Click <uicontrol>Notification Contacts</uicontrol>, add contacts to
+                            receive the event.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Click <uicontrol>Save</uicontrol> and
+                            <uicontrol>Apply</uicontrol>.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Enable cellular network on the PBX.</cmd>
+                <substeps>
+                    <substep>
+                        <cmd>Go to <menucascade>
+                                <uicontrol>Settings</uicontrol>
+                                <uicontrol>System</uicontrol>
+                                <uicontrol>Network</uicontrol>
+                                <uicontrol>Basic Settings</uicontrol>
+                            </menucascade>, set the <uicontrol>Cellular Network</uicontrol>.</cmd>
+                        <info><image href="../Images/admin/pbx_cellular_network.png" width="650"
+                                id="image_c3x_bzg_tdb"/></info>
+                        <info>
+                            <ul id="ul_x11_dzg_tdb">
+                                <li><uicontrol>Failover</uicontrol>: Wired network is the preferred
+                                    network, cellular network is the alternate network.<p>
+                                        <note>If you select <uicontrol>Failover</uicontrol>, you
+                                            need to <xref href="#task_fbb_3yg_tdb/ICMP"
+                                                format="dita">enable ICMP detection</xref>.</note>
+                                    </p></li>
+                                <li><uicontrol>Always</uicontrol>: Use cellular network only for
+                                    Internet connection.</li>
+                            </ul>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Check if the LAN network has a correct DNS server setting.</cmd>
+                        <info><image href="../Images/admin/pbx_lan_dns.png" id="image_mny_lzg_tdb"
+                            /></info>
+                    </substep>
+                    <substep>
+                        <cmd>Click <uicontrol>Save</uicontrol>, reboot the PBX to take effect.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step importance="optional" id="ICMP">
+                <cmd>Enable ICMP detection.</cmd>
+                <info>If you set cellular network as a failover network on the PBX, you need to
+                    enable ICMP detection.</info>
+                <substeps>
+                    <substep>
+                        <cmd>Go to <menucascade>
+                                <uicontrol>Settings</uicontrol>
+                                <uicontrol>System</uicontrol>
+                                <uicontrol>Network</uicontrol>
+                                <uicontrol>ICMP Detection</uicontrol>
+                            </menucascade>, select <uicontrol>Enable ICMP
+                            Detection</uicontrol>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>On <uicontrol>ICMP Detection</uicontrol> configuration page, configure
+                                <uicontrol>ICMP Detection</uicontrol> settings.</cmd>
+                        <info><image href="../Images/admin/enable_icmp.png" id="image_dpf_yzg_tdb"
+                                /><ul id="ul_vcs_lmj_kjb">
+                                <li><uicontrol>ICMP Detection Server</uicontrol>: Select an ICMP
+                                    detection server from the drop-down list, and click
+                                        <uicontrol>Test</uicontrol> to test if the PBX can access
+                                    the server.</li>
+                                <li><uicontrol>ICMP Detection Interval</uicontrol>: Set the time
+                                    interval between ICMP packages.</li>
+                                <li><uicontrol>ICMP Detection Timeout</uicontrol>: Set the timeout
+                                    for each ICMP package.</li>
+                                <li><uicontrol>ICMP Detection Retries</uicontrol>: Set the max
+                                    number of retries after ICMP detection failed.</li>
+                            </ul></info>
+                    </substep>
+                    <substep>
+                        <cmd>Click <uicontrol>Save</uicontrol> and
+                            <uicontrol>Apply</uicontrol>.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Check PBX network status.</cmd>
+                <info>Go to <uicontrol>Resource Monitor</uicontrol>, check the current network and
+                    cellular network.</info>
+                <info><image href="../Images/admin/pbx_network_status.png" id="image_ccg_41h_tdb"
+                        /><image href="../Images/admin/cellular_network_status.png"
+                        id="image_dxz_41h_tdb"/></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>
+<?oxy_options track_changes="on"?>

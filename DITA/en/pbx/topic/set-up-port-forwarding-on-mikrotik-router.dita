@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_svg_b12_zdb">
+    <title>Set up Port Forwarding on Mikrotik Router</title>
+    <shortdesc>This topic provides a configuration example of port forwarding on Mikrotik
+        router.</shortdesc>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Check the SIP UDP port and RTP port on <ph keyref="product_name"/>.</cmd>
+                <info>
+                    <ol id="ol_s1h_dcy_djb">
+                        <li>Log in the PBX web interface, go to <menucascade>
+                                <uicontrol>Settings</uicontrol>
+                                <uicontrol>PBX</uicontrol>
+                                <uicontrol>General</uicontrol>
+                                <uicontrol>SIP</uicontrol>
+                                <uicontrol>General</uicontrol>
+                            </menucascade>.</li>
+                        <li>Note down the default port or change the default port.<p><image
+                                    href="../Images/admin/sip_default_ports.png"
+                                    id="image_zdh_y12_zdb"/></p></li>
+                    </ol>
+                </info>
+            </step>
+            <step>
+                <cmd>Forward SIP UDP 5060 on Mikrotik Router.</cmd>
+                <info>As the following figure shows, we forward port 5060 to 5566.</info>
+                <info>
+                    <note>To enhance the PBX security, we highly suggest you not to forward the SIP
+                        port 5060 to 5060. </note>
+                </info>
+                <info><image href="../Images/admin/foward_5060.png" id="image_zdp_nb2_zdb"/></info>
+                <info><image href="../Images/admin/foward_5060_2.png" id="image_fyg_pb2_zdb"
+                    /></info>
+            </step>
+            <step>
+                <cmd>Forward RTP ports 10000-12000 on Mikrotik Router.</cmd>
+                <info>As the following figure shows, we forward ports 10000-12000 to
+                    10000-12000.</info>
+                <info><image href="../Images/admin/foward_rtp.png" id="image_wbw_rb2_zdb"/></info>
+                <info><image href="../Images/admin/forward_rtp_2.png" id="image_xfy_sb2_zdb"
+                    /></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

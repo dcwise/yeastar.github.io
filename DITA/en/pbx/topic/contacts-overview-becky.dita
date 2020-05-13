@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="contacts-overview">
+    <title>Contacts
+        <?oxy_comment_start author="carol" timestamp="20200214T132048+0800" comment="本文提供了以下信息：
+-版本要求
+- contacts types
+- benefits/features
+
+还有哪些信息是客户关心的呢？" flag="done"?>Overview<?oxy_comment_end?></title>
+    <shortdesc><?oxy_comment_start author="carol" timestamp="20200214T130952+0800" comment="仅提到company contacts 概念" flag="done"?>Yeastar
+        Contacts helps you centrally and efficiently manage contacts outside your organization,
+        including personally managed contacts and shared company
+        contacts<?oxy_comment_start author="carol" timestamp="20200212T175300+0800" comment="需要修改。
+以管理员的角度描述" flag="done" mid="2"?>.<?oxy_comment_end?><?oxy_comment_end mid="2"?>
+    </shortdesc>
+    <conbody>
+        <section id="section_qfj_dwp_rkb">
+            <title>PBX
+                r<?oxy_comment_start author="carol" timestamp="20200213T103319+0800" comment="管理员的角度，不是写requirement，而是&quot;如何使用contacts&quot; &quot;contacts 助力高效办公&quot;  之类标题。
+
+说明contacts 这个功能可以配合哪些终端使用，对于用户办公有什么益处，对终端的版本要求是什么？
+
+可以结合你下面的 &quot;How does contacts benefit your work &quot; 来写
+
+" flag="done"?><?oxy_comment_start author="carol" timestamp="20200214T131104+0800" comment="这边应该考虑到，发布是按产品条件发布出去的，文字就要做相应的处理" flag="done" mid="4"?>equirement<?oxy_comment_end?><?oxy_comment_end mid="4"?></title>
+            <p product="s-series">Yeastar S50, S100, and S300 with version 30.13.0.3 or later
+                support Contacts feature. </p>
+            <p product="cloudpbx">To access Contacts feature, make sure PBX's firmware is upgraded
+                to 81.13.0.5 or later.</p>
+            <p product="k2">To access Contacts feature, make sure PBX's firmware is upgraded to
+                80.13.0.5 or later.</p>
+        </section>
+        <?oxy_comment_start author="carol" timestamp="20200213T103417+0800" comment="这个提前说。
+标题应该改成更清晰的字眼 ： Contacts types" flag="done"?>
+        <section id="section_kpf_vrp_rkb">
+            <title>Contacts<?oxy_comment_end?> types</title>
+            <dl>
+                <dlentry>
+                    <dt>Company Contacts</dt>
+                    <dd>
+                        <p>Company Contacts allows admin and the
+                            <?oxy_comment_start author="carol" timestamp="20200218T095105+0800" comment="当要区分users 跟 admin 时，直接说 users and admin 会比较清楚" flag="done"?>authorized
+                            users<?oxy_comment_end?> to save a list of external contacts (such as
+                            customers, resellers or partners) who are in business contact with their
+                            organizations, and share these contacts' information with other users
+                            (such as sales and support) who need to stay connected with these
+                            contacts<?oxy_comment_start author="carol" timestamp="20200214T131315+0800" comment="这边描述了概念。
+关于这个类型的Contacts 还有什么需要让用户了解的吗？" flag="done"?>.<?oxy_comment_end?></p>
+                    </dd>
+                </dlentry>
+            </dl>
+            <p>
+                <dl>
+                    <dlentry>
+                        <dt>Personal Contacts</dt>
+                        <dd>Personal Contacts allows every extension user to save a list of private
+                            external contacts exclusive to himself, such as direct
+                            customers<?oxy_comment_start author="carol" timestamp="20200214T131624+0800" comment="每个人都可以看自己的personal contacts 这个有需要说明吗？
+
+关于Personal Contacts 还有什么要让客户注意的？" flag="done"?>.<?oxy_comment_end?></dd>
+                    </dlentry>
+                </dl>
+            </p>
+        </section>
+        <section id="section_mym_vtp_rkb">
+            <title><?oxy_comment_start author="carol" timestamp="20200214T131937+0800" comment="这边这个标题这么写，会更吸引哪一类用户呢？
+这个标题会不会造成某些必须要了解的内容被客户忽略或跳过呢？
+
+关于Contacts 这个功能的亮点，必须提供给客户，又是客户想知道的是哪些呢？
+" flag="done"?>Features<?oxy_comment_end?></title>
+            <ul id="ul_rpb_jhb_tkb">
+                <li>Share information of business contacts in your organization.</li>
+                <li>Every extension user can create and manage his personal contact entries.</li>
+                <li>Identify callers from Contacts and display contact name on phone screen.</li>
+                <li><?oxy_comment_start author="carol" timestamp="20200218T095919+0800" comment="这一点需要提及linkus 的版本要求" flag="done"?>Quick<?oxy_comment_end?>
+                    dialing to external contacts via Linkus Mobile Client.<p>To achieve this, make
+                        sure Linkus Mobile Client is upgraded to the applicable versions:<ul
+                            id="ul_z3r_n43_tkb">
+                            <li>Linkus Android Client: Version 2.9.6 or later.</li>
+                            <li>Linkus iOS Client: Verison 2.9.10 or later.</li>
+                        </ul></p></li>
+                <li>Synchronize Contacts between PBX and Linkus Mobile Client.</li>
+            </ul>
+        </section>
+    </conbody>
+</concept>

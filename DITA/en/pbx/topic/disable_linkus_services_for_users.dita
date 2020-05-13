@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_zwq_hkm_2fb">
+    <title>Disable Linkus Client for Users</title>
+    <shortdesc>To disallow a user to use Linkus client, you can disable Linkus service for the
+        user.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/09/18"/>
+            <!--Carol-->
+            <revised modified="2018/09/18"/>
+            <!--Carol-->
+            <revised modified="2018/11/01"/>
+            <!--Carol-->
+            <revised modified="2018/12/29"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <context/>
+        <steps>
+            <step>
+                <cmd>To disable Linkus service for a specific user, do the followings:</cmd>
+                <info><image href="../Images/admin/disable_linkus_service_for_a_user.png"
+                        id="image_wyx_xjm_2fb" width="650" product="s-series"/></info>
+                <substeps id="substeps_m2y_2lm_2fb">
+                    <substep>
+                        <cmd>Log in the PBX web interface, go to <menucascade>
+                                <uicontrol>Linkus</uicontrol>
+                                <uicontrol product="s-series">Linkus Client Settings</uicontrol>
+                            </menucascade>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Search the user by extension number or name.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Click <image href="../Images/ui_icons/disabled.png"
+                                id="image_iyq_zjm_2fb" width="20"/> to enable Linkus service for the
+                            user.</cmd>
+                        <info>The status will be switched to <image
+                                href="../Images/ui_icons/enabled.png" width="20"
+                                id="image_o2s_mmm_2fb"/>(Disabled).</info>
+                    </substep>
+                </substeps>
+            </step>
+            <step product="s-series">
+                <cmd>To disable Linkus service for all users, do the followings:</cmd>
+                <substeps>
+                    <substep>
+                        <cmd>Go to <uicontrol>Linkus Server Settings</uicontrol>, unselect the
+                            checkbox <uicontrol>Enable Linkus Server</uicontrol>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Click <uicontrol>Save</uicontrol> and
+                            <uicontrol>Apply</uicontrol>.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step product="cloudpbx">
+                <cmd>To disable Linkus service for all users, unselect the checkbox
+                        <uicontrol>Enable</uicontrol> to disable Linkus server.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

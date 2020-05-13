@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_izx_ypl_2cb">
+  <title>Log in Linkus Client</title>
+  <body>
+    <p>After you send emails to the extension users, the users can quickly log in the Linkus client
+      by QR code or login link. <note>
+        <p>
+          <ul id="ul_rdz_bg2_2cb">
+            <li>The QR code or login link will expire after 24 hours.</li>
+            <li>The QR code and link will expire after the user log in the Linkus client.</li>
+          </ul>
+        </p>
+      </note></p>
+  </body>
+</topic>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_n4x_2z3_pdb">
+    <title>Version 1.7.16</title>
+    <abstract>Released Date: December 27, 2017</abstract>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/06/20"/>
+        </critdates>
+    </prolog>
+    <body>
+        <section id="section_zdw_y1x_pdb">
+            <title>New Feature</title>
+            <p><image href="../Images/horizon.png" id="image_a2w_y1x_pdb"/></p>
+            <p>
+                <ul>
+                    <li>Added Multisite Interconnect feature.</li>
+                    <li>Added a new SIP trunk type “Account Trunk”.</li>
+                    <li>Added templates of SIP trunk.</li>
+                    <li>Added support for answering an intercom/paging call.</li>
+                    <li>Added support for importing configurations of SIP register trunks.</li>
+                    <li>Added support for importing configurations of outbound routes and inbound
+                        routes.</li>
+                    <li>Added support for configuring IAX jitter buffer on Web page.</li>
+                    <li>Added a default rule of outbound restriction: an extension user can make a
+                        maximum of 5 calls in 1 minute.</li>
+                    <li>Added FTP access permission to the voicemail files and one-touch recording
+                        files which are stored in PBX local flash.</li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_x3f_z1x_pdb">
+            <title>Optimization</title>
+            <p><image href="../Images/horizon.png" id="image_y3f_z1x_pdb"/></p>
+            <p>
+                <ul>
+                    <li>Optimized call recording: the administrator can choose whether to record
+                        internal calls.</li>
+                    <li>Optimized blacklist feature: the administrator can restrict specific
+                        extension users from calling the blocked numbers.</li>
+                    <li>Optimized SLA feature: the administrator can enable or disable the SLA
+                        prompt.</li>
+                    <li>Optimized backup feature: the administrator can choose to backup system
+                        configurations, custom prompts or call logs.</li>
+                    <li>Added support for adding network drive for Windows domains.</li>
+                    <li>Optimized call forwarding: if an extension is unregistered, incoming calls
+                        to the extension will be forwarded to the “No answer” destination. </li>
+                    <li>Optimized CDR Auto Cleanup: when the CDR number reaches 90% of the Max
+                        Number of CDR, the system will send notification.</li>
+                    <li>Optimized Auto Recording Cleanup: the system will send notification when the
+                        usage of the device is about to reach the pre-configured maximum value. </li>
+                    <li>Optimized Distinctive Ringtone setting: you can enter uppercase letters,
+                        lowercase letters, numbers, “-”, ”_” and “+”.</li>
+                    <li>Optimized Notification Contact settings: if you select a notification method
+                        without setting the email address or phone numbers, the system will not save
+                        the settings. </li>
+                    <li>Optimized OpenVPN settings: you cannot upload a certification file with
+                        incorrect format.</li>
+                    <li>Optimized Call log searching feature.</li>
+                    <li>Optimized VLAN Priority setting: the default VLAN priority is 0.</li>
+                    <li>Optimized SLA feature: Users: users can dial numbers start with “*” through
+                        an SLA trunk.</li>
+                    <li>Optimized voicemail prompts.</li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_jmx_z1x_pdb">
+            <title>Fixed Bug</title>
+            <p><image href="../Images/horizon.png" id="image_kmx_z1x_pdb"/></p>
+            <p>
+                <ul>
+                    <li>Fixed the issue that Mobility Extension user could not change the status of
+                        time condition.</li>
+                    <li>Fixed call log issue: when an extension and the mobility extension were
+                        ringing simultaneously, you answered the call on the extension or on the
+                        mobility extension; the system would generate 3 call logs.</li>
+                    <li>Fixed the issue that if you switched the network type of a 4G module, the
+                        system would count the cellular data incorrectly.</li>
+                    <li>Fixed the issue of GSM/3G/4G module: a GSM/3G/4G module could not handle
+                        calls and SMS simultaneously.</li>
+                    <li>Fixed the issue of GSM/3G/4G module: after rebooting the PBX, the GSM/3G/4G
+                        modules could not work.</li>
+                    <li>Fixe “Email to SMS” issue: The system could not send long emails to multiple
+                        destination numbers. </li>
+                    <li>Fixed system email issue: the default TLS port for Sina emails could not
+                        work. </li>
+                    <li>Fixed DOD issue on mobility extensions: if you use a mobility extension to
+                        make calls, the system would not send the DOD number of the extension. </li>
+                    <li>Fixed the issue that after receiving a packet of cancelling Register from
+                        Panasonic, the Yeastar system would break down.</li>
+                    <li>Fixed the prompt of Dial by Name.</li>
+                    <li>Fixed voicemail prompt: if you set the inbound route to voicemail, you could
+                        not hear the prompt of “Ask Caller to Dial 5”. </li>
+                    <li>Fixed All Busy Mode for SIP Forking: the feature only worked for the called
+                        extension, not worked for calling extension.</li>
+                    <li>Fixed ring group issue: if a member of the ring group canceled “Always
+                        Forward” by dialing *071; the member still could not receive calls. </li>
+                    <li>Fixed voicemail feature: if “Ask Caller to Dial 5” was enabled, users could
+                        not dial 0 to exit voicemail.</li>
+                    <li>Fixed BRI trunk issue: when making a call through a BRI trunk, the user
+                        could not get a prompt immediately if the called number is busy. </li>
+                    <li>Fixed BRI trunk issue: importing DOD numbers could not work.</li>
+                    <li>Fixed the compatibility issue with China Mobile IMS trunk: when making a
+                        call through the IMS trunk, the calling user could not get a prompt if the
+                        called person cancelled the call. </li>
+                    <li>Fixed the compatibility issue with Loxone SIP Intercom system.</li>
+                </ul>
+            </p>
+        </section>
+    </body>
+</topic>

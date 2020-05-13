@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_ikc_yl1_mdb">
+    <title>Add an LDAP Phonebook</title>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Go to <uicontrol>LDAP Server</uicontrol>, click
+                    <uicontrol>Add</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Enter the phonebook name.</cmd>
+                <info><image href="../../../Images/admin/en/add_phonebook.png"
+                        id="image_ftt_bch_mdb"/></info>
+                <info>
+                    <p>The phonebook node will be automatically filled in with the name.</p>
+                </info>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Choose the created phonebook, click <image
+                        href="../../../Images/ui_icons/edit.png" width="20" id="image_z5g_1zg_mdb"/>
+                    to add and edit the contacts in the phonebook.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

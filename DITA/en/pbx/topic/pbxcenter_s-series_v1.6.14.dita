@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_n4x_2z3_pdb">
+    <title>Version 1.6.14</title>
+    <abstract>Released Date: September 22, 2017</abstract>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/06/20"/>
+        </critdates>
+    </prolog>
+    <body>
+        <section id="section_r2w_1bx_pdb">
+            <title>New Feature</title>
+            <p><image href="../Images/horizon.png" id="image_s2w_1bx_pdb"/></p>
+            <p>
+                <ul>
+                    <li>Added API feature: Third-party applications can get IPPBX information via
+                        the API. This feature is supported in S50, S100, S300.</li>
+                    <li>Optimized extension registration security: when failed to register extension
+                        using the same IP address for five times in five minutes, the IP address
+                        will be added into the firewall blacklist.</li>
+                </ul>
+            </p>
+        </section>
+    </body>
+</topic>

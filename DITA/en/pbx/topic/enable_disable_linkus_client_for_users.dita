@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="task_zwq_hkm_2fb">
+    <title>Enable/Disable Linkus Client for Users</title>
+    <shortdesc>After setting up the Linkus Server, you need to enable Linkus Client for extension
+        users to allow them log in Linkus client. To disallow a user to use Linkus, you can disable
+        Linkus Client for the user.</shortdesc>
+    <body>
+        <section conref="linkus-qsg-step2.dita#task_oml_5pz_ghb/enable-linkus-client"
+            id="section_ydr_lzn_hhb"/>
+        <section id="section_tbx_kzn_hhb">
+            <title>Disable Linkus Client for users</title>
+        </section>
+        <ol>
+            <li> To disable Linkus Client for a specific user, do the followings:<itemgroup><image
+                        href="../Images/admin/disable_linkus_service_for_a_user.png"
+                        id="image_wyx_xjm_2fb" width="650" product="s-series"/></itemgroup>
+                <ol id="substeps_m2y_2lm_2fb">
+                    <li> Log in the PBX web interface, go to <menucascade>
+                            <uicontrol>Linkus</uicontrol>
+                            <uicontrol product="s-series">Linkus Client Settings</uicontrol>
+                        </menucascade>.</li>
+                    <li> Search the user by extension number or name.</li>
+                    <li> Click <image href="../Images/ui_icons/disabled.png" id="image_iyq_zjm_2fb"
+                            width="20"/> to enable Linkus service for the user.<itemgroup>The status
+                            will be switched to <image href="../Images/ui_icons/enabled.png"
+                                width="20" id="image_o2s_mmm_2fb"/>(Disabled).</itemgroup></li>
+                </ol></li>
+            <li product="s-series"> To disable Linkus Client for all users, unselect the checkbox
+                    <uicontrol>Enable Linkus Server</uicontrol> on <uicontrol>Linkus Server
+                    Settings</uicontrol> page.</li>
+            <li product="cloudpbx"> To disable Linkus Client for all users, unselect the checkbox
+                    <uicontrol>Enable</uicontrol> to disable Linkus server. </li>
+            <li>In the pop-up dialog box, click <uicontrol>Yes</uicontrol> to confirm.</li>
+        </ol>
+    </body>
+</topic>

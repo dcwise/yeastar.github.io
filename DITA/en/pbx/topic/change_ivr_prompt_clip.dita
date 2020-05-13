@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_lyh_kzw_rdb">
+    <title>Change IVR Prompt Clip</title>
+    <shortdesc>If you need to change one audio clip in the IVR prompt frequently. You can divide
+        your IVR prompt to multiple audio clips, and change the desired audio clip when you need to
+        change the IVR prompt.</shortdesc>
+    <taskbody>
+        <context>
+            <p><b>For example, your IVR prompt is like the following:</b></p>
+            <p>" Thank you for calling Yeastar. We are currently closed in observance of
+                    <codeph>Holiday Name</codeph>. We will return on <codeph>Date</codeph>. If you
+                got something urgent, please press 1 to contact our support. To leave a voicemail,
+                please press 2."</p>
+            <p>The second sentence is what your would change frequently. You can divide the IVR
+                prompt to 3 clips.</p>
+            <p>
+                <ul id="ul_w3s_2cx_rdb">
+                    <li>Clip 1: Thank you for calling Yeastar.</li>
+                    <li>Clip 2: We are currently closed in observance of  <codeph>Holiday
+                            Name</codeph>. We will return on <codeph>Date</codeph></li>
+                    <li>Clip 3: If you got something urgent, please press 1 to contact our support.
+                        To leave a voicemail, please press 2.</li>
+                </ul>
+            </p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol>PBX</uicontrol>
+                        <uicontrol>Voice Prompts</uicontrol>
+                        <uicontrol>Custom Prompts</uicontrol>
+                    </menucascade>, click <uicontrol>Upload</uicontrol> to upload your IVR prompt
+                    clips.</cmd>
+                <info><image href="../Images/admin/ivr_clips.png" id="image_azg_gdx_rdb"/></info>
+            </step>
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol>PBX</uicontrol>
+                        <uicontrol>Call Features</uicontrol>
+                        <uicontrol>IVR</uicontrol>
+                    </menucascade>, edit your IVR.</cmd>
+            </step>
+            <step>
+                <cmd>Select the <uicontrol>Prompt</uicontrol> to the IVR prompt clip1.</cmd>
+            </step>
+            <step>
+                <cmd>Click <image href="../Images/ui_icons/add.png" width="20"
+                        id="image_qwd_kdx_rdb"/> , and select the <uicontrol>Prompt</uicontrol> to
+                    your IVR prompt clip2.</cmd>
+            </step>
+            <step>
+                <cmd>Click <image href="../Images/ui_icons/add.png" width="20"
+                        id="image_z12_ndx_rdb"/> , and select the <uicontrol>Prompt</uicontrol> to
+                    your IVR prompt clip3. </cmd>
+                <info><image href="../Images/admin/change_ivr_prompt_clip.png"
+                        id="image_tbg_tdx_rdb"/></info>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</cmd>
+            </step>
+        </steps>
+        <result id="result_jbp_tdx_rdb">Next time, when you want to change the IVR prompt, you can
+            change the desired prompt clip instead of changing the whole IVR prompt.</result>
+    </taskbody>
+</task>

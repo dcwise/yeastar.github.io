@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="concept_zrb_zgv_4fb">
+    <title>Set Call Permission of an Extension</title>
+    <shortdesc>On the Extension configuration page, you can set the outbound call permissions for
+        the extension user.</shortdesc>
+    <body>
+        <p>
+            <ol id="ol_o1l_ftq_y3b">
+                <?oxy_comment_start author="Becky" timestamp="20190904T171507+0800" comment="添加路径说明" flag="done"?>
+                <li>Go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol>PBX</uicontrol>
+                        <uicontrol>Extensions</uicontrol>
+                    </menucascade>, click <image id="image_imj_jzq_y3b"
+                        href="../Images/ui_icons/edit.png" width="20"/> beside the desired
+                    extension.</li>
+                <li>On the Extension configuration page, click <uicontrol>Call
+                        Permission</uicontrol> tab.</li>
+                <li>Select outbound routes for the extension from <uicontrol>Available</uicontrol>
+                    box to <uicontrol>Selected</uicontrol> box.<?oxy_comment_end?><p><image
+                            href="../Images/admin/extension_call_permission.png" width="650"
+                            id="image_owf_j3v_4fb"/></p></li>
+            </ol>
+        </p>
+        <section id="section_ihn_k3v_4fb">
+            <title>Outbound Routes Permission</title>
+            <p>Select outbound routes to the <uicontrol>Selected</uicontrol> box, the extension user
+                will have the permission to make outbound calls through the selected outbound
+                routes.</p>
+        </section>
+        <section id="section_yrz_43v_4fb">
+            <title>Outbound Restriction</title>
+            <p>
+                <ul id="ul_z3p_v3v_4fb">
+                    <li><b>Prohibit Outbound Calls</b><p>Select the <uicontrol>Outbound
+                                Restriction</uicontrol> option to prohibit this extension from
+                            making outbound calls.</p><p>On the <uicontrol>Extensions</uicontrol>
+                            page, the extension will be locked and the extension status will show
+                                <image href="../Images/ui_icons/constraint.png" width="20"
+                                id="image_z3d_5jv_4fb"/>. </p><p>
+                            <note>If the extension user makes outbound calls over the limit of <xref
+                                    href="outbound-restriction.dita#concept_kgb_rb2_2jb">Outbound
+                                    Restriction</xref> rule, the extension will also be
+                                locked.</note>
+                        </p><p><image href="../Images/admin/extension_restricted.png"
+                                id="image_w4k_pjv_4fb"/></p></li>
+                    <li>
+                        <p><?oxy_comment_start author="Becky" timestamp="20190904T173809+0800" comment="原文：Discharge of Outbound Calls Prohibition
+①discharge of不算常见用法
+" flag="done"?><uicontrol>Cancel
+                                Restriction for Outbound Calls</uicontrol><?oxy_comment_end?></p>
+                        <p>Double click the icon <image href="../Images/ui_icons/constraint.png"
+                                width="20" id="image_z2f_xjv_4fb"/> or unselect the checkbox of
+                                <uicontrol>Outbound Restriction</uicontrol> to allow this extension
+                            to make outbound calls.</p>
+                    </li>
+                </ul>
+            </p>
+        </section>
+    </body>
+</topic>

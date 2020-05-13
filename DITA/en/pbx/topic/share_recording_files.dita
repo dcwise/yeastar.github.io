@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="task_lpy_ngs_gfb">
+    <title>Share Recording Files</title>
+    <shortdesc>After setting up Call Recording on your PBX, you have two choices to share recording
+        files in your local network: access the recording files via FTP address of the PBX or create
+        a shared folder on the PBX to synchronize recording files from the external storage
+        device.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/09/26"/>
+            <!--Carol-->
+            <revised modified="2018/09/26"/>
+        </critdates>
+    </prolog>
+    <body>
+        <section id="section_it5_lhs_gfb">
+            <title>Access Recording Files via FTP</title>
+        </section>
+        <section id="section_f2k_q3s_gfb">
+            <p>
+                <ol conref="set_up_ftp_file_share.dita#access_ftp/ftp_file_share"
+                    id="ol_rx1_l3s_gfb">
+                    <li/>
+                </ol>
+            </p>
+        </section>
+        <section id="section_dfl_l3s_gfb">
+            <title>Set up File Sharing for Recording Files</title>
+            <p><xref href="set_up_file_share.dita#task_fnp_hvs_xdb">Enable File Sharing feature and
+                    create a shared folder on the PBX</xref> to synchronize recording files from the
+                USB device, TF card, or hard disk.</p>
+        </section>
+    </body>
+</topic>

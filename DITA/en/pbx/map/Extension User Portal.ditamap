@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+ <title><ph product="cloudpbx">Cloud PBX</ph><ph product="s-series">S-Series</ph> Extension User
+  Guide</title>
+ <topicmeta>
+  <author type="contributor">Carol</author>
+  <critdates>
+   <!--Carol-->
+   <revised modified="2018/05/28"/>
+  </critdates>
+ </topicmeta>
+ <topicref href="user/manage_your_extension_on_web.dita">
+  <topicmeta>
+   <shortdesc> Log in the PBX web interface to manage your extension. </shortdesc>
+  </topicmeta>
+  <topicref href="user/log_in_the_pbx_web_interface_cloudpbx.dita" product="cloudpbx"/>
+  <topicref href="user/log_in_the_pbx_web_interface_s.dita" product="s-series"/>
+  <topicref href="user/get_to_know_the_pbx_desktop.dita"/>
+  <topicref href="user/modify_your_information.dita"/>
+  <topicref href="user/register_your_extension.dita"/>
+  <topicref href="user/change_login_password.dita"/>
+  <topicref href="user/check_your_route_permission.dita"/>
+  <topicref href="admin/call_forwarding.dita">
+   <topicref href="user/configure_call_forwarding.dita"/>
+   <topicref href="admin/activate_or_deactivate_call_forwarding.dita"/>
+  </topicref>
+  <topicref href="user/mobility_extension.dita">
+   <topicref href="user/configure_mobility_extension.dita"/>
+  </topicref>
+  <topicref href="user/cdr_and_recordings.dita">
+   <topicref href="user/search_cdr_and_recordings.dita"/>
+   <topicref href="user/fuzzy_search_cdr_and_recordings.dita"/>
+   <topicref href="user/view_cdr_and_recordings.dita"/>
+   <topicref href="user/download_cdr_and_recordings.dita"/>
+  </topicref>
+ </topicref>
+</map>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_ujk_bmw_ydb">
+    <title>Network Overview</title>
+    <shortdesc>After logging in the PBX web interface for the first time with the factory IP
+        address, you need to change the network settings of the PBX according to your network
+        environment.</shortdesc>
+    <conbody/>
+</concept>

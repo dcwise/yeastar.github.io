@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="task_j5n_q4c_2cb">
+    <title>Set up Extensions</title>
+    <shortdesc>To make calls and receive calls, you need to create extensions on your PBX, and
+        register the extensions on your Linkus mobile client or IP phones.</shortdesc>
+</topic>

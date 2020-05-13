@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="v81.12.0">
+    <title>Version 81.12.0.6</title>
+    <abstract>Released Date: December 12, 2019</abstract>
+    <body>
+        <note>This release note describes the changes from firmware version 81.9.0.43 to
+            81.12.0.6.</note>
+        <section id="section_ubj_2wv_vjb">
+            <title>NEW FEATURES</title>
+            <dl>
+                <dlentry>
+                    <dt>Call Parking - Timeout Destination</dt>
+                    <dd>
+                        <p>Added support for configuring the timeout destination of <uicontrol>Call
+                                Parking</uicontrol>.</p>
+                        <p>Go to <menucascade>
+                                <uicontrol>Settings</uicontrol>
+                                <uicontrol> General</uicontrol>
+                                <uicontrol> Feature Code</uicontrol>
+                                <uicontrol> Call Parking </uicontrol>
+                            </menucascade> to configure the <uicontrol>Timeout
+                                Destination</uicontrol>.</p>
+                        <p>When a parked call hasn't been retrieved before the parking timeout, PBX
+                            will route the call to the designated destination.</p>
+                        <p>
+                            <ul id="ul_j5b_ysv_vjb">
+                                <li><uicontrol>Original Parker</uicontrol>: the call will be routed
+                                    to the Parker who parks this call.</li>
+                                <li><uicontrol>Extension</uicontrol>: the call will be routed to the
+                                    designated extension number.</li>
+                                <li><uicontrol>Extension's Voicemail</uicontrol>: the call will be
+                                    routed to the designated extension's voicemail.</li>
+                                <li><uicontrol>Custom Number</uicontrol>: the call will be routed to
+                                    the designated number.</li>
+                            </ul>
+                        </p>
+                    </dd>
+                </dlentry>
+                <dlentry>
+                    <dt>Recording Notifications</dt>
+                    <dd>
+                        <p>Added support for configuring different recording notifications of
+                            internal calls, inbound calls,outbound calls, and callback calls.</p>
+                        <p>Go to <menucascade>
+                                <uicontrol>Settings</uicontrol>
+                                <uicontrol> PBX</uicontrol>
+                                <uicontrol> Auto Recording</uicontrol>
+                            </menucascade> to configure the recording notifications.<ul
+                                id="ul_gdk_xhw_vjb">
+                                <li><uicontrol>Outbound Calls being Recorded Prompt</uicontrol>: If
+                                    the external call (outbound) has enabled call recording, this
+                                    prompt will notify the external party that the call is being
+                                    recorded.</li>
+                                <li><uicontrol>Inbound Calls being Recorded Prompt</uicontrol>: If
+                                    the external call (inbound) has enabled call recording, this
+                                    prompt will notify the external party that the call is being
+                                    recorded.</li>
+                                <li><uicontrol>Callback Calls being Recorded Prompt</uicontrol>: If
+                                    the external call (callback) has enabled call recording, this
+                                    prompt will notify the external party that the call is being
+                                    recorded. </li>
+                            </ul></p>
+                    </dd>
+                </dlentry>
+            </dl>
+        </section>
+        <section id="section_ap3_pvv_vjb">
+            <title>OPTIMIZATION</title>
+            <p>
+                <dl>
+                    <dlentry>
+                        <dt>System Stability</dt>
+                        <dd>
+                            <ul id="ul_qv5_yyb_wjb">
+                                <li>Optimized the mechanism of applying configuration changes to
+                                    improve the system stability.<p>
+                                        <ul id="ul_gjk_zyb_wjb">
+                                            <li>You don't need to click Apply button to reload
+                                                Asterisk if you save unchanged configurations.</li>
+                                            <li>If no Apply button appears after you save some
+                                                specific configuration changes, then the
+                                                configurations can be saved without reloading
+                                                Asterisk.</li>
+                                        </ul>
+                                    </p></li>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                    <dlentry>
+                        <dt>Extension</dt>
+                        <dd>
+                            <ul id="ul_olb_5vv_vjb">
+                                <li>Fixed the <uicontrol>Extension</uicontrol> issue: The web page
+                                    got stuck if the number of the extensions you created beyond the
+                                    defined extension range.</li>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                </dl>
+                <dl>
+                    <dlentry>
+                        <dt>Trunk</dt>
+                        <dd>
+                            <ul id="ul_xht_vvv_vjb">
+                                <li>Optimized <uicontrol>SIP Peer Trunk</uicontrol>: Added
+                                        <uicontrol>Enable  SRTP</uicontrol> setting on the SIP Peer
+                                    Trunk.</li>
+                                <li>Fixed the compatibility issue with VoIP Innovations: Inbound
+                                    calls from VoIP Innovations would fail if the VoIP Innovations
+                                    sent an IP address that was different from the one that was
+                                    configured on the SIP trunk.</li>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                </dl>
+                <dl>
+                    <dlentry>
+                        <dt>SIP Settings</dt>
+                        <dd>
+                            <ul id="ul_jtn_vlv_vjb">
+                                <li>Optimized <uicontrol>Session Timer</uicontrol> settings: If
+                                        <uicontrol>Session Timer</uicontrol> is enabled, the
+                                        <uicontrol>Session-Expires (s)</uicontrol> field and
+                                        <uicontrol>Min-SE (s)</uicontrol> field are required.</li>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                </dl>
+                <dl>
+                    <dlentry>
+                        <dt>Prompt</dt>
+                        <dd>
+                            <ul id="ul_ft2_knv_vjb">
+                                <li>Fixed the <uicontrol>Custom Prompt</uicontrol> issue: Failed to
+                                    play the prompt file that was recorded by a video IP phone.</li>
+                                <li>Fixed the <uicontrol>Notification</uicontrol> issue: The
+                                    notification "English System Prompt Upgrade success" displayed
+                                    on the PBX web page periodically even no system prompts was
+                                    upgrade.</li>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                    <dlentry>
+                        <dt>Auto Recording</dt>
+                        <dd>
+                            <p>
+                                <ul id="ul_ajz_4nv_vjb">
+                                    <li>To clearly distinguish Auto Recording and One-touch
+                                        Recording, renamed Recording and Call Recording to Auto
+                                            Recording.<p>Affected web UI:<ul id="ul_k25_k4v_vjb">
+                                                <li>Old Path: <menucascade>
+                                                  <uicontrol>Settings</uicontrol>
+                                                  <uicontrol> PBX</uicontrol>
+                                                  <uicontrol> Recording</uicontrol>
+                                                  </menucascade>.<p>New Path: <menucascade>
+                                                  <uicontrol>Settings</uicontrol>
+                                                  <uicontrol>PBX </uicontrol>
+                                                  <uicontrol> Auto Recording</uicontrol>
+                                                  </menucascade>.</p></li>
+                                                <li>Old Path: <menucascade>
+                                                  <uicontrol>Settings</uicontrol>
+                                                  <uicontrol> System</uicontrol>
+                                                  <uicontrol> Storage</uicontrol>
+                                                  <uicontrol> Preference</uicontrol>
+                                                  <uicontrol> Storage Locations</uicontrol>
+                                                  <uicontrol> Recording</uicontrol>
+                                                  </menucascade>.<p>New Path: <menucascade>
+                                                  <uicontrol>Settings</uicontrol>
+                                                  <uicontrol> System</uicontrol>
+                                                  <uicontrol> Storage</uicontrol>
+                                                  <uicontrol> Preference</uicontrol>
+                                                  <uicontrol> Storage Locations</uicontrol>
+                                                  <uicontrol> Auto Recording</uicontrol>
+                                                  </menucascade>.</p></li>
+                                                <li>Old Path: <menucascade>
+                                                  <uicontrol>Settings</uicontrol>
+                                                  <uicontrol> System</uicontrol>
+                                                  <uicontrol> Auto Cleanup</uicontrol>
+                                                  <uicontrol> Recordings Auto Cleanup</uicontrol>
+                                                  </menucascade>.<p>New Path: <menucascade>
+                                                  <uicontrol>Settings</uicontrol>
+                                                  <uicontrol> System</uicontrol>
+                                                  <uicontrol> Auto Cleanup</uicontrol>
+                                                  <uicontrol> Auto Recordings Auto
+                                                  Cleanup</uicontrol>
+                                                  </menucascade>.</p></li>
+                                                <li>Old Path: <menucascade>
+                                                  <uicontrol>Settings</uicontrol>
+                                                  <uicontrol> General</uicontrol>
+                                                  <uicontrol> Recording</uicontrol>
+                                                  <uicontrol> Call Recording Switch</uicontrol>
+                                                  </menucascade>.<p>New Path: <menucascade>
+                                                  <uicontrol>Settings</uicontrol>
+                                                  <uicontrol> General</uicontrol>
+                                                  <uicontrol> Recording</uicontrol>
+                                                  <uicontrol> Auto Recording Switch</uicontrol>
+                                                  </menucascade>.</p></li>
+                                            </ul></p></li>
+                                </ul>
+                            </p>
+                        </dd>
+                    </dlentry>
+                    <dlentry>
+                        <dt>Email</dt>
+                        <dd>
+                            <ul id="ul_axr_prv_vjb">
+                                <li>Fixed the <uicontrol>Email</uicontrol> issue: The POP3 test
+                                    would fail if you enter a customized user name in the
+                                        <uicontrol>Email Address or Username</uicontrol> field.</li>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                    <dlentry>
+                        <dt>User Permission</dt>
+                        <dd>
+                            <ul id="ul_mdp_srv_vjb">
+                                <li>Optimized the <uicontrol>User Permission</uicontrol> setting:
+                                    Manually entering a value in the <uicontrol>Set Privilege
+                                        As</uicontrol> field is not allowed.</li>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                    <dlentry>
+                        <dt>System Log</dt>
+                        <dd>
+                            <ul id="ul_akn_dtv_vjb">
+                                <li>Fixed the <uicontrol>System Log</uicontrol> issue: The system
+                                    log files might not be downloaded due to the large file
+                                    size.</li>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                </dl>
+                <dl>
+                    <dlentry>
+                        <dt>Others</dt>
+                        <dd>
+                            <ul>
+                                <li>Fixed the compatibility issue with Google Account and LastPass
+                                    Chrome Extension: The password relevant field on the PBX would
+                                    be automatically filled in.</li>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                </dl>
+                <dl>
+                    <dlentry>
+                        <dt>Auto Provisioning</dt>
+                        <dd>
+                            <ul id="ul_j2p_4tv_vjb">
+                                <li>Fixed the <uicontrol>Custom Template</uicontrol> issue: The
+                                    contents in <uicontrol>Others</uicontrol> tab were missing.</li>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                </dl>
+            </p>
+        </section>
+    </body>
+</topic>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_xwr_v4v_4fb">
+    <title>Seize a Line to Call </title>
+    <shortdesc>Seize-Line feature allows a user to set a BLF key to monitor the PBX trunk and press
+        the BLF key to quickly place an outbound call through the monitored trunk.</shortdesc>
+    <taskbody>
+        <context>
+            <p>
+                <note>
+                    <ul id="ul_c43_lrv_4fb">
+                        <li>Monitoring trunks by BLF key is supported on FXO trunk, GSM/3G/4G trunk,
+                            and SIP trunk, NOT supported on E1/T1 trunk and BRI trunk.</li>
+                        <li>Seize-Line feature is not supported on SIP trunk.</li>
+                    </ul>
+                </note>
+            </p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Select the desired trunk in an outbound route.</cmd>
+                <info>
+                    <note>If the trunk is not selected in any outbound route, you cannot seize the
+                        trunk to call out.</note>
+                </info>
+                <substeps id="substeps_nfx_l5w_pfb">
+                    <substep>
+                        <cmd>Go to <menucascade>
+                                <uicontrol>Settings</uicontrol>
+                                <uicontrol>PBX</uicontrol>
+                                <uicontrol>Call Control</uicontrol>
+                                <uicontrol>Outbound Routes</uicontrol>
+                            </menucascade>, edit an outbound route.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Check if the trunk is selected.</cmd>
+                        <info><image href="../Images/admin/seize_a_line_outbound_route.png"
+                                width="650" id="image_h11_lvw_pfb"/></info>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Configure Seize-Line setting.</cmd>
+                <info>
+                    <note>By default, PBX allows any extension users to seize a line to call out.
+                        You can decide whether to match route permission when seizing a line to call
+                        out.</note>
+                </info>
+                <substeps>
+                    <substep>
+                        <cmd>Go to <menucascade>
+                                <uicontrol>Settings</uicontrol>
+                                <uicontrol>PBX</uicontrol>
+                                <uicontrol>General</uicontrol>
+                                <uicontrol>Preferences</uicontrol>
+                            </menucascade>, check the option <uicontrol>Match Route Permission When
+                                Seizing a Line</uicontrol>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Click <uicontrol>Save</uicontrol> and
+                            <uicontrol>Apply</uicontrol>.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>On the Trunk configuration page, check the trunk name.</cmd>
+                <info><image href="../Images/admin/check_trunk_name.png" width="650"
+                        id="image_zdq_yrv_4fb"/></info>
+            </step>
+            <step>
+                <cmd>On the phone web interface, set a BLF key to monitor the trunk.</cmd>
+                <info>
+                    <note>Take Yealink T28P phone as an example.</note>
+                </info>
+                <substeps>
+                    <substep>
+                        <cmd>Go to <menucascade>
+                                <uicontrol>DSSKey</uicontrol>
+                                <uicontrol>Memory Key</uicontrol>
+                            </menucascade>, set a BLF key.</cmd>
+                        <info><image href="../Images/admin/seize_a_line.png" id="image_pcm_fsv_4fb"
+                                width="650"/></info>
+                        <info>
+                            <ul>
+                                <li><uicontrol>Type</uicontrol>: Select
+                                    <uicontrol>BLF</uicontrol>.</li>
+                                <li><uicontrol>Value</uicontrol>: Enter the trunk name.</li>
+                                <li><uicontrol>Line</uicontrol>: Select the account that has an
+                                    extension registered to the PBX.</li>
+                            </ul>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Click <uicontrol>Confirm</uicontrol>.</cmd>
+                        <stepresult>
+                            <ul id="ul_qn4_ltv_4fb">
+                                <li>When the trunk is idle, the BLF LED is green.</li>
+                                <li>When the trunk is being used, the BLF LED is red.</li>
+                            </ul>
+                        </stepresult>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Seize the trunk to call out.</cmd>
+                <info>Press the BLF key to seize the trunk, you will get a dial tone, then dial the
+                    number that you want to call.</info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

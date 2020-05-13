@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_y5x_hsb_ffb">
+    <title>Jitter Buffer Settings</title>
+    <shortdesc>A jitter buffer is used at the receiving equipment to store incoming RTP packets,
+        re-align them in terms of timing and check they are in the correct order. If some arrive
+        slightly out-of-sequence then, provided it is large enough, the jitter buffer can put them
+        back into the right sequence. However, for this to work the receiving device must delay the
+        audio very slightly while it checks and reassembles the packet stream.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/09/20"/>
+            <!--Carol-->
+            <revised modified="2018/09/21"/>
+        </critdates>
+    </prolog>
+    <body>
+        <section id="section_vtl_44g_ffb">
+            <title>Jitter Buffer Settings</title>
+            <p>Go to <menucascade>
+                    <uicontrol>Settings</uicontrol>
+                    <uicontrol>PBX</uicontrol>
+                    <uicontrol>General</uicontrol>
+                    <uicontrol>Jitter Buffer</uicontrol>
+                </menucascade> to enable and configure jitter buffer settings.</p>
+            <p>
+                <table frame="all" rowsep="1" colsep="1" id="table_gmg_bfh_ffb">
+                    <tgroup cols="2">
+                        <colspec colname="c1" colnum="1" colwidth="1*"/>
+                        <colspec colname="c2" colnum="2" colwidth="1.31*"/>
+                        <thead>
+                            <row>
+                                <entry align="left">Option</entry>
+                                <entry align="left">Description</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>Enable Jitter Buffer</entry>
+                                <entry>Whether to enable jitter buffer.</entry>
+                            </row>
+                            <row>
+                                <entry>Select which trunk(s) to enable Jitter Buffer</entry>
+                                <entry>Enable jitter buffer for the selected trunks. <p>The outbound
+                                        audio through the selected trunk will be dejittered by
+                                        jitter buffer on the other side.</p></entry>
+                            </row>
+                            <row>
+                                <entry>Select which extension(s) to enable Jitter Buffer</entry>
+                                <entry>
+                                    <ul id="ul_i1m_fgh_ffb">
+                                        <li>Enable jitter buffer for the selected extensions. <p>The
+                                                received audio on the selected extension will be
+                                                dejittered by jitter buffer.</p><p>
+                                                <note>In the following conditions, jitter buffer
+                                                  will not work for the selected extensions:<p>
+                                                  <ul id="ul_zn1_rqh_ffb">
+                                                  <li>In an internal call, the audio is received
+                                                  from an analog phone or an IAX extension.</li>
+                                                  <li>In an external call, the other side sends
+                                                  audio through a non-SIP trunk, and jitter buffer
+                                                  is not enabled for the trunk.</li>
+                                                  </ul>
+                                                  </p></note>
+                                            </p></li>
+                                    </ul>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>Implementation</entry>
+                                <entry>The implementation of jitter buffer.<p>
+                                        <ul id="ul_z3y_rwh_ffb">
+                                            <li><uicontrol>Fixed</uicontrol>: The length of jitter
+                                                buffer will always be the sized defined by
+                                                  <uicontrol>Jitter Buffer Size</uicontrol>.</li>
+                                            <li><uicontrol>Adaptive</uicontrol>: The length of
+                                                jitter buffer will vary in size within the range of
+                                                min size and max size based on current network
+                                                condition.</li>
+                                        </ul>
+                                    </p></entry>
+                            </row>
+                            <row>
+                                <entry>Adaptive Adjustment Size</entry>
+                                <entry>The size of each adaptive adjustment of jitter buffer. The
+                                    default is 50ms. If set by default, the jitter buffer size will
+                                    be adjusted dynamically based on current network condition. It
+                                    will start from 0 ms and grows at a size of 50 ms each
+                                    time.</entry>
+                            </row>
+                            <row>
+                                <entry>Max Jitter Buffer Size</entry>
+                                <entry>The maximum value of adaptive jitter buffer.</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+    </body>
+</topic>

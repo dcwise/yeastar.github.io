@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+  PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topicID">
+   <title>Appendix A: Error Code Descriptions </title>
+   <body>
+      <table>
+         <tgroup cols="2">
+            <thead>
+               <row>
+                  <entry>
+                     <b>Error Code</b>
+                  </entry>
+                  <entry>
+                     <b>Description</b>
+                  </entry>
+               </row>
+            </thead>
+            <tbody>
+               <row>
+                  <entry>
+                     <b>10002</b>
+                  </entry>
+                  <entry>Unsupported XML data packet format</entry>
+               </row>
+               <row>
+                  <entry>
+                     <b>10003</b>
+                  </entry>
+                  <entry>Unsupported API request</entry>
+               </row>
+               <row>
+                  <entry>
+                     <b>10004</b>
+                  </entry>
+                  <entry>The required parameter is blank</entry>
+               </row>
+               <row>
+                  <entry>
+                     <b>10006</b>
+                  </entry>
+                  <entry>The extension does not exist</entry>
+               </row>
+               <row>
+                  <entry>
+                     <b>10007</b>
+                  </entry>
+                  <entry>The call does not exist</entry>
+               </row>
+               <row>
+                  <entry>
+                     <b>10008</b>
+                  </entry>
+                  <entry>The extension isn’t idle</entry>
+               </row>
+               <row>
+                  <entry>
+                     <b>10009</b>
+                  </entry>
+                  <entry>The extension does not allow being monitored</entry>
+               </row>
+               <row>
+                  <entry>
+                     <b>10010</b>
+                  </entry>
+                  <entry>The monitor mode does not match</entry>
+               </row>
+               <row>
+                  <entry>
+                     <b>10011</b>
+                  </entry>
+                  <entry>The called number does not exist</entry>
+               </row>
+               <row>
+                  <entry>
+                     <b>10012</b>
+                  </entry>
+                  <entry>The IVR does not exist</entry>
+               </row>
+               <row>
+                  <entry>
+                     <b>10013</b>
+                  </entry>
+                  <entry>The queue does not exist</entry>
+               </row>
+               <row>
+                  <entry>
+                     <b>10014</b>
+                  </entry>
+                  <entry>The ring group does not exist</entry>
+               </row>
+               <row>
+                  <entry>
+                     <b>10015</b>
+                  </entry>
+                  <entry>The call is not connected</entry>
+               </row>
+               <row>
+                  <entry>
+                     <b>10016</b>
+                  </entry>
+                  <entry>The call is accepted/call refuse times out</entry>
+               </row>
+               <row>
+                  <entry>
+                     <b>10017</b>
+                  </entry>
+                  <entry>The extension configuration failed</entry>
+               </row>
+               <row>
+                  <entry>
+                     <b>10018</b>
+                  </entry>
+                  <entry>The IVR configuration failed</entry>
+               </row>
+               <row>
+                  <entry>
+                     <b>10019</b>
+                  </entry>
+                  <entry>The queue configuration failed</entry>
+               </row>
+               <row>
+                  <entry>
+                     <b>10020</b>
+                  </entry>
+                  <entry>Failed to add or modify an alarm</entry>
+               </row>
+               <row>
+                  <entry>
+                     <b>10021</b>
+                  </entry>
+                  <entry>The alarm does not exist</entry>
+               </row>
+               <row>
+                  <entry>
+                     <b>10022</b>
+                  </entry>
+                  <entry>The alarm already exists</entry>
+               </row>
+               <row>
+                  <entry>
+                     <b>10023</b>
+                  </entry>
+                  <entry>The audio file does not exist</entry>
+               </row>
+               <row>
+                  <entry>
+                     <b>10024</b>
+                  </entry>
+                  <entry>The extension does not have outbound call permission</entry>
+               </row>
+               <row>
+                  <entry>
+                     <b>10025</b>
+                  </entry>
+                  <entry>High frequency of using system automatic apply of new
+configuration</entry>
+               </row>
+               <row>
+                  <entry>
+                     <b>10027</b>
+                  </entry>
+                  <entry>The GSM module is in use or there is no idle GSM Module</entry>
+               </row>
+               <row>
+                  <entry>
+                     <b>10031</b>
+                  </entry>
+                  <entry>The callee number doesn’t meet the requirement.</entry>
+               </row>
+               <row>
+                  <entry>
+                     <b>20000</b>
+                  </entry>
+                  <entry>Only support json format</entry>
+               </row>
+               <row>
+                  <entry>
+                     <b>20001</b>
+                  </entry>
+                  <entry>Only support POST request</entry>
+               </row>
+               <row>
+                  <entry>
+                     <b>20002</b>
+                  </entry>
+                  <entry>User login failure (user locked out)</entry>
+               </row>
+               <row>
+                  <entry>
+                     <b>20003</b>
+                  </entry>
+                  <entry>User login failure (invalid username or password)</entry>
+               </row>
+               <row>
+                  <entry>
+                     <b>20004</b>
+                  </entry>
+                  <entry>No such Token</entry>
+               </row>
+               <row>
+                  <entry>
+                     <b>20005</b>
+                  </entry>
+                  <entry>Token is blank</entry>
+               </row>
+               <row>
+                  <entry>
+                     <b>20006</b>
+                  </entry>
+                  <entry>Token times out</entry>
+               </row>
+               <row>
+                  <entry>
+                     <b>20007</b>
+                  </entry>
+                  <entry>Blank data</entry>
+               </row>
+               <row>
+                  <entry>
+                     <b>20008</b>
+                  </entry>
+                  <entry>Wrong port</entry>
+               </row>
+               <row>
+                  <entry>
+                     <b>20009</b>
+                  </entry>
+                  <entry>Blank request</entry>
+               </row>
+               <row>
+                  <entry>
+                     <b>20010</b>
+                  </entry>
+                  <entry>Failed to send request to apisrv for processing</entry>
+               </row>
+               <row>
+                  <entry>
+                     <b>20011</b>
+                  </entry>
+                  <entry>HeartBeat Configuration request failure</entry>
+               </row>
+               <row>
+                  <entry>
+                     <b>20012</b>
+                  </entry>
+                  <entry>The recording file does not exist</entry>
+               </row>
+               <row>
+                  <entry>
+                     <b>20013</b>
+                  </entry>
+                  <entry>Wrong captcha</entry>
+               </row>
+               <row>
+                  <entry>
+                     <b>20014</b>
+                  </entry>
+                  <entry>The recording file has been deleted</entry>
+               </row>
+               <row>
+                  <entry>
+                     <b>30001</b>
+                  </entry>
+                  <entry>API codes error</entry>
+               </row>
+            </tbody>
+         </tgroup>
+      </table>
+   </body>
+</topic>

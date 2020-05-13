@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_kc5_kqy_ldb">
+    <title>Step4. Connect BranchA PBX and Headquarter PBX</title>
+    <shortdesc>Set the role of the BranchA PBX as <b>Branch</b>, and connect to the headquarter PBX.
+        Users can make internal calls between the branch office A and the headquarter.</shortdesc>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/05/22"/>
+            <!--Carol-->
+            <revised modified="2018/10/31"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Log in the web interface of the BranchA PBX, go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol>Multisite Interconnect</uicontrol>
+                    </menucascade>.</cmd>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Branch Office</uicontrol> to set the PBX as a branch
+                    PBX.</cmd>
+                <info><image href="../Images/admin/set_branch_office.png" id="image_ufj_v1z_ldb"
+                    /></info>
+            </step>
+            <step>
+                <cmd>Create an interconnection to the headquarter PBX.</cmd>
+                <substeps id="substeps_npt_pzm_qfb">
+                    <substep>
+                        <cmd>On the <uicontrol>Basic</uicontrol> page, click
+                                <uicontrol>Add</uicontrol> to add an interconnection.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Configure the interconnection to the headquarter.</cmd>
+                        <info><image href="../Images/admin/add_headquarter.png"
+                                id="image_dyv_dbz_ldb"/></info>
+                        <info>
+                            <ul id="ul_urf_zzm_qfb">
+                                <li><uicontrol>Hostname/IP</uicontrol>: Enter the IP/domain and SIP
+                                    port of the headquarter PBX.</li>
+                                <li><uicontrol>Branch ID</uicontrol>: Enter the branch ID that are
+                                    set on the headquarter PBX for branch office A.</li>
+                                <li><uicontrol>Password</uicontrol>: Enter the password that are set
+                                    on the headquarter PBX for branch office A.</li>
+                            </ul>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Click <uicontrol>Save</uicontrol> and
+                            <uicontrol>Apply</uicontrol>.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step importance="optional">
+                <cmd>Configure <uicontrol>Advanced</uicontrol> settings.</cmd>
+                <substeps id="substeps_cn4_31n_qfb">
+                    <substep>
+                        <cmd>Click <uicontrol>Advanced</uicontrol> tab.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Configure advanced settings according to your environment.</cmd>
+                    
+              
+                <info>
+                    <note>The advanced settings requires professional VoIP knowledge, we recommend
+                        the default settings. Adjust the advanced settings if Multisite Interconnect
+                        doesn't work in your situation.</note>
+                </info>
+                <info>
+                    <table frame="all" rowsep="1" colsep="1" id="table_ypj_41n_qfb">
+                        <tgroup cols="2">
+                            <colspec colname="c1" colnum="1" colwidth="1*"/>
+                            <colspec colname="c2" colnum="2" colwidth="2.35*"/>
+                                    <thead>
+                                        <row>
+                                            <entry namest="c1" nameend="c2">VoIP Settings</entry>
+                                        </row>
+                                    </thead>
+                            <tbody>
+                                <row>
+                                    <entry>Qualify</entry>
+                                    <entry>Check this option to send SIP OPTIONS packets to the
+                                                headquarter PBX to detect if the device is alive or
+                                                not.</entry>
+                                </row>
+                                <row>
+                                    <entry>NAT</entry>
+                                    <entry>
+                                        <p>This setting should be used when the system is using a
+                                            public IP address, communicating with devices hidden
+                                            behind a NAT device (such as a broadband router). </p>
+                                        <p>
+                                            <note type="tip">If the extension has one-way audio
+                                                problem, check the NAT settings on the PBX and
+                                                firewall settings on your router.</note>
+                                        </p>
+                                    </entry>
+                                </row>
+                                <row>
+                                    <entry>Enable SRTP</entry>
+                                    <entry>Enable SRTP for voice encryption.</entry>
+                                </row>
+                                <row>
+                                    <entry>DTMF Mode</entry>
+                                    <entry>
+                                        <p>Set the default mode for sending DTMF tones. </p>
+                                        <p>
+                                            <ul id="ul_bvk_41n_qfb">
+                                                <li><uicontrol>RFC4733</uicontrol>:
+                                                  RFC4733(RFC2833). DTMF will be carried in the RTP
+                                                  stream in different RTP packets than the audio
+                                                  signal.</li>
+                                                <li><uicontrol>Info</uicontrol>: DTMF will be
+                                                  carried in the SIP Info messages.</li>
+                                                <li><uicontrol>Inband</uicontrol>: DTMF will be
+                                                  carried in the audio signal.</li>
+                                                <li><uicontrol>Auto</uicontrol>: PBX will attempt to
+                                                  detect if the device support RFC4733 (RFC2833)
+                                                  DTMF. If not, PBX will use Inband.</li>
+                                            </ul>
+                                        </p>
+                                    </entry>
+                                </row>
+                                <row id="connect-branch--headquarterother-settings">
+                                    <entry namest="c1" nameend="c2"><uicontrol>Other
+                                            Settings</uicontrol></entry>
+                                </row>
+                                <row>
+                                    <entry>Get Caller ID From</entry>
+                                    <entry>Decide from which header field will the branch PBX
+                                                retrieve Caller ID header.<p>
+                                                  <note>If you set the setting to <uicontrol>Follow
+                                                  System</uicontrol>. The trunk will follow the
+                                                  PBX's global <uicontrol>Get Caller ID
+                                                  From</uicontrol> setting (<menucascade>
+                                                  <uicontrol>PBX</uicontrol>
+                                                  <uicontrol>General</uicontrol>
+                                                  <uicontrol>SIP</uicontrol>
+                                                  <uicontrol>Advanced</uicontrol>
+                                                  </menucascade>). </note>
+                                                </p></entry>
+                                </row>
+                                <row>
+                                    <entry>Get DID From</entry>
+                                    <entry>Decide from which header field will the branch PBX
+                                                retrieve DID header.<p>
+                                                  <note>
+                                                  <p>
+                                                  <ul id="ul_qwk_41n_qfb">
+                                                  <li>If you set the setting to <uicontrol>Follow
+                                                  System</uicontrol>. The trunk will follow the
+                                                  PBX's global <uicontrol>Get DID From</uicontrol>
+                                                  setting (<menucascade>
+                                                  <uicontrol>PBX</uicontrol>
+                                                  <uicontrol>General</uicontrol>
+                                                  <uicontrol>SIP</uicontrol>
+                                                  <uicontrol>Advanced</uicontrol>
+                                                  </menucascade>). </li>
+                                                  <li>If <uicontrol>Remote Party ID</uicontrol> is
+                                                  selected, but the SIP provider doesn't support
+                                                  Remote Party ID, the PBX will retrieve DID from
+                                                  INVITE header.</li>
+                                                  </ul>
+                                                  </p>
+                                                  </note>
+                                                </p></entry>
+                                </row>
+                            </tbody>
+                        </tgroup>
+                    </table>
+                </info>
+                    </substep>
+               
+                    <substep>
+                        <cmd>Click <uicontrol>Save</uicontrol> and
+                            <uicontrol>Apply</uicontrol>.</cmd>
+                    </substep>
+                </substeps>
+                <stepresult>If the interconnection status shows <image
+                        href="../Images/ui_icons/ok.png" width="20" id="image_yrd_kbz_ldb"/>, the
+                    branch PBX is connected to the headquarter PBX. <p>The users in Branch Office A
+                        and the Headquarter Office can make internal calls.</p></stepresult>
+            </step>
+        </steps>
+    </taskbody>
+</task>

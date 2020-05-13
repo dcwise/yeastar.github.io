@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>Solution &amp; Interoperability</title>
+    <keydef keys="product_name" product="cloudpbx">
+        <topicmeta>
+            <keywords>
+                <keyword>Yeastar Cloud PBX</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="product_name" product="s-series">
+        <topicmeta>
+            <keywords>
+                <keyword>Yeastar S-Series VoIP PBX</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="product_name" product="k2">
+        <topicmeta>
+            <keywords>
+                <keyword>Yeastar K2 IPPBX</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <topicref href="../topic/interconnection.xml" product="cloudpbx s-series">
+        <topichead navtitle="Yeastar Cloud PBX" product="s-series">
+            <topicref href="../topic/interconnect_yeastar_cloudpbx_and_s-series.dita">
+                <topicref href="../topic/connect_yeastar_cloud_pbx_and_s300.dita"/>
+                <topicref href="../topic/intercommunication_between_yeastar_cloud_pbx_and_s300.dita"/>
+                <topicref href="../topic/share_trunk_of_yeastar_s300.dita"/>
+            </topicref>
+        </topichead>
+        <topichead navtitle="Yeastar S-Series VoIP PBX" product="cloudpbx">
+            <topicref href="../topic/interconnect_yeastar_cloudpbx_and_s-series.dita">
+                <topicref href="../topic/connect_yeastar_cloud_pbx_and_s300.dita"/>
+                <topicref href="../topic/intercommunication_between_yeastar_cloud_pbx_and_s300.dita"/>
+                <topicref href="../topic/share_trunk_of_yeastar_s300.dita"/>
+            </topicref>
+        </topichead>
+        <topichead navtitle="Yeastar TA FXS Gateway">
+            <topicref href="../topic/interconnect_yeastar_cloudpbx_and_ta_fxs_gateway.dita"
+                product="cloudpbx"/>
+            <topicref href="../topic/interconnect_yeastar_s-series_voip_pbx_and_ta_fxs_gateway.dita"
+                product="s-series"/>
+        </topichead>
+        <topichead navtitle="Yeastar TA FXO Gateway" product="cloudpbx">
+            <topicref href="../topic/connect_yeastar_ta_fxo_gateway_and_cloud_pbx.dita"
+                product="cloudpbx"/>
+        </topichead>
+        <topichead navtitle="Yeastar TG Gateway">
+            <topicref href="../topic/interconnect_yeastar_cloudpbx_and_tg_gateway.dita"
+                product="cloudpbx"/>
+            <topicref href="../topic/interconnect_yeastar_s-series_voip_pbx_and_tg_gateway.dita"
+                product="s-series"/>
+        </topichead>
+        <topichead navtitle="Yeastar TE Gateway">
+            <topicref href="../topic/interconnect-yeastar-s-series-voip-pbx-and-te-gateway.dita"
+                product="s-series"/>
+            <topicref href="../topic/interconnect-yeastar-cloud-pbx-and-te-gateway.dita"
+                product="cloudpbx"/>
+        </topichead>
+    </topicref>
+</map>

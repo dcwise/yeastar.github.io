@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_imf_ds4_tdb">
+    <title>Create a BRI Trunk</title>
+    <shortdesc>To create a BRI trunk, you need to install B2 module to PBX and connect the BRI port
+        to the BRI provider with an RJ45-RJ11 cable.</shortdesc>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/10/24"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Install B2 module.</cmd>
+                <substeps id="substeps_qmt_4wy_w3b">
+                    <substep>
+                        <cmd>Power off the PBX.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Open the upper case of the PBX.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Place the B2 module above the main board, slowly insert each pin into
+                            right slot.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Connect one end of <xref href="bri_cable.dita#concept_gkp_gl4_tdb">ISDN BRI
+                        cable</xref> to the BRI port on the PBX, and connect the other end of the
+                    cable to the ISDN provider equipment. </cmd>
+            </step>
+            <step>
+                <cmd>Log in the PBX web interface, go to <menucascade>
+                        <uicontrol>PBX Monitor</uicontrol>
+                        <uicontrol>Trunks</uicontrol>
+                    </menucascade> to check the trunk status.</cmd>
+                <info>If the trunk status shows <image href="../Images/ui_icons/no_pstn.png"
+                        width="20" id="image_prn_vtb_y3b"/>, the physical layer of this trunk is
+                    correct. </info>
+                <info>If the trunk status shows <image href="../Images/ui_icons/isdn_error.png"
+                        width="20" id="image_p1y_d5b_y3b"/>, the physical layer of this trunk is
+                    incorrect, check the BRI cable or contact Yeastar support to solve it. </info>
+                <info>For more information on trunk status, see <xref
+                        href="pbx_monitor.dita#concept_gl3_wt2_xdb/BRI-E1-T1-status">BRI Trunk
+                        Status</xref>.</info>
+            </step>
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol>PBX</uicontrol>
+                        <uicontrol>Trunks</uicontrol>
+                    </menucascade>, configure the  trunk parameters that affect the connection
+                    status.</cmd>
+                <info>
+                    <note>Get the information from your BRI provider, and configure the following
+                        settings.</note>
+                </info>
+                <info>
+                    <ul id="ul_vrx_35b_y3b">
+                        <li><uicontrol>Name</uicontrol>: Give this trunk a name to help you identify
+                            it.</li>
+                        <li><uicontrol>Signaling</uicontrol>: Specify the signaling type according
+                            to the direction provided by your service provider.</li>
+                        <li><uicontrol>Signaling Role</uicontrol>: Specify whether this interface
+                            will act like the user or the network.</li>
+                        <li><uicontrol>Switch Type</uicontrol>: Configure the switch type according
+                            to the direction provided by your service provider.</li>
+                    </ul>
+                </info>
+            </step>
+            <step>
+                <cmd>Configure other <xref href="bri_trunk_settings.dita#reference_otc_bwl_4fb">BRI
+                        trunk settings</xref> as your need.</cmd>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol> and reboot the PBX to take effect.</cmd>
+            </step>
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>PBX Monitor</uicontrol>
+                        <uicontrol>Trunks</uicontrol>
+                    </menucascade> to check the trunk status.</cmd>
+                <info>If the trunk status shows <image href="../Images/ui_icons/ok.png" width="20"
+                        id="image_wts_cvb_y3b"/>, the trunk is ready for use.</info>
+            </step>
+        </steps>
+    </taskbody>
+    <related-links>
+        <link href="bri_trunk_settings.dita#reference_otc_bwl_4fb"/>
+    </related-links>
+</task>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="concept_usf_3jq_d2b">
+    <title>Step3. Launch Instances to Your VPC</title>
+    <shortdesc>Launch two instances to your VPC. One instance for SBC, the other one instance for
+        YMP.</shortdesc>
+    <body>
+        <p>The following diagram represents the architecture of your VPC after you've completed this
+            step.</p>
+        <p><image href="../Images/SBC/aws_launch_instances_diagram.png" id="image_txv_srp_hfb"
+                height="450"/></p>
+        <section id="section_mfh_mjq_d2b">
+            <title>Launch an Instance for SBC</title>
+            <p>
+                <ol id="ol_yzk_qjq_d2b">
+                    <li>Open the Amazon EC2 console at <xref
+                            href="https://console.aws.amazon.com/ec2/" format="html"
+                            scope="external">https://console.aws.amazon.com/ec2/</xref>, click
+                            <uicontrol>Launch Instance</uicontrol>.<p>
+                            <note> In the navigation bar, on the top-right, ensure that you select
+                                the same region in which you created your VPC.</note>
+                        </p></li>
+                    <li>Choose the AMI as <uicontrol>Ubuntu Server 16.04 LTS (HVM), SSD Volume
+                            Type</uicontrol>, click <uicontrol>Select</uicontrol>.</li>
+                    <li>Choose an Instance Type, <uicontrol>c5.xlarge 4 vCPU 8 GB</uicontrol> is
+                        recommended, click <uicontrol>Next: Configure Instance
+                        Details</uicontrol>.</li>
+                    <li>Configure Instance Details, click <uicontrol>Next: Add Storage</uicontrol>.<p>
+                            <ol id="ol_ilf_wjq_d2b">
+                                <li>Select <uicontrol>Network</uicontrol> to the VPC that is for
+                                    Yeastar Cloud PBX.</li>
+                                <li>Select <uicontrol>Subnet</uicontrol> as the public subnet.</li>
+                                <li>Set <uicontrol>Auto-assign Public IP</uicontrol> to
+                                        <uicontrol>Disable</uicontrol>.<p><image
+                                            href="../Images/SBC/aws_configure_instance_details.png"
+                                            id="image_zng_cyw_kcb" width="650"/></p></li>
+                                <li>Scroll down the page, in the <uicontrol>Network
+                                        interfaces</uicontrol> section, configure eth0 and add eth1.
+                                            <p><image href="../Images/SBC/aws_network_interface.png"
+                                            id="image_zxh_d1x_kcb" width="650"/></p><p>
+                                        <ul id="ul_gl5_ysp_hfb">
+                                            <li><uicontrol>eth0</uicontrol>: The public subnet is
+                                                selected automatically, auto assign IP address or
+                                                enter an IP address.</li>
+                                            <li><uicontrol>eth1</uicontrol>: Select the private
+                                                subnet, auto assign IP address or enter an IP
+                                                address.</li>
+                                        </ul>
+                                    </p></li>
+                            </ol>
+                        </p></li>
+                    <li>On the <uicontrol>Add Storage</uicontrol> page, set the Root device volume
+                        to <codeph>40GB</codeph>, click <uicontrol>Next, Add
+                                Tags</uicontrol>.<p><image href="../Images/SBC/aws_add_storage.png"
+                                width="650" id="image_rbg_s2v_hfb"/></p></li>
+                    <li importance="optional">On the <b>Add Tags</b> page, specify <xref
+                            href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html"
+                            format="html" scope="external">tags</xref> by providing key and value
+                        combinations.</li>
+                    <li>Click <uicontrol>Next: Configure Security Group</uicontrol>.</li>
+                    <li>Select <uicontrol>Select an existing security group</uicontrol>, and select
+                        default VPC security group, click <uicontrol>Review and
+                                Launch</uicontrol>.<p><image
+                                href="../Images/SBC/aws_configure_security_group.png"
+                                id="image_bx1_fcx_kcb" width="650"/></p></li>
+                    <li> On the <uicontrol>Review</uicontrol> page, click
+                            <uicontrol>Launch</uicontrol>.</li>
+                    <li>Choose an existing key pair or create a new key pair, click
+                            <uicontrol>Launch Instances</uicontrol>.<p><image
+                                href="../Images/SBC/aws_select_key.png" id="image_hc3_sdx_kcb"
+                                width="650"/></p></li>
+                    <li>After the instance is launched, go to the <uicontrol>Instances</uicontrol>
+                        page, edit the instance name to help you identify it.<p><image
+                                href="../Images/SBC/aws_sbc_instance.png" id="image_wtt_1y4_f2b"
+                                width="650"/></p></li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_org_gkq_d2b">
+            <title>Launch an Instance for YMP</title>
+            <p>
+                <ol>
+                    <li>Open the Amazon EC2 console at <xref
+                            href="https://console.aws.amazon.com/ec2/" format="html"
+                            scope="external">https://console.aws.amazon.com/ec2/</xref>, click
+                            <uicontrol>Launch Instance</uicontrol>.<p>
+                            <note> In the navigation bar, on the top-right, ensure that you select
+                                the same region in which you created your VPC and security
+                                group.</note>
+                        </p></li>
+                    <li>Choose the AMI as <uicontrol>Ubuntu Server 16.04 LTS (HVM), SSD Volume
+                            Type</uicontrol>, click <uicontrol>Select</uicontrol>.</li>
+                    <li><xref href="aws_recommended_instance_type.dita#reference_zpq_ppl_x2b">Choose
+                            an Instance Type according to your needs,</xref> click <uicontrol>Next:
+                            Configure Instance Details</uicontrol>.</li>
+                    <li>Configure Instance Details, click <uicontrol>Next: Add Storage</uicontrol>.<p>
+                            <ol id="ol_u4t_jkq_d2b">
+                                <li>Select <uicontrol>Network</uicontrol> to the VPC that is for
+                                    Yeastar Cloud PBX.</li>
+                                <li>Select <uicontrol>Subnet</uicontrol> to the private subnet.</li>
+                                <li>Set <uicontrol>Auto-assign Public IP</uicontrol> to
+                                        <uicontrol>Disable</uicontrol>.<p><image
+                                            href="../Images/SBC/aws_configure_ymp_instance_details.png"
+                                            id="image_zng_cyw_kcb22" width="650"/></p></li>
+                                <li>Scroll down the page, in the <uicontrol>Network
+                                        interface</uicontrol> section, auto assign IP address or
+                                    enter an IP address. <p><image
+                                            href="../Images/SBC/aws_ymp_network_interface.png"
+                                            id="image_nsw_2tm_lcb" width="500"/></p></li>
+                            </ol>
+                        </p></li>
+                    <li>On the <uicontrol>Add Storage</uicontrol> page, set the Root volume size
+                            <xref href="aws_recommended_instance_type.dita#reference_zpq_ppl_x2b"
+                            >according to your required Concurrent Calls</xref>, click
+                            <uicontrol>Next, Add Tags</uicontrol>.<p><image
+                                href="../Images/SBC/aws_add_storage.png" width="650"
+                                id="image_ctx_w2v_hfb"/></p></li>
+                    <li importance="optional">On the <b>Add Tags</b> page, specify <xref
+                            href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html"
+                            format="html" scope="external">tags</xref> by providing key and value
+                        combinations.</li>
+                    <li>Click <uicontrol>Next: Configure Security Group</uicontrol>.</li>
+                    <li>Select <uicontrol>Select an existing security group</uicontrol>, and select
+                        default VPC security group, click <uicontrol>Review and
+                                Launch</uicontrol>.<p><image
+                                href="../Images/SBC/aws_configure_security_group.png" width="650"
+                                id="image_x4g_pyp_hfb"/></p></li>
+                    <li> On the <uicontrol>Review</uicontrol> page, click
+                            <uicontrol>Launch</uicontrol>.</li>
+                    <li>Choose an existing key pair or create a new key pair, click
+                            <uicontrol>Launch Instances</uicontrol>.<p><image
+                                href="../Images/SBC/aws_select_key.png" width="650"
+                                id="image_y4g_pyp_hfb"/></p></li>
+                    <li>After the instance is launched, go to the <uicontrol>Instances</uicontrol>
+                        page, edit the instance name to help you identify it.<p><image
+                                href="../Images/SBC/aws_ymp_instance.png" width="650"
+                                id="image_frj_cy4_f2b"/></p></li>
+                </ol>
+            </p>
+        </section>
+    </body>
+    <related-links>
+        <link href="aws_recommended_instance_type.dita#reference_zpq_ppl_x2b"/>
+    </related-links>
+</topic>

@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="use-ldap-on-snom-phones">
+    <title>LDAP Configurations on Snom Phone</title>
+    <shortdesc>In this example, we demonstrate how to configure and use LDAP phonebook using a Snom
+        D745 (version 66.84.0.10).</shortdesc>
+    <body>
+        <section id="section_crb_myh_r3b"><title>Configuration Example</title><p>The example
+                configurations are set according to default settings of <ph keyref="product_name"/>
+                LDAP server. You can use the following settings as a starting point and adjust the
+                filter and display attributes according to your needs.</p>Log in the Snom phone web
+            interface, go to <menucascade>
+                <uicontrol>Setup</uicontrol>
+                <uicontrol>Advanced</uicontrol>
+                <uicontrol>Network</uicontrol>
+                <uicontrol>LDAP</uicontrol>
+            </menucascade> to configure LDAP client.<p><image
+                    href="../Images/admin/snom-ldap-cloud-pbx.png" product="cloudpbx"
+                    id="image_lpq_4hm_s3b"/></p><p><image
+                    href="../Images/admin/snom-ldap-s-series.png" product="k2 s-series"
+                    id="image_fsj_phm_s3b"/></p><p>
+                <table frame="all" id="table_qjc_wyh_r3b">
+                    <tgroup cols="3">
+                        <colspec colname="c1" colnum="1" colwidth="1*" colsep="1" rowsep="1"/>
+                        <colspec colname="c2" colnum="2" colwidth="1.53*" colsep="1" rowsep="1"/>
+                        <colspec colname="c3" colnum="3" colwidth="1.06*" colsep="1" rowsep="1"/>
+                        <thead>
+                            <row>
+                                <entry>Setting</entry>
+                                <entry>Description</entry>
+                                <entry>Example</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>LDAP Name Filter</entry>
+                                <entry>
+                                    <p>Specify the name attributes for LDAP searching. </p>
+                                    <p>
+                                        <ul id="ul_rpy_21w_tdb">
+                                            <li>The <codeph>*</codeph> symbol in the filter stands
+                                                for any character.</li>
+                                            <li>The <codeph>%</codeph> symbol in the filter stands
+                                                for the entering string used as the prefix of the
+                                                filter condition.</li>
+                                        </ul>
+                                    </p>
+                                </entry>
+                                <entry>(|(cn=%)(sn=%))</entry>
+                            </row>
+                            <row>
+                                <entry>LDAP Number Filter</entry>
+                                <entry>
+                                    <p>Specify the number attributes for LDAP searching. </p>
+                                    <p>
+                                        <ul id="ul_qqy_21w_tdb">
+                                            <li>The <codeph>*</codeph> symbol in the filter stands
+                                                for any character.</li>
+                                            <li>The <codeph>%</codeph> symbol in the filter stands
+                                                for the entering string used as the prefix of the
+                                                filter condition.</li>
+                                        </ul>
+                                    </p>
+                                </entry>
+                                <entry>(|(telephoneNumber=%)(homePhone=%)(mobile=%))</entry>
+                            </row>
+                            <row>
+                                <entry>LDAP Name Filter During Call</entry>
+                                <entry>
+                                    <p>Specify the name attributes for LDAP searching when dialing
+                                        or for looking up an incoming call. </p>
+                                    <p>
+                                        <ul id="ul_cwr_rzn_q3b">
+                                            <li>The <codeph>*</codeph> symbol in the filter stands
+                                                for any character.</li>
+                                            <li>The <codeph>%</codeph> symbol in the filter stands
+                                                for the entering string used as the prefix of the
+                                                filter condition.</li>
+                                        </ul>
+                                    </p>
+                                </entry>
+                                <entry>(|(cn=%)(sn=%))</entry>
+                            </row>
+                            <row>
+                                <entry>LDAP Number Filter During Call</entry>
+                                <entry>
+                                    <p>Specify the number attributes for LDAP searching when dialing
+                                        or for looking up an incoming call. </p>
+                                    <p>
+                                        <ul id="ul_bdp_szn_q3b">
+                                            <li>The <codeph>*</codeph> symbol in the filter stands
+                                                for any character.</li>
+                                            <li>The <codeph>%</codeph> symbol in the filter stands
+                                                for the entering string used as the prefix of the
+                                                filter condition.</li>
+                                        </ul>
+                                    </p>
+                                </entry>
+                                <entry>(|(telephoneNumber=%)(homePhone=%)(mobile=%))</entry>
+                            </row>
+                            <row>
+                                <entry>Server Address</entry>
+                                <entry>Enter the <ph product="k2 s-series">IP address of PBX</ph><ph
+                                        product="cloudpbx">domain name of Cloud PBX</ph>.</entry>
+                                <entry><ph product="k2 s-series">192.168.6.216 </ph><ph
+                                        product="cloudpbx">ray.isbc.yeastarcloud.com</ph></entry>
+                            </row>
+                            <row>
+                                <entry>Port</entry>
+                                <entry>Enter the LDAP server port.</entry>
+                                <entry><ph product="k2 s-series">389</ph><ph product="cloudpbx"
+                                        >636</ph></entry>
+                            </row>
+                            <row>
+                                <entry>Base</entry>
+                                <entry>Specify a starting point in the directory tree from which to
+                                        search.<ul id="ul_xzd_kgm_s3b">
+                                        <li>To search all contacts, enter the Base DN of LDAP
+                                            server.</li>
+                                        <li>To search part of contacts, enter the desired phonebook
+                                            node.</li>
+                                    </ul></entry>
+                                <entry><ph product="k2 s-series">dc=pbx,dc=com</ph><ph
+                                        product="cloudpbx"
+                                        >dc=ray,dc=isbc,dc=yeastarcloud,dc=com</ph></entry>
+                            </row>
+                            <row>
+                                <entry>Username</entry>
+                                <entry>Enter the user name to log in the LDAP server.</entry>
+                                <entry><ph product="k2 s-series">cn=admin,dc=pbx,dc=com</ph><ph
+                                        product="cloudpbx"
+                                        >cn=admin,dc=ray,dc=isbc,dc=yeastarcloud,dc=com</ph></entry>
+                            </row>
+                            <row>
+                                <entry>Password</entry>
+                                <entry>Enter the password to log in the LDAP server.</entry>
+                                <entry><ph product="k2 s-series">password</ph><ph product="cloudpbx"
+                                        >Yeastar134</ph></entry>
+                            </row>
+                            <row>
+                                <entry>LDAP Name Attributes</entry>
+                                <entry>Specify the name attributes of each record to be returned by
+                                    the LDAP server. You can configure multiple name attributes
+                                    separated by space. </entry>
+                                <entry>cn sn displayName</entry>
+                            </row>
+                            <row>
+                                <entry>LDAP Number Attributes</entry>
+                                <entry>Specify the number attributes of each record to be returned
+                                    by the LDAP server. You can configure multiple number attributes
+                                    separated by space.</entry>
+                                <entry>telephoneNumber homePhone mobile</entry>
+                            </row>
+                            <row>
+                                <entry>LDAP Display Name</entry>
+                                <entry>Specify the name of phonebook.</entry>
+                                <entry>LDAP</entry>
+                            </row>
+                            <row>
+                                <entry>Country Code</entry>
+                                <entry>Specify standard country code which will be substituted in
+                                    LDAP search requests.</entry>
+                                <entry>+49</entry>
+                            </row>
+                            <row>
+                                <entry>Area Code</entry>
+                                <entry>Specify standard area code which will be substituted in LDAP
+                                    search requests.</entry>
+                                <entry>030</entry>
+                            </row>
+                            <row>
+                                <entry>LDAP over TLS</entry>
+                                <entry>Specify whether to use TCP or TLS as LDAP transport
+                                    protocol.</entry>
+                                <entry>On</entry>
+                            </row>
+                            <row>
+                                <entry>Sort Results</entry>
+                                <entry>Specify the mode of sorting the query results.</entry>
+                                <entry>On</entry>
+                            </row>
+                            <row>
+                                <entry>Initial Query</entry>
+                                <entry>
+                                    <p>You can decide whether to query the server for an initial
+                                        list of entries when entering the LDAP directory.<note>All
+                                            placeholders (<codeph>%</codeph>) are replaced
+                                                with<codeph>*</codeph>, and subsequent stars are
+                                            formated to a single one.<p>For example,
+                                                  <codeph>cn=*456%</codeph> would lead to
+                                                  <codeph>cn=*456*</codeph>, or
+                                                  <codeph>cn=456%*</codeph> would lead to
+                                                  <codeph>cn=456*</codeph>.</p></note></p>
+                                </entry>
+                                <entry>On</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p></section>
+        <section id="section_vq3_myh_r3b">
+            <title>Set an LDAP Key</title>
+            <p>Set an LDAP key on the phone to quickly access the LDAP phonebook.</p>
+            <p>
+                <ol id="ol_hvv_syh_r3b">
+                    <li>Log in the Snom phone web interface, go to <menucascade>
+                            <uicontrol>Setup</uicontrol>
+                            <uicontrol>Function Keys</uicontrol>
+                            <uicontrol>Line Keys</uicontrol>
+                        </menucascade>.</li>
+                    <li>Choose a key, select key type to <uicontrol>Key Event</uicontrol>, select
+                        number to <uicontrol>LDAP Directory</uicontrol>, and set label
+                                name.<p><image id="image_ysf_rc4_q3b"
+                                href="../Images/admin/set-snom-ldap-key-cloud-pbx.png" width="650"
+                            /></p></li>
+                    <li>Click <uicontrol>Apply</uicontrol>.</li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_plq_myh_r3b">
+            <title>Search LDAP Contacts</title>
+            <p>You can press the LDAP key to access the LDAP phonebook. Enter the search criteria to
+                search a contact from LDAP phonebook and call the contact.</p>
+            <p>
+                <ol id="ol_inm_pyh_r3b">
+                    <li>Press the LDAP key to access the LDAP phonebook.</li>
+                    <li>Search the contact name or number using the keypad. The contacts whose name
+                        or phone number match the characters entered will appear on the LCD
+                                screen.<p><image id="image_ckz_kd4_q3b"
+                                href="../Images/admin/snom_ldap_1.png" width="400"/></p></li>
+                    <li>Press the navigation key to select the desired contact.</li>
+                    <li>Press <image id="image_pp2_kf4_q3b" href="../Images/admin/snom-dial.png"
+                            width="30"/> to call the contact.</li>
+                </ol>
+            </p>
+        </section>
+    </body>
+</topic>

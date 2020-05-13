@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_qhq_5tk_ngb">
+    <title>Linkus Client</title>
+    <shortdesc/>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2019/01/21"/>
+            <!--Carol-->
+            <revised modified="2019/01/21"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <section id="section_wl5_wtk_ngb">
+            <title>Linkus Mobile Client Overview</title>
+            <p><object width="450" height="250" data="https://www.youtube.com/embed/NL6p4zmsJWo"
+                    outputclass="iframe">
+                    <param name="allowfullscreen"/>
+                </object></p>
+        </section>
+        <section id="section_zt1_4vk_ngb">
+            <title>Linkus Desktop Client Overview</title>
+            <p><object width="450" height="250" data="https://www.youtube.com/embed/MINef7xcfDk"
+                    outputclass="iframe">
+                    <param name="allowfullscreen"/>
+                </object></p>
+        </section>
+        <section id="section_sqg_ytk_ngb">
+            <title>Linkus Help</title>
+        </section>
+    </conbody>
+</concept>

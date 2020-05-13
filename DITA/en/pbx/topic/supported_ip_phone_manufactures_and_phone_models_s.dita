@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="reference_kh5_ngd_kdb">
+  <title>Supported IP Phone Manufactures and Phone Models</title>
+  <refbody>
+    <section id="section_nbm_sgd_kdb">
+      <p>
+        <table frame="all" rowsep="1" colsep="1" id="table_uwj_nyw_kdb">
+          <tgroup cols="3">
+            <colspec colname="c1" colnum="1" colwidth="1*"/>
+            <colspec colname="c2" colnum="2" colwidth="2.59*"/>
+            <colspec colname="newCol3" colnum="3" colwidth="1.81*"/>
+            <thead>
+              <row>
+                <entry>Manufacture</entry>
+                <entry>Phone Model</entry>
+                <entry>Supported Auto Provision Method</entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry>Yealink</entry>
+                <entry>
+                  <ul id="yealink-autop-devices">
+                    <li>T19P-E2</li>
+                    <li>T21P-E2, T22P, T23G, T23P, T27G, T27P, T29G</li>
+                    <li>T40P, T40G, T41P, T41U, T42G, T43U, T46G, T46U T48G, T48U, T49G, T41S, T42S,
+                      T46S, T48S</li>
+                    <li>T52S, T53, T53W, T54W, T54S, T56A, T57W, T58A, T58V</li>
+                    <li>W52P, W56P, W60B (W53P, W41P, W60P, CP930W-Base)</li>
+                    <li>CP860, CP960, CP920</li>
+                    <li>CP930W-Base</li>
+                    <li>VP59</li>
+                  </ul>
+                </entry>
+                <entry>
+                  <ul id="ul_wry_v2x_kdb">
+                    <li>PnP</li>
+                    <li>DHCP</li>
+                  </ul>
+                </entry>
+              </row>
+              <row>
+                <entry>Snom</entry>
+                <entry>
+                  <ul id="snom-autop-devices">
+                    <li>320, 710, 715, 720, 725, 760, 765</li>
+                    <li>D120</li>
+                    <li>D305, D315, D345, D375, D385</li>
+                    <li>D712, D717, D715, D725, D735, D745, D765, D785</li>
+                    <li>M215 SC</li>
+                    <li>C520-WiMi</li>
+                  </ul>
+                </entry>
+                <entry>
+                  <ul>
+                    <li>PnP</li>
+                    <li>DHCP</li>
+                  </ul>
+                </entry>
+              </row>
+              <row>
+                <entry>Grandstream</entry>
+                <entry>
+                  <ul  id="grandstream-autop-devices">
+                    <li>
+                      <p>GXP1100, GXP1105, GXP1160, GXP1165</p>
+                    </li>
+                    <li>
+                      <p>GXP1400, GXP1405, GXP1450</p>
+                    </li>
+                    <li>
+                      <p>GXP1610, GXP1620, GXP1625, GXP1628, GXP1630</p>
+                    </li>
+                    <li>
+                      <p>GXP2130, GXP2135, GXP2140, GXP2160, GXP2170</p>
+                    </li>
+                    <li>
+                      <p>GXP2200</p>
+                    </li>
+                    <li>
+                      <p>GXV3240, GXV3275</p>
+                    </li>
+                  </ul>
+                </entry>
+                <entry>
+                  <ul id="ul_mmh_1fx_kdb">
+                    <li>PnP</li>
+                    <li>DHCP</li>
+                  </ul>
+                </entry>
+              </row>
+              <row>
+                <entry>Fanvil</entry>
+                <entry>
+                  <ul id="fanvil-autop-devices">
+                    <li>C01, C400, C58/C58P, C600</li>
+                    <li>X1, X1S, X1SG</li>
+                    <li> X2, X210, X210i, X2C</li>
+                    <li>X3, X3P, X3SP, X3SG, X3U</li>
+                    <li>X4, X4U</li>
+                    <li>X5, X5G, X5S, X5U</li>
+                    <li>X6, X6U</li>
+                    <li>X7, X7A, X7C</li>
+                    <li>H2, H3, H5</li>
+                  </ul>
+                </entry>
+                <entry>
+                  <ul>
+                    <li>PnP</li>
+                    <li>DHCP</li>
+                  </ul>
+                </entry>
+              </row>
+              <row>
+                <entry>Htek</entry>
+                <entry>
+                  <ul id="htek-autop-devices">
+                    <li>UC503, UC503G</li>
+                    <li>UC802, UC802T, UC803, UC803T, UC804, UC804T, UC804G, UC806, UC806T, UC806G,
+                      UC840, UC842, UC860, UC862</li>
+                    <li> UC902, U902S, UC903, UC912, UC912G, UC921, UC921G, UC923, UC924, UC924E,
+                      UC926, UC926E</li>
+                  </ul>
+                </entry>
+                <entry>
+                  <ul>
+                    <li>PnP</li>
+                    <li>DHCP</li>
+                  </ul>
+                </entry>
+              </row>
+              <row>
+                <entry>Tiptel</entry>
+                <entry>
+                  <ul id="ul_i24_5yw_kdb">
+                    <li>3010, 3020, 3030</li>
+                    <li>3110, 3120, 3130</li>
+                    <li>3210, 3220, 3230, 3235, 3240, 3245, 3275, 3220XL</li>
+                    <li>
+                      <p>3310, 3320, 3330, 3340</p>
+                    </li>
+                  </ul>
+                </entry>
+                <entry>
+                  <ul>
+                    <li>PnP</li>
+                    <li>DHCP</li>
+                  </ul>
+                </entry>
+              </row>
+              <row>
+                <entry>Cisco </entry>
+                <entry>
+                  <ul id="cisco-autop-devices">
+                    <li>SPA301, SPA303</li>
+                    <li>SPA501G, SPA502G, SPA504G, SPA508G, SPA509G, SPA512G, SPA514G, SPA525G2</li>
+                  </ul>
+                </entry>
+                <entry>
+                  <ul id="ul_f2f_jhx_kdb">
+                    <li>DHCP</li>
+                  </ul>
+                </entry>
+              </row>
+              <row>
+                <entry>Polycom</entry>
+                <entry>
+                  <ul id="polycom-autop-devices">
+                    <li>VVX101, VVX201, VVX300, VVX310, VVX400, VVX500, VVX600, VVX601, VVX1500</li>
+                    <li> IP321, IP331, IP335, IP450, IP550, IP560, IP670</li>
+                  </ul>
+                </entry>
+                <entry>
+                  <ul id="ul_inq_khx_kdb">
+                    <li>DHCP</li>
+                  </ul>
+                </entry>
+              </row>
+              <row>
+                <entry>Alcatel</entry>
+                <entry>
+                  <ul id="ul_igc_yyw_kdb">
+                    <li>IP100, IP150, IP151, IP300, IP700G, IP1850, IP2015, IP251G, IP301G, IP701G,
+                      IP2115</li>
+                  </ul>
+                </entry>
+                <entry>
+                  <ul id="ul_xff_z5k_ldb">
+                    <li>PnP</li>
+                    <li>DHCP</li>
+                  </ul>
+                </entry>
+              </row>
+              <row>
+                <entry>VTech</entry>
+                <entry>
+                  <ul id="VTech-autop-devices">
+                    <li>VSP600A, VSP610A</li>
+                    <li>VSP715A, VSP716A, VSP725A, VSP726A, VSP735A, VSP736A</li>
+                    <li>VCS754A, VCS752</li>
+                    <li>ET605, ET635, ET685</li>
+                    <li>VDP650</li>
+                  </ul>
+                </entry>
+                <entry>
+                  <ul>
+                    <li>PnP</li>
+                    <li>DHCP</li>
+                  </ul>
+                </entry>
+              </row>
+              <row>
+                <entry>Akuvox</entry>
+                <entry>
+                  <ul id="akuvox-autop-devices">
+                    <li>SP-R50P, SP-R52P, SP-R53P, SP-R55P, SP-R59P, SP-R55G, SP-R59G</li>
+                    <li>SP-R63G, SP-R67G</li>
+                    <li>VP-R47P, VP-R47G, VP-R48G, VP-R49P</li>
+                  </ul>
+                </entry>
+                <entry>
+                  <ul>
+                    <li>PnP</li>
+                    <li>DHCP</li>
+                  </ul>
+                </entry>
+              </row>
+              <row>
+                <entry>Panasonic</entry>
+                <entry>
+                  <ul id="panasonic-autop-devices">
+                    <li>HDV100, HDV130, HDV230, HDV330, HDV430</li>
+                  </ul>
+                </entry>
+                <entry>
+                  <ul>
+                    <li>PnP</li>
+                    <li>DHCP</li>
+                  </ul>
+                </entry>
+              </row>
+              <row>
+                <entry>Escene</entry>
+                <entry>
+                  <ul id="escene-autop-devices">
+                    <li>ES330-PEG, ES330-PEN, ES620-PEG, ES280-P, ES206-PN, ES205-PN</li>
+                  </ul>
+                </entry>
+                <entry>
+                  <ul>
+                    <li>PnP</li>
+                    <li>DHCP</li>
+                  </ul>
+                </entry>
+              </row>
+              <row>
+                <entry>Mitel</entry>
+                <entry>
+                  <ul id="mitel-autop-devices">
+                    <li>6863i, 6865i, 6867i, 6869i, 6873i</li>
+                  </ul>
+                </entry>
+                <entry>
+                  <ul id="ul_smk_gvk_ldb">
+                    <li>DHCP</li>
+                  </ul>
+                </entry>
+              </row>
+              <row>
+                <entry>Univois</entry>
+                <entry>
+                  <ul id="univois-autop-devices">
+                    <li>U6S, U1S, U3S</li>
+                  </ul>
+                </entry>
+                <entry>
+                  <ul>
+                    <li>PnP</li>
+                    <li>DHCP</li>
+                  </ul>
+                </entry>
+              </row>
+              <row>
+                <entry>Gigaset</entry>
+                <entry>
+                  <ul id="ul_ml3_f5k_ldb">
+                    <li>Maxwell 2, Maxwell 3</li>
+                    <li>Maxwell Basic</li>
+                    <li>
+                      <p>N670 IP PRO, N870 IP PRO</p>
+                    </li>
+                  </ul>
+                </entry>
+                <entry>
+                  <ul>
+                    <li>PnP</li>
+                    <li>DHCP</li>
+                  </ul>
+                </entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+      </p>
+    </section>
+  </refbody>
+</reference>

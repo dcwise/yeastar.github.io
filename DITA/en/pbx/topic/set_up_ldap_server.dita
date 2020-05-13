@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_x2d_sl1_mdb">
+    <title>Configure LDAP Server</title>
+    <shortdesc>Before you get started, you need to set up LDAP server on <ph keyref="product_name"
+        />.</shortdesc>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Log in the PBX web interface, go to <uicontrol>LDAP Server</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Select the checkbox of <uicontrol>Enable LDAP Server</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Retain the default LDAP server settings or change the settings according to
+                    your needs.</cmd>
+                <info><image href="../Images/admin/ldap_server_setting.png" id="image_ys3_dxg_mdb"
+                        product="k2 s-series" width="650"/></info>
+                <info>
+                    <p><image id="image_mxh_qv5_q3b"
+                            href="../Images/admin/ldap-server-setting-cloud-pbx.png" width="650"
+                            product="cloudpbx"/></p>
+                </info>
+                <info>
+                    <ul id="ul_ylq_twb_r3b">
+                        <li product="cloudpbx"><uicontrol>Server Address</uicontrol>: The domain
+                            name of <ph keyref="product_name"/>.</li>
+                        <li product="cloudpbx"><uicontrol>Server SSL Port</uicontrol>: 636. <ph
+                                keyref="product_name"/> supports to establish a TLS/SSL connection
+                            (default port 636) with LDAP clients.</li>
+                        <li product="cloudpbx"><uicontrol>Server Port</uicontrol>: 389. <ph
+                                keyref="product_name"/> supports to establish connection (default
+                            port 389) with LDAP clients without encryption.</li>
+                        <li><uicontrol>Base DN</uicontrol>: Base DN is a entry in the LDAP directory
+                            where the search is requested to begin by LDAP clients. The Base DN is
+                            often referred to as the search base. <ph product="k2 s-series">The
+                                default value is <i>dc=pbx,dc=com</i>.</ph><ph product="cloudpbx"
+                                >The Base DN is based on the domain name of <ph
+                                    keyref="product_name"/>.</ph></li>
+                        <li><uicontrol>PBX DN</uicontrol>: PBX DN is the default entry in the LDAP
+                            directory that contains attributes based on the PBX extension users. <ph
+                                product="k2 s-series">The default value is
+                                    <i>ou=pbx,dc=pbx,dc=com</i>.</ph></li>
+                        <li><uicontrol>Username</uicontrol>: Specify the username to log in the LDAP
+                            server. <note product="k2 s-series">Change <codeph>cn</codeph> value,
+                                    <codeph>dc</codeph> value must be the same as <uicontrol>Base
+                                    DN</uicontrol>.</note></li>
+                        <li><uicontrol>Password</uicontrol>: Specify the password to log in the LDAP
+                            server. <ph product="cloudpbx">The password is generated randomly when
+                                you enable LDAP server for the first time. However, you can change
+                                password as you want.</ph></li>
+                    </ul>
+                </info>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol>.</cmd>
+                <info>
+                    <p>
+                        <note type="tip" product="cloudpbx">You can click <image
+                                href="../Images/admin/copy-icon.png" id="image_tht_lml_q3b"/> to
+                            copy <uicontrol>PBX DN</uicontrol> or <uicontrol>Username</uicontrol>,
+                            and paste the information on corresponding field of LDAP clients. </note>
+                    </p>
+                </info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

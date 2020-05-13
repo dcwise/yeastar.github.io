@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="how-to-factory-reset-vtech-phones">
+    <title>How to Factory Reset VTech Phones</title>
+    <shortdesc>This guide takes VTech VSP735A running firmware 1.1.5.C as an example.</shortdesc>
+    <body>
+        <p>
+            <ol id="ol_u31_3tm_xhb">
+                <li>Find the phone IP address. <p>Press the <uicontrol>Menu</uicontrol> key when the
+                        phone is idle, navigate to <menucascade>
+                            <uicontrol>Status</uicontrol>
+                            <uicontrol> Network</uicontrol>
+                        </menucascade> on the phone.</p></li>
+                <li>Log in the phone web interface with your username and password. <ul
+                        id="ul_gyj_sp3_yhb">
+                        <li>username: admin</li>
+                        <li>password: admin</li>
+                    </ul></li>
+                <li>Go to <menucascade>
+                        <uicontrol>SERVICING</uicontrol>
+                        <uicontrol> Provisioning</uicontrol>
+                    </menucascade>, click <b>Reset</b>.<p><image
+                            href="../Images/autop-vtech-factory-reset.png" width="400"
+                            id="image_p3w_xzt_xhb"/></p></li>
+                <li>Click <uicontrol>OK</uicontrol> to reset the phone.<p>The phone will be reset
+                        successfully after startup.</p><p>
+                        <note type="caution">Do not power off during phone startup. </note>
+                    </p></li>
+            </ol>
+        </p>
+    </body>
+</topic>

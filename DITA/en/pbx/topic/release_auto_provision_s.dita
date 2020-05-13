@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_fd3_xfn_jdb">
+  <title>Auto Provision</title>
+  <shortdesc>Release notes for Auto Provision on Yeastar S-Series VoIP PBX.</shortdesc>
+  <body>
+    <section id="section_ahp_5nw_clb">
+      <title>Version 1.8.26</title>
+      <p><ph conref="v30.13.0.30.dita#v30.13.0.b/date"/></p>
+      <p>
+        <ul conref="v30.13.0.30.dita#v30.13.0.b/autop-contacts" id="ul_rqn_scc_dlb">
+          <li/>
+        </ul>
+        <ul conref="v30.13.0.30.dita#v30.13.0.b/autop" id="ul_czt_2qv_hlb">
+          <li/>
+        </ul>
+      </p>
+    </section>
+    <section id="section_vxj_yq2_xkb">
+      <title>Version 1.8.24</title>
+      <p>Date: March 3, 2020</p>
+      <p>
+        <ul id="ul_eff_cr2_xkb">
+          <li>
+            <p>Added support for Gigaset N670 IP PRO and N870 IP PRO.</p>
+          </li>
+          <li>
+            <p>Added support for Tiptel phones: 3310, 3320, 3330, and 3340.</p>
+          </li>
+          <li>
+            <p>Fixed Fanvil X7 issue: Auto provisioning for Side Keys didn't take effect.</p>
+          </li>
+          <li>
+            <p>Fixed Fanvil X210 issue: Auto provision for the 92th Function Key didn't take effect.
+            </p>
+          </li>
+          <li>
+            <p>Fixed the Custom Template issue: The Fanvil X1, X1S, and X1SG options were not
+              available when configuring the custom template.</p>
+          </li>
+          <li>
+            <p>Fixed Grandstream （2135, 2170）issue: Auto provision for Account Label didn't take
+              effect.</p>
+          </li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_rrh_bnj_tkb">
+      <title>Version 1.8.19</title>
+      <p>Released Date: February 27, 2020<ul id="ul_ryg_fnj_tkb">
+          <li>Fixed the issue of Yeastar TA Gateway: The option list of <uicontrol>IAX Audio
+              Codes</uicontrol> displayed incorrectly.</li>
+          <li>Optimized Cisco SPA Phones: Added support for a maximum of 255 characters in
+              <uicontrol>Dictionary Server Script</uicontrol> field.<note>In the earlier version,
+              the maximum length allowed is 63.</note></li>
+        </ul></p>
+    </section>
+    <section id="section_wlf_btj_yjb">
+      <title>Version 1.8.16</title>
+      <p>Released Date: December 12, 2019<ul id="ul_rxw_ctj_yjb">
+          <li>Fixed the Custom Template issue: The contents in <uicontrol>Others</uicontrol> tab
+            were missing.</li>
+          <li>Optimized the mechanism of applying configuration changes to improve the system
+              stability.<ul id="ul_s5q_kqb_wjb">
+              <li>You don't need to click <uicontrol>Apply</uicontrol> button to reload Asterisk if
+                you save unchanged configurations.</li>
+              <li>If no <uicontrol>Apply</uicontrol> button appears after you save some specific
+                configuration changes, then the configurations can be saved without reloading
+                Asterisk.</li>
+            </ul></li>
+        </ul></p>
+    </section>
+    <section id="section_lbs_pxy_njb">
+      <title>Version 1.8.15</title>
+      <p>Released Date: October 30, 2019</p>
+      <ul id="ul_w1p_rxy_njb">
+        <li>Added support for Yealink phones: SIP-T41U, SIP-T43U, SIP-T46U, and SIP-T48U.</li>
+        <li>Added support for Htek phones: UC902S, UC921, UC921G, UC503, and UC503G.</li>
+        <li>For Fanvil X4 phones: Added <uicontrol>BLF/DTMF</uicontrol> and
+            <uicontrol>BLF/Conference</uicontrol> subtype options for <uicontrol>Memory</uicontrol>
+          DSS key.</li>
+        <li>For Snom phones (D1XX series, D3XX series, and D7XX series): Added the
+            <uicontrol>Administrator Mode</uicontrol>, <uicontrol>Administrator
+          Password</uicontrol>, <uicontrol>HTTP Server Username</uicontrol>, and <uicontrol>HTTP
+            Server Password</uicontrol> settings in the <uicontrol>Preference</uicontrol> tab.</li>
+      </ul>
+    </section>
+    <section id="section_amn_xln_1jb">
+      <title>Version <b>1.8.13</b></title>
+      <p>Released Date: October 22, 2019<ul id="ul_zgn_yln_1jb">
+          <li>
+            <p>Added support for the following IP phones:</p>
+            <p>
+              <ul id="ul_njt_1mn_1jb">
+                <li>Fanvil: X210, X210i, X1, X1S, X1SG, X2C, X3SG, X3U, X4U, X5U, X6U, X7, X7A and
+                  X7C</li>
+                <li>Snom: D385, D735 and D717</li>
+                <li>Yealink: VP59 and W60B</li>
+                <li>Polycom: VVX411</li>
+              </ul>
+            </p>
+          </li>
+          <li>Optimized DSS settings of Fanvil phones (X5/X5G,X4/X4G,X5S and X6): Added
+              <uicontrol>Action URL</uicontrol> type of DSS key.</li>
+          <li>Optimized Custom Template of Snom phones:You can add custom parameters in the custom
+            template.</li>
+          <li>Fixed the issue of Snom phones: The phones did not reboot automatically after
+            performing auto provision.</li>
+          <li>Optimized settings of Snom phones (D305, D315, D345 and D375): Added the
+              <uicontrol>Tone Scheme</uicontrol> setting in <uicontrol>Preference</uicontrol>
+            tab.</li>
+          <li>Optimized the IP address of Snom phones: Whatever the <uicontrol>Web Server
+              Type</uicontrol> you set for the phone, you can click the IP address that is displayed
+            on the <uicontrol>Device List</uicontrol> page to access the IP phone.</li>
+          <li>Optimized the issue of Snom phones: Even through you didn't upload the phone firmware
+            to the PBX, an error of firmware upgrade failed would be displayed on the IP phone.</li>
+          <li>Fixed the auto provision template issue of Fanvil phones: The value of &lt;language>
+            parameter in the template was incorrect.</li>
+          <li>Fixed the issue of Custom Template: Custom template did not take effect if you added
+            devices in bulk or imported an auto provisioning file.</li>
+          <li>Fixed the issue on Firmware Upgrade page: The uploaded firmware wasn't be displayed on
+              <uicontrol>Firmware Upgrade</uicontrol> page after upgrading the phone version.</li>
+        </ul></p>
+    </section>
+    <section id="section_uvp_3vs_q3b">
+      <title>Version 1.7.13</title>
+      <p>Released Date: August 7, 2019</p>
+      <p>
+        <ul>
+          <li>Optimized <uicontrol>DSSKey/Line Key</uicontrol> setting: The
+              <uicontrol>Value</uicontrol> field is allowed to enter maximum 255 characters.</li>
+          <li>
+            <p>Optimized <uicontrol>Account</uicontrol> settings for IP phones: The extension
+                <uicontrol>Caller ID Name</uicontrol> will be automatically filled in the
+                <uicontrol>Label</uicontrol> field.</p>
+            <p>
+              <note>In the earlier version, the extension number will be automatically filled in the
+                  <uicontrol>Label </uicontrol>field.</note>
+            </p>
+          </li>
+          <li>Fixed the issue of Backup and Restore: The backup file didn't contain Auto
+            Provisioning Custom Templates,which led to an error on custom template after restoring
+            data from the backup file.</li>
+          <li>Changed the model name of Yealink SIP-W60B from <uicontrol>SIP-W60B</uicontrol> to
+              <uicontrol>W60B(W60P/W53P/W41P/CP930W-Base)</uicontrol>.</li>
+          <li>Fixed the phonebook issue on Yealink W60B: Only 5 handsets could download the
+            phonebook from PBX after auto provisioning.</li>
+          <li>Fixed the issue of Auto Provision Template: The special characters %cn in the custom
+            template could not be identified correctly and would be deleted.</li>
+          <li>Fixed the issue of <uicontrol>Auto Provisioning Device List</uicontrol> page: The
+              <uicontrol>Auto Provisioning Device List</uicontrol> could not display if the assigned
+            extension name contained a line break.</li>
+          <li>
+            <p>Fixed the DSSkey issue on Fanvil: The DSSkey setting could not take effect when the <menucascade>
+                <uicontrol>DSSkey</uicontrol>
+                <uicontrol>Line</uicontrol>
+              </menucascade> is set to <uicontrol>Auto</uicontrol>.</p>
+          </li>
+          <li>
+            <p>Fixed the issue on Fanvil: Fanvil phones could not download phone book files after
+              auto provisioning,</p>
+          </li>
+          <li>
+            <p>Fixed the issue of Auto Provision Template: The setting in
+                <uicontrol>Other</uicontrol> tab would be cleared if the characters
+                <codeph>`</codeph> was contained in the custom template.</p>
+          </li>
+          <li>
+            <p>Fixed the issue that the auto provisioning would be failed after restoring
+              configurations from a backup file.</p>
+          </li>
+          <li>Fixed the issue on Yeastar TA FXS Gateway: If you disabled an FXS port, the port
+            settings could not be cleared after auto provisioning.</li>
+          <li>Fixed the issue on Cisco: The Cisco DTMF could not work after auto provisioning.</li>
+          <li>Fixed the issue of Grandstream GXV3240 and GXV3275: The Russia Time Zone was
+            incorrect.</li>
+          <li>Fixed the issue of Custom Template: When adding devices in bulk, the selected custom
+            template could not take effect after auto provision.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_zv4_yt4_thb">
+      <title>Version 1.7.4</title>
+      <p>Released Date: May 17, 2019</p>
+      <p>
+        <ul id="ul_lrt_354_thb">
+          <li>Added support for Yealink phones: SIP-T53, SIP-T53W, SIP-T54W, and SIP-T57W.</li>
+          <li>
+            <p>Added support for configuring VPK (Virtual Multi-Purpose Keys) on Grandstream
+              GXP2170.</p>
+          </li>
+          <li>Optimized Extension Board Key Settings of Grandstream GXP2170: Up to 40 EXT keys can
+            be configured.</li>
+          <li>Fixed the phonebook issue on Snom phone: Some contacts are missing after
+            provisioning.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_z4y_df5_4hb">
+      <title>Version 1.6.16</title>
+      <p>Released Date: May 14, 2019</p>
+      <p>
+        <ul>
+          <li>Optimized Auto Provisioning template: Blank spaces are allowed in the
+              <uicontrol>Name</uicontrol> filed.</li>
+          <li>Optimized the compatibility of Auto Provisioning and Hot Standby: To ensure that IP
+            phones remain registered, the auto provisioning configurations are updated automatically
+            according to the Hot Standby configurations.</li>
+          <li>Optimized DSS Key Settings of Fanvil X6: Special character &amp; is allowed in the URL
+              <uicontrol>Value</uicontrol> field.</li>
+          <li>Optimized Auto Provisioning template: A template error would error if the special
+            character &amp; was contained in the customized parameters.</li>
+          <li>Fixed the Yealink Auto Provisioning: The phone web page could not be accessed if the
+            special character ! was contained in the Admin Password.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_ofv_pwk_5gb">
+      <title>Version 1.6.11</title>
+      <p>Released Date: February 25, 2019</p>
+      <p>
+        <ul>
+          <li>Fixed <uicontrol>Auto Provisioning</uicontrol> issue: Auto provision Yeastar TA1600
+            V3, TA2400 V3, or TA3200 V3 could not work properly.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_ahh_43q_kfb">
+      <title>Version 1.6.3</title>
+      <p>Released Date: October 18, 2018</p>
+      <p>
+        <ul id="ul_pf4_q3q_kfb">
+          <li>Added support for Yealink T40G.</li>
+          <li>Added support for Vtech ET635 and ET605.</li>
+          <li><xref
+              href="../references/import_parameters_auto_provisioning.dita#reference_c12_wj3_mfb"
+              >Added support for importing an CSV file to assign extensions to multiple phones in
+              bulk</xref>.</li>
+          <li>Increased the number of phone Line for Htek UC9XX.</li>
+          <li>Increased the number of phone Line for Yealink W60B.</li>
+          <li>Added support for configuring iLBC_13_33kbps and iLBC_15_2kbps on Yealink phones.</li>
+          <li>Added <uicontrol>Short Name</uicontrol> setting for Cisco phones.</li>
+          <li>Added <uicontrol>Name</uicontrol> option on <uicontrol>Line Key Settings</uicontrol>
+            page for Fanvil C400 and C600.</li>
+          <li>The default setting of <uicontrol>Web Server Type</uicontrol> is changed to
+              <uicontrol>HTTPS ONLY</uicontrol> for the following Snom
+              phones:<p>D120、D712、715、725、D745、D765、D785、D305、D315、D345、D375 </p></li>
+          <li>Optimized Custom Template for Yealink and Vtech phones: Added support for adding
+            parameters in custom template.</li>
+          <li>Fixed the issue that if a Yeastar TA FXS gateway was auto provisioned by the PBX, the
+            TA FXS ports could not receive incoming calls.</li>
+          <li>Fixed the issue that adding contacts on Auto Provisioning web page would cause
+            excessive CPU consumption.</li>
+          <li>Fixed the issue that the Line key settings for Fanvil X6 were incorrectly auto
+            provisioned.</li>
+          <li>Fixed the issue on Yealink T46S and T46G: Failed to upgrade the phone firmware by Auto
+            Provisioning.</li>
+          <li>Fixed the issue that Auto Provisioning Phonebook could not work properly.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_yp1_cqr_q2b">
+      <title>Version 1.5.51</title>
+      <p>Released Date: July 31, 2018</p>
+      <p>
+        <ul id="ul_l33_dqr_q2b">
+          <li>Added support for the Vtech phones: ET685, VDP650, VCS752.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_abk_bmg_j2b">
+      <title>Version 1.5.46</title>
+      <p>Released Date: July 5, 2018</p>
+      <p>
+        <ul id="ul_vch_dmg_j2b">
+          <li>Optimized the web interface page.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_kdq_ck3_pdb">
+      <title>Version 1.5.39</title>
+      <p>Released Date: April 2, 2018</p>
+      <p>
+        <ul id="ul_mvt_wn3_pdb">
+          <li>Added support for the following phones:<p>
+              <ul>
+                <li>Snom D712, D725, D745, D765, D785, D120, M215 SC, C520-WiMi</li>
+                <li>Htek UC926E, UC924E, UC912, UC912G, UC802T, UC803T, UC804T, UC804G, UC806T,
+                  UC806G</li>
+                <li>Gigaset Maxwell basic, Maxwell 2, Maxwell 3</li>
+              </ul>
+            </p></li>
+        </ul>
+      </p>
+      <ul id="ul_erb_wn3_pdb">
+        <li>Optimized the Time Zone setting of Yealink, Snom, Htek, and Gigaset phones.</li>
+        <li>Fixed the issue that Grandstream phones would reboot continually if the PBX was in
+          Hot-Standby status.</li>
+        <li>Fixed the time zone settings issue on Fanvil phones.</li>
+      </ul>
+    </section>
+    <section id="section_fnv_fv3_pdb">
+      <title>Version 1.5.29</title>
+      <p>Released Date: March 20, 2018</p>
+      <p>
+        <ul id="ul_wql_3v3_pdb">
+          <li>Compatible with Yeastar S-Series VoIP PBX v30.7.0.10.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_dwj_jv3_pdb">
+      <title>Version 1.5.28</title>
+      <p>Released Date: February 12, 2018</p>
+      <p>
+        <ul id="ul_ckz_lv3_pdb">
+          <li>Added support for the following IP phones:<ul id="ul_dkz_lv3_pdb">
+              <li>Snom D715</li>
+              <li>Escene ES330-PEG, ES330-PEN, ES620-PEG, ES280-P, ES206-PN, ES205-PN</li>
+              <li>Univois U6S, U1S, U3S</li>
+            </ul></li>
+          <li>Added support for auto provisioning transfer mode on Yealink phones.</li>
+          <li>Added support for dynamic VPK keys on Grandstream phones.</li>
+          <li>Added Name setting for Fanvil X4 DSS Key.</li>
+          <li>Added support for Fanvil X3S template.</li>
+          <li>Added the date format DD/MM/YYYY for Yealink T41S.</li>
+          <li>Added “Default” language setting for Yealink phones.</li>
+          <li>Updated default templates for Snom phones.</li>
+          <li>Fixed the issue that if a phone was provisioned with multiple accounts, only one
+            account name was displayed.</li>
+          <li>Fixed the issue that PBX could not scan and detect Yealink T40G.</li>
+          <li>Fixed the issue that PBX could not scan and detect Tiptel phones.</li>
+          <li>Fixed the issue that auto provisioning for Snom phones only worked when the “Register
+            Name” was the same as the extension number.</li>
+          <li>Fixed the DSS key issue on Fanvil X6.</li>
+          <li>Fixed the voicemail issue on Yealink default template.</li>
+          <li>Fixed the translation error on German web.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_j5r_mv3_pdb">
+      <title>Version 1.5.23</title>
+      <p>Released Date: October 30, 2017</p>
+      <p>
+        <ul id="ul_j1r_4v3_pdb">
+          <li>Added support for the following IP phones:<ul id="ul_k1r_4v3_pdb">
+              <li>Yealink CP860, CP960, CP920, W60B</li>
+              <li>Fanvil H2, H3, H5</li>
+              <li>Mitel 6863i, 6865i, 6867i, 6869i, 6873i</li>
+            </ul></li>
+          <li>Optimized Daylight Saving Time setting: <ul id="ul_l1r_4v3_pdb">
+              <li>If you set Daylight Saving Time to Automatic, you can set a location for your time
+                zone. </li>
+            </ul></li>
+          <li>Changed the default language of Fanvil phones to English.</li>
+          <li>Added support for auto provisioning BLF keys on Vtech VSP735.</li>
+          <li>Added support for auto provisioning the settings on Cisco SPA phones: admin password,
+            time zone, daylight saving time, language, dictionary server script.</li>
+          <li>Fixed the issue that auto provisioning for DSS keys on Fanvil phones could not
+            work.</li>
+          <li>Fixed the issue that auto provisioning of Yealink T23P could not work.</li>
+          <li>Fixed the issue that auto provisioning of Fanvil X5S could not work.</li>
+          <li>Fixed the provisioning issue on extensions: the register name of extension is
+            incorrect.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_gxc_pv3_pdb">
+      <title>Version 1.5.17</title>
+      <p>Released Date: September 22, 2017</p>
+      <p>
+        <ul id="ul_nsg_rv3_pdb">
+          <li>Added support for the compatibility with S-Series firmware 30.5.0.30 version.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_wfk_rv3_pdb">
+      <title>Version 1.5.12</title>
+      <p>Released Date: August 9, 2017</p>
+      <p>
+        <ul id="ul_gxd_tv3_pdb">
+          <li>Added support for Yealink IP Phones: T52S, T54S.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_rzt_tv3_pdb">
+      <title>Version 1.5.9</title>
+      <p>Released Date: June 20, 2017</p>
+      <p>
+        <ul id="ul_a5c_wv3_pdb">
+          <li>Added support for Yealink IP Phones: T58A, T58V, T56A.</li>
+          <li>Added support for Fanvil IP Phones: X2, X6.</li>
+          <li>Fixed the Cisco SPA IP Phone auto provisioning issue: provisioning file created
+            failed.</li>
+          <li>Fixed the Yealink IP Phone auto provisioning issue: not able to choose Location when
+            Daylight Saving Time is Automatic.</li>
+          <li>Fixed the issue that auto provision for Grandstream GXP 3240 could not work.</li>
+          <li>Fixed the Yeastar TA Gateway auto provisioning issue: when scanning the devices in the
+            LAN, the TA devices would not be updated.</li>
+          <li>Fixed the issue that auto provision for Snom IP Phones function key and Label could
+            not work.</li>
+          <li>Fixed the Tiptel 32XX series IP Phone auto provisioning issue: IP Phones could not
+            download the provisioning files.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_w35_wv3_pdb">
+      <title>Version 1.5.3</title>
+      <p>Released Date: May 23, 2017</p>
+      <p>
+        <ul id="ul_ph2_1w3_pdb">
+          <li>Fixed the Time Zone saving failed issue.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_vh2_bw3_pdb">
+      <title>Version 1.5.2</title>
+      <p>Released Date: March 30, 2017</p>
+      <p>
+        <ul id="ul_jkd_dw3_pdb">
+          <li>Fixed the PnP server memory leak issue.</li>
+          <li>Fixed Auto Provisioning issue: after upgrading the Auto Provisioning App, the
+            Grandstream phone configurations would disappear.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_byh_dw3_pdb">
+      <title>Version 1.4.10</title>
+      <p>Released Date: January 23, 2017</p>
+      <ul id="ul_a43_gw3_pdb">
+        <li>Added support for Akuvox IP phones: SP-R50P, SP-R52P, SP-R53P, SP-R55P, SP-R59P,
+          SP-R55G, SP-R59G, SP-R63G, SP-R67G, VP-R47P, VP-R47G, VP-R48G, and VP-R49P.</li>
+        <li>Added support for Alcatel IP phones: IP251G, IP301G, IP701G, and IP2115.</li>
+        <li>Added support for Fanvil IP phones: X4 and X5S.</li>
+        <li>Added support for Yealink IP phones: T41S, T42S, T46S, T48S and T27G.</li>
+        <li>Added support for Panasonic IP phones: HDV100, HDV130, HDV230, HDV330 and HDV430.</li>
+        <li>Added support for auto provisioning Dutch language for Yealink phones.</li>
+        <li>Fixed TA provisioning issue: setting “Key as Send” to “Disable” could not take
+          effect.</li>
+        <li>Fixed Yealink provisioning issue: if the extensions were registered by auto provisioning
+          method, users could not successfully call back from the phone’s history. </li>
+      </ul>
+    </section>
+    <section id="section_ybl_3w3_pdb">
+      <title>Version 1.4.8</title>
+      <p>Released Date: January 13, 2017</p>
+      <p>
+        <ul id="ul_rhf_kw3_pdb">
+          <li>Added support for French, Italian Web interface.</li>
+          <li>Updated Turkish Web interface.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_nb1_lw3_pdb">
+      <title>Version 1.4.6</title>
+      <p>Released Date: January 4, 2017</p>
+      <p>
+        <ul id="ul_w5p_nw3_pdb">
+          <li>Added Auto Provisioning Template feature. Users could add a template first, then apply
+            the template settings to specific IP phones or gateways.</li>
+          <li>Fixed auto provisioning issue: the system would respond NOTIFY packages to all local
+            the IP phones, and caused registration failure for the non-auto-provisioned IP
+            phones.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_k3d_4w3_pdb">
+      <title>Version 1.3.9</title>
+      <p>Released Date: December 1, 2016</p>
+      <p>
+        <ul id="ul_opq_qw3_pdb">
+          <li>Added support for Alcatel IP phones: IP100, IP150, IP151, IP300, IP700G, IP1850 and
+            IP2015.</li>
+          <li>Added support for vTech IP phones: VSP600A, VSP610A, VSP715A, VSP716A, VSP725A,
+            VSP726A, VSP735A, VSP736A and VCS754A.</li>
+          <li>Added support for provision Yealink phone to Czech web language.</li>
+          <li>Added support for Fanvil MAC address fields: 00a859, 00b869, 0c385E and 0c386E.</li>
+          <li>Added “Hostname” setting for Yeastar TA gateways.</li>
+          <li>Fixed the issue that auto provision for Tiptel 30XX series phonebook could not
+            work.</li>
+          <li>Fixed the issue that auto provision for Grandstream GXP 2160 could not work.</li>
+          <li>Fixed the Yeastar TA gateway auto provisioning issue: if the TA gateway’s LAN settings
+            were not edited, the TA gateway’s IP address, hostname, web login username and password
+            would be cleared; some specific TA ports might not be registered.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_mhz_qw3_pdb">
+      <title>Version 1.3.3</title>
+      <p>Released Date: November 2, 2016</p>
+      <p>
+        <ul id="ul_sdz_hy3_pdb">
+          <li>When you upload Tiptel phonebook to S-Series PBX, you can choose phone type and upload
+            different phonebooks.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_pzm_3y3_pdb">
+      <title>Version 1.2.1</title>
+      <p>Released Date: September 7, 2016</p>
+      <p>
+        <ul id="ul_wmp_ky3_pdb">
+          <li>Added support for the following IP phones:<p>
+              <ul id="ul_fpy_py3_pdb">
+                <li>Cisco SPA301, SPA303, SPA501G, SPA502G, SPA504G, SPA508G, SPA509G, SPA512G,
+                  SPA514G, SPA525G2, CP7821</li>
+                <li>Polycom VVX101, VVX201, VVX300, VVX310, VVX400, VVX500, VVX600, VVX601, VVX1500,
+                  IP321, IP331, IP335, IP450, IP550, IP560, IP670</li>
+                <li>Htek UC902, UC903, UC923</li>
+              </ul>
+            </p></li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_qqh_qy3_pdb">
+      <title>Version 1.1.6</title>
+      <p>Released Date: August 23, 2016</p>
+      <p>
+        <ul id="ul_wkk_sy3_pdb">
+          <li>Auto Provisioning supports the following IP phones:<ul id="ul_xkk_sy3_pdb">
+              <li>Yealink T19P-E2, T21P-E2, T23G, T23P, T27G, T29G, T40P, T41P, T42G, T46G, T48G,
+                T49G, W52P, W56P</li>
+              <li>Fanvil C01, C400, C58/C58P, C600, X3/X3P/X3SP, X5/X5G</li>
+              <li>Snom 320, 710, 715, 720, 725, 760, 765, D305, D315, D345, D375</li>
+              <li>Grandstream GXP1100, GXP1105, GXP1160, GXP1165, GXP1400, GXP1405, GXP1450,
+                GXP1610, GXP1620, GXP1625, GXP1628, GXP1630, GXP2130, GXP2135, GXP2140, GXP2160,
+                GXP2170, GXP2200, GXV3240, GXV3275</li>
+              <li>Htek UC802, UC803, UC804, UC806, UC840, UC842, UC860, UC862, UC924, UC926</li>
+              <li>Tiptel 3110, 3120, 3130, 3210, 3220, 3230, 3240, 3245, 3275, 3220XL</li>
+            </ul></li>
+          <li>Fixed the issue that if you reset the system, Auto Provisioning could not work
+            properly with TFTP server.</li>
+        </ul>
+      </p>
+    </section>
+  </body>
+  
+</topic>

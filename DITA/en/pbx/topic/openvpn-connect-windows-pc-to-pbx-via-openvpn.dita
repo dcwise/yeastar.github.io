@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="openvpn-connect-winsows-pc-to-pbx-via-openvpn">
+    <title>Connect Windows PC to <ph keyref="product_name"/> via OpenVPN</title>
+    <body>
+        <p>Before connecting your Windows PC to <ph keyref="product_name"/>, you need to <xref
+                href="openvpn-installation.dita#task_k1z_5bb_5db">download and install
+                OpenVPN</xref> on your Window PC.</p>
+        <p>The OpenVPN GUI <image href="../Images/admin/openvpn-gui.jpg" width="20"
+                id="image_c55_kvk_33b"/> appears on the desktop of the PC, and you can use the
+            OpenVPN GUI to connect to the <ph keyref="product_name"/> later.</p>
+        <p>
+            <ol id="ol_vdz_ych_h3b">
+                <li>Copy the following files to <filepath>config</filepath> folder (e.g.
+                        <filepath>D:\OpenVPN\config</filepath>).<p><image
+                            href="../Images/admin/openvpn-windows-copy-CA-key.png"
+                            id="image_ogd_v2h_h3b"/></p><p>
+                        <table id="table_efx_45k_33b" colsep="1" rowsep="1">
+                            <title>Files for Windows client</title>
+                            <tgroup cols="2" align="center">
+                                <colspec colname="c1" colnum="1" colwidth="176px"/>
+                                <colspec colname="c2" colnum="2" colwidth="465px"/>
+                                <thead>
+                                    <row valign="middle">
+                                        <entry>File</entry>
+                                        <entry>Note</entry>
+                                    </row>
+                                </thead>
+                                <tbody>
+                                    <row valign="middle">
+                                        <entry><filepath>ca.crt</filepath></entry>
+                                        <entry>Root Certificate Authority</entry>
+                                    </row>
+                                    <row valign="middle">
+                                        <entry>
+                                            <filepath>Windows.crt</filepath></entry>
+                                        <entry>a certificate file for Windows client</entry>
+                                    </row>
+                                    <row valign="middle">
+                                        <entry><filepath>Windows.key</filepath></entry>
+                                        <entry>a key file for Windows client</entry>
+                                    </row>
+                                    <row valign="middle">
+                                        <entry><filepath> Windows.ovpn</filepath></entry>
+                                        <entry>an OpenVPN connection file</entry>
+                                    </row>
+                                    <row valign="middle">
+                                        <entry><filepath>passfile</filepath></entry>
+                                        <entry>Required for <xref
+                                                href="openvpn-username-password-authentication.dita#openvpn-create-account-password-for-each-client"
+                                                >OpenVPN username/password
+                                            authentication</xref></entry>
+                                    </row>
+                                    <row valign="middle">
+                                        <entry><filepath>ta.key</filepath></entry>
+                                        <entry align="left">Required for client when
+                                                <uicontrol>SSL/TLS</uicontrol> is enabled on the
+                                            OpenVPN server</entry>
+                                    </row>
+                                </tbody>
+                            </tgroup>
+                        </table>
+                    </p></li>
+                <li>Connect to the OpenVPN server.<ol id="ol_izf_ddp_h3b">
+                        <li>Right click the OpenVPN GUI <image
+                                href="../Images/admin/openvpn-gui.jpg" width="20"
+                                id="image_zcn_xdp_h3b"/> on the desktop, and run as
+                            administrator.</li>
+                        <li>Find the OpenVPN GUI in the bottom right corner, right click the icon,
+                            and click <uicontrol>Connect</uicontrol>.<p><image
+                                    href="../Images/admin/openvpn-windows-connect.png" width="350"
+                                    id="image_zbg_bbh_j3b"/></p></li>
+                        <li>If the client is connected to the PBX server, you will see the status
+                            shows as below.<p><image
+                                    href="../Images/admin/openvpn-windows-connected.png"
+                                    id="image_mrf_snp_h3b" width="300"/></p></li>
+                    </ol></li>
+            </ol>
+        </p>
+        <note type="trouble">If you are prompted "The local and remote VPN endpoints must exist
+            within the same 255.255.255.252 subnet.", you should <xref
+                href="openvpn-set-a-static-vpn-ip-for-client_.dita#openvpn-allocate-a-static-IP-address-for-each-VPN-client"
+                >allocate a static IP address</xref> for Windows client if using TUN device
+            mode.</note>
+    </body>
+</topic>

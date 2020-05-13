@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_gqb_fqk_jdb">
+  <title>Version 30.1.0.16</title>
+  <abstract>Released Date: September 19, 2016</abstract>
+  <prolog>
+    <critdates>
+      <!--Carol-->
+      <revised modified="2018/06/20"/>
+    </critdates>
+  </prolog>
+  <body>
+    <section id="section_gzb_54g_jdb">
+      <title>Optimization</title>
+      <p><image href="../Images/horizon.png" id="image_a1w_g1w_pdb"/></p>
+      <p>
+        <ul id="ul_db4_yvk_jdb">
+          <li>On the "Maintenance > Upgrade" page, the length of "HTTP URL" textbox is
+            increased.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_cmm_x4g_jdb">
+      <title>Fixed Bug</title>
+      <p><image href="../Images/horizon.png" id="image_qpt_h1w_pdb"/></p>
+      <p>
+        <ul id="ul_nsj_z4g_jdb">
+          <li>Fixed App Uninstallation issue: the pop-up confirmation dialog appeared twice when you
+            tried to uninstall one app. </li>
+        </ul>
+      </p>
+    </section>
+  </body>
+</topic>

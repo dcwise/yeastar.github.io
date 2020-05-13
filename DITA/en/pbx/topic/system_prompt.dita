@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_w3p_gmc_5cb">
+  <title>System Prompt</title>
+  <shortdesc>The default system prompt language is English. You can change the global system prompt,
+    and if an extension user works in a foreign language, you can set a different system prompt for
+    the user.</shortdesc>
+  <prolog>
+    <critdates>
+      <!--Carol-->
+      <revised modified="2018/06/14"/>
+      <!--Carol-->
+      <revised modified="2018/10/30"/>
+    </critdates>
+  </prolog>
+  <body>
+    <p/>
+  </body>
+</topic>

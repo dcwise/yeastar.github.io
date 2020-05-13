@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="manage-ldap-phonebooks">
+    <title>Manage an LDAP Phonebook</title>
+    <shortdesc>After you add an LDAP phonebook, you can edit or delete the phonebook.</shortdesc>
+    <body>
+        <section id="section_jnk_yyl_s3b">
+            <title>Edit a Phonebook</title>
+            <p>You can add, edit, and delete contacts in the phonebook you've added.</p>
+            <p>Go to LDAP Server page, click <image href="../Images/admin/edit-ldap-phonebook.png"
+                    id="image_tpc_tzl_s3b"/> beside the desired phonebook.</p>
+            <p><image href="../Images/admin/manage-ldap-phonebooks.png" width="600"
+                    id="image_p5x_fjs_s3b"/></p>
+            <p>
+                <ul id="ul_wlt_tzl_s3b">
+                    <li>
+                        <p><b>Add contacts to a phonebook</b></p>
+                        <p>
+                            <ol id="ol_ufs_gcm_s3b">
+                                <li>Click <uicontrol>Add</uicontrol>.</li>
+                                <li>In the right column, edit the contact attributes.</li>
+                                <li>Click <uicontrol>Save</uicontrol> to add contacts.</li>
+                            </ol>
+                        </p>
+                        <note>Nickname, and at least one contact method are required.</note>
+                    </li>
+                    <li><b>Delete contacts from a phonebook</b><p>
+                            <ol id="ol_cch_2cm_s3b">
+                                <li>Select the checkbox of the desired contact.</li>
+                                <li>Click <uicontrol>Delete</uicontrol> or <image
+                                        href="../Images/admin/delete-ldap-phonebook.png"
+                                        id="image_u5s_fcm_s3b"/> to delete contacts.</li>
+                            </ol>
+                        </p></li>
+                    <li><b>Edit contacts in a phonebook</b><p>
+                            <ol id="ol_jcf_wbm_s3b">
+                                <li>Select the checkbox of the desired contact.</li>
+                                <li>In the right column, edit the contact attributes.</li>
+                                <li>Click <uicontrol>Save</uicontrol>.</li>
+                            </ol>
+                        </p></li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_o3f_rcm_s3b">
+            <title>Delete Phonebooks</title>
+            <p>
+                <ol id="ol_dqz_x2m_s3b">
+                    <li>Go to LDAP Server page, and select the checkbox of the desired
+                        phonebooks.</li>
+                    <li>Click <uicontrol>Delete</uicontrol> or <image
+                            href="../Images/admin/delete-ldap-phonebook.png" id="image_wbf_bgs_53b"
+                        /> to delete the phonebooks.</li>
+                </ol>
+            </p>
+        </section>
+    </body>
+</topic>

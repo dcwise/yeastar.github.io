@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_ykp_hg4_tdb">
+    <title>Register a Remote Extension</title>
+    <shortdesc>When you are out of the office, you can register a remote extension on a soft phone
+        on an IP phone.</shortdesc>
+    <taskbody>
+        <context>
+            <p>As the following figure shows, PBX and the IP phone are in different network with
+                their own private IP addresses.</p>
+            <p><image href="../Images/admin/remote_extension_background.png" id="image_dtz_lh4_tdb"
+                    width="700"/></p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Configure port forwarding on the router that is connected to the PBX.</cmd>
+                <info>
+                    <p>Check the default ports that you need to map on the Router2 below, you can
+                        change the default ports on <menucascade>
+                            <uicontrol>PBX</uicontrol>
+                            <uicontrol>General</uicontrol>
+                            <uicontrol>SIP</uicontrol>
+                        </menucascade>.</p>
+                    <ul id="ul_sf2_rh4_tdb">
+                        <li>
+                            <p>SIP Register Port: UDP 5060</p>
+                        </li>
+                        <li>
+                            <p>RTP Port Range: UDP 10000-12000</p>
+                        </li>
+                    </ul>
+                </info>
+            </step>
+            <step>
+                <cmd>Log in the PBX web interface, go to <menucascade>
+                        <uicontrol>PBX</uicontrol>
+                        <uicontrol>General</uicontrol>
+                        <uicontrol>SIP</uicontrol>
+                        <uicontrol>NAT</uicontrol>
+                    </menucascade>, configure NAT settings according to your network
+                    environment.</cmd>
+                <info><image href="../Images/admin/remote_extension_nat.png" id="image_f5h_b34_tdb"
+                    /></info>
+            </step>
+            <step>
+                <cmd>Enable <uicontrol>NAT</uicontrol> and <uicontrol>Register Remotely</uicontrol>
+                    for the extension.</cmd>
+                <info><image href="../Images/admin/edit_remote_extension.png" width="650"
+                        id="image_wfk_g34_tdb"/></info>
+            </step>
+            <step>
+                <cmd>Register the extension on the IP phone.</cmd>
+                <info>
+                    <note>Use the public IP address or hostname of the PBX and the forwarded SIP
+                        port to register the remote extension.</note>
+                </info>
+                <info><image href="../Images/admin/register_remote_extension.png" width="650"
+                        id="image_vhj_n34_tdb"/></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

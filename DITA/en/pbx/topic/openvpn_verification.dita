@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_bhk_s2d_5db">
+    <title>OpenVPN Verification</title>
+    <shortdesc>If the OpenVPN server asks for username and password for verification, the OpenVPN
+        clients need to use the required username and password to be authenticated.</shortdesc>
+    <conbody>
+        <section id="section_vpy_hfd_5db">
+            <title>Set Verification Mode on the OpenVPN Server</title>
+            <p>
+                <ol id="ol_udf_rfd_5db">
+                    <li>Log in the PBX web interface, go to <uicontrol>VPN Server</uicontrol>, set
+                        the <uicontrol>Verification Mode</uicontrol> to <codeph>CA Cert + Client
+                            Cert + Account &amp; Password</codeph> or <codeph>CA Cert + Account
+                            &amp; Password</codeph>. </li>
+                    <li>Click <uicontrol>Account</uicontrol> tab, then click <uicontrol>Add
+                            Account</uicontrol> to set the username and password for VPN
+                        client.</li>
+                    <li>(Optional) Click <uicontrol>Static IP</uicontrol> tab, then click
+                            <uicontrol>Add</uicontrol> to add a static IP for the VPN client.</li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_ymg_zfd_5db">
+            <title>Set the Required Username and  Password to the OpenVPN Client</title>
+            <p>
+                <ul id="ul_twd_cgd_5db">
+                    <li><b>For S-Series VOIP PBX Client</b><p>Enter the username and password on the
+                                <uicontrol>OpenVPN</uicontrol> configuration page.</p><p><image
+                                href="../Images/admin/vpn_verification_1.png" id="image_lg3_kgd_5db"
+                                width="650"/></p></li>
+                </ul>
+                <ul id="ul_u5w_ngd_5db">
+                    <li><b>For Windows OpenVPN Client</b><p>
+                            <ol id="ol_c3z_rgd_5db">
+                                <li>Add <codeph>auth-user-pass passfile</codeph> in the client
+                                    configuration file <filepath>client.ovpn</filepath>.<p><image
+                                            href="../Images/admin/vpn_verification_2.png"
+                                            width="400" id="image_j4n_dhd_5db"/></p></li>
+                                <li>Create a <codeph>passfile</codeph> file and place this file to
+                                    the <filepath>config</filepath> folder.<p>
+                                        <ol id="ol_jym_ghd_5db">
+                                            <li>Create a new text document.</li>
+                                            <li>Enter the username and password according to the
+                                                account settings on VPN server. <p>Line1: Enter the
+                                                  username.</p><p>Line2: Enter the
+                                                password.</p></li>
+                                            <li>Save the file, and rename the file as
+                                                  <codeph>passfile</codeph>. Change the file name
+                                                extension, do not contain <codeph>.txt </codeph>in
+                                                the file name.<p><image
+                                                  href="../Images/admin/passfile.png"
+                                                  id="image_wsh_qhd_5db"/></p></li>
+                                        </ol>
+                                    </p></li>
+                            </ol>
+                        </p></li>
+                </ul>
+            </p>
+        </section>
+    </conbody>
+</concept>

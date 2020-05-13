@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_fh3_nbw_bdb">
+  <title>Intercom/Paging</title>
+  <shortdesc>The Paging and Intercom features allow you to make an announcement to a group of
+    extensions. The called parties do not need to pick up the handset as the audio will be played
+    via the phone speakers. </shortdesc>
+  <prolog>
+    <critdates>
+      <!--Carol-->
+      <revised modified="2018/06/14"/>
+      <!--Carol-->
+      <revised modified="2018/07/02"/>
+    </critdates>
+  </prolog>
+  <body/>
+</topic>

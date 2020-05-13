@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_jsk_fhb_5db">
+    <title>Connect Two S-Series PBXs via OpenVPN </title>
+    <shortdesc>You can set one PBX as VPN client, set the other PBX as VPN server; Then connect the
+        two PBX via VPN network.</shortdesc>
+    <conbody>
+        <image href="../Images/admin/vpn_server_2pbx.png" id="image_xx3_r1d_5db" width="700"/>
+    </conbody>
+</concept>

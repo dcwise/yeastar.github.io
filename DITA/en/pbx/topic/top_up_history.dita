@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_lwb_1m5_c2b">
+    <title>Top up History</title>
+    <shortdesc>Check or search the top up history of extensions and accounts.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/06/11"/>
+            <!--Carol-->
+            <revised modified="2018/06/12"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <p>Go to <menucascade>
+                <uicontrol>Billing</uicontrol>
+                <uicontrol>Top up History</uicontrol>
+            </menucascade> to check the top up history of extensions and accounts.</p>
+        <p><image href="../Images/admin/billing_top_up_history.png" id="image_ihl_5tz_c2b"
+                width="650"/></p>
+        <p>
+            <ul id="ul_s4s_g5z_c2b">
+                <li>Click <uicontrol>Top Up</uicontrol>, and select extensions/accounts to top up
+                    for them.</li>
+                <li>Click <uicontrol>Clear Balance</uicontrol>, and select extensions/accounts to
+                    clear their balance.</li>
+            </ul>
+        </p>
+    </conbody>
+</concept>

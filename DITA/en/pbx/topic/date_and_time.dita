@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_a4v_p3k_xdb">
+    <title>Date and Time</title>
+    <shortdesc>To ensure that the time of logs and CDR is consistent with your local time , you need
+        to adjust the date and time of the PBX.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/05/23"/>
+            <!--Carol-->
+            <revised modified="2018/05/23"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <p>On the <uicontrol>Date &amp; Time</uicontrol> configuration page, you can see the current
+            time of the PBX.</p>
+        <p>You can set the PBX time to be synchronized with a NTP server or set the time
+            manually.</p>
+        <p><image href="../Images/admin/date_and_time.png" id="image_ogt_5hm_xdb"/></p>
+    </conbody>
+</concept>

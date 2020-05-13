@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_zf1_qmn_y2b">
+    <title>Version 80.3.0.3</title>
+    <abstract>Released Date: August 29, 2018</abstract>
+    <prolog>
+        <author type="creator">Yeastar</author>
+        <author type="contributor">Yeastar</author>
+        <critdates>
+            <created date="2018/08/28"/>
+            <!--Yeastar-->
+            <revised modified="2018/08/28"/>
+            <!--Carol-->
+            <revised modified="2018/08/28"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <section id="section_zg4_db4_y2b">
+            <title>New Feature</title>
+            <p><image href="../Images/horizon.png" id="image_tbd_2b4_y2b"/></p>
+            <p>
+                <ul id="ul_zmh_hb4_y2b">
+                    <li>Added a new SIP trunk type “Account Trunk”.</li>
+                    <li>Added support for answering an intercom/paging call.</li>
+                    <li>Added support for importing configurations of SIP register trunks.</li>
+                    <li>Added support for importing configurations of outbound routes and inbound
+                        routes.</li>
+                    <li>Added support for configuring IAX jitter buffer on Web page.</li>
+                    <li>Added a default rule of outbound restriction: an extension user can make a
+                        maximum of 5 calls in 1 minute.</li>
+                    <li>Added FTP access permission to the voicemail files and one-touch recording
+                        files which are stored in PBX local flash.</li>
+                    <li>Added support for Remote Management.</li>
+                    <li>Supported 30 Extension Groups.</li>
+                    <li>Added support for 1-Way Multicast Paging.</li>
+                    <li>Added support for monitoring status of dynamic agents.</li>
+                    <li>Added email template for <b>Voicemail to Email </b>and <b>Fax to
+                        Email</b>.</li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_sxl_z14_y2b">
+            <title>Optimization</title>
+            <p>
+                <equation-figure id="equation-figure_oyj_1b4_y2b">
+                    <p><image href="../Images/horizon.png" id="image_g2b_lvk_l2b"/></p>
+                    <p>
+                        <ul id="ul_d4p_3b4_y2b">
+                            <li>Improved the performance and stability of the PBX.</li>
+                            <li>Improved the security of web login.</li>
+                            <li>Improved the security of SSH login.</li>
+                            <li><b>Optimized queue feature</b><ul id="ul_ttr_px4_y2b">
+                                    <li>Optimized Queue function: by default, the PBX would not ring
+                                        the agent who is busy in a call. </li>
+                                    <li>Optimized the Periodic Announcements of a Queue.</li>
+                                </ul></li>
+                            <li><b>Optimized LDAP feature</b><ul id="ul_u4g_tx4_y2b">
+                                    <li>when importing LDAP, the system can automatically add new
+                                        phonebook nodes.</li>
+                                    <li>you can order the contacts by contact names.</li>
+                                </ul></li>
+                            <li>
+                                <p><b>API Interfaces</b></p>
+                                <ul id="ul_c5s_dp4_y2b">
+                                    <li>Added support for sending API reports to an absolute path of
+                                        the third-party software.</li>
+                                    <li>Added support for querying, downloading, and deleting
+                                        voicemail files.</li>
+                                    <li>Optimized the Hotel Wake-up Service.</li>
+                                    <li>Optimized the DTMF output.</li>
+                                    <li>Fixed the issue that monitoring analog phones would
+                                        fail.</li>
+                                    <li>Fixed the issue that the PBX didn't stop sending API reports
+                                        when the API token expired.</li>
+                                    <li>Fixed the issue that API reports would be omitted.</li>
+                                    <li>Fixed the issue on the calls between extensions: The called
+                                        extension would ring even though the caller didn't pick up
+                                        the phone to trigger the call.</li>
+                                    <li>Fixed the issue that the extension status on the PBX Monitor
+                                        page didn't refresh automatically.</li>
+                                    <li>Dynamic agents can log in or log out the queue.</li>
+                                    <li>Fixed the some API reports didn’t conform to<i> json</i>
+                                            format.<p>To solve this problem, add
+                                                <codeph>"version":"1.0.2"</codeph> in the Login
+                                            request.</p></li>
+                                    <li>Fixed the issue that the PBX would go down if a user called
+                                        an outbound number that contained letters. </li>
+                                    <li>Supported for adding an authenticated IP address to get auto
+                                        recording files from the PBX.</li>
+                                    <li>Added API interface to query queue status and agent
+                                        status.</li>
+                                    <li>Added API interface to pause or resume an agent's
+                                        service.</li>
+                                    <li>The CDR reports will show DID number and the agent's ring
+                                        time.</li>
+                                    <li>Added support for configuring an extension's outbound
+                                        route.</li>
+                                    <li>Added support for querying an extension's outbound
+                                        route.</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p><b>SIP Trunk</b></p>
+                                <ul id="ul_yts_dp4_y2b">
+                                    <li>Supports up to 64 DID numbers.</li>
+                                    <li>Added Outbound Parameters to configure SIP parameters for
+                                        outbound calls.<ul id="ul_zts_dp4_y2b">
+                                            <li>P Asserted Identify: Choose which "P Asserted
+                                                Identify" value should be contained in the SIP
+                                                INVITE headers.</li>
+                                            <li>Diversion: Choose which "Diversion" value should be
+                                                contained in the SIP INVITE headers.</li>
+                                            <li>Remote Party ID: Choose which "Remote Party ID"
+                                                value should be contained in the SIP INVITE
+                                                headers.</li>
+                                        </ul></li>
+                                    <li>Added Transfer Parameters to configure SIP parameters for
+                                        transferred calls.<ul id="ul_a5s_dp4_y2b">
+                                            <li>From: Choose which "From" value should be contained
+                                                in the SIP INVITE headers.</li>
+                                            <li>Diversion: Choose which "Diversion" value should be
+                                                contained in the SIP INVITE headers.</li>
+                                            <li>Remote Party ID: Choose which "Remote Party ID"
+                                                value should be contained in the SIP INVITE
+                                                headers.</li>
+                                            <li>P Asserted Identify: Choose which "P Asserted
+                                                Identify" value should be contained in the SIP
+                                                INVITE headers.</li>
+                                        </ul></li>
+                                    <li>Administrator can set the value of Diversion.</li>
+                                    <li>Added P Asserted Identify setting.</li>
+                                    <li>Added Remote Party ID setting.</li>
+                                    <li>Added Inband Progress setting.</li>
+                                    <li>Added DID setting.</li>
+                                    <li>Administrator can set whether to add “user=phone” in the SIP
+                                        INVITE packet.</li>
+                                </ul>
+                            </li>
+                            <li>Added SIP advanced settings: Early Media, Maxptime.</li>
+                            <li><b>Recording Function</b><ul id="ul_yxz_c1p_y2b">
+                                    <li>The administrator can choose whether to record internal
+                                        calls.</li>
+                                    <li>Extension users can dial feature code to pause or resume
+                                        recordings during a call. </li>
+                                    <li>Added support for monitoring the recording status of an
+                                        extension on a BLF key.</li>
+                                </ul></li>
+                            <li>
+                                <p><b>Event Center</b></p>
+                                <ul id="ul_f5s_dp4_y2b">
+                                    <li>Added support for the following events:<ul
+                                            id="ul_g5s_dp4_y2b">
+                                            <li>VoIP Peer Trunk Re-registered</li>
+                                            <li>VoIP Register Trunk Re-registered</li>
+                                            <li>API Authentication Lockout</li>
+                                            <li>Linkus Client has been Locked</li>
+                                            <li>Network Drive Lost Connection</li>
+                                        </ul></li>
+                                    <li>Optimized the Notification Template.</li>
+                                    <li>Optimized the fault detection on Network Disk.</li>
+                                    <li>Added “Extension User Password Changed” event setting. </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p><b>Extension</b></p>
+                                <ul id="ul_xts_dp4_y2b">
+                                    <li>Improved the security of the extension “User Password”.</li>
+                                    <li>Increased the range of Extension Users to 0~59999.</li>
+                                    <li>Deleted the Name setting, added Caller ID name setting.
+                                        Generally, set Caller ID name to the user's name.</li>
+                                    <li>Fixed the issue that All Busy Mode for SIP Forking setting
+                                        didn't take effect if the extension had a DOD number.</li>
+                                    <li>Fixed the compatibility issue with Vtech IP phone: TLS
+                                        extension could not be registered.</li>
+                                    <li>Optimized Bulk Editing function of extensions: bulk editing
+                                        User Agent Registration Authorizations will not affect NAT
+                                        and Register Remotely settings.</li>
+                                    <li>Optimized call forwarding: if an extension is unregistered,
+                                        incoming calls to the extension will be forwarded to the “No
+                                        answer” destination. </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p><b>Jitter Buffer</b></p>
+                                <ul id="ul_b5s_dp4_y2b">
+                                    <li>The path of Jitter Buffer settings are changed to Settings >
+                                        PBX > General > Jitter Buffer.</li>
+                                    <li>Added support for choosing which extensions and trunks to
+                                        apply jitter buffer settings.</li>
+                                    <li id="concept_lwk_kph_f2b__s-pbxcenter-30.8">Added support for
+                                        configuring the Adaptive Adjustment Size of jitter
+                                        buffer.</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p><b>Storage</b></p>
+                                <ul id="ul_d5s_dp4_y2b">
+                                    <li>Optimized Network Drive settings: If the configurations are
+                                        incorrect, the system will prompt the cause of the
+                                        error.</li>
+                                    <li>Optimized FTP sharing: <ul id="ul_e5s_dp4_y2b">
+                                            <li>When you enable FTP sharing, the system will prompt
+                                                you to enable FTP service.</li>
+                                            <li>When you disable FTP sharing, the system will prompt
+                                                you that the FTP sharing is enabled.</li>
+                                        </ul></li>
+                                    <li>Fixed the Network Drive issue: If a mounted network drive
+                                        was disconnected then automatically mounted again, the PBX
+                                        could not recognize the network drive.</li>
+                                    <li>Optimized Network Disk setting: the Name filed would not
+                                        accept blank space.</li>
+                                    <li>Added support for adding network drive for Windows
+                                        domains.</li>
+                                </ul>
+                            </li>
+                            <li><b>Firewall</b><ul id="ul_h5s_dp4_y2b">
+                                    <li>Optimized Drop All setting:<ul id="ul_i5s_dp4_y2b">
+                                            <li>After enabling Drop All, the system will prompt you
+                                                to add a firewall rule to accept DNS address.</li>
+                                            <li>After enabling Drop All, the system will
+                                                automatically add two firewall rules to allow the
+                                                PBX to get new version of PBX firmware and
+                                                Applications.</li>
+                                        </ul></li>
+                                    <li>Optimized Firewall: support importing and exporting firewall
+                                        rules. </li>
+                                </ul></li>
+                            <li><b>Operation Log</b><ul id="ul_j5s_dp4_y2b">
+                                    <li>The operation of "Data Processing Agreement" will be
+                                        recorded in operation logs.</li>
+                                    <li>Optimized Logs Auto Cleanup: the PBX can store the logs for
+                                        a maximum of 15 days.</li>
+                                    <li>Optimized Call log searching feature.</li>
+                                </ul></li>
+                            <li><b>Prompt</b><ul id="ul_l5s_dp4_y2b">
+                                    <li>Optimized the Chinese prompt of Voicemail menu.</li>
+                                    <li>Updated the following system prompt: English prompt, Korean
+                                        prompt, and Hebrew prompt.</li>
+                                    <li>Optimized Voicemail prompts.</li>
+                                    <li>Optimized Recording prompts.</li>
+                                </ul></li>
+                            <li><b>CDR</b><ul id="ul_m5s_dp4_y2b">
+                                    <li>Added support for displaying billing Account in the CDR
+                                        logs.</li>
+                                    <li>Optimized CDR Auto Cleanup: when the CDR number reaches 90%
+                                        of the Max Number of CDR, the system will send
+                                        notification.</li>
+                                    <li>Optimized CDR: supported displaying DID numbers in CDR.</li>
+                                </ul></li>
+                            <li>Static Route: Optimized the web interface of Static Route
+                                settings.</li>
+                            <li>Optimized SLA feature: The administrator can enable or disable the
+                                SLA prompt.</li>
+                            <li>Optimized the system logs.</li>
+                            <li>Optimized the Web user interface: the PBX's GUI language will be
+                                synchronized to your browser language.</li>
+                            <li>Optimized blacklist feature: the administrator can restrict specific
+                                extension users from calling the blocked numbers.</li>
+                            <li>Optimized backup feature: the administrator can choose to backup
+                                system configurations, custom prompts or call logs.</li>
+                            <li>Optimized Auto Recording Cleanup: the system will send notification
+                                when the usage of the device is about to reach the pre-configured
+                                maximum value. </li>
+                            <li>Optimized billing feature: the administrator can configure whether
+                                to disconnect a user’s call if the user’s balance is insufficient. </li>
+                            <li>Optimized Distinctive Ringtone setting: you can enter uppercase
+                                letters, lowercase letters, numbers, “-”, “_” and “+”.</li>
+                            <li>Optimized Notification Contact settings: if you select a
+                                notification method without setting the email address or phone
+                                numbers, the system will not save the settings. </li>
+                            <li>Optimized OpenVPN settings: you cannot upload a certification file
+                                with incorrect format.</li>
+                            <li>Optimized Time Condition: extension users can dial feature code to
+                                switch the inbound route destination to “Other Time” destination. </li>
+                            <li>Optimized IP Auto Defense: display the block type of a blocked
+                                IP.</li>
+                            <li>Optimized AMI interface: added the path of recordings in CDR
+                                records.</li>
+                            <li>Optimized the function of Seizing Trunk by BLF key: the
+                                administrator can set who can seize a trunk to call out.</li>
+                            <li>Optimized Ring Group and Queue: if an extension is registered on
+                                multiple phones, when the extension is busy, the PBX would not call
+                                other phones that registered the same extension.</li>
+                        </ul>
+                    </p>
+                </equation-figure>
+            </p>
+        </section>
+        <section id="section_oxf_fb4_y2b">
+            <title>Fixed Bug</title>
+            <p><image href="../Images/horizon.png" id="image_acn_fb4_y2b"/></p>
+            <ul id="ul_jwg_jb4_y2b">
+                <li>Fixed the issue that Mobility Extension user could not change the status of time
+                    condition.</li>
+                <li>Fixed call log issue: when an extension and the mobility extension were ringing
+                    simultaneously, you answered the call on the extension or on the mobility
+                    extension; the system would generate 3 call logs.</li>
+                <li>Fixed system email issue: the default TLS port for Sina emails could not work. </li>
+                <li>Fixed DOD issue on mobility extensions: if you use a mobility extension to make
+                    calls, the system would not send the DOD number of the extension. </li>
+                <li>Fixed the issue that after receiving a packet of cancelling Register from
+                    Panasonic, the Yeastar system would break down.</li>
+                <li>Fixed the prompt of Dial by Name.</li>
+                <li>Fixed voicemail prompt: if you set the inbound route to voicemail, you could not
+                    hear the prompt of “Ask Caller to Dial 5”. </li>
+                <li>Fixed All Busy Mode for SIP Forking: the feature only worked for the called
+                    extension, not worked for calling extension.</li>
+                <li>Fixed ring group issue: if a member of the ring group canceled “Always Forward”
+                    by dialing *071; the member still could not receive calls. </li>
+                <li>Fixed voicemail feature: if “Ask Caller to Dial 5” was enabled, users could not
+                    dial 0 to exit voicemail.</li>
+                <li>Fixed the compatibility issue with China Mobile IMS trunk: when making a call
+                    through the IMS trunk, the calling user could not get a prompt if the called
+                    person cancelled the call. </li>
+                <li>Fixed the compatibility issue with Loxone SIP Intercom system.</li>
+            </ul>
+            <ul id="ul_ndf_mc4_y2b">
+                <li>Fixed the issue that video call could not work.</li>
+                <li>Fixed the compatibility issue with Yeastar TA FXS Gateway.</li>
+                <li>Fixed the SIP message issue: SIP message could not work on Fanvil phones.</li>
+                <li>Fixed the interconnection issue with another device: the interconnection would
+                    fail if you used S-Series IPPBX’s extension to register a SIP trunk on other
+                    device. </li>
+                <li>Fixed the issue that the SIP trunk could not work if the transport protocol was
+                    changed. </li>
+                <li>Fixed the DID matching issue on Inbound Route: if multiple inbound routes have
+                    the same DID number(s), the PBX could route inbound calls properly. </li>
+                <li>Fixed the Recording issue: the voice of the caller and callee might be
+                    overlapping.</li>
+                <li>Fixed the issue that the extension users failed to download CDR files on
+                    Web.</li>
+                <li>Fixed the issue that the PBX displayed incorrect capacity status of network
+                    disk.</li>
+                <li>Fixed Auto Cleanup issue: if you chose to store logs to an external device, the
+                    PBX would not auto clean up the logs.</li>
+                <li>Fixed issues on Billing App:<ul id="ul_pdf_mc4_y2b">
+                        <li>The billing was improper for transferred calls.</li>
+                        <li>If Billing function was enabled, the PBX could not forward calls to
+                            external numbers.</li>
+                    </ul></li>
+                <li>Fixed the issue on LDAP App: <ul id="ul_qdf_mc4_y2b">
+                        <li>The phone would display incorrect contact information when you queried a
+                            contact on your phone.</li>
+                        <li>Optimized the Contacts Importing function.</li>
+                    </ul></li>
+                <li>Fixed conference issue: inviting external members by your phone would fail if a
+                    password was set on the outbound route. </li>
+                <li>Fixed the issue on Conference Panel: if the length of the conference number
+                    exceeded 4 characters, the conference panel would have a series of
+                    problems.</li>
+                <li>Fixed the voicemail prompt issue: the PBX didn’t play the customized prompt. </li>
+                <li>Fixed CDR issue: when an external call reached a queue, the CDR of this call was
+                    incorrect.</li>
+                <li>Fixed the identification issue of feature code.</li>
+                <li>Fixed the video quality issue with Yealink video phones.</li>
+                <li>Fixed the SIP trunk issue: <ul id="ul_s24_q44_y2b">
+                        <li>The PBX might terminate a call that was made through a SIP trunk.</li>
+                        <li>If T.38 was enabled on the SIP trunk, Call Parking and Call Hold would
+                            not work for inbound calls through this SIP trunk.</li>
+                    </ul></li>
+                <li>
+                    <p>Fixed the issue that SIP trunk could not be registered automatically if the
+                        trunk was disconnected.</p>
+                </li>
+            </ul>
+        </section>
+    </conbody>
+</concept>

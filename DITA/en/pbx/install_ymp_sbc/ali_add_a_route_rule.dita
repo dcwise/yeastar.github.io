@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_qqx_lds_lcb">
+    <title>4) Set SBC Server as a Gateway</title>
+    <shortdesc>SBC instance can act as a gateway. To send YMP data to the Internet through the SBC
+        gateway, you need to create a route rule.</shortdesc>
+    <taskbody>
+        <steps id="steps_i5v_zds_lcb">
+            <step>
+                <cmd>Log on to the <xref
+                        href="https://vpc.console.aliyun.com/?spm=a3c0i.o53682en.a3.1.30bea7c2y9prf1#/vpc/"
+                        format="html" scope="external">VPC console</xref>.</cmd>
+            </step>
+            <step>
+                <cmd>In the left-side navigation pane, click <b>VPC</b>.</cmd>
+            </step>
+            <step>
+                <cmd>Choose the region where the SBC and YMP VPC is created.</cmd>
+            </step>
+            <step>
+                <cmd>Click the ID of the SBC and YMP VPC.</cmd>
+            </step>
+            <step>
+                <cmd>In the left-side <b>VPC Details</b> pane, click <b>VRouter</b>, and then click
+                        <b>Add Route Entry</b>.</cmd>
+            </step>
+            <step>
+                <cmd>In the <b>Add Route Entry</b> dialog, set the rule as the figure below and
+                    click <b>OK</b>.</cmd>
+                <info><image href="../Images/SBC/ali_add_route_rule.png" id="image_fgp_yfs_lcb"
+                    /></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

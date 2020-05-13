@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_an5_lbp_y2b">
+    <title>Upgrade SBC Firmware</title>
+    <shortdesc>If a new SBC firmware is released, you can log in the SBC server via SSH to upgrade
+        your SBC to the latest version.</shortdesc>
+    <taskbody>
+        <prereq id="prereq_dz5_jw3_t3b">
+            <p>
+                <ul id="ul_c5y_kw3_t3b">
+                    <li>Make sure that your SBC server can access the Internet, or the upgrade will
+                        fail.</li>
+                    <li>Make sure that python with version 2.7.x or later is installed on your SBC
+                            server.<p>Command reference:</p><ul id="ul_k12_2y3_t3b">
+                            <li>Check python version: <codeph>sudo python -V</codeph></li>
+                            <li>Install python: <codeph>sudo apt-get install
+                                python-minimal</codeph></li>
+                        </ul></li>
+                </ul>
+            </p>
+        </prereq>
+        <steps>
+            <stepsection>Run the following command to upgrade SBC firmware:</stepsection>
+            <step>
+                <cmd>Run command <codeph>sudo python /root/yssbc/SBC_upgrade.py</codeph>.</cmd>
+            </step>
+            <step>
+                <cmd>Enter <codeph>y</codeph> to download and install the new firmware.</cmd>
+                <info>
+                    <codeblock>root@VM-0-11-ubuntu:~# sudo python /root/yssbc/SBC_upgrade.py
+Your SBC version  is 1.5.6
+downloading.
+Download finish.
+rezip please wait.
+You will upgrade version from 1.5.6 to 1.5.21.Continue? [Y/n] y</codeblock>
+                </info>
+            </step>
+        </steps>
+        <result id="result_esl_xfn_qfb">If the SBC is upgraded successfully, the log will display
+            “SBC install success!” and your current SBC version.<p>
+                <codeblock>========================================
+
+   SBC install success!                
+
+========================================
+.....
+.....
+.....
+.....
+.....
+.....
+.....
+Your version of SBC has been upgraded from 1.5.6 to 1.5.21</codeblock>
+            </p></result>
+    </taskbody>
+    <related-links>
+        <link href="check_sbc_version.dita#reference_jyk_1bg_y2b"/>
+    </related-links>
+</task>

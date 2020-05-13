@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="Device-Overview">
+    <title>Hardware Overview</title>
+    <shortdesc>Descriptions of LED indicators and ports on <ph keyref="product_name"/>.</shortdesc>
+    <conbody>
+        <section>
+            <title>A. Front Panel</title>
+            <p>Front panel of Yeastar K2 IPPBX and Yeastar K2 Lite IPPBX.</p>
+            <p><image placement="inline" href="../Images/admin/k2-device-front.png" width="600"
+                    id="image-uq3-qcx-whb"/></p>
+            <p>
+                <table frame="all" rowsep="1" colsep="1" id="table-mj1-2jr-whb">
+                    <tgroup cols="3">
+                        <colspec colname="c1" colnum="1" colwidth="1*"/>
+                        <colspec colname="c2" colnum="2" colwidth="2.85*"/>
+                        <colspec colname="c3" colnum="3" colwidth="5.99*"/>
+                        <thead>
+                            <row>
+                                <entry align="center" valign="middle">Item</entry>
+                                <entry>Indicator，button or connector</entry>
+                                <entry align="center" valign="middle">Description</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry valign="middle" align="center">1</entry>
+                                <entry align="center" valign="middle">Power-on indicator, power
+                                    button</entry>
+                                <entry>Enables you to know the power status of the system. The
+                                    power-on indicator glows when the system power is on.</entry>
+                            </row>
+                            <row>
+                                <entry valign="middle" align="center">2</entry>
+                                <entry align="center" valign="middle">NMI button</entry>
+                                <entry>
+                                    <p>Enables you to troubleshoot software and device driver errors
+                                        when running certain operating systems. This button can be
+                                        pressed by using the end of a paper clip.</p>
+                                    <p>Use this button only if directed to do so by qualified
+                                        support personnel or by the operating system's
+                                        documentation.</p>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry valign="middle" align="center">3</entry>
+                                <entry align="center" valign="middle">System identification
+                                    button</entry>
+                                <entry>Enables you to locate a particular system within a rack. The
+                                    identification buttons are on the front and back panels. When
+                                    one of these buttons is pressed, the LCD panel on the front and
+                                    the system status indicator on the back flash until one of the
+                                    buttons is pressed again.<p>Press the button to turn the system
+                                        ID on and off.</p><p>If the system stops responding during
+                                        POST, press and hold the system ID button for more than five
+                                        seconds to enter BIOS progress mode.</p><p>To reset iDRAC
+                                        (if not disabled in F2 iDRAC setup) press and hold the
+                                        button for more than 15 seconds.</p></entry>
+                            </row>
+                            <row>
+                                <entry valign="middle" align="center">4</entry>
+                                <entry align="center" valign="middle">Video connector</entry>
+                                <entry>Enables you to connect a display to the system.</entry>
+                            </row>
+                            <row>
+                                <entry valign="middle" align="center">5</entry>
+                                <entry align="center" valign="middle">Diagnostic indicators</entry>
+                                <entry>The diagnostic indicator glows to display error status. For
+                                    more information, see Diagnostic Indicators.</entry>
+                            </row>
+                            <row>
+                                <entry valign="middle" align="center">6</entry>
+                                <entry align="center" valign="middle">USB connector</entry>
+                                <entry>Enables you to connect USB devices to the system. The port is
+                                    USB 2.0-compliant.</entry>
+                            </row>
+                            <row>
+                                <entry valign="middle" align="center">7</entry>
+                                <entry align="center" valign="middle">Information tag</entry>
+                                <entry>Contains system information such as service tag, NIC, MAC
+                                    address for your reference. The information tag is a slide-out
+                                    label panel.</entry>
+                            </row>
+                            <row>
+                                <entry valign="middle" align="center">8</entry>
+                                <entry align="center" valign="middle">Optical drive</entry>
+                                <entry>Enables you to install an optional slim SATA DVD-ROM
+                                    drive.</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+        <section>
+            <title>Diagnostic Indicators</title>
+            <p>The diagnostic indicators on the front panel display the system status during
+                startup.</p>
+            <note><p>The system equipped with an LCD panel does not provide diagnostic indicator.</p> <p>No diagnostic
+                    indicators are lit when the system is turned off. To start the system, plug it
+                    into a working power source and press the power button.</p></note>
+            <p>
+                <table frame="all" rowsep="1" colsep="1" id="table-tsv-5lr-whb">
+                    <tgroup cols="3">
+                        <colspec colname="c1" colnum="1" colwidth="1*"/>
+                        <colspec colname="c2" colnum="2" colwidth="1.92*"/>
+                        <colspec colname="c3" colnum="3" colwidth="4.96*"/>
+                        <thead>
+                            <row>
+                                <entry>Icon</entry>
+                                <entry>Description</entry>
+                                <entry>Condition</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry morerows="1" align="center" valign="middle"><image
+                                        placement="inline" href="../Images/admin/k2-operating-status.png"
+                                        width="50" id="image-lt1-vcx-whb"/></entry>
+                                <entry morerows="1" align="center" valign="middle">Health
+                                    indicator</entry>
+                                <entry valign="middle">The indicator turns solid blue if the system
+                                    is in good health.</entry>
+                            </row>
+                            <row>
+                                <entry valign="middle">The indicator flashes amber:<ul>
+                                        <li>When the system is turned on.</li>
+                                        <li>When the system is in standby.</li>
+                                    </ul><p>
+                                        <ul id="ul-xgg-4hy-whb">
+                                            <li
+                                                id="GUID-7C7A87CF-08E8-43D0-8489-A73E2CD220DD--LI-FA7DE9E5D29A47E99956B54646E83628"
+                                                >If any error condition exists. For example, a
+                                                failed fan, PSU, or a hard drive.</li>
+                                        </ul>
+                                    </p></entry>
+                            </row>
+                            <row>
+                                <entry align="center" valign="middle"><image placement="inline"
+                                        href="../Images/admin/k2-hard-drive.png" width="30"
+                                        id="image-m4x-xcx-whb"/></entry>
+                                <entry valign="middle" align="center">Hard drive indicator</entry>
+                                <entry valign="middle">The indicator flashes amber if there is a
+                                    hard drive error.</entry>
+                            </row>
+                            <row>
+                                <entry align="center" valign="middle"><image placement="inline"
+                                        href="../Images/admin/k2-power.png" width="30" id="image-fk5-ycx-whb"
+                                    /></entry>
+                                <entry valign="middle" align="center">Electrical indicator</entry>
+                                <entry valign="middle">The indicator flashes amber if the system
+                                    experiences an electrical error (for example, voltage out of
+                                    range, or a failed power supply unit (PSU) or voltage
+                                    regulator).</entry>
+                            </row>
+                            <row>
+                                <entry align="center" valign="middle"><image placement="inline"
+                                        href="../Images/admin/k2-temperature.png" width="30"
+                                        id="image-qpl-1dx-whb"/></entry>
+                                <entry valign="middle" align="center">Temperature indicator</entry>
+                                <entry valign="middle">The indicator flashes amber if the system
+                                    experiences a thermal error (for example, the ambient
+                                    temperature is out of range or fan failure).</entry>
+                            </row>
+                            <row>
+                                <entry align="center" valign="middle"><image placement="inline"
+                                        href="../Images/admin/k2-RAM.png" id="image-nnz-vcx-whb" width="50"
+                                    /></entry>
+                                <entry valign="middle" align="center">Memory indicator</entry>
+                                <entry valign="middle">The indicator flashes amber if a memory error
+                                    occurs.</entry>
+                            </row>
+                            <row>
+                                <entry align="center" valign="middle"><image placement="inline"
+                                        href="../Images/admin/k2-PCle.png" width="50" id="image-klv-bdx-whb"
+                                    /></entry>
+                                <entry align="center" valign="middle">PCle indicator</entry>
+                                <entry align="left" valign="middle">The indicator flashes amber if
+                                    the PCle is error.</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+        <section>
+            <title>B. Back Panel</title>
+            <p>Back panel of Yeastar K2 IPPBX and Yeastar K2 Lite IPPBX.</p>
+            <p><image placement="inline" href="../Images/admin/k2-device-back.png" width="600"
+                    id="image-qxb-fdx-whb"/></p>
+            <table frame="all" rowsep="1" colsep="1" id="table-utl-nnr-whb">
+                <tgroup cols="3" align="center">
+                    <colspec colname="c1" colnum="1" colwidth="1*" align="center"/>
+                    <colspec colname="c2" colnum="2" colwidth="3.25*"/>
+                    <colspec colname="c3" colnum="3" colwidth="5.69*"/>
+                    <thead>
+                        <row valign="middle">
+                            <entry align="center" valign="middle">Item</entry>
+                            <entry>Indicator, button, or connector</entry>
+                            <entry>Description</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row valign="middle">
+                            <entry align="center" valign="middle">1</entry>
+                            <entry>Serial connector</entry>
+                            <entry align="left" valign="middle">Enables you to connect a  serial
+                                device to the system.</entry>
+                        </row>
+                        <row valign="middle">
+                            <entry align="center" valign="middle">2</entry>
+                            <entry>vFlash card slot (optional)</entry>
+                            <entry align="left" valign="middle">Enables you to connect the vFlash
+                                card.</entry>
+                        </row>
+                        <row valign="middle">
+                            <entry align="center" valign="middle">3</entry>
+                            <entry>iDRAC port</entry>
+                            <entry align="left" valign="middle">Enables you to install a dedicated
+                                management port card.</entry>
+                        </row>
+                        <row valign="middle">
+                            <entry align="center" valign="middle">4</entry>
+                            <entry>Power supply unit </entry>
+                            <entry align="left" valign="middle">Enables you to install up to two 350
+                                W AC PSU.</entry>
+                        </row>
+                        <row valign="middle">
+                            <entry align="center" valign="middle">5</entry>
+                            <entry>USB connectors</entry>
+                            <entry align="left" valign="middle">Enable you to connect USB devices to
+                                the system. The port is USB 3.0-compliant.</entry>
+                        </row>
+                        <row valign="middle">
+                            <entry align="center" valign="middle">6</entry>
+                            <entry>Ethernet connectors</entry>
+                            <entry align="left" valign="middle">Enable you to connect integrated
+                                10/100/1000 Mbps NIC connector.</entry>
+                        </row>
+                        <row valign="middle">
+                            <entry align="center" valign="middle">7</entry>
+                            <entry>System identification button</entry>
+                            <entry align="left" valign="middle">Enables you to locate a particular
+                                system within a rack. The identification buttons are on the front
+                                and back panels. When one of these buttons is pressed, the LCD panel
+                                on the front and the system status indicator on the back flash until
+                                one of the buttons is pressed again.<p>Press the button to turn the
+                                    system ID on or off. If the system stops responding during POST,
+                                    press and hold the system ID button for more than five seconds
+                                    to enter BIOS progress mode.</p><p>To reset the iDRAC (if not
+                                    disabled in F2 iDRAC setup) press and hold the button for more
+                                    than 15 seconds.</p></entry>
+                        </row>
+                        <row valign="middle">
+                            <entry align="center" valign="middle">8</entry>
+                            <entry>System identification connector</entry>
+                            <entry align="left" valign="middle">Connects the optional system status
+                                indicator assembly through the optional cable management
+                                arm.</entry>
+                        </row>
+                        <row valign="middle">
+                            <entry align="center" valign="middle">9</entry>
+                            <entry>Video connector</entry>
+                            <entry align="left" valign="middle">Enables you to connect a VGA display
+                                to the system.</entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+        </section>
+    </conbody>
+</concept>

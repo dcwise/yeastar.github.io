@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_ud3_43r_bdb">
+    <title>Park Calls by BLF</title>
+    <shortdesc>You can set a BLF key of Call Parking on your phone. The BLF key will show the
+        real-time status of the parking slot. If the parking slot is vacant, you can press the BLF
+        key to park a call to the parking slot.</shortdesc>
+    <taskbody>
+        <context>
+            <p>We take Yealink T27G v69.82.0.20 as an example below.</p>
+        </context>
+        <steps id="steps_qfm_cjr_bdb">
+            <step>
+                <cmd>Log in the phone web interface, go to <uicontrol>Dsskey</uicontrol> page.</cmd>
+            </step>
+            <step>
+                <cmd>Set the BLF key as below. </cmd>
+                <info><image href="../Images/user/blf_direct_call_parking.png"
+                        id="image_jhz_11r_bdb"/></info>
+                <choices id="choices_rfm_cjr_bdb">
+                    <choice><uicontrol>Type</uicontrol>: Select <uicontrol>BLF</uicontrol>.</choice>
+                    <choice><uicontrol>Value</uicontrol>: Enter the parking slot number.</choice>
+                    <choice><uicontrol>Line</uicontrol>: Select the line where your extension is
+                        registered on.</choice>
+                    <choice><uicontrol>Extension</uicontrol>: Enter the feature code of  Direct Call
+                        Parking. The default code is *06.</choice>
+                </choices>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Confirm</uicontrol>.</cmd>
+            </step>
+        </steps>
+        <result id="result_rwb_2br_bdb">
+            <ul id="ul_gyj_mjr_bdb">
+                <li>When the parking slot is vacant, the BLF LED is green.<p>Press the BLF key to
+                        park a call to the parking slot.</p></li>
+                <li>When the parking slot is occupied, the BLF LED is red.</li>
+            </ul>
+        </result>
+    </taskbody>
+</task>

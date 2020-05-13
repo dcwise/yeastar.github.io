@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="manage-company-contacts">
+    <title>Manage Company Contacts</title>
+    <shortdesc>This topic describes how to add, edit, delete, import, and export company contacts on
+        PBX web page. </shortdesc>
+    <body>
+        <section id="section_srl_k12_skb">
+            <title>Requirements</title>
+            <p>Only the PBX administrator and the authorized users can manage Company Contacts.</p>
+            <p>For more information of Company Contacts permissions, see <xref
+                    href="configure-company-contacts-permissions-for-users.dita"/>.</p>
+        </section>
+        <section id="section_pkn_yb2_5kb"
+                ><?oxy_comment_start author="Becky" timestamp="20200422T101508+0800" comment="改"?><title>Operation
+                permissions</title><?oxy_comment_end?>The authorized users can
+            <?oxy_insert_start author="Becky" timestamp="20200422T101513+0800"?>view or
+            <?oxy_insert_end?>manage company contacts on both Web and Linkus,
+            <?oxy_insert_start author="Becky" timestamp="20200422T101537+0800"?>or view company
+            contact on an IP
+                phone<?oxy_insert_end?><?oxy_delete author="Becky" timestamp="20200422T101549+0800" content="but the operation permissions are different"?>.<p><?oxy_comment_start author="Becky" timestamp="20200422T101659+0800" comment="改"?>For
+                more information of Contacts on Linkus, see <xref
+                    href="https://help.yeastar.com/en/linkus_client/topic/how-to-add-a-contact-pc.html"
+                    format="html" scope="external">Linkus FAQ</xref>.</p><p>For more information of
+                Contacts on an IP phone, see <xref href="query-and-use-contacts-on-ip-phone.dita"
+                />.<?oxy_comment_end?></p><p>
+                <table frame="all" rowsep="1" colsep="1" id="table_d22_dc2_5kb">
+                    <tgroup cols="4">
+                        <colspec colname="c1" colnum="1" colwidth="1.42*"/>
+                        <colspec colname="c2" colnum="2" colwidth="1*"/>
+                        <colspec colname="c3" colnum="3" colwidth="1.21*"/>
+                        <colspec colname="newCol4" colnum="4" colwidth="1*"/>
+                        <thead>
+                            <row>
+                                <entry>Operations</entry>
+                                <entry>Web</entry>
+                                <entry>Linkus</entry>
+                                <entry>IP phone</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <?oxy_comment_start author="Becky" timestamp="20200422T101745+0800" comment="+"?>
+                            <row>
+                                <entry>View</entry>
+                                <entry>√</entry>
+                                <entry>√</entry>
+                                <entry>√</entry>
+                            </row><?oxy_comment_end?>
+                            <row>
+                                <entry>Add</entry>
+                                <entry>√</entry>
+                                <entry>√</entry>
+                                <entry>×</entry>
+                            </row>
+                            <row>
+                                <entry>Edit</entry>
+                                <entry>√</entry>
+                                <entry>√</entry>
+                                <entry>×</entry>
+                            </row>
+                            <row>
+                                <entry>Delete</entry>
+                                <entry>√</entry>
+                                <entry>√</entry>
+                                <entry>×</entry>
+                            </row>
+                            <row>
+                                <entry>Export</entry>
+                                <entry>√</entry>
+                                <entry>×</entry>
+                                <entry>×</entry>
+                            </row>
+                            <row>
+                                <entry>Import</entry>
+                                <entry>√</entry>
+                                <entry>×</entry>
+                                <entry>×</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p></section>
+        <section id="section_ilg_1db_skb">
+            <title>Add a company contact</title>
+        </section>
+        <p>
+            <ol>
+                <li>Go to <menucascade>
+                        <uicontrol>Contacts</uicontrol>
+                        <uicontrol>Company Contacts</uicontrol>
+                    </menucascade>.</li>
+                <li>Click <uicontrol>Add</uicontrol>.</li>
+                <li>Enter the contact information.<p>
+                        <note>The <uicontrol>First Name</uicontrol>, <uicontrol>Last
+                                Name</uicontrol> are required fields, and at least one number is
+                            required.</note>
+                    </p></li>
+                <li>Click <uicontrol>Save</uicontrol>.</li>
+            </ol>
+        </p>
+        <section id="section_pft_n2b_skb">
+            <title>Edit a company contact</title>
+            <p>
+                <ol>
+                    <li>Go to <menucascade>
+                            <uicontrol>Contacts</uicontrol>
+                            <uicontrol>Company Contacts</uicontrol>
+                        </menucascade>.</li>
+                    <li>Select a contact, and click <image href="../Images/ui_icons/edit.png"
+                            width="20" id="image_acs_4gb_skb"/>.</li>
+                    <li>Edit the contact information.</li>
+                    <li>Click <uicontrol>Save</uicontrol>.</li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_qlm_fgb_skb">
+            <title>Delete company contacts</title>
+            <p>
+                <ol>
+                    <li>Go to <menucascade>
+                            <uicontrol>Contacts</uicontrol>
+                            <uicontrol>Company Contacts</uicontrol>
+                        </menucascade>.</li>
+                    <li>To delete a single contact, select the contact and click <image
+                            href="../Images/admin/delete-ldap-phonebook.png" id="image_xlz_flb_skb"
+                        />.</li>
+                    <li>To delete multiple contacts, select the checkboxes of the desired contacts,
+                        and click <uicontrol>Delete</uicontrol>.</li>
+                </ol>
+            </p>
+        </section>
+        <section id="export-company-contacts">
+            <title>Export company contacts</title>
+        </section>
+        <p>
+            <ol id="ol_bt3_14b_skb">
+                <li>Go to <menucascade>
+                        <uicontrol>Contacts</uicontrol>
+                        <uicontrol>Company Contacts</uicontrol>
+                    </menucascade>.</li>
+                <li>Click <uicontrol>Export</uicontrol>.<p>All the contacts will be exported to a
+                        CSV file. </p></li>
+            </ol>
+        </p>
+        <section id="section_c3x_4fb_skb">
+            <title>Import company contacts</title>
+            <p><b>Before you begin</b></p>
+            <p>
+                <ul id="ul_qms_rpb_skb">
+                    <li>Prepare a CSV file<p>To import contacts, you can <xref
+                                href="#manage-company-contacts/export-company-contacts"
+                                format="dita">export contacts</xref> to a CSV file. </p><p>Use the
+                            CSV file as a template, save your data in the same format. For the data
+                            requirements in the CSV file, see <xref
+                                href="../references/import-parameters-contacts.dita#import-parameters-contacts"
+                            />.</p></li>
+                </ul>
+            </p>
+            <p>
+                <ol>
+                    <li>Go to <menucascade>
+                            <uicontrol>Contacts</uicontrol>
+                            <uicontrol>Company Contacts</uicontrol>
+                        </menucascade>.</li>
+                    <li>Click <uicontrol>Import</uicontrol>.</li>
+                    <li>In the pop-up dialog, click <uicontrol>Browse</uicontrol>, and select your
+                        CSV file.</li>
+                    <li>Click <uicontrol>Import</uicontrol>.<p>If the contact data is imported
+                            successfully, the web page will display the following
+                                confirmation.</p><p><image
+                                href="../Images/admin/import-successfully.png"
+                                id="image_e13_phg_skb"/></p><p>If you get an error prompt like the
+                            following figure, click <uicontrol>Yes</uicontrol> to check the log and
+                            update your data in the CSV file.</p><p><image
+                                href="../Images/admin/extension_import_error.png"
+                                id="image_nr4_xh5_qfb"/></p></li>
+                </ol>
+            </p>
+        </section>
+    </body>
+</topic>

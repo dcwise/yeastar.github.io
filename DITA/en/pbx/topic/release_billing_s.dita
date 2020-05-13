@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_yjc_ngn_jdb">
+  <title>Billing</title>
+  <shortdesc>Release notes for Billing App on Yeastar S-Series VoIP PBX.</shortdesc>
+  <body>
+    <section id="section_z35_y4v_hlb">
+      <title>Version 1.2.6</title>
+      <p><ph conref="v30.13.0.30.dita#v30.13.0.b/date"/></p>
+      
+    </section>
+    <ul id="ul_nvk_lsv_hlb">
+      <li conref="v30.13.0.30.dita#v30.13.0.b/italian-language"/>
+    </ul>
+    <section id="section_owr_14j_tkb">
+      <title>Version 1.2.4</title>
+      <p>Released Date: February, 2020<ul id="ul_tfd_c4j_tkb">
+          <li>Fixed the billing issue: The <uicontrol>Hangup with Insufficient Balance</uicontrol>
+            was enabled, but the system didn't hang up the call when the extension or account had
+            insufficient balance. </li>
+          <li>Fixed the CDR issue: The data in CSV file that was downloaded from web page was
+            incorrect.</li>
+          <li>Fixed the CDR issue: After filtering call logs, the <uicontrol>Extension</uicontrol>
+            column was not displayed on the web page.</li>
+        </ul></p>
+    </section>
+    <section id="section_pxl_mtj_yjb">
+      <title>Version 1.2.1</title>
+      <p>Released Date: December 12, 2019</p>
+      <p>
+        <ul>
+          <li>Fixed the billing issue: No billing record for the inbound call that was transferred
+            to an extension.</li>
+          <li>Fixed the CDR issue: The call logs didn't display the billing information.</li>
+          <li>Optimized the mechanism of applying configuration changes to improve the system
+              stability.<ul id="ul_gqc_5tj_yjb">
+              <li>You don't need to click <uicontrol>Apply</uicontrol> button to reload Asterisk if
+                you save unchanged configurations.</li>
+              <li>If no <uicontrol>Apply</uicontrol> button appears after you save some specific
+                configuration changes, then the configurations can be saved without reloading
+                Asterisk.</li>
+            </ul></li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_uh2_cxk_5gb">
+      <title>Version 1.1.5</title>
+      <p>Released Date: February 25, 2019</p>
+      <p>
+        <ul>
+          <li>Added support for Russian web UI.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_sb3_mmp_kfb">
+      <title>Version 1.1.4</title>
+      <p>Released Date: October 18, 2018</p>
+      <p>
+        <ul id="ul_zyz_nmp_kfb">
+          <li>Optimized <xref
+              href="../references/import_parameters_billing.dita#reference_frv_hk3_mfb">Billing Rate
+              Import</xref> function.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_w1b_4nj_pdb">
+      <title>Version 1.1.0</title>
+      <p>Released Date: March 20, 2018</p>
+      <p>
+        <ul id="ul_irz_pnj_pdb">
+          <li>Optimized the billing for transferred calls.</li>
+          <li>Fixed the issue that Billing Rate setting could not work properly on Spanish web
+            interface.</li>
+          <li>Fixed the issue that if Billing function was enabled, the PBX could not forward calls
+            to external numbers.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_cyd_qnj_pdb">
+      <title>Version 1.0.21</title>
+      <p>Released Date: December 27, 2017</p>
+      <p>
+        <ul id="ul_tvb_snj_pdb">
+          <li>The administrator can configure whether to disconnect a user’s call if the user’s
+            balance is insufficient. </li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_s3h_snj_pdb">
+      <title>Version 1.0.15</title>
+      <p>Released Date: July 13, 2017</p>
+      <p>
+        <ul id="ul_s3m_5nj_pdb">
+          <li>Added German Billing system Web GUI.</li>
+          <li>Updated Italian Billing system Web GUI.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_kqq_5nj_pdb">
+      <title>Version 1.0.13</title>
+      <p>Released Date: March 30, 2017</p>
+      <p>
+        <ul id="ul_tq3_xnj_pdb">
+          <li>Updated Russian Billing system Web GUI.</li>
+          <li>Fixed the issue that information of encryption chip would be lost if billing App is
+            enabled.</li>
+        </ul>
+      </p>
+    </section>
+  </body>
+</topic>

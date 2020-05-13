@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_gdd_511_hfb">
+    <title>1) Create &amp; Attach a Cloud Disk to YMP Instance</title>
+    <shortdesc>You can create a cloud disk to work as a data disk to store recording
+        files.</shortdesc>
+    <taskbody>
+        <context>
+            <p>
+                <note type="important">Do NOT place any other files to the cloud disk,  or your
+                    recording files will be lost.</note>
+            </p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Create a cloud disk.</cmd>
+                <info>
+                    <note>Make sure that the cloud disk and YMP instance are in the same region and
+                        zone.</note>
+                </info>
+                <substeps>
+                    <substep>
+                        <cmd>Log on to the <xref
+                                href="https://ecs.console.aliyun.com/?spm=a2c4g.11186623.2.9.FNEORG#/home"
+                                format="html" scope="external">ECS console</xref>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>In the left-side navigation pane, select <menucascade>
+                                <uicontrol>Block Storage</uicontrol>
+                                <uicontrol>Disks</uicontrol>
+                            </menucascade>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>In the upper-right corner of the <b>Disk List</b> page, click <b>Create
+                                Disk</b>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>On the <uicontrol>Cloud Disk</uicontrol> page, configure the disk
+                            settings.</cmd>
+                        <info><image href="../Images/ymp/ali_create_cloud_disk.png"
+                                id="image_k1f_dr5_hfb" width="650"/></info>
+                        <info>
+                            <ul>
+                                <li><uicontrol>Region</uicontrol>: Select the same region and zone
+                                    as YMP instance.</li>
+                                <li><uicontrol>Cloud Disk</uicontrol>: Select <uicontrol>Ultra Cloud
+                                        Disk</uicontrol> and specify the disk size.<p>
+                                        <note type="restriction">Minimum 50GB Storage
+                                            Capacity.</note>
+                                    </p><p>
+                                        <note>1 GB (Storage Capacity) = 1000 minutes (Recording
+                                            Time)</note>
+                                    </p><p>
+                                        <ul id="ul_b21_jn1_hfb">
+                                            <li><uicontrol>Quantity</uicontrol>: Set to
+                                                  <codeph>1</codeph>.</li>
+                                            <li><uicontrol>Disk Name</uicontrol>: Specify the disk
+                                                name to help you identify it.</li>
+                                        </ul>
+                                    </p></li>
+                                <li><uicontrol>Terms of Service</uicontrol>: Check the option
+                                        <uicontrol>ECS Service Level Agreement</uicontrol>.</li>
+                            </ul>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Click <uicontrol>Preview</uicontrol> to check the information.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Click <uicontrol>Create</uicontrol> to confirm your order and make the
+                            payment.</cmd>
+                    </substep>
+                </substeps>
+                <stepresult>Go back to the <b>Disks</b> page and refresh it, the new cloud disk will
+                    be displayed.</stepresult>
+            </step>
+            <step>
+                <cmd>Attach the new create cloud disk to the YMP instance.</cmd>
+                <substeps>
+                    <substep>
+                        <cmd>On the <uicontrol>Disk</uicontrol> page, find the cloud disk, and in
+                            the <uicontrol>Actions</uicontrol> column, select <menucascade>
+                                <uicontrol>More</uicontrol>
+                                <uicontrol>Mount</uicontrol>
+                            </menucascade>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>In the dialog box, complete the following configurations and click
+                                <uicontrol>Mount</uicontrol>.</cmd>
+                        <info><image href="../Images/ymp/ali_mount_disk_to_ymp.png"
+                                id="image_jx4_lq1_hfb"/></info>
+                        <info>
+                            <p>
+                                <ul id="ul_hq3_bq1_hfb">
+                                    <li><b>Target Instance</b>: Select the YMP instance.</li>
+                                    <li><b>Release Mode</b>: Do not check the option
+                                            <uicontrol>Release Disk with Instance</uicontrol> and
+                                            <uicontrol>Delete Automatic Snapshots While Releasing
+                                            Disk</uicontrol>.</li>
+                                </ul>
+                            </p>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Refresh the disk list.</cmd>
+                        <info>
+                            <p>When the status of the cloud disk is <b>In Use</b>, the attachment is
+                                successful.</p>
+                        </info>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>After you create and attach a new disk to YMP instance, you must <xref
+                        href="ali_format_mount_a_data_disk.dita">format and mount the disk </xref>to
+                    make the disk ready for use.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

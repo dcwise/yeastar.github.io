@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_b5h_tfm_tcb">
+    <title>Auto Provision Contacts</title>
+    <shortdesc>You can add contacts on the PBX, and auto provision the contacts to the users'
+        phones.</shortdesc>
+    <taskbody>
+        <context>
+            <p>
+                <note>
+                    <ul id="ul_ktt_hgm_tcb">
+                        <li>After auto provisioning contacts to the users' phones, the existing
+                            contacts on their phones will disappear.</li>
+                        <li>Auto provisioning contacts only works for the phones that were
+                            registered to the PBX via auto provisioning.</li>
+                        <li>If you have uploaded a phonebook to the PBX, the PBX will auto provision
+                            the contacts in the phonebook, and ignore the contacts that you add in
+                            the PBX.</li>
+                    </ul>
+                </note>
+            </p>
+        </context>
+        <steps id="steps_z2l_ggm_tcb">
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Auto Provisioning</uicontrol>
+                        <uicontrol>Phonebook</uicontrol>
+                        <uicontrol>Contact</uicontrol>
+                    </menucascade>.</cmd>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Add</uicontrol> to add a contact.</cmd>
+            </step>
+            <step>
+                <cmd>On the configurations page, set the contact's information.</cmd>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Reboot the phone(s) and update contacts.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+    <related-links>
+        <link href="auto_provision_phonebook.dita#task_os5_5ny_scb"/>
+    </related-links>
+</task>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+ <title/>
+ <topicmeta>
+  <author type="contributor">Carol</author>
+  <critdates>
+   <!--Carol-->
+   <revised modified="2018/08/21"/>
+   <!--Carol-->
+   <revised modified="2018/08/22"/>
+   <!--Carol-->
+   <revised modified="2018/08/24"/>
+   <!--Carol-->
+   <revised modified="2018/09/06"/>
+   <!--Carol-->
+   <revised modified="2018/09/07"/>
+   <!--Carol-->
+   <revised modified="2018/09/11"/>
+   <!--Carol-->
+   <revised modified="2018/09/12"/>
+   <!--Carol-->
+   <revised modified="2018/09/25"/>
+   <!--Carol-->
+   <revised modified="2018/10/17"/>
+  </critdates>
+ </topicmeta>
+ <topicref href="topic/extension_user_guide.dita" print="printonly"/>
+ <topicref href="topic/extension_user_portal.dita">
+  <topicref href="topic/log_in_extension_user_portal_cloud.dita" product="cloudpbx"/>
+  <topicref href="topic/log_in_extension_user_portal_s.dita" product="s-series"/>
+  <topicref href="topic/log_in_extension_user_portal_oem.dita" product="OEM"/>
+  <topicref href="topic/change_your_user_login_password.dita"/>
+ </topicref>
+ <topicref href="topic/configure_your_extension_settings.dita">
+  <topicref href="topic/modify_your_information.dita" product="cloudpbx s-series"/>
+  <topicref href="topic/log_in_linkus_via_qr_code_user.dita" product="cloudpbx s-series"/>
+  <topicref href="topic/modify_your_information_oem.dita" product="OEM"/>
+  <topicref href="topic/set_up_call_forwarding_for_your_extension_oem.dita" product="OEM"/>
+  <topicref href="topic/configure_your_mobility_extension.dita" product="OEM s-series"/>
+  <topicref href="topic/enable_disable_dnd.dita" product="OEM"/>
+  <topicref href="topic/enable_disable_call_waiting.dita" product="OEM"/>
+  <topicref href="topic/change_ring_time_of_your_extension.dita"/>
+  <topicref href="topic/check_your_route_permission.dita"/>
+ </topicref>
+ <topicref href="topic/manage_your_presence.dita" product="cloudpbx s-series">
+  <topicref href="topic/configure_your_presence_settings.dita"/>
+  <topicref href="topic/switch_your_presence_status.dita"/>
+ </topicref>
+ <topicref href="topic/manage_calls_on_your_extension.dita">
+  <topicref href="topic/block_incoming_outgoing_numbers.dita"/>
+  <topicref href="topic/add_trusted_numbers.dita"/>
+ </topicref>
+ <topicref href="topic/manage_your_voicemail.dita">
+  <topicref href="topic/configure_your_voicemail_settings.dita"/>
+  <topicref href="topic/check_and_manage_your_voicemail_messages.dita"/>
+ </topicref>
+ <topicref href="topic/cdr_and_one_touch_recordings.dita">
+  <topicref href="topic/search_cdr_and_one_touch_recordings.dita"/>
+  <topicref href="topic/fuzzy_search_cdr_and_one_touch_recordings.dita"/>
+  <topicref href="topic/download_cdr_and_one_touch_recordings.dita"/>
+ </topicref>
+ <keydef keys="product_name" product="s-series">
+  <topicmeta>
+   <keywords>
+    <keyword>Yeastar S-Series VoIP PBX</keyword>
+   </keywords>
+  </topicmeta>
+ </keydef>
+ <keydef keys="product_name" product="cloudpbx">
+  <topicmeta>
+   <keywords>
+    <keyword>Yeastar Cloud PBX</keyword>
+   </keywords>
+  </topicmeta>
+ </keydef>
+</map>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_n3s_q1c_5cb">
+    <title>Register Htek Phone with <ph keyref="product_name"/></title>
+    <shortdesc>This article is based on Htek UC903 and <ph keyref="product_name"/>
+        <ph product="cloudpbx">v81.8.0.7</ph><ph product="s-series">v30.8.0.14</ph>.</shortdesc>
+    <taskbody>
+        <context id="context_kcs_41h_ycb">This article is applicable to the Htek UC series 802, 803,
+            804, 840, 842, 806, 862, 902, 903, 923, 924, 926.<p id="different_phone_web">
+                <note> For the IP phone with different firmware version, the web GUI may be
+                    different.</note>
+            </p></context>
+        <steps id="steps_jg1_lmh_ycb">
+            <step>
+                <cmd>Log in the web page of the phone.</cmd>
+                <choices>
+                    <choice><uicontrol>Username</uicontrol>: admin</choice>
+                    <choice><uicontrol>Password</uicontrol>: admin</choice>
+                </choices>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Account</uicontrol> tab, choose one account to
+                    configure.</cmd>
+                <info><image href="../Images/admin/register_htek1.png" id="image_vf5_5mh_ycb"
+                    /></info>
+                <choices>
+                    <choice><uicontrol>Account</uicontrol>: Select one account to
+                        configure.</choice>
+                    <choice><uicontrol>Account Active</uicontrol>: Yes</choice>
+                    <choice><uicontrol>Primary SIP Server</uicontrol>: Fill in the domain<ph
+                            product="s-series"> or IP address</ph> of your PBX.</choice>
+                    <choice><uicontrol>SIP Transport</uicontrol>: Choose the same transport of the
+                        PBX. The default SIP transport on the PBX is UDP.</choice>
+                    <choice><uicontrol>Label</uicontrol>: Set the name you want to appear on the
+                        phone screen.</choice>
+                    <choice><uicontrol>SIP User ID</uicontrol>: Fill in the extension
+                        number.</choice>
+                    <choice><uicontrol>Authentication ID</uicontrol>: Fill in the extension's
+                            <uicontrol>Registration Name</uicontrol>.</choice>
+                    <choice><uicontrol>Authentication Password</uicontrol>: Fill in the extension's
+                            <uicontrol>Registration Password</uicontrol>.</choice>
+                    <choice><uicontrol>Name</uicontrol>: The local phone name showing on the other
+                        phone when calling out.</choice>
+                </choices>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save Set</uicontrol>.</cmd>
+                <info>If the extension is registered, the page will show "Registered".</info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

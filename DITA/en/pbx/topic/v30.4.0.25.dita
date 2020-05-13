@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_usz_n4k_jdb">
+  <title>Version 30.4.0.25</title>
+  <abstract>Released Date: May 23, 2017</abstract>
+  <prolog>
+    <critdates>
+      <!--Carol-->
+      <revised modified="2018/06/20"/>
+    </critdates>
+  </prolog>
+  <body>
+    <section id="section_oln_b5k_jdb">
+      <title>Upgrade Notes</title>
+      <p>In this new firmware version, we enhanced the IPPBX security. This security update has many
+        features that will make your Yeastar S-Series IPPBX more secure and protect it from attacks.
+        We recommend you update the firmware as soon as possible.</p>
+    </section>
+    <section id="section_nyk_p4g_jdb">
+      <title>New Feature</title>
+      <p><image href="../Images/horizon.png" id="image_ywr_rzv_pdb"/></p>
+      <p>
+        <ul id="ul_zjs_r4g_jdb">
+          <li>Added schedule reboot feature (Maintenance > Reboot).</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_gzb_54g_jdb">
+      <title>Optimization</title>
+      <p><image href="../Images/horizon.png" id="image_img_szv_pdb"/></p>
+      <p>
+        <ul id="ul_xxm_f5k_jdb">
+          <li>Optimized outbound route security: the administrator can limit how many outbound calls
+            the extension users can make during a specific time (Settings > PBX > Call Control >
+            Outbound Restriction). </li>
+          <li>Optimized network setting: LAN port supports up to 2 IP addresses.</li>
+          <li>Optimized firewall feature: users can add firewall rules using domain names. </li>
+          <li>Optimized IP Auto Defense feature: users can add a rule for a port range.</li>
+          <li>Optimized Local SIP Port: the system has a default IP auto defense rule for the local
+            SIP ports.</li>
+          <li>Optimized extension registration security: only the registered extension can dial out,
+            direct IP call is forbidden.</li>
+          <li>Optimized extension registration security: added support for user agent registration
+            authorization (Settings > General > SIP > Advanced > SIP > User Agent Registration
+            Authorization). Fill in user agent prefixes in the User Agent Registration Authorization
+            field, only the matched user agent can register extension to the IPPBX.</li>
+          <li>Optimized extension/trunk registration security: the system will not reply OPTIONS
+            packets from unknown extensions or trunks.</li>
+          <li>Optimized Forgot Password feature: users need to provide correct extension number and
+            extension email address to retrieve password.</li>
+          <li>Optimized extension User Password setting: the User Password can only be changed to a
+            mixture of uppercase, lowercase and numbers.</li>
+          <li>Optimized Logs feature: users can download operation logs and event logs.</li>
+          <li>Optimized Logs Auto Cleanup feature: users can set the max size of total logs stored
+            in the system.</li>
+          <li>Optimized CDR feature: users can choose to show “Caller IP Address” in the CDR
+            logs.</li>
+          <li>Optimized System Logs: extension registration failed information will be recorded in
+            system logs.</li>
+          <li>Optimized QueueMetrics Live Integration App: the recording files name will contain
+            QueueMetrics UniqueID.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_cmm_x4g_jdb">
+      <title>Fixed Bug</title>
+      <p><image href="../Images/horizon.png" id="image_ezd_tzv_pdb"/></p>
+      <p>
+        <ul id="ul_rb2_h5k_jdb">
+          <li>Fixed Operation Logs issue: if users edited extensions in bulk, the operation logs
+            would not contain what settings the users had edited.</li>
+          <li>Fixed Queue: the call duration time was incorrect.</li>
+          <li>Fixed Queue: “Ring in Use” was disabled, and the queue strategy wasn’t “Ring All”, but
+            the agent who was in a call still could receive a new call.</li>
+          <li>Fixed the Ring Group: if there were more than 50 members in the group, and the ring
+            strategy was “Ring All”, the system would not ring all the members if a call reached the
+            ring group.</li>
+        </ul>
+      </p>
+    </section>
+  </body>
+</topic>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="reference_zpq_ppl_x2b">
+    <title>Recommended Instance Type - AWS </title>
+    <shortdesc>Read the recommended instance type and decide which instance type to choose. </shortdesc>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/08/24"/>
+            <!--Carol-->
+            <revised modified="2018/10/17"/>
+        </critdates>
+    </prolog>
+    <refbody>
+        <section id="section_rfc_fql_x2b">
+            <title>Recommended Instance - AWS</title>
+            <p>
+                <table frame="all" rowsep="1" colsep="1" id="table_dpq_hql_x2b">
+                    <tgroup cols="4">
+                        <colspec colname="c1" colnum="1" colwidth="1.26*"/>
+                        <colspec colname="c2" colnum="2" colwidth="1.55*"/>
+                        <colspec colname="c3" colnum="3" colwidth="1*"/>
+                        <colspec colname="c4" colnum="4" colwidth="1.26*"/>
+                        <tbody>
+                            <row>
+                                <entry><uicontrol>Server Type</uicontrol></entry>
+                                <entry><uicontrol>Instance Type</uicontrol></entry>
+                                <entry><b>Storage </b><p><b>(Root Device)</b></p></entry>
+                                <entry><b>Storage </b><p><b>(<xref
+                                                href="aws_set_up_ebs_volume_for_call_recording.dita#topic_d4t_nnf_hfb"
+                                                >EBS Volume for Call
+                                    Recording)</xref></b></p></entry>
+                            </row>
+                            <row>
+                                <entry>SBC</entry>
+                                <entry>c5.xlarge 4 vCPU 8 GB</entry>
+                                <entry>40 GB</entry>
+                                <entry>N/A</entry>
+                            </row>
+                            <row>
+                                <entry>YMP (50 CC) </entry>
+                                <entry>c5.large 2 vCPU 4 GB</entry>
+                                <entry>50 GB</entry>
+                                <entry>Minimum 50GB</entry>
+                            </row>
+                            <row>
+                                <entry>YMP (100 CC)</entry>
+                                <entry>c5.xlarge 4 vCPU 8 GB</entry>
+                                <entry>100 GB</entry>
+                                <entry>Minimum 50GB</entry>
+                            </row>
+                            <row>
+                                <entry>YMP (200 CC-300 CC)</entry>
+                                <entry>c5.2xlarge 8 vCPU 16 GB</entry>
+                                <entry>200 GB </entry>
+                                <entry>Minimum 50GB</entry>
+                            </row>
+                            <row>
+                                <entry>YMP (400 CC-500 CC)</entry>
+                                <entry>c5.4xlarge 16 vCPU 32 GB</entry>
+                                <entry>400GB</entry>
+                                <entry>Minimum 50GB</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+    </refbody>
+</reference>

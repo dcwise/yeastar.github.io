@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_gvs_y5z_gfb">
+    <title>Step5. Set up Data Disk for Call Recording </title>
+    <shortdesc>The recording files that are made on customers' PBXs will be stored on your YMP
+        server, you need to create a data disk on your YMP server. </shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/09/27"/>
+            <!--Carol-->
+            <revised modified="2018/09/27"/>
+            <!--Carol-->
+            <revised modified="2018/10/17"/>
+        </critdates>
+    </prolog>
+    <body>
+        <p>
+            <note>The recording files are encrypted and only the PBX users can play the recording
+                files.</note>
+        </p>
+    </body>
+</topic>

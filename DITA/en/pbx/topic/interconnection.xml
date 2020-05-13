@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="integration">
+    <title>Solution &amp; Interoperability </title>
+    <shortdesc>Integrate or interconnect  the Yeastar <ph product="cloudpbx">Cloud PBX</ph><ph
+            product="s-series">S-Series VoIP PBX</ph> with other devices or
+        applications.</shortdesc>
+    <conbody>
+        <p></p>
+    </conbody>
+</concept>

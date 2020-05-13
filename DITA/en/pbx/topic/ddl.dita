@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE glossgroup PUBLIC "-//OASIS//DTD DITA Glossary Group//EN" "glossgroup.dtd">
+<glossgroup id="ddl">
+    <title>ddl</title>
+    <glossentry id="glossentry_rrm_blc_y3b">
+        <glossterm>PBX</glossterm>
+        <glossdef/>
+    </glossentry>
+    <glossentry id="glossentry_x5g_blc_y3b">
+        <glossterm>Gateway</glossterm>
+        <glossdef>
+            <p><term>aaa</term></p>
+            <p><term>bbb</term></p>
+            <p><term>ccc</term></p>
+        </glossdef>
+    </glossentry>
+</glossgroup>

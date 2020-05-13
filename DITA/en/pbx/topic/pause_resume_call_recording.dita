@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_ovn_qjt_gfb">
+    <title>Pause/Resume Auto Recording</title>
+    <shortdesc>During an external call, the extension user can pause the Auto Recording and then
+        resume the Auto Recording to avoid the sensitive personal information such as credit card
+        details being recorded.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/09/26"/>
+            <!--Carol-->
+            <revised modified="2018/09/26"/>
+            <!--Carol-->
+            <revised modified="2018/09/27"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <context>
+            <p>When you play the recording files, the paused part will be absent.</p>
+            <p>The default feature code to pause and resume Auto Recording is
+                    <userinput>*00</userinput>. </p>
+            <p>You can change the code in <menucascade>
+                    <uicontrol>Settings</uicontrol>
+                    <uicontrol>PBX</uicontrol>
+                    <uicontrol>General</uicontrol>
+                    <uicontrol>Feature Code</uicontrol>
+                    <uicontrol>Auto Recording Switch</uicontrol>
+                </menucascade>.</p>
+            <p><image href="../Images/admin/call_recording_switch.png" id="image_cj2_dpt_gfb"
+                    width="650"/></p>
+            <p>During an external call, the extension user can dial feature code to pause and resume
+                call recording.</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Dial <userinput>*00</userinput> to pause the call recording.</cmd>
+            </step>
+            <step>
+                <cmd>Dial <userinput>*00</userinput> again to resume the call recording. </cmd>
+            </step>
+        </steps>
+    </taskbody>
+    <related-links>
+        <link href="monitor-auto-recording-status.dita#task_ehm_4by_gfb"/>
+    </related-links>
+</task>

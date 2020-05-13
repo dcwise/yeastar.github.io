@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_zv2_tng_tdb">
+    <title>ISDN BRI Trunk Introduction</title>
+    <shortdesc>Basic rate interface (BRI) is an Integrated Services Digital Network (ISDN) access
+        method, typically used for home and small offices. </shortdesc>
+    <conbody>
+        <p>The BRI configuration provides 2 bearer channels (B channels) at 64 kbit/s each and 1
+            data channel (D channel) at 16 kbit/s. The B channels are used for voice or user data,
+            and the D channel is used for any combination of data, control/signalling, and X.25
+            packet networking.</p>
+    </conbody>
+</concept>
+<?oxy_options track_changes="on"?>

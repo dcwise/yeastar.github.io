@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="v80.12.0">
+    <title>Version 80.12.0.6</title>
+    <abstract>Released Date: December 12, 2019</abstract>
+    <body>
+        <note>This release note describes the changes from firmware version 80.5.0.29 to
+            80.12.0.6.</note>
+        <section>
+            <title>NEW FEATURES</title>
+            <dl>
+                <dlentry>
+                    <dt>Auto Backup</dt>
+                    <dd>
+                        <p>Added support for auto backup.</p>
+                        <p>Go to <menucascade>
+                                <uicontrol>Maintenance</uicontrol>
+                                <uicontrol> Backup and Restore</uicontrol>
+                            </menucascade>. click <uicontrol>Backup Schedule</uicontrol> to
+                            configure auto backup.</p>
+                        <p><image href="../Images/backup.png" width="650" id="image_fpp_mhw_vjb"
+                            /></p>
+                    </dd>
+                </dlentry>
+                <dlentry>
+                    <dt>Call Parking - Timeout Destination</dt>
+                    <dd>
+                        <p>Added support for configuring the timeout destination of <uicontrol>Call
+                                Parking</uicontrol>.</p>
+                        <p>Go to <menucascade>
+                                <uicontrol>Settings</uicontrol>
+                                <uicontrol> General</uicontrol>
+                                <uicontrol> Feature Code</uicontrol>
+                                <uicontrol> Call Parking </uicontrol>
+                            </menucascade> to configure the <uicontrol>Timeout
+                                Destination</uicontrol>.</p>
+                        <p>When a parked call hasn't been retrieved before the parking timeout, PBX
+                            will route the call to the designated destination.</p>
+                        <p>
+                            <ul id="ul_j5b_ysv_vjb">
+                                <li><uicontrol>Original Parker</uicontrol>: the call will be routed
+                                    to the Parker who parks this call.</li>
+                                <li><uicontrol>Extension</uicontrol>: the call will be routed to the
+                                    designated extension number.</li>
+                                <li><uicontrol>Extension's Voicemail</uicontrol>: the call will be
+                                    routed to the designated extension's voicemail.</li>
+                                <li><uicontrol>Custom Number</uicontrol>: the call will be routed to
+                                    the designated number.</li>
+                            </ul>
+                        </p>
+                    </dd>
+                </dlentry>
+                <dlentry>
+                    <dt>Recording Notifications</dt>
+                    <dd>
+                        <p>Added support for configuring different recording notifications of
+                            internal calls, inbound calls,outbound calls, and callback calls.</p>
+                        <p>Go to <menucascade>
+                                <uicontrol>Settings</uicontrol>
+                                <uicontrol> PBX</uicontrol>
+                                <uicontrol> Auto Recording</uicontrol>
+                            </menucascade> to configure the recording notifications.<ul
+                                id="ul_zv5_sqv_vjb">
+                                <li><uicontrol>Outbound Calls being Recorded Prompt</uicontrol>: If
+                                    the external call (outbound) has enabled call recording, this
+                                    prompt will notify the external party that the call is being
+                                    recorded.</li>
+                                <li><uicontrol>Inbound Calls being Recorded Prompt</uicontrol>: If
+                                    the external call (inbound) has enabled call recording, this
+                                    prompt will notify the external party that the call is being
+                                    recorded.</li>
+                                <li><uicontrol>Callback Calls being Recorded Prompt</uicontrol>: If
+                                    the external call (callback) has enabled call recording, this
+                                    prompt will notify the external party that the call is being
+                                    recorded. </li>
+                            </ul></p>
+                    </dd>
+                </dlentry>
+            </dl>
+            <dl>
+                <dlentry>
+                    <dt>Custom Reset options</dt>
+                    <dd>
+                        <p>Added support for configuring <uicontrol>Reset</uicontrol> options.</p>
+                        <p>Go to <menucascade>
+                                <uicontrol>Maintenance</uicontrol>
+                                <uicontrol> Reset</uicontrol>
+                            </menucascade> to configure the resetting options.<ul
+                                id="ul_znk_hsv_vjb">
+                                <li><uicontrol>Reset IP</uicontrol>: after the reset, the PBX's IP
+                                    address will be changed to 192.168.5.150.</li>
+                                <li><uicontrol>Reset CDR and Recording Files</uicontrol>: reset and
+                                    delete CDR, one-touch recordings, and auto recording files for
+                                    trunk, extension and conference calls.<note>the CDR and
+                                        recording files storied in external storage device(s) won't
+                                        be reset and deleted. Users can delete them
+                                    manually.</note></li>
+                                <li><uicontrol>Reset Backup Files</uicontrol>: reset and delete the
+                                    backup files.</li>
+                                <li><uicontrol>Reset Prompts</uicontrol>: reset and delete the
+                                    uploaded files for custom prompt.</li>
+                                <li><uicontrol>Reset Other System Settings</uicontrol>: reset other
+                                    system settings and logs, including system logs, event logs,
+                                    operation logs, etc. </li>
+                            </ul></p>
+                    </dd>
+                </dlentry>
+            </dl>
+        </section>
+        <section id="section_s33_w3v_vjb">
+            <title>OPTIMIZATION</title>
+            <p>
+                <dl>
+                    <dlentry>
+                        <dt>System Stability</dt>
+                        <dd>
+                            <ul>
+                                <li>Optimized the mechanism of applying configuration changes to
+                                    improve the system stability.<ul id="ul_s5q_kqb_wjb">
+                                        <li>You don't need to click Apply button to reload Asterisk
+                                            if you save unchanged configurations.</li>
+                                        <li>If no Apply button appears after you save some specific
+                                            configuration changes, then the configurations can be
+                                            saved without reloading Asterisk.</li>
+                                    </ul></li>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                    <dlentry>
+                        <dt>Trunk</dt>
+                        <dd>
+                            <ul id="ul_bxq_blv_vjb">
+                                <li>Optimized <uicontrol>SIP Peer Trunk</uicontrol>: Added
+                                        <uicontrol>Enable  SRTP</uicontrol> setting on the SIP Peer
+                                    Trunk.</li>
+                                <li>Fixed the issue of SIP trunk: If you created a SIP trunk by
+                                    template, the <uicontrol>DID Settings</uicontrol> could not
+                                    display on the SIP trunk created later.</li>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                    <dlentry>
+                        <dt>SIP Settings</dt>
+                        <dd>
+                            <ul id="ul_jtn_vlv_vjb">
+                                <li>Optimized <uicontrol>Session Timer</uicontrol> settings: If
+                                        <uicontrol>Session Timer</uicontrol> is enabled, the
+                                        <uicontrol>Session-Expires (s)</uicontrol> field and
+                                        <uicontrol>Min-SE (s)</uicontrol> field are required.</li>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                    <dlentry>
+                        <dt>Network</dt>
+                        <dd>
+                            <ul id="ul_ozw_nmv_vjb">
+                                <li>Fixed the <uicontrol>Static Route</uicontrol> issue: The static
+                                    routes were missing after rebooting the PBX.</li>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                    <dlentry>
+                        <dt>Call Transfer</dt>
+                        <dd>
+                            <ul id="ul_ly5_pmv_vjb">
+                                <li>Fixed the compatibility issue between <uicontrol>Call
+                                        Transfer</uicontrol> and <uicontrol>Multisite
+                                        Interconnect</uicontrol>: If <uicontrol>Multisite
+                                        Interconnect</uicontrol> was enabled, extension user could
+                                    not use feature code to transfer the call that was established
+                                    with an external user.</li>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                    <dlentry>
+                        <dt>CDR</dt>
+                        <dd>
+                            <ul id="ul_pdc_2nv_vjb">
+                                <li>Fixed the <uicontrol>CDR</uicontrol> issue: If an inbound call
+                                    from PSTN trunk to a Ring Group was unanswered, multiple records
+                                    of missed calls were generated in CDR.</li>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                    <dlentry>
+                        <dt>Prompt</dt>
+                        <dd>
+                            <ul id="ul_ft2_knv_vjb">
+                                <li>Optimized the <uicontrol>Custom Prompts</uicontrol> list: The
+                                    Custom Prompts list page supports for displaying maximum 127
+                                    custom prompt files.</li>
+                                <li>Fixed the <uicontrol>Notification</uicontrol> issue: The
+                                    notification "English System Prompt Upgrade success" displayed
+                                    on the PBX web page periodically even no system prompts was
+                                    upgrade.</li>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                    <dlentry>
+                        <dt>Auto Recording</dt>
+                        <dd>
+                            <p>
+                                <ul id="ul_ajz_4nv_vjb">
+                                    <li>To clearly distinguish Auto Recording and One-touch
+                                        Recording, renamed Recording and Call Recording to Auto
+                                            Recording.<p>Affected web UI:<ul id="ul_k25_k4v_vjb">
+                                                <li>Old Path: <menucascade>
+                                                  <uicontrol>Settings</uicontrol>
+                                                  <uicontrol> PBX</uicontrol>
+                                                  <uicontrol> Recording</uicontrol>
+                                                  </menucascade>.<p>New Path: <menucascade>
+                                                  <uicontrol>Settings</uicontrol>
+                                                  <uicontrol>PBX </uicontrol>
+                                                  <uicontrol> Auto Recording</uicontrol>
+                                                  </menucascade>.</p></li>
+                                                <li>Old Path: <menucascade>
+                                                  <uicontrol>Settings</uicontrol>
+                                                  <uicontrol> System</uicontrol>
+                                                  <uicontrol> Storage</uicontrol>
+                                                  <uicontrol> Preference</uicontrol>
+                                                  <uicontrol> Storage Locations</uicontrol>
+                                                  <uicontrol> Recording</uicontrol>
+                                                  </menucascade>.<p>New Path: <menucascade>
+                                                  <uicontrol>Settings</uicontrol>
+                                                  <uicontrol> System</uicontrol>
+                                                  <uicontrol> Storage</uicontrol>
+                                                  <uicontrol> Preference</uicontrol>
+                                                  <uicontrol> Storage Locations</uicontrol>
+                                                  <uicontrol> Auto Recording</uicontrol>
+                                                  </menucascade>.</p></li>
+                                                <li>Old Path: <menucascade>
+                                                  <uicontrol>Settings</uicontrol>
+                                                  <uicontrol> System</uicontrol>
+                                                  <uicontrol> Auto Cleanup</uicontrol>
+                                                  <uicontrol> Recordings Auto Cleanup</uicontrol>
+                                                  </menucascade>.<p>New Path: <menucascade>
+                                                  <uicontrol>Settings</uicontrol>
+                                                  <uicontrol> System</uicontrol>
+                                                  <uicontrol> Auto Cleanup</uicontrol>
+                                                  <uicontrol> Auto Recordings Auto
+                                                  Cleanup</uicontrol>
+                                                  </menucascade>.</p></li>
+                                                <li>Old Path: <menucascade>
+                                                  <uicontrol>Settings</uicontrol>
+                                                  <uicontrol> General</uicontrol>
+                                                  <uicontrol> Recording</uicontrol>
+                                                  <uicontrol> Call Recording Switch</uicontrol>
+                                                  </menucascade>.<p>New Path: <menucascade>
+                                                  <uicontrol>Settings</uicontrol>
+                                                  <uicontrol> General</uicontrol>
+                                                  <uicontrol> Recording</uicontrol>
+                                                  <uicontrol> Auto Recording Switch</uicontrol>
+                                                  </menucascade>.</p></li>
+                                            </ul></p></li>
+                                </ul>
+                            </p>
+                        </dd>
+                    </dlentry>
+                    <dlentry>
+                        <dt>Email</dt>
+                        <dd>
+                            <ul id="ul_axr_prv_vjb">
+                                <li>Fixed the <uicontrol>Email</uicontrol> issue: The POP3 test
+                                    would fail if you enter a customized user name in the
+                                        <uicontrol>Email Address or Username</uicontrol> field.</li>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                    <dlentry>
+                        <dt>User Permission</dt>
+                        <dd>
+                            <ul id="ul_mdp_srv_vjb">
+                                <li>Optimized the <uicontrol>User Permission</uicontrol> setting:
+                                    Manually entering a value in the <uicontrol>Set Privilege
+                                        As</uicontrol> field is not allowed.</li>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                    <dlentry>
+                        <dt>Storage</dt>
+                        <dd>
+                            <ul id="ul_t2k_5rv_vjb">
+                                <li>Fixed the <uicontrol>Network Drive</uicontrol> issue: The
+                                    network drive could not be mounted to the PBX if the network
+                                    drive server started slower than the PBX.</li>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                    <dlentry>
+                        <dt>Event Center</dt>
+                        <dd>
+                            <ul id="ul_grm_ktv_vjb">
+                                <li>Optimized Event notifications: The notification emails contains
+                                    the PBX Serial Number and the local IP address of the PBX.</li>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                </dl>
+                <dl>
+                    <dlentry>
+                        <dt>Auto Provisioning</dt>
+                        <dd>
+                            <ul id="ul_n2f_1jv_vjb">
+                                <li>
+                                    <p>Added support for the following IP phones:</p>
+                                    <ul id="ul_o2f_1jv_vjb">
+                                        <li>Fanvil: X210, X210i, X1, X1S, X1SG, X2C, X3SG, X3U, X4U,
+                                            X5U, X6U, X7, X7A and X7C</li>
+                                        <li>Snom: D385, D735 and D717</li>
+                                        <li>Yealink: SIP-T41U, SIP-T43U, SIP-T46U, SIP-T48U,
+                                            SIP-T53, SIP-T53W, SIP-T54W, SIP-T57W,VP59, and
+                                            W60B</li>
+                                        <li>Htek: UC902S, UC921, UC921G, UC503, and UC503G</li>
+                                        <li>Polycom: VVX411</li>
+                                    </ul>
+                                </li>
+                                <li>For Fanvil X4 phones: Added <b>BLF/DTMF</b> and
+                                        <b>BLF/Conference</b> subtype options for <b>Memory</b> DSS
+                                    key.</li>
+                                <li>For Snom phones (D1XX series, D3XX series, and D7XX series):
+                                    Added the <b>Administrator Mode</b>, <b>Administrator
+                                        Password</b>, <b>HTTP Server Username</b>, and <b>HTTP
+                                        Server Password</b> settings in the <b>Preference</b>
+                                    tab.</li>
+                                <li>Optimized DSS settings of Fanvil phones (X5/X5G,X4/X4G,X5S and
+                                    X6): Added <b>Action URL</b> type of DSS key.</li>
+                                <li>Optimized Custom Template of Snom phones:You can add custom
+                                    parameters in the custom template.</li>
+                                <li>Fixed the issue of Snom phones: The phones did not reboot
+                                    automatically after performing auto provision.</li>
+                                <li>Optimized settings of Snom phones (D305, D315, D345 and D375):
+                                    Added the <b>Tone Scheme</b> setting in <b>Preference</b>
+                                    tab.</li>
+                                <li>Optimized the IP address of Snom phones: Whatever the <b>Web
+                                        Server Type</b> you set for the phone, you can click the IP
+                                    address that is displayed on the <b>Device List</b> page to
+                                    access the IP phone.</li>
+                                <li>Optimized the issue of Snom phones: Even through you didn't
+                                    upload the phone firmware to the PBX, an error of firmware
+                                    upgrade failed would be displayed on the IP phone.</li>
+                                <li>Fixed the auto provision template issue of Fanvil phones: The
+                                    value of &lt;language> parameter in the template was
+                                    incorrect.</li>
+                                <li>Fixed the issue of Custom Template: Custom template did not take
+                                    effect if you added devices in bulk or imported an auto
+                                    provisioning file.</li>
+                                <li>Fixed the issue on Firmware Upgrade page: The uploaded firmware
+                                    wasn't be displayed on <b>Firmware Upgrade</b> page after
+                                    upgrading the phone version.</li>
+                                <li>Optimized <b>DSSKey/Line Key</b> setting: The <b>Value</b> field
+                                    is allowed to enter maximum 255 characters.</li>
+                                <li>Optimized <b>Account</b> settings for IP phones: The extension
+                                        <b>Caller ID Name</b> will be automatically filled in the
+                                        <b>Label</b> field.<b>Note:</b> In the earlier version, the
+                                    extension number will be automatically filled in the <b>Label
+                                    </b>field.</li>
+                                <li>Fixed the issue of Backup and Restore: The backup file didn't
+                                    contain Auto Provisioning Custom Templates,which led to an error
+                                    on custom template after restoring data from the backup
+                                    file.</li>
+                                <li>Changed the model name of Yealink SIP-W60B from <b>SIP-W60B</b>
+                                    to <b>W60B(W60P/W53P/W41P/CP930W-Base)</b>.</li>
+                                <li>Fixed the phonebook issue on Yealink W60B: Only 5 handsets could
+                                    download the phonebook from PBX after auto provisioning.</li>
+                                <li>Fixed the DSSkey issue on Fanvil: The DSSkey setting could not
+                                    take effect when the <b>DSSkey</b> > <b>Line</b> is set to
+                                        <b>Auto</b>.</li>
+                                <li>Fixed the issue on Fanvil: Fanvil phones could not download
+                                    phone book files after auto provisioning,</li>
+                                <li>Fixed the issue of Auto Provision Template: The setting in
+                                        <b>Other</b> tab would be cleared if the characters
+                                        <codeph>`</codeph> was contained in the custom
+                                    template.</li>
+                                <li>Fixed the issue that the auto provisioning would be failed after
+                                    restoring configurations from a backup file.</li>
+                                <li>Fixed the issue on Yeastar TA FXS Gateway: If you disabled an
+                                    FXS port, the port settings could not be cleared after auto
+                                    provisioning.</li>
+                                <li>Fixed the issue on Cisco: The Cisco DTMF could not work after
+                                    auto provisioning.</li>
+                                <li>Fixed the issue of Grandstream GXV3240 and GXV3275: The Russia
+                                    Time Zone was incorrect.</li>
+                                <li>Fixed the issue of Custom Template: When adding devices in bulk,
+                                    the selected custom template could not take effect after auto
+                                    provision.</li>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                </dl>
+                <dl>
+                    <dlentry>
+                        <dt>Billing</dt>
+                        <dd>
+                            <ul id="ul_hxp_qtv_vjb">
+                                <li>Fixed the billing issue: No billing record for the inbound call
+                                    that was transferred to an extension.</li>
+                                <li>Fixed the CDR issue: The call logs didn't display the billing
+                                    information.</li>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                </dl>
+            </p>
+        </section>
+        <dl>
+            <dlentry>
+                <dt>Hotel</dt>
+                <dd>
+                    <ul id="ul_oyb_2tb_wjb">
+                        <li>Added support for adding up to 400 rooms in bulk.</li>
+                        <li>Fixed the CDR issue: No billing information in the CDR for the outbound
+                            calls that were made after checking in.</li>
+                    </ul>
+                </dd>
+            </dlentry>
+        </dl>
+    </body>
+</topic>

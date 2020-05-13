@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_pdp_snc_ygb">
+    <title>Step6. Set up a Route Table</title>
+    <shortdesc>Azure automatically creates <xref
+            href="https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-udr-overview#system-routes"
+            format="html" scope="external">system routes</xref> and assigns the routes to each
+        subnet in a virtual network. By default, the YMP VM and SBC VM can access the Internet
+        directly. To route the YMP outbound traffic to the internet through SBC VM, you need to set
+        up a route table and associate the route table to the YMP subnet. </shortdesc>
+    <body>
+        <section id="section_rhh_4sc_ygb">
+            <title>1. Create a route table</title>
+            <p>
+                <ol id="ol_hw3_5sc_ygb">
+                    <li>In the search box at the top of the portal, enter <i>route tables</i> in the
+                        search box. When <b>Route tables</b> appear in the search results, select
+                                it.<p><image href="../Images/SBC/azure-route-tables.png" width="650"
+                                id="image_dzc_jtc_ygb"/></p></li>
+                    <li>On the <uicontrol>Route tables</uicontrol> page, click
+                            <uicontrol>+Add</uicontrol>.</li>
+                    <li>On the <uicontrol>Create route table</uicontrol> page, configure the
+                        following information:<p><image
+                                href="../Images/SBC/azure-create-route-table.png"
+                                id="image_ind_1wh_ygb"/></p><p>
+                            <ul id="ul_hcd_bwh_ygb">
+                                <li><uicontrol>Name</uicontrol>: Set a name for the route table. For
+                                    example: <i>YMP-Route-Table</i>.</li>
+                                <li><uicontrol>Subscription</uicontrol>: Select the same
+                                    subscription as the virtual network.</li>
+                                <li><uicontrol>Resource group</uicontrol>: Select the same resource
+                                    group as the virtual network.</li>
+                                <li><uicontrol>Location</uicontrol>: Select the same location as the
+                                    virtual network.</li>
+                            </ul>
+                        </p></li>
+                    <li>Click <uicontrol>Create</uicontrol>.</li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_arw_pwh_ygb">
+            <title>2. Add a route rule</title>
+            <p>Add a route rule to route all the outbound traffic to internet through the SBC
+                VM.</p>
+            <p>
+                <ol id="ol_ypd_txh_ygb">
+                    <li>On the <uicontrol>Route tables</uicontrol> page, click the route table that
+                        you created just now.</li>
+                    <li>Under <uicontrol>Settings</uicontrol>, select <uicontrol>Routes</uicontrol>,
+                        then click <uicontrol>+Add</uicontrol>.<p><image
+                                href="../Images/SBC/azure-add-route-table.png"
+                                id="image_r2c_15c_ygb"/></p></li>
+                    <li>On the <uicontrol>Add route</uicontrol> page, configure the following
+                                information:<p><image href="../Images/SBC/azure-add-route.png"
+                                id="image_pww_35c_ygb"/></p><p>
+                            <ul id="ul_h3h_k5c_ygb">
+                                <li><uicontrol>Route name</uicontrol>: Set a name for the route. For
+                                    example, <i>route-ymp-traffic</i>.</li>
+                                <li><uicontrol>Address prefix</uicontrol>: Enter
+                                    <i>0.0.0.0/0</i>.</li>
+                                <li><uicontrol>Next hop type</uicontrol>: Select <uicontrol>Virtual
+                                        appliance</uicontrol>.</li>
+                                <li><uicontrol>Next hop address</uicontrol>: Enter the private IP
+                                    address of <xref
+                                        href="azure-create-a-vm-for-sbc.dita#task_f41_1y1_ygb">SBC
+                                        VM</xref>. </li>
+                            </ul>
+                        </p></li>
+                    <li>Click <uicontrol>OK</uicontrol>.</li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_pqd_txh_ygb">
+            <title>3. Associate the route table to YMP subnet</title>
+        </section>
+        <p>Associate the route table to the YMP subnet. In this way, the outbound traffic leaving
+            the YMP subnet will be routed to the internet through the SBC VM. <ol
+                id="ol_mks_5yh_ygb">
+                <li>On the route table configuration page, under <uicontrol>Settings</uicontrol>,
+                    select <uicontrol>Subnet</uicontrol>, and click
+                        <uicontrol>+Associate</uicontrol>.<p><image
+                            href="../Images/SBC/azure-subnets-associate.png" id="image_pkg_jzh_ygb"
+                        /></p></li>
+                <li>On the <uicontrol>Associate subnet</uicontrol> page, configure the following
+                            information:<p><image href="../Images/SBC/azure-associate-subnet.png"
+                            id="image_yhw_nzh_ygb"/></p><p>
+                        <ul id="ul_vqg_4zh_ygb">
+                            <li><uicontrol>Virtual network</uicontrol>: Select the virtual network
+                                that is for Yeastar Cloud PBX.</li>
+                            <li><uicontrol>Subnet</uicontrol>: Select the YMP subnet.</li>
+                        </ul>
+                    </p></li>
+                <li>Click <uicontrol>OK</uicontrol>.</li>
+            </ol>
+        </p>
+    </body>
+</topic>

@@ -1,0 +1,805 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="reference_jvc_c2m_4fb">
+    <title>E1/T1 Trunk Settings</title>
+    <shortdesc>When you configure a E1/T1 trunk, you may need to configure some of the advanced
+        settings. This reference describes all the settings on a E1/T1 trunk.</shortdesc>
+    <refbody>
+        <section id="section_wgx_zqp_w3b">
+            <title>E1/T1 signaling type</title>
+            <p>Yeastar S100 and S300 supports the following ISDN signaling type, you can configure
+                the trunk according to the information provided by your service provider.</p>
+            <p>
+                <ul id="ul_nxx_1md_rhb">
+                    <li><xref href="#reference_jvc_c2m_4fb/PRI" format="dita">PRI</xref></li>
+                    <li><xref href="#reference_jvc_c2m_4fb/MFC-R2" format="dita">MFC/R2</xref></li>
+                    <li><xref href="#reference_jvc_c2m_4fb/SS7" format="dita">SS7</xref></li>
+                    <li><xref href="#reference_jvc_c2m_4fb/EM" format="dita">E&amp;M</xref></li>
+                </ul>
+            </p>
+        </section>
+        <section id="PRI">
+            <title>E1/T1 trunk settings - PRI</title>
+            <p>The table below shows the settings for the E1/T1 trunk (PRI signaling type).</p>
+            <p>
+                <table frame="all" rowsep="1" colsep="1" id="table_qxy_j2m_4fb">
+                    <tgroup cols="2">
+                        <colspec colname="c1" colnum="1" colwidth="1*"/>
+                        <colspec colname="c2" colnum="2" colwidth="2.85*"/>
+                        <thead>
+                            <row>
+                                <entry>Settings</entry>
+                                <entry>Description</entry>
+                            </row>
+                            <row>
+                                <entry align="center" valign="middle" nameend="c2" namest="c1">Basic
+                                    Settings</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>Name</entry>
+                                <entry>
+                                    <p>Give this trunk a name to help you identify it.</p>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>Interface Type</entry>
+                                <entry>
+                                    <p>Specify the interface type according to the trunk
+                                        specification.</p>
+                                    <p>
+                                        <ul id="ul_bgk_1gm_4fb">
+                                            <li>E1</li>
+                                            <li>T1</li>
+                                            <li>J1</li>
+                                        </ul>
+                                    </p>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>Signaling</entry>
+                                <entry>
+                                    <p>Specify the Signaling type <uicontrol>PRI</uicontrol>.</p>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>Framing</entry>
+                                <entry id="framing">
+                                    <p>Select the frame format for this trunk according to the
+                                        requirements of your country and carrier. The frame format
+                                        of the PBX must be the same as that of the carrier.
+                                        Otherwise, the link cannot be established.</p>
+                                    <p>
+                                        <ul id="ul_gsn_5hm_4fb">
+                                            <li>When the <b>Interface Type</b> is E1, Framing
+                                                options are: <p>
+                                                  <ul id="ul_hsn_5hm_4fb">
+                                                  <li>Enable CRC4</li>
+                                                  <li>Disable CRC4</li>
+                                                  </ul>
+                                                </p><p>
+                                                  <note>CRC4 is a method of checking for errors in
+                                                  data transmitted on E1 trunk lines.</note>
+                                                </p></li>
+                                        </ul>
+                                    </p>
+                                    <p>
+                                        <ul id="ul_isn_5hm_4fb">
+                                            <li>When the <uicontrol>Interface Type</uicontrol> is T1
+                                                or J1, Framing options are:<p>
+                                                  <ul id="ul_jsn_5hm_4fb">
+                                                  <li>ESF</li>
+                                                  <li>D4</li>
+                                                  </ul>
+                                                </p></li>
+                                        </ul>
+                                    </p>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>Line Code</entry>
+                                <entry id="line-code">
+                                    <p>Choose the line code for this trunk according to the
+                                        direction provided by carrier.</p>
+                                    <ul id="ul_wsn_5hm_4fb">
+                                        <li>When the <uicontrol>Interface Type</uicontrol> is E1,
+                                            Line Code options are:<p>
+                                                <ul id="ul_xsn_5hm_4fb">
+                                                  <li>HDB3</li>
+                                                  <li>AMI</li>
+                                                </ul>
+                                            </p></li>
+                                        <li>When the <uicontrol>Interface Type</uicontrol> is T1 or
+                                            J1, Line Code options are:<p>
+                                                <ul id="ul_ysn_5hm_4fb">
+                                                  <li>B8ZS</li>
+                                                  <li>AMI</li>
+                                                </ul>
+                                            </p></li>
+                                    </ul>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>Codec</entry>
+                                <entry>
+                                    <p>Choose the codec for this trunk.<ul id="ul_opm_s3f_x3b">
+                                            <li><uicontrol>a-law</uicontrol></li>
+                                            <li><uicontrol>u-law</uicontrol></li>
+                                        </ul></p>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>Echo Cancellation</entry>
+                                <entry id="echo-cancellation">
+                                    <p>This option enables or disables echo cancellation.<note>If an
+                                            echo occurs during a call, you can enable echo
+                                            cancellation.</note></p>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>D Channel</entry>
+                                <entry>
+                                    <p>Set the channel used to carry control information and
+                                        signaling information.<ul id="ul_zx2_g5p_w3b">
+                                            <li>If <uicontrol>Interface Type</uicontrol> is set to
+                                                  <uicontrol>E1</uicontrol>, enter a channel number
+                                                from 1 to 31.</li>
+                                            <li>If <uicontrol>Interface Type</uicontrol> is set to
+                                                  <uicontrol>T1</uicontrol> or
+                                                  <uicontrol>J1</uicontrol>, enter a channel number
+                                                from 1 to 24.</li>
+                                        </ul></p>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>Switch Type</entry>
+                                <entry>
+                                    <p>Configure the switch type according to the direction provided
+                                        by carrier.<ul id="ul_yjg_dxp_w3b">
+                                            <li>If <uicontrol>Interface Type</uicontrol> is set to
+                                                  <uicontrol>E1</uicontrol>, Switch Type option
+                                                  are:<ul id="ul_oq4_byp_w3b">
+                                                  <li><uicontrol>EuroISDN</uicontrol></li>
+                                                  <li><uicontrol>Q.SIG</uicontrol></li>
+                                                </ul></li>
+                                            <li>If <uicontrol>Interface Type</uicontrol> is set to
+                                                  <uicontrol>T1</uicontrol> or
+                                                  <uicontrol>J1</uicontrol>, Switch Type option
+                                                  are:<ul id="ul_xcx_cyp_w3b">
+                                                  <li><uicontrol>EuroISDN</uicontrol></li>
+                                                  <li><uicontrol>National 2</uicontrol></li>
+                                                  <li><uicontrol>National 1</uicontrol></li>
+                                                  <li><uicontrol>DMS100</uicontrol></li>
+                                                  <li><uicontrol>AT&amp;T 4ess</uicontrol></li>
+                                                  <li><uicontrol>Lucent 5ess</uicontrol></li>
+                                                  <li><uicontrol>Q.SIG</uicontrol></li>
+                                                </ul></li>
+                                        </ul></p>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>Signaling Role</entry>
+                                <entry>
+                                    <p>Specify whether this interface will act like the user or the
+                                        network. <ul id="ul_kxq_2yp_w3b">
+                                            <li><uicontrol>User</uicontrol></li>
+                                            <li><uicontrol>Network</uicontrol></li>
+                                        </ul></p>
+                                    <p>If the service provider acts as the network, the PBX needs to
+                                        be set as the user.</p>
+                                    <p>If the service provider acts as the user, the PBX needs to be
+                                        set as the network.</p>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>Overlap Dial</entry>
+                                <entry>
+                                    <p>Define whether the system can dial this switch using overlap
+                                        digits or not. If you need Direct Dial-in, then enable this
+                                        option.</p>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry namest="c1" nameend="c2" align="center" valign="middle"
+                                        ><b>Advanced Settings</b></entry>
+                            </row>
+                            <row>
+                                <entry>Facility-based ISDN Supplementary Services</entry>
+                                <entry>Decide whether to enable transmission of facility-based ISDN
+                                    supplementary services (such as caller name from CPE over
+                                    facility) or not. The default is checked.</entry>
+                            </row>
+                            <row>
+                                <entry>Carrier Hangup Tone Detection</entry>
+                                <entry>
+                                    <ul id="ul_izg_jcq_w3b">
+                                        <li>If this option is enabled, you will hear the hangup tone
+                                            played by your carrier when the other party hangs up.
+                                            (Please first check with your carrier whether they will
+                                            send the prompt or not.).</li>
+                                        <li>If disabled, you will hear the hangup tone played by the
+                                            system when the other party hangs up.</li>
+                                    </ul>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>PRI Indication</entry>
+                                <entry>Tells how the PBX should indicate busy and congestion to the
+                                    switch/user. The default is "Out-of-Band".<ul
+                                        id="ul_ldq_scq_w3b">
+                                        <li><uicontrol>Inband</uicontrol>: PBX plays indication
+                                            tones without answering; not available on all PRI/BRI
+                                            subscription lines.</li>
+                                        <li><uicontrol>Out-of-Band</uicontrol>: PBX disconnects with
+                                            busy/congestion information code so the switch will play
+                                            the indication tones to the caller.</li>
+                                    </ul></entry>
+                            </row>
+                            <row>
+                                <entry>Reset Interval (s)</entry>
+                                <entry>This sets the time in seconds between restart of unused B
+                                    channels. The default is "Never".<note>Set the interval to
+                                        "Never" if you do not wish the channel to
+                                    restart.</note></entry>
+                            </row>
+                            <row>
+                                <entry>Enable DNIS</entry>
+                                <entry>Dialed Number Identification Service is a telephone service
+                                    that enables a company to identify which telephone number was
+                                    dialed. Users could configure DNIS to allow the IP phones to
+                                    display which trunk is passing the call.</entry>
+                            </row>
+                            <row>
+                                <entry>DID Number</entry>
+                                <entry id="DID">The DID number to associate with the trunk. This
+                                    number is used to identify which line of the trunk is passing
+                                    the call.</entry>
+                            </row>
+                            <row>
+                                <entry>DNIS Name</entry>
+                                <entry id="DNIS">Dialed Number Identification Service is a telephony
+                                    service used to identify which telephone number was dialed. By
+                                    enabling this service and configuring a name for this DNIS and
+                                    the DID number, when a call reaches the configured DID number
+                                    and the trunk, the name will be displayed on the ringing
+                                    phone.</entry>
+                            </row>
+                            <row>
+                                <entry namest="c1" nameend="c2" align="center"
+                                        ><uicontrol>Dialplan</uicontrol></entry>
+                            </row>
+                            <row>
+                                <entry>Calling Party Numbering Plan</entry>
+                                <entry>Select the Calling Party Numbering Plan.</entry>
+                            </row>
+                            <row>
+                                <entry>Calling Party Numbering Type</entry>
+                                <entry>Select the Calling Party Numbering Type.</entry>
+                            </row>
+                            <row>
+                                <entry>Called Party Numbering Plan</entry>
+                                <entry>Select the Calling Party Numbering Plan.</entry>
+                            </row>
+                            <row>
+                                <entry>Called Party Numbering Type</entry>
+                                <entry>Select the Called Party Numbering Type.</entry>
+                            </row>
+                            <row>
+                                <entry>Presentation Indicator</entry>
+                                <entry>The PI provides instructions on whether or not the provided
+                                    calling line identity is allowed to be presented, or indicate
+                                    that the number is not available.</entry>
+                            </row>
+                            <row>
+                                <entry>Screen Indicator</entry>
+                                <entry>The SI provides information on the source and the quality of
+                                    the provided information.</entry>
+                            </row>
+                            <row>
+                                <entry>ISDN Dialplan</entry>
+                                <entry>Enable or disable the ISDN/telephony numbering plan
+                                    (Recommendation E.164)</entry>
+                            </row>
+                            <row>
+                                <entry>International Prefix</entry>
+                                <entry>Dialplan: '(Called Party Numbering Plan: ISDN +)Called Party
+                                    Numbering Type: International'.</entry>
+                            </row>
+                            <row>
+                                <entry>National Prefix</entry>
+                                <entry>Dialplan: '(Called Party Numbering Plan: ISDN +)Called Party
+                                    Numbering Type: National'.</entry>
+                            </row>
+                            <row>
+                                <entry>Local Prefix</entry>
+                                <entry>Dialplan: '(Called Party Numbering Plan: ISDN +)Called Party
+                                    Numbering Type: Subscriber'.</entry>
+                            </row>
+                            <row>
+                                <entry>Private Prefix</entry>
+                                <entry>Dialplan: 'Called Party Numbering Plan: private + Called
+                                    Party Numbering Type: Subscriber'.</entry>
+                            </row>
+                            <row>
+                                <entry>Unknown Prefix</entry>
+                                <entry>Dialplan: '(Called Party Numbering Plan: ISDN +)Called Party
+                                    Numbering Type: Unknown'.</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+        <section id="MFC-R2">
+            <title>E1/T1 trunk settings - MFC/R2</title>
+            <p>The table below shows the settings for the E1/T1 trunk (MFC/R2 signaling type).</p>
+            <p>
+                <table frame="all" rowsep="1" colsep="1" id="table_yvr_b5q_w3b">
+                    <tgroup cols="2" align="left">
+                        <colspec colname="c1" colnum="1" colwidth="1*"/>
+                        <colspec colname="c2" colnum="2" colwidth="2.89*"/>
+                        <thead>
+                            <row>
+                                <entry>Settings</entry>
+                                <entry>Description</entry>
+                            </row>
+                            <row>
+                                <entry namest="c1" nameend="c2">Basic Settings</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>Name</entry>
+                                <entry>
+                                    <p>Give this trunk a name to help you identify it.</p>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>Signaling</entry>
+                                <entry>
+                                    <p>Specify the Signaling type <uicontrol>MFC/R2</uicontrol>.</p>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>Framing</entry>
+                                <entry>
+                                    <p>Select the frame format for this trunk according to the
+                                        requirements of your country and carrier. The frame format
+                                        of the PBX must be the same as that of the carrier.
+                                        Otherwise, the link cannot be established.</p>
+                                    <p>Framing options are: <ul id="ul_vcc_wbr_w3b">
+                                            <li>Enable CRC4</li>
+                                            <li>Disable CRC4<note>CRC4 is a method of checking for
+                                                  errors in data transmitted on E1 trunk
+                                                  lines.</note></li>
+                                        </ul></p>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>Line Code</entry>
+                                <entry><p>Choose the line code for this trunk according to the
+                                        direction provided by carrier.</p>Line Code options are:<p>
+                                        <ul id="ul_qyv_bcr_w3b">
+                                            <li>HDB3</li>
+                                            <li>AMI</li>
+                                        </ul>
+                                    </p></entry>
+                            </row>
+                            <row>
+                                <entry>Echo Cancellation</entry>
+                                <entry conref="#reference_jvc_c2m_4fb/echo-cancellation"/>
+                            </row>
+                            <row>
+                                <entry>Variant</entry>
+                                <entry>Set the MFC/R2 variant.<p>
+                                        <ul>
+                                            <li>
+                                                <p><uicontrol>Argentina</uicontrol></p>
+                                            </li>
+                                            <li>
+                                                <p><uicontrol>Brazil</uicontrol></p>
+                                            </li>
+                                            <li>
+                                                <p><uicontrol>China</uicontrol></p>
+                                            </li>
+                                            <li>
+                                                <p><uicontrol>Czech</uicontrol></p>
+                                            </li>
+                                            <li>
+                                                <p><uicontrol>Colombia</uicontrol></p>
+                                            </li>
+                                            <li>
+                                                <p><uicontrol>Ecuador</uicontrol></p>
+                                            </li>
+                                            <li>
+                                                <p><uicontrol>Indonesia</uicontrol></p>
+                                            </li>
+                                            <li>
+                                                <p><uicontrol>ITU</uicontrol></p>
+                                            </li>
+                                            <li>
+                                                <p><uicontrol>Mexico</uicontrol></p>
+                                            </li>
+                                            <li>
+                                                <p><uicontrol>Philippines</uicontrol></p>
+                                            </li>
+                                            <li>
+                                                <p><uicontrol>Venezuela</uicontrol></p>
+                                            </li>
+                                        </ul>
+                                    </p></entry>
+                            </row>
+                            <row>
+                                <entry>Category</entry>
+                                <entry>Set the category of the calling party.<ul id="ul_ljk_fwq_w3b">
+                                        <li>
+                                            <p><uicontrol>National</uicontrol></p>
+                                        </li>
+                                        <li>
+                                            <p><uicontrol>National priority</uicontrol></p>
+                                        </li>
+                                        <li>
+                                            <p><uicontrol>International</uicontrol></p>
+                                        </li>
+                                        <li>
+                                            <p><uicontrol>International Priority</uicontrol></p>
+                                        </li>
+                                        <li>
+                                            <p><uicontrol>Collect Call</uicontrol></p>
+                                        </li>
+                                    </ul></entry>
+                            </row>
+                            <row>
+                                <entry>MAX DNIS</entry>
+                                <entry>Max amount of DNIS to ask for.<note>If you wish to customize
+                                        the size, enter the value in the text box
+                                    directly.</note></entry>
+                            </row>
+                            <row>
+                                <entry namest="c1" nameend="c2" align="center" valign="middle"
+                                        ><uicontrol>Advanced Settings</uicontrol></entry>
+                            </row>
+                            <row>
+                                <entry>Enable DNIS</entry>
+                                <entry>Dialed Number Identification Service is a telephone service
+                                    that enables a company to identify which telephone number was
+                                    dialed. Users could configure DNIS to allow the IP phones to
+                                    display which trunk is passing the call.</entry>
+                            </row>
+                            <row>
+                                <entry>DID Number</entry>
+                                <entry conref="#reference_jvc_c2m_4fb/DID"/>
+                            </row>
+                            <row>
+                                <entry>DNIS Name</entry>
+                                <entry conref="#reference_jvc_c2m_4fb/DNIS"/>
+                            </row>
+                            <row>
+                                <entry>Forced Release</entry>
+                                <entry>Enables or disables forced release of channel.<note>If the
+                                        call can not be hanged up properly, check this
+                                        options.</note></entry>
+                            </row>
+                            <row>
+                                <entry>Immediate Accept</entry>
+                                <entry>Most variants of MFC/R2 offer a way to go directly to the
+                                    call accepted state, by passing the use of group B and II tones.
+                                    This option enables or disables the use of that feature for
+                                    incoming calls. The default is unchecked.</entry>
+                            </row>
+                            <row>
+                                <entry>Double Answer</entry>
+                                <entry>Block collect calls with double answer. This will cause that
+                                    every answer signal is changed by answer -> clear back ->
+                                    answer. The default is unchecked.</entry>
+                            </row>
+                            <row>
+                                <entry>Charge Calls</entry>
+                                <entry>Whether or not report to the other end "accept call with
+                                    charge".</entry>
+                            </row>
+                            <row>
+                                <entry>Allow Collect Calls</entry>
+                                <entry>Specify whether to accept collect calls or not.</entry>
+                            </row>
+                            <row>
+                                <entry>MF Back Timeout (ms)</entry>
+                                <entry>MFC/R2 value in milliseconds for the MF timeout.</entry>
+                            </row>
+                            <row>
+                                <entry>Metering Pulse Timeout (ms)</entry>
+                                <entry>MFC/R2 value in milliseconds for the metering pulse timeout.
+                                    Enter "-1" to use the value.</entry>
+                            </row>
+                            <row>
+                                <entry>Incoming DTMF Mode</entry>
+                                <entry>Specify the incoming DTMF mode.</entry>
+                            </row>
+                            <row>
+                                <entry>Outgoing DTME Mode</entry>
+                                <entry>Specify the outgoing DTMF mode.</entry>
+                            </row>
+                            <row>
+                                <entry>First Number to Get</entry>
+                                <entry>Choose which number to get first.<ul id="ul_v1x_4yq_w3b">
+                                        <li><uicontrol>DNIS</uicontrol><p>Get the DNIS number first
+                                                and then get the ANI number.</p></li>
+                                        <li><uicontrol>ANI</uicontrol><p>Get the first digit of DNIS
+                                                number, then get the ANI number, and finally get the
+                                                remaining DNIS digits.</p></li>
+                                    </ul></entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+        <section id="SS7">
+            <title>E1/T1 trunk settings - SS7</title>
+            <p>The table below shows the settings for the E1/T1 trunk (SS7 signaling type).</p>
+            <p>
+                <table frame="all" rowsep="1" colsep="1" id="table_z3b_1br_w3b">
+                    <tgroup cols="2" align="left">
+                        <colspec colname="c1" colnum="1" colwidth="1*"/>
+                        <colspec colname="c2" colnum="2" colwidth="2.56*"/>
+                        <thead>
+                            <row>
+                                <entry>Settings</entry>
+                                <entry>Description</entry>
+                            </row>
+                            <row>
+                                <entry namest="c1" nameend="c2" align="center" valign="middle">Basic
+                                    Settings</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>Name</entry>
+                                <entry>
+                                    <p>Give this trunk a name to help you identify it.</p>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>Signaling</entry>
+                                <entry>
+                                    <p>Specify the Signaling type <uicontrol>SS7</uicontrol>.</p>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>Framing</entry>
+                                <entry>
+                                    <p>Select the frame format for this trunk according to the
+                                        requirements of your country and carrier. The frame format
+                                        of the PBX must be the same as that of the carrier.
+                                        Otherwise, the link cannot be established.</p>
+                                    <p>Framing options are: <ul id="ul_ogy_ybr_w3b">
+                                            <li>Enable CRC4</li>
+                                            <li>Disable CRC4<note>CRC4 is a method of checking for
+                                                  errors in data transmitted on E1 trunk
+                                                  lines.</note></li>
+                                        </ul></p>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>Line Code</entry>
+                                <entry><p>Choose the line code for this trunk according to the
+                                        direction provided by your carrier.</p>Line Code options are:<p>
+                                        <ul id="ul_jgs_ccr_w3b">
+                                            <li>HDB3</li>
+                                            <li>AMI</li>
+                                        </ul>
+                                    </p></entry>
+                            </row>
+                            <row>
+                                <entry>Codec</entry>
+                                <entry>Choose the codec for this trunk.</entry>
+                            </row>
+                            <row>
+                                <entry>Echo Cancellation</entry>
+                                <entry conref="#reference_jvc_c2m_4fb/echo-cancellation"/>
+                            </row>
+                            <row>
+                                <entry>D Channel</entry>
+                                <entry>
+                                    <p>Set the channel used to carry control information and
+                                        signaling information. Enter a channel number from 1 to
+                                        31.</p>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>Variant</entry>
+                                <entry>Set the SS7 variant.<p>
+                                        <ul id="ul_tyk_kdr_w3b">
+                                            <li><uicontrol>ANSI</uicontrol>: 24 bits</li>
+                                            <li>
+                                                <p><uicontrol>China</uicontrol>: 24 bits</p>
+                                            </li>
+                                            <li>
+                                                <p><uicontrol>ITU</uicontrol>: 14 bits</p>
+                                            </li>
+                                        </ul>
+                                    </p></entry>
+                            </row>
+                            <row>
+                                <entry>Linkset</entry>
+                                <entry>Define SS7 linkset numbers.</entry>
+                            </row>
+                            <row>
+                                <entry>Network indicator</entry>
+                                <entry>Specify the network indicator according to the network
+                                    environment.</entry>
+                            </row>
+                            <row>
+                                <entry>SLC</entry>
+                                <entry>
+                                    <p>Specify the Signal Linking Code.</p>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>OPC</entry>
+                                <entry>
+                                    <p>Specify the Originating Point Code. This is generally
+                                        assigned by your carrier.</p>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>DPC</entry>
+                                <entry>
+                                    <p>Specify the Destination Point Code. This is generally
+                                        assigned by your carrier.</p>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry namest="c1" nameend="c2" align="center" valign="middle"
+                                        ><uicontrol>Advanced Settings</uicontrol></entry>
+                            </row>
+                            <row>
+                                <entry>Enable DNIS</entry>
+                                <entry>Dialed Number Identification Service is a telephone service
+                                    that enables a company to identify which telephone number was
+                                    dialed. Users could configure DNIS to allow the IP phones to
+                                    display which trunk is passing the call.</entry>
+                            </row>
+                            <row>
+                                <entry>DID Number</entry>
+                                <entry conref="#reference_jvc_c2m_4fb/DID"/>
+                            </row>
+                            <row>
+                                <entry>DNIS Name</entry>
+                                <entry conref="#reference_jvc_c2m_4fb/DNIS"/>
+                            </row>
+                            <row>
+                                <entry>Start CIC No</entry>
+                                <entry>Specify the Circuit Identification Code number of the first B
+                                    channel of E1 line       (SS7).<note>the suggested value is the
+                                        multiples of 32 plus 1, for example: 1, 33,
+                                    65.</note></entry>
+                            </row>
+                            <row>
+                                <entry>Calling Party Number Type</entry>
+                                <entry>Specify the calling party number type.<ul id="ul_n5w_xhr_w3b">
+                                        <li><uicontrol>National</uicontrol></li>
+                                        <li><uicontrol>International</uicontrol></li>
+                                        <li><uicontrol>Subscriber</uicontrol></li>
+                                        <li><uicontrol>Unknown</uicontrol></li>
+                                    </ul></entry>
+                            </row>
+                            <row>
+                                <entry>Called Party Number Type</entry>
+                                <entry>Specify the calling party number type.<ul id="ul_g4b_yhr_w3b">
+                                        <li><uicontrol>National</uicontrol></li>
+                                        <li><uicontrol>International</uicontrol></li>
+                                        <li><uicontrol>Subscriber</uicontrol></li>
+                                        <li><uicontrol>Unknown</uicontrol></li>
+                                    </ul></entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+        <section id="EM">
+            <title>E1/T1 trunk settings - E&amp;M</title>
+            <p>The table below shows the settings for the E1/T1 trunk (E&amp;M signaling type).</p>
+            <p>
+                <table frame="all" rowsep="1" colsep="1" id="table_zzq_23r_w3b">
+                    <tgroup cols="2" align="left">
+                        <colspec colname="c1" colnum="1" colwidth="1*"/>
+                        <colspec colname="c2" colnum="2" colwidth="2.77*"/>
+                        <thead>
+                            <row>
+                                <entry>Settings</entry>
+                                <entry>Description</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>Name</entry>
+                                <entry>
+                                    <p>Give this trunk a name to help you identify it.</p>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>Interface Type</entry>
+                                <entry>
+                                    <p>Specify the interface type according to the trunk
+                                        specification.</p>
+                                    <p>
+                                        <ul id="ul_k4c_m3r_w3b">
+                                            <li>E1</li>
+                                            <li>T1</li>
+                                            <li>J1</li>
+                                        </ul>
+                                    </p>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>Signaling</entry>
+                                <entry>
+                                    <p>Specify the Signaling type
+                                        <uicontrol>E&amp;M</uicontrol>.</p>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>Framing</entry>
+                                <entry>
+                                    <p>Select the frame format for this trunk according to the
+                                        requirements of your country and carrier. The frame format
+                                        of the PBX must be the same as that of the carrier.
+                                        Otherwise, the link cannot be established.</p>
+                                    <p>Framing options are: <ul id="ul_iph_q3r_w3b">
+                                            <li>Enable CRC4</li>
+                                            <li>Disable CRC4<note>CRC4 is a method of checking for
+                                                  errors in data transmitted on E1 trunk
+                                                  lines.</note></li>
+                                        </ul></p>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>Line Code</entry>
+                                <entry><p>Choose the line code for this trunk according to the
+                                        direction provided by your carrier.</p>Line Code options are:<p>
+                                        <ul id="ul_gtn_s3r_w3b">
+                                            <li>HDB3</li>
+                                            <li>AMI</li>
+                                        </ul>
+                                    </p></entry>
+                            </row>
+                            <row>
+                                <entry>Codec</entry>
+                                <entry>Choose the codec for this trunk.</entry>
+                            </row>
+                            <row>
+                                <entry>Echo Cancellation</entry>
+                                <entry conref="#reference_jvc_c2m_4fb/echo-cancellation"/>
+                            </row>
+                            <row>
+                                <entry namest="c1" nameend="c2" align="center" valign="middle"
+                                        ><uicontrol>Advanced Settings</uicontrol></entry>
+                            </row>
+                            <row>
+                                <entry>Enable DNIS</entry>
+                                <entry>Dialed Number Identification Service is a telephone service
+                                    that enables a company to identify which telephone number was
+                                    dialed. Users could configure DNIS to allow the IP phones to
+                                    display which trunk is passing the call.</entry>
+                            </row>
+                            <row>
+                                <entry>DID Number</entry>
+                                <entry conref="#reference_jvc_c2m_4fb/DID"/>
+                            </row>
+                            <row>
+                                <entry>DNIS Name</entry>
+                                <entry conref="#reference_jvc_c2m_4fb/DNIS"/>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+        <section conref="voip-trunk-settings.dita#topic_pyd_f3t_2fb/adapt-caller-ID"
+            id="section_hz1_zkf_x3b"/>
+    </refbody>
+</reference>
+<?oxy_options track_changes="on"?>

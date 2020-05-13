@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_t51_jdc_pdb">
+    <title>Monitor Time Condition State</title>
+    <shortdesc>You can set a BLF key on your phone to quickly override Time Condition and monitor
+        the Time Condition state.</shortdesc>
+    <taskbody>
+        <context>We take Yealink T53W v95.0.0.0.0.0.1 as an example to explain how to set BLF keys
+            to monitor Time Condition state.</context>
+        <steps>
+            <step>
+                <cmd>Set Time Condition Override permission for the extension that is registered on
+                    the IP phone.</cmd>
+                <substeps>
+                    <substep>
+                        <cmd>Log in PBX interface, go to <menucascade>
+                                <uicontrol>Settings</uicontrol>
+                                <uicontrol>PBX</uicontrol>
+                                <uicontrol>General</uicontrol>
+                                <uicontrol>Feature Code</uicontrol>
+                                <uicontrol>Time Condition</uicontrol>
+                            </menucascade>, click <uicontrol>Set Extension
+                            Permission</uicontrol>.</cmd>
+                        <info><image href="../Images/admin/set_time_condition.png"
+                                id="image_y3b_zcc_pdb"/></info>
+                    </substep>
+                    <substep>
+                        <cmd>Select the desired extension from <uicontrol>Available</uicontrol> box
+                            to <uicontrol>Selected</uicontrol> box.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Click <uicontrol>Save</uicontrol> and
+                            <uicontrol>Apply</uicontrol>.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Set BLF keys on the phone where the extension is registered.</cmd>
+                <substeps id="substeps_ip5_nxq_kjb">
+                    <substep>
+                        <cmd>Log in the phone web interface, go to <menucascade>
+                                <uicontrol>DSS Key</uicontrol>
+                                <uicontrol>Memory Key</uicontrol>
+                            </menucascade>.</cmd>
+                        <info><image href="../Images/admin/monitor_time_condition_blf.png"
+                                id="image_g25_yhc_pdb"/></info>
+                    </substep>
+                    <substep>
+                        <cmd>Set Key <uicontrol>Type</uicontrol> as
+                            <uicontrol>BLF</uicontrol>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Set Key <uicontrol>Value</uicontrol> as feature code of Time
+                            Condition.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Select the <uicontrol>Line</uicontrol> as the extension registered
+                            line. </cmd>
+                    </substep>
+                    <substep importance="optional">
+                        <cmd>In the <uicontrol>Extension</uicontrol> field, enter a description of
+                            the key.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Click <uicontrol>Confirm</uicontrol>.</cmd>
+                    </substep>
+                </substeps>
+                <stepresult>The BLF LED will show the Time Condition state.<p>
+                        <ul id="ul_vjd_lfh_pdb">
+                            <li>Red: The PBX is using this Time Condition; inbound calls go to the
+                                destination of the Time Condition.</li>
+                            <li>Green: This Time Condition is not in use.</li>
+                        </ul>
+                    </p></stepresult>
+            </step>
+            <step>
+                <cmd>Press a BLF key to override Time Condition, the BLF LED turns to red.</cmd>
+                <stepresult>
+                    <p>You can also log in the PBX web interface, and check the Time Condition state
+                        on configuration page of Inbound Routes. If the state shows <image
+                            href="../Images/ui_icons/ok.png" width="20" id="image_sxh_hhs_ljb"/>, it
+                        indicates that the PBX is using the Time Condition, and route all incoming
+                        calls to destination of the Time Condition.</p>
+                    <p><image href="../Images/admin/time_condition_state_web.png"
+                            id="image_hpk_54c_pdb"/></p>
+                </stepresult>
+            </step>
+        </steps>
+    </taskbody>
+</task>

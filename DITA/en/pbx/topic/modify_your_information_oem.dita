@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_a5p_t5x_zcb">
+    <title>Modify Your Information</title>
+    <shortdesc>Modify your basic information, such as name, Email, mobile phone number, and
+        prompt.</shortdesc>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/08/21"/>
+            <!--Carol-->
+            <revised modified="2018/08/22"/>
+            <!--Carol-->
+            <revised modified="2018/09/07"/>
+            <!--Carol-->
+            <revised modified="2018/09/11"/>
+            <!--Carol-->
+            <revised modified="2018/09/12"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <steps id="steps_w4w_5vx_zcb">
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Me</uicontrol>
+                        <uicontrol>Extension Settings</uicontrol>
+                    </menucascade>.</cmd>
+            </step>
+            <step>
+                <cmd>Modify user information.</cmd>
+                <info><image href="../Images/user/modify_information_oem.png" width="650"
+                        id="image_p4n_zks_cfb"/></info>
+                <choices>
+                    <choice><uicontrol>Caller ID name</uicontrol>: Enter your name. When you call
+                        out, your name will be displayed on the called party's phone.</choice>
+                    <choice><uicontrol>Email</uicontrol>: Bind an email address with the extension.
+                        The email will be used to reset password, receive voicemail, receive PBX
+                        notification, and receive fax.</choice>
+                    <choice><uicontrol>Mobile Number</uicontrol>: Enter the mobile phone
+                        number.</choice>
+                    <choice><uicontrol>Prompt Language</uicontrol>: By default, all extension users
+                        have the same prompt language as the PBX system. If you work in a different
+                        language, you can change the prompt language.<p>
+                            <note> To select another prompt language, the PBX administrator should
+                                download the relevant system prompt on PBX first.</note>
+                        </p></choice>
+                </choices>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_e2b_wkr_yjb">
+    <title>Dial-out Conferencing</title>
+    <shortdesc>You can place a conference call on Conference Panel to invite contacts to join the
+        conference.</shortdesc>
+    <body>
+        <p>Log in PBX web interface and go to <uicontrol>Conference Panel</uicontrol> to add phone
+            number of the contact who you want to invite. Select the contact and click
+                <uicontrol>Invite Selected</uicontrol> to place the conference call. The contact
+            joins the conference when he/she answers the call.</p>
+        <p>
+            <ol>
+                <li>Log in PBX web interface, and go to <uicontrol>Conference
+                    Panel</uicontrol>.</li>
+                <li>Click <uicontrol>Conference List</uicontrol> tab.</li>
+                <li>Select a conference, and click <image
+                        href="../Images/admin/conference-list-operation.png" id="image_ubp_scq_1kb"
+                    /> to enter the specific conference page.</li>
+                <li>Click <uicontrol>Open Contacts</uicontrol>, and select contacts who you want to
+                    invite from phonebook.<ul id="ul_kk5_yms_bkb">
+                        <?oxy_comment_start author="Becky" timestamp="20191217T145857+0800" comment="中文是有序列表"?>
+                        <li>Select the checkbox of a phonebook, then all contacts will be
+                            selected.</li><?oxy_comment_end?>
+                        <li>Click <image href="../Images/admin/unfold-phonebook.png"
+                                id="image_m1p_bzj_33b"/> to unfold the phonebook, and select the
+                            desired contacts.</li>
+                    </ul></li>
+                <li>Click <uicontrol>OK</uicontrol> to add contacts to the current
+                            conference.<p><option>Add</option>: You can also click
+                            <uicontrol>Add</uicontrol> to add contacts who are not available on the
+                        phonebook.</p></li>
+                <li>Invite contacts to join the conference.<p><option>Password Settings</option>:
+                        Click <uicontrol>Password Settings</uicontrol>, you can change participant
+                        password. By default, the field is null, which means that users are not
+                        required to enter password when they join the conference.</p><ul
+                        id="ul_hwt_dps_bkb">
+                        <?oxy_comment_start author="Becky" timestamp="20191217T151458+0800" comment="中文是有序列表"?>
+                        <li>Select all members, and click <uicontrol>Invite
+                            Selected</uicontrol>.</li><?oxy_comment_end?>
+                        <li>To select a member, click <image
+                                href="../Images/admin/invite-one-contact.png" id="image_zrm_t2p_h3b"
+                            /> beside the contact that you want to invite.</li>
+                    </ul><p><image id="image_tfy_v4k_33b"
+                            href="../Images/admin/invite-selected-contacts.png" width="700"
+                        /></p><p>Phones of all members who receive the conference call will ring,
+                        and the conference number is displayed as caller ID. When the call is
+                        answered, members will be prompted that they are invited to the conference
+                        call.</p></li>
+            </ol>
+        </p>
+    </body>
+</topic>

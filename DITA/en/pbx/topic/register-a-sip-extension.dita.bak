@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_gdw_mr4_y3b">
+    <title>Register a SIP Extension</title>
+    <shortdesc>To make calls and receive calls from a SIP extension, you need to register the SIP
+        extension on an IP phone or soft
+        phone<?oxy_comment_start author="carol" timestamp="20190910T163829+0800" comment="To make calls and receive calls from a SIP extension, you need to register the SIP extension on a IP phone or soft phone." flag="done"?>.<?oxy_comment_end?></shortdesc>
+    <body>
+        <p><b>1.Gather information of extension registration</b></p>
+        <p>For most SIP phones, the following items are needed for the SIP phone to register with
+                <ph keyref="product_name"/>.</p>
+        <p>
+            <ul id="ul_qy1_rd1_1jb">
+                <li><ph product="s-series,k2">IP address</ph><ph product="cloudpbx">Domain name</ph>
+                    of PBX</li>
+                <li>SIP registration port: The default port is 5060 on <ph keyref="product_name"
+                    />.</li>
+                <li>Extension information<p>
+                        <ul id="ul_pbm_4s3_1jb">
+                            <li>Extension Number</li>
+                            <li>Registration Name</li>
+                            <li>Registration Password</li>
+                            <li>Caller ID Name</li>
+                            <li>Transport</li>
+                        </ul>
+                    </p></li>
+            </ul>
+        </p>
+        <p><b>2.Register the extension on a phone</b></p>
+        <p>Log in the phone web interface, fill in and save the required items to register the SIP
+            extension.</p>
+        <p><b>3.Confirm registration status</b></p>
+        <p>You can do one of the followings to check if the extension is registered.</p>
+        <p>
+            <ul id="ul_khd_s21_1jb">
+                <li>
+                    <p>On the phone web interface, check if the status indicates that the extension
+                        is
+                        registered<?oxy_comment_start author="carol" timestamp="20190910T175818+0800" comment="On the phone web interface, check if the status indicates that the extension is registered.
+" flag="done"?><?oxy_comment_start author="carol" timestamp="20190910T175445+0800" comment="不一定是显示registered，有的话机是显示OK" flag="done" mid="3"?>.<?oxy_comment_end?><?oxy_comment_end mid="3"?></p>
+                </li>
+                <li>Log in PBX web interface, go to <?oxy_comment_start author="carol" timestamp="20190910T175916+0800" comment="直接写进入PBX Monitor 就好啦" flag="done"?><menucascade><?oxy_comment_end?>
+                        <uicontrol>PBX Monitor</uicontrol>
+                        <uicontrol>Extensions</uicontrol>
+                    </menucascade> to check if the status shows <image id="image_stp_hf1_1jb"
+                        href="../Images/admin/registered.png" width="20"/>.</li>
+            </ul>
+        </p>
+    </body>
+    <related-links>
+        <link href="register_yealink.dita#task_psv_f1c_5cb"/>
+        <link href="register_htek.dita#task_n3s_q1c_5cb"/>
+        <link href="register_cisco.dita#task_jjb_c1c_5cb"/>
+        <link href="register_fanvil.dita#task_kry_rrh_ycb"/>
+        <link href="register_snom.dita#task_byr_t1c_5cb"/>
+        <link href="register_htek.dita#task_n3s_q1c_5cb"/>
+    </related-links>
+</topic>

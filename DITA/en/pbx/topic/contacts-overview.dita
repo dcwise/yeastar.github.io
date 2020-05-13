@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="contacts-overview">
+    <title>Contacts Overview</title>
+    <shortdesc>Yeastar Contacts feature allows you to add external contacts to Company Contacts and
+        share the Company Contacts with your organization. Each extension user has a Personal
+        Contacts to create and manage their personal contacts.</shortdesc>
+    <conbody>
+        <section id="section_qfj_dwp_rkb" product="s-series"><title>PBX requirements</title>The
+            Contacts feature is supported on the following PBX models:<p>
+                <ul id="ul_rxg_vmy_rkb">
+                    <li>Yeastar S50</li>
+                    <li>Yeastar S100</li>
+                    <li>Yeastar S300</li>
+                </ul>
+            </p></section>
+        <section id="section_kpf_vrp_rkb">
+            <title>Contacts types</title>
+            <dl>
+                <dlentry>
+                    <dt>Company Contacts</dt>
+                    <dd>
+                        <p>Company Contacts is a phone book that allows you to store a list of
+                            external contacts, such as the company's customers, resellers and
+                            partners. </p>
+                        <p>
+                            <note>By default, only the PBX administrator can view and manage Company
+                                Contacts. To share Company Contacts with extension users, refer to
+                                    <xref
+                                    href="configure-company-contacts-permissions-for-users.dita"
+                                />.</note>
+                        </p>
+                    </dd>
+                </dlentry>
+            </dl>
+            <p>
+                <dl>
+                    <dlentry>
+                        <dt>Personal Contacts</dt>
+                        <dd>Personal Contacts is a phone book for each extension user. Users can
+                            store a list of external contacts exclusive to themselves, such as
+                            direct customers.</dd>
+                        <dd>
+                            <note>Each user's Personal Contacts is visible only to themselves. </note>
+                        </dd>
+                    </dlentry>
+                </dl>
+            </p>
+        </section>
+        <section id="section_mym_vtp_rkb">
+            <title>Key features</title>
+            <dl>
+                <dlentry>
+                    <dt>Sync contacts between Linkus clients and PBX</dt>
+                    <dd>
+                        <p>The contacts information is synced automatically between Linkus clients
+                            and PBX. </p>
+                        <p>Users can
+                            <?oxy_insert_start author="Becky" timestamp="20200422T101310+0800"?>view
+                            or <?oxy_insert_end?>manage contacts on both Linkus and PBX web
+                            page<?oxy_insert_start author="Becky" timestamp="20200422T101318+0800"?>,
+                            or view contacts on an IP phone<?oxy_insert_end?>.</p>
+                        <p>
+                            <note>Requirements of Linkus clients:<p>
+                                    <ul id="ul_vlx_zs1_skb">
+                                        <li>Linkus Android Client: 2.9.6 or later.</li>
+                                        <li>Linkus iOS Client: 2.9.10 or later.</li>
+                                        <li><?oxy_comment_start author="Becky" timestamp="20200422T101405+0800" comment="改"?>Linkus
+                                            for Mac: 1.10.3 or later.</li>
+                                        <li>Linkus for Windows: 1.10.3 or
+                                            later.<?oxy_comment_end?></li>
+                                    </ul>
+                                </p></note>
+                        </p>
+                        <p>For more information of contacts management, see <xref
+                                href="manage-company-contacts.dita"/> and <xref
+                                href="manage-personal-contacts.dita"/>.</p>
+                    </dd>
+                </dlentry>
+            </dl>
+            <dl>
+                <dlentry>
+                    <dt>Import and export contacts</dt>
+                    <dd>
+                        <p>Save time and effort by importing and exporting contacts entries.</p>
+                        <p>For more information, see <xref href="manage-company-contacts.dita"/> and
+                                <xref href="manage-personal-contacts.dita"/>.</p>
+                    </dd>
+                </dlentry>
+            </dl>
+            <dl>
+                <dlentry>
+                    <dt>Identify incoming calls</dt>
+                    <dd>The contact's name is displayed for incoming calls to your Linkus, desk
+                        phone, or other softphones if the contact's information is saved in Company
+                        Contacts or Personal Contacts. By knowing who’s calling, the users can
+                        handle the calls efficiently.</dd>
+                    <dd>For more information, see <xref href="identify-callers-from-contacts.dita"
+                        />.</dd>
+                </dlentry>
+            </dl>
+            <dl>
+                <dlentry>
+                    <dt>Configure Company Contacts permissions for users</dt>
+                    <dd>Control who can view and manage the Company Contacts.</dd>
+                    <dd>For more information, see <xref
+                            href="configure-company-contacts-permissions-for-users.dita"/>.</dd>
+                </dlentry>
+            </dl>
+        </section>
+        <section id="contacts-limits">
+            <title>Contacts limits</title>
+            <p>The following table shows the maximum number of contacts supported on the PBX.</p>
+            <p>
+                <table frame="all" rowsep="1" colsep="1" id="table_r2h_rj2_skb" product="k2">
+                    <tgroup cols="2">
+                        <colspec colname="c1" colnum="1" colwidth="1*"/>
+                        <colspec colname="c2" colnum="2" colwidth="1.65*"/>
+                        <thead>
+                            <row>
+                                <entry>Contacts type</entry>
+                                <entry>Maximum number</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>Company contacts (total)</entry>
+                                <entry>20,000</entry>
+                            </row>
+                            <row>
+                                <entry>Personal contacts (per extension)</entry>
+                                <entry>300</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+                <table frame="all" rowsep="1" colsep="1" id="table_o12_5j2_skb" product="s-series">
+                    <tgroup cols="4">
+                        <colspec colname="c1" colnum="1" colwidth="2.74*"/>
+                        <colspec colname="c2" colnum="2" colwidth="1*"/>
+                        <colspec colname="newCol3" colnum="3" colwidth="1.04*"/>
+                        <colspec colname="c3" colnum="4" colwidth="2.1*"/>
+                        <thead>
+                            <row>
+                                <entry>Contacts type</entry>
+                                <entry>S50</entry>
+                                <entry>S100</entry>
+                                <entry>S300</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry align="center" valign="middle">Company contacts
+                                    (total)</entry>
+                                <entry>500</entry>
+                                <entry>1,000</entry>
+                                <entry>3,000</entry>
+                            </row>
+                            <row>
+                                <entry align="center" valign="middle">Personal contacts (per
+                                    extension)</entry>
+                                <entry>300</entry>
+                                <entry>300</entry>
+                                <entry>300</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+                <table frame="all" rowsep="1" colsep="1" id="table_npq_5k2_skb" product="cloudpbx">
+                    <tgroup cols="2">
+                        <colspec colname="c1" colnum="1" colwidth="1*"/>
+                        <colspec colname="c2" colnum="2" colwidth="1.67*"/>
+                        <thead>
+                            <row>
+                                <entry>Contacts type</entry>
+                                <entry>Maximum number</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>Company contacts (total)</entry>
+                                <entry>1,000</entry>
+                            </row>
+                            <row>
+                                <entry>Personal contacts (per extension)</entry>
+                                <entry>300</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+    </conbody>
+</concept>

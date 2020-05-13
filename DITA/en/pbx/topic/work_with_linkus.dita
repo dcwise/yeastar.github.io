@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_uyk_212_2cb">
+  <title>Work with Linkus</title>
+  <shortdesc>Linkus is a UC softphone coordinated with Yeastar S-Series VoIP PBX and Yeastar Cloud
+    PBX. Linkus makes your mobile phone or desktop an office extension and links you and your
+    colleagues and customers anywhere anytime.</shortdesc>
+  <prolog>
+    <critdates>
+      <!--Carol-->
+      <revised modified="2018/05/25"/>
+      <!--Carol-->
+      <revised modified="2018/08/13"/>
+      <!--Carol-->
+      <revised modified="2018/11/01"/>
+      <!--Carol-->
+      <revised modified="2018/12/29"/>
+    </critdates>
+    <metadata>
+      <keywords>
+        <keyword>Linkus softphone, Yeastar soft phone</keyword>
+      </keywords>
+    </metadata>
+  </prolog>
+  <body>
+    <section id="section_nx2_lk1_hgb">
+      <title>Linkus Server Quick Start</title>
+      <p/>
+    </section>
+    <section/>
+  </body>
+</topic>

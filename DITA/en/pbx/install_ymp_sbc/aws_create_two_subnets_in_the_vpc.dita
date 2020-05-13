@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_vsc_jn3_kcb">
+    <title>1) Create two Subnets in the VPC</title>
+    <shortdesc>After creating the VPC, you can need to create two subnets in the VPC. When you
+        create a subnet, you specify the CIDR block for the subnet, which is a subset of the VPC
+        CIDR block.</shortdesc>
+    <taskbody>
+        <context id="context_kkb_zg4_hfb">The following diagram represents the architecture of your
+            VPC after you've completed this step.<p><image
+                    href="../Images/SBC/aws_create_two_subnets_diagram.png" id="image_qsv_1h4_hfb"
+                    height="450"/></p></context>
+        <steps id="steps_uyg_5d4_hfb">
+            <step>
+                <cmd>Open the Amazon VPC console at <xref href="https://console.aws.amazon.com/vpc/"
+                        format="html" scope="external"
+                    >https://console.aws.amazon.com/vpc/</xref>.</cmd>
+            </step>
+            <step>
+                <cmd>Create one subnet that will be used as a public subnet.</cmd>
+                <info>
+                    <note>If a subnet's traffic is routed to a internet gateway, the subnet is known
+                        as a <i>public subnet</i>.</note>
+                </info>
+                <substeps id="substeps_mmf_d34_hfb">
+                    <substep>
+                        <cmd>In the navigation pane, select <b>Subnet</b>, then click <b>Create
+                                Subnet</b>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>On the configuration page, set the <uicontrol>Name tag</uicontrol>. For
+                            example, <codeph>Public-Subnet</codeph>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Select the <uicontrol>VPC</uicontrol> that is for Yeastar Cloud
+                            PBX.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Set the <uicontrol>IPv4 CIDR block</uicontrol> for the subnet. For
+                            example, <codeph>10.0.0.0/24</codeph>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Click <uicontrol>Create</uicontrol>.</cmd>
+                    </substep>
+                </substeps>
+                <info><image href="../Images/SBC/aws_subnet_wan.png" width="500"
+                        id="image_swy_l55_kcb"/></info>
+            </step>
+            <step>
+                <cmd>Create one subnet that will be used as a private subnet.</cmd>
+                <info>
+                    <note>If a subnet doesn't have a route to the internet gateway, the subnet is
+                        known as a <i>private subnet</i>. </note>
+                </info>
+                <substeps>
+                    <substep>
+                        <cmd>In the navigation pane, select <b>Subnet</b>, then click <b>Create
+                                Subnet</b>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>On the configuration page, set the <uicontrol>Name tag</uicontrol>. For
+                            example, <codeph>Pravite-Subnet</codeph>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Select the <uicontrol>VPC</uicontrol> that is for Yeastar Cloud
+                            PBX.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Set the <uicontrol>IPv4 CIDR block</uicontrol> for the subnet. For
+                            example, <codeph>10.0.1.0/24</codeph>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Click <uicontrol>Create</uicontrol>.</cmd>
+                    </substep>
+                </substeps>
+                <info><image href="../Images/SBC/aws_subnet_lan.png" width="500"
+                        id="image_zp5_w2q_d2b"/></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

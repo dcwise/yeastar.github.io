@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_vxj_ypc_2db">
+    <title>Distinguish Inbound Calls by Caller ID</title>
+    <shortdesc>When inbound calls are routed from a ring group/queue or an IVR, <ph
+            keyref="product_name"/> can display the name of ring group/queue/IVR. When the extension
+        user receives a call from the ring group/queue/IVR, he/she may notice the intention of the
+        inbound call. </shortdesc>
+    <taskbody>
+        <context>
+            <p>For example:</p>
+            <p>Set up two Ring Groups according to your organization, one is named as Sales, the
+                other is named as Support.</p>
+            <p>You can set up two inbound routes to route incoming calls to different destinations
+                by different trunks, and enable <uicontrol>Distinctive Caller ID</uicontrol>
+                    feature.<ul id="ul_mxt_wjs_ljb">
+                    <li>When external users call to PBX, and IP phones of Sales members ring,
+                        "Sales" will be displayed on IP phones.</li>
+                    <li>When external users call to PBX, and IP phones of Support members ring,
+                        "Support" will be displayed on IP phones.</li>
+                </ul></p>
+        </context>
+        <steps id="steps_cjp_rxc_2db">
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>PBX</uicontrol>
+                        <uicontrol>General</uicontrol>
+                        <uicontrol>Preferences</uicontrol>
+                    </menucascade>, select the checkbox of <uicontrol>Distinctive Caller
+                        ID</uicontrol>.</cmd>
+                <info><image href="../Images/admin/distinctive_caller_id.png" id="image_isq_yyc_2db"
+                        width="586"/></info>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

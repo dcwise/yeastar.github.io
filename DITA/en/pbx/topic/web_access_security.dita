@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_ixq_2hk_zdb">
+    <title>Web Access Security</title>
+    <shortdesc>Secure the web access of your PBX.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/05/30"/>
+            <!--Carol-->
+            <revised modified="2018/05/30"/>
+            <!--Carol-->
+            <revised modified="2018/06/01"/>
+            <!--Carol-->
+            <revised modified="2018/06/14"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <section id="section_y51_24k_zdb" product="s-series">
+            <title >Web Access Protocol</title>
+            <p><ph keyref="product_name"/> supports <codeph>HTTPS</codeph> and <codeph>HTTP</codeph>
+                protocol of web access. You can go to <menucascade>
+                    <uicontrol>Settings</uicontrol>
+                    <uicontrol>System</uicontrol>
+                    <uicontrol>Security</uicontrol>
+                    <uicontrol>Service</uicontrol>
+                </menucascade> to change the web access settings.</p>
+            <p><b> To secure transactions and prevent unauthorized access, we suggest you:</b></p>
+            <p>
+                <ul id="ul_qpc_qpk_zdb">
+                    <li>Use <codeph>HTTPS</codeph> protocol</li>
+                    <li>Disable <uicontrol>Redirect from port 80</uicontrol>.</li>
+                    <li>Change the default web access port. <p>Avoid using well known port, such as
+                            80 and 443.</p></li>
+                </ul>
+            </p>
+            <p><image href="../Images/admin/security_https.png" id="image_fm4_zpk_zdb"/></p>
+        </section>
+        <section id="section_fll_cqk_zdb"><title>Password of Web Login</title>After you log in the
+            PBX web interface for the first time, we suggest you to change the web login
+                password.<p>Click <uicontrol>Option</uicontrol> icon at the top-right corner, then
+                click <uicontrol>My Settings</uicontrol> to change the login password and enter your
+                email address.<note>
+                    <p>
+                        <ul id="ul_etr_lzk_zdb">
+                            <li>The email address can be used to reset the password of web
+                                login.</li>
+                        </ul>
+                    </p>
+                </note></p><p><image href="../Images/admin/my_settings.png" id="image_mkc_1tk_zdb"
+                    width="300"/></p><p><b>The Password should meet all the following
+                    requirements:</b></p><p>
+                <ul id="ul_gdd_dtk_zdb">
+                    <li>At least 8 characters</li>
+                    <li>At least 1 number</li>
+                    <li>At least 1 uppercase letter</li>
+                    <li>At least 1 lowercase letter</li>
+                    <li>Avoid word or name<p>For example, avoid word like <codeph>yeastar</codeph>,
+                                <codeph>password</codeph>, <codeph>carol</codeph> etc. Use random
+                            password like <codeph>8lsS*!08k_s922</codeph>.</p></li>
+                </ul>
+            </p></section>
+        <section id="section_lbz_qtk_zdb">
+            <title>Login Settings</title>
+            <p>Go to <menucascade>
+                    <uicontrol>Settings</uicontrol>
+                    <uicontrol>System</uicontrol>
+                    <uicontrol>Security</uicontrol>
+                    <uicontrol>Service</uicontrol>
+                </menucascade> to change the login settings.</p>
+            <p>
+                <ul id="ul_mfl_1wk_zdb">
+                    <li><uicontrol>Auto Logout Time</uicontrol>: The PBX will logout automatically
+                        after the period of inactivity. </li>
+                    <li product="s-series"><uicontrol>Login Mode</uicontrol>: By default, the PBX
+                        allows <uicontrol>Extension</uicontrol> login mode. We suggest you to choose
+                            <uicontrol>Email</uicontrol> login mode.<p>
+                            <ul id="ul_jy4_nwk_zdb">
+                                <li><uicontrol>Extension</uicontrol>: Users can use extension number
+                                    as the username of web login.</li>
+                                <li><uicontrol>Email</uicontrol>: Users can use their email
+                                    addresses as the username of web login.</li>
+                            </ul>
+                            <note>The super administrator should use  <codeph>admin</codeph> as the
+                                username of web login.</note>
+                        </p></li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_i2l_fxk_zdb">
+            <title>Login Attempts</title>
+            <p>For login protection, the PBX will block an web address after 3 login attempts. </p>
+            <p>The blocked user should try to log in the PBX web interface after 10 minutes.</p>
+        </section>
+    </conbody>
+</concept>

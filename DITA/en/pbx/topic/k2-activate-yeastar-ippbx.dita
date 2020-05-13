@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="k2-active-and-upgrade-yeastar-k2-ippbx">
+    <title>Activate Yeastar K2 IPPBX </title>
+    <shortdesc>After installing the Yeastar K2 Software, you can try out all the PBX features free
+        without time limit. However, the inactivated PBX has a limit on the number of extensions,
+        concurrent calls, VoIP trunks, ring groups, etc. Contact Yeastar to buy the license
+        according to how many extensions, concurrent calls, and other features you need on the
+        PBX.</shortdesc>
+    <body>
+        <section id="section_lnv_y2l_g3b">
+            <title>Limitation of an inactivated Yeastar K2 IPPBX</title>
+            <p>
+                <table>
+                    <title/>
+                    <tgroup cols="2" align="center">
+                        <colspec colname="c1" colnum="1" colwidth="298px" rowsep="1" colsep="1"/>
+                        <colspec colname="c2" colnum="2" colwidth="194px" rowsep="1" colsep="1"/>
+                        <thead>
+                            <row>
+                                <entry align="center" valign="middle">Feature</entry>
+                                <entry align="center" valign="middle">Max number</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry align="center" valign="middle">Extension</entry>
+                                <entry align="center" valign="middle">10</entry>
+                            </row>
+                            <row>
+                                <entry align="center" valign="middle">Concurrent call</entry>
+                                <entry align="center" valign="middle">5</entry>
+                            </row>
+                            <row>
+                                <entry align="center" valign="middle">Trunk</entry>
+                                <entry align="center" valign="middle">1</entry>
+                            </row>
+                            <row>
+                                <entry align="center" valign="middle">Ring Group</entry>
+                                <entry align="center" valign="middle">1</entry>
+                            </row>
+                            <row>
+                                <entry align="center" valign="middle">RingGroup Member</entry>
+                                <entry align="center" valign="middle">1</entry>
+                            </row>
+                            <row>
+                                <entry align="center" valign="middle">Queue</entry>
+                                <entry align="center" valign="middle">1</entry>
+                            </row>
+                            <row>
+                                <entry align="center" valign="middle">Queue Member</entry>
+                                <entry align="center" valign="middle">1</entry>
+                            </row>
+                            <row>
+                                <entry align="center" valign="middle">Conference</entry>
+                                <entry align="center" valign="middle">1</entry>
+                            </row>
+                            <row>
+                                <entry align="center" valign="middle">Conference Member</entry>
+                                <entry align="center" valign="middle">1</entry>
+                            </row>
+                            <row>
+                                <entry align="center" valign="middle">Pickup Group</entry>
+                                <entry align="center" valign="middle">1</entry>
+                            </row>
+                            <row>
+                                <entry align="center" valign="middle">Paging/Intercom</entry>
+                                <entry align="center" valign="middle">1</entry>
+                            </row>
+                            <row>
+                                <entry align="center" valign="middle">Paging/Intercom Member</entry>
+                                <entry align="center" valign="middle">1</entry>
+                            </row>
+                            <row>
+                                <entry align="center" valign="middle">Speed Dial</entry>
+                                <entry align="center" valign="middle">1</entry>
+                            </row>
+                            <row>
+                                <entry align="center" valign="middle">Callback</entry>
+                                <entry align="center" valign="middle">1</entry>
+                            </row>
+                            <row>
+                                <entry align="center" valign="middle">DISA</entry>
+                                <entry align="center" valign="middle">1</entry>
+                            </row>
+                            <row>
+                                <entry align="center" valign="middle">Inbound Routes</entry>
+                                <entry align="center" valign="middle">1</entry>
+                            </row>
+                            <row>
+                                <entry align="center" valign="middle">Outbound Routes</entry>
+                                <entry align="center" valign="middle">1</entry>
+                            </row>
+                            <row>
+                                <entry align="center" valign="middle">SLA</entry>
+                                <entry align="center" valign="middle">1</entry>
+                            </row>
+                            <row>
+                                <entry align="center" valign="middle">Time Condition</entry>
+                                <entry align="center" valign="middle">1</entry>
+                            </row>
+                            <row>
+                                <entry align="center" valign="middle">Holiday</entry>
+                                <entry align="center" valign="middle">1</entry>
+                            </row>
+                            <row>
+                                <entry align="center" valign="middle">IVR</entry>
+                                <entry align="center" valign="middle">1</entry>
+                            </row>
+                            <row>
+                                <entry align="center" valign="middle">Blackllist/Whitelist</entry>
+                                <entry align="center" valign="middle">1</entry>
+                            </row>
+                            <row>
+                                <entry align="center" valign="middle">PIN List</entry>
+                                <entry align="center" valign="middle">1</entry>
+                            </row>
+                            <row>
+                                <entry align="center" valign="middle">PIN List Number</entry>
+                                <entry align="center" valign="middle">1</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+        <section id="section_fy4_fpm_c3b">
+            <title>Activation methods</title>
+            <table colsep="1" rowsep="1" frame="all" id="table_a3r_qfq_f3b">
+                <tgroup cols="3" align="center">
+                    <colspec colname="c1" colnum="1" colwidth="119px" align="center"/>
+                    <colspec colname="c2" colnum="2" colwidth="185px"/>
+                    <colspec colname="c3" colnum="3" colwidth="386px"/>
+                    <thead>
+                        <row>
+                            <entry align="center" valign="middle"> Method</entry>
+                            <entry align="center" valign="middle">Environment</entry>
+                            <entry>Description</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row>
+                            <entry align="center" valign="middle">Online activation</entry>
+                            <entry align="left" valign="middle">PBX can access to the
+                                internet</entry>
+                            <entry align="left" valign="middle">Keep your PBX connected to the
+                                internet to access the Yeastar activation server.</entry>
+                        </row>
+                        <row>
+                            <entry align="center" valign="middle">Offline activation</entry>
+                            <entry align="left" valign="middle">PBX cannot access to the
+                                internet</entry>
+                            <entry align="left" valign="middle">
+                                <p>To secure your phone system, you may install a Yeastar K2 IPPBX
+                                    that has no ability to access the Internet. In this scenario,
+                                    Yeastar will provide a USB license key to help you activate your
+                                    PBX. </p>
+                                <p>
+                                    <note>The USB key is programmed with your required PBX capacity,
+                                        and can be used for one device only. </note>
+                                </p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <p>
+                <note type="important">If you reinstall your PBX, you need to contact Yeastar to get
+                    a new license, and reactivate your PBX.</note>
+            </p>
+        </section>
+        <section id="section_r5d_34z_b3b">
+            <title>Activate Yeastar K2 IPPBX online </title>
+            <p>
+                <ol id="ol_sr4_qwl_c3b">
+                    <li>Log in the PBX web interface, go to <menucascade>
+                            <uicontrol>Maintenance</uicontrol>
+                            <uicontrol>Activation</uicontrol>
+                        </menucascade>, Click <uicontrol>Activate</uicontrol>.</li>
+                    <li>Enter your license in the <uicontrol>License</uicontrol> field, click
+                            <uicontrol>Activate</uicontrol>.<p><image
+                                href="../Images/admin/k2-activate-license.jpg"
+                                id="image_ghv_krq_d3b" width="500"/></p></li>
+                    <li>Click <uicontrol>OK</uicontrol> and reboot the PBX to take effect.</li>
+                </ol>
+                <note>After activating the PBX, keep your PBX connected to the Internet, or the PBX
+                    will be detected as an abnormal device.</note>
+            </p>
+        </section>
+        <section id="section_cnj_hb1_c3b">
+            <title>Activate Yeastar K2 IPPBX offline (USB Key)</title>
+            <ol id="ol_j4b_pyl_c3b">
+                <li>Connect the USB Key to your computer where the Yeastar K2 IPPBX is
+                    installed.</li>
+                <li>Log in the PBX web interface, go to <menucascade>
+                        <uicontrol>Maintenance</uicontrol>
+                        <uicontrol> Activation</uicontrol>
+                    </menucascade>, click <uicontrol>Activate</uicontrol>.</li>
+                <li>Enter your license in the <uicontrol>License</uicontrol> field, click
+                        <uicontrol>Activate</uicontrol>.<p><image
+                            href="../Images/admin/k2-activate-license.jpg" id="image_hkv_lrq_d3b"
+                            width="500"/></p></li>
+                <li>Click <uicontrol>OK</uicontrol> and reboot the PBX to take effect.</li>
+            </ol>
+            <note>After activating the PBX, keep the USB Key connected to the PBX, or the PBX will
+                be detected as activation abnormality.</note>
+        </section>
+    </body>
+</topic>

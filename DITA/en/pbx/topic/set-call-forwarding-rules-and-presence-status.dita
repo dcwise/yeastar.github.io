@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_mtk_ds4_y3b">
+    <title>Set Call Forwarding Rules &amp; Presence Status</title>
+    <shortdesc>Set call forwarding rules for each presence status. The call forwarding rules allows
+        the user to automatically forward an incoming call to voicemail, another extension, or
+        mobile depending on the extension
+        status<?oxy_comment_start author="carol" timestamp="20190909T151713+0800" comment="点明presence 跟 call forwarding rules 的关系，以及简单介绍call forwarding的作用。
+
+这篇文章主要是为了让用户知道
+Set call forwarding rules for each presence status. The call forwarding rules allows you to automatically forward an incoming call to voicemail, another extension, or your mobile depending on the extension status." flag="done"?>.<?oxy_comment_end?></shortdesc>
+    <body>
+        <p>
+            <ol id="ol_ptr_c2r_y3b">
+                <li>Go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol>PBX</uicontrol>
+                        <uicontrol>Extensions</uicontrol>
+                    </menucascade>, search and find the desired extension, click <image
+                        href="../Images/ui_icons/edit.png" width="20" id="image_x2s_2pl_53b"/>.</li>
+                <li>Click the <uicontrol>Presence</uicontrol> tab.</li>
+                <li>In the <uicontrol>Presence</uicontrol> drop-down list, select a status to
+                    configure.</li>
+                <li importance="optional"
+                    ><?oxy_comment_start author="carol" timestamp="20190909T152325+0800" comment="这个是optional" flag="done"?>In<?oxy_comment_end?>
+                    the <uicontrol>Presence Information</uicontrol> field, enter the a custom status
+                    message to display on Linkus.<p>The Linkus users can see whether you are
+                        available to communicate.</p></li>
+                <?oxy_comment_start author="carol" timestamp="20190909T152933+0800" comment="Call Forwarding的操作步骤，应该先指导用户选择call forwarding 的作用条件，然后选择相应的目的地。
+a.Select the Call Forwarding conditions:
+Always:
+No Asnwer: Calls will be forwarded if the user doesn&apos;t answer the phone, or if the phone is unavailable (example: unregistered).
+When Busy:  Calls will be forwarded when the user is on the phone 
+
+b." flag="done"?>
+                <li><?oxy_comment_start author="carol" timestamp="20190909T150853+0800" comment="这个不是optional，是必要的步骤。
+需要让用户清除，当前的状态对应的call forwarding 规则是什么" flag="done"?>Set<?oxy_comment_end?>
+                    call forwarding rules for the Presence status.<?oxy_comment_end?><ol
+                        id="ol_vn1_bxh_1jb">
+                        <li>Select the Call Forwarding conditions:<ul id="ul_knj_cxh_1jb">
+                                <li><uicontrol>Always</uicontrol>: All the incoming calls will be
+                                    forward to the destination.</li>
+                                <li><uicontrol>No Answer</uicontrol>: Only the unanswered calls will
+                                    be forwarded to the destination.</li>
+                                <li><uicontrol>When Busy</uicontrol>: Only the calls that come in
+                                    while you are talking on the phone will be forwarded.</li>
+                            </ul></li>
+                        <li>Beside the selected forwarding condition, select the forwarding
+                            destination.</li>
+                    </ol></li>
+                <?oxy_comment_start author="carol" timestamp="20190909T150919+0800" comment="这个不是optional，是必要的步骤。
+需要让用户清楚，当前的状态对应的 ring strategy 是什么" flag="done"?>
+                <li>Set the ring strategy for the Presence status.<?oxy_comment_end?><ul
+                        id="ul_ccr_j5v_y3b">
+                        <li><uicontrol>Ring First</uicontrol>: When a call reaches the extension,
+                            which terminal will ring first.</li>
+                        <li><uicontrol>Ring Secondly</uicontrol>: If the incoming call is not
+                            answered on the terminals that are selected as <uicontrol>Ring
+                                First</uicontrol>, the terminals that are selected as
+                                <uicontrol>Ring Secondly</uicontrol> will ring.</li>
+                    </ul></li>
+                <li>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</li>
+            </ol>
+        </p>
+    </body>
+</topic>

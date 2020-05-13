@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="for-test-only">
+    <title>for test only</title>
+    <body>
+        <p>sea birds </p>
+        <p>sea birds may be herbivores or carnivores.</p>
+        <p><term keyref="seabirds">sea birds</term> in the ...</p>
+        <p>The diet of sea birds is much different from that of <term keyref="landbirds">land
+                birds</term>.</p>
+        <p>The stands for the <term keyref="flybirds">fly birds</term>.</p>
+        <p>The SN stands for the label of new terminal. Every terminal should be equipped with
+            SN.</p>
+    </body>
+</topic>

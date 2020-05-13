@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_r3n_zwj_ndb">
+    <title>2) Create an EIP Address</title>
+    <shortdesc>An EIP (Elastic IP address) is a public IP address resource that you can purchase and
+        possess independently. You need to buy one EIP, and bind to SBC ECS instance. </shortdesc>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/06/21"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Log on to the <xref
+                        href="https://ip.console.aliyun.com/?spm=5176.2020520106.1002.d10ip.4d7b7d4dqH9pBH#/eip/cn-hangzhou"
+                        format="html" scope="external">EIP console</xref>.</cmd>
+            </step>
+            <step>
+                <cmd>Click <b>Create EIP</b>.</cmd>
+            </step>
+            <step>
+                <cmd>On the purchase page, select the region, bandwidth, and purchase quantity for
+                    the EIP address, and click <uicontrol>Buy Now</uicontrol>.</cmd>
+                <info><image href="../Images/SBC/buy_eip.png" id="image_sqz_pzp_ndb" width="700"
+                    /></info>
+                <substeps id="substeps_kw1_bxk_ndb">
+                    <substep>
+                        <cmd>Select the <uicontrol>Region</uicontrol> as the VPC region.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Select <uicontrol>流量(Data)</uicontrol> as <uicontrol>按使用流量计费(Bill by
+                                data flow)</uicontrol>.</cmd>
+                        <info>
+                            <table
+                                conref="system_requirements_for_sbc.dita#topic_dyg_3qj_3cb/codec_data"
+                                id="table_a2c_ncq_ndb">
+                                <tgroup cols="1">
+                                    <tbody>
+                                        <row>
+                                            <entry/>
+                                        </row>
+                                    </tbody>
+                                </tgroup>
+                            </table>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Select the maximum data per hour.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Complete the payment.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

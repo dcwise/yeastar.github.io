@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_oh4_qny_ldb">
+    <title>Step2. Forward Ports for Headquarter PBX</title>
+    <shortdesc>If the headquarter PBX is behind a router, you need to forward ports for the
+        headquarter PBX.</shortdesc>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/05/22"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <context>
+            <p>
+                <note>You don't need to forward ports for the branch PBXs.</note>
+            </p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Log in the router that is connected to the headquarter PBX.</cmd>
+            </step>
+            <step>
+                <cmd>Forward ports for the PBX.</cmd>
+                <info>Below are the default ports you need to forward:<ul id="ul_f4y_wny_ldb">
+                        <li><b>SIP Registration Port</b>: UDP 5060</li>
+                        <li><b>RTP Ports</b>: UDP 10000-12000</li>
+                    </ul></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

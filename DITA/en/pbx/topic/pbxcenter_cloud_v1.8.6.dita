@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_h5c_dlk_2gb">
+    <title>Version 1.8.6</title>
+    <abstract>Released Date: December 20, 2018</abstract>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/12/20"/>
+            <!--Carol-->
+            <revised modified="2018/12/20"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <section id="section_zmn_glk_2gb">
+            <title>Optimization</title>
+            <p><image href="../Images/horizon.png" id="image_rnz_dlv_m2b"/></p>
+            <p>
+                <ul>
+                    <li>Fixed the issue that SIP trunk configurations would be lost after rebooting
+                        the PBX.</li>
+                    <li>Fixed the issue that the voicemail files and one-touch recordings might be
+                        accidentally deleted if the Recording function was enabled.</li>
+                    <li>Fixed the issue that the status of SIP peer trunk was incorrect.</li>
+                </ul>
+            </p>
+        </section>
+    </conbody>
+</concept>

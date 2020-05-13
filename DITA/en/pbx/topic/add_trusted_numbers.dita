@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_m2l_ckm_cfb">
+    <title>Add Trusted Incoming Numbers</title>
+    <shortdesc>If you don't want to be bothered and want to receive only trusted incoming calls, you
+        can log in Extension User Portal to set trusted incoming numbers.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/09/11"/>
+            <!--Carol-->
+            <revised modified="2018/09/11"/>
+            <!--Carol-->
+            <revised modified="2018/09/12"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <context>
+            <p>For example, if you are the boss of your company, you may want to receive the call
+                from your secretary only. In this scenario, you can set the secretary's number as
+                the only trusted incoming number.</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Me</uicontrol>
+                        <uicontrol>Blacklist/Whitelist</uicontrol>
+                        <uicontrol>Whitelist</uicontrol>
+                    </menucascade>, check the option <uicontrol>Whitelist Only</uicontrol>.</cmd>
+                <info>
+                    <note>All the incoming call will be blocked, only the trusted numbers can reach
+                        your extension.</note>
+                </info>
+                <info><image href="../Images/user/whitelist_only.png" width="650"
+                        id="image_glp_fmm_cfb" product="cloudpbx s-series"/></info>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Add</uicontrol>. </cmd>
+            </step>
+            <step>
+                <cmd>On the <uicontrol>Add Whitelist</uicontrol> page, set the trusted
+                    numbers.</cmd>
+                <info><image href="../Images/user/add_whitelist.png" id="image_rzt_rmm_cfb"/></info>
+                <info>
+                    <ul id="ul_xkw_tmm_cfb">
+                        <li><uicontrol>Name</uicontrol>: Set the whitelist name.</li>
+                        <li><uicontrol>Number</uicontrol>: Enter the trusted numbers.</li>
+                        <li><uicontrol>Type</uicontrol>: Select <uicontrol>Inbound</uicontrol>.</li>
+                    </ul>
+                </info>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

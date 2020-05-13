@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_l4s_1lm_ggb">
+    <title>Disable Zoho Integration</title>
+    <shortdesc>You can disable Zoho integration at any time.</shortdesc>
+    <taskbody>
+        <context>
+            <note>
+                <p>
+                    <ul id="ul_mvn_pvt_ggb">
+                        <li>After disabling the Zoho Integration, all the Zoho users can not handle
+                            calls in Zoho applications via PBX.</li>
+                        <li>Call logged before the integration was disabled remain intact.</li>
+                    </ul>
+                </p>
+            </note>
+        </context>
+        <steps>
+            <step>
+                <cmd>Log in PBX web interface, go to <uicontrol>Zoho Integration</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Unselect the check box of  <uicontrol>Enable Zoho
+                    Integration</uicontrol>.</cmd>
+                <?oxy_comment_start author="carol" timestamp="20191114T150804+0800" comment="加个图" flag="done"?>
+                <info><?oxy_comment_end?>The <uicontrol>Integration Status</uicontrol> displays
+                        <uicontrol>Disabled</uicontrol>.<p><?oxy_comment_start author="carol" timestamp="20191125T104116+0800" comment="图片处理" flag="done"?><image
+                            href="../Images/zoho/zoho-disabled.png" id="image_vvg_rbq_tjb"
+                            width="650"/><?oxy_comment_end?></p></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>
+<?oxy_options track_changes="on"?>

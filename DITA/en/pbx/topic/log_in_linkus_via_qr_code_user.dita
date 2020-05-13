@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_nww_jp3_bfb">
+    <title>Log in Linkus via QR Code</title>
+    <shortdesc>After you log in the Extension User Portal, you can scan QR code to log in Linkus
+        mobile client.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/09/07"/>
+            <!--Carol-->
+            <revised modified="2018/09/07"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <context>
+            <p></p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Me</uicontrol>
+                        <uicontrol>Extension Settings</uicontrol>
+                    </menucascade> to check the QR code.</cmd>
+                <info><image href="../Images/user/scan_qr_code.png" id="image_pmw_pq3_bfb"
+                        width="650"/></info>
+            </step>
+            <step>
+                <cmd>Open your Linkus mobile client, tap the QR button in the top-right
+                    corner.</cmd>
+                <info><image href="../Images/user/login_by_qr_code.jpg" id="image_zst_jq3_bfb"
+                    /></info>
+            </step>
+            <step>
+                <cmd>Scan the QR code on the Extension User Portal.</cmd>
+                <info>The Linkus client will get the login information and log in
+                    automatically.</info>
+                <info>
+                    <note type="tip">If the QR code expires, refresh the web interface to get a new
+                        QR code.</note>
+                </info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

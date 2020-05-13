@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="use-ldap-on-zoiper-softphone">
+    <title>LDAP Configurations on Zoiper Softphone</title>
+    <shortdesc>In this example, we demonstrate how to configure and use LDAP phonebook using Zoiper
+        Softphone.</shortdesc>
+    <body>
+        <section id="section_hwv_n5h_t3b">
+            <title>Configuration Example</title>
+            <p>The example configurations are set according to default settings of <ph
+                    keyref="product_name"/> LDAP server. You can use the following settings as a
+                starting point and adjust the filter and display attributes according to your
+                needs.</p>
+            <p>
+                <note>LDAP feature is only available for Zoiper Biz version.</note>
+            </p>
+            <ol>
+                <li>Launch Zoiper Biz Softphone.</li>
+                <li>Go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol> Preferences</uicontrol>
+                        <uicontrol> Accounts</uicontrol>
+                        <uicontrol>LDAP options</uicontrol>
+                    </menucascade>.</li>
+                <li>Check <uicontrol>Use this server to search for contacts</uicontrol> and
+                    configure the LDAP client.<p><image id="image_ov3_1xh_t3b"
+                            href="../Images/admin/zoiper-s-series.png" width="650"/></p><p>
+                        <table frame="all" id="table_hfd_bvh_t3b">
+                            <title/>
+                            <tgroup cols="3">
+                                <colspec colname="c1" colnum="1" colwidth="1*" colsep="1" rowsep="1"/>
+                                <colspec colname="c2" colnum="2" colwidth="2.13*" colsep="1"
+                                    rowsep="1"/>
+                                <colspec colname="c3" colnum="3" colwidth="1.56*" colsep="1"
+                                    rowsep="1"/>
+                                <thead>
+                                    <row>
+                                        <entry>Setting</entry>
+                                        <entry>Description</entry>
+                                        <entry>Example</entry>
+                                    </row>
+                                </thead>
+                                <tbody>
+                                    <row>
+                                        <entry>LDAP server</entry>
+                                        <entry>Enter the IP address of PBX.</entry>
+                                        <entry>83.247.7.70.23</entry>
+                                    </row>
+                                    <row>
+                                        <entry>Password</entry>
+                                        <entry>Enter the password to log in the LDAP server.</entry>
+                                        <entry>password</entry>
+                                    </row>
+                                    <row>
+                                        <entry>CN</entry>
+                                        <?oxy_comment_start author="Becky" timestamp="20190816T141513+0800" comment="官方:common name "?>
+                                        <entry>Enter the user name to log in the LDAP
+                                            server.</entry><?oxy_comment_end?>
+                                        <entry>cn=admin,dc=pbx,dc=com</entry>
+                                    </row>
+                                    <row>
+                                        <entry>DN</entry>
+                                        <?oxy_comment_start author="Becky" timestamp="20190816T141554+0800" comment="官方：domain component
+"?>
+                                        <entry>Specify a starting point in the directory tree from
+                                            which to search. Enter the Base DN of LDAP
+                                            Server.</entry><?oxy_comment_end?>
+                                        <entry>dc=pbx,dc=com</entry>
+                                    </row>
+                                    <row>
+                                        <entry>Result limit</entry>
+                                        <?oxy_comment_start author="Becky" timestamp="20190816T141627+0800" comment="官方：If you have a very large LDAP database with thousands of entries, you most likely will want to put a limit on the number of results to avoid the server or the softphone from getting overloaded."?>
+                                        <entry>Specify the maximum number of search results to be
+                                            returned by the LDAP server.</entry><?oxy_comment_end?>
+                                        <entry>0</entry>
+                                    </row>
+                                    <row>
+                                        <entry>Min chars to search</entry>
+                                        <?oxy_comment_start author="Becky" timestamp="20190816T141916+0800" comment="官方：This is the minimum number of characters that will need to be typed in the search bar before a search will be started. This can also be used to reduce the load on the server or the softphone in case of large LDAP directories."?>
+                                        <entry>Specify the minimum number of characters to be
+                                            entered before starting LDAP search.</entry><?oxy_comment_end?>
+                                        <entry>1</entry>
+                                    </row>
+                                    <row>
+                                        <entry>Fields to search</entry>
+                                        <entry>
+                                            <p>Specify the name attributes for LDAP
+                                                searching.<?oxy_comment_start author="Becky" timestamp="20190816T151812+0800" comment="官方手册"?>
+                                                The default value is "sn,
+                                            givenname".</p><?oxy_comment_end?>
+                                        </entry>
+                                        <entry>gn</entry>
+                                    </row>
+                                    <row>
+                                        <entry>XMPP presence</entry>
+                                        <?oxy_comment_start author="Becky" timestamp="20190816T142337+0800" comment="官方描述。应该和前面一样用动词开头，但是不知道有什么选项。"?>
+                                        <entry>The name of the field in the LDAP points to the XMPP
+                                            presence URI for the contact.</entry><?oxy_comment_end?>
+                                        <entry>Do not use</entry>
+                                    </row>
+                                </tbody>
+                            </tgroup>
+                        </table>
+                    </p></li>
+            </ol>
+        </section>
+        <section>
+            <title>Search LDAP Contacts</title>
+            <p>Enter the search criteria to search a contact from LDAP phonebook and call the
+                contact.</p>
+        </section>
+        <ol>
+            <li>Search the contact name or number. The contacts whose name or phone number match the
+                characters entered will appear on the LCD screen.<p><image
+                        href="../Images/admin/zoiper-ldap-search.png" id="image_v2k_kxh_t3b"
+                /></p></li>
+            <li>Click <uicontrol>Dial</uicontrol> to call the contact.</li>
+        </ol>
+    </body>
+</topic>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_vql_lxz_c2b">
+    <title>Configure the Connection with char</title>
+    <shortdesc>To connect Yeastar S-Series VoIP PBX to char, you don’t need to do any connection
+        configuration on the PBX. </shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/06/12"/>
+            <!--Carol-->
+            <revised modified="2018/06/12"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <p>All you need to do on Yeastar S-Series VoIP PBX is to enable the char utile h+
+            Integration App. The other work you need to configure is on the char server. </p>
+        <p>Refer to the char Installation for details.</p>
+        <p>Generally, you need to assign Yeastar S-Series VoIP PBX a local IP that is in the same
+            network segment with the char server.</p>
+        <p><image href="../Images/admin/connect_char.png" id="image_zvj_wxz_c2b" width="650"/></p>
+    </conbody>
+</concept>

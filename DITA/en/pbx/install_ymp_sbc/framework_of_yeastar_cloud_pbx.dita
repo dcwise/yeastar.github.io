@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_sst_x4w_pcb">
+ <title>Architecture of Yeastar Cloud PBX</title>
+ <shortdesc>Yeastar Cloud PBX includes 3 components: Yeastar SBC, YMP (Yeastar Management Platform),
+  and Yeastar Cloud PBX Instances.</shortdesc>
+ <prolog>
+  <critdates>
+   <!--Carol-->
+   <revised modified="2018/06/29"/>
+  </critdates>
+ </prolog>
+  <conbody>
+   <section id="section_cl1_kf2_4cb">
+    <title>What is Yeastar SBC?</title>
+    <p>Yeastar SBC is an exclusive security component of Yeastar Cloud PBX . Yeastar SBC has the
+     following functions:</p>
+    <p>
+     <ul id="ul_vlc_2py_ncb">
+      <li>Hide network topology to protect the YMP and PBX instances.</li>
+      <li>Protect the PBX instances from malicious attacks.</li>
+      <li>Deliver all SIP and RTP packets of the PBX instances to and from the Internet.</li>
+     </ul>
+    </p>
+    <p>
+     <note>The Yeastar SBC is ready to protect your YMP and PBX instances after installation. The
+     SBC is embedded with default security rules. </note>
+    </p>
+   </section>
+   <section id="section_gpj_mf2_4cb">
+    <title>What is YMP?</title>
+    <p>YMP (Yeastar Cloud PBX Management Plane) is a platform to create and manage PBX instances.
+    </p>
+   </section>
+   <section id="section_eng_pf2_4cb">
+    <title>What is Yeastar Cloud PBX Instances?</title>
+    <p>The YMP administrator creates the Yeastar cloud PBX instances for different customers.
+     Customers in different sites can manage their own cloud PBX instances.</p>
+   </section>
+   <section id="section_lqd_rf2_4cb">
+    <p><image href="../Images/SBC/yeastar_cloud_pbx.png" width="750" id="image_tlj_nc2_4cb"/></p>
+   </section>
+  </conbody>
+ 
+</concept>

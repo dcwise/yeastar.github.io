@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="app-zoho">
+    <title>Zoho Integration Guide</title>
+    <body>
+        <section id="section_hc2_nsq_rjb">
+            <title>About this guide</title>
+            <p><?oxy_comment_start author="carol" timestamp="20191121T174731+0800" comment="This guide introduces
+This topic introduces/xx" flag="done"?>This
+                guide  introduces<?oxy_comment_end?> how to integrate <ph keyref="product_name"/>
+                with Zoho Applications
+                <?oxy_comment_start author="carol" timestamp="20191122T151829+0800" comment="根据手册的内容来描述" flag="done"?>and
+                gives brief instructions of how to use the Zoho integrations
+                features.<?oxy_comment_end?><?oxy_comment_start author="carol" timestamp="20191122T151857+0800" comment="另外加了一个zoho integration 的文章，这段介绍就要移动过去。" flag="done"?></p><?oxy_comment_end?>
+        </section>
+        <section id="section_wpx_nsq_rjb">
+            <title><b>Audience</b></title>
+            <p>This guide is for administrators who need to integrate <ph keyref="product_name"/>
+                with <ph product="cloudpbx">Zoho One, </ph>Zoho
+                CRM<?oxy_comment_start author="Sunmy" timestamp="20200316T091230+0800" comment="删除 zoho desk ，暂不支持"?>,<?oxy_comment_end?>
+                Zoho Mail, and Zoho Recruit.</p>
+        </section>
+        <section id="section_zjp_q5y_rjb">
+            <title>R<?oxy_comment_start author="carol" timestamp="20191121T173644+0800" comment="默认使用复数" flag="done"?>equirements<?oxy_comment_end?></title>
+            <p>
+                <ul id="ul_fc5_mhm_5jb">
+                    <li><b>Zoho editions</b>: Starter, Standard, Professional, and Enterprise.</li>
+                    <li>
+                        <p product="s-series"><b>PBX</b>: S50, S100, and S300 with firmware version
+                            30.12.0.7 or later.</p>
+                    </li>
+                </ul>
+            </p>
+        </section>
+    </body>
+</topic>
+

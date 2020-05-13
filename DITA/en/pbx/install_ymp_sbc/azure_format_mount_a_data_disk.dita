@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_twx_dlc_pfb">
+    <title>2) Format &amp; Mount a Data Disk</title>
+    <shortdesc>To make the Azure data disk ready for use, you need to format and mount the disk to
+        YMP Virtual Machine (VM).</shortdesc>
+    <taskbody>
+        <prereq id="prereq_fdq_rq3_ygb">
+            <p>
+                <ul id="ul_kqp_5q3_ygb">
+                    <li><xref href="azure-create-a-data-disk-in-ymp-vm.dita#task_ab3_2k3_ygb">Create
+                            a Data Disk in YMP VM</xref>.</li>
+                </ul>
+            </p>
+        </prereq>
+        <steps>
+            <step>
+                <cmd>Log in YMP VM via SSH.</cmd>
+            </step>
+            <step>
+                <cmd>Run <codeph>sudo -i</codeph> to get administrator privileges.</cmd>
+            </step>
+            <step>
+                <cmd>Run the <codeph>fdisk -l</codeph> command to view the data disk.</cmd>
+                <info>
+                    <note>If you do not find <filepath>/dev/vdb</filepath> after running the
+                        command, it indicates that your YMP VM does not have a data disk.</note>
+                </info>
+            </step>
+            <step>
+                <cmd>Create a single-partition data disk and execute the following commands in
+                    sequence:</cmd>
+                <substeps id="substeps_urz_ntc_pfb">
+                    <substep>
+                        <cmd>Run <codeph>fdisk /dev/vdb</codeph> to partition the data disk.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Enter <codeph>n</codeph> and press the <b>Enter</b> key to create a new
+                            partition.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Enter <codeph>p</codeph> and press the <b>Enter</b> key to select the
+                            primary partition.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Enter the partition number. Press the <b>Enter</b> key to use the
+                            default value.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Enter the first available sector number. Press the <b>Enter</b> key to
+                            use the default value.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Enter a number for the last sector. Press the <b>Enter</b> key to use
+                            the default value.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Run <codeph>wq</codeph> and press the <b>Enter</b> key.</cmd>
+                    </substep>
+                </substeps>
+                <info>
+                    <codeblock>[root@iXXXXXXX ~]# fdisk /dev/vdb
+Device contains neither a valid DOS partition table, nor Sun, SGI or OSF disklabel
+Building a new DOS disklabel with disk identifier 0x5f46a8a2.
+Changes will remain in memory only, until you decide to write them.
+After that, of course, the previous content won't be recoverable.
+Warning: invalid flag 0x0000 of partition table 4 will be corrected by w(rite)
+WARNING: DOS-compatible mode is deprecated. It's strongly recommended to
+switch off the mode (command 'c') and change display units to
+sectors (command 'u').
+Command (m for help): n
+Command action
+e extended
+p primary partition (1-4)
+p
+Partition number (1-4): 1
+First cylinder (1-41610, default 1): 1
+Last cylinder, +cylinders or +size{K,M,G} (1-41610, default 41610):
+Using default value 41610
+Command (m for help): wq
+The partition table has been altered!
+Calling ioctl() to re-read partition table.
+Syncing disks.</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Run the <codeph>fdisk -l</codeph> command to view the new partition. If the
+                    following information appears, the new partition <filepath>/dev/vdb1</filepath>
+                    is created.</cmd>
+                <info>
+                    <codeblock>[root@iXXXXXXX ~]# fdisk -l
+Disk /dev/vda: 42.9 GB, 42949672960 bytes
+255 heads, 63 sectors/track, 5221 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk identifier: 0x00053156
+Device Boot Start End Blocks Id System
+/dev/vda1 * 1 5222 41942016 83 Linux
+Disk /dev/vdb: 21.5 GB, 21474836480 bytes
+16 heads, 63 sectors/track, 41610 cylinders
+Units = cylinders of 1008 * 512 = 516096 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disk identifier: 0x5f46a8a2
+Device Boot Start End Blocks Id System
+/dev/vdb1 1 41610 20971408+ 83 Linux</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Run the command <codeph>mkfs.ext4 /dev/vdb1</codeph> to create a file system on
+                    the new partition.</cmd>
+            </step>
+            <step>
+                <cmd>Run the command <codeph>cp /etc/fstab /etc/fstab.bak</codeph> to back up the
+                    data disk.</cmd>
+            </step>
+            <step>
+                <cmd>Run the command <codeph>echo /dev/vdb1 /mnt/autorecording ext4 defaults,nofail
+                        0 0 >> /etc/fstab</codeph> to write new partition information to
+                        <filepath>/etc/fstab</filepath>. </cmd>
+            </step>
+            <step>
+                <cmd>View the new partition information in <filepath>/etc/fstab</filepath>: Run the
+                    command <codeph>cat /etc/fstab</codeph>.</cmd>
+                <info>
+                    <codeblock>[root@iXXXXXXX ~]# cat /etc/fstab
+#
+# /etc/fstab
+# Created by anaconda on Thu Feb 23 07:28:22 2017
+#
+# Accessible filesystems, by reference, are maintained under '/dev/disk'
+# See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info
+#
+UUID=3d083579-f5d9-4df5-9347-8d27925805d4 / ext4 defaults 1 1
+tmpfs /dev/shm tmpfs defaults 0 0
+devpts /dev/pts devpts gid=5,mode=620 0 0
+sysfs /sys sysfs defaults 0 0
+proc /proc proc defaults 0 0
+/dev/vdb1 /mnt ext4 defaults 0 0</codeblock>
+                </info>
+            </step>
+            <step>
+                <cmd>Create a folder <filepath>autorecording</filepath> under
+                        <filepath>/mnt</filepath>: Run the command <codeph><codeph>mkdir -p
+                            /mnt/autorecording</codeph></codeph>.</cmd>
+            </step>
+            <step>
+                <cmd>Mount the file system: Run the command <codeph><codeph>mount /dev/vdb1
+                            /mnt/autorecording</codeph></codeph>.</cmd>
+            </step>
+            <step>
+                <cmd>To view disk space and usage: Run the command <codeph><codeph>df
+                        -h</codeph></codeph>.</cmd>
+                <info>
+                    <p>If the new file system information appears in the returned results, the mount
+                        operation is successful and you can use the new file system.</p>
+                </info>
+                <info>
+                    <codeblock>[root@iXXXXXXX ~]# mount /dev/vdb1 /mnt/autorecording
+[root@iXXXXXXX ~]# df -h
+Filesystem Size Used Avail Use% Mounted on
+/dev/vda1 40G 6.6G 31G 18% /
+tmpfs 499M 0 499M 0% /dev/shm
+/dev/vdb1 20G 173M 19G 1% /mnt/autorecording</codeblock>
+                </info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

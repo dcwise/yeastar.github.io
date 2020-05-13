@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="task_iqr_ccl_q2b">
+    <title>Log in/out a Queue</title>
+    <shortdesc>A dynamic agent can log in or log out a queue at any time.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/07/30"/>
+            <!--Carol-->
+            <revised modified="2018/07/30"/>
+            <!--Carol-->
+            <revised modified="2018/07/31"/>
+            <!--Carol-->
+            <revised modified="2018/10/22"/>
+            <!--Carol-->
+            <revised modified="2018/10/24"/>
+        </critdates>
+    </prolog>
+    <body>
+        <section id="section_h4b_1dl_q2b">
+            <title>Log in/out a Queue by Feature Code</title>
+            <p>
+                <note>If the static agents try to log out a queue, the system will play a prompt
+                    "Agent logged out, goodbye"; But actually, the agent is still in the
+                    queue.</note>
+            </p>
+            <ul id="ul_mzq_cdl_q2b">
+                <li>To log in a queue, dial <codeph>[QUEUE_NUM]*</codeph>.<p>For example, dynamic
+                        agent 1000 dials <codeph>6700*</codeph> to log in the queue 6700.</p></li>
+                <li>To log out a queue, dial <codeph>[QUEUE_NUM]**</codeph>.<p>For example, dynamic
+                        agent 1000 dials <codeph>6700**</codeph> to log out the queue 6700.</p></li>
+            </ul>
+            <p product="s-series">In the firmware version 30.8.0.8 or later, the dynamic agents have
+                another way to log in and log out a queue.</p>
+            <p>
+                <ul id="ul_nzq_cdl_q2b">
+                    <li>Dial <codeph>*75[QUEUE_NUM]</codeph> to log in a queue.<p>For example,
+                            dynamic agent dials <codeph>*756700</codeph> to log in the queue
+                            6700.</p></li>
+                    <li>Dial <codeph>*75[QUEUE_NUM]</codeph> again to log out a queue.<p>For
+                            example, dynamic agent dials <codeph>*756700</codeph> again to log out
+                            the queue 6700.</p></li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_fdl_sfl_q2b">
+            <title>Log in/out a Queue by BLF Key</title>
+            <p>A dynamic agent can set a BLF key on his/her IP phone to quickly log in or log out a
+                queue.</p>
+            <p>For example, on the phone of a dynamic agent, set a BLF key to quickly log in or log
+                out queue 6700.</p>
+            <p>The following instructions are based on the Htek UC912 v2.0.4.4.33. </p>
+            <p>
+                <ol id="ol_uhl_5ql_q2b">
+                    <li>Log in the phone web interface, go to <menucascade>
+                            <uicontrol>Function Keys</uicontrol>
+                            <uicontrol>Line Key</uicontrol>
+                        </menucascade>.</li>
+                    <li>Set a BLF key to log in or log out queue 6700.<p><image
+                                href="../Images/admin/hteck_login_queue_blf.png"
+                                id="image_bby_qtl_q2b"/></p><p>
+                            <ul id="ul_ic1_r5l_q2b">
+                                <li><uicontrol>Type</uicontrol>: Set to
+                                    <uicontrol>BLF</uicontrol>.</li>
+                                <li><uicontrol>Value</uicontrol>: The BLF key format is
+                                        <codeph>*75[QUEUE_NUM]</codeph>. In this example, set to
+                                        <codeph>*756700</codeph>.</li>
+                                <li><uicontrol>Account</uicontrol>: Select the account that is
+                                    registered to the extension number of the agent.</li>
+                            </ul>
+                        </p></li>
+                    <li>Click <uicontrol>SaveSet</uicontrol>.</li>
+                </ol>
+            </p>
+            <p>Now, the agent can press the BLF key to switch his/her status in the queue.</p>
+            <p>
+                <ul id="ul_phn_myl_q2b">
+                    <li>When the prompt "agent logged out,goodbye." is played, the agent is logged
+                        out of the queue.</li>
+                    <li>When the prompt "agent logged in, goodbye." is played, the agent is logged
+                        in the queue.</li>
+                </ul>
+            </p>
+        </section>
+    </body>
+</topic>

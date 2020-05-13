@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_q3p_fxt_c2b">
+    <title>Change Room</title>
+    <shortdesc>You can change guest room with any free/vacant room. If the guest had made outbound
+        calls or consumed mini bar items in the previous room, the system will automatically add the
+        charges into the bill.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/06/11"/>
+            <!--Carol-->
+            <revised modified="2018/06/11"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <context id="context_dm4_425_c2b">
+            <note>A guest can move room only once.</note>
+        </context>
+        <steps>
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Hotel</uicontrol>
+                        <uicontrol>Room Operations</uicontrol>
+                        <uicontrol>Room List</uicontrol>
+                    </menucascade>, select the guest, click <b>Move</b>.</cmd>
+                <info><image href="../Images/admin/hotel_move_room.png" width="650"
+                        id="image_ygc_x25_c2b"/></info>
+            </step>
+            <step>
+                <cmd>Select a desired room from the drop down menu of <b>Move to Room</b>.</cmd>
+            </step>
+            <step>
+                <cmd>Input <b>Extra Charges </b>if the guest has damaged things in the room or
+                    others.</cmd>
+            </step>
+            <step>
+                <cmd>Make a note of extra charges information or why the guest would change room in
+                    the <b>Notes</b> field.</cmd>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol>.</cmd>
+                <info>
+                    <p> The guest will be moved to the selected room.</p>
+                </info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_bfh_pny_scb">
+    <title>Auto Provision Phone Lines</title>
+    <shortdesc>You can auto provision your phones to make the phones register PBX extensions
+        automatically.</shortdesc>
+    <taskbody>
+        <context>
+            <p>
+                <note type="important" id="reset"> For the first time to auto provision your phones
+                    on the PBX, you need to <b>RESET</b> all your phones before auto provisioning,
+                    or auto provisioning may not work.</note>
+            </p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Auto Provisioning</uicontrol>
+                        <uicontrol>Device List</uicontrol>
+                    </menucascade>, click <uicontrol>Add</uicontrol> or click <uicontrol>Bulk
+                        Add</uicontrol>.</cmd>
+                <info>
+                    <note>You can only bulk provision phones that are in the same phone
+                        model.</note>
+                </info>
+            </step>
+            <step>
+                <cmd>On the configuration page, select the phone manufacturer, phone model, and
+                    enter phone's MAC address.</cmd>
+                <info><image href="../Images/admin/add_autop_device.png" id="image_ok3_tfz_scb"
+                        width="650"/></info>
+            </step>
+            <step>
+                <cmd importance="optional">Select a customized template. </cmd>
+                <info>The global settings will apply to the phone(s).</info>
+            </step>
+            <step>
+                <cmd>In  the <uicontrol>Account</uicontrol> section, activate a line and assign an
+                    extension for the phone.</cmd>
+                <info><image href="../Images/admin/autop_account.png" width="650"
+                        id="image_dhr_hgz_scb"/></info>
+            </step>
+            <step>
+                <cmd importance="optional">Click <uicontrol>Features</uicontrol>,
+                        <uicontrol>Preference</uicontrol>, or <uicontrol>Codec</uicontrol> tab to
+                    configure the settings.</cmd>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol> and reboot the phone.</cmd>
+                <stepresult> When the phone restarts, the phone user needs to fill in the user name
+                    and password to get the configurations from PBX.<p><image
+                            href="../Images/admin/autop_login.jpg" id="image_tx1_ppz_scb"/></p><p>
+                        <ul id="ul_qwk_qpz_scb">
+                            <li><b>User Name</b>: Enter the extension number that is assigned to the
+                                phone.</li>
+                            <li><b>Password</b>: Enter the extension's <uicontrol>Voicemail Access
+                                    PIN</uicontrol>.<p>
+                                    <note type="tip">
+                                        <ul id="ul_lnx_pqz_scb">
+                                            <li>For the phone with small screen, you need to press
+                                                the down key ▼ to find the password box.</li>
+                                            <li>If the authentication page disappears from the phone
+                                                screen, reboot the phone again to get the
+                                                authentication page.</li>
+                                            <li>You can send welcome emails that contain the
+                                                voicemail access PIN to the users, then the users
+                                                can log in the phone manually. If you<xref
+                                                  href="export_auto_provision_settings.dita#task_yj5_jrz_scb"
+                                                  > export the device settings</xref>, you can check
+                                                all the extensions' voicemail access PIN.</li>
+                                        </ul>
+                                    </note>
+                                </p></li>
+                        </ul>
+                    </p></stepresult>
+            </step>
+        </steps>
+    </taskbody>
+    <related-links>
+        <link href="export_auto_provision_settings.dita#task_yj5_jrz_scb"/>
+        <link href="add_a_customized_auto_provisioning_template.dita#task_hdh_rmy_scb"/>
+    </related-links>
+</task>

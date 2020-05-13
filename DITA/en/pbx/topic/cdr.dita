@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+  PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topicID">
+   <title>CDR</title>
+   <body>
+      <p>CDR is raw data of all call activities; records of all calls
+from the beginning to the end will be kept.</p>
+      <p>When a call is released, the PBX will send a report to the
+application server in real time.</p>
+      <p>
+         <b>Report sample:</b>
+      </p>
+      <p>
+         <b>1. Extension’s Internal Call:</b>
+      </p>
+      <p>
+{“action”:“NewCdr”,“callid”:“1521173561.43”,“timestart”:“2018-03-15
+20:12:42”,“callfrom”:“201”,“callto”:“203”,“callduraction”:“11”,“talkduraction”:“11”,“status”:“ANSWERED”,“type”:“Internal”,“recording”:“20180315201242-1521173562.46-203-201-Internal.wav”}</p>
+      <p>
+         <b>2. Extension Makes an External Call:</b>
+      </p>
+      <p>
+{“action”:“NewCdr”,“callid”:“1521174180.92”,“timestart”:“2018-03-15
+20:23:00”,“callfrom”:“201”,“callto”:“200”,“callduraction”:“5”,“talkduraction”:“5”,“status”:“ANSWERED”,“type”:“Outbound”,“recording”:“20180315202300-1521174180.95-200-201-Internal.wav”}</p>
+      <p>
+         <b>3. External Number Dials Extension:</b>
+      </p>
+      <p>
+{“action”:“NewCdr”,“callid”:“1505352445.265”,“timestart”:“2017-09-14
+09:27:25”,“callfrom”:“102”,“callto”:“1000”,“srctrunkname”:“Apple_test”,“callduraction”:“38”,“talkduraction”:“29”,“status”:“ANSWERED”,“type”:“Inbound”,“recording”:“20170914092747-1505352445.265-102-1000-Inbound.wav”}</p>
+      <p>
+         <b>Report parameters descriptions:</b>
+      </p>
+      <table>
+         <tgroup cols="4">
+            <thead>
+               <row>
+                  <entry>
+                     <b>Parameter Name</b>
+                  </entry>
+                  <entry>
+                     <b>Type</b>
+                  </entry>
+                  <entry>
+                     <b>Description</b>
+                  </entry>
+                  <entry>
+                     <b>Sample</b>
+                  </entry>
+               </row>
+            </thead>
+            <tbody>
+               <row>
+                  <entry>
+                     <b>&lt;cdrid&gt;</b>
+                  </entry>
+                  <entry>String</entry>
+                  <entry>The CDR ID</entry>
+                  <entry>123456789</entry>
+               </row>
+               <row>
+                  <entry>
+                     <b>&lt;callid&gt;</b>
+                  </entry>
+                  <entry>String</entry>
+                  <entry>A unique identifier for the call</entry>
+                  <entry>2000</entry>
+               </row>
+               <row>
+                  <entry>
+                     <b>[timestart]</b>
+                  </entry>
+                  <entry>String</entry>
+                  <entry>The start time of the call</entry>
+                  <entry>2017-09-14 09:30:15</entry>
+               </row>
+               <row>
+                  <entry>
+                     <b>[callfrom]</b>
+                  </entry>
+                  <entry>String</entry>
+                  <entry>The caller’s number</entry>
+                  <entry>102</entry>
+               </row>
+               <row>
+                  <entry>
+                     <b>[callto]</b>
+                  </entry>
+                  <entry>String</entry>
+                  <entry>The callee’s number</entry>
+                  <entry>1000</entry>
+               </row>
+               <row>
+                  <entry>
+                     <b>[callduraction]</b>
+                  </entry>
+                  <entry>String</entry>
+                  <entry>The call duration</entry>
+                  <entry>29</entry>
+               </row>
+               <row>
+                  <entry>
+                     <b>[talkduraction]</b>
+                  </entry>
+                  <entry>String</entry>
+                  <entry>The talk duration</entry>
+                  <entry>29</entry>
+               </row>
+               <row>
+                  <entry>
+                     <b>[srctrunkname]</b>
+                  </entry>
+                  <entry>String</entry>
+                  <entry>The name of the source trunk</entry>
+                  <entry>Apple_test</entry>
+               </row>
+               <row>
+                  <entry>
+                     <b>[dstrunkname]</b>
+                  </entry>
+                  <entry>String</entry>
+                  <entry>The name of the destination trunk</entry>
+                  <entry>Apple_test</entry>
+               </row>
+               <row>
+                  <entry>
+                     <b>[status]</b>
+                  </entry>
+                  <entry>String</entry>
+                  <entry>Call status</entry>
+                  <entry>ANSWERED, NO ANSWER, FAILED, VOICEMAIL</entry>
+               </row>
+               <row>
+                  <entry>
+                     <b>[type]</b>
+                  </entry>
+                  <entry>String</entry>
+                  <entry>The call type</entry>
+                  <entry>Inbound, Outbound, Internal, Callback,
+Transfer</entry>
+               </row>
+               <row>
+                  <entry>
+                     <b>[pincode]</b>
+                  </entry>
+                  <entry>Int</entry>
+                  <entry>The password</entry>
+                  <entry>1000</entry>
+               </row>
+               <row>
+                  <entry>
+                     <b>[recording]</b>
+                  </entry>
+                  <entry>String</entry>
+                  <entry>The name of the call recording file</entry>
+                  <entry>
+20170914092747-1505352445.265-102-1000-Inbound.wav</entry>
+               </row>
+            </tbody>
+         </tgroup>
+      </table>
+   </body>
+</topic>

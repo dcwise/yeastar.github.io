@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_dnl_s4k_jdb">
+  <title>Version 30.3.0.10</title>
+  <abstract>Released Date: January 4, 2017</abstract>
+  <prolog>
+    <critdates>
+      <!--Carol-->
+      <revised modified="2018/06/20"/>
+    </critdates>
+  </prolog>
+  <body>
+    <section id="section_nyk_p4g_jdb">
+      <title>New Feature</title>
+      <p><image href="../Images/horizon.png" id="image_cvz_zzv_pdb"/></p>
+      <p>
+        <ul id="ul_ery_x5k_jdb">
+          <li>Added support for Czech and Slovak system prompts.</li>
+          <li>Added support for Portuguese and Serbian web interface.</li>
+          <li>Added Billing App.</li>
+          <li>Added Emergency Number feature.</li>
+          <li>Added support for installing or updating App by uploading App installer package to
+            S-Series IPPBX.</li>
+          <li>Added support for logging in Web user interface by user email address.</li>
+          <li>Added Backup Schedule feature.</li>
+          <li>Added support for sending Email to SMS to multiple mobile phone numbers.</li>
+          <li>Extension users can configure their own whitelists to allow only trusted numbers to
+            call their extensions.</li>
+          <li>Added support for adapting caller ID.</li>
+          <li>Added support for sharing hard disk / TF card / SD card / USB drive.</li>
+          <li>Added “Delete Voicemail” and “Dial 5 Prompt” settings for Voicemail.</li>
+          <li>Added support for displaying the original caller ID when you do attended
+            transfer.</li>
+          <li>Added support for limiting VoIP trunk’s maximum channels.</li>
+          <li>Added “DID Number” setting for PSTN/GSM/3G trunk.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_gzb_54g_jdb">
+      <title>Optimization</title>
+      <p><image href="../Images/horizon.png" id="image_i1n_11w_pdb"/></p>
+      <p>
+        <ul id="ul_qdz_y5k_jdb">
+          <li>Updated Simplified Chinese, English and Spanish web interface.</li>
+          <li>Updated English, Hebrew and Chinese system prompts.</li>
+          <li>Upgrade the NTP server version to 4.2.8p8.</li>
+          <li>Supports to add a maximum of 5 prompts for an IVR.</li>
+          <li>Only permitted extensions can override the time condition. (Go to “Settings > PBX >
+            General > Feature Code > Time Condition”, click “Set Extension Permission” to select the
+            extensions.) </li>
+          <li>When a user picks up a call, he can see the incoming caller ID on his phone.</li>
+          <li>The system will give a prompt when a mobile extension user calls in the S-Series
+            IPPBX. </li>
+          <li>Limit the length of outbound route “Dial Pattern” to 63 characters. </li>
+          <li>The debug commands under SSH will be recorded in system logs.</li>
+        </ul>
+      </p>
+    </section>
+    <section id="section_cmm_x4g_jdb">
+      <title>Fixed Bug</title>
+      <p><image href="../Images/horizon.png" id="image_gyc_b1w_pdb"/></p>
+      <p>
+        <ul id="ul_qg1_1vk_jdb">
+          <li>Fixed call log issue: when the incoming call reached a ring group, and a user in the
+            group answered the call, this call log would not be record in the system.</li>
+          <li>Fixed the SIP peer trunk issue: the trunk would not work if “Qualify” is disabled. </li>
+          <li>Fixed E1 trunk issue: if the E1 trunk signaling is set to mfc/r2, this trunk would be
+            unavailable to use.</li>
+          <li>Fixed the issue that using a BLF key to monitor a trunk, and pressed the key to dial
+            out, the system might use a wrong trunk to call out.</li>
+          <li>Fixed SLA issue: using a BLF key to monitor a SLA trunk, and pressed the key to use
+            the trunk, the system would hang up. </li>
+        </ul>
+      </p>
+    </section>
+  </body>
+</topic>

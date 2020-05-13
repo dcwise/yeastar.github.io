@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_xyn_5lr_2fb">
+    <title>Linkus Server Quick Start</title>
+    <shortdesc>Three steps to set up your Linkus server and allow users to log in Linkus by
+        themselves.</shortdesc>
+    <body>
+        <section id="section_mlr_tl4_hhb">
+            <title>Linkus Quick Start - Video</title>
+            <p><object width="450" data="https://www.youtube.com/embed/nhrmAIX9gp8"
+                    outputclass="iframe" product="k2 s-series" height="250"/></p>
+            <p><object width="450" height="250" data="https://www.youtube.com/embed/lfjol6MoDFY"
+                    outputclass="iframe" product="cloudpbx">
+                    <param name="allowfullscreen"/>
+                </object></p>
+        </section>
+    </body>
+</topic>

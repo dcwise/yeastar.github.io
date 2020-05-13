@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_x3d_kj4_4fb">
+    <title><?oxy_comment_start author="Sunmy" timestamp="20190905T170113+0800" comment="add" flag="done"?><?oxy_comment_start author="carol" timestamp="20190909T141817+0800" comment="这个文章可以分三个要点：
+This topic introduces what is presence and how the presence status can benefit your work.
+1. What is Presence？
+是什么？
+Extension Presence indicates the availability status of an extension. Presence settings are linked to the Call Forwarding rules and Linkus ring strategy. You can set different call forwarding rules and ring strategy for each presence status.
+
+有哪几种状态：
+- 
+-
+-
+
+2. How to use Presence in your work?
+Change Presence status to quickly route incoming calls. For example, if you’re at a meeting and temporarily do not want to receive calls, set your status to DND. Once you are ready to receive calls again, switch back to Available.
+
+You can see the current status of all users on Linkus client. 
+Presence status and information that are displayed on Linkus clients allows you to see the presence of your colleague and instantly know whether the colleague is available, busy, or away.
+
+3. How to change Presence status?
+You have 3 ways to change an extension presence.
+- On the Linkus client, extension users can change their own presence status.
+加图
+- On the Extension Web Portal, extension users can change their own presence status.
+加图
+- Log in the PBX web portal as an administrator, and change the extension presence.
+加图
+
+
+" flag="done" mid="1"?>Extension
+        Presence Overview<?oxy_comment_end?><?oxy_comment_end mid="1"?></title>
+    <shortdesc>This topic introduces what is presence and how the presence status can benefit the
+        user's work.</shortdesc>
+    <conbody>
+        <section id="section_ckv_2kw_y3b">
+            <title>What is Presence</title>
+            <p>Extension Presence indicates the availability status of an extension. Presence
+                settings are linked to the Call Forwarding rules and Linkus ring strategy. Different
+                call forwarding rules and ring strategy can be set for each presence status.</p>
+            <p><ph keyref="product_name"/> provides five presence statuses:</p>
+            <ul id="ul_mys_yj4_4fb">
+                <li><uicontrol>Available</uicontrol>: The
+                    user<?oxy_comment_start author="Sunmy" timestamp="20190904T173951+0800" comment="补充状态描述" flag="done"?>
+                    is online and ready for communication. <?oxy_comment_end?></li>
+                <li><uicontrol>Away</uicontrol>: The user is currently away from your office.</li>
+                <li><uicontrol>DND</uicontrol>: The user doesn't want to be disturb, and you won't
+                    receive any calls.</li>
+                <li><uicontrol>Lunch Break</uicontrol>: The user is currently on lunch break.</li>
+                <li><uicontrol>On a Business Trip</uicontrol>: The user is currently on a business
+                    trip.</li>
+            </ul>
+        </section>
+        <section id="section_ywz_2qh_1jb">
+            <title>How does Presence benefit the user's work?</title>
+            <p>Presence status and information that are displayed on Linkus clients allows the user
+                to see the presence of your colleague and instantly know whether the colleague is
+                available, busy, or away.</p>
+            <p>Change Presence status to quickly route incoming calls. For example, if the user is
+                at a meeting and do not want to miss calls, set the status to
+                    <uicontrol>Away</uicontrol> and forward the call to voicemail. Once the user is
+                ready to receive calls again, switch back to <uicontrol>Available</uicontrol>.</p>
+        </section>
+        <section id="section_g11_fqh_1jb">
+            <title>How to change Presence status?</title>
+            <p>3 ways to change an extension presence.</p>
+            <p>
+                <ul id="ul_mhp_gqh_1jb">
+                    <li>On the Linkus client, extension users can change their own presence
+                        status.</li>
+                    <li>On the Extension Web Portal, Linkus users can change their own presence
+                        status.</li>
+                    <li>On the PBX Web Portal, you can change all extensions presence.</li>
+                </ul>
+            </p>
+        </section>
+    </conbody>
+</concept>

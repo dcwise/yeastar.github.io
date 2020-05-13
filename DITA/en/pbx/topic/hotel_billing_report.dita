@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_cr2_kxt_c2b">
+    <title>Billing Report</title>
+    <shortdesc>Manage the billing report of the Hotel App.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/06/11"/>
+            <!--Carol-->
+            <revised modified="2018/06/11"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <p>Each time after you checked out a guest or a guest group, the system will automatically
+            generate a billing report. </p>
+        <p>Go to <menucascade>
+                <uicontrol>Hotel</uicontrol>
+                <uicontrol>Billing</uicontrol>
+                <uicontrol>Billing Report</uicontrol>
+            </menucascade> to check the billing report.</p>
+        <p>
+            <ul id="ul_uz3_ng5_c2b">
+                <li>Click <image href="../Images/ui_icons/view.png" width="15"
+                        id="image_dbh_pg5_c2b"/> to view a report.</li>
+                <li>Click <image href="../Images/ui_icons/delete.png" width="20"
+                        id="image_kgn_qg5_c2b"/> to delete a report.</li>
+                <li>Click <uicontrol>Download</uicontrol> to download all the billing reports.</li>
+            </ul>
+        </p>
+    </conbody>
+</concept>

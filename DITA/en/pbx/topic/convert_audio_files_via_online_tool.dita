@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_vkr_31k_5cb">
+    <title>Convert Audio Files Online</title>
+    <shortdesc>You can quickly convert your audio files via G711 File Converter online.</shortdesc>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/06/14"/>
+            <!--Carol-->
+            <revised modified="2018/10/23"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <steps id="steps_xqf_22k_5cb">
+            <step>
+                <cmd>Visit <xref href="http://g711.org/" format="html" scope="external"
+                        >g711.org</xref>.</cmd>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Browse</uicontrol> to upload your audio file.</cmd>
+            </step>
+            <step>
+                <cmd>Set the <uicontrol>Output Format</uicontrol>.</cmd>
+                <info>We recommend <uicontrol>BroadWorks Classic</uicontrol> or <uicontrol>Asterisk
+                        Standard</uicontrol>.</info>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Submit</uicontrol> to start converting the file.</cmd>
+                <info><image href="../Images/admin/g711_file_converter.png" id="image_omt_w2k_5cb"
+                    /></info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

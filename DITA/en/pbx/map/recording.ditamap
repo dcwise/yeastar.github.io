@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>Call Recording</title>
+    <topicmeta>
+        <author type="creator">Carol</author>
+        <author type="contributor">Carol</author>
+        <critdates>
+            <created date="2018/09/26"/>
+            <!--Carol-->
+            <revised modified="2018/09/26"/>
+            <!--Carol-->
+            <revised modified="2018/09/27"/>
+            <!--Carol-->
+            <revised modified="2018/10/15"/>
+            <!--Carol-->
+            <revised modified="2018/12/13"/>
+        </critdates>
+    </topicmeta>
+    <topicref href="../topic/call_recording.dita">
+        <topicref href="../topic/set_up_call_recording.dita"/>
+        <topicref href="../topic/pause_resume_call_recording.dita"/>
+        <topicref href="../topic/monitor_call_recording_status.dita"/>
+        <topicref href="../topic/share_recording_files.dita" product="s-series"/>
+        <topicref href="../topic/auto_clean_up_recording_files.dita"/>
+        <topicref href="../topic/manage_call_recording_files.dita"/>
+        <topicref href="../topic/grant_recording_permissions_to_users.dita"/>
+    </topicref>
+    <topicref href="../topic/storage.dita" product="s-series">
+        <topicref href="../topic/add_network_drive.dita" product="s-series"/>
+        <topicref href="../topic/auto_cleanup.dita"/>
+        <topicref href="../topic/set_up_file_share.dita" product="s-series"/>
+        <topicref href="../topic/set_up_ftp_file_share.dita" product="s-series"/>
+    </topicref>
+    <keydef keys="product_name" product="s-series">
+        <topicmeta>
+            <keywords>
+                <keyword>Yeastar S-Series VoIP PBX</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="product_name" product="cloudpbx">
+        <topicmeta>
+            <keywords>
+                <keyword>Yeastar Cloud PBX</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+</map>

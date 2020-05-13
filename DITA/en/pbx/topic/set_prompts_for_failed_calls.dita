@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_v4s_4zq_5cb">
+    <title>Set Prompts for Failed Calls </title>
+    <shortdesc>A user may fail to make outbound calls due to many reasons, such as the trunk is
+        busy, no trunk available, or invalid number. You can set different prompts to inform the
+        user why the call fails.</shortdesc>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/06/14"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <steps id="steps_c31_wzq_5cb">
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol>PBX</uicontrol>
+                        <uicontrol>Voice Prompts</uicontrol>
+                        <uicontrol>Prompt Preference</uicontrol>
+                    </menucascade>.</cmd>
+            </step>
+            <step>
+                <cmd>Set the prompts for different type of failed calls.</cmd>
+                <info><image href="../Images/admin/failed_calls_prompts.png" id="image_idd_f1r_5cb"
+                    /></info>
+                <choices>
+                    <choice><uicontrol>Invalid Phone Number Prompt</uicontrol>: The PBX will play
+                        the prompt when the dialed number is invalid.</choice>
+                    <choice><uicontrol>Busy Line Prompt</uicontrol>: The PBX will play the prompt
+                        when the trunk used is busy.</choice>
+                    <choice><uicontrol>Dial Failure Prompt</uicontrol>: The PBX will play the prompt
+                        if no trunk is available to call out.</choice>
+                </choices>
+            </step>
+        </steps>
+    </taskbody>
+</task>

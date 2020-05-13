@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_wcy_ffb_b2b">
+    <title>S20 Overview</title>
+    <conbody>
+        <section id="section_vwz_hfb_b2b">
+            <title>Front Panel</title>
+            <p><image href="../Images/admin/s20_front.png" id="image_dyz_tfb_b2b"/></p>
+            <p>
+                <table frame="all" rowsep="1" colsep="1" id="table_rkj_bgb_b2b">
+                    <title>Descriptions of S20 Front Panel</title>
+                    <tgroup cols="4">
+                        <colspec colname="c1" colnum="1" colwidth="1.35*"/>
+                        <colspec colname="c2" colnum="2" colwidth="1*"/>
+                        <colspec colname="c3" colnum="3" colwidth="1.81*"/>
+                        <colspec colname="c4" colnum="4" colwidth="4.15*"/>
+                        <thead>
+                            <row>
+                                <entry>LED</entry>
+                                <entry>Indication</entry>
+                                <entry>Status</entry>
+                                <entry>Description</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry morerows="1">POWER</entry>
+                                <entry morerows="1">Power status</entry>
+                                <entry>On</entry>
+                                <entry>The power is switched on.</entry>
+                            </row>
+                            <row>
+                                <entry>Off</entry>
+                                <entry>The power is switched off.</entry>
+                            </row>
+                            <row>
+                                <entry morerows="1">SYSTEM</entry>
+                                <entry morerows="1">System status</entry>
+                                <entry>Blinking</entry>
+                                <entry>The system is running properly.</entry>
+                            </row>
+                            <row>
+                                <entry>Static/Off</entry>
+                                <entry>The system goes wrong.</entry>
+                            </row>
+                            <row>
+                                <entry morerows="2">WAN</entry>
+                                <entry morerows="2">WAN status</entry>
+                                <entry>Static</entry>
+                                <entry>Linked normally.</entry>
+                            </row>
+                            <row>
+                                <entry>Blinking</entry>
+                                <entry>In communication.</entry>
+                            </row>
+                            <row>
+                                <entry>Off</entry>
+                                <entry>Off-line.</entry>
+                            </row>
+                            <row>
+                                <entry morerows="2">LAN</entry>
+                                <entry morerows="2">LAN status</entry>
+                                <entry>Static</entry>
+                                <entry>Linked normally.</entry>
+                            </row>
+                            <row>
+                                <entry>Blinking</entry>
+                                <entry>In communication.</entry>
+                            </row>
+                            <row>
+                                <entry>Off</entry>
+                                <entry>Off-line.</entry>
+                            </row>
+                            <row>
+                                <entry morerows="9">1-4<p>(Telephony ports)</p></entry>
+                                <entry morerows="1">FXS</entry>
+                                <entry>Green: static</entry>
+                                <entry>The analog phone is idle.</entry>
+                            </row>
+                            <row>
+                                <entry>Green: blinking</entry>
+                                <entry>The analog phone is busy.</entry>
+                            </row>
+                            <row>
+                                <entry morerows="2">GSM/3G/4G</entry>
+                                <entry>Red: static</entry>
+                                <entry>The GSM/3G/4G Trunk is idle.</entry>
+                            </row>
+                            <row>
+                                <entry>Red: blinking slowly</entry>
+                                <entry>No SIM card.</entry>
+                            </row>
+                            <row>
+                                <entry>Red: blinking rapidly</entry>
+                                <entry>The GSM/3G/4G trunk is in use.</entry>
+                            </row>
+                            <row>
+                                <entry morerows="1">BRI</entry>
+                                <entry>Orange: blinking</entry>
+                                <entry>The BRI line is disconnected.</entry>
+                            </row>
+                            <row>
+                                <entry>Orange: static</entry>
+                                <entry>The BRI line is connected or in use.</entry>
+                            </row>
+                            <row>
+                                <entry morerows="2">FXO</entry>
+                                <entry>Red: static</entry>
+                                <entry>The PSTN line is idle.</entry>
+                            </row>
+                            <row>
+                                <entry>Red: blinking slowly</entry>
+                                <entry>No PSTN line is connected to the FXO port.</entry>
+                            </row>
+                            <row>
+                                <entry>Red: blinking rapidly</entry>
+                                <entry>The PSTN line is busy.</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+        <section id="section_xnm_5fb_b2b">
+            <title>Rear Panel</title>
+            <p><image href="../Images/admin/s20_rear.png" id="image_ibc_vfb_b2b"/></p>
+            <p>
+                <table frame="all" rowsep="1" colsep="1" id="table_ydc_gjb_b2b">
+                    <title>Descriptions of S20 Rear Panel</title>
+                    <tgroup cols="2">
+                        <colspec colname="c1" colnum="1" colwidth="1*"/>
+                        <colspec colname="c2" colnum="2" colwidth="4.88*"/>
+                        <thead>
+                            <row>
+                                <entry>Port</entry>
+                                <entry>Description</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>RJ11</entry>
+                                <entry>
+                                    <ul id="ul_mvx_rjb_b2b">
+                                        <li><b>FXO port </b>(red light): For the connection of PSTN
+                                            lines or FXS ports of traditional PBX. </li>
+                                        <li><b>FXS port</b> (green light): For the connection of
+                                            analog phones. </li>
+                                        <li><b>BRI port </b>(orange light): For the connection of
+                                            ISDN BRI lines. </li>
+                                    </ul>
+                                    <note>The sequence number of the ports corresponds to that of
+                                        the Indicator lights in the front panel. (I.e. the LED
+                                        lights in the front indicate the connection status of the
+                                        corresponding ports at the back panel.)</note>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>WAN/LAN</entry>
+                                <entry>
+                                    <p>Yeastar S20 provides two 10/100Mbps adaptive RJ45 Ethernet
+                                        ports, and supports 3 Ethernet modes. The default mode is
+                                        “Single”.</p>
+                                    <ul id="ul_cs1_5jb_b2b">
+                                        <li><b>Single</b>: LAN port will be used for uplink
+                                            connection. WAN port is disabled.</li>
+                                        <li><b>Bridge</b>: LAN port will be used for uplink
+                                            connection. WAN port will be used as bridge for PC
+                                            connection. </li>
+                                        <li><b>Dual</b>: Both LAN and WAN ports can be used for
+                                            uplink connection.</li>
+                                    </ul>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry>TF Slot</entry>
+                                <entry>Insert TF card to store auto recording files.</entry>
+                            </row>
+                            <row>
+                                <entry>Antenna Socket</entry>
+                                <entry>Rotate the antenna into the Antenna Socket.</entry>
+                            </row>
+                            <row>
+                                <entry>Reset Button</entry>
+                                <entry>Press and hold for 10 seconds to restore the factory
+                                    defaults.</entry>
+                            </row>
+                            <row>
+                                <entry>Power Inlet</entry>
+                                <entry>Connect the supplied power supply to the port.</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+    </conbody>
+</concept>
+<?oxy_options track_changes="on"?>

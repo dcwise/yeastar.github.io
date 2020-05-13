@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_fsc_1hm_xdb">
+    <title>Change the PBX Time</title>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/05/23"/>
+            <!--Carol-->
+            <revised modified="2018/05/23"/>
+            <!--Carol-->
+            <revised modified="2018/10/23"/>
+            <!--Carol-->
+            <revised modified="2018/10/31"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol>System</uicontrol>
+                        <uicontrol>Date &amp; Time</uicontrol>
+                    </menucascade>.</cmd>
+            </step>
+            <step>
+                <cmd>Select your current and correct <uicontrol>Time Zone</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd importance="optional">Check the option <uicontrol>Daylight Saving
+                        Time</uicontrol> if you need it in your place.</cmd>
+            </step>
+            <step product="s-series">
+                <cmd>Select <uicontrol>Set Up Manually</uicontrol> and set the
+                        <uicontrol>Date</uicontrol> and <uicontrol>Time</uicontrol> according to
+                    your local time.</cmd>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Reboot the PBX to take effect.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

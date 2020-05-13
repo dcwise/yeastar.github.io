@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_rzf_mw1_wdb">
+    <title>Add a Conference</title>
+    <shortdesc>To make a conference call, you should add a conference on the PBX first.</shortdesc>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol>PBX</uicontrol>
+                        <uicontrol>Call Features</uicontrol>
+                        <uicontrol>Conference</uicontrol>
+                    </menucascade>, click <uicontrol>Add</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>On the configuration page, configure the Conference.</cmd>
+                <info><image href="../Images/admin/add_conference.png" id="image_zzh_prn_tdb"
+                        width="650"/></info>
+                <info>
+                    <ul>
+                        <li><uicontrol>Number</uicontrol>: The extension users need to dial this
+                            number to join the conference.</li>
+                        <li><uicontrol>Name</uicontrol>: Set a name for the conference.</li>
+                        <li><uicontrol>Participant Password</uicontrol>: Optional. If the password
+                            is set, users need to input the correct PIN to join this
+                            conference.</li>
+                        <li><uicontrol>Wait for Moderator</uicontrol>: If this option is checked,
+                            the conference participants could not hear each other until the
+                            moderator joins in the conference.</li>
+                        <li><uicontrol>Sound Prompt</uicontrol>: Select the sound prompt used for
+                            the login and logout of conference     members.</li>
+                        <li><uicontrol>Allow Participant to Invite</uicontrol>: Whether to allow the
+                            participants to invite users to join the conference.</li>
+                        <li><uicontrol>Moderator Password</uicontrol>: The moderator doesn't need to
+                            enter a password to join the conference. If a user enter this password
+                            to join the conference, he/she will act as the conference
+                            moderator.</li>
+                        <li><uicontrol>Member Moderators</uicontrol>: Select the conference
+                            moderators.</li>
+                    </ul>
+                </info>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

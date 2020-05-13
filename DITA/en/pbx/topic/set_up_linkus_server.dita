@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_svp_l22_2cb">
+  <title>Linkus Server Settings</title>
+  <shortdesc>To get start with Linkus, you should first enable Linkus server on <ph
+      keyref="product_name"/> and configure the server settings.</shortdesc>
+  <body>
+    <section id="section_yqw_gwm_hhb" product="s-series">
+      <title>Linkus Server types</title>
+      <p><ph keyref="product_name"/> provides Linkus Cloud Service, which is short for LCS. You can
+        set up two types of Linkus server in your PBX:</p>
+      <p>
+        <ul id="ul_dzb_kwm_hhb">
+          <li>Linkus server with LCS</li>
+          <li>Linkus server without LCS</li>
+        </ul>
+      </p>
+      <p><image href="../Images/admin/linkus-server-types.png" width="650" id="image_hp4_txm_hhb"
+        /></p>
+      <p>The following table shows the differences between the two types of servers.</p>
+      <p>
+        <table frame="all" rowsep="1" colsep="1" id="linkus-server-method">
+          <tgroup cols="3">
+            <colspec colname="c1" colnum="1" colwidth="1.29*"/>
+            <colspec colname="c2" colnum="2" colwidth="1*"/>
+            <colspec colname="c3" colnum="3" colwidth="1.43*"/>
+            <thead>
+              <row>
+                <entry>Linkus Server Type</entry>
+                <entry>Prerequisite</entry>
+                <entry>Description</entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry><xref href="set_up_linkus_server_with_LCS.dita">Linkus Server with
+                  LCS</xref></entry>
+                <entry><xref href="buy_linkus_cloud_service.dita#task_nlv_mgr_2fb">Buy
+                  LCS</xref></entry>
+                <entry>
+                  <ul id="ul_p5h_gks_qfb">
+                    <li>Simplifies Linkus server settings.</li>
+                    <li> Better Linkus experience.</li>
+                    <li>Supports Linkus Chat function.</li>
+                  </ul>
+                </entry>
+              </row>
+              <row>
+                <entry><xref href="set_up_linkus_server_without_lcs.dita">Linkus Server without
+                    LCS</xref></entry>
+                <entry>Professional network knowledge</entry>
+                <entry>No need to buy LCS, set up your Linkus server as a local server.</entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+      </p>
+    </section>
+    <section product="cloudpbx">
+      <title>Enable Linkus Server</title>
+      <p>
+        <ol id="ol_p5j_24g_hhb">
+          <li>Log in the PBX web interface, go to <uicontrol>Linkus</uicontrol> App. </li>
+          <li>Check the option <uicontrol>Enable</uicontrol> to enable Linkus server.<p><image
+                href="../Images/admin/enable_linkus_server.png" id="image_q34_tnk_ngb" width="650"
+              /></p></li>
+          <li>In the pop-up dialog, click <uicontrol>Yes</uicontrol> to confirm.<p>Click
+                <uicontrol>Server Settings</uicontrol> to check the Linkus server domain and the
+              Linkus service port. </p><p>The next, you can <xref href="linkus-qsg-step3.dita">send
+                Linkus emails to the users</xref>, users can log in Linkus quickly by scaning the QR
+              code or copying the login link in the email. </p><p>You can also send the Linkus
+              server information to the users to let them enter the <xref
+                href="linkus_login_information.dita"/> manually to log in.</p><p><image
+                href="../Images/admin/linkus-server-settings-cloud.png" id="image_rtq_1rg_hhb"
+            /></p></li>
+        </ol>
+      </p>
+    </section>
+  </body>
+</topic>

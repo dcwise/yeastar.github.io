@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="configure-hikvision-dh-ks6320-ndoor-station">
+    <title>Step3. Configure Hikvision DS-KH6320 Indoor Station</title>
+    <shortdesc>Register an extension on Hikvision DS-KH6320 Indoor Station, and configure other
+        settings of the Hikvision DS-KD8003 according to your usage scenarios.</shortdesc>
+    <body>
+        <section id="section_h2k_z2j_f3b">
+            <title>Register an extension on DS-KH6320 Indoor Station</title>
+            <p>
+                <ol id="ol_sd3_1fj_f3b">
+                    <li>Log in to <xref
+                            href="hikvision_device_management.dita#hikvision_device_management"
+                            >iVMS-4200 client</xref>, go to <menucascade>
+                            <uicontrol>Device Management</uicontrol>
+                            <uicontrol> Device</uicontrol>
+                            <uicontrol> Hikvision Device</uicontrol>
+                        </menucascade>.<p>Select DS-KH6320 Indoor Station and click
+                                <uicontrol>Remote Configuration</uicontrol>.</p><p><image
+                                id="image_ezg_t3q_f3b"
+                                href="../Images/sip-endpoints/hikvision/remote-configuration-for-ds-kh6320.png"
+                                width="650"/></p></li>
+                    <li>Go to <menucascade>
+                            <uicontrol>Intercom</uicontrol>
+                            <uicontrol> Intercom Protocol</uicontrol>
+                        </menucascade>, select <uicontrol>SIP Protocol</uicontrol> from the
+                        drop-down menu of <uicontrol>Protocol</uicontrol>, and click
+                            <uicontrol>Save</uicontrol>.</li>
+                    <li importance="optional" product="s-series">If your PBX is not in the same
+                        network with Hikvision DS-KH6320, you should configure DNS server.<p>Go to <menucascade>
+                                <uicontrol>Network</uicontrol>
+                                <uicontrol>Advanced Settings</uicontrol>
+                            </menucascade>, enter IP address of DNS server.</p><p><image
+                                href="../Images/sip-endpoints/hikvision/DNS-setting-hikvision-6320.png"
+                                id="image_bqz_hnw_k3b"/></p></li>
+                    <li product="cloudpbx">Go to <menucascade>
+                            <uicontrol>Network</uicontrol>
+                            <uicontrol>Advanced Settings</uicontrol>
+                        </menucascade>, enter IP address of DNS server.<p><image
+                                href="../Images/sip-endpoints/hikvision/DNS-setting-hikvision-6320.png"
+                                id="image_fnc_dnf_l3b"/></p></li>
+                    <li>Go to <menucascade>
+                            <uicontrol>Network</uicontrol>
+                            <uicontrol> SIP Settings</uicontrol>
+                        </menucascade>, enter the credentials of SIP extension 3620, and click
+                            <uicontrol>Save</uicontrol>.<p><image id="image_azh_zbj_f3b"
+                                href="../Images/sip-endpoints/hikvision/enter-sip-extension-and-credentials.png"
+                                width="500" product="s-series"/></p><p><image id="image_ktd_22k_k3b"
+                                href="../Images/sip-endpoints/hikvision/enter-sip-extension-and-credentials-cloud.png"
+                                width="500" product="cloudpbx"/></p><itemgroup>
+                            <ul id="ul_ezq_zrr_g3b">
+                                <li product="s-series"><uicontrol>Server Domain</uicontrol>: Enter
+                                    IP address of Yeastar S100. In this example, enter
+                                        <i>192.168.9.217</i>.</li>
+                                <li product="s-series"><uicontrol>Server Domain</uicontrol>: Enter
+                                    IP address of Yeastar Cloud PBX. In this example, enter
+                                        <i>yeastar.cloudpbx.com</i>.</li>
+                                <li product="s-series"><uicontrol>Server Port</uicontrol>: Enter the
+                                    SIP registration port of Yeastar S100. The default port is
+                                        <b>5060</b>.</li>
+                                <li product="cloudpbx"><uicontrol>Server Port</uicontrol>: Enter the
+                                    SIP registration port of Yeastar Cloud PBX. The default port is
+                                        <b>5060</b>.</li>
+                                <li><uicontrol>User Name</uicontrol>: Enter extension number. In
+                                    this example, enter <i>3620</i>.</li>
+                                <li><uicontrol>Password</uicontrol>: Enter registration password of
+                                    the extension number. </li>
+                                <li><uicontrol>Number</uicontrol>: Enter extension number. In this
+                                    example, enter <i>3620</i>.</li>
+                            </ul>
+                        </itemgroup></li>
+                    <li>Click <uicontrol>Save</uicontrol>. <p>If the extension is registered, the
+                                <uicontrol>Registration Status</uicontrol> will display
+                            "Registered".</p></li>
+                    <li> Configure this Indoor Station to monitor the real-time status of the
+                        DS-KD8003 Door Station.<p>Go to <menucascade>
+                                <uicontrol>Network</uicontrol>
+                                <uicontrol> Linked Network Configuration</uicontrol>
+                            </menucascade>, configure the following settings:</p><p>
+                            <ul id="ul_r2b_pjm_g3b">
+                                <li><uicontrol>(Main) Door Station IP Address</uicontrol>: Enter IP
+                                    address of Hikvision DS-KD8003. In this example, enter
+                                        <i>192.168.9.209</i>.</li>
+                                <li><uicontrol>Main Door Station Type</uicontrol>: Select
+                                        <uicontrol>Main Door Station (D-series)</uicontrol>.</li>
+                            </ul>
+                        </p><itemgroup>
+                            <p><image id="image_bzy_fcj_f3b"
+                                    href="../Images/sip-endpoints/hikvision/link-main-door-station.png"
+                                    width="650"/></p>
+                        </itemgroup></li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_hk3_1js_g3b">
+            <title>Call Forwarding settings</title>
+            <p>To prevent from missing any visits, you can set your mobile phone number as a
+                destination of call forwarding. If no answer from the indoor station, your mobile
+                phone will receive the call.</p>
+            <p>
+                <ol>
+                    <li>Configure Call Forwarding destination on Yeastar S100.<p>
+                            <ol id="ol_cyf_b1g_h3b">
+                                <li>Log in the PBX web interface, go to <menucascade>
+                                        <uicontrol>Settings</uicontrol>
+                                        <uicontrol> PBX</uicontrol>
+                                        <uicontrol> Extensions</uicontrol>
+                                    </menucascade>, edit the extension for Hikvision DS-KH6320
+                                    Indoor Station.</li>
+                                <li>Click <uicontrol>Presence</uicontrol> tab, configure
+                                        <uicontrol>Call Forwarding</uicontrol> settings.<p><image
+                                            href="../Images/sip-endpoints/hikvision/call-forwarding-destination.png"
+                                            id="image_p3f_cjs_g3b"/></p><p>
+                                        <ul id="ul_yxc_21g_h3b">
+                                            <li>Select the checkbox <uicontrol>No Answer</uicontrol>
+                                                and select the destination to <uicontrol>Mobile
+                                                  Number</uicontrol>.</li>
+                                            <li>Set Mobile Number.</li>
+                                            <li importance="optional">Enter the
+                                                  <uicontrol>Prefix</uicontrol> according to the
+                                                dial pattern settings of outbound route.</li>
+                                        </ul>
+                                    </p></li>
+                                <li>Click <uicontrol>Save</uicontrol> and
+                                        <uicontrol>Apply</uicontrol>.</li>
+                            </ol>
+                        </p></li>
+                    <li>Configure Call Forwarding time on Hikvision DS-KH6320 Indoor Station.<p>
+                            <ol id="ol_vmb_k1g_h3b">
+                                <li>On the Hikvision DS-KH6320, tap <menucascade>
+                                        <uicontrol>Settings</uicontrol>
+                                        <uicontrol>
+                                            <image id="image_czj_pj1_h3b"
+                                                href="../Images/sip-endpoints/hikvision/hikvision-6320-setting.png"
+                                                width="20"/></uicontrol>
+                                    </menucascade> to enter the <uicontrol>Call Settings</uicontrol>
+                                    page. </li>
+                                <li>Set the <uicontrol>Call Forwarding</uicontrol> time.<p>The ring
+                                        duration limit beyond which the call is automatically
+                                        forwarded to the mobile phone designated by the resident.
+                                            </p><p><image id="image_qnf_zj1_h3b"
+                                            href="../Images/sip-endpoints/hikvision/call-settings-interface-hik6320.png"
+                                        /></p></li>
+                            </ol>
+                        </p><p>In this case, the call to 3620 (DS-KH6320 Indoor Station) will be
+                            forwarded to mobile phone after 30s. If no answer from mobile phone, the
+                            call will be dropped.</p></li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_h14_fjs_g3b">
+            <title>DND (Do Not Disturb) Settings</title>
+            <p>The DND (Do Not Disturb) feature allows you to set quiet hours for family time, movie
+                time, or nap time. If DND is enabled on the Indoor Station, when a guest visits, the
+                Indoor Station will not ring while the call log can be saved for your further
+                query.</p>
+            <note>DND settings on Hikvision DS-KH6320 Indoor Station has a higher priority over DND
+                settings on the PBX.</note>
+            <p><b>Configure DND settings on Hikvision DS-KH6320:</b></p>
+            <p>
+                <ol>
+                    <li>On the Hikvision DS-KH6320, tap <menucascade>
+                            <uicontrol>Settings</uicontrol>
+                            <uicontrol>
+                                <image
+                                    href="../Images/sip-endpoints/hikvision/hikvision-6320-setting.png"
+                                    id="image_js3_q2g_h3b" width="20"/></uicontrol>
+                        </menucascade> to enter the <uicontrol>Call Settings</uicontrol> page.</li>
+                    <li>Configure <uicontrol>Do Not Disturb</uicontrol> settings:<ul
+                            id="ul_frp_jjs_g3b">
+                            <li><uicontrol>Close</uicontrol>: The indoor station will ring every
+                                time it is called by door station or other indoor stations.</li>
+                            <li><uicontrol>All Day</uicontrol>: The indoor station will not ring all
+                                day when it is called by door station or other indoor stations, but
+                                the call logs will be saved.</li>
+                            <li><uicontrol>Schedule</uicontrol>: The indoor station will not ring
+                                between the start time and the end time when it is called by door
+                                station or other indoor stations, but the call logs will be
+                                saved.</li>
+                        </ul></li>
+                </ol>
+            </p>
+        </section>
+        <p>For more information about Hikvision DS-KH6320 Indoor Station, refer to <xref
+                href="https://www.hikvision.com/mtsc/uploads/product/accessory/UD12920B_Baseline_Video_Intercom_Indoor_Station_Configuration_Guide_V2.0.2(3).PDF"
+                format="PDF" scope="external">DS-KH6320 Indoor Station User Guide</xref>.</p>
+    </body>
+</topic>

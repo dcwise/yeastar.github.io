@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_sq3_5t5_ydb">
+    <title>Create an E1/T1 Trunk</title>
+    <shortdesc>To create a PRI E1/T1 trunk, you need to install EX30 expansion board on S100/S300
+        and connect the E1/T1 port to the PRI provider with an PRI cable. </shortdesc>
+    <taskbody>
+        <steps id="steps_wjl_b55_ydb">
+            <step>
+                <cmd>Install EX30 expansion board.</cmd>
+                <substeps id="substeps_ppz_mxy_w3b">
+                    <substep>
+                        <cmd>Power off the PBX.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Open the upper case of the PBX.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Push out the empty board from the inside of the device, push in the
+                            Expansion Board EX08.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Connect one end of <xref href="pri_crossover_cable.dita#concept_tcr_n55_ydb"
+                        >ISDN PRI cable</xref> to the E1/T1 port on the PBX, and connect the other
+                    end of the cable to the ISDN provider equipment. </cmd>
+            </step>
+            <step>
+                <cmd>Log in the PBX web interface, go to <menucascade>
+                        <uicontrol>PBX Monitor</uicontrol>
+                        <uicontrol>Trunks</uicontrol>
+                    </menucascade> to check the trunk status.</cmd>
+                <info>If the trunk status shows <image href="../Images/ui_icons/no_pstn.png"
+                        width="20" id="image_q1s_jqh_y3b"/>, the physical layer of this trunk is
+                    correct. </info>
+                <info>If the trunk status shows <image href="../Images/ui_icons/isdn_error.png"
+                        width="20" id="image_r1s_jqh_y3b"/>, the physical layer of this trunk is
+                    incorrect, check the PRI cable or contact Yeastar support to solve it. </info>
+                <info>For more information on trunk status, see <xref
+                        href="pbx_monitor.dita#concept_gl3_wt2_xdb/BRI-E1-T1-status">E1/T1 Trunk
+                        Status</xref>.</info>
+            </step>
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol>PBX</uicontrol>
+                        <uicontrol>Trunks</uicontrol>
+                    </menucascade>, configure your E1 trunk according to the parameters that are
+                    provided from the ISDN carrier.</cmd>
+                <choices id="choices_w1m_nfz_w3b">
+                    <choice><uicontrol>Name</uicontrol>: Give this trunk a name to help you identify
+                        it.</choice>
+                    <choice><uicontrol>Interface Type</uicontrol>: Specify the interface type
+                        according to the trunk specification.</choice>
+                    <choice><uicontrol>Signaling</uicontrol>: Specify the signaling according to the
+                        trunk specification.</choice>
+                </choices>
+            </step>
+            <step>
+                <cmd>Configure other <xref href="e1_t1_j1_trunk_settings.dita#reference_jvc_c2m_4fb"
+                        >E1/T1 trunk settings</xref> as your need.</cmd>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol> and reboot the PBX to take effect.</cmd>
+            </step>
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>PBX Monitor</uicontrol>
+                        <uicontrol>Trunks</uicontrol>
+                    </menucascade> to check the trunk status.</cmd>
+                <info>If the trunk status shows <image href="../Images/ui_icons/ok.png" width="20"
+                        id="image_wts_cvb_y3b"/>, the trunk is ready for use.</info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

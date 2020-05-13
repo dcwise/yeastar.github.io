@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_lrx_jbk_zdb">
+    <title>Access the PBX via FTP</title>
+    <shortdesc>You can access the PBX via FTP to check and download files from the PBX, or upload
+        files to the PBX.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/05/30"/>
+            <!--Carol-->
+            <revised modified="2018/05/30"/>
+            <!--Carol-->
+            <revised modified="2018/09/25"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Enable FTP service on the PBX and get the password of FTP access.</cmd>
+                <substeps id="substeps_fdl_zdz_xdb">
+                    <substep>
+                        <cmd>Go to <menucascade>
+                                <uicontrol>Settings</uicontrol>
+                                <uicontrol>System</uicontrol>
+                                <uicontrol>Security</uicontrol>
+                                <uicontrol>Service</uicontrol>
+                            </menucascade>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Check the option <uicontrol>Enable FTP</uicontrol>.</cmd>
+                        <info><image href="../Images/admin/enable_ftp.png" id="image_a12_p2z_xdb"
+                                width="500"/></info>
+                    </substep>
+                    <substep>
+                        <cmd>Click <uicontrol>Save</uicontrol> and
+                            <uicontrol>Apply</uicontrol>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Check the option <uicontrol>Enable SSH</uicontrol> to get the password
+                            of ftp login.</cmd>
+                        <info>
+                            <p>
+                                <note>
+                                    <p>
+                                        <ul id="ul_nbz_spj_zdb">
+                                            <li>The password of SSH login and FTP login are the
+                                                same.</li>
+                                            <li product="s-series">The auto generated SSH password
+                                                is supported on the firmware version 30.7.0.27 or
+                                                later.</li>
+                                            <li product="s-series">For the PBX version before
+                                                30.7.0.27, the default password is
+                                                  <codeph>iyeastar</codeph>.</li>
+                                        </ul>
+                                    </p>
+                                </note>
+                            </p>
+                        </info>
+                    </substep>
+                    <substep>
+                        <cmd>Note down the password and cancel the change.</cmd>
+                        <info><image href="../Images/admin/ssh_password.png" id="image_qqv_1hz_xdb"
+                            /></info>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Access the PBX via FTP.</cmd>
+                <substeps id="substeps_d4t_jck_zdb">
+                    <substep>
+                        <cmd>On a Windows PC, press <codeph>Win</codeph> + <codeph>E</codeph> to
+                            open a Windows Explorer window.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>In the address bar, enter the FTP address of the PBX, press
+                                <uicontrol>Enter</uicontrol>.</cmd>
+                        <info><filepath>ftp://{IP address of the PBX}</filepath></info>
+                        <info><image href="../Images/admin/ftp_file_share.png"
+                                id="image_uz1_4cz_xdb" width="600"/></info>
+                    </substep>
+                    <substep>
+                        <cmd>Enter the User name and password, click <uicontrol>Log
+                            On</uicontrol>.</cmd>
+                        <info>
+                            <ul id="ul_axb_cjz_xdb">
+                                <li><uicontrol>User Name</uicontrol>: Enter
+                                    <codeph>support</codeph>.</li>
+                                <li><uicontrol>Password</uicontrol>: Enter the password of the
+                                    SSH/FTP login.</li>
+                            </ul>
+                        </info>
+                    </substep>
+                </substeps>
+            </step>
+        </steps>
+    </taskbody>
+</task>

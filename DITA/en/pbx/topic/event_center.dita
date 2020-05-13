@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_jjr_xwr_xdb">
+    <title>Event Center</title>
+    <shortdesc>You can set the PBX to send notifications when specific events or errors occur,
+        notifying you via email<ph product="s-series">,
+            <?oxy_insert_start author="Becky" timestamp="20190801T155424+0800"?>extension,
+            <?oxy_insert_end?>SMS, or mobile devices</ph>.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/05/24"/>
+            <!--Carol-->
+            <revised modified="2018/05/25"/>
+            <!--Carol-->
+            <revised modified="2018/09/12"/>
+            <!--Carol-->
+            <revised modified="2018/10/23"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <p> For example, the system can automatically send a notification when the network
+            connection is lost, VoIP trunk registration is failed, storage volume is running out of
+            space, or the administrator password is changed.</p>
+        <section id="section_x1m_zb1_ydb">
+            <title>Event Settings</title>
+            <p>Go to <menucascade>
+                    <uicontrol>Settings</uicontrol>
+                    <uicontrol>Event Center</uicontrol>
+                    <uicontrol>Event Settings</uicontrol>
+                </menucascade> to configure the event settings.</p>
+            <p>
+                <ul id="ul_s3t_dm1_ydb">
+                    <li><b>Record</b><p><image href="../Images/ui_icons/disabled.png"
+                                id="image_yzr_cn1_ydb"/> indicates that Record function is enabled.
+                            When the event occurs, the PBX will record the event in Event
+                                Log.</p><p><image href="../Images/ui_icons/enabled.png"
+                                id="image_z3d_3n1_ydb"/> indicates that Record function is disabled.
+                            <?oxy_insert_start author="Becky" timestamp="20190801T161405+0800"?>When
+                            the event occurs, the PBX will NOT record the event in Event
+                            Log.<?oxy_insert_end?></p></li>
+                </ul>
+            </p>
+            <p>
+                <ul id="ul_uny_pm1_ydb">
+                    <li><b>Notification</b><p><image href="../Images/ui_icons/disabled.png"
+                                id="image_k3v_4n1_ydb"/> indicates that Notification function is
+                            enabled. When the event occurs, the PBX will send notification to the
+                            Notification Contacts. </p><p><image
+                                href="../Images/ui_icons/enabled.png" id="image_l3v_4n1_ydb"/>
+                            indicates that Notification function is disabled.
+                            <?oxy_insert_start author="Becky" timestamp="20190801T161748+0800"?>When
+                            the event occurs, the PBX will NOT send notification to the Notification
+                            Contacts.<?oxy_insert_end?></p></li>
+                </ul>
+                <ul id="ul_ffm_tm1_ydb">
+                    <li><b>Edit Notification</b><p>Click <image href="../Images/ui_icons/edit.png"
+                                width="20" id="image_q5c_yn1_ydb"/> to edit the template of
+                            notification email.</p></li>
+                </ul>
+            </p>
+        </section>
+        <section id="section_q1d_jbb_ydb">
+            <title>Event Log</title>
+            <p>Go to <menucascade>
+                    <uicontrol>Settings</uicontrol>
+                    <uicontrol>Event Center</uicontrol>
+                    <uicontrol>Event Log</uicontrol>
+                </menucascade> to search and check event logs.</p>
+            <p><image href="../Images/admin/event_log.png" id="image_pgl_qbb_ydb" width="650"/></p>
+        </section>
+    </conbody>
+</concept>
+<?oxy_options track_changes="on"?>

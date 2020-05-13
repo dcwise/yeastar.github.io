@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="v80.5.0.29">
+    <title>Version 80.5.0.29</title>
+    <abstract>Released Date: October 22, 2019</abstract>
+    <body>
+        <section id="section_uqw_glw_jjb">
+            <title>NEW FEATURES</title>
+            <p>
+                <dl>
+                    <dlentry>
+                        <dt>Remote Management</dt>
+                        <dd>
+                            <ul id="ul_cln_gcv_jjb">
+                                <li>Added <uicontrol>Remote Management</uicontrol> feature.<p>Access
+                                        the new feature via <menucascade>
+                                            <uicontrol>Settings</uicontrol>
+                                            <uicontrol> System</uicontrol>
+                                            <uicontrol> Remote Management</uicontrol>
+                                        </menucascade>.</p></li>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                </dl>
+            </p>
+        </section>
+        <section>
+            <title>OPTIMIZATION</title>
+            <p>
+                <dl>
+                    <dlentry>
+                        <dt>System Stability</dt>
+                        <dd>
+                            <ul id="ul_mq2_hyg_jjb">
+                                <li>Fixed the system issue: The system memory would be insufficient
+                                    if an unstable network drive kept disconnecting and reconnecting
+                                    to the PBX.</li>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                    <dlentry>
+                        <dt>Extension</dt>
+                        <dd>
+                            <ul>
+                                <li>Optimized <uicontrol>Max Call Duration(s)</uicontrol>
+                                        setting.<ul id="ul_spf_vyg_jjb">
+                                        <li><uicontrol>Max Call Duration(s)</uicontrol> setting is
+                                            applicable to all types of calls on the PBX.</li>
+                                        <li><uicontrol>Max Call Duration(s)</uicontrol> setting for
+                                                <uicontrol>Extensions</uicontrol>: Added
+                                                <uicontrol>10800</uicontrol> option (<menucascade>
+                                                <uicontrol>PBX</uicontrol>
+                                                <uicontrol> Extensions</uicontrol>
+                                                <uicontrol> Features</uicontrol>
+                                                <uicontrol> Max Call Duration(s)</uicontrol>
+                                            </menucascade>).</li>
+                                        <li><uicontrol>Global Max Call Duration(s)</uicontrol>
+                                            setting: Added <uicontrol>10800</uicontrol> option (<menucascade>
+                                                <uicontrol>PBX</uicontrol>
+                                                <uicontrol> General</uicontrol>
+                                                <uicontrol> Preferences(s)</uicontrol>
+                                            </menucascade>).</li>
+                                    </ul><note>The precedence of <uicontrol>Max Call Duration(s)
+                                        </uicontrol>(Global v.s. Extension):<ul id="ul_wpd_zyg_jjb">
+                                            <li>For internal calls: The <uicontrol>Max Call
+                                                  Duration(s) </uicontrol>setting of the caller's
+                                                extension takes precedence. </li>
+                                            <li>For outbound calls: The <uicontrol>Max Call
+                                                  Duration(s)</uicontrol> setting of the caller's
+                                                extension takes precedence. </li>
+                                            <li>For inbound calls: The global <uicontrol>Max Call
+                                                  Duration(s)</uicontrol> setting takes precedence.
+                                            </li>
+                                        </ul></note></li>
+                                <li>Optimized extension registration: The PBX would not send MWI
+                                    NOTIFY message to Linkus client after the Linkus client was
+                                    registered.</li>
+                                <li>Optimized extension registration: Speed up and shorten the time
+                                    of registering extensions in bulk.</li>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                    <dlentry>
+                        <dt>SIP</dt>
+                        <dd>
+                            <ul id="ul_b4g_b5t_jjb">
+                                <li>Added support for responding 200OK when receiving 407 Proxy
+                                    Authentication Required.</li>
+                                <li>Fixed the issue of SIP INFO compatibility: PBX did not respond
+                                    when receiving SIP INFO packets (content-type=application/QSIG),
+                                    and the call was ended after 32 seconds.</li>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                    <dlentry>
+                        <dt>CDR</dt>
+                        <dd>
+                            <ul id="ul_dnt_25t_jjb">
+                                <li>Optimized the search method of <uicontrol>CDR and
+                                        recordings</uicontrol>: Speed up and shorten the time of
+                                    searching CDR and recordings.</li>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                    <dlentry>
+                        <dt>Event Settings</dt>
+                        <dd>
+                            <ul id="ul_q3n_1s5_jjb">
+                                <li>Added <uicontrol>The Secondary Server take over ( only 30
+                                        )</uicontrol> event.<p>When the Secondary Server has taken
+                                        over the PBX system, the PBX will email contact that the
+                                        Secondary Server will be valid for only 30 days. The event
+                                        notification is enabled by default.</p></li>
+                                <li>Added <uicontrol>The Secondary Server Will Expire
+                                        Soon</uicontrol> event.<p>Before the Secondary Server goes
+                                        to expire at 7 days, 3days and 1 day, the PBX will email
+                                        contact the event notification. The event notification is
+                                        enabled by default.</p></li>
+                                <li>Added <uicontrol>Primary Server Data Restoration
+                                        Completed</uicontrol> event.<p>After the data
+                                        synchronization is completed, the PBX will email contact the
+                                        event notification. The event notification is enabled by
+                                        default.</p></li>
+                                <li>Added <uicontrol>Both PBX Servers Failed to Function</uicontrol>
+                                        event.<p>When Both Primary and Secondary Server are
+                                        abnormal, the PBX will email contact the event notification.
+                                        The event notification is enabled by default.</p></li>
+                                <li>Added <uicontrol>Data Synchronization Error</uicontrol>
+                                        event.<p>When the data synchronization is failed, the PBX
+                                        will email contact the event notification. The event
+                                        notification is enabled by default.</p></li>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                    <dlentry>
+                        <dt>Hot Standby</dt>
+                        <dd>
+                            <ul id="ul_y13_355_jjb">
+                                <li>Added support for <uicontrol>Virtual Gateway</uicontrol>
+                                        option.<p>Enter the gateway address of the Virtual IP
+                                        network, or the communication between the PBX server and the
+                                        Virtual IP network will fail when they are under different
+                                        network segments.</p></li>
+                            </ul>
+                        </dd>
+                        <dd>
+                            <ul id="ul_zqc_fnw_jjb">
+                                <li>Added the <uicontrol>Primary Server Hostname</uicontrol> option
+                                    and <uicontrol>Secondary Server Hostname</uicontrol>
+                                        option.<p>These options are used in the <uicontrol>Event
+                                            Notification</uicontrol> to help you identify the
+                                        device.</p></li>
+                            </ul>
+                        </dd>
+                        <dd>
+                            <ul id="ul_dn4_hnw_jjb">
+                                <li>Added support for displaying status of the Secondary
+                                        Server.<p>If the Secondary Server takes over the
+                                        communication, the Secondary Server page can display current
+                                        server status and the Primary Server status.</p></li>
+                            </ul>
+                        </dd>
+                        <dd>
+                            <ul id="ul_m1x_jnw_jjb">
+                                <li>Added support for LCS service synchronization for Secondary
+                                        Server.<p>If you purchase LCS service for Primary Server,
+                                        the Secondary Server can use the LCS service after
+                                        failover.</p></li>
+                            </ul>
+                        </dd>
+                        <dd>
+                            <ul id="ul_axx_2nw_jjb">
+                                <li>Optimized the <uicontrol>Hot Standby Mode</uicontrol>.<p>The
+                                            <uicontrol>Hot Standby Mode</uicontrol> displays the
+                                        server role that the PBX plays, and the
+                                            <uicontrol>Mode</uicontrol> will not change with the
+                                        failover between the Primary Server and Secondary
+                                        server.</p></li>
+                                <li>Optimized the <uicontrol>Network Connection Detection
+                                        function</uicontrol>.<p>The Secondary Server detects this
+                                        node to determine if Internet is disconnected. If both the
+                                        Primary Server and Secondary Server have abnormal network
+                                        connection, the PBX failover will not occur. It's
+                                        recommended that you fill in the gateway address.</p></li>
+                                <li>Changed <uicontrol>Disk Synchronization</uicontrol> to
+                                        <uicontrol>Sync Call Recording
+                                        Files</uicontrol>.<p>Synchronize the call recording files of
+                                        Primary Server and Secondary Server in real-time.</p></li>
+                                <li>Optimized the failover mode between the Primary Server and the
+                                    Secondary Server: <p>
+                                        <ul id="ul_op3_qnw_jjb">
+                                            <li>Added support for displaying abnormal status on the
+                                                Primary Server. </li>
+                                        </ul>
+                                    </p><p>
+                                        <ul id="ul_orl_4nw_jjb">
+                                            <li>After the error is fixed, you can click
+                                                  <uicontrol>Repair Complete</uicontrol> to confirm,
+                                                and the Primary Server can start synchronizing the
+                                                data.</li>
+                                            <li>After data synchronization is completed, you can
+                                                click <uicontrol>Take Over the PBX
+                                                  System</uicontrol> to take over the
+                                                communication.</li>
+                                        </ul>
+                                    </p></li>
+                                <li>Optimized the data synchronization:<ul id="ul_bjw_w55_jjb">
+                                        <li>Added support for dynamic data synchronization:
+                                            Synchronize the agent dynamics and BLF subscription
+                                            status.</li>
+                                        <li>Changed data synchronization time: The synchronization
+                                            period is changed from 1 hour to 24 hours, which means
+                                            data synchronization is performed every day at 3:00
+                                            AM.</li>
+                                        <li>Optimized synchronization priority: System > CDR >
+                                            Dynamic data > System files > Voice mail > Call
+                                            recordings.</li>
+                                    </ul></li>
+                            </ul>
+                            <ul id="ul_vtl_bv5_jjb">
+                                <li>Fixed the system crash issue caused by <uicontrol>Hot
+                                        Standby</uicontrol> server failover.</li>
+                            </ul>
+                        </dd>
+                    </dlentry>
+                    <dlentry>
+                        <dt>Linkus Server</dt>
+                        <dd><b>The new version of Linkus Server (2.3.15) is pre-installed after
+                                upgrading the PBX. Check the updates below:</b><ul
+                                id="ul_aym_y5v_jjb">
+                                <li>
+                                    <p>Improved Linkus performance.</p>
+                                </li>
+                                <li>Increased the number of extensions of Linkus.</li>
+                            </ul></dd>
+                    </dlentry>
+                    <dlentry>
+                        <dt>Hotel</dt>
+                        <dd><b>The updates of  Hotel new version (2.0.12):</b><ul
+                                id="ul_il3_bw5_jjb">
+                                <li>Fixed the extension issue of room: The extension was wrong after
+                                    adding a room.</li>
+                            </ul></dd>
+                    </dlentry>
+                </dl>
+            </p>
+        </section>
+    </body>
+</topic>

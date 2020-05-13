@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>Release Notes</title>
+    <topicref href="../topic/release-notes.dita">
+        <topicmeta>
+            <shortdesc>Release History of the <ph keyref="product_name"/>.</shortdesc>
+        </topicmeta>
+        <mapref href="release-notes-for-s-series.ditamap" format="ditamap"
+            product="s-series"/>
+        <mapref href="release-notes-for-cloud-pbx.ditamap" format="ditamap" product="cloudpbx"/>
+        <topicref href="release-notes-for-k2-ippbx.ditamap" format="ditamap" product="k2"/>
+    </topicref>
+</map>

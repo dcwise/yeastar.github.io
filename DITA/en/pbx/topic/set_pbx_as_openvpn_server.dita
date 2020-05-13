@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="task_eng_vdc_5db">
+    <title>Step1. Set PBX as OpenVPN Server</title>
+    <shortdesc>Configure the OpenVPN server settings on the PBX and forward VPN server port on your
+        router.</shortdesc>
+    <body>
+        <section id="section_bj2_jkd_phb">
+            <title>Configure OpenVPN Server Settings</title>
+        </section>
+        <ol id="ol_zhp_ykd_phb">
+            <li> Log in the PBX web interface, go to <uicontrol>VPN Server</uicontrol>, check the
+                option <uicontrol>Enable VPN Server</uicontrol>.</li>
+            <li> Configure the VPN server settings.<p><image
+                        href="../Images/admin/openvpn-server-settings.png" width="650"
+                        id="image_dth_4jd_phb"/></p><p>
+                    <table frame="all" rowsep="1" colsep="1" id="table_b5h_w4d_phb">
+                        <title/>
+                        <tgroup cols="2">
+                            <colspec colname="c1" colnum="1" colwidth="1*"/>
+                            <colspec colname="c2" colnum="2" colwidth="4*"/>
+                            <thead>
+                                <row>
+                                    <entry>Setting</entry>
+                                    <entry>Description</entry>
+                                </row>
+                            </thead>
+                            <tbody>
+                                <row>
+                                    <entry>Server Port</entry>
+                                    <entry>Specify which TCP/UDP port should OpenVPN listen on.
+                                            <p>The default port is 1194.</p></entry>
+                                </row>
+                                <row>
+                                    <entry>Protocol</entry>
+                                    <entry>Choose the protocol.<p>
+                                            <ul id="ul_b31_rpd_phb">
+                                                <li>TCP</li>
+                                                <li>UDP</li>
+                                            </ul>
+                                        </p></entry>
+                                </row>
+                                <row>
+                                    <entry>Device Mode</entry>
+                                    <entry>
+                                        <p>Select the device mode:</p>
+                                        <ul id="ul_tps_xhc_5db">
+                                            <li>TUN: a TUN device is a virtual point-point IP
+                                                link.</li>
+                                            <li>TAP: a TAP device is a virtual Ethernet
+                                                adapter.</li>
+                                        </ul>
+                                        <note>
+                                            <ul id="ul_evn_fpd_phb">
+                                                <li>Android clients don’t support TAP mode.</li>
+                                                <li>If you select TUN mode, you should allocate a
+                                                  static IP address for each VPN client.</li>
+                                            </ul>
+                                        </note>
+                                    </entry>
+                                </row>
+                                <row>
+                                    <entry>Encryption</entry>
+                                    <entry>Choose encryption method.</entry>
+                                </row>
+                                <row>
+                                    <entry>Key Length</entry>
+                                    <entry>Set the key length.<p>
+                                            <note>The value must be the same with
+                                                  <codeph>KEY_SIZE</codeph> which were set in the
+                                                  <filepath>vars.bat.sample</filepath> file</note>
+                                        </p></entry>
+                                </row>
+                                <row>
+                                    <entry>Maximum Number of Clients</entry>
+                                    <entry>Set the maximum number of clients that could connect to
+                                        the VPN server.</entry>
+                                </row>
+                                <row>
+                                    <entry>Verification Mode</entry>
+                                    <entry>Select the Verification Mode of Client. <p>
+                                            <ul id="ul_axq_ypd_phb">
+                                                <li>CA Cert + Client Cert (recommend)</li>
+                                                <li>CA Cert + Client Cert + Account &amp;
+                                                  Password</li>
+                                                <li>CA Cert + Account &amp; Password.</li>
+                                            </ul>
+                                        </p></entry>
+                                </row>
+                                <row>
+                                    <entry>Enable Compression</entry>
+                                    <entry>Whether to compression on the VPN link.<p>
+                                            <note>If you enable this option, you need to enable
+                                                compression on the VPN client.</note>
+                                        </p></entry>
+                                </row>
+                                <row>
+                                    <entry>Address pool</entry>
+                                    <entry>Define the address pool.</entry>
+                                </row>
+                                <row>
+                                    <entry>Subnet mask</entry>
+                                    <entry>Set the subnet mask.</entry>
+                                </row>
+                                <row>
+                                    <entry>Global Traffic Forwarding</entry>
+                                    <entry>If enabled, this directive will configure all clients to
+                                        redirect their default network gateway through the VPN,
+                                        causing all IP traffic such as web browsing and DNS lookups
+                                        to go through the VPN. (The OpenVPN server machine may need
+                                        to NAT or bridge the TUN/TAP interface to the internet in
+                                        order for this to work properly).</entry>
+                                </row>
+                            </tbody>
+                        </tgroup>
+                    </table>
+                </p></li>
+            <li> Upload certificates and keys.<itemgroup><xref
+                        href="check-openvpn-certificates-and-keys.dita#task_ens_v5c_phb">Find the
+                        certificates and keys from the keys folder</xref>, and upload the files to
+                    PBX.</itemgroup><itemgroup><image
+                        href="../Images/admin/upload-openvpn-certificates.png"
+                        id="image_l42_xjd_phb"/></itemgroup></li>
+            <li> Click <uicontrol>Save</uicontrol>.<p>Go to <menucascade>
+                        <uicontrol>Resource Monitor</uicontrol>
+                        <uicontrol>Network</uicontrol>
+                    </menucascade>, check the VPN server status and IP address.</p></li>
+        </ol>
+        <section id="section_z3p_ykd_phb">
+            <title>Forward VPN Server Port </title>
+            <p>To ensure that VPN clients can access the PBX, you should forward VPN server port on
+                your router. The default VPN server port is 1194.</p>
+            <p>Note down the public IP address of PBX and the external VPN server port. The next,
+                you need to enter the remote IP address and remote server port in the client
+                configuration file.</p>
+        </section>
+    </body>
+</topic>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_epd_zwt_c2b">
+    <title>Book Rooms</title>
+    <shortdesc>You can book rooms for old guests and new guests.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/06/11"/>
+            <!--Carol-->
+            <revised modified="2018/06/11"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <section id="section_u4f_bxt_c2b">
+            <title>Book Rooms for New Guests</title>
+            <p>If it is the first
+                <?oxy_insert_start author="Becky" timestamp="20191127T131521+0800"?>time for
+                <?oxy_insert_end?>the guest
+                <?oxy_insert_start author="Becky" timestamp="20191127T131544+0800"?>to
+                <?oxy_insert_end?>come to the hotel, you can book a room for the guest on the
+                    <b>Booking List</b> page.</p>
+            <p>
+                <ol id="ol_pt1_fzt_c2b">
+                    <li>Go to <menucascade>
+                            <uicontrol>Hotel</uicontrol>
+                            <uicontrol>Room Operations</uicontrol>
+                            <uicontrol>Booking List</uicontrol>
+                        </menucascade>, click <uicontrol>Add</uicontrol>.</li>
+                    <li>Select a
+                        room<?oxy_insert_start author="Becky" timestamp="20191127T131704+0800"?>
+                        type<?oxy_insert_end?>, and set the check-in time and check-out time.</li>
+                    <li>Enter the guest information. The <b>First Name</b> and <b>Last Name</b> are
+                        required fields.</li>
+                    <li>Check the option <b>Send Email</b> on the bottom of the edit page, the
+                        system will send a booking notification to the guest’s email address.</li>
+                    <li>Click <uicontrol>Save</uicontrol>.</li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_mlb_kzt_c2b">
+            <title>Book Rooms for Old Guests</title>
+            <p>If the guest has stayed in the hotel before, the guest information will be kept in
+                the hotel system. Next time, when the guest wants to book a room, you can operate
+                the booking on <b>Guest List</b> page.</p>
+            <p>
+                <ol id="ol_mdt_lzt_c2b">
+                    <li>Go to <menucascade>
+                            <uicontrol>Hotel</uicontrol>
+                            <?oxy_insert_start author="Becky" timestamp="20191127T131903+0800"?>
+                            <uicontrol>Room Operations</uicontrol>
+                            <?oxy_insert_end?>
+                            <uicontrol>Guest List</uicontrol>
+                        </menucascade>, choose the guest, click
+                                <uicontrol>Book</uicontrol>.<p><image
+                                href="../Images/admin/hotel_book_room.png" id="image_hpq_qzt_c2b"
+                                width="650"/></p></li>
+                    <li>Select <?oxy_insert_start author="Becky" timestamp="20191127T131956+0800"?>a
+                        room
+                        type<?oxy_insert_end?><?oxy_delete author="Becky" timestamp="20191127T131953+0800" content="the desired room"?>,
+                        set the check-in time and check-out time.</li>
+                    <li>Click <uicontrol>Save</uicontrol>.</li>
+                    <li>Go to <menucascade>
+                            <uicontrol>Hotel</uicontrol>
+                            <uicontrol>Room Operations</uicontrol>
+                            <uicontrol>Booking List</uicontrol>
+                        </menucascade>, check if the room is booked with the guest.<p><image
+                                href="../Images/admin/hotel_book_status.png" width="650"
+                                id="image_jhl_115_c2b"/></p></li>
+                </ol>
+            </p>
+        </section>
+    </conbody>
+</concept>
+<?oxy_options track_changes="on"?>

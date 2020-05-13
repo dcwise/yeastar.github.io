@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="Install_Device">
+    <title>Install Yeastar K2 IPPBX（Rack Mount）</title>
+    <shortdesc> Install  the Yeastar K2 IPPBX in a rack and connect the cables to the
+        PBX.</shortdesc>
+    <conbody>
+        <p>
+            <ph keyref="product_name"/> support four static rail solutions:</p>
+        <p>
+            <ul id="ul_zqd_zpy_whb">
+                <li>
+                    <p>Tool-less, round- or square-hole (four-post) in step 2</p>
+                </li>
+                <li>
+                    <p>Tooled flush-mount rails (two-post) in steps 3 and 4</p>
+                </li>
+                <li>
+                    <p>Tooled center-mount rails (two-post) in step 4</p>
+                </li>
+                <li>
+                    <p>Tooled flush-mount rails (four-post) in steps 5 and 6</p>
+                </li>
+            </ul>
+            <note>Tooled rails require eight user-supplied threaded screws: #10-32, #12-24, #M5, or
+                #M6.</note>
+        </p>
+        <section>
+            <title>Step 1. Identify the Static Rail Kit Contents</title>
+            <p>
+                <table frame="none" rowsep="0" colsep="0" id="table_1">
+                    <tgroup cols="2" align="center">
+                        <colspec colname="c1" colnum="1" colwidth="1*" align="center" colsep="0"
+                            rowsep="0"/>
+                        <colspec colname="c2" colnum="2" colwidth="1.62*" align="center" colsep="0"
+                            rowsep="0"/>
+                        <tbody>
+                            <row valign="middle" rowsep="0">
+                                <entry morerows="3"><image placement="inline"
+                                        href="../Images/admin/k2-locate-components.png"
+                                        id="image_gbl_qdx_whb"/></entry>
+                                <entry align="left" valign="middle" colsep="0" rowsep="0">Locate the
+                                    components for installing the rail kit assembly: </entry>
+                            </row>
+                            <row>
+                                <entry align="left" valign="middle" colsep="0" rowsep="0">
+                                    <ul>
+                                        <li>
+                                            <p>Two static rails.</p>
+                                        </li>
+                                        <li>Two chassis rails.</li>
+                                        <li>Two Velcro straps.</li>
+                                    </ul>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry align="left" valign="middle" colsep="0" rowsep="0"/>
+                            </row>
+                            <row>
+                                <entry align="left" valign="middle" colsep="0" rowsep="0"/>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+        <section>
+            <title>Step 2. Install and Remove Tool-less Static Rails (Four-Post)</title>
+            <p>
+                <table frame="none" rowsep="0" colsep="0" id="table_2">
+                    <tgroup cols="2" align="center">
+                        <colspec colname="c1" colnum="1" colwidth="1*" align="center" colsep="0"
+                            rowsep="0"/>
+                        <colspec colname="c2" colnum="2" colwidth="1.62*" align="center" colsep="0"
+                            rowsep="0"/>
+                        <tbody>
+                            <row valign="middle" rowsep="0">
+                                <entry morerows="3"><image placement="inline"
+                                        href="../Images/admin/k2-install%26remove-tool-less-static-rails.png"
+                                        id="image_vmh_w2x_whb"/></entry>
+                                <entry align="left" valign="middle" colsep="0" rowsep="0"><b>1.
+                                    </b>Position the left and right rail end pieces labeled FRONT
+                                    facing inward and orient each end piece to seat in the holes on
+                                    the front side of the vertical rack flanges.</entry>
+                            </row>
+                            <row>
+                                <entry align="left" valign="middle" colsep="0" rowsep="0"><b>2.
+                                    </b>Align each end piece in the bottom and top holes of the
+                                    first U.</entry>
+                            </row>
+                            <row>
+                                <entry align="left" valign="middle" colsep="0" rowsep="0"><b>3.
+                                    </b>Engage the back end of the rail until it fully seats on the
+                                    vertical rack flange. Repeat these steps to position and seat
+                                    the front end piece on the vertical flange.</entry>
+                            </row>
+                            <row>
+                                <entry align="left" valign="middle" colsep="0" rowsep="0"><b>4.
+                                    </b>To remove the rails, pull on the latch release button on the
+                                    end piece midpoint and unseat each rail.</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+        <section>
+            <title>Step 3. Configure Flush-Mount Static Rails (Two- or Four-Post)</title>
+            <p>
+                <table frame="none" rowsep="0" colsep="0" id="table_3">
+                    <tgroup cols="2" align="center">
+                        <colspec colname="c1" colnum="1" colwidth="1*" align="center" colsep="0"
+                            rowsep="0"/>
+                        <colspec colname="c2" colnum="2" colwidth="1.62*" align="center" colsep="0"
+                            rowsep="0"/>
+                        <tbody>
+                            <row valign="middle" rowsep="0">
+                                <entry morerows="2"><image placement="inline"
+                                        href="../Images/admin/k2-configure-flush-mount-static-rails.png"
+                                        id="image_pjz_52x_whb"/></entry>
+                                <entry align="left" valign="middle" colsep="0" rowsep="0">
+                                    <note>The rails must be converted to tooled rails to install in
+                                        threaded four-post or flush-mount two-post racks.</note>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry align="left" valign="middle" colsep="0" rowsep="0"><b>1.</b>
+                                    Lay both rails with the end pieces facing up. Remove the two
+                                    screws on the front end pieces and rotate each piece 180
+                                    degrees.</entry>
+                            </row>
+                            <row>
+                                <entry align="left" valign="middle" colsep="0" rowsep="0"><b>2.</b>
+                                    Reattach both end pieces with the two pairs of screws.</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+        <section>
+            <title>Step 4. Install Flush-Mount or Center-Mount Static Rails (Two-Post)</title>
+            <p>
+                <table frame="none" rowsep="0" colsep="0" id="table_4">
+                    <tgroup cols="3" align="center">
+                        <colspec colname="c1" colnum="1" colwidth="396px" align="center" colsep="0"
+                            rowsep="0"/>
+                        <colspec colname="c2" colnum="2" colwidth="24px" align="center" colsep="0"
+                            rowsep="0"/>
+                        <colspec colname="newCol3" colnum="3" colwidth="389px" colsep="1" rowsep="1"/>
+                        <tbody>
+                            <row valign="middle" rowsep="0">
+                                <entry morerows="4"><image
+                                        href="../Images/admin/k2-install-flush-mount%26center-mount-static-rails.png"
+                                        id="image_qcy_cyr_b3b"/></entry>
+                                <entry align="left" valign="middle" colsep="0" rowsep="0"
+                                    namest="c2" nameend="newCol3">
+                                    <note>To configure your rails for a tooled flush-mount
+                                        installation, refer to step 3.</note>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry align="left" valign="middle" colsep="0" rowsep="0"
+                                    namest="c2" nameend="newCol3"><b>1.</b> Attach right and left
+                                    mounting rails to the front mounting flanges with two pairs of
+                                    screws.</entry>
+                            </row>
+                            <row>
+                                <entry align="left" valign="middle" colsep="0" rowsep="0"
+                                    namest="c2" nameend="newCol3"><b>2.</b> Slide each flush-mount
+                                    adjustable bracket forward against the two-post rack. Secure
+                                    each side to the mounting flange with two pairs of screws
+                                    .</entry>
+                            </row>
+                            <row>
+                                <entry align="left" valign="middle" colsep="0" rowsep="0"
+                                    namest="c2" nameend="newCol3"><b>3.</b> For a center-mount
+                                    installation:</entry>
+                            </row>
+                            <row>
+                                <entry align="left" valign="middle" colsep="0" rowsep="0"/>
+                                <entry align="left" valign="top" colsep="0" rowsep="0">
+                                    <p>1) Push the back brackets toward the back of the right and
+                                        left mounting rails. </p>
+                                    <p> 2) Attach the fixed center mount brackets to the front
+                                        mounting flanges with two pairs of screws.</p>
+                                    <p>3) Slide both of the back brackets forward against the
+                                        two-post rack and secure each side to the mounting flange
+                                        with two screws.</p>
+                                </entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+        <section>
+            <title>Step 5. Configure Four-Post Threaded Static Rails</title>
+            <p>
+                <table frame="none" rowsep="0" colsep="0" id="table_5">
+                    <tgroup cols="2" align="center">
+                        <colspec colname="c1" colnum="1" colwidth="1*" align="center" colsep="0"
+                            rowsep="0"/>
+                        <colspec colname="c2" colnum="2" colwidth="1.62*" align="center" colsep="0"
+                            rowsep="0"/>
+                        <tbody>
+                            <row valign="middle" rowsep="0">
+                                <entry morerows="3"><image placement="inline"
+                                        href="../Images/admin/k2-configure-four-post-threaded-static-rails.png"
+                                        id="image_qyk_y2x_whb"/></entry>
+                                <entry align="left" valign="middle" colsep="0" rowsep="0">
+                                    <note>To configure your rails for a tooled installation, you
+                                        must perform step 3 and then perform the following steps for
+                                        the back brackets.</note>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry align="left" valign="middle" colsep="0" rowsep="0"><b>1.</b>
+                                    Press the rail release button on each rail to disengage the back
+                                    brackets.</entry>
+                            </row>
+                            <row>
+                                <entry align="left" valign="middle" colsep="0" rowsep="0"><b>2.</b>
+                                    Rotate the back brackets 180 degrees so that the tooled end
+                                    piece is in the back position.</entry>
+                            </row>
+                            <row>
+                                <entry align="left" valign="middle" colsep="0" rowsep="0"><b>3.</b>
+                                    With the end pieces positioned outward, align and rejoin the
+                                    midsections. Slide the back brackets into place until the
+                                    release button engages.</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+        <section>
+            <title>Step 6. Install Four-Post Threaded Static Rails</title>
+            <p>
+                <table frame="none" rowsep="0" colsep="0" id="table_6">
+                    <tgroup cols="2" align="center">
+                        <colspec colname="c1" colnum="1" colwidth="1*" align="center" colsep="0"
+                            rowsep="0"/>
+                        <colspec colname="c2" colnum="2" colwidth="1.62*" align="center" colsep="0"
+                            rowsep="0"/>
+                        <tbody>
+                            <row valign="middle" rowsep="0">
+                                <entry morerows="2"><image placement="inline"
+                                        href="../Images/admin/k2-install-four-post-threaded-static-rails.png"
+                                        id="image_qwj_z2x_whb"/></entry>
+                                <entry align="left" valign="middle" colsep="0" rowsep="0">
+                                    <note> To configure your rails for a tooled installation, refer
+                                        to step 3 and step 5.</note>
+                                </entry>
+                            </row>
+                            <row>
+                                <entry align="left" valign="middle" colsep="0" rowsep="0"
+                                        ><uicontrol>1.</uicontrol>Attach the right and left mounting
+                                    rails to the front mounting flanges with two pairs of
+                                    screws.</entry>
+                            </row>
+                            <row>
+                                <entry align="left" valign="middle" colsep="0" rowsep="0"
+                                        ><uicontrol>2.</uicontrol>Slide the back brackets forward
+                                    against the back mounting flanges and secure the brackets using
+                                    two pairs of screws.</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+        <section>
+            <title>Step 7. Install Chassis Rails</title>
+            <p>
+                <table frame="none" rowsep="0" colsep="0" id="table_7">
+                    <tgroup cols="2" align="center">
+                        <colspec colname="c1" colnum="1" colwidth="1*" align="center" colsep="0"
+                            rowsep="0"/>
+                        <colspec colname="c2" colnum="2" colwidth="1.62*" align="center" colsep="0"
+                            rowsep="0"/>
+                        <tbody>
+                            <row valign="middle" rowsep="0">
+                                <entry morerows="1"><image placement="inline"
+                                        href="../Images/admin/k2-install-chassis-rails.png"
+                                        id="image_nlg_1fx_whb"/></entry>
+                                <entry align="left" valign="middle" colsep="0" rowsep="0"
+                                        ><uicontrol>1.</uicontrol>Place the system on a level
+                                    surface and align the keyhole slots on the chassis rails with
+                                    the pins on the system.</entry>
+                            </row>
+                            <row>
+                                <entry align="left" valign="middle" colsep="0" rowsep="0"
+                                        ><uicontrol>2.</uicontrol>Slide the chassis rails toward the
+                                    back of the system until they lock into place. To remove the
+                                    chassis rails, lift the lock spring until it clears the pin and
+                                    slide the chassis rails toward the front of the system until the
+                                    pins can slip through the keyhole slots.</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+        <section>
+            <title>Step 8. Install the System in the Rack</title>
+            <p>
+                <table frame="none" rowsep="0" colsep="0" id="table_8">
+                    <tgroup cols="2" align="center">
+                        <colspec colname="c1" colnum="1" colwidth="1*" align="center" colsep="0"
+                            rowsep="0"/>
+                        <colspec colname="c2" colnum="2" colwidth="1.62*" align="center" colsep="0"
+                            rowsep="0"/>
+                        <tbody>
+                            <row valign="middle" rowsep="0">
+                                <entry morerows="4"><image placement="inline"
+                                        href="../Images/admin/k2-install-system-in-rack.png"
+                                        id="image_z3f_bfx_whb"/></entry>
+                                <entry align="left" valign="middle" colsep="0" rowsep="0"
+                                        ><uicontrol>1.</uicontrol>Insert the ends of the chassis
+                                    rails into the front of the rails mounted to the rack and push
+                                    the system into the rack.</entry>
+                            </row>
+                            <row>
+                                <entry align="left" valign="middle" colsep="0" rowsep="0"
+                                        ><uicontrol>2.</uicontrol>Depending on the rail
+                                    configuration, the latches on the front of the system engage
+                                    automatically.</entry>
+                            </row>
+                            <row>
+                                <entry align="left" valign="middle" colsep="0" rowsep="0"
+                                        ><uicontrol>3.</uicontrol>If the latches do not engage
+                                    automatically, secure the system in the rack by tightening the
+                                    screw under each latch.</entry>
+                            </row>
+                            <row>
+                                <entry align="left" valign="middle" colsep="0" rowsep="0"
+                                        ><uicontrol>4.</uicontrol>Thread the Velcro straps through
+                                    the slots on the back<p>brackets and use the Velcro straps to
+                                        secure the cables.</p></entry>
+                            </row>
+                            <row>
+                                <entry align="left" valign="middle" colsep="0" rowsep="0"
+                                        ><uicontrol>5.</uicontrol>To remove the system from the
+                                    rack, pull the system out until the travel stops are reached.
+                                    Locate the blue tabs on the sides of the chassis rails. Push the
+                                    tabs inward and pull the system until the chassis rails are
+                                    clear of the rails.</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+        <section>
+            <title>Step 9. Connect Cables</title>
+            <p><note type="caution">Please use the dedicated power cable. Failure or damage caused by using other
+                    power cables is not covered by the warranty.</note>
+                <ol id="ol_b31_r2x_whb">
+                    <li>Connect the  Ethernet cable between Gb1 network port on the device and the
+                        LAN port on the switch .</li>
+                    <li>Connect a dedicated power cable to the device to power on. The power
+                        indicator solid green after startup.<p><image placement="inline"
+                            href="../Images/admin/k2-connect-cables.png" width="600"
+                                id="image_t1z_3fx_whb"/></p></li>
+                </ol></p>
+        </section>
+    </conbody>
+</concept>

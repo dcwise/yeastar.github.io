@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_z2x_lvv_kcb">
+    <title>Create NAT Gateway</title>
+    <shortdesc>To allow YMP LAN (eth0) and SBC LAN (eth1) in your VPC to initiate outbound
+        connections to the internet but prevent unsolicited inbound connections from the internet,
+        you need to create a NAT gateway.</shortdesc>
+    <taskbody>
+        <steps id="steps_jkj_qxv_kcb">
+            <step>
+                <cmd>In the navigation pane, select <b>NAT Gateways</b>, click <b>Create NAT
+                        Gateway</b>. </cmd>
+            </step>
+            <step>
+                <cmd>On the configuration page, select <uicontrol>Subnet</uicontrol> to the SBC WAN
+                    subnet.</cmd>
+            </step>
+            <step>
+                <cmd>Select <uicontrol>Elastic IP Allocation ID</uicontrol> which is for SBC
+                    WAN.</cmd>
+                <info><image href="../Images/SBC/aws_create_nat_gateway.png" id="image_nhs_12w_kcb"
+                        width="500"/></info>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Create a NAT Gateway</uicontrol>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

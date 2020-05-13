@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_jhk_qdx_ndb">
+    <title>Add Trusted IP Addresses into Whitelist</title>
+    <shortdesc>To avoid that your trusted IP address would be blocked, you need to add your trusted
+        IP address, especially the IP/domain of your office, into the Whitelist.</shortdesc>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Settings</uicontrol>
+                        <uicontrol>System</uicontrol>
+                        <uicontrol>Security</uicontrol>
+                        <uicontrol>IP Whitelist</uicontrol>
+                    </menucascade>, click <uicontrol>Add</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>On the configuration page, enter the name and your trusted IP/domain.</cmd>
+                <info><image href="../Images/admin/add_ip_whitelist.png" id="image_jnc_y2x_ndb"
+                    /></info>
+                <choices id="choices_scv_z2x_ndb">
+                    <choice><uicontrol>Name</uicontrol>: Set a name for the IP whitelist.</choice>
+                    <choice><uicontrol>Description</uicontrol>: Enter description of the trusted
+                        IP/domain.</choice>
+                    <choice><uicontrol>Type</uicontrol>: Choose <uicontrol>IP</uicontrol>or
+                            <uicontrol>Domain Name</uicontrol>.</choice>
+                    <choice><uicontrol>Source IP Address</uicontrol>: If you choose
+                            <uicontrol>IP</uicontrol> type, enter the trusted IP address.</choice>
+                    <choice><uicontrol>Domain Name</uicontrol>: If you choose <uicontrol>Domain
+                            Name</uicontrol>, enter the domain of the trusted domain.</choice>
+                </choices>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol> and <uicontrol>Apply</uicontrol>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

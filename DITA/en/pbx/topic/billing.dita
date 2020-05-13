@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="app-billing">
+    <title>Billing</title>
+    <shortdesc><ph keyref="product_name"/> Billing App provides a powerful and flexible billing
+        solution that enables the enterprises to grow and prosper in this challenging environment by
+        managing their business efficiently. </shortdesc>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/06/11"/>
+            <!--Carol-->
+            <revised modified="2018/06/12"/>
+            <!--Carol-->
+            <revised modified="2018/12/19"/>
+            <!--Carol-->
+            <revised modified="2018/12/20"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <p>Use the Billing App to allocate call credit and top up
+            extensions/<?oxy_comment_start author="Becky" timestamp="20191126T164709+0800" comment="新增"?>accounts<?oxy_comment_end?>,
+            and conduct call analysis. Both prepaid and postpaid payments are supported. Rate can be
+            set according to extensions, time periods, call duration, prefix number and number
+            length. Real-time top-up history and statistics are all recorded.</p>
+        <p>
+            <note> If you uninstall the Billing App, all of your billing data will be erased.</note>
+        </p>
+        <section id="section_zyz_m35_c2b">
+            <title>Features of Billing App</title>
+            <ul id="ul_e44_p35_c2b">
+                <li><b>Call Credit Management </b><p>Users could choose to charge the call cost from
+                        the extension level or the account level. </p><p>
+                        <ul>
+                            <li>Extension level: call credits are assigned to specific
+                                extensions.</li>
+                            <li>Account level: call credits are assigned to pre-configured accounts
+                                and shared by users who know the password (PIN code).</li>
+                        </ul>
+                    </p></li>
+                <li><b>Real-time Billing</b><p>The immediate real-time billing empowers the user by
+                        making rating, charging and balance and account management responsive,
+                        interactive and flexible.</p></li>
+            </ul>
+            <ul id="ul_g44_p35_c2b">
+                <li><b>Prepaid and Postpaid Service</b><p>Prepaid and postpaid modes provide
+                        real-time billing.</p></li>
+            </ul>
+            <ul id="ul_h44_p35_c2b">
+                <li><b>Flexible Rating</b><p>Rate can be set according to extensions/accounts, time
+                        periods, call duration, call types (whether local or international, from
+                        landline or mobile phone).</p></li>
+            </ul>
+            <ul id="ul_i44_p35_c2b">
+                <li><b>Detailed Statistics</b><p>Provides call detail reports (display usage by time
+                        frames, extension/account, and trunks) for management and traffic
+                        analysis.</p></li>
+            </ul>
+        </section>
+    </conbody>
+</concept>

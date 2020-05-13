@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_d3c_djm_ldb">
+    <title>Create a Backup File</title>
+    <shortdesc>You can create a backup file of the PBX settings on the PBX web
+        interface.</shortdesc>
+    <prolog>
+        <critdates>
+            <!--Carol-->
+            <revised modified="2018/07/03"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <context>
+            <note product="s-series">The backup file do not contain <ph>auto recording files,
+                </ph>one-touch recording files, and voicemail files.</note>
+            <note product="cloudpbx">
+                <ul id="ul_a25_ncj_d3b">
+                    <li>For PBX version before 81.5.0.7, you can not back up one-touch recording
+                        files and voicemail files.</li>
+                    <li>For PBX version 81.5.0.7 or later, you can back up one-touch recording files
+                        and voicemail files.</li>
+                </ul>
+            </note>
+        </context>
+        <steps>
+            <step>
+                <cmd>Go to <menucascade>
+                        <uicontrol>Maintenance</uicontrol>
+                        <uicontrol>Backup and Restore</uicontrol>
+                    </menucascade>, click <uicontrol>Backup</uicontrol>.</cmd>
+                <info product="s-series"><image href="../Images/admin/create_backup_file_s.png"
+                        id="image_ayq_knm_ldb"/></info>
+                <info product="cloudpbx"><image href="../Images/admin/create_backup_file_cloud.png"
+                        id="image_jky_lnm_ldb"/></info>
+            </step>
+            <step>
+                <cmd>Set the <uicontrol>File Name</uicontrol>.</cmd>
+                <info>The default file name contains the PBX model, firmware version, and backup
+                    date.</info>
+            </step>
+            <step>
+                <cmd importance="optional">In the <uicontrol>Memo</uicontrol> field, enter notes for
+                    the backup file.</cmd>
+            </step>
+            <step product="s-series">
+                <cmd>Select where to store the backup file.</cmd>
+            </step>
+            <step>
+                <cmd>Select which configurations and files to back up.</cmd>
+            </step>
+            <step>
+                <cmd>Click <uicontrol>Save</uicontrol>.</cmd>
+                <stepresult>The created backup file will appear on the <uicontrol>Backup and
+                        Restore</uicontrol> page.</stepresult>
+            </step>
+        </steps>
+    </taskbody>
+</task>

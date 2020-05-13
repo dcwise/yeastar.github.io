@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="task_aqn_zcx_dcb">
+    <title>Activate and Log in Your PBX</title>
+    <taskbody>
+        <context id="context_yy5_c1l_2cb">After your PBX is created by your supplier or by Yeastar,
+            you will get an email with the PBX activation link and activation code.</context>
+        <steps id="steps_iww_hdx_dcb">
+            <step>
+                <cmd>Click the PBX login link in the email.</cmd>
+                <stepresult>The activation page of Yeastar Cloud PBX appears.<p><image
+                            href="../../../Images/admin/en/activation_page.png"
+                            id="image_jwh_hlc_2cb" width="400"/></p></stepresult>
+            </step>
+            <step>
+                <cmd>Enter the activation code, click <uicontrol>Activate</uicontrol>.</cmd>
+                <stepresult>If the activation code is correct, you will log in the PBX.</stepresult>
+            </step>
+            <step>
+                <cmd>Set your login username and password.</cmd>
+                <substeps>
+                    <substep>
+                        <cmd>On the <uicontrol>Settings</uicontrol> page, set the <uicontrol>Email
+                                Address</uicontrol> as the login email.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Set the login password and retype the password to confirm.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Click <uicontrol>Save</uicontrol>.</cmd>
+                    </substep>
+                </substeps>
+                <info><image href="../../../Images/admin/en/change_login_account.png"
+                        id="image_fnl_byk_2cb"/></info>
+            </step>
+            <step>
+                <cmd>Log in your PBX using the email address.</cmd>
+                <info><image href="../../../Images/admin/en/cloudpbx_login_page.png"
+                        id="image_ijc_lzl_qcb" width="400"/></info>
+            </step>
+        </steps>
+        
+    </taskbody>
+</task>

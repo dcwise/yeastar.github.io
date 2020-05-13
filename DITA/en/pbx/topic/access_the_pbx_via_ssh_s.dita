@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="task_j5q_ylj_zdb">
+    <title>Access the PBX via SSH</title>
+    <shortdesc>You can access the PBX via SSH to check logs and debug the PBX.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/05/30"/>
+            <!--Carol-->
+            <revised modified="2018/05/30"/>
+            <!--Carol-->
+            <revised modified="2018/09/25"/>
+            <!--Carol-->
+            <revised modified="2018/10/23"/>
+        </critdates>
+    </prolog>
+    <taskbody>
+        <context>
+            <p>
+                <note type="important">
+                    <ul id="ul_dcv_tmj_zdb">
+                        <li>The SSH access is disabled by default. </li>
+                        <li>Disable SSH access if you don't need to debug the PBX.</li>
+                    </ul>
+                </note>
+            </p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Enable SSH service on the PBX.</cmd>
+                <substeps>
+                    <substep>
+                        <cmd>Go to <menucascade>
+                                <uicontrol>Settings</uicontrol>
+                                <uicontrol>System</uicontrol>
+                                <uicontrol>Security</uicontrol>
+                                <uicontrol>Service</uicontrol>
+                            </menucascade>, check the option <uicontrol>Enable
+                            SSH</uicontrol>.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Note down the auto generated password, click
+                            <uicontrol>OK</uicontrol>.</cmd>
+                        <info>
+                            <note>
+                                <p>
+                                    <ul id="ul_nbz_spj_zdb">
+                                        <li>The auto generated SSH password is supported on the
+                                            firmware version 30.7.0.27 or later.</li>
+                                        <li>For the PBX version before 30.7.0.27, the default
+                                            password is <codeph>iyeastar</codeph>.</li>
+                                    </ul>
+                                </p>
+                            </note>
+                        </info>
+                        <info><image href="../Images/admin/enable_ssh.png" id="image_w5r_3nj_zdb"
+                                width="400"/></info>
+                    </substep>
+                    <substep>
+                        <cmd>Click <uicontrol>Save</uicontrol> and
+                            <uicontrol>Apply</uicontrol>.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Use <xref href="https://www.putty.org/" format="html" scope="external"
+                        >PuTTY</xref> to access the PBX via SSH. </cmd>
+                <info><image href="../Images/admin/putty_login.png" id="image_cgj_b4j_zdb"
+                        width="400"/></info>
+                <info>
+                    <ul id="ul_df1_zhg_4fb">
+                        <li><uicontrol>Host Name (or IP address)</uicontrol>: Enter the IP address
+                            of the PBX.</li>
+                        <li><uicontrol>Port</uicontrol>: Enter the SSH port.</li>
+                        <li><uicontrol>Connection Type</uicontrol>: Choose
+                                <uicontrol>SSH</uicontrol>.</li>
+                    </ul>
+                </info>
+            </step>
+            <step>
+                <cmd>To get more logs in the window, set the <uicontrol>Lines of
+                        scrollback</uicontrol> to a larger value, click
+                    <uicontrol>Apply</uicontrol>.</cmd>
+                <info><image href="../Images/admin/putty_lines_of_scrollback.png"
+                        id="image_etl_p4j_zdb" width="400"/></info>
+            </step>
+            <step>
+                <cmd>Enter the username and password to access the PBX.</cmd>
+                <info>
+                    <ul id="ul_q55_54j_zdb">
+                        <li><uicontrol>login as</uicontrol>: Enter <codeph>support</codeph>.</li>
+                        <li><uicontrol>password</uicontrol>: Enter the SSH password.<p>
+                                <note type="tip">After copying the SSH password, right click on the
+                                    Putty interface to paste password.</note>
+                            </p></li>
+                    </ul>
+                </info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

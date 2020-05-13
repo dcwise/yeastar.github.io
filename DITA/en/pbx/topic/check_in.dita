@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_g2s_bxt_c2b">
+    <title>Check In</title>
+    <shortdesc>Check in the guest when the guest comes to the hotel.</shortdesc>
+    <prolog>
+        <author type="creator">Carol</author>
+        <critdates>
+            <created date="2018/06/11"/>
+            <!--Carol-->
+            <revised modified="2018/06/11"/>
+        </critdates>
+    </prolog>
+    <conbody>
+        <section id="section_ztf_k15_c2b">
+            <title>Check in Booked Rooms</title>
+            <p>If the guest has booked a room, you can check in the guest on the <b>Booking List</b>
+                page.</p>
+            <p><ol id="ol_elf_415_c2b">
+                    <li>Go to <menucascade>
+                            <uicontrol>Hotel</uicontrol>
+                            <uicontrol>Room Operations</uicontrol>
+                            <uicontrol>Booking List</uicontrol>
+                        </menucascade>, select the guest, click <b>Check In</b>.<p><image
+                                href="../Images/admin/hotel_check_in_booked.png" width="650"
+                                id="image_b1s_x15_c2b"/></p></li>
+                    <li>Select a room, and set the check-in time and check-out time.</li>
+                    <li>Click <b>Wake-up Settings</b> tab, click <image
+                            href="../Images/ui_icons/add.png" width="20" id="image_gxs_t15_c2b"/> to
+                        add an alarm for the room phone.<p><image
+                                href="../Images/admin/hotel_wake_up_setting.png"
+                                id="image_hk1_1b5_c2b" width="650"/></p></li>
+                    <li>Click <b>Save</b>.</li>
+                </ol>You can see the guest is checked in on <b>Room List</b> page.</p>
+        </section>
+        <section id="section_cw5_kb5_c2b">
+            <title>Check in New Guests</title>
+            <p>If it is the first time the guest comes to the hotel, you can check in the guest on
+                the <b>Room List</b> page.</p>
+            <p>
+                <ol id="ul_kf3_nb5_c2b">
+                    <li>Go to <menucascade>
+                            <uicontrol>Hotel</uicontrol>
+                            <uicontrol>Room Operations</uicontrol>
+                            <uicontrol>Room List</uicontrol>
+                        </menucascade>, choose a free and clean room, click <b>Check In</b>.<p>
+                            <note>The guest cannot be checked in with a dirty room.</note>
+                        </p><p><image href="../Images/admin/hotel_check_in_new_guest.png"
+                                id="image_tyx_yb5_c2b" width="650"/></p></li>
+                    <li>Enter the check in information.</li>
+                    <li>Enter the guest information. <p>
+                            <note>The <b>First Name</b> and <b>Last Name</b> are required
+                                fields.</note>
+                        </p></li>
+                    <li>Click <b>Wake-up Settings</b> tab, click <image
+                            href="../Images/ui_icons/add.png" width="20" id="image_umc_3c5_c2b"/> to
+                        add an alarm for the room phone.<p><image
+                                href="../Images/admin/hotel_wake_up_setting.png" width="650"
+                                id="image_dgz_vb5_c2b"/></p></li>
+                    <li>Click <b>Save</b>.<p>After checking in, the room is occupied and the status
+                            is not free/vacant.</p><p><image
+                                href="../Images/admin/hotel_check_in_status.png" width="650"
+                                id="image_kf4_2c5_c2b"/></p></li>
+                </ol>
+            </p>
+        </section>
+        <section id="section_ezw_tc5_c2b">
+            <title>Check in Old Guests</title>
+            <p>If the guest has stayed in the hotel before, the guest information will be kept in
+                the hotel system. Next time, when the guest comes, you can check in the guest on
+                    <b>Guest List</b> page.</p>
+            <p>
+                <ol id="ul_fsz_vc5_c2b">
+                    <li>Go to <menucascade>
+                            <uicontrol>Hotel</uicontrol>
+                            <uicontrol>Room Operations</uicontrol>
+                            <uicontrol>Guest List</uicontrol>
+                        </menucascade>, choose the desire guest, click <uicontrol>Check
+                            In</uicontrol>.<p><image
+                                href="../Images/admin/hotel_check_in_old_guest.png"
+                                id="image_jxw_gd5_c2b" width="650"/></p></li>
+                    <li>Select the desired room, set the check-in time and check-out time.</li>
+                    <li>Click <b>Wake-up Settings</b> tab, click <image
+                            href="../Images/ui_icons/add.png" width="20" id="image_in5_cd5_c2b"/> to
+                        add an alarm for the room phone.<p><image
+                                href="../Images/admin/hotel_wake_up_setting.png" width="650"
+                                id="image_jsq_dd5_c2b"/></p></li>
+                    <li>Click <b>Save</b>.<p>You will see the guest is checked in on the <b>Room
+                                List</b> page.</p><p><image
+                                href="../Images/admin/hotel_check_in_status_old_guest.png"
+                                id="image_k4v_md5_c2b" width="650"/></p></li>
+                </ol>
+            </p>
+        </section>
+    </conbody>
+</concept>

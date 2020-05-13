@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="reference_kgz_jt4_y3b">
+    <title>FXS Extension Settings</title>
+    <shortdesc>This reference describes all settings on an FXS extension.</shortdesc>
+    <refbody>
+        <section id="section_h5w_j3w_y3b">
+            <title>Basic Settings</title>
+            <p>Navigation path: <menucascade>
+                    <uicontrol>Settings</uicontrol>
+                    <uicontrol>PBX</uicontrol>
+                    <uicontrol>Extensions</uicontrol>
+                </menucascade>, edit an FXS extension under the <uicontrol>Basic</uicontrol>
+                tab.</p>
+            <p><b>General Settings</b></p>
+            <p>
+                <table frame="all" id="table_ely_yd4_1jb">
+                    <tgroup cols="2">
+                        <colspec colname="c1" colnum="1" colwidth="1*" colsep="1" rowsep="1"/>
+                        <colspec colname="c2" colnum="2" colwidth="1.7*" colsep="1" rowsep="1"/>
+                        <thead>
+                            <row>
+                                <entry>Settings</entry>
+                                <entry>Description</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row product="s-series">
+                                <entry>Type</entry>
+                                <entry>Select <uicontrol>FXS</uicontrol>.</entry>
+                            </row>
+                            <row>
+                                <entry>Extension</entry>
+                                <entry>Enter the extension number.</entry>
+                            </row>
+                            <row>
+                                <entry>Caller ID</entry>
+                                <entry>If you set the caller ID number, the called party will see
+                                    this caller ID number when the extension user makes an outgoing
+                                    call.</entry>
+                            </row>
+                            <row>
+                                <entry>Caller ID name</entry>
+                                <entry>If you set the caller ID name, the called party will see this
+                                    caller ID name when the extension user makes an outgoing
+                                    call.</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+            <p><b>User Information Settings</b></p>
+            <table conref="sip-extension-settings.dita#sip-extension-settings/userInfo"
+                id="table_upr_j44_1jb">
+                <tgroup cols="1">
+                    <tbody>
+                        <row>
+                            <entry/>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+        </section>
+        <section id="section_n3j_zpn_1jb">
+            <title id="presenceSettings">Presence Settings</title>
+            <p>Extension Presence indicates the availability status of an FXS extension. Presence
+                settings are linked to the Call Forwarding rules and Linkus ring strategy. You can
+                set different call forwarding rules and ring strategy for each presence status.</p>
+            <p>Navigation path: <menucascade>
+                    <uicontrol>Settings</uicontrol>
+                    <uicontrol>PBX</uicontrol>
+                    <uicontrol>Extensions</uicontrol>
+                </menucascade>, edit an FXS extension under the <uicontrol>Presence</uicontrol>
+                tab.</p>
+            <table conref="sip-extension-settings.dita#sip-extension-settings/presence"
+                id="table_m5h_n44_1jb">
+                <tgroup cols="1">
+                    <tbody>
+                        <row>
+                            <entry/>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <p><b>Call Forwarding Settings</b></p>
+            <p conref="sip-extension-settings.dita#sip-extension-settings/callForwarding"/>
+            <table conref="sip-extension-settings.dita#sip-extension-settings/callForwardingTable"
+                id="table_f4c_kr4_1jb">
+                <tgroup cols="1">
+                    <tbody>
+                        <row>
+                            <entry/>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <p><b>Ring Strategy Settings</b></p>
+            <p>You can set ring strategy for the following terminals of the FXS extension.<ul
+                    id="ul_wbr_qr4_1jb">
+                    <li>Extension</li>
+                    <li>Linkus Mobile Client</li>
+                    <li>Linkus Desktop Client</li>
+                </ul></p>
+            <p>
+                <table conref="sip-extension-settings.dita#sip-extension-settings/RingStrategyTable"
+                    id="table_idd_gs4_1jb">
+                    <tgroup cols="1">
+                        <tbody>
+                            <row>
+                                <entry/>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+        <section><title id="featuresSettings">Features Settings</title>You can configure voicemail,
+            mobility extension, call monitoring, hotline, and other settings under the
+                <uicontrol>Features</uicontrol> tab.<p>Navigation path: <menucascade>
+                    <uicontrol>Settings</uicontrol>
+                    <uicontrol>PBX</uicontrol>
+                    <uicontrol>Extensions</uicontrol>
+                </menucascade>, edit an FXS extension under the <uicontrol>Features</uicontrol>
+                tab.</p><p><b>Voicemail Settings</b></p><table
+                conref="sip-extension-settings.dita#sip-extension-settings/voicemailTable"
+                id="table_ely_yt4_1jb">
+                <tgroup cols="1">
+                    <tbody>
+                        <row>
+                            <entry/>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table><p><b>Mobility Extension</b></p><p>Yeastar Mobility Extension allows you to stay
+                in contact with colleagues and clients using either office phone or mobile phone
+                with the same extension number.</p><table
+                conref="sip-extension-settings.dita#sip-extension-settings/mobilityTable"
+                id="table_j4v_s54_1jb">
+                <tgroup cols="1">
+                    <tbody>
+                        <row>
+                            <entry/>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table><p><b>Monitor Settings</b></p><p>Call Monitoring allows authorized users to
+                monitor another extension user's call in real time. </p><p>
+                <table conref="sip-extension-settings.dita#sip-extension-settings/monitorTable"
+                    id="table_yh1_lv4_1jb">
+                    <tgroup cols="1">
+                        <tbody>
+                            <row>
+                                <entry/>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p><p><b>Hotline</b></p><p>The hotline feature allows you to configure a phone so that
+                when the user goes off hook, and waits for a specified time internal, the phone
+                automatically dials a preconfigured number.</p><p>
+                <table frame="all" id="table_azc_bz5_hkb">
+                    <tgroup cols="2">
+                        <colspec colname="c1" colnum="1" colwidth="1*" colsep="1" rowsep="1"/>
+                        <colspec colname="c2" colnum="2" colwidth="2.51*" colsep="1" rowsep="1"/>
+                        <thead>
+                            <row>
+                                <entry>Settings</entry>
+                                <entry>Description</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>Enable Hotline</entry>
+                                <entry>Enable hotline feature.</entry>
+                            </row>
+                            <row>
+                                <entry>Hotline Number</entry>
+                                <entry>Enter the hotline number.</entry>
+                            </row>
+                            <row>
+                                <entry>Delay Dial(s)</entry>
+                                <entry>Enter the waiting time (in seconds) to automatically dial out
+                                    the hotline number. </entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p><p><b>Other Settings</b></p><p>
+                <table frame="all" id="table_gkb_rzn_1jb">
+                    <tgroup cols="2">
+                        <colspec colname="c1" colnum="1" colwidth="1*" colsep="1" rowsep="1"/>
+                        <colspec colname="c2" colnum="2" colwidth="2.45*" colsep="1" rowsep="1"/>
+                        <thead>
+                            <row>
+                                <entry>Settings</entry>
+                                <entry>Description</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>Ring Timeout (s)</entry>
+                                <entry>Set the timeout in seconds. Phone will stop ringing after
+                                    timeout.</entry>
+                            </row>
+                            <row>
+                                <entry>Max Call Duration (s)</entry>
+                                <entry>Set the maximum call duration in seconds for every call of
+                                    this extension.<note>
+                                        <p>The precedence of <uicontrol>Max Call
+                                                Duration(s)</uicontrol> (<xref
+                                                href="system_preferences.dita#concept_lfw_fpw_d2b/max-call-duration-global"
+                                                >Global</xref> v.s. Extension):</p>
+                                        <p>
+                                            <ul id="ul_tbh_bp3_kjb">
+                                                <li>For internal calls: The <uicontrol>Max Call
+                                                  Duration(s)</uicontrol> setting of the caller's
+                                                  extension takes precedence. </li>
+                                                <li>For outbound calls: The <uicontrol>Max Call
+                                                  Duration(s)</uicontrol> setting of the caller's
+                                                  extension takes precedence. </li>
+                                                <li>For inbound calls: The global <uicontrol>Max
+                                                  Call Duration(s)</uicontrol> setting takes
+                                                  precedence. </li>
+                                            </ul>
+                                        </p>
+                                    </note></entry>
+                            </row>
+                            <row>
+                                <entry>Send email notification when extension user password is
+                                    changed</entry>
+                                <entry>Enable this option to send email notification when extension
+                                    user password is changed.</entry>
+                            </row>
+                            <row>
+                                <entry>Call Waiting </entry>
+                                <entry>Enable this option to allow call waiting feature for the
+                                    extension. If this option is enabled, the <uicontrol>When busy
+                                    </uicontrol> option in <uicontrol>Call Forwarding</uicontrol> is
+                                    unavailable.</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p></section>
+        <section id="section_f24_m3w_y3b"><title>Advanced Settings</title><p>Navigation path: <menucascade>
+                    <uicontrol>Settings</uicontrol>
+                    <uicontrol>PBX</uicontrol>
+                    <uicontrol>Extensions</uicontrol>
+                </menucascade>, edit an FXS extension under the <uicontrol>Advanced</uicontrol> tab.
+                </p><b>Analog Settings</b><p>
+                <table frame="all" id="table_jsj_p3w_y3b">
+                    <tgroup cols="2">
+                        <colspec colname="c1" colnum="1" colwidth="1*" colsep="1" rowsep="1"/>
+                        <colspec colname="c2" colnum="2" colwidth="2.23*" colsep="1" rowsep="1"/>
+                        <thead>
+                            <row>
+                                <entry>Settings</entry>
+                                <entry>Descriptions</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry>Min Flash Detection (ms)</entry>
+                                <entry>Set the minimum amount of time, which helps the PBX to
+                                    identify the hook flash as a valid event. The default value is
+                                    300ms.</entry>
+                            </row>
+                            <row>
+                                <entry>Max Flash Detection (ms)</entry>
+                                <entry>Set the maximum amount of time, which helps the PBX to
+                                    identify the hook flash as a valid event. The default value is
+                                    1000ms.</entry>
+                            </row>
+                            <row>
+                                <entry>Echo Cancellation</entry>
+                                <entry>Enable or disable echo cancellation on the FXS port.</entry>
+                            </row>
+                            <row>
+                                <entry>RX Volume</entry>
+                                <entry>Set the volume from the analog phone to the FXS port of
+                                    PBX.</entry>
+                            </row>
+                            <row>
+                                <entry>TX Volume</entry>
+                                <entry>Set the volume from the FXS port of PBX to the analog
+                                    phone.</entry>
+                            </row>
+                            <row>
+                                <entry>Enable DTMF Passthrough</entry>
+                                <entry>
+                                    <p>DTMF are signals/tones that are sent when you press a phone's
+                                        touch keys.</p>
+                                    <p>If you enable this feature, when the extension user presses
+                                        "*1" in a call, the PBX will pass it directly to the other
+                                        extension without analysis. By default, this feature is
+                                        disabled.</p>
+                                </entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p></section>
+        <section id="section_vxv_sxn_1jb">
+            <title id="callPermission">Call Permission Settings</title>
+            <p>You can set the outbound call permissions for the FXS extension.</p>
+            <p>Navigation path: <menucascade>
+                    <uicontrol>Settings</uicontrol>
+                    <uicontrol>PBX</uicontrol>
+                    <uicontrol>Extensions</uicontrol>
+                </menucascade>, edit an FXS extension under the <uicontrol>Call
+                    Permission</uicontrol> tab.</p>
+            <p>
+                <table conref="sip-extension-settings.dita#sip-extension-settings/callPermissionTab"
+                    id="table_p3l_tw4_1jb">
+                    <tgroup cols="1">
+                        <tbody>
+                            <row>
+                                <entry/>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+    </refbody>
+</reference>
